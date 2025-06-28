@@ -49,10 +49,9 @@
 #define B_FLAG_TERA_ORB_NO_COST    0x23 // No Tera Orb Cost
 #define B_FLAG_SLEEP_CLAUSE    0x24 // Sleep Clause
 #define B_FLAG_NO_WHITEOUT    0x25 // No Whiteout
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
+#define DN_FLAG_SEARCHING    0x26 // DEXNAV SEARCH
+#define DN_FLAG_DEXNAV_GET    0x27 // DEXNAV STARTMENU
+#define DN_FLAG_DETECTOR_MODE    0x29 // Detector Mode
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag

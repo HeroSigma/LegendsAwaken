@@ -264,11 +264,11 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define B_VAR_STARTING_STATUS                                0x40F7 // Status
-#define B_VAR_WILD_AI_FLAGS                                0x40F8 // Wild AI
-#define B_VAR_DIFFICULTY                                0x40F9 // Difficulty
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
+#define B_VAR_STARTING_STATUS                            0x40F7 // Status
+#define B_VAR_WILD_AI_FLAGS                              0x40F8 // Wild AI
+#define B_VAR_DIFFICULTY                                 0x40F9 // Difficulty
+#define DN_VAR_SPECIES                                   0x40FA // Dex Nav Species
+#define DN_VAR_STEP_COUNTER                              0x40FB // DexNav Step Count
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
