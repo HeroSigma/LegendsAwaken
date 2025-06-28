@@ -43,12 +43,12 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define B_SMART_WILD_AI_FLAG    0x20 // Smart Wild AI
+#define B_FLAG_DYNAMAX_BATTLE    0x21 // Dynamax Battle
+#define B_FLAG_TERA_ORB_CHARGED    0x22 // Tera Orb Charge
+#define B_FLAG_TERA_ORB_NO_COST    0x23 // No Tera Orb Cost
+#define B_FLAG_SLEEP_CLAUSE    0x24 // Sleep Clause
+#define B_FLAG_NO_WHITEOUT    0x25 // No Whiteout
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
