@@ -237,7 +237,7 @@ static const u16 sNewGamePCItems[][2] =
     { ITEM_TERA_ORB, 1 },
     { ITEM_MEGA_RING, 1 },
     { ITEM_DYNAMAX_BAND, 1 },
-    { ITEM_Z_RING, 1 },
+    { ITEM_Z_POWER_RING, 1 },
     { ITEM_NONE, 0 }
 };
 
