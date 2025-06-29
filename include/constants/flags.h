@@ -50,7 +50,7 @@
 #define B_FLAG_SLEEP_CLAUSE    0x24 // Sleep Clause
 #define B_FLAG_NO_WHITEOUT    0x25 // No Whiteout
 #define DN_FLAG_SEARCHING    0x26 // DEXNAV SEARCH
-#define DN_FLAG_DEXNAV_GET    0x27 // DEXNAV STARTMENU
+#define DN_FLAG_DEXNAV_GET    SYSTEM_FLAGS + 0x1 // DEXNAV STARTMENU
 #define DN_FLAG_DETECTOR_MODE    0x29 // Detector Mode
 #define I_EXP_SHARE_FLAG    0x2A // EXP Share
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
