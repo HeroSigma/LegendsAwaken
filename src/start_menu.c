@@ -333,7 +333,7 @@ static void BuildNormalStartMenu(void)
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKEDEX);
 
-    if (FLAG_SYS_DEXNAV != 0 && FlagGet(FLAG_SYS_DEXNAV))
+    if (FlagGet (FLAG_SYS_DEXNAV) == TRUE)
         AddStartMenuAction(MENU_ACTION_DEXNAV);
 
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
