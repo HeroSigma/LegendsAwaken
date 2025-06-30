@@ -1221,7 +1221,7 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_SYS_DEXNAV                                             0x493 // Dexnav Get
+#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_DEXNAV_SEARCHING										0x494 // Dexnav Search
 #define FLAG_DEXNAV_DETECTOR                                        0x495 // Detector Mode
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
@@ -1349,7 +1349,7 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
+#define FLAG_SYS_DEXNAV                              (SYSTEM_FLAGS + 0x3) // Dexnav Get
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)
