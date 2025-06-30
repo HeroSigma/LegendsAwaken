@@ -1221,11 +1221,11 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define DN_FLAG_DEXNAV_GET                                          0x493 // Dexnav Get
-#define DN_FLAG_SEARCHING											0x494 // Dexnav Search
-#define DN_FLAG_DETECTOR_MODE                                       0x495 // Detector Mode
-#define DN_VAR_SPECIES                                              0x496 // Unused Flag
-#define DN_VAR_STEP_COUNTER                                           0x497 // Unused Flag
+#define FLAG_SYS_DEXNAV                                             0x493 // Dexnav Get
+#define FLAG_SEARCHING												0x494 // Dexnav Search
+#define FLAG_DETECTOR_MODE                                       0x495 // Detector Mode
+#define DN_SPECIES                                              0x496 // Unused Flag
+#define DN_STEP_COUNTER                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
