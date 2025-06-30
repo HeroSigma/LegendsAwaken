@@ -267,8 +267,8 @@
 #define B_VAR_STARTING_STATUS                            0x40F7 // Status
 #define B_VAR_WILD_AI_FLAGS                              0x40F8 // Wild AI
 #define B_VAR_DIFFICULTY                                 0x40F9 // Difficulty
-#define DN_VAR_SPECIES                                   0x40FA // Dex Nav Species
-#define DN_VAR_STEP_COUNTER                              0x40FB // DexNav Step Count
+#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
+#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_LAST_REPEL_LURE_USED                         0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var

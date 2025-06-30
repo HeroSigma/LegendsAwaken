@@ -1224,8 +1224,8 @@
 #define DN_FLAG_DEXNAV_GET                                          0x493 // Dexnav Get
 #define DN_FLAG_SEARCHING											0x494 // Dexnav Search
 #define DN_FLAG_DETECTOR_MODE                                       0x495 // Detector Mode
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
+#define DN_VAR_SPECIES                                              0x496 // Unused Flag
+#define DN_VAR_STEP_COUNTER                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
