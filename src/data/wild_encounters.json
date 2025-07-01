@@ -6764,7 +6764,7 @@
               {
                 "min_level": 44,
                 "max_level": 49,
-                "species": "SPECIES_LUVISC",
+                "species": "SPECIES_LUVDISC",
                 "held_items": [
                   "ITEM_HEART_SCALE",
                   "ITEM_NONE"
