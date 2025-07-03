@@ -550,7 +550,7 @@
         },
         {
           "map": "MAP_ROUTE102",
-          "base_label": "gRoute102Morning",
+          "base_label": "gRoute102_Morning",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -668,7 +668,7 @@
         },
         {
           "map": "MAP_ROUTE102",
-          "base_label": "gRoute102Day",
+          "base_label": "gRoute102_Day",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -786,7 +786,7 @@
         },
         {
           "map": "MAP_ROUTE102",
-          "base_label": "gRoute102Evening",
+          "base_label": "gRoute102_Evening",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -904,7 +904,7 @@
         },
         {
           "map": "MAP_ROUTE102",
-          "base_label": "gRoute102Night",
+          "base_label": "gRoute102_Night",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -1175,7 +1175,7 @@
         },
         {
           "map": "MAP_ROUTE103",
-          "base_label": "gRoute103Morning",
+          "base_label": "gRoute103_Morning",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -1293,7 +1293,7 @@
         },
         {
           "map": "MAP_ROUTE103",
-          "base_label": "gRoute103Day",
+          "base_label": "gRoute103_Day",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -1411,7 +1411,7 @@
         },
         {
           "map": "MAP_ROUTE103",
-          "base_label": "gRoute103Evening",
+          "base_label": "gRoute103_Evening",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -1529,7 +1529,7 @@
         },
         {
           "map": "MAP_ROUTE103",
-          "base_label": "gRoute103Night",
+          "base_label": "gRoute103_Night",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -1800,7 +1800,7 @@
         },
         {
           "map": "MAP_ROUTE104",
-          "base_label": "gRoute104Morning",
+          "base_label": "gRoute104_Morning",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -1918,7 +1918,7 @@
         },
         {
           "map": "MAP_ROUTE104",
-          "base_label": "gRoute104Day",
+          "base_label": "gRoute104_Day",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -2036,7 +2036,7 @@
         },
         {
           "map": "MAP_ROUTE104",
-          "base_label": "gRoute104Evening",
+          "base_label": "gRoute104_Evening",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -2154,7 +2154,7 @@
         },
         {
           "map": "MAP_ROUTE104",
-          "base_label": "gRoute104Night",
+          "base_label": "gRoute104_Night",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -2357,7 +2357,7 @@
         },
         {
           "map": "MAP_ROUTE105",
-          "base_label": "gRoute105Morning",
+          "base_label": "gRoute105_Morning",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [
@@ -2507,7 +2507,7 @@
         },
         {
           "map": "MAP_ROUTE105",
-          "base_label": "gRoute105Evening",
+          "base_label": "gRoute105_Evening",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [
@@ -2657,7 +2657,7 @@
         },
         {
           "map": "MAP_ROUTE105",
-          "base_label": "gRoute105Night",
+          "base_label": "gRoute105_Night",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [
@@ -2807,7 +2807,7 @@
         },
         {
           "map": "MAP_ROUTE110",
-          "base_label": "gRoute110Morning",
+          "base_label": "gRoute110_Morning",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -2913,7 +2913,7 @@
         },
         {
           "map": "MAP_ROUTE110",
-          "base_label": "gRoute110Day",
+          "base_label": "gRoute110_Day",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -3019,7 +3019,7 @@
         },
         {
           "map": "MAP_ROUTE110",
-          "base_label": "gRoute110Evening",
+          "base_label": "gRoute110_Evening",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -3125,7 +3125,7 @@
         },
         {
           "map": "MAP_ROUTE110",
-          "base_label": "gRoute110Night",
+          "base_label": "gRoute110_Night",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -3689,7 +3689,7 @@
         },
         {
           "map": "MAP_ROUTE112",
-          "base_label": "gRoute112Morning",
+          "base_label": "gRoute112_Morning",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -3787,7 +3787,7 @@
         },
         {
           "map": "MAP_ROUTE112",
-          "base_label": "gRoute112Evening",
+          "base_label": "gRoute112_Evening",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -3885,7 +3885,7 @@
         },
         {
           "map": "MAP_ROUTE112",
-          "base_label": "gRoute112Night",
+          "base_label": "gRoute112_Night",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -3983,7 +3983,7 @@
         },
         {
           "map": "MAP_ROUTE113",
-          "base_label": "gRoute113Morning",
+          "base_label": "gRoute113_Morning",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -4101,7 +4101,7 @@
         },
         {
           "map": "MAP_ROUTE113",
-          "base_label": "gRoute113Day",
+          "base_label": "gRoute113_Day",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -4219,7 +4219,7 @@
         },
         {
           "map": "MAP_ROUTE113",
-          "base_label": "gRoute113Evening",
+          "base_label": "gRoute113_Evening",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -4337,7 +4337,7 @@
         },
         {
           "map": "MAP_ROUTE113",
-          "base_label": "gRoute113Night",
+          "base_label": "gRoute113_Night",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -4455,7 +4455,7 @@
         },
         {
           "map": "MAP_ROUTE114",
-          "base_label": "gRoute114Morning",
+          "base_label": "gRoute114_Morning",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -4573,7 +4573,7 @@
         },
         {
           "map": "MAP_ROUTE114",
-          "base_label": "gRoute114Day",
+          "base_label": "gRoute114_Day",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -4691,7 +4691,7 @@
         },
         {
           "map": "MAP_ROUTE114",
-          "base_label": "gRoute114Evening",
+          "base_label": "gRoute114_Evening",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -4809,7 +4809,7 @@
         },
         {
           "map": "MAP_ROUTE114",
-          "base_label": "gRoute114Night",
+          "base_label": "gRoute114_Night",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -5126,7 +5126,7 @@
         },
         {
           "map": "MAP_ROUTE116",
-          "base_label": "gRoute116Morning",
+          "base_label": "gRoute116_Morning",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -5244,7 +5244,7 @@
         },
         {
           "map": "MAP_ROUTE116",
-          "base_label": "gRoute116Day",
+          "base_label": "gRoute116_Day",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -5362,7 +5362,7 @@
         },
         {
           "map": "MAP_ROUTE116",
-          "base_label": "gRoute116Evening",
+          "base_label": "gRoute116_Evening",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -5480,7 +5480,7 @@
         },
         {
           "map": "MAP_ROUTE116",
-          "base_label": "gRoute116Night",
+          "base_label": "gRoute116_Night",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -5598,7 +5598,7 @@
         },
         {
           "map": "MAP_ROUTE117",
-          "base_label": "gRoute117Morning",
+          "base_label": "gRoute117_Morning",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -5716,7 +5716,7 @@
         },
         {
           "map": "MAP_ROUTE117",
-          "base_label": "gRoute117Day",
+          "base_label": "gRoute117_Day",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -5834,7 +5834,7 @@
         },
         {
           "map": "MAP_ROUTE117",
-          "base_label": "gRoute117Evening",
+          "base_label": "gRoute117_Evening",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -5952,7 +5952,7 @@
         },
         {
           "map": "MAP_ROUTE117",
-          "base_label": "gRoute117Night",
+          "base_label": "gRoute117_Night",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -6195,7 +6195,7 @@
         },
         {
           "map": "MAP_ROUTE118",
-          "base_label": "gRoute118Morning",
+          "base_label": "gRoute118_Morning",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -6313,7 +6313,7 @@
         },
         {
           "map": "MAP_ROUTE118",
-          "base_label": "gRoute118Day",
+          "base_label": "gRoute118_Day",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -6431,7 +6431,7 @@
         },
         {
           "map": "MAP_ROUTE118",
-          "base_label": "gRoute118Evening",
+          "base_label": "gRoute118_Evening",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -6549,7 +6549,7 @@
         },
         {
           "map": "MAP_ROUTE118",
-          "base_label": "gRoute118Night",
+          "base_label": "gRoute118_Night",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
