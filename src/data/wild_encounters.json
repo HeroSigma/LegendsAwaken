@@ -356,631 +356,233 @@
       },
       "time_of_day": "NIGHT"
     },
-        {
-          "map": "MAP_ROUTE103",
-          "base_label": "gRoute103_Morning",
-          "land_mons": {
-            "encounter_rate": 20,
-            "mons": [
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_SQUAWKABILLY_BLUE",
-                "held_items": [
-                  "ITEM_FLYING_GEM",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_LECHONK",
-                "held_items": [
-                  "ITEM_LEFTOVERS",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_PIKIPEK",
-                "held_items": [
-                  "ITEM_SHARP_BEAK",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_NYMBLE",
-                "held_items": [
-                  "ITEM_BUG_MEMORY",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_YUNGOOS",
-                "held_items": [
-                  "ITEM_SILK_SCARF",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_POOCHYENA",
-                "held_items": [
-                  "ITEM_BLACK_GLASSES",
-                  "ITEM_DARKINIUM_Z"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_ZIGZAGOON",
-                "held_items": [
-                  "ITEM_POTION",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_WINGULL",
-                "held_items": [
-                  "ITEM_MYSTIC_WATER",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_RUFFLET",
-                "held_items": [
-                  "ITEM_SHARP_BEAK",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_CHIMCHAR",
-                "held_items": [
-                  "ITEM_CHARIZARDITE_X",
-                  "ITEM_FIRIUM_Z"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_SKWOVET",
-                "held_items": [
-                  "ITEM_ORAN_BERRY",
-                  "ITEM_CHESTO_BERRY"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_FLETCHLING",
-                "held_items": [
-                  "ITEM_FLYING_GEM",
-                  "ITEM_NONE"
-                ]
-              }
-            ]
-          },
-          "time_of_day": "MORNING"
-        },
-        {
-          "map": "MAP_ROUTE103",
-          "base_label": "gRoute103_Day",
-          "land_mons": {
-            "encounter_rate": 20,
-            "mons": [
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_TRUMBEAK",
-                "held_items": [
-                  "ITEM_SHARP_BEAK",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_RUFFLET",
-                "held_items": [
-                  "ITEM_SITRUS_BERRY",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_ZIGZAGOON",
-                "held_items": [
-                  "ITEM_PERSIM_BERRY",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_SQUAWKABILLY_WHITE",
-                "held_items": [
-                  "ITEM_FLYING_GEM",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_YUNGOOS",
-                "held_items": [
-                  "ITEM_SILK_SCARF",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_PIDGEY",
-                "held_items": [
-                  "ITEM_SHARP_BEAK",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_WOOPER_PALDEA",
-                "held_items": [
-                  "ITEM_POISON_BARB",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_LECHONK",
-                "held_items": [
-                  "ITEM_LEFTOVERS",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_PIKIPEK",
-                "held_items": [
-                  "ITEM_HARD_STONE",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_SKWOVET",
-                "held_items": [
-                  "ITEM_ORAN_BERRY",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_TOTODILE",
-                "held_items": [
-                  "ITEM_BLASTOISINITE",
-                  "ITEM_WATERIUM_Z"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_NYMBLE",
-                "held_items": [
-                  "ITEM_SILVER_POWDER",
-                  "ITEM_NONE"
-                ]
-              }
-            ]
-          },
-          "time_of_day": "DAY"
-        },
-        {
-          "map": "MAP_ROUTE103",
-          "base_label": "gRoute103_Evening",
-          "land_mons": {
-            "encounter_rate": 20,
-            "mons": [
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_SQUAWKABILLY_GREEN",
-                "held_items": [
-                  "ITEM_FLYING_GEM",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_PIDGEY",
-                "held_items": [
-                  "ITEM_SHARP_BEAK",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_LECHONK",
-                "held_items": [
-                  "ITEM_LEFTOVERS",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_WINGULL",
-                "held_items": [
-                  "ITEM_MYSTIC_WATER",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_RUFFLET",
-                "held_items": [
-                  "ITEM_SHARP_BEAK",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_PIKIPEK",
-                "held_items": [
-                  "ITEM_HARD_STONE",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_SQUAWKABILLY_YELLOW",
-                "held_items": [
-                  "ITEM_SHARP_BEAK",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_YUNGOOS",
-                "held_items": [
-                  "ITEM_SILK_SCARF",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_ZIGZAGOON",
-                "held_items": [
-                  "ITEM_NONE",
-                  "ITEM_PERSIM_BERRY"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_FLETCHLING",
-                "held_items": [
-                  "ITEM_FLYING_GEM",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_TREECKO",
-                "held_items": [
-                  "ITEM_SCEPTILITE",
-                  "ITEM_GRASSIUM_Z"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_NICKIT",
-                "held_items": [
-                  "ITEM_BLACK_GLASSES",
-                  "ITEM_NONE"
-                ]
-              }
-            ]
-          },
-          "time_of_day": "EVENING"
-        },
-        {
-          "map": "MAP_ROUTE103",
-          "base_label": "gRoute103_Night",
-          "land_mons": {
-            "encounter_rate": 20,
-            "mons": [
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_MURKROW",
-                "held_items": [
-                  "ITEM_DUSK_STONE",
-                  "ITEM_DARKINIUM_Z"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_NICKIT",
-                "held_items": [
-                  "ITEM_BLACK_GLASSES",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_NOCTOWL",
-                "held_items": [
-                  "ITEM_WISE_GLASSES",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_PHANTUMP",
-                "held_items": [
-                  "ITEM_EVERSTONE",
-                  "ITEM_GRASSIUM_Z"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_GASTLY",
-                "held_items": [
-                  "ITEM_SPELL_TAG",
-                  "ITEM_GHOSTIUM_Z"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_HOUNDOUR",
-                "held_items": [
-                  "ITEM_CHARCOAL",
-                  "ITEM_FIRIUM_Z"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_SABLEYE",
-                "held_items": [
-                  "ITEM_SABLENITE",
-                  "ITEM_DARKINIUM_Z"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_ZORUA",
-                "held_items": [
-                  "ITEM_SPELL_TAG",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_YAMASK",
-                "held_items": [
-                  "ITEM_GHOSTIUM_Z",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_FRILLISH",
-                "held_items": [
-                  "ITEM_MYSTIC_WATER",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_LITWICK",
-                "held_items": [
-                  "ITEM_SPELL_TAG",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_MISDREAVUS",
-                "held_items": [
-                  "ITEM_SPELL_TAG",
-                  "ITEM_GHOSTIUM_Z"
-                ]
-              }
-            ]
-          },
-          "time_of_day": "NIGHT"
-        },
-        {
-          "map": "MAP_ROUTE103",
-          "base_label": "gRoute103WaterMons",
-          "water_mons": {
-            "encounter_rate": 4,
-            "mons": [
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_TENTACOOL",
-                "held_items": [
-                  "ITEM_POISON_BARB",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_SHELLOS",
-                "held_items": [
-                  "ITEM_MYSTIC_WATER",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_PSYDUCK",
-                "held_items": [
-                  "ITEM_TWISTED_SPOON",
-                  "ITEM_WATERIUM_Z"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_WISHIWASHI",
-                "held_items": [
-                  "ITEM_WATER_GEM",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_FINNEON",
-                "held_items": [
-                  "ITEM_NONE",
-                  "ITEM_SCOPE_LENS"
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "map": "MAP_ROUTE103",
-          "base_label": "gRoute103FishingMons",
-          "fishing_mons": {
-            "encounter_rate": 30,
-            "mons": [
-              {
-                "min_level": 11,
-                "max_level": 11,
-                "species": "SPECIES_MAGIKARP",
-                "held_items": [
-                  "ITEM_NONE",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 12,
-                "species": "SPECIES_BARBOACH",
-                "held_items": [
-                  "ITEM_SOFT_SAND",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_CLAUNCHER",
-                "held_items": [
-                  "ITEM_MYSTIC_WATER",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_REMORAID",
-                "held_items": [
-                  "ITEM_SCOPE_LENS",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_SKRELP",
-                "held_items": [
-                  "ITEM_DRAGON_SCALE",
-                  "ITEM_POISON_BARB"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_CHEWTLE",
-                "held_items": [
-                  "ITEM_HARD_STONE",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_KLAWF",
-                "held_items": [
-                  "ITEM_PROTEIN",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_TYMPOLE",
-                "held_items": [
-                  "ITEM_MYSTIC_WATER",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 11,
-                "max_level": 13,
-                "species": "SPECIES_WAILMER",
-                "held_items": [
-                  "ITEM_MYSTIC_WATER",
-                  "ITEM_NONE"
-                ]
-              },
-              {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_BASCULIN",
-                "held_items": [
-                  "ITEM_SCOPE_LENS",
-                  "ITEM_NONE"
-                ]
-              }
-            ]
-          }
-        },
+ {
+    "map": "MAP_ROUTE103",
+    "base_label": "gRoute103_Morning",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_PONYTA", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_ELECTRIKE", "held_items": ["ITEM_MAGNET", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_SANDILE", "held_items": ["ITEM_SOFT_SAND", "ITEM_NONE"] },
+        { "min_level": 16, "max_level": 17, "species": "SPECIES_FARFETCHD_GALAR", "held_items": ["ITEM_LEEK", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_LOTAD", "held_items": ["ITEM_MIRACLE_SEED", "ITEM_NONE"] },
+        { "min_level": 16, "max_level": 17, "species": "SPECIES_SKIDDO", "held_items": ["ITEM_GRASSY_SEED", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_SNIVY", "held_items": ["ITEM_GRASSIUM_Z", "ITEM_MIRACLE_SEED"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_GLAMEOW", "held_items": ["ITEM_SILK_SCARF", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_LITLEO", "held_items": ["ITEM_FIRE_STONE", "ITEM_FIRIUM_Z"] },
+        { "min_level": 16, "max_level": 17, "species": "SPECIES_PIKIPEK", "held_items": ["ITEM_SHARP_BEAK", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_FRILLISH", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_TREECKO", "held_items": ["ITEM_GRASSIUM_Z", "ITEM_NONE"] }
+      ]
+    },
+    "water_mons": {
+      "encounter_rate": 6,
+      "mons": [
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_MARILL", "held_items": ["ITEM_MYSTIC_WATER", "ITEM_WATERIUM_Z"] },
+        { "min_level": 18, "max_level": 20, "species": "SPECIES_FINNEON", "held_items": ["ITEM_NONE", "ITEM_WAVE_INCENSE"] },
+        { "min_level": 17, "max_level": 19, "species": "SPECIES_CORPHISH", "held_items": ["ITEM_NONE", "ITEM_LUM_BERRY"] },
+        { "min_level": 18, "max_level": 20, "species": "SPECIES_TYMPOLE", "held_items": ["ITEM_NONE", "ITEM_WATERIUM_Z"] },
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_DEWPIDER", "held_items": ["ITEM_SILK_SCARF", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 20, "species": "SPECIES_SHELLOS", "held_items": ["ITEM_NONE", "ITEM_MYSTIC_WATER"] },
+        { "min_level": 17, "max_level": 19, "species": "SPECIES_KRABBY", "held_items": ["ITEM_HARD_STONE", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 20, "species": "SPECIES_BINACLE", "held_items": ["ITEM_NONE", "ITEM_ROCKIUM_Z"] },
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_PHINIZEN", "held_items": ["ITEM_WATERIUM_Z", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 20, "species": "SPECIES_DUCKLETT", "held_items": ["ITEM_NONE", "ITEM_SHARP_BEAK"] },
+        { "min_level": 18, "max_level": 20, "species": "SPECIES_FEEBAS", "held_items": ["ITEM_PRISM_SCALE", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 19, "species": "SPECIES_BASCULIN_BLUE", "held_items": ["ITEM_NONE", "ITEM_SCOPE_LENS"] }
+      ]
+    },
+    "fishing_mons": {
+      "encounter_rate": 30,
+      "mons": [
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_LOTAD", "held_items": ["ITEM_NONE", "ITEM_BIG_ROOT"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_WISHIWASHI", "held_items": ["ITEM_WATER_GEM", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_BARBOACH", "held_items": ["ITEM_SOFT_SAND", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 20, "species": "SPECIES_CHEWTLE", "held_items": ["ITEM_NONE", "ITEM_WATERIUM_Z"] },
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_MAGIKARP", "held_items": ["ITEM_NONE", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 20, "species": "SPECIES_REMORAID", "held_items": ["ITEM_SCOPE_LENS", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_SLOWPOKE_GALAR", "held_items": ["ITEM_KINGS_ROCK", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_CLAUNCHER", "held_items": ["ITEM_NONE", "ITEM_WATERIUM_Z"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_BUIZEL", "held_items": ["ITEM_NONE", "ITEM_MYSTIC_WATER"] },
+        { "min_level": 18, "max_level": 20, "species": "SPECIES_QWILFISH_HISUI", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_STARYU", "held_items": ["ITEM_NONE", "ITEM_STAR_PIECE"] },
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_SHELDER", "held_items": ["ITEM_NONE", "ITEM_BIG_PEARL"] }
+      ]
+    },
+    "time_of_day": "MORNING"
+  },
+
+  {
+    "map": "MAP_ROUTE103",
+    "base_label": "gRoute103_Day",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_MIENFOO", "held_items": ["ITEM_BLACK_BELT", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_NOIBAT", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] },
+        { "min_level": 16, "max_level": 17, "species": "SPECIES_PANCHAM", "held_items": ["ITEM_NONE", "ITEM_EVIOLITE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_GROOKEY", "held_items": ["ITEM_GRASSIUM_Z", "ITEM_MIRACLE_SEED"] },
+        { "min_level": 16, "max_level": 17, "species": "SPECIES_NACLI", "held_items": ["ITEM_HARD_STONE", "ITEM_ROCKIUM_Z"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_DEERLING", "held_items": ["ITEM_MEADOW_PLATE", "ITEM_NONE"] },
+        { "min_level": 16, "max_level": 17, "species": "SPECIES_HAWLUCHA", "held_items": ["ITEM_FIGHTING_GEM", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_STEENEE", "held_items": ["ITEM_MIRACLE_SEED", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_SALANDIT", "held_items": ["ITEM_SMOKE_BALL", "ITEM_NONE"] },
+        { "min_level": 16, "max_level": 17, "species": "SPECIES_GROWLITHE_HISUI", "held_items": ["ITEM_FLAME_PLATE", "ITEM_FIRIUM_Z"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_TEPIG", "held_items": ["ITEM_FIRIUM_Z", "ITEM_CHARCOAL"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_CLAUNCHER", "held_items": ["ITEM_WATER_GEM", "ITEM_NONE"] }
+      ]
+    },
+    "water_mons": {
+      "encounter_rate": 6,
+      "mons": [
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_PSYDUCK", "held_items": ["ITEM_TWISTED_SPOON", "ITEM_WATERIUM_Z"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_ARROKUDA", "held_items": ["ITEM_NONE", "ITEM_MYSTIC_WATER"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_SLOWPOKE_GALAR", "held_items": ["ITEM_KINGS_ROCK", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_SHELLOS", "held_items": ["ITEM_NONE", "ITEM_SOFT_SAND"] },
+        { "min_level": 17, "max_level": 19, "species": "SPECIES_BASCULIN", "held_items": ["ITEM_NONE", "ITEM_WATER_STONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_FEEBAS", "held_items": ["ITEM_PRISM_SCALE", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_FINIZEN", "held_items": ["ITEM_WAVE_INCENSE", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_REMORAID", "held_items": ["ITEM_SCOPE_LENS", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_CHEWTLE", "held_items": ["ITEM_NONE", "ITEM_HARD_STONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_CLAUNCHER", "held_items": ["ITEM_NONE", "ITEM_WATER_GEM"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_SLOWPOKE", "held_items": ["ITEM_LAGGING_TAIL", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 19, "species": "SPECIES_KRABBY", "held_items": ["ITEM_NONE", "ITEM_HARD_STONE"] }
+      ]
+    },
+    "fishing_mons": {
+      "encounter_rate": 30,
+      "mons": [
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_MAGIKARP", "held_items": ["ITEM_NONE", "ITEM_DRAGON_SCALE"] },
+        { "min_level": 18, "max_level": 18, "species": "SPECIES_BARBOACH", "held_items": ["ITEM_SOFT_SAND", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 18, "species": "SPECIES_WISHIWASHI", "held_items": ["ITEM_WATER_GEM", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_GOLDEEN", "held_items": ["ITEM_NONE", "ITEM_MYSTIC_WATER"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_TYMPOLE", "held_items": ["ITEM_SOFT_SAND", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_FEEBAS", "held_items": ["ITEM_NONE", "ITEM_PRISM_SCALE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_CHEWTLE", "held_items": ["ITEM_NONE", "ITEM_HARD_STONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_TENTACOOL", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_CLAUNCHER", "held_items": ["ITEM_NONE", "ITEM_WATER_GEM"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_LOTAD", "held_items": ["ITEM_MIRACLE_SEED", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_ARROKUDA", "held_items": ["ITEM_NONE", "ITEM_SCOPE_LENS"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_KRABBY", "held_items": ["ITEM_NONE", "ITEM_HARD_STONE"] }
+      ]
+    },
+    "time_of_day": "DAY"
+  },
+
+  {
+    "map": "MAP_ROUTE103",
+    "base_label": "gRoute103_Evening",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 16, "max_level": 17, "species": "SPECIES_MURKROW", "held_items": ["ITEM_DUSK_STONE", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_MORGREM", "held_items": ["ITEM_DARKINIUM_Z", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_GROVYLE", "held_items": ["ITEM_GRASSIUM_Z", "ITEM_MIRACLE_SEED"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_FLETCHINDER", "held_items": ["ITEM_SHARP_BEAK", "ITEM_FIRIUM_Z"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_HATTREM", "held_items": ["ITEM_PSYCHIC_SEED", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_DEERLING", "held_items": ["ITEM_MEADOW_PLATE", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_FROAKIE", "held_items": ["ITEM_WATERIUM_Z", "ITEM_NONE"] },
+        { "min_level": 16, "max_level": 17, "species": "SPECIES_RUFFLET", "held_items": ["ITEM_SHARP_BEAK", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_SNEASEL_HISUI", "held_items": ["ITEM_QUICK_CLAW", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_QUAXLY", "held_items": ["ITEM_WATERIUM_Z", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_CARBINK", "held_items": ["ITEM_HARD_STONE", "ITEM_FAIRY_GEM"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_TOXEL", "held_items": ["ITEM_BLACK_SLUDGE", "ITEM_NONE"] }
+      ]
+    },
+    "water_mons": {
+      "encounter_rate": 6,
+      "mons": [
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_MARILL", "held_items": ["ITEM_MYSTIC_WATER", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_BARBOACH", "held_items": ["ITEM_SOFT_SAND", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_SLOWPOKE_GALAR", "held_items": ["ITEM_KINGS_ROCK", "ITEM_NONE"] },
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_SHELLOS", "held_items": ["ITEM_NONE", "ITEM_SOFT_SAND"] },
+        { "min_level": 17, "max_level": 19, "species": "SPECIES_BASCULIN", "held_items": ["ITEM_NONE", "ITEM_WATER_STONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_FEEBAS", "held_items": ["ITEM_PRISM_SCALE", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_FINIZEN", "held_items": ["ITEM_WAVE_INCENSE", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_REMORAID", "held_items": ["ITEM_SCOPE_LENS", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_CHEWTLE", "held_items": ["ITEM_NONE", "ITEM_HARD_STONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_CLAUNCHER", "held_items": ["ITEM_NONE", "ITEM_WATER_GEM"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_SLOWPOKE", "held_items": ["ITEM_LAGGING_TAIL", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 19, "species": "SPECIES_KRABBY", "held_items": ["ITEM_NONE", "ITEM_HARD_STONE"] }
+      ]
+    },
+    "fishing_mons": {
+      "encounter_rate": 30,
+      "mons": [
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_BARBOACH", "held_items": ["ITEM_SOFT_SAND", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 18, "species": "SPECIES_WISHIWASHI", "held_items": ["ITEM_WATER_GEM", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 18, "species": "SPECIES_TYMPOLE", "held_items": ["ITEM_SOFT_SAND", "ITEM_NONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_GOLDEEN", "held_items": ["ITEM_NONE", "ITEM_MYSTIC_WATER"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_FEEBAS", "held_items": ["ITEM_NONE", "ITEM_PRISM_SCALE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_CHEWTLE", "held_items": ["ITEM_NONE", "ITEM_HARD_STONE"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_TENTACOOL", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_CLAUNCHER", "held_items": ["ITEM_NONE", "ITEM_WATER_GEM"] },
+        { "min_level": 17, "max_level": 18, "species": "SPECIES_LOTAD", "held_items": ["ITEM_MIRACLE_SEED", "ITEM_NONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_ARROKUDA", "held_items": ["ITEM_NONE", "ITEM_SCOPE_LENS"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_KRABBY", "held_items": ["ITEM_NONE", "ITEM_HARD_STONE"] },
+        { "min_level": 18, "max_level": 19, "species": "SPECIES_MAGIKARP", "held_items": ["ITEM_NONE", "ITEM_DRAGON_SCALE"] }
+      ]
+    },
+    "time_of_day": "EVENING"
+  },
+
+  {
+    "map": "MAP_ROUTE103",
+    "base_label": "gRoute103_Night",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_GASTLY", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_MISDREAVUS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_SHROODLE", "held_items": ["ITEM_BLACK_SLUDGE", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_MORGREM", "held_items": ["ITEM_DARKINIUM_Z", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_DREEPY", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_SABLEYE", "held_items": ["ITEM_BLACK_GLASSES", "ITEM_DARKINIUM_Z"] },
+        { "min_level": 21, "max_level": 21, "species": "SPECIES_LAMPENT", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 21, "max_level": 21, "species": "SPECIES_PUMPKABOO", "held_items": ["ITEM_MIRACLE_SEED", "ITEM_NONE"] },
+        { "min_level": 21, "max_level": 21, "species": "SPECIES_SNEASLER", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 22, "max_level": 22, "species": "SPECIES_KUBFU", "held_items": ["ITEM_SCROLL_OF_DARKNESS", "ITEM_SCROLL_OF_WATERS"] },
+        { "min_level": 22, "max_level": 22, "species": "SPECIES_CERULEDGE", "held_items": ["ITEM_SPELL_TAG", "ITEM_GHOSTIUM_Z"] },
+        { "min_level": 22, "max_level": 22, "species": "SPECIES_BANETTE", "held_items": ["ITEM_BANETTITE", "ITEM_SPELL_TAG"] }
+      ]
+    },
+    "water_mons": {
+      "encounter_rate": 6,
+      "mons": [
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_FRILLISH", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_LUMINEON", "held_items": ["ITEM_WATERIUM_Z", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_PALPITOAD", "held_items": ["ITEM_WATERIUM_Z", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_CRAWDAUNT", "held_items": ["ITEM_SCOPE_LENS", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_BASCULIN_WHITE", "held_items": ["ITEM_SCOPE_LENS", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_DRAGAPULT", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] },
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_SLOWKING_GALAR", "held_items": ["ITEM_KINGS_ROCK", "ITEM_NONE"] },
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_DEWGONG", "held_items": ["ITEM_MYSTIC_WATER", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_JELLICENT", "held_items": ["ITEM_NONE", "ITEM_WATERIUM_Z"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_CLAWITZER", "held_items": ["ITEM_WATER_GEM", "ITEM_NONE"] },
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_PYUKUMUKU", "held_items": ["ITEM_LEFTOVERS", "ITEM_NONE"] },
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_BARRASKEWDA", "held_items": ["ITEM_SCOPE_LENS", "ITEM_NONE"] }
+      ]
+    },
+    "fishing_mons": {
+      "encounter_rate": 30,
+      "mons": [
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_DRAGONAIR", "held_items": ["ITEM_DRAGON_SCALE", "ITEM_NONE"] },
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_BRUXISH", "held_items": ["ITEM_NONE", "ITEM_WATERIUM_Z"] },
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_SHARPEDO", "held_items": ["ITEM_SCOPE_LENS", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_CARVANHA", "held_items": ["ITEM_RAZOR_FANG", "ITEM_NONE"] },
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_STARMIE", "held_items": ["ITEM_WATERIUM_Z", "ITEM_NONE"] },
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_LANTURN", "held_items": ["ITEM_LEFTOVERS", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_TOXAPEX", "held_items": ["ITEM_BLACK_SLUDGE", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_MALAMAR", "held_items": ["ITEM_NONE", "ITEM_DARKINIUM_Z"] },
+        { "min_level": 19, "max_level": 20, "species": "SPECIES_RELICANTH", "held_items": ["ITEM_NONE", "ITEM_HARD_STONE"] },
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_OCTILLERY", "held_items": ["ITEM_NONE", "ITEM_SCOPE_LENS"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_CRAMORANT", "held_items": ["ITEM_NONE", "ITEM_SHARP_BEAK"] },
+        { "min_level": 21, "max_level": 22, "species": "SPECIES_GYARADOS", "held_items": ["ITEM_NONE", "ITEM_WATERIUM_Z"] }
+      ]
+    },
+    "time_of_day": "NIGHT"
+  },
         {
           "map": "MAP_ROUTE104",
           "base_label": "gRoute104_Morning",
