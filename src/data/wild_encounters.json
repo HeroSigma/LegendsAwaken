@@ -2818,75 +2818,94 @@
             ]
           }
         },
-        {
-          "map": "MAP_MT_PYRE_1F",
-          "base_label": "gMtPyre_1F",
-          "land_mons": {
-            "encounter_rate": 10,
-            "mons": [
-              {
-                "min_level": 27,
-                "max_level": 27,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 28,
-                "max_level": 28,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 26,
-                "max_level": 26,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 25,
-                "max_level": 25,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 24,
-                "max_level": 24,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 23,
-                "max_level": 23,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 22,
-                "max_level": 22,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 24,
-                "max_level": 24,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_SHUPPET"
-              },
-              {
-                "min_level": 24,
-                "max_level": 24,
-                "species": "SPECIES_SHUPPET"
-              }
-            ]
-          }
-        },
+ {
+    "map": "MAP_MT_PYRE_1F",
+    "base_label": "gMtPyre1F_Morning",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 80, "max_level": 81, "species": "SPECIES_DUSKNOIR", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 81, "max_level": 82, "species": "SPECIES_MISMAGIUS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 82, "max_level": 83, "species": "SPECIES_COFAGRIGUS", "held_items": ["ITEM_COLBUR_BERRY", "ITEM_NONE"] },
+        { "min_level": 83, "max_level": 84, "species": "SPECIES_RUNERIGUS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 80, "max_level": 81, "species": "SPECIES_SABLEYE", "held_items": ["ITEM_SABLENITE", "ITEM_DARKINIUM_Z"] },
+        { "min_level": 81, "max_level": 82, "species": "SPECIES_BANETTE", "held_items": ["ITEM_BANETTITE", "ITEM_SPELL_TAG"] },
+        { "min_level": 82, "max_level": 83, "species": "SPECIES_GENGAR", "held_items": ["ITEM_GENGARITE", "ITEM_SPELL_TAG"] },
+        { "min_level": 83, "max_level": 84, "species": "SPECIES_ORICORIO_SENSU", "held_items": ["ITEM_GHOST_GEM", "ITEM_NONE"] },
+        { "min_level": 80, "max_level": 81, "species": "SPECIES_SINISTCHA_MASTERPIECE", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 81, "max_level": 82, "species": "SPECIES_POLTCHAGEIST_ARTISAN", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 82, "max_level": 83, "species": "SPECIES_FROSLASS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 84, "max_level": 84, "species": "SPECIES_LUNALA", "held_items": ["ITEM_LUNALIUM_Z", "ITEM_NONE"] }
+      ]
+    },
+    "time_of_day": "MORNING"
+  },
+  {
+    "map": "MAP_MT_PYRE_1F",
+    "base_label": "gMtPyre1F_Day",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 80, "max_level": 81, "species": "SPECIES_MISMAGIUS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 81, "max_level": 82, "species": "SPECIES_DUSKNOIR", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 82, "max_level": 83, "species": "SPECIES_COFAGRIGUS", "held_items": ["ITEM_COLBUR_BERRY", "ITEM_NONE"] },
+        { "min_level": 83, "max_level": 84, "species": "SPECIES_RUNERIGUS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 80, "max_level": 81, "species": "SPECIES_SABLEYE", "held_items": ["ITEM_SABLENITE", "ITEM_DARKINIUM_Z"] },
+        { "min_level": 81, "max_level": 82, "species": "SPECIES_BANETTE", "held_items": ["ITEM_BANETTITE", "ITEM_SPELL_TAG"] },
+        { "min_level": 82, "max_level": 83, "species": "SPECIES_GENGAR", "held_items": ["ITEM_GENGARITE", "ITEM_SPELL_TAG"] },
+        { "min_level": 83, "max_level": 84, "species": "SPECIES_ORICORIO_SENSU", "held_items": ["ITEM_GHOST_GEM", "ITEM_NONE"] },
+        { "min_level": 80, "max_level": 81, "species": "SPECIES_SINISTCHA_MASTERPIECE", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 81, "max_level": 82, "species": "SPECIES_POLTCHAGEIST_ARTISAN", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 82, "max_level": 83, "species": "SPECIES_TREVENANT", "held_items": ["ITEM_BIG_ROOT", "ITEM_NONE"] },
+        { "min_level": 84, "max_level": 84, "species": "SPECIES_GIRATINA", "held_items": ["ITEM_GRISEOUS_ORB", "ITEM_NONE"] }
+      ]
+    },
+    "time_of_day": "DAY"
+  },
+  {
+    "map": "MAP_MT_PYRE_1F",
+    "base_label": "gMtPyre1F_Evening",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 80, "max_level": 81, "species": "SPECIES_DUSKNOIR", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 81, "max_level": 82, "species": "SPECIES_MISMAGIUS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 82, "max_level": 83, "species": "SPECIES_COFAGRIGUS", "held_items": ["ITEM_COLBUR_BERRY", "ITEM_NONE"] },
+        { "min_level": 83, "max_level": 84, "species": "SPECIES_RUNERIGUS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 80, "max_level": 81, "species": "SPECIES_SABLEYE", "held_items": ["ITEM_SABLENITE", "ITEM_DARKINIUM_Z"] },
+        { "min_level": 81, "max_level": 82, "species": "SPECIES_BANETTE", "held_items": ["ITEM_BANETTITE", "ITEM_SPELL_TAG"] },
+        { "min_level": 82, "max_level": 83, "species": "SPECIES_GENGAR", "held_items": ["ITEM_GENGARITE", "ITEM_SPELL_TAG"] },
+        { "min_level": 83, "max_level": 84, "species": "SPECIES_ORICORIO_SENSU", "held_items": ["ITEM_GHOST_GEM", "ITEM_NONE"] },
+        { "min_level": 80, "max_level": 81, "species": "SPECIES_SINISTCHA_MASTERPIECE", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 81, "max_level": 82, "species": "SPECIES_POLTCHAGEIST_ARTISAN", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 82, "max_level": 83, "species": "SPECIES_FROSLASS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 84, "max_level": 84, "species": "SPECIES_FLUTTER_MANE", "held_items": ["ITEM_GHOST_GEM", "ITEM_NONE"] }
+      ]
+    },
+    "time_of_day": "EVENING"
+  },
+  {
+    "map": "MAP_MT_PYRE_1F",
+    "base_label": "gMtPyre1F_Night",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 84, "max_level": 85, "species": "SPECIES_DUSKNOIR", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 85, "max_level": 86, "species": "SPECIES_MISMAGIUS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 86, "max_level": 87, "species": "SPECIES_COFAGRIGUS", "held_items": ["ITEM_COLBUR_BERRY", "ITEM_NONE"] },
+        { "min_level": 87, "max_level": 88, "species": "SPECIES_RUNERIGUS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 84, "max_level": 85, "species": "SPECIES_SABLEYE", "held_items": ["ITEM_SABLENITE", "ITEM_DARKINIUM_Z"] },
+        { "min_level": 85, "max_level": 86, "species": "SPECIES_BANETTE", "held_items": ["ITEM_BANETTITE", "ITEM_SPELL_TAG"] },
+        { "min_level": 86, "max_level": 87, "species": "SPECIES_GENGAR", "held_items": ["ITEM_GENGARITE", "ITEM_SPELL_TAG"] },
+        { "min_level": 87, "max_level": 88, "species": "SPECIES_ORICORIO_SENSU", "held_items": ["ITEM_GHOST_GEM", "ITEM_NONE"] },
+        { "min_level": 84, "max_level": 85, "species": "SPECIES_SINISTCHA_MASTERPIECE", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 85, "max_level": 86, "species": "SPECIES_POLTCHAGEIST_ARTISAN", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 86, "max_level": 87, "species": "SPECIES_FROSLASS", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] },
+        { "min_level": 88, "max_level": 88, "species": "SPECIES_MARSHADOW", "held_items": ["ITEM_SPELL_TAG", "ITEM_NONE"] }
+      ]
+    },
+    "time_of_day": "NIGHT"
+  },
         {
           "map": "MAP_VICTORY_ROAD_1F",
           "base_label": "gVictoryRoad_1F",
