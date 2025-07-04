@@ -5205,7 +5205,7 @@
     },
     "time_of_day": "NIGHT"
   },
-  {
+   {
     "map": "MAP_ROUTE124",
     "base_label": "gRoute124_Morning",
     "water_mons": {
