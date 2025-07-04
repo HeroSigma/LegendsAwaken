@@ -5339,75 +5339,94 @@
             ]
           }
         },
-        {
-          "map": "MAP_PETALBURG_WOODS",
-          "base_label": "gPetalburgWoods",
-          "land_mons": {
-            "encounter_rate": 20,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_POOCHYENA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_WURMPLE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_SHROOMISH"
-              },
-              {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_POOCHYENA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_SILCOON"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_CASCOON"
-              },
-              {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_WURMPLE"
-              },
-              {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_SHROOMISH"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_TAILLOW"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_SLAKOTH"
-              },
-              {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_TAILLOW"
-              },
-              {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_SLAKOTH"
-              }
-            ]
-          }
-        },
+  {
+    "map": "MAP_PETALBURG_WOODS",
+    "base_label": "gPetalburgWoods_Morning",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 24, "max_level": 25, "species": "SPECIES_WURMPLE", "held_items": ["ITEM_SILVER_POWDER", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 25, "max_level": 26, "species": "SPECIES_SCATTERBUG", "held_items": ["ITEM_SILVER_POWDER", "ITEM_NONE"] },
+        { "min_level": 25, "max_level": 27, "species": "SPECIES_GRUBBIN", "held_items": ["ITEM_CELL_BATTERY", "ITEM_NONE"] },
+        { "min_level": 26, "max_level": 27, "species": "SPECIES_SEWADDLE", "held_items": ["ITEM_BIG_ROOT", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 24, "max_level": 25, "species": "SPECIES_FOMANTIS", "held_items": ["ITEM_MIRACLE_SEED", "ITEM_NONE"] },
+        { "min_level": 25, "max_level": 27, "species": "SPECIES_DEWPIDER", "held_items": ["ITEM_MYSTIC_WATER", "ITEM_SILVER_POWDER"] },
+        { "min_level": 26, "max_level": 27, "species": "SPECIES_BURMY", "held_items": ["ITEM_NONE", "ITEM_SILVER_POWDER"] },
+        { "min_level": 25, "max_level": 26, "species": "SPECIES_NINCADA", "held_items": ["ITEM_SOFT_SAND", "ITEM_NONE"] },
+        { "min_level": 26, "max_level": 27, "species": "SPECIES_SPEWPA", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 27, "max_level": 27, "species": "SPECIES_METAPOD", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 27, "max_level": 27, "species": "SPECIES_KAKUNA", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 27, "max_level": 27, "species": "SPECIES_MORPEKO", "held_items": ["ITEM_SITRUS_BERRY", "ITEM_NONE"] }
+      ]
+    },
+    "time_of_day": "MORNING"
+  },
+  {
+    "map": "MAP_PETALBURG_WOODS",
+    "base_label": "gPetalburgWoods_Day",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 24, "max_level": 25, "species": "SPECIES_CATERPIE", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 25, "max_level": 26, "species": "SPECIES_GRUBBIN", "held_items": ["ITEM_CELL_BATTERY", "ITEM_NONE"] },
+        { "min_level": 25, "max_level": 27, "species": "SPECIES_WEEDLE", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 26, "max_level": 27, "species": "SPECIES_FOMANTIS", "held_items": ["ITEM_MIRACLE_SEED", "ITEM_NONE"] },
+        { "min_level": 24, "max_level": 25, "species": "SPECIES_BLIPBUG", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 25, "max_level": 27, "species": "SPECIES_CHARJABUG", "held_items": ["ITEM_ELECTRIC_SEED", "ITEM_NONE"] },
+        { "min_level": 26, "max_level": 27, "species": "SPECIES_DEWPIDER", "held_items": ["ITEM_MYSTIC_WATER", "ITEM_SILVER_POWDER"] },
+        { "min_level": 25, "max_level": 26, "species": "SPECIES_SEWADDLE", "held_items": ["ITEM_BIG_ROOT", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 26, "max_level": 27, "species": "SPECIES_SPEWPA", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 27, "max_level": 27, "species": "SPECIES_BUTTERFREE", "held_items": ["ITEM_SILVER_POWDER", "ITEM_NONE"] },
+        { "min_level": 27, "max_level": 27, "species": "SPECIES_BEEDRILL", "held_items": ["ITEM_BEEDRILLITE", "ITEM_NONE"] },
+        { "min_level": 27, "max_level": 27, "species": "SPECIES_VIVILLON", "held_items": ["ITEM_NONE", "ITEM_SILVER_POWDER"] }
+      ]
+    },
+    "time_of_day": "DAY"
+  },
+  {
+    "map": "MAP_PETALBURG_WOODS",
+    "base_label": "gPetalburgWoods_Evening",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 24, "max_level": 25, "species": "SPECIES_BLIPBUG", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 25, "max_level": 26, "species": "SPECIES_GRUBBIN", "held_items": ["ITEM_CELL_BATTERY", "ITEM_NONE"] },
+        { "min_level": 25, "max_level": 27, "species": "SPECIES_WEEDLE", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 26, "max_level": 27, "species": "SPECIES_BURMY", "held_items": ["ITEM_NONE", "ITEM_SILVER_POWDER"] },
+        { "min_level": 24, "max_level": 25, "species": "SPECIES_SCATTERBUG", "held_items": ["ITEM_SILVER_POWDER", "ITEM_NONE"] },
+        { "min_level": 25, "max_level": 27, "species": "SPECIES_CHARJABUG", "held_items": ["ITEM_ELECTRIC_SEED", "ITEM_NONE"] },
+        { "min_level": 26, "max_level": 27, "species": "SPECIES_DEWPIDER", "held_items": ["ITEM_MYSTIC_WATER", "ITEM_SILVER_POWDER"] },
+        { "min_level": 25, "max_level": 26, "species": "SPECIES_FOMANTIS", "held_items": ["ITEM_MIRACLE_SEED", "ITEM_NONE"] },
+        { "min_level": 26, "max_level": 27, "species": "SPECIES_SPEWPA", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 27, "max_level": 27, "species": "SPECIES_BUTTERFREE", "held_items": ["ITEM_SILVER_POWDER", "ITEM_NONE"] },
+        { "min_level": 27, "max_level": 27, "species": "SPECIES_VIVILLON", "held_items": ["ITEM_NONE", "ITEM_SILVER_POWDER"] },
+        { "min_level": 27, "max_level": 27, "species": "SPECIES_MOTHIM", "held_items": ["ITEM_NONE", "ITEM_SILVER_POWDER"] }
+      ]
+    },
+    "time_of_day": "EVENING"
+  },
+  {
+    "map": "MAP_PETALBURG_WOODS",
+    "base_label": "gPetalburgWoods_Night",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 27, "max_level": 28, "species": "SPECIES_ARIADOS", "held_items": ["ITEM_SILVER_POWDER", "ITEM_NONE"] },
+        { "min_level": 28, "max_level": 29, "species": "SPECIES_LEDYAN", "held_items": ["ITEM_NONE", "ITEM_BUGINIUM_Z"] },
+        { "min_level": 29, "max_level": 30, "species": "SPECIES_BEEDRILL", "held_items": ["ITEM_BEEDRILLITE", "ITEM_NONE"] },
+        { "min_level": 27, "max_level": 28, "species": "SPECIES_BUTTERFREE", "held_items": ["ITEM_SILVER_POWDER", "ITEM_NONE"] },
+        { "min_level": 28, "max_level": 29, "species": "SPECIES_MOTHIM", "held_items": ["ITEM_NONE", "ITEM_SILVER_POWDER"] },
+        { "min_level": 29, "max_level": 30, "species": "SPECIES_ORBEETLE", "held_items": ["ITEM_BUGINIUM_Z", "ITEM_NONE"] },
+        { "min_level": 27, "max_level": 28, "species": "SPECIES_SCOLIPEDE", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 28, "max_level": 29, "species": "SPECIES_VIVILLON", "held_items": ["ITEM_NONE", "ITEM_SILVER_POWDER"] },
+        { "min_level": 29, "max_level": 30, "species": "SPECIES_LEAVANNY", "held_items": ["ITEM_BIG_ROOT", "ITEM_NONE"] },
+        { "min_level": 27, "max_level": 28, "species": "SPECIES_GALVANTULA", "held_items": ["ITEM_CELL_BATTERY", "ITEM_NONE"] },
+        { "min_level": 28, "max_level": 29, "species": "SPECIES_RIBOMBEE", "held_items": ["ITEM_FAIRIUM_Z", "ITEM_NONE"] },
+        { "min_level": 30, "max_level": 30, "species": "SPECIES_SCIZOR", "held_items": ["ITEM_METAL_COAT", "ITEM_NONE"] }
+      ]
+    },
+    "time_of_day": "NIGHT"
+  },
         {
           "map": "MAP_RUSTURF_TUNNEL",
           "base_label": "gRusturfTunnel",
