@@ -5079,75 +5079,94 @@
             ]
           }
         },
-        {
-          "map": "MAP_FIERY_PATH",
-          "base_label": "gFieryPath",
-          "land_mons": {
-            "encounter_rate": 10,
-            "mons": [
-              {
-                "min_level": 15,
-                "max_level": 15,
-                "species": "SPECIES_NUMEL"
-              },
-              {
-                "min_level": 15,
-                "max_level": 15,
-                "species": "SPECIES_KOFFING"
-              },
-              {
-                "min_level": 16,
-                "max_level": 16,
-                "species": "SPECIES_NUMEL"
-              },
-              {
-                "min_level": 15,
-                "max_level": 15,
-                "species": "SPECIES_MACHOP"
-              },
-              {
-                "min_level": 15,
-                "max_level": 15,
-                "species": "SPECIES_TORKOAL"
-              },
-              {
-                "min_level": 15,
-                "max_level": 15,
-                "species": "SPECIES_SLUGMA"
-              },
-              {
-                "min_level": 16,
-                "max_level": 16,
-                "species": "SPECIES_KOFFING"
-              },
-              {
-                "min_level": 16,
-                "max_level": 16,
-                "species": "SPECIES_MACHOP"
-              },
-              {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_TORKOAL"
-              },
-              {
-                "min_level": 16,
-                "max_level": 16,
-                "species": "SPECIES_TORKOAL"
-              },
-              {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_GRIMER"
-              },
-              {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_GRIMER"
-              }
-            ]
-          }
-        },
+ {
+    "map": "MAP_FIERY_PATH",
+    "base_label": "gFieryPath_Morning",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 38, "max_level": 39, "species": "SPECIES_TORKOAL", "held_items": ["ITEM_HEAT_ROCK", "ITEM_NONE"] },
+        { "min_level": 39, "max_level": 40, "species": "SPECIES_NUMEL", "held_items": ["ITEM_PASSHO_BERRY", "ITEM_NONE"] },
+        { "min_level": 40, "max_level": 41, "species": "SPECIES_SLUGMA", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 41, "max_level": 42, "species": "SPECIES_MAGCARGO", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 38, "max_level": 39, "species": "SPECIES_CAMERUPT", "held_items": ["ITEM_CAMERUPTITE", "ITEM_NONE"] },
+        { "min_level": 39, "max_level": 40, "species": "SPECIES_TURTONATOR", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] },
+        { "min_level": 40, "max_level": 41, "species": "SPECIES_MAROWAK_ALOLA", "held_items": ["ITEM_THICK_CLUB", "ITEM_NONE"] },
+        { "min_level": 41, "max_level": 42, "species": "SPECIES_CROBAT", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 38, "max_level": 39, "species": "SPECIES_SALAZZLE", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 39, "max_level": 40, "species": "SPECIES_RAPIDASH", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 40, "max_level": 41, "species": "SPECIES_CARKOL", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 41, "max_level": 42, "species": "SPECIES_TYRANTRUM", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] }
+      ]
+    },
+    "time_of_day": "MORNING"
+  },
+  {
+    "map": "MAP_FIERY_PATH",
+    "base_label": "gFieryPath_Day",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 38, "max_level": 39, "species": "SPECIES_NUMEL", "held_items": ["ITEM_PASSHO_BERRY", "ITEM_NONE"] },
+        { "min_level": 39, "max_level": 40, "species": "SPECIES_TORKOAL", "held_items": ["ITEM_HEAT_ROCK", "ITEM_NONE"] },
+        { "min_level": 40, "max_level": 41, "species": "SPECIES_SLUGMA", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 41, "max_level": 42, "species": "SPECIES_MAGCARGO", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 38, "max_level": 39, "species": "SPECIES_CAMERUPT", "held_items": ["ITEM_CAMERUPTITE", "ITEM_NONE"] },
+        { "min_level": 39, "max_level": 40, "species": "SPECIES_TURTONATOR", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] },
+        { "min_level": 40, "max_level": 41, "species": "SPECIES_MAROWAK_ALOLA", "held_items": ["ITEM_THICK_CLUB", "ITEM_NONE"] },
+        { "min_level": 41, "max_level": 42, "species": "SPECIES_SALAZZLE", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 38, "max_level": 39, "species": "SPECIES_RAPIDASH", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 39, "max_level": 40, "species": "SPECIES_CROBAT", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 40, "max_level": 41, "species": "SPECIES_CARKOL", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 41, "max_level": 42, "species": "SPECIES_TYRANTRUM", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] }
+      ]
+    },
+    "time_of_day": "DAY"
+  },
+  {
+    "map": "MAP_FIERY_PATH",
+    "base_label": "gFieryPath_Evening",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 38, "max_level": 39, "species": "SPECIES_SLUGMA", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 39, "max_level": 40, "species": "SPECIES_NUMEL", "held_items": ["ITEM_PASSHO_BERRY", "ITEM_NONE"] },
+        { "min_level": 40, "max_level": 41, "species": "SPECIES_TORKOAL", "held_items": ["ITEM_HEAT_ROCK", "ITEM_NONE"] },
+        { "min_level": 41, "max_level": 42, "species": "SPECIES_MAGCARGO", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 38, "max_level": 39, "species": "SPECIES_CAMERUPT", "held_items": ["ITEM_CAMERUPTITE", "ITEM_NONE"] },
+        { "min_level": 39, "max_level": 40, "species": "SPECIES_TURTONATOR", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] },
+        { "min_level": 40, "max_level": 41, "species": "SPECIES_MAROWAK_ALOLA", "held_items": ["ITEM_THICK_CLUB", "ITEM_NONE"] },
+        { "min_level": 41, "max_level": 42, "species": "SPECIES_CROBAT", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 38, "max_level": 39, "species": "SPECIES_SALAZZLE", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 39, "max_level": 40, "species": "SPECIES_RAPIDASH", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 40, "max_level": 41, "species": "SPECIES_CARKOL", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 41, "max_level": 42, "species": "SPECIES_TYRANTRUM", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] }
+      ]
+    },
+    "time_of_day": "EVENING"
+  },
+  {
+    "map": "MAP_FIERY_PATH",
+    "base_label": "gFieryPath_Night",
+    "land_mons": {
+      "encounter_rate": 20,
+      "mons": [
+        { "min_level": 42, "max_level": 43, "species": "SPECIES_TORKOAL", "held_items": ["ITEM_HEAT_ROCK", "ITEM_NONE"] },
+        { "min_level": 43, "max_level": 44, "species": "SPECIES_NUMEL", "held_items": ["ITEM_PASSHO_BERRY", "ITEM_NONE"] },
+        { "min_level": 44, "max_level": 45, "species": "SPECIES_SLUGMA", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 45, "max_level": 46, "species": "SPECIES_MAGCARGO", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 42, "max_level": 43, "species": "SPECIES_CAMERUPT", "held_items": ["ITEM_CAMERUPTITE", "ITEM_NONE"] },
+        { "min_level": 43, "max_level": 44, "species": "SPECIES_TURTONATOR", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] },
+        { "min_level": 44, "max_level": 45, "species": "SPECIES_MAROWAK_ALOLA", "held_items": ["ITEM_THICK_CLUB", "ITEM_NONE"] },
+        { "min_level": 45, "max_level": 46, "species": "SPECIES_CROBAT", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 42, "max_level": 43, "species": "SPECIES_SALAZZLE", "held_items": ["ITEM_POISON_BARB", "ITEM_NONE"] },
+        { "min_level": 43, "max_level": 44, "species": "SPECIES_RAPIDASH", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 44, "max_level": 45, "species": "SPECIES_CARKOL", "held_items": ["ITEM_CHARCOAL", "ITEM_NONE"] },
+        { "min_level": 45, "max_level": 46, "species": "SPECIES_TYRANTRUM", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] }
+      ]
+    },
+    "time_of_day": "NIGHT"
+  },
         {
           "map": "MAP_METEOR_FALLS_B1F_2R",
           "base_label": "gMeteorFalls_B1F_2R",
