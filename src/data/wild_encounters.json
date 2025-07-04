@@ -554,7 +554,7 @@
         { "min_level": 21, "max_level": 22, "species": "SPECIES_LUMINEON", "held_items": ["ITEM_WATERIUM_Z", "ITEM_NONE"] },
         { "min_level": 20, "max_level": 21, "species": "SPECIES_PALPITOAD", "held_items": ["ITEM_WATERIUM_Z", "ITEM_NONE"] },
         { "min_level": 20, "max_level": 21, "species": "SPECIES_CRAWDAUNT", "held_items": ["ITEM_SCOPE_LENS", "ITEM_NONE"] },
-        { "min_level": 20, "max_level": 21, "species": "SPECIES_BASCULIN_WHITE", "held_items": ["ITEM_SCOPE_LENS", "ITEM_NONE"] },
+        { "min_level": 20, "max_level": 21, "species": "SPECIES_BASCULIN_WHITE_STRIPED", "held_items": ["ITEM_SCOPE_LENS", "ITEM_NONE"] },
         { "min_level": 20, "max_level": 21, "species": "SPECIES_DRAGAPULT", "held_items": ["ITEM_DRAGON_FANG", "ITEM_NONE"] },
         { "min_level": 21, "max_level": 22, "species": "SPECIES_SLOWKING_GALAR", "held_items": ["ITEM_KINGS_ROCK", "ITEM_NONE"] },
         { "min_level": 21, "max_level": 22, "species": "SPECIES_DEWGONG", "held_items": ["ITEM_MYSTIC_WATER", "ITEM_NONE"] },
