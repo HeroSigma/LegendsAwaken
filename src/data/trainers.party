@@ -140,7 +140,7 @@ EVs: 252 Atk / 252 HP / 4 Spe
 - Earthquake
 - Protect
 
-Garchomp (M) @ BrightPowder  # Ace
+Garchomp (M) @ BrightPowder  
 Level: 24
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -212,7 +212,7 @@ EVs: 252 HP / 36 SpA / 220 SpD
 - Ice Beam
 - Toxic
 
-Kingdra (M) @ Scope Lens  # Ace
+Kingdra (M) @ Scope Lens  
 Level: 34
 Nature: Modest
 IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -283,7 +283,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Drain Punch
 - Spiky Shield
 
-Kingdra (M) @ Scope Lens  # Ace
+Kingdra (M) @ Scope Lens  
 Level: 34
 Nature: Modest
 IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -353,7 +353,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Drain Punch
 - Spiky Shield
 
-Kingdra (M) @ Scope Lens  # Ace
+Kingdra (M) @ Scope Lens  
 Level: 34
 Nature: Modest
 IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -428,7 +428,7 @@ EVs: 252 HP / 36 SpA / 220 SpD
 - Ice Beam
 - Toxic
 
-Barraskewda (M) @ Dynamax Candy  # Ace gets gimmick!
+Barraskewda (M) @ Dynamax Candy   gets gimmick!
 Level: 34
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -561,7 +561,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Drain Punch
 - Spiky Shield
 
-Crawdaunt (M) @ Focus Sash  # Ace
+Crawdaunt (M) @ Focus Sash  
 Level: 39
 Ability: Adaptability
 Nature: Adamant
@@ -635,7 +635,7 @@ EVs: 88 HP / 252 Atk / 168 Spe
 - Dragon Dance
 - Ice Fang
 
-Kingdra (M) @ Scope Lens  # Ace
+Kingdra (M) @ Scope Lens  
 Level: 39
 Ability: Sniper
 Nature: Modest
@@ -701,7 +701,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Fake Out
 - Swords Dance
 
-Swellow (F) @ Flame Orb  # Ace
+Swellow (F) @ Flame Orb  
 Level: 29
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -770,7 +770,7 @@ EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 - Aqua Jet
 - Swords Dance
 
-Mightyena (M) @ Leftovers  # Ace
+Mightyena (M) @ Leftovers  
 Level: 23
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -840,7 +840,7 @@ EVs: 252 HP / 252 Def / 4 SpA
 - Wish
 - Protect
 
-Tyranitar (M) @ Lum Berry  # Ace
+Tyranitar (M) @ Lum Berry  
 Level: 33
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -910,7 +910,7 @@ EVs: 0 HP / 0 Def / 252 SpA / 252 Spe / 4 SpD / 0 Atk
 - Flamethrower
 - U-turn
 
-Staraptor (M) @ Choice Band  # Ace
+Staraptor (M) @ Choice Band  
 Level: 33
 Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -952,7 +952,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
 Ditto @ Choice Scarf
 Level: 31
 Nature: Imposter (if supported) or use Limber
-IVs: 31 in all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Transform
 
@@ -976,7 +976,7 @@ EVs: 252 HP / 252 Def / 4 SpD
 - Ice Beam
 - Recover
 
-Meloetta @ Leftovers  # Ace (mythical/rare for collector, can swap for another rare if needed)
+Meloetta @ Leftovers   (mythical/rare for collector, can swap for another rare if needed)
 Level: 33
 Nature: Timid
 IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1049,7 +1049,7 @@ EVs: 4 HP / 252 SpA / 252 Spe
 - Sludge Bomb
 - Rain Dance
 
-Crawdaunt (F) @ Life Orb  # Ace
+Crawdaunt (F) @ Life Orb  
 Level: 39
 Ability: Adaptability
 Nature: Adamant
@@ -1121,7 +1121,7 @@ EVs: 252 HP / 4 Def / 252 SpA
 - Ice Beam
 - Rain Dance
 
-Gyarados (M) @ Wacan Berry  # Ace
+Gyarados (M) @ Wacan Berry  
 Level: 37
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
