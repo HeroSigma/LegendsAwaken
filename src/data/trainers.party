@@ -82,236 +82,1054 @@ Music: Male
 Double Battle: No
 
 === TRAINER_SAWYER_1 ===
-Name: SAWYER
+Name: Sawyer
 Class: Hiker
 Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Geodude
+Golett (M) @ Eviolite
 Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+- Earthquake
+- Shadow Punch
+- Stealth Rock
+- Toxic
+
+Graveler (M) @ Sitrus Berry
+Level: 21
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 40 Atk / 216 Def
+- Rock Slide
+- Earthquake
+- Protect
+- Thunder Punch
+
+Baltoy @ Leftovers
+Level: 22
+Nature: Bold
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 220 Def / 36 Spe
+- Earth Power
+- Rapid Spin
+- Toxic
+- Light Screen
+
+Steelix (M) @ Rocky Helmet
+Level: 23
+Nature: Relaxed
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 40 Atk / 216 Def
+- Iron Tail
+- Earthquake
+- Dragon Breath
+- Stealth Rock
+
+Stonjourner (M) @ Chople Berry
+Level: 23
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 HP / 4 Spe
+- Rock Slide
+- Heavy Slam
+- Earthquake
+- Protect
+
+Garchomp (M) @ BrightPowder  # Ace
+Level: 24
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Dragon Claw
+- Earthquake
+- Rock Slide
+- Swords Dance
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Poochyena
+Crawdaunt (M) @ Life Orb
 Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Crabhammer
+- Knock Off
+- Aqua Jet
+- Swords Dance
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
+Pelipper (M) @ Damp Rock
+Level: 32
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Hurricane
+- Roost
+- U-turn
 
-Zubat
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sharpedo (M) @ Focus Sash
+Level: 33
+Ability: Speed Boost
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Waterfall
+- Crunch
+- Ice Fang
+- Protect
 
-Carvanha
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Toxapex (M) @ Black Sludge
+Level: 33
+Nature: Bold
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+- Scald
+- Toxic
+- Recover
+- Baneful Bunker
+
+Lanturn (M) @ Leftovers
+Level: 34
+Ability: Volt Absorb
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 36 SpA / 220 SpD
+- Scald
+- Volt Switch
+- Ice Beam
+- Toxic
+
+Kingdra (M) @ Scope Lens  # Ace
+Level: 34
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+- Draco Meteor
+- Hydro Pump
+- Focus Energy
+- Ice Beam
+
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Zubat
+Barraskewda (M) @ Mystic Water
 Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Liquidation
+- Close Combat
+- Crunch
+- Flip Turn
+
+Qwilfish (M) @ Black Sludge
+Level: 32
+Nature: Impish
+IVs: 31 HP / 31 Def / 31 Atk / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 88 Def / 168 Spe
+- Spikes
+- Liquidation
+- Thunder Wave
+- Poison Jab
+
+Pelipper (M) @ Damp Rock
+Level: 33
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Hurricane
+- Roost
+- U-turn
+
+Gyarados (M) @ Wacan Berry
+Level: 33
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 88 HP / 252 Atk / 168 Spe
+- Waterfall
+- Earthquake
+- Dragon Dance
+- Ice Fang
+
+Cacturne (M) @ Focus Sash
+Level: 34
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Sucker Punch
+- Seed Bomb
+- Drain Punch
+- Spiky Shield
+
+Kingdra (M) @ Scope Lens  # Ace
+Level: 34
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+- Draco Meteor
+- Hydro Pump
+- Focus Energy
+- Ice Beam
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
+Name: Grunt
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
+
+Barraskewda (M) @ Mystic Water
+Level: 32
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Liquidation
+- Close Combat
+- Crunch
+- Flip Turn
+
+Qwilfish (M) @ Black Sludge
+Level: 32
+Nature: Impish
+IVs: 31 HP / 31 Def / 31 Atk / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 88 Def / 168 Spe
+- Spikes
+- Liquidation
+- Thunder Wave
+- Poison Jab
+
+Pelipper (M) @ Damp Rock
+Level: 33
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Hurricane
+- Roost
+- U-turn
+
+Gyarados (M) @ Wacan Berry
+Level: 33
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 88 HP / 252 Atk / 168 Spe
+- Waterfall
+- Earthquake
+- Dragon Dance
+- Ice Fang
+
+Cacturne (M) @ Focus Sash
+Level: 34
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Sucker Punch
+- Seed Bomb
+- Drain Punch
+- Spiky Shield
+
+Kingdra (M) @ Scope Lens  # Ace
+Level: 34
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+- Draco Meteor
+- Hydro Pump
+- Focus Energy
+- Ice Beam
+
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_4 ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Carvanha
+Toxicroak (M) @ Black Sludge
 Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Dry Skin
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Drain Punch
+- Gunk Shot
+- Sucker Punch
+- Swords Dance
+
+Sharpedo (M) @ Focus Sash
+Level: 32
+Ability: Speed Boost
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Waterfall
+- Crunch
+- Ice Fang
+- Protect
+
+Crawdaunt (M) @ Life Orb
+Level: 33
+Ability: Adaptability
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Crabhammer
+- Knock Off
+- Aqua Jet
+- Swords Dance
+
+Pelipper (M) @ Damp Rock
+Level: 33
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Hurricane
+- Roost
+- U-turn
+
+Lanturn (M) @ Leftovers
+Level: 34
+Ability: Volt Absorb
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 36 SpA / 220 SpD
+- Scald
+- Volt Switch
+- Ice Beam
+- Toxic
+
+Barraskewda (M) @ Dynamax Candy  # Ace gets gimmick!
+Level: 34
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Dynamax Level: 10
+- Liquidation
+- Close Combat
+- Crunch
+- Flip Turn
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_1 ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Poochyena
+Sharpedo (M) @ Focus Sash
 Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Speed Boost
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Waterfall
+- Crunch
+- Ice Fang
+- Protect
+
+Toxapex (M) @ Black Sludge
+Level: 36
+Ability: Regenerator
+Nature: Bold
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+- Scald
+- Toxic
+- Recover
+- Baneful Bunker
+
+Crawdaunt (M) @ Life Orb
+Level: 37
+Ability: Adaptability
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Crabhammer
+- Knock Off
+- Aqua Jet
+- Swords Dance
+
+Pelipper (M) @ Damp Rock
+Level: 37
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Hurricane
+- Roost
+- U-turn
+
+Hydreigon (M) @ Choice Specs
+Level: 38
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 S
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_2 ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Carvanha
+Ludicolo (M) @ Leftovers
 Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Rain Dish
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpA
+- Scald
+- Giga Drain
+- Ice Beam
+- Rain Dance
+
+Seismitoad (M) @ Life Orb
+Level: 36
+Ability: Swift Swim
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Hydro Pump
+- Earth Power
+- Sludge Bomb
+- Rain Dance
+
+Golduck (M) @ Choice Specs
+Level: 37
+Ability: Swift Swim
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Surf
+- Ice Beam
+- Focus Blast
+- Psychic
+
+Mantine (M) @ Leftovers
+Level: 37
+Ability: Water Absorb
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 40 Def / 216 SpD
+- Scald
+- Air Slash
+- Roost
+- Defog
+
+Cacturne (M) @ Focus Sash
+Level: 38
+Ability: Water Absorb
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Sucker Punch
+- Seed Bomb
+- Drain Punch
+- Spiky Shield
+
+Crawdaunt (M) @ Focus Sash  # Ace
+Level: 39
+Ability: Adaptability
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Aqua Jet
+- Knock Off
+- Crabhammer
+- Swords Dance
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_3 ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Zubat
+Qwilfish (M) @ Black Sludge
 Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Intimidate
+Nature: Impish
+IVs: 31 HP / 31 Def / 31 Atk / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 88 Def / 168 Spe
+- Spikes
+- Liquidation
+- Thunder Wave
+- Poison Jab
+
+Hydreigon (M) @ Choice Specs
+Level: 36
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Dark Pulse
+- Draco Meteor
+- Flamethrower
+- U-turn
+
+Pelipper (M) @ Damp Rock
+Level: 37
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Hurricane
+- Roost
+- U-turn
+
+Seismitoad (M) @ Life Orb
+Level: 37
+Ability: Swift Swim
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Hydro Pump
+- Earth Power
+- Sludge Bomb
+- Rain Dance
+
+Gyarados (M) @ Wacan Berry
+Level: 38
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 88 HP / 252 Atk / 168 Spe
+- Waterfall
+- Earthquake
+- Dragon Dance
+- Ice Fang
+
+Kingdra (M) @ Scope Lens  # Ace
+Level: 39
+Ability: Sniper
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD
 
 === TRAINER_GABRIELLE_1 ===
-Name: GABRIELLE
+Name: Gabrielle
 Class: Pkmn Breeder
 Pic: Pokemon Breeder F
 Gender: Female
 Music: Female
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Skitty
+Delcatty (F) @ Leftovers
 Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Double-Edge
+- Play Rough
+- Thunder Wave
+- Wish
 
-Poochyena
+Mightyena (F) @ Black Glasses
 Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Crunch
+- Play Rough
+- Sucker Punch
+- Fire Fang
 
-Zigzagoon
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Linoone (F) @ Sitrus Berry
+Level: 27
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Belly Drum
+- Extreme Speed
+- Seed Bomb
+- Play Rough
 
-Lotad
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ludicolo (F) @ Leftovers
+Level: 27
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpA
+- Scald
+- Giga Drain
+- Ice Beam
+- Rain Dance
 
-Seedot
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shiftry (F) @ Focus Sash
+Level: 28
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Leaf Blade
+- Knock Off
+- Fake Out
+- Swords Dance
 
-Taillow
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Swellow (F) @ Flame Orb  # Ace
+Level: 29
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Facade
+- Brave Bird
+- U-turn
+- Quick Attack
 
 === TRAINER_GRUNT_PETALBURG_WOODS ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Poochyena
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Poochyena (M) @ Oran Berry
+Level: 20
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Crunch
+- Fire Fang
+- Play Rough
+- Howl
+
+Zubat (M) @ Pecha Berry
+Level: 20
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Wing Attack
+- Bite
+- Confuse Ray
+- Poison Fang
+
+Carvanha (M) @ Mystic Water
+Level: 21
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Aqua Jet
+- Crunch
+- Ice Fang
+- Poison Fang
+
+Grimer (M) @ Black Sludge
+Level: 21
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Poison Jab
+- Shadow Sneak
+- Acid Spray
+- Fire Punch
+
+Corphish (M) @ Sitrus Berry
+Level: 22
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Crabhammer
+- Knock Off
+- Aqua Jet
+- Swords Dance
+
+Mightyena (M) @ Leftovers  # Ace
+Level: 23
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Crunch
+- Play Rough
+- Fire Fang
+- Howl
 
 === TRAINER_MARCEL ===
-Name: MARCEL
+Name: Marcel
 Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Manectric
+Manectric (M) @ Shuca Berry
 Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Flamethrower
+- Volt Switch
+- Signal Beam
 
-Shiftry
+Shiftry (M) @ Focus Sash
 Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Leaf Blade
+- Knock Off
+- Fake Out
+- Swords Dance
+
+Gallade (M) @ Scope Lens
+Level: 31
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Psycho Cut
+- Close Combat
+- Swords Dance
+- Night Slash
+
+Arcanine (M) @ Leftovers
+Level: 31
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Flare Blitz
+- Extreme Speed
+- Wild Charge
+- Morning Sun
+
+Vaporeon (M) @ Sitrus Berry
+Level: 32
+Nature: Bold
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Ice Beam
+- Wish
+- Protect
+
+Tyranitar (M) @ Lum Berry  # Ace
+Level: 33
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Crunch
+- Stone Edge
+- Earthquake
+- Dragon Dance
 
 === TRAINER_ALBERTO ===
-Name: ALBERTO
+Name: Alberto
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Pelipper
+Pelipper (M) @ Damp Rock
 Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Hurricane
+- U-turn
+- Roost
 
-Xatu
+Xatu (M) @ Leftovers
 Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nature: Timid
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Def / 0 SpA / 252 Spe / 252 SpA / 4 SpD
+- Psychic
+- Air Slash
+- Heat Wave
+- U-turn
+
+Hawlucha (M) @ Focus Sash
+Level: 31
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Roost
+
+Honchkrow (M) @ Life Orb
+Level: 31
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Brave Bird
+- Sucker Punch
+- Roost
+- Superpower
+
+Noivern (M) @ Choice Specs
+Level: 32
+Nature: Timid
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Def / 252 SpA / 252 Spe / 4 SpD / 0 Atk
+- Hurricane
+- Draco Meteor
+- Flamethrower
+- U-turn
+
+Staraptor (M) @ Choice Band  # Ace
+Level: 33
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Brave Bird
+- Double-Edge
+- Close Combat
+- Quick Attack
 
 === TRAINER_ED ===
-Name: ED
+Name: Ed
 Class: Collector
 Pic: Collector
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Zangoose
+Zangoose (M) @ Muscle Band
 Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Close Combat
+- Knock Off
+- Swords Dance
+- X-Scissor
 
-Seviper
+Seviper (M) @ Black Sludge
 Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+- Sludge Bomb
+- Flamethrower
+- Giga Drain
+- Glare
+
+Ditto @ Choice Scarf
+Level: 31
+Nature: Imposter (if supported) or use Limber
+IVs: 31 in all
+EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Transform
+
+Farfetch’d (M) @ Leek
+Level: 31
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+- Brave Bird
+- Knock Off
+- Leaf Blade
+- Swords Dance
+
+Porygon2 @ Eviolite
+Level: 32
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+- Tri Attack
+- Thunderbolt
+- Ice Beam
+- Recover
+
+Meloetta @ Leftovers  # Ace (mythical/rare for collector, can swap for another rare if needed)
+Level: 33
+Nature: Timid
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Def / 252 SpA / 0 SpD / 252 Spe
+- Relic Song
+- Psychic
+- Shadow Ball
+- U-turn
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_4 ===
-Name: GRUNT
+Name: Grunt
 Class: Team Aqua
 Pic: Aqua Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Carvanha
+Toxapex (F) @ Black Sludge
 Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Regenerator
+Nature: Bold
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+- Scald
+- Toxic
+- Recover
+- Baneful Bunker
+
+Sharpedo (F) @ Focus Sash
+Level: 36
+Ability: Speed Boost
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Waterfall
+- Crunch
+- Ice Fang
+- Protect
+
+Pelipper (F) @ Damp Rock
+Level: 37
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Hurricane
+- Roost
+- U-turn
+
+Hydreigon (F) @ Choice Specs
+Level: 37
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Dark Pulse
+- Draco Meteor
+- Flamethrower
+- U-turn
+
+Seismitoad (F) @ Life Orb
+Level: 38
+Ability: Swift Swim
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Hydro Pump
+- Earth Power
+- Sludge Bomb
+- Rain Dance
+
+Crawdaunt (F) @ Life Orb  # Ace
+Level: 39
+Ability: Adaptability
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Crabhammer
+- Knock Off
+- Aqua Jet
+- Swords Dance
 
 === TRAINER_DECLAN ===
-Name: DECLAN
+Name: Declan
 Class: Swimmer M
 Pic: Swimmer M
 Gender: Male
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Gyarados
+Barraskewda (M) @ Mystic Water
 Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Liquidation
+- Flip Turn
+- Crunch
+- Close Combat
+
+Lanturn (M) @ Leftovers
+Level: 34
+Ability: Volt Absorb
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 40 SpA / 216 SpD
+- Scald
+- Volt Switch
+- Ice Beam
+- Toxic
+
+Pelipper (M) @ Damp Rock
+Level: 35
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Hurricane
+- Roost
+- U-turn
+
+Kingdra (M) @ Scope Lens
+Level: 35
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+- Draco Meteor
+- Hydro Pump
+- Focus Energy
+- Ice Beam
+
+Ludicolo (M) @ Leftovers
+Level: 36
+Nature: Modest
+IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpA
+- Scald
+- Giga Drain
+- Ice Beam
+- Rain Dance
+
+Gyarados (M) @ Wacan Berry  # Ace
+Level: 37
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 88 HP / 252 Atk / 168 Spe
+- Waterfall
+- Dragon Dance
+- Ice Fang
+- Earthquake
 
 === TRAINER_GRUNT_RUSTURF_TUNNEL ===
 Name: GRUNT
