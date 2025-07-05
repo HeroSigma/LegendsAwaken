@@ -1208,7 +1208,7 @@
         },
     },
 #line 583
-    [DIFFICULTY_NORMAL][TRAINER_GRUNT_SEAFLOOR_CAVERN_2] =
+    [DIFFICULTY_NORMAL][TRAINER_GRUNT_SEAFLOOR_CAVERN_3] =
     {
 #line 584
         .trainerName = _("Grunt"),

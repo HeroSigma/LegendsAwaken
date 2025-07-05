@@ -644,7 +644,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Drain Punch
 - Spiky Shield
 
-Crawdaunt (M) @ Focus Sash
+Crawdaunt (F) @ Assault Vest
 Level: 39
 Ability: Adaptability
 Nature: Adamant
@@ -653,7 +653,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Aqua Jet
 - Knock Off
 - Crabhammer
-- Swords Dance
+- Night Slash
 
 === TRAINER_GABRIELLE_1 ===
 Name: Gabrielle
