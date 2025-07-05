@@ -2130,7 +2130,7 @@ F_TRAINER_FEMALE |
 #line 966
             .lvl = 31,
 #line 967
-            .nature = NATURE_IMPOSTER,
+            .nature = NATURE_TIMID,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 970
