@@ -286,7 +286,7 @@ EVs: 252 HP / 4 Atk / 252 SpD
 - Dragon Dance
 - Rest
 
-Basculin (Blue-Striped) @ Mystic Water
+SPECIES_BASCULIN_BLUE_STRIPED @ Mystic Water
 Level: 34
 Ability: Adaptability
 Nature: Jolly
@@ -328,7 +328,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Taunt
 - U-turn
 
-Quagsire (Paldea) (M) @ Leftovers
+Clodsire (Paldea) (M) @ Leftovers
 Level: 33
 Ability: Water Absorb
 Nature: Bold
@@ -361,7 +361,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Aqua Jet
 - Close Combat
 
-Basculin (White-Striped) @ Mystic Water
+SPECIES_BASCULIN_WHITE_STRIPED @ Mystic Water
 Level: 34
 Ability: Rattled
 Nature: Jolly
@@ -414,7 +414,7 @@ EVs: 252 HP / 252 Atk / 4 Def
 - Sucker Punch
 - Leech Life
 
-Palafin (Zero Form) (M) @ Mystic Water
+SPECIES_PALAFIN_HERO (M) @ Mystic Water
 Level: 33
 Ability: Zero to Hero
 Nature: Jolly
@@ -436,7 +436,7 @@ EVs: 252 HP / 36 Def / 220 SpD
 - Toxic
 - Waterfall
 
-Basculin (Red-Striped) (M) @ Dynamax Candy
+SPECIES_BASCULIN_RED_STRIPED (M) @ Dynamax Candy
 Level: 34
 Ability: Adaptability
 Nature: Jolly
@@ -693,7 +693,7 @@ EVs: 252 HP / 0 Atk / 252 Def / 4 Spe
 - Heal Bell
 - Stealth Rock
 
-Hisuian Lilligant (F) @ Focus Sash
+SPECIES_LILLIGANT_HISUI (F) @ Focus Sash
 Level: 27
 Ability: Hustle
 Nature: Jolly
@@ -715,7 +715,7 @@ EVs: 252 HP / 4 Def / 252 SpA
 - Mystical Fire
 - Protect
 
-Paldean Tauros (F) @ Eviolite
+SPECIES_TAUROS_PALDEA_COMBAT (F) @ Eviolite
 Level: 28
 Ability: Intimidate
 Nature: Adamant
@@ -746,7 +746,7 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Paldean Wooper (M) @ Eviolite
+SPECIES_WOOPER_PALDEA (M) @ Eviolite
 Level: 20
 Ability: Water Absorb
 Nature: Careful
@@ -822,7 +822,7 @@ Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Maushold (Family of Three) (M) @ Loaded Dice
+SPECIES_MAUSHOLD_THREE (M) @ Loaded Dice
 Level: 29
 Ability: Technician
 Nature: Jolly
