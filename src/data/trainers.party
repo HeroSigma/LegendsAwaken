@@ -589,71 +589,71 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Ludicolo (M) @ Leftovers
+Clodsire (M) @ Leftovers
 Level: 36
-Ability: Rain Dish
-Nature: Modest
-IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 4 Def / 252 SpA
-- Scald
-- Giga Drain
-- Ice Beam
-- Rain Dance
+Ability: Water Absorb
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
+- Earthquake
+- Toxic
+- Recover
+- Liquidation
 
-Seismitoad (M) @ Life Orb
+Vaporeon (M) @ Heavy-Duty Boots
 Level: 36
-Ability: Swift Swim
-Nature: Modest
-IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 SpA / 252 Spe
-- Hydro Pump
-- Earth Power
-- Sludge Bomb
-- Rain Dance
-
-Golduck (M) @ Choice Specs
-Level: 37
-Ability: Swift Swim
-Nature: Modest
-IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 SpA / 252 Spe
-- Surf
-- Ice Beam
-- Focus Blast
-- Psychic
-
-Mantine (M) @ Leftovers
-Level: 37
 Ability: Water Absorb
-Nature: Calm
+Nature: Bold
 IVs: 31 HP / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 40 Def / 216 SpD
+EVs: 252 HP / 252 Def / 4 SpA
 - Scald
-- Air Slash
-- Roost
-- Defog
+- Ice Beam
+- Wish
+- Protect
 
-Cacturne (M) @ Focus Sash
-Level: 38
-Ability: Water Absorb
+Bombirdier (M) @ Black Glasses
+Level: 37
+Ability: Big Pecks
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
-- Sucker Punch
-- Seed Bomb
-- Drain Punch
-- Spiky Shield
+- Brave Bird
+- Knock Off
+- Rock Slide
+- Taunt
 
-Crawdaunt (F) @ Assault Vest
+Grafaiai (M) @ Focus Sash
+Level: 37
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Gunk Shot
+- Knock Off
+- Taunt
+- U-turn
+
+Bruxish (F) @ Life Orb
+Level: 38
+Ability: Strong Jaw
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Psychic Fangs
+- Liquidation
+- Crunch
+- Ice Fang
+
+Basculegion (M) @ Mystic Water
 Level: 39
 Ability: Adaptability
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
+- Wave Crash
 - Aqua Jet
-- Knock Off
-- Crabhammer
-- Night Slash
+- Shadow Ball
+- Crunch
 
 === TRAINER_GABRIELLE_1 ===
 Name: Gabrielle
