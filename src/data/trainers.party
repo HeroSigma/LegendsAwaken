@@ -3958,7 +3958,7 @@ Magneton @ Eviolite
 Level: 34
 Ability: Sturdy
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 252 Spe
 - Thunderbolt
 - Flash Cannon
@@ -3969,7 +3969,7 @@ Loudred @ Silk Scarf
 Level: 34
 Ability: Soundproof
 Nature: Adamant
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Stomp
 - Uproar
@@ -3980,7 +3980,7 @@ Exploud @ Leftovers
 Level: 34
 Ability: Scrappy
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Hyper Voice
 - Ice Beam
@@ -3991,7 +3991,7 @@ Magneton @ Magnet
 Level: 34
 Ability: Magnet Pull
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Thunderbolt
 - Flash Cannon
@@ -4002,7 +4002,7 @@ Loudred @ Sitrus Berry
 Level: 34
 Ability: Soundproof
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Hyper Voice
 - Ice Beam
@@ -4013,7 +4013,7 @@ Magneton @ Eviolite
 Level: 34
 Ability: Sturdy
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Thunderbolt
 - Flash Cannon
@@ -4033,7 +4033,7 @@ Magnezone @ Air Balloon
 Level: 44
 Ability: Sturdy
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 252 Spe
 - Thunderbolt
 - Flash Cannon
@@ -4044,7 +4044,7 @@ Exploud @ Choice Specs
 Level: 44
 Ability: Scrappy
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Boomburst
 - Hyper Voice
@@ -4055,7 +4055,7 @@ Loudred @ Assault Vest
 Level: 44
 Ability: Soundproof
 Nature: Adamant
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Stomp
 - Crunch
@@ -4066,7 +4066,7 @@ Magneton @ Magnet
 Level: 44
 Ability: Magnet Pull
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Thunderbolt
 - Flash Cannon
@@ -4077,7 +4077,7 @@ Exploud @ Leftovers
 Level: 44
 Ability: Scrappy
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Hyper Voice
 - Ice Beam
@@ -4088,7 +4088,7 @@ Magnezone @ Shuca Berry
 Level: 44
 Ability: Analytic
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 252 Spe
 - Thunderbolt
 - Flash Cannon
@@ -4108,7 +4108,7 @@ Magnezone @ Air Balloon
 Level: 70
 Ability: Analytic
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 252 Spe
 - Thunderbolt
 - Flash Cannon
@@ -4119,7 +4119,7 @@ Exploud @ Choice Specs
 Level: 70
 Ability: Scrappy
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Boomburst
 - Hyper Voice
@@ -4130,7 +4130,7 @@ Toxtricity @ Throat Spray
 Level: 70
 Ability: Punk Rock
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Overdrive
 - Sludge Wave
@@ -4141,7 +4141,7 @@ Porygon-Z @ Life Orb
 Level: 70
 Ability: Adaptability
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Tri Attack
 - Thunderbolt
@@ -4152,7 +4152,7 @@ Magnezone @ Shuca Berry
 Level: 70
 Ability: Sturdy
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 252 Spe
 - Thunderbolt
 - Flash Cannon
@@ -4163,7 +4163,7 @@ Exploud @ Leftovers
 Level: 70
 Ability: Scrappy
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Hyper Voice
 - Ice Beam
@@ -5395,7 +5395,7 @@ Kilowattrel (M) @ Magnet
 Level: 32
 Ability: Wind Power
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Hurricane
 - Thunderbolt
@@ -5406,7 +5406,7 @@ Hawlucha (M) @ Sitrus Berry
 Level: 32
 Ability: Unburden
 Nature: Adamant
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Acrobatics
 - High Jump Kick
@@ -5417,7 +5417,7 @@ Talonflame (M) @ Heavy-Duty Boots
 Level: 33
 Ability: Gale Wings
 Nature: Jolly
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Brave Bird
 - Flare Blitz
@@ -5428,7 +5428,7 @@ Bombirdier (M) @ Black Glasses
 Level: 33
 Ability: Big Pecks
 Nature: Adamant
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Brave Bird
 - Knock Off
@@ -5439,7 +5439,7 @@ Noivern (M) @ Leftovers
 Level: 34
 Ability: Infiltrator
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Air Slash
 - Dragon Pulse
@@ -5471,7 +5471,7 @@ Maushold (M) @ Wide Lens
 Level: 32
 Ability: Technician
 Nature: Jolly
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Population Bomb
 - Encore
@@ -5482,7 +5482,7 @@ Indeedee (M) @ Psychic Seed
 Level: 33
 Ability: Psychic Surge
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Psychic
 - Hyper Voice
@@ -5493,7 +5493,7 @@ Dudunsparce (Three Segment) (M) @ Choice Specs
 Level: 33
 Ability: Serene Grace
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Boomburst
 - Thunderbolt
@@ -5504,7 +5504,7 @@ Ursaring (M) @ Flame Orb
 Level: 34
 Ability: Guts
 Nature: Adamant
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Facade
 - Close Combat
@@ -5515,7 +5515,7 @@ Obstagoon (M) @ Black Glasses
 Level: 34
 Ability: Guts
 Nature: Jolly
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Obstruct
 - Knock Off
@@ -5547,7 +5547,7 @@ Slaking (M) @ Choice Band
 Level: 34
 Ability: Truant
 Nature: Adamant
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Giga Impact
 - Earthquake
@@ -5558,7 +5558,7 @@ Ambipom (M) @ Silk Scarf
 Level: 33
 Ability: Technician
 Nature: Jolly
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Fake Out
 - Double Hit
@@ -5569,7 +5569,7 @@ Oranguru (M) @ Leftovers
 Level: 32
 Ability: Telepathy
 Nature: Bold
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
 - Psychic
 - Hyper Voice
@@ -5580,7 +5580,7 @@ Komala (M) @ Chesto Berry
 Level: 33
 Ability: Comatose
 Nature: Careful
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 4 Def / 0 SpA / 252 SpD / 0 Spe
 - Sleep Talk
 - Return
@@ -5591,7 +5591,7 @@ Braviary (M) @ Life Orb
 Level: 35
 Ability: Sheer Force
 Nature: Adamant
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Brave Bird
 - Superpower
@@ -5612,7 +5612,7 @@ Vigoroth (M) @ Sitrus Berry
 Level: 32
 Ability: Vital Spirit
 Nature: Jolly
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Slash
 - Taunt
@@ -5623,7 +5623,7 @@ Exploud (M) @ Throat Spray
 Level: 33
 Ability: Scrappy
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Boomburst
 - Flamethrower
@@ -5634,7 +5634,7 @@ Togedemaru (M) @ Air Balloon
 Level: 33
 Ability: Iron Barbs
 Nature: Jolly
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Zing Zap
 - Iron Head
@@ -5645,7 +5645,7 @@ Kangaskhan (F) @ Silk Scarf
 Level: 34
 Ability: Scrappy
 Nature: Adamant
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Double-Edge
 - Crunch
@@ -5656,7 +5656,7 @@ Oranguru (M) @ Leftovers
 Level: 34
 Ability: Telepathy
 Nature: Sassy
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 252 SpD / 4 Def / 0 Spe
 - Psychic
 - Hyper Voice
@@ -5667,7 +5667,7 @@ Porygon-Z @ Expert Belt
 Level: 35
 Ability: Adaptability
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Tri Attack
 - Ice Beam
@@ -6447,7 +6447,7 @@ Tera Type: Water
 Dynamax Level: 10
 Ball: Luxury Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 52 SpA / 204 SpD
 - Hydro Pump
 - Thunderbolt
@@ -6462,7 +6462,7 @@ Tera Type: Steel
 Dynamax Level: 10
 Ball: Ultra Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Aura Sphere
 - Flash Cannon
@@ -6477,7 +6477,7 @@ Tera Type: Ground
 Dynamax Level: 10
 Ball: Dive Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 76 Def / 180 SpA
 - Earth Power
 - Scald
@@ -6502,7 +6502,7 @@ Tera Type: Electric
 Dynamax Level: 10
 Ball: Ultra Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Thunderbolt
 - Flamethrower
@@ -6517,7 +6517,7 @@ Tera Type: Grass
 Dynamax Level: 10
 Ball: Nest Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk / 252 Spe
 - Spore
 - Bullet Seed
@@ -6532,7 +6532,7 @@ Tera Type: Water
 Dynamax Level: 10
 Ball: Net Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 116 Def / 140 SpA
 - Scald
 - Hurricane
@@ -6547,7 +6547,7 @@ Tera Type: Steel
 Dynamax Level: 10
 Ball: Ultra Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Aura Sphere
 - Flash Cannon
@@ -6562,7 +6562,7 @@ Tera Type: Ground
 Dynamax Level: 10
 Ball: Dive Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 76 Def / 180 SpA
 - Earth Power
 - Scald
@@ -6577,7 +6577,7 @@ Tera Type: Flying
 Dynamax Level: 10
 Ball: Quick Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk / 252 Spe
 - Acrobatics
 - Close Combat
@@ -11359,7 +11359,7 @@ Tera Type: Fairy
 Dynamax Level: 10
 Ball: Premier Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Play Rough
 - Fire Fang
@@ -11374,7 +11374,7 @@ Tera Type: Poison
 Dynamax Level: 10
 Ball: Quick Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 4 SpD / 252 Spe
 - Sludge Bomb
 - Power Gem
@@ -11389,7 +11389,7 @@ Tera Type: Normal
 Dynamax Level: 10
 Ball: Ultra Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Fake Out
 - Bite
@@ -11404,7 +11404,7 @@ Tera Type: Electric
 Dynamax Level: 10
 Ball: Dusk Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Double Shock
 - Quick Attack
@@ -11419,7 +11419,7 @@ Tera Type: Fairy
 Dynamax Level: 10
 Ball: Heal Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 4 Def / 252 SpD
 - Dazzling Gleam
 - Aromatherapy
@@ -11444,7 +11444,7 @@ Tera Type: Normal
 Dynamax Level: 10
 Ball: Luxury Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Belly Drum
 - Extreme Speed
@@ -11459,7 +11459,7 @@ Tera Type: Normal
 Dynamax Level: 10
 Ball: Premier Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 SpD / 0 Def / 0 SpA / 252 Spe
 - Fake Out
 - Hyper Voice
@@ -11474,7 +11474,7 @@ Tera Type: Dark
 Dynamax Level: 10
 Ball: Dusk Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 4 Def / 252 SpD
 - Knock Off
 - Recover
@@ -11489,7 +11489,7 @@ Tera Type: Electric
 Dynamax Level: 10
 Ball: Ultra Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Double Shock
 - Close Combat
@@ -11504,7 +11504,7 @@ Tera Type: Normal
 Dynamax Level: 10
 Ball: Quick Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Headbutt
 - Cotton Guard
@@ -11519,7 +11519,7 @@ Tera Type: Water
 Dynamax Level: 10
 Ball: Heal Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 4 Def / 252 SpD
 - Surf
 - Ice Beam
@@ -11544,7 +11544,7 @@ Tera Type: Dark
 Dynamax Level: 10
 Ball: Luxury Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Facade
 - Obstruct
@@ -11559,7 +11559,7 @@ Tera Type: Normal
 Dynamax Level: 10
 Ball: Premier Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 SpD / 0 Def / 0 SpA / 252 Spe
 - Fake Out
 - Hyper Voice
@@ -11574,7 +11574,7 @@ Tera Type: Dark
 Dynamax Level: 10
 Ball: Ultra Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 SpD / 0 Def / 0 SpA / 252 Spe
 - Flower Trick
 - Knock Off
@@ -11589,7 +11589,7 @@ Tera Type: Electric
 Dynamax Level: 10
 Ball: Dusk Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Double Shock
 - Close Combat
@@ -11604,7 +11604,7 @@ Tera Type: Normal
 Dynamax Level: 10
 Ball: Quick Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Headbutt
 - Cotton Guard
@@ -11619,7 +11619,7 @@ Tera Type: Water
 Dynamax Level: 10
 Ball: Heal Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 4 Def / 252 SpD
 - Surf
 - Ice Beam
@@ -11644,7 +11644,7 @@ Tera Type: Dark
 Dynamax Level: 10
 Ball: Luxury Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Facade
 - Obstruct
@@ -11659,7 +11659,7 @@ Tera Type: Normal
 Dynamax Level: 10
 Ball: Premier Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 SpD / 0 Def / 0 SpA / 252 Spe
 - Fake Out
 - Hyper Voice
@@ -11674,7 +11674,7 @@ Tera Type: Dark
 Dynamax Level: 10
 Ball: Ultra Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 SpD / 0 Def / 0 SpA / 252 Spe
 - Flower Trick
 - Knock Off
@@ -11689,7 +11689,7 @@ Tera Type: Electric
 Dynamax Level: 10
 Ball: Dusk Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Double Shock
 - Close Combat
@@ -11704,7 +11704,7 @@ Tera Type: Normal
 Dynamax Level: 10
 Ball: Quick Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Headbutt
 - Cotton Guard
@@ -11719,7 +11719,7 @@ Tera Type: Water
 Dynamax Level: 10
 Ball: Heal Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 4 Def / 252 SpD
 - Surf
 - Ice Beam
@@ -11759,7 +11759,7 @@ Tera Type: Normal
 Dynamax Level: 10
 Ball: Heal Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 4 Def / 252 SpD
 - Body Slam
 - Knock Off
@@ -11774,7 +11774,7 @@ Tera Type: Ghost
 Dynamax Level: 10
 Ball: Dusk Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Play Rough
 - Shadow Claw
@@ -11789,7 +11789,7 @@ Tera Type: Dragon
 Dynamax Level: 10
 Ball: Quick Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Draco Meteor
 - Shadow Ball
@@ -11804,7 +11804,7 @@ Tera Type: Fairy
 Dynamax Level: 10
 Ball: Luxury Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 Atk
 - Play Rough
 - Knock Off
@@ -11819,7 +11819,7 @@ Tera Type: Rock
 Dynamax Level: 10
 Ball: Net Ball
 Shiny: No
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Rock Slide
 - X-Scissor
@@ -16562,7 +16562,7 @@ IVs: 20 HP / 20 SpA / 20 Spe
 - Dragon Pulse
 - Nasty Plot
 
-=== TRAINER_=== TRAINER_DREW ===
+=== TRAINER_DREW ===
 Name: DREW
 Class: Camper
 Pic: Camper
@@ -19771,7 +19771,7 @@ AI: Check Bad Move / Try To Faint / Smart Switching
 Manectric @ Magnet
 Level: 46
 Ability: Lightning Rod
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Thunderbolt
 - Volt Switch
@@ -19781,7 +19781,7 @@ EVs: 252 SpA / 252 Spe / 4 HP
 Linoone @ Sitrus Berry
 Level: 46
 Ability: Gluttony
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Belly Drum
 - Extreme Speed
@@ -19791,7 +19791,7 @@ EVs: 252 Atk / 252 Spe / 4 HP
 Golduck @ Mystic Water
 Level: 46
 Ability: Cloud Nine
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Hydro Pump
 - Ice Beam
@@ -19801,7 +19801,7 @@ EVs: 252 SpA / 252 Spe / 4 HP
 Granbull @ Leftovers
 Level: 46
 Ability: Intimidate
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 4 SpD
 - Play Rough
 - Crunch
@@ -19811,7 +19811,7 @@ EVs: 252 HP / 252 Atk / 4 SpD
 Absol @ Scope Lens
 Level: 46
 Ability: Super Luck
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Night Slash
 - Psycho Cut
@@ -19821,7 +19821,7 @@ EVs: 252 Atk / 252 Spe / 4 HP
 Perrserker @ Assault Vest
 Level: 46
 Ability: Battle Armor
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 SpD / 4 HP
 - Iron Head
 - Close Combat
@@ -19841,7 +19841,7 @@ AI: Check Bad Move / Try To Faint / Predict Switch / Smart Tera
 Manectric @ Air Balloon
 Level: 76
 Ability: Lightning Rod
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Thunderbolt
 - Overheat
@@ -19851,7 +19851,7 @@ EVs: 252 SpA / 252 Spe / 4 HP
 Toxtricity @ Throat Spray
 Level: 76
 Ability: Punk Rock
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Boomburst
 - Overdrive
@@ -19861,7 +19861,7 @@ EVs: 252 SpA / 252 Spe / 4 HP
 Raichu (Alolan) @ Focus Sash
 Level: 76
 Ability: Surge Surfer
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Thunderbolt
 - Psychic
@@ -19871,7 +19871,7 @@ EVs: 252 SpA / 252 Spe / 4 HP
 Vikavolt @ Assault Vest
 Level: 76
 Ability: Levitate
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpA / 4 SpD
 - Bug Buzz
 - Volt Switch
@@ -19881,7 +19881,7 @@ EVs: 252 HP / 252 SpA / 4 SpD
 Zebstrika @ Choice Band
 Level: 76
 Ability: Lightning Rod
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Wild Charge
 - Flame Charge
@@ -19891,7 +19891,7 @@ EVs: 252 Atk / 252 Spe / 4 HP
 Eelektross @ Leftovers
 Level: 76
 Ability: Levitate
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpA / 4 Def
 - Thunderbolt
 - Flamethrower
@@ -19911,7 +19911,7 @@ AI: Check Bad Move / Try To Faint / Prefer Highest Damage Move
 Zangoose @ Toxic Orb
 Level: 75
 Ability: Toxic Boost
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Facade
 - Close Combat
@@ -19921,7 +19921,7 @@ EVs: 252 Atk / 252 Spe / 4 HP
 Porygon-Z @ Choice Specs
 Level: 75
 Ability: Adaptability
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Hyper Beam
 - Ice Beam
@@ -19931,7 +19931,7 @@ EVs: 252 SpA / 252 Spe / 4 HP
 Greedent @ Sitrus Berry
 Level: 75
 Ability: Cheek Pouch
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 4 SpD
 - Body Slam
 - Crunch
@@ -19941,7 +19941,7 @@ EVs: 252 HP / 252 Atk / 4 SpD
 Persian-Alola @ Black Glasses
 Level: 75
 Ability: Fur Coat
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Spe / 4 SpA
 - Foul Play
 - Fake Out
@@ -19951,7 +19951,7 @@ EVs: 252 HP / 252 Spe / 4 SpA
 Miltank @ Leftovers
 Level: 75
 Ability: Thick Fat
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 Spe
 - Body Slam
 - Milk Drink
@@ -19961,7 +19961,7 @@ EVs: 252 HP / 252 Def / 4 Spe
 Dudunsparce (Three Segment) @ King's Rock
 Level: 75
 Ability: Serene Grace
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 4 Spe
 - Hyper Drill
 - Rock Slide
@@ -19981,7 +19981,7 @@ AI: Check Bad Move / Try To Faint / Smart Switching / Predict Switch
 Manectric @ Manectite
 Level: 72
 Ability: Intimidate 
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Thunderbolt
 - Flamethrower
@@ -19991,7 +19991,7 @@ EVs: 252 SpA / 252 Spe / 4 HP
 Linoone @ Sitrus Berry
 Level: 72
 Ability: Gluttony
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Belly Drum
 - Extreme Speed
@@ -20001,7 +20001,7 @@ EVs: 252 Atk / 252 Spe / 4 HP
 Golduck @ Life Orb
 Level: 72
 Ability: Cloud Nine
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Hydro Pump
 - Ice Beam
@@ -20011,7 +20011,7 @@ EVs: 252 SpA / 252 Spe / 4 HP
 Grimmsnarl @ Light Clay
 Level: 72
 Ability: Prankster
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 4 Atk / 252 SpD
 - Spirit Break
 - Reflect
@@ -20021,7 +20021,7 @@ EVs: 252 HP / 4 Atk / 252 SpD
 Obstagoon @ Flame Orb
 Level: 72
 Ability: Guts
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Facade
 - Knock Off
@@ -20031,7 +20031,7 @@ EVs: 252 Atk / 252 Spe / 4 HP
 Luxray @ Choice Scarf
 Level: 72
 Ability: Guts
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Wild Charge
 - Crunch
@@ -20481,7 +20481,7 @@ Tera Type: Ice
 Dynamax Level: 10
 Ball: Luxury Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Icicle Crash
 - Crunch
@@ -20496,7 +20496,7 @@ Tera Type: Ice
 Dynamax Level: 10
 Ball: Premier Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Freeze-Dry
 - Hydro Pump
@@ -20511,7 +20511,7 @@ Tera Type: Bug
 Dynamax Level: 10
 Ball: Dusk Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 HP / 4 Spe
 - Quiver Dance
 - Ice Beam
@@ -20526,7 +20526,7 @@ Tera Type: Fairy
 Dynamax Level: 10
 Ball: Dream Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Spe / 252 HP / 4 SpA
 - Aurora Veil
 - Blizzard
@@ -20541,7 +20541,7 @@ Tera Type: Water
 Dynamax Level: 10
 Ball: Dive Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 HP / 4 SpD
 - Icicle Crash
 - Liquidation
@@ -20556,7 +20556,7 @@ Tera Type: Ice
 Dynamax Level: 10
 Ball: Master Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 4 SpD
 - Glacial Lance
 - High Horsepower
@@ -20582,7 +20582,7 @@ Tera Type: Flying
 Dynamax Level: 10
 Ball: Ultra Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 HP / 4 Spe
 - Dragon Dance
 - Dual Wingbeat
@@ -20597,7 +20597,7 @@ Tera Type: Ice
 Dynamax Level: 10
 Ball: Timer Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Icicle Spear
 - Glaive Rush
@@ -20612,7 +20612,7 @@ Tera Type: Dragon
 Dynamax Level: 10
 Ball: Master Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 SpA
 - Double-Edge
 - Dragon Claw
@@ -20627,7 +20627,7 @@ Tera Type: Ground
 Dynamax Level: 10
 Ball: Quick Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Earthquake
 - Dragon Claw
@@ -20642,7 +20642,7 @@ Tera Type: Dragon
 Dynamax Level: 10
 Ball: Dusk Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Draco Meteor
 - Shadow Ball
@@ -20657,7 +20657,7 @@ Tera Type: Dark
 Dynamax Level: 10
 Ball: Premier Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Crunch
 - Dragon Dance
@@ -23174,7 +23174,7 @@ Tera Type: Water
 Dynamax Level: 10
 Ball: Master Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 HP / 4 SpD
 - Origin Pulse
 - Ice Beam
@@ -23189,7 +23189,7 @@ Tera Type: Fairy
 Dynamax Level: 10
 Ball: Dive Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD / 4 SpA
 - Scald
 - Ice Beam
@@ -23204,7 +23204,7 @@ Tera Type: Grass
 Dynamax Level: 10
 Ball: Friend Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Hydro Pump
 - Giga Drain
@@ -23219,7 +23219,7 @@ Tera Type: Water
 Dynamax Level: 10
 Ball: Ultra Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpA
 - Hurricane
 - Scald
@@ -23234,7 +23234,7 @@ Tera Type: Water
 Dynamax Level: 10
 Ball: Quick Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Liquidation
 - Close Combat
@@ -23249,7 +23249,7 @@ Tera Type: Ice
 Dynamax Level: 10
 Ball: Premier Ball
 Shiny: Yes
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Freeze-Dry
 - Hydro Pump
@@ -26786,7 +26786,7 @@ Sceptile (F) @ Miracle Seed
 Level: 48
 Ability: Unburden
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Leaf Blade
 - Dragon Pulse
@@ -26797,7 +26797,7 @@ Ludicolo (F) @ Leftovers
 Level: 46
 Ability: Rain Dish
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Scald
 - Giga Drain
@@ -26808,7 +26808,7 @@ Manectric (F) @ Manectite
 Level: 47
 Ability: Lightning Rod
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Thunderbolt
 - Flamethrower
@@ -26819,7 +26819,7 @@ Swellow (F) @ Flame Orb
 Level: 46
 Ability: Guts
 Nature: Jolly
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Facade
 - Brave Bird
@@ -26830,7 +26830,7 @@ Roserade (F) @ Black Sludge
 Level: 45
 Ability: Technician
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Sludge Bomb
 - Giga Drain
@@ -26841,7 +26841,7 @@ Pelipper (F) @ Damp Rock
 Level: 44
 Ability: Drizzle
 Nature: Calm
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
 - Scald
 - Hurricane
@@ -27011,7 +27011,7 @@ Blaziken (F) @ Charcoal
 Level: 48
 Ability: Speed Boost
 Nature: Adamant
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Blaze Kick
 - Close Combat
@@ -27022,7 +27022,7 @@ Ludicolo (F) @ Leftovers
 Level: 46
 Ability: Rain Dish
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Scald
 - Giga Drain
@@ -27033,7 +27033,7 @@ Manectric (F) @ Manectite
 Level: 47
 Ability: Lightning Rod
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Thunderbolt
 - Flamethrower
@@ -27044,7 +27044,7 @@ Swellow (F) @ Flame Orb
 Level: 46
 Ability: Guts
 Nature: Jolly
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Facade
 - Brave Bird
@@ -27055,7 +27055,7 @@ Roserade (F) @ Black Sludge
 Level: 45
 Ability: Technician
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Sludge Bomb
 - Giga Drain
@@ -27066,7 +27066,7 @@ Pelipper (F) @ Damp Rock
 Level: 44
 Ability: Drizzle
 Nature: Calm
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
 - Scald
 - Hurricane
@@ -27236,7 +27236,7 @@ Swampert (F) @ Mystic Water
 Level: 48
 Ability: Torrent
 Nature: Adamant
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Earthquake
 - Liquidation
@@ -27247,7 +27247,7 @@ Ludicolo (F) @ Leftovers
 Level: 46
 Ability: Rain Dish
 Nature: Modest
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Scald
 - Giga Drain
@@ -27258,7 +27258,7 @@ Manectric (F) @ Manectite
 Level: 47
 Ability: Lightning Rod
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Thunderbolt
 - Flamethrower
@@ -27269,7 +27269,7 @@ Swellow (F) @ Flame Orb
 Level: 46
 Ability: Guts
 Nature: Jolly
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Facade
 - Brave Bird
@@ -27280,7 +27280,7 @@ Roserade (F) @ Black Sludge
 Level: 45
 Ability: Technician
 Nature: Timid
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Sludge Bomb
 - Giga Drain
@@ -27291,7 +27291,7 @@ Pelipper (F) @ Damp Rock
 Level: 44
 Ability: Drizzle
 Nature: Calm
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
 - Scald
 - Hurricane
