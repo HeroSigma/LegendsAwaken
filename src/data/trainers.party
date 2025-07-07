@@ -4355,7 +4355,7 @@ Ducklett (F) @ Oran Berry
 Level: 20  
 Ability: Big Pecks  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 SpA / 252 Spe  
 - Air Slash  
 - Water Gun  
@@ -4366,7 +4366,7 @@ Popplio (F) @ Oran Berry
 Level: 20  
 Ability: Torrent  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 SpD  
 - Water Gun  
 - Icy Wind  
@@ -4377,7 +4377,7 @@ Clamperl (F) @ Deep Sea Tooth
 Level: 20  
 Ability: Shell Armor  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 SpD / 252 Spe  
 - Water Pulse  
 - Ice Beam  
@@ -4388,7 +4388,7 @@ Surskit (F) @ Focus Sash
 Level: 20  
 Ability: Swift Swim  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 SpD / 252 Spe  
 - Bubble Beam  
 - Ice Beam  
@@ -4408,7 +4408,7 @@ Marill (F) @ Sitrus Berry
 Level: 25  
 Ability: Huge Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -4419,7 +4419,7 @@ Psyduck (F) @ Mystic Water
 Level: 25  
 Ability: Cloud Nine  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 SpD / 252 Spe  
 - Water Pulse  
 - Confusion  
@@ -4430,7 +4430,7 @@ Sobble (F) @ Oran Berry
 Level: 25  
 Ability: Torrent  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 SpD / 252 Spe  
 - Water Gun  
 - Tearful Look  
@@ -4441,7 +4441,7 @@ Tympole (F) @ Oran Berry
 Level: 25  
 Ability: Swift Swim  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 SpD / 252 Spe  
 - Water Gun  
 - Mud Shot  
@@ -4452,7 +4452,7 @@ Ducklett (F) @ Eviolite
 Level: 25  
 Ability: Big Pecks  
 Nature: Bold  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Air Slash  
 - Roost  
@@ -4463,7 +4463,7 @@ Buizel (F) @ Focus Sash
 Level: 25  
 Ability: Swift Swim  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Ice Fang  
@@ -4483,7 +4483,7 @@ Marill (F) @ Sitrus Berry
 Level: 25  
 Ability: Huge Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -4494,7 +4494,7 @@ Psyduck (F) @ Mystic Water
 Level: 25  
 Ability: Cloud Nine  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 SpD / 252 Spe  
 - Water Pulse  
 - Confusion  
@@ -4505,7 +4505,7 @@ Sobble (F) @ Oran Berry
 Level: 25  
 Ability: Torrent  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 SpD / 252 Spe  
 - Water Gun  
 - Tearful Look  
@@ -4516,7 +4516,7 @@ Tympole (F) @ Oran Berry
 Level: 25  
 Ability: Swift Swim  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 SpD / 252 Spe  
 - Water Gun  
 - Mud Shot  
@@ -4527,7 +4527,7 @@ Ducklett (F) @ Eviolite
 Level: 25  
 Ability: Big Pecks  
 Nature: Bold  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Air Slash  
 - Roost  
@@ -4538,7 +4538,7 @@ Buizel (F) @ Focus Sash
 Level: 25  
 Ability: Swift Swim  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Ice Fang  
@@ -4558,7 +4558,7 @@ Azumarill (F) @ Sitrus Berry
 Level: 27  
 Ability: Huge Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -4569,7 +4569,7 @@ Ducklett (F) @ Eviolite
 Level: 27  
 Ability: Big Pecks  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 SpA / 252 Spe  
 - Air Slash  
 - Water Pulse  
@@ -4580,7 +4580,7 @@ Popplio (F) @ Oran Berry
 Level: 27  
 Ability: Torrent  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 SpD  
 - Water Pulse  
 - Icy Wind  
@@ -4591,7 +4591,7 @@ Surskit (F) @ Focus Sash
 Level: 27  
 Ability: Swift Swim  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 SpD / 252 Spe  
 - Bubble Beam  
 - Ice Beam  
@@ -4602,7 +4602,7 @@ Psyduck (F) @ Mystic Water
 Level: 27  
 Ability: Cloud Nine  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 SpD / 252 Spe  
 - Water Pulse  
 - Confusion  
@@ -4613,7 +4613,7 @@ Buizel (F) @ Choice Scarf
 Level: 27  
 Ability: Swift Swim  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Liquidation  
@@ -4633,7 +4633,7 @@ Azumarill (F) @ Leftovers
 Level: 31  
 Ability: Huge Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -4644,7 +4644,7 @@ Ducklett (F) @ Eviolite
 Level: 31  
 Ability: Big Pecks  
 Nature: Bold  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Air Slash  
 - Roost  
@@ -4655,7 +4655,7 @@ Popplio (F) @ Oran Berry
 Level: 31  
 Ability: Torrent  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 SpD  
 - Water Pulse  
 - Icy Wind  
@@ -4666,7 +4666,7 @@ Finizen (F) @ Mystic Water
 Level: 31  
 Ability: Water Veil  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Flip Turn  
 - Aqua Jet  
@@ -4677,7 +4677,7 @@ Shellos (F) @ Eviolite
 Level: 31  
 Ability: Storm Drain  
 Nature: Bold  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Muddy Water  
 - Recover  
@@ -4688,7 +4688,7 @@ Buizel (F) @ Choice Band
 Level: 31  
 Ability: Swift Swim  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Liquidation  
@@ -4708,7 +4708,7 @@ Azumarill (F) @ Sitrus Berry
 Level: 34  
 Ability: Huge Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -4719,7 +4719,7 @@ Ducklett (F) @ Eviolite
 Level: 34  
 Ability: Big Pecks  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 SpA / 252 Spe  
 - Air Slash  
 - Scald  
@@ -4730,7 +4730,7 @@ Primarina (F) @ Leftovers
 Level: 34  
 Ability: Torrent  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 SpD  
 - Sparkling Aria  
 - Ice Beam  
@@ -4741,7 +4741,7 @@ Finizen (F) @ Choice Band
 Level: 34  
 Ability: Water Veil  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Flip Turn  
 - Aqua Jet  
@@ -4752,7 +4752,7 @@ Shellos (F) @ Eviolite
 Level: 34  
 Ability: Storm Drain  
 Nature: Calm  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 SpA / 252 SpD  
 - Muddy Water  
 - Recover  
@@ -4763,7 +4763,7 @@ Buizel (F) @ Mystic Water
 Level: 34  
 Ability: Swift Swim  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Liquidation  
@@ -4783,7 +4783,7 @@ Azumarill (F) @ Leftovers
 Level: 37  
 Ability: Huge Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -4794,7 +4794,7 @@ Swanna (F) @ Heavy-Duty Boots
 Level: 37  
 Ability: Hydration  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 SpA / 252 Spe  
 - Hurricane  
 - Scald  
@@ -4805,7 +4805,7 @@ Primarina (F) @ Sitrus Berry
 Level: 37  
 Ability: Torrent  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 SpD  
 - Sparkling Aria  
 - Ice Beam  
@@ -4816,7 +4816,7 @@ Palafin (F) @ Mystic Water
 Level: 37  
 Ability: Zero to Hero  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Jet Punch  
 - Flip Turn  
@@ -4827,7 +4827,7 @@ Gastrodon (F) @ Leftovers
 Level: 37  
 Ability: Storm Drain  
 Nature: Calm  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 SpA / 252 SpD  
 - Scald  
 - Recover  
@@ -4838,7 +4838,7 @@ Floatzel (F) @ Choice Band
 Level: 37  
 Ability: Swift Swim  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Aqua Jet  
 - Liquidation  
@@ -4858,7 +4858,7 @@ Zigzagoon-Galar (M) @ Eviolite
 Level: 26  
 Ability: Pickup  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
 - Headbutt  
 - Night Slash  
@@ -4869,7 +4869,7 @@ Linoone (M) @ Sitrus Berry
 Level: 26  
 Ability: Gluttony  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
 - Headbutt  
 - Belly Drum  
@@ -4880,7 +4880,7 @@ Bidoof (M) @ Leftovers
 Level: 26  
 Ability: Simple  
 Nature: Careful  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
 - Headbutt  
 - Water Gun  
@@ -4891,7 +4891,7 @@ Bibarel (M) @ Mystic Water
 Level: 27  
 Ability: Simple  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Aqua Jet  
 - Headbutt  
@@ -4902,7 +4902,7 @@ Zangoose (M) @ Focus Sash
 Level: 27  
 Ability: Immunity  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
 - Slash  
 - Quick Attack  
@@ -4913,7 +4913,7 @@ Obstagoon (M) @ Black Glasses
 Level: 28  
 Ability: Guts  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Headbutt  
 - Night Slash  
@@ -4933,7 +4933,7 @@ Azurill (M) @ Eviolite
 Level: 26  
 Ability: Huge Power  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Aqua Tail  
 - Play Rough  
@@ -4944,7 +4944,7 @@ Marill (M) @ Sitrus Berry
 Level: 26  
 Ability: Huge Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -4955,7 +4955,7 @@ Azumarill (M) @ Mystic Water
 Level: 27  
 Ability: Huge Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe  
 - Aqua Jet  
 - Liquidation  
@@ -4966,7 +4966,7 @@ Psyduck (M) @ Focus Sash
 Level: 26  
 Ability: Cloud Nine  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Scald  
 - Ice Beam  
@@ -4977,7 +4977,7 @@ Ducklett (M) @ Eviolite
 Level: 27  
 Ability: Hydration  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Scald  
 - Air Slash  
@@ -4988,7 +4988,7 @@ Buizel (M) @ Life Orb
 Level: 28  
 Ability: Swift Swim  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 - Aqua Jet  
 - Ice Fang  
@@ -5008,7 +5008,7 @@ Azumarill (M) @ Sitrus Berry
 Level: 26  
 Ability: Huge Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -5019,7 +5019,7 @@ Wooper (M) @ Eviolite
 Level: 26  
 Ability: Water Absorb  
 Nature: Careful  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 4 SpD / 252 Def  
 - Mud Shot  
 - Yawn  
@@ -5030,7 +5030,7 @@ Ducklett (M) @ Oran Berry
 Level: 26  
 Ability: Hydration  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Scald  
 - Air Slash  
@@ -5041,7 +5041,7 @@ Psyduck (M) @ Focus Sash
 Level: 27  
 Ability: Cloud Nine  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Water Pulse  
 - Confusion  
@@ -5052,7 +5052,7 @@ Azumarill (F) @ Mystic Water
 Level: 27  
 Ability: Huge Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe  
 - Aqua Tail  
 - Play Rough  
@@ -5063,7 +5063,7 @@ Floatzel (M) @ Life Orb
 Level: 28  
 Ability: Swift Swim  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 - Aqua Jet  
 - Ice Punch  
@@ -6946,7 +6946,7 @@ Nature: Jolly
 Tera Type: Normal
 Dynamax Level: 10
 Ball: Premier Ball
-Shiny: Yes   # Ace: Shiny
+Shiny: Yes   : Shiny
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Swords Dance
@@ -8534,7 +8534,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Timer Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Shadow Ball  
 - Ice Beam  
@@ -8549,7 +8549,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Moon Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Shadow Ball  
 - Dazzling Gleam  
@@ -8564,7 +8564,7 @@ Tera Type: Poison
 Dynamax Level: 10  
 Ball: Quick Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Sludge Wave  
 - Shadow Ball  
@@ -8579,7 +8579,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 Def / 252 Spe  
 - Shadow Ball  
 - Dazzling Gleam  
@@ -8594,7 +8594,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Shadow Claw  
 - Knock Off  
@@ -8619,7 +8619,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Dive Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 248 HP / 252 SpA / 8 SpD  
 - Shadow Ball  
 - Earth Power  
@@ -8634,7 +8634,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Shell Smash  
 - Shadow Ball  
@@ -8649,7 +8649,7 @@ Tera Type: Flying
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Make It Rain  
 - Shadow Ball  
@@ -8664,7 +8664,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Great Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Last Respects  
 - Crunch  
@@ -8679,7 +8679,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Shadow Claw  
 - Knock Off  
@@ -8704,7 +8704,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Timer Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Rage Fist  
 - Close Combat  
@@ -8719,7 +8719,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Play Rough  
 - Shadow Claw  
@@ -8734,7 +8734,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Repeat Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 196 Def / 60 SpA  
 - Torch Song  
 - Shadow Ball  
@@ -8749,7 +8749,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Dive Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Shadow Ball  
 - Wave Crash  
@@ -8764,7 +8764,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Shadow Claw  
 - Knock Off  
@@ -8789,7 +8789,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Quick Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Dragon Darts  
 - Phantom Force  
@@ -8804,7 +8804,7 @@ Tera Type: Poison
 Dynamax Level: 10  
 Ball: Quick Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Sludge Wave  
 - Shadow Ball  
@@ -8819,7 +8819,7 @@ Tera Type: Dark
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Icicle Crash  
 - Sucker Punch  
@@ -8834,7 +8834,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Moon Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Shadow Ball  
 - Dazzling Gleam  
@@ -8849,7 +8849,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Shadow Claw  
 - Knock Off  
@@ -9444,7 +9444,7 @@ Tera Type: Normal
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Facade  
 - Knock Off  
@@ -9459,7 +9459,7 @@ Tera Type: Dark
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Hyper Voice  
 - Dark Pulse  
@@ -9474,7 +9474,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Scald  
 - Recover  
@@ -9489,7 +9489,7 @@ Tera Type: Ice
 Dynamax Level: 10  
 Ball: Dream Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Ice Beam  
 - Shadow Ball  
@@ -9504,7 +9504,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Love Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Moonblast  
 - Psychic  
@@ -9519,7 +9519,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpD  
 - Decorate  
 - Dazzling Gleam  
@@ -9544,7 +9544,7 @@ Tera Type: Normal
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Facade  
 - Knock Off  
@@ -9559,7 +9559,7 @@ Tera Type: Dark
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Hyper Voice  
 - Dark Pulse  
@@ -9574,7 +9574,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Scald  
 - Recover  
@@ -9589,7 +9589,7 @@ Tera Type: Ice
 Dynamax Level: 10  
 Ball: Dream Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Ice Beam  
 - Shadow Ball  
@@ -9604,7 +9604,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Love Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Moonblast  
 - Psychic  
@@ -9619,7 +9619,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpD  
 - Decorate  
 - Dazzling Gleam  
@@ -9644,7 +9644,7 @@ Tera Type: Normal
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Facade  
 - Knock Off  
@@ -9659,7 +9659,7 @@ Tera Type: Dark
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Hyper Voice  
 - Dark Pulse  
@@ -9674,7 +9674,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Scald  
 - Recover  
@@ -9689,7 +9689,7 @@ Tera Type: Ice
 Dynamax Level: 10  
 Ball: Dream Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Ice Beam  
 - Shadow Ball  
@@ -9704,7 +9704,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Love Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Moonblast  
 - Psychic  
@@ -9719,7 +9719,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpD  
 - Decorate  
 - Dazzling Gleam  
@@ -9744,7 +9744,7 @@ Tera Type: Normal
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Facade  
 - Knock Off  
@@ -9759,7 +9759,7 @@ Tera Type: Dark
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Hyper Voice  
 - Dark Pulse  
@@ -9774,7 +9774,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Scald  
 - Recover  
@@ -9789,7 +9789,7 @@ Tera Type: Ice
 Dynamax Level: 10  
 Ball: Dream Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Ice Beam  
 - Shadow Ball  
@@ -9804,7 +9804,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Love Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Moonblast  
 - Psychic  
@@ -9819,7 +9819,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpD  
 - Decorate  
 - Dazzling Gleam  
@@ -9844,7 +9844,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Dream Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Atk / 4 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -9859,7 +9859,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Giga Drain  
 - Sleep Powder  
@@ -9874,7 +9874,7 @@ Tera Type: Normal
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Triple Axel  
 - Return  
@@ -9889,7 +9889,7 @@ Tera Type: Ice
 Dynamax Level: 10  
 Ball: Beast Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Quiver Dance  
 - Ice Beam  
@@ -9904,7 +9904,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Moonblast  
 - Bug Buzz  
@@ -9919,7 +9919,7 @@ Tera Type: Ice
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Aurora Veil  
 - Freeze-Dry  
@@ -9944,7 +9944,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Spore  
 - Mach Punch  
@@ -9959,7 +9959,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Power Whip  
 - High Jump Kick  
@@ -9974,7 +9974,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 SpA  
 - Apple Acid  
 - Leech Seed  
@@ -9989,7 +9989,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Leaf Storm  
 - Knock Off  
@@ -10004,7 +10004,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Victory Dance  
 - Leaf Blade  
@@ -10019,7 +10019,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 SpA / 252 SpD  
 - Quiver Dance  
 - Giga Drain  
@@ -10044,7 +10044,7 @@ Tera Type: Fire
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 Def  
 - Eruption  
 - Earth Power  
@@ -10059,7 +10059,7 @@ Tera Type: Poison
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Sludge Wave  
 - Flamethrower  
@@ -10074,7 +10074,7 @@ Tera Type: Fire
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Lava Plume  
 - Stealth Rock  
@@ -10089,7 +10089,7 @@ Tera Type: Psychic
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Armor Cannon  
 - Expanding Force  
@@ -10104,7 +10104,7 @@ Tera Type: Rock
 Dynamax Level: 10  
 Ball: Heavy Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Atk / 4 Def  
 - Heat Crash  
 - Rock Slide  
@@ -10119,7 +10119,7 @@ Tera Type: Bug
 Dynamax Level: 10  
 Ball: Repeat Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe  
 - Quiver Dance  
 - Fiery Dance  
@@ -10144,7 +10144,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Play Rough  
 - Shadow Claw  
@@ -10159,7 +10159,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Dive Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpD  
 - Scald  
 - Recover  
@@ -10174,7 +10174,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Love Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 SpD  
 - Psychic  
 - Dazzling Gleam  
@@ -10189,7 +10189,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Lure Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Sparkling Aria  
 - Moonblast  
@@ -10204,7 +10204,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Power Whip  
 - High Jump Kick  
@@ -10219,7 +10219,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Moon Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Hyper Voice  
 - Psychic  
@@ -10244,7 +10244,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Dive Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Hydro Pump  
 - Ice Beam  
@@ -10259,7 +10259,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Love Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Decorate  
 - Dazzling Gleam  
@@ -10274,7 +10274,7 @@ Tera Type: Ice
 Dynamax Level: 10  
 Ball: Quick Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Freeze-Dry  
 - Shadow Ball  
@@ -10289,7 +10289,7 @@ Tera Type: Bug
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Quiver Dance  
 - Bug Buzz  
@@ -10304,7 +10304,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 SpA / 252 SpD  
 - Quiver Dance  
 - Giga Drain  
@@ -10319,7 +10319,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Dream Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Atk / 4 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -10344,7 +10344,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Dream Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Atk / 4 Spe  
 - Aqua Jet  
 - Play Rough  
@@ -10359,7 +10359,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Love Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Earth Power  
 - Moonblast  
@@ -10374,7 +10374,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Power Whip  
 - High Jump Kick  
@@ -10389,7 +10389,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Lure Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Sparkling Aria  
 - Moonblast  
@@ -10404,7 +10404,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Giga Drain  
 - Sleep Powder  
@@ -10419,7 +10419,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Dive Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpD  
 - Scald  
 - Recover  
@@ -10444,7 +10444,7 @@ Tera Type: Fairy
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpD  
 - Scald  
 - Ice Beam  
@@ -10459,7 +10459,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Moon Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 SpD  
 - Sparkling Aria  
 - Moonblast  
@@ -10474,7 +10474,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Dream Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpD  
 - Wish  
 - Protect  
@@ -10489,7 +10489,7 @@ Tera Type: Ice
 Dynamax Level: 10  
 Ball: Dive Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Shell Smash  
 - Icicle Spear  
@@ -10504,7 +10504,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Giga Drain  
 - Hydro Pump  
@@ -10519,7 +10519,7 @@ Tera Type: Steel
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Make It Rain  
 - Shadow Ball  
@@ -10544,7 +10544,7 @@ Tera Type: Dark
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Crunch  
 - Waterfall  
@@ -10559,7 +10559,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Dive Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Wave Crash  
 - Shadow Ball  
@@ -10574,7 +10574,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Wish  
 - Scald  
@@ -10589,7 +10589,7 @@ Tera Type: Flying
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Waterfall  
 - Bounce  
@@ -10604,7 +10604,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Fishious Rend  
 - Crunch  
@@ -10619,7 +10619,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Net Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Flip Turn  
 - Jet Punch  
@@ -10644,7 +10644,7 @@ Tera Type: Normal
 Dynamax Level: 10  
 Ball: Repeat Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Atk  
 - Shadow Sneak  
 - Sucker Punch  
@@ -10659,7 +10659,7 @@ Tera Type: Poison
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Poison Jab  
 - Sucker Punch  
@@ -10674,7 +10674,7 @@ Tera Type: Electric
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Overdrive  
 - Sludge Bomb  
@@ -10689,7 +10689,7 @@ Tera Type: Ice
 Dynamax Level: 10  
 Ball: Dive Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Quiver Dance  
 - Ice Beam  
@@ -10704,7 +10704,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Shadow Ball  
 - Mystical Fire  
@@ -10719,7 +10719,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Friend Ball  
 Shiny: Yes  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Power Whip  
 - Triple Axel  
@@ -13761,7 +13761,7 @@ Tera Type: Flying
 Dynamax Level: 10  
 Ball: Quick Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Acrobatics  
 - High Jump Kick  
@@ -13776,7 +13776,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Timer Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Close Combat  
 - U-turn  
@@ -13791,7 +13791,7 @@ Tera Type: Psychic
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - High Jump Kick  
 - Zen Headbutt  
@@ -13806,7 +13806,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Heavy Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 HP / 4 Def  
 - Close Combat  
 - Knock Off  
@@ -13821,7 +13821,7 @@ Tera Type: Poison
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Poison Jab  
 - Drain Punch  
@@ -13846,7 +13846,7 @@ Tera Type: Ghost
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Rage Fist  
 - Close Combat  
@@ -13861,7 +13861,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Repeat Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Atk  
 - No Retreat  
 - Close Combat  
@@ -13876,7 +13876,7 @@ Tera Type: Bug
 Dynamax Level: 10  
 Ball: Net Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Close Combat  
 - Megahorn  
@@ -13891,7 +13891,7 @@ Tera Type: Steel
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 4 Def / 252 SpA / 252 Spe  
 - Aura Sphere  
 - Flash Cannon  
@@ -13906,7 +13906,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 HP / 4 Def  
 - Dynamic Punch  
 - Knock Off  
@@ -13921,7 +13921,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Fast Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Close Combat  
 - Knock Off  
@@ -13946,7 +13946,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Heavy Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 HP / 4 Def  
 - Close Combat  
 - Knock Off  
@@ -13961,7 +13961,7 @@ Tera Type: Grass
 Dynamax Level: 10  
 Ball: Nest Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Spore  
 - Mach Punch  
@@ -13976,7 +13976,7 @@ Tera Type: Psychic
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Psycho Cut  
 - Sacred Sword  
@@ -13991,7 +13991,7 @@ Tera Type: Water
 Dynamax Level: 10  
 Ball: Dive Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 Atk  
 - Liquidation  
 - Earthquake  
@@ -14006,7 +14006,7 @@ Tera Type: Dragon
 Dynamax Level: 10  
 Ball: Timer Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 4 Def / 252 Spe  
 - Clanging Scales  
 - Focus Blast  
@@ -14021,7 +14021,7 @@ Tera Type: Poison
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Poison Jab  
 - Drain Punch  
@@ -14046,7 +14046,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 HP / 4 Def  
 - Dynamic Punch  
 - Knock Off  
@@ -14061,7 +14061,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Repeat Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Atk  
 - No Retreat  
 - Close Combat  
@@ -14076,7 +14076,7 @@ Tera Type: Steel
 Dynamax Level: 10  
 Ball: Luxury Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 4 Def / 252 SpA / 252 Spe  
 - Aura Sphere  
 - Flash Cannon  
@@ -14091,7 +14091,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Timer Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Close Combat  
 - U-turn  
@@ -14106,7 +14106,7 @@ Tera Type: Psychic
 Dynamax Level: 10  
 Ball: Premier Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - High Jump Kick  
 - Zen Headbutt  
@@ -14121,7 +14121,7 @@ Tera Type: Poison
 Dynamax Level: 10  
 Ball: Dusk Ball  
 Shiny: No  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Poison Jab  
 - Drain Punch  
@@ -18936,7 +18936,7 @@ Alakazam @ Focus Sash
 Level: 48  
 Ability: Magic Guard  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Shadow Ball  
@@ -18947,7 +18947,7 @@ Slowking @ Leftovers
 Level: 48  
 Ability: Regenerator  
 Nature: Calm  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 SpA  
 - Psychic  
 - Scald  
@@ -18958,7 +18958,7 @@ Gallade @ Life Orb
 Level: 48  
 Ability: Sharpness  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Psycho Cut  
 - Sacred Sword  
@@ -18969,7 +18969,7 @@ Gardevoir @ Choice Specs
 Level: 48  
 Ability: Pixilate  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Moonblast  
@@ -18980,7 +18980,7 @@ Espeon @ Light Clay
 Level: 48  
 Ability: Magic Bounce  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Reflect  
@@ -18991,7 +18991,7 @@ Medicham @ Medichamite
 Level: 48  
 Ability: Pure Power 
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - High Jump Kick  
 - Zen Headbutt  
@@ -19012,7 +19012,7 @@ Gardevoir @ Focus Sash
 Level: 48  
 Ability: Pixilate  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Moonblast  
 - Psychic  
@@ -19023,7 +19023,7 @@ Gallade @ Life Orb
 Level: 48  
 Ability: Sharpness  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Psycho Cut  
 - Sacred Sword  
@@ -19034,7 +19034,7 @@ Bronzong @ Leftovers
 Level: 48  
 Ability: Levitate  
 Nature: Sassy  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Def  
 - Psychic  
 - Gyro Ball  
@@ -19045,7 +19045,7 @@ Reuniclus @ Rocky Helmet
 Level: 48  
 Ability: Magic Guard  
 Nature: Bold  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Psychic  
 - Focus Blast  
@@ -19056,7 +19056,7 @@ Mr. Rime @ Light Clay
 Level: 48  
 Ability: Screen Cleaner  
 Nature: Calm  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 Def / 0 SpA / 0 SpD / 252 Spe  
 - Reflect  
 - Light Screen  
@@ -19067,7 +19067,7 @@ Malamar @ Assault Vest
 Level: 48  
 Ability: Contrary  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 - Superpower  
 - Psycho Cut  
@@ -19088,7 +19088,7 @@ Xatu @ Rocky Helmet
 Level: 48  
 Ability: Magic Bounce  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Air Slash  
@@ -19099,7 +19099,7 @@ Espeon @ Focus Sash
 Level: 48  
 Ability: Magic Bounce  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Dazzling Gleam  
@@ -19110,7 +19110,7 @@ Alakazam @ Life Orb
 Level: 48  
 Ability: Magic Guard  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Shadow Ball  
@@ -19121,7 +19121,7 @@ Gallade @ Leftovers
 Level: 48  
 Ability: Sharpness  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Psycho Cut  
 - Sacred Sword  
@@ -19132,7 +19132,7 @@ Reuniclus @ Assault Vest
 Level: 48  
 Ability: Magic Guard  
 Nature: Quiet  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 Def  
 - Psychic  
 - Focus Blast  
@@ -19143,7 +19143,7 @@ Bruxish @ Mystic Water
 Level: 48  
 Ability: Strong Jaw  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Psychic Fangs  
 - Crunch  
@@ -19164,7 +19164,7 @@ Alakazam @ Focus Sash
 Level: 54  
 Ability: Magic Guard  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Shadow Ball  
@@ -19175,7 +19175,7 @@ Gardevoir @ Choice Specs
 Level: 54  
 Ability: Pixilate  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Moonblast  
@@ -19186,7 +19186,7 @@ Gallade @ Life Orb
 Level: 54  
 Ability: Sharpness  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Psycho Cut  
 - Sacred Sword  
@@ -19197,7 +19197,7 @@ Bronzong @ Leftovers
 Level: 54  
 Ability: Levitate  
 Nature: Sassy  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Def  
 - Psychic  
 - Gyro Ball  
@@ -19208,7 +19208,7 @@ Metagross @ Assault Vest
 Level: 54  
 Ability: Clear Body  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Meteor Mash  
 - Zen Headbutt  
@@ -19219,7 +19219,7 @@ Wobbuffet @ Leftovers
 Level: 54  
 Ability: Shadow Tag  
 Nature: Calm  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpD  
 - Counter  
 - Mirror Coat  
@@ -19316,7 +19316,7 @@ Gardevoir @ Gardevoirite
 Level: 66  
 Ability: Pixilate   
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Hyper Voice  
 - Psychic  
@@ -19327,7 +19327,7 @@ Gallade @ Galladite
 Level: 66  
 Ability: Sharpness   
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Psycho Cut  
 - Sacred Sword  
@@ -19338,7 +19338,7 @@ Hatterene @ Leftovers
 Level: 66  
 Ability: Magic Bounce  
 Nature: Quiet  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 Def  
 - Psychic  
 - Dazzling Gleam  
@@ -19349,7 +19349,7 @@ Slowking @ Assault Vest
 Level: 66  
 Ability: Regenerator  
 Nature: Sassy  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 SpA  
 - Psychic  
 - Scald  
@@ -19360,7 +19360,7 @@ Reuniclus @ Life Orb
 Level: 66  
 Ability: Magic Guard  
 Nature: Bold  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Psychic  
 - Focus Blast  
@@ -19371,7 +19371,7 @@ Indeedee (F) @ Choice Specs
 Level: 66  
 Ability: Psychic Surge  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Expanding Force  
 - Dazzling Gleam  
@@ -19392,7 +19392,7 @@ Lunatone @ Sitrus Berry
 Level: 40  
 Ability: Levitate  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 Def / 252 SpA  
 - Psychic  
 - Moonblast  
@@ -19403,7 +19403,7 @@ Kadabra @ Focus Sash
 Level: 40  
 Ability: Magic Guard  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Dazzling Gleam  
@@ -19414,7 +19414,7 @@ Medicham @ Life Orb
 Level: 40  
 Ability: Pure Power  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Zen Headbutt  
 - High Jump Kick  
@@ -19425,7 +19425,7 @@ Grumpig @ Leftovers
 Level: 40  
 Ability: Thick Fat  
 Nature: Bold  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Def / 4 SpA  
 - Psychic  
 - Power Gem  
@@ -19436,7 +19436,7 @@ Gothitelle @ Light Clay
 Level: 40  
 Ability: Shadow Tag  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Thunderbolt  
@@ -19447,7 +19447,7 @@ Espeon @ Choice Specs
 Level: 40  
 Ability: Magic Bounce  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Shadow Ball  
@@ -19468,7 +19468,7 @@ Lunatone @ Focus Sash
 Level: 48  
 Ability: Levitate  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 Def / 252 SpA  
 - Psychic  
 - Moonblast  
@@ -19479,7 +19479,7 @@ Kadabra @ Eviolite
 Level: 48  
 Ability: Magic Guard  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Shadow Ball  
@@ -19490,7 +19490,7 @@ Alakazam @ Life Orb
 Level: 48  
 Ability: Magic Guard  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Shadow Ball  
@@ -19501,7 +19501,7 @@ Gallade @ Leftovers
 Level: 48  
 Ability: Sharpness  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Psycho Cut  
 - Sacred Sword  
@@ -19512,7 +19512,7 @@ Bronzong @ Rocky Helmet
 Level: 48  
 Ability: Levitate  
 Nature: Sassy  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Def  
 - Psychic  
 - Gyro Ball  
@@ -19523,7 +19523,7 @@ Reuniclus @ Assault Vest
 Level: 48  
 Ability: Magic Guard  
 Nature: Quiet  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 Def  
 - Psychic  
 - Focus Blast  
@@ -19544,7 +19544,7 @@ Lunatone @ Focus Sash
 Level: 60  
 Ability: Levitate  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 Def / 252 SpA  
 - Psychic  
 - Moonblast  
@@ -19555,7 +19555,7 @@ Alakazam @ Life Orb
 Level: 60  
 Ability: Magic Guard  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Shadow Ball  
@@ -19566,7 +19566,7 @@ Gallade @ Galladite
 Level: 60  
 Ability: Sharpness   
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Psycho Cut  
 - Sacred Sword  
@@ -19577,7 +19577,7 @@ Metagross @ Assault Vest
 Level: 60  
 Ability: Clear Body  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Meteor Mash  
 - Zen Headbutt  
@@ -19588,7 +19588,7 @@ Bronzong @ Rocky Helmet
 Level: 60  
 Ability: Levitate  
 Nature: Sassy  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Def  
 - Psychic  
 - Gyro Ball  
@@ -19599,7 +19599,7 @@ Hatterene @ Leftovers
 Level: 60  
 Ability: Magic Bounce  
 Nature: Quiet  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 Def  
 - Psychic  
 - Dazzling Gleam  
@@ -19620,7 +19620,7 @@ Lunatone @ Focus Sash
 Level: 75  
 Ability: Levitate  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 Def / 252 SpA  
 - Psychic  
 - Moonblast  
@@ -19631,7 +19631,7 @@ Alakazam @ Alakazite
 Level: 75  
 Ability: Magic Guard / Trace   
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Shadow Ball  
@@ -19642,7 +19642,7 @@ Gallade @ Galladite
 Level: 75  
 Ability: Sharpness   
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Psycho Cut  
 - Sacred Sword  
@@ -19653,7 +19653,7 @@ Metagross @ Metagrossite
 Level: 75  
 Ability: Clear Body / Tough Claws   
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Meteor Mash  
 - Zen Headbutt  
@@ -19664,7 +19664,7 @@ Bronzong @ Rocky Helmet
 Level: 75  
 Ability: Levitate  
 Nature: Sassy  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Def  
 - Psychic  
 - Gyro Ball  
@@ -19675,7 +19675,7 @@ Hatterene @ Leftovers
 Level: 75  
 Ability: Magic Bounce  
 Nature: Quiet  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 Def  
 - Psychic  
 - Dazzling Gleam  
@@ -19696,7 +19696,7 @@ Lunatone @ Focus Sash
 Level: 88  
 Ability: Levitate  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 4 Def / 252 SpA  
 - Psychic  
 - Moonblast  
@@ -19707,7 +19707,7 @@ Alakazam @ Alakazite
 Level: 88  
 Ability: Magic Guard / Trace   
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Shadow Ball  
@@ -19718,7 +19718,7 @@ Gallade @ Galladite
 Level: 88  
 Ability: Sharpness   
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Psycho Cut  
 - Sacred Sword  
@@ -19729,7 +19729,7 @@ Metagross @ Metagrossite
 Level: 88  
 Ability: Clear Body / Tough Claws   
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
 - Meteor Mash  
 - Zen Headbutt  
@@ -19740,7 +19740,7 @@ Bronzong @ Rocky Helmet
 Level: 88  
 Ability: Levitate  
 Nature: Sassy  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Def  
 - Psychic  
 - Gyro Ball  
@@ -19751,7 +19751,7 @@ Hatterene @ Leftovers
 Level: 88  
 Ability: Magic Bounce  
 Nature: Quiet  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 Def  
 - Psychic  
 - Dazzling Gleam  
@@ -20052,7 +20052,7 @@ Manectric @ Manectite
 Level: 78  
 Ability: Intimidate  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 252 Spe / 4 HP  
 - Thunderbolt  
 - Flamethrower  
@@ -20063,7 +20063,7 @@ Linoone (Galar) @ Sitrus Berry
 Level: 77  
 Ability: Gluttony  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 Spe / 4 HP  
 - Belly Drum  
 - Extreme Speed  
@@ -20074,7 +20074,7 @@ Golduck @ Expert Belt
 Level: 77  
 Ability: Cloud Nine  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 252 Spe / 4 HP  
 - Hydro Pump  
 - Ice Beam  
@@ -20085,7 +20085,7 @@ Persian-Alola @ Black Glasses
 Level: 77  
 Ability: Fur Coat  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Spe / 4 SpA  
 - Foul Play  
 - Nasty Plot  
@@ -20096,7 +20096,7 @@ Grimmsnarl @ Light Clay
 Level: 77  
 Ability: Prankster  
 Nature: Careful  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Atk  
 - Reflect  
 - Light Screen  
@@ -20107,7 +20107,7 @@ Luxray @ Choice Band
 Level: 77  
 Ability: Guts  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 Spe / 4 HP  
 - Wild Charge  
 - Crunch  
@@ -20128,7 +20128,7 @@ Manectric @ Manectite
 Level: 85  
 Ability: Intimidate  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 252 Spe / 4 HP  
 - Thunderbolt  
 - Overheat  
@@ -20139,7 +20139,7 @@ Obstagoon @ Flame Orb
 Level: 84  
 Ability: Guts  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 Spe / 4 HP  
 - Facade  
 - Knock Off  
@@ -20150,7 +20150,7 @@ Perrserker @ Assault Vest
 Level: 84  
 Ability: Battle Armor  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 SpD / 4 HP  
 - Iron Head  
 - Play Rough  
@@ -20161,7 +20161,7 @@ Dudunsparce (Three Segment) @ King's Rock
 Level: 84  
 Ability: Serene Grace  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Atk / 4 Spe  
 - Hyper Drill  
 - Rock Slide  
@@ -20172,7 +20172,7 @@ Porygon-Z @ Choice Specs
 Level: 84  
 Ability: Adaptability  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 252 Spe / 4 HP  
 - Tri Attack  
 - Ice Beam  
@@ -20183,7 +20183,7 @@ Eelektross @ Leftovers
 Level: 84  
 Ability: Levitate  
 Nature: Quiet  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpA / 4 Def  
 - Thunderbolt  
 - Flamethrower  
@@ -20204,7 +20204,7 @@ Manectric @ Manectite
 Level: 99  
 Ability: Intimidate  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 252 Spe / 4 HP  
 - Thunderbolt  
 - Volt Switch  
@@ -20215,7 +20215,7 @@ Grimmsnarl @ Light Clay
 Level: 99  
 Ability: Prankster  
 Nature: Careful  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 SpD / 4 Atk  
 - Spirit Break  
 - Reflect  
@@ -20226,7 +20226,7 @@ Luxray @ Assault Vest
 Level: 99  
 Ability: Guts  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 Spe / 4 HP  
 - Wild Charge  
 - Crunch  
@@ -20237,7 +20237,7 @@ Obstagoon @ Flame Orb
 Level: 99  
 Ability: Guts  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 Spe / 4 HP  
 - Facade  
 - Knock Off  
@@ -20248,7 +20248,7 @@ Perrserker @ Choice Band
 Level: 99  
 Ability: Battle Armor  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 252 SpD / 4 HP  
 - Iron Head  
 - Close Combat  
@@ -20259,7 +20259,7 @@ Porygon-Z @ Choice Specs
 Level: 99  
 Ability: Adaptability  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 SpA / 252 Spe / 4 HP  
 - Tri Attack  
 - Thunderbolt  
@@ -21493,7 +21493,7 @@ Pawmi @ Oran Berry
 Level: 18  
 Ability: Natural Cure  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -21508,7 +21508,7 @@ Froakie @ Sitrus Berry
 Level: 18  
 Ability: Torrent  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -21523,7 +21523,7 @@ Growlithe-Hisui @ Oran Berry
 Level: 18  
 Ability: Intimidate  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Great Ball  
@@ -21538,7 +21538,7 @@ Nymble @ Oran Berry
 Level: 18  
 Ability: Swarm  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 252 Spe  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -21553,7 +21553,7 @@ Sandile @ Oran Berry
 Level: 18  
 Ability: Intimidate  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -21577,7 +21577,7 @@ Ralts @ Focus Sash
 Level: 24  
 Ability: Synchronize  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -21592,7 +21592,7 @@ Sprigatito @ Miracle Seed
 Level: 24  
 Ability: Overgrow  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Premier Ball  
@@ -21607,7 +21607,7 @@ Rowlet @ Eviolite
 Level: 24  
 Ability: Overgrow  
 Nature: Impish  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Friend Ball  
@@ -21622,7 +21622,7 @@ Riolu @ Sitrus Berry
 Level: 24  
 Ability: Inner Focus  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Quick Ball  
@@ -21637,7 +21637,7 @@ Growlithe-Hisui @ Charcoal
 Level: 24  
 Ability: Intimidate  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Great Ball  
@@ -21652,7 +21652,7 @@ Mareanie @ Black Sludge
 Level: 24  
 Ability: Regenerator  
 Nature: Bold  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe  
 Dynamax Level: 10  
 Ball: Dive Ball  
@@ -21676,7 +21676,7 @@ Numel @ Passho Berry
 Level: 23  
 Ability: Simple  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -21691,7 +21691,7 @@ Oddish @ Eviolite
 Level: 23  
 Ability: Chlorophyll  
 Nature: Calm  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Heal Ball  
@@ -21706,7 +21706,7 @@ Wingull @ Mystic Water
 Level: 23  
 Ability: Keen Eye  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Quick Ball  
@@ -21721,7 +21721,7 @@ Shinx @ Shuca Berry
 Level: 23  
 Ability: Intimidate  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Ultra Ball  
@@ -21736,7 +21736,7 @@ Mudbray @ Soft Sand
 Level: 23  
 Ability: Own Tempo  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Nest Ball  
@@ -21751,7 +21751,7 @@ Cufant @ Leftovers
 Level: 23  
 Ability: Sheer Force  
 Nature: Brave  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 252 Atk / 4 Def  
 Dynamax Level: 10  
 Ball: Luxury Ball  
@@ -21775,7 +21775,7 @@ Gardevoir @ Focus Sash
 Level: 46  
 Ability: Trace  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -21790,7 +21790,7 @@ Medicham @ Expert Belt
 Level: 46  
 Ability: Pure Power  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Great Ball  
@@ -21805,7 +21805,7 @@ Grimmsnarl @ Light Clay
 Level: 46  
 Ability: Prankster  
 Nature: Careful  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Ultra Ball  
@@ -21820,7 +21820,7 @@ Banette @ Spell Tag
 Level: 46  
 Ability: Insomnia  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Dusk Ball  
@@ -21835,7 +21835,7 @@ Indeedee (M) @ Psychic Seed
 Level: 46  
 Ability: Psychic Surge  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe  
 Dynamax Level: 10  
 Ball: Friend Ball  
@@ -21850,7 +21850,7 @@ Gallade @ Scope Lens
 Level: 46  
 Ability: Sharpness  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Timer Ball  
@@ -21874,7 +21874,7 @@ Gardevoir @ Focus Sash
 Level: 55  
 Ability: Trace  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -21889,7 +21889,7 @@ Medicham @ Life Orb
 Level: 55  
 Ability: Pure Power  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Great Ball  
@@ -21904,7 +21904,7 @@ Gallade @ Galladite
 Level: 55  
 Ability: Sharpness  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Timer Ball  
@@ -21919,7 +21919,7 @@ Banette @ Spell Tag
 Level: 55  
 Ability: Insomnia  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Dusk Ball  
@@ -21934,7 +21934,7 @@ Indeedee (M) @ Psychic Seed
 Level: 55  
 Ability: Psychic Surge  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe  
 Dynamax Level: 10  
 Ball: Friend Ball  
@@ -21949,7 +21949,7 @@ Grimmsnarl @ Light Clay
 Level: 55  
 Ability: Prankster  
 Nature: Careful  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Ultra Ball  
@@ -21973,7 +21973,7 @@ Gardevoir @ Gardevoirite
 Level: 62  
 Ability: Trace  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -21988,7 +21988,7 @@ Medicham @ Life Orb
 Level: 62  
 Ability: Pure Power  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Great Ball  
@@ -22003,7 +22003,7 @@ Banette @ Spell Tag
 Level: 62  
 Ability: Insomnia  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Dusk Ball  
@@ -22018,7 +22018,7 @@ Indeedee (M) @ Psychic Seed
 Level: 62  
 Ability: Psychic Surge  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe  
 Dynamax Level: 10  
 Ball: Friend Ball  
@@ -22033,7 +22033,7 @@ Gallade @ Scope Lens
 Level: 62  
 Ability: Sharpness  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Timer Ball  
@@ -22048,7 +22048,7 @@ Grimmsnarl @ Light Clay
 Level: 62  
 Ability: Prankster  
 Nature: Careful  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Ultra Ball  
@@ -22072,7 +22072,7 @@ Gardevoir @ Gardevoirite
 Level: 75  
 Ability: Trace  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -22087,7 +22087,7 @@ Medicham @ Life Orb
 Level: 75  
 Ability: Pure Power  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Great Ball  
@@ -22102,7 +22102,7 @@ Banette @ Spell Tag
 Level: 75  
 Ability: Insomnia  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Dusk Ball  
@@ -22117,7 +22117,7 @@ Indeedee (M) @ Psychic Seed
 Level: 75  
 Ability: Psychic Surge  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe  
 Dynamax Level: 10  
 Ball: Friend Ball  
@@ -22132,7 +22132,7 @@ Gallade @ Galladite
 Level: 75  
 Ability: Sharpness  
 Nature: Adamant  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Timer Ball  
@@ -22147,7 +22147,7 @@ Grimmsnarl @ Light Clay
 Level: 75  
 Ability: Prankster  
 Nature: Careful  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Ultra Ball  
@@ -26632,7 +26632,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Treecko (F) @ Miracle Seed  # Ace
+Treecko (F) @ Miracle Seed  
 Level: 10
 Ability: Overgrow
 Nature: Timid
@@ -26707,7 +26707,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Grovyle (F) @ Miracle Seed  # Ace
+Grovyle (F) @ Miracle Seed  
 Level: 25
 Ability: Overgrow
 Nature: Timid
@@ -26782,7 +26782,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Sceptile (F) @ Miracle Seed  # Ace
+Sceptile (F) @ Miracle Seed  
 Level: 48
 Ability: Unburden
 Nature: Timid
@@ -26857,7 +26857,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Torchic (F) @ Charcoal  # Ace
+Torchic (F) @ Charcoal  
 Level: 10
 Ability: Blaze
 Nature: Adamant
@@ -26932,7 +26932,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Combusken (F) @ Charcoal  # Ace
+Combusken (F) @ Charcoal  
 Level: 25
 Ability: Blaze
 Nature: Adamant
@@ -27007,7 +27007,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Blaziken (F) @ Charcoal  # Ace
+Blaziken (F) @ Charcoal  
 Level: 48
 Ability: Speed Boost
 Nature: Adamant
@@ -27082,7 +27082,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Mudkip (F) @ Mystic Water  # Ace
+Mudkip (F) @ Mystic Water  
 Level: 10
 Ability: Torrent
 Nature: Adamant
@@ -27157,7 +27157,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Marshtomp (F) @ Mystic Water  # Ace
+Marshtomp (F) @ Mystic Water  
 Level: 25
 Ability: Torrent
 Nature: Adamant
@@ -27232,7 +27232,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Swampert (F) @ Mystic Water  # Ace
+Swampert (F) @ Mystic Water  
 Level: 48
 Ability: Torrent
 Nature: Adamant
