@@ -15044,7 +15044,7 @@ Tera Type: Dark
 Dynamax Level: 10
 Ball: Great Ball
 Shiny: No
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Crunch
 - Play Rough
@@ -15059,7 +15059,7 @@ Tera Type: Flying
 Dynamax Level: 10
 Ball: Ultra Ball
 Shiny: No
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Air Slash
 - Sludge Bomb
@@ -15344,7 +15344,7 @@ Tera Type: Electric
 Dynamax Level: 10
 Ball: Quick Ball
 Shiny: No
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Wild Charge
 - Crunch
@@ -15628,7 +15628,7 @@ Level: 32
 Ability: Soundproof
 Nature: Adamant
 Ball: Heal Ball
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 - Hyper Voice
 - Stomp
 - Uproar
@@ -15650,7 +15650,7 @@ Level: 32
 Ability: Technician
 Nature: Jolly
 Ball: Nest Ball
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 - X-Scissor
 - Sing
 - Slash
@@ -18022,7 +18022,7 @@ Masquerain @ Silver Powder
 Level: 48
 Ability: Intimidate
 Nature: Timid
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Hydro Pump
@@ -18033,7 +18033,7 @@ Beautifly @ Focus Sash
 Level: 47
 Ability: Rivalry
 Nature: Modest
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Energy Ball
@@ -18044,7 +18044,7 @@ Dustox @ Black Sludge
 Level: 47
 Ability: Shield Dust
 Nature: Bold
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 4 Def / 252 SpD
 - Bug Buzz
 - Toxic
@@ -18055,7 +18055,7 @@ Volcarona @ Leftovers
 Level: 48
 Ability: Flame Body
 Nature: Timid
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Fiery Dance
 - Bug Buzz
@@ -18066,7 +18066,7 @@ Frosmoth @ Heavy-Duty Boots
 Level: 48
 Ability: Ice Scales
 Nature: Modest
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Ice Beam
@@ -18077,7 +18077,7 @@ Heracross @ Heracronite
 Level: 49
 Ability: Guts
 Nature: Adamant
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Megahorn
 - Close Combat
@@ -18717,7 +18717,7 @@ Solrock @ Weakness Policy
 Level: 41  
 Ability: Levitate  
 Nature: Impish  
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe  
 - Zen Headbutt  
 - Rock Slide  
@@ -22681,7 +22681,7 @@ AI: Basic Trainer
 
 Hariyama
 Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_TIMOTHY_2 ===
 Name: TIMOTHY
@@ -22762,7 +22762,7 @@ AI: Basic Trainer
 
 Meditite
 Level: 18
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 - High Jump Kick
 - Meditate
 - Confusion
@@ -22779,11 +22779,11 @@ AI: Basic Trainer
 
 Meditite
 Level: 21
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 Makuhita
 Level: 21
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_SHELBY_2 ===
 Name: SHELBY
@@ -23584,7 +23584,7 @@ IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 Magnemite
 Level: 14
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_ANTHONY ===
 Name: ANTHONY
@@ -26251,7 +26251,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 Hariyama
 Level: 33
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_HUDSON ===
 Name: HUDSON
@@ -26281,7 +26281,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Hariyama
 Level: 33
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_EDWIN_1 ===
 Name: EDWIN
@@ -28070,7 +28070,7 @@ AI: Check Bad Move
 
 Makuhita
 Level: 13
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_SYLVIA ===
 Name: SYLVIA
@@ -29733,7 +29733,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Grovyle
 Level: 34
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BRENDAN_LILYCOVE_TREECKO ===
 Name: BRENDAN
@@ -29758,7 +29758,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Combusken
 Level: 34
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BRENDAN_LILYCOVE_TORCHIC ===
 Name: BRENDAN
@@ -29783,7 +29783,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Marshtomp
 Level: 34
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_MAY_LILYCOVE_MUDKIP ===
 Name: MAY
@@ -29808,7 +29808,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Grovyle
 Level: 34
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_MAY_LILYCOVE_TREECKO ===
 Name: MAY
@@ -29833,7 +29833,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Combusken
 Level: 34
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_MAY_LILYCOVE_TORCHIC ===
 Name: MAY
@@ -29858,7 +29858,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Marshtomp
 Level: 34
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_JONAH ===
 Name: JONAH
@@ -30139,7 +30139,7 @@ AI: Basic Trainer
 
 Medicham
 Level: 39
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 - Psychic
 - Fire Punch
 - Psych Up
@@ -30147,7 +30147,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 Hariyama
 Level: 39
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 - Focus Punch
 - Rock Tomb
 - Rest
@@ -33316,7 +33316,7 @@ AI: Basic Trainer
 
 Tropius
 Level: 30
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 
 === TRAINER_STEVEN ===
 Name: Steven
