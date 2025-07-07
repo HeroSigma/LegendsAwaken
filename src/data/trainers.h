@@ -12164,7 +12164,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 5276
-            .species = SPECIES_PALDEAN_WOOPER,
+            .species = SPECIES_WOOPER_PALDEA,
 #line 5276
             .gender = TRAINER_MON_MALE,
 #line 5276
@@ -12672,7 +12672,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 5492
-            .species = SPECIES_DUDUNSPARCE_THREE,
+            .species = SPECIES_DUDUNSPARCE,
 #line 5492
             .gender = TRAINER_MON_MALE,
 #line 5492
@@ -31362,7 +31362,7 @@ F_TRAINER_FEMALE |
 #line 14170
             .lvl = 20,
 #line 14175
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14172
             .nature = NATURE_JOLLY,
 #line 14176
@@ -43838,7 +43838,7 @@ F_TRAINER_FEMALE |
 #line 19708
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 0, 31),
 #line 19706
-            .ability = ABILITY_MAGIC_GUARD___TRACE,
+            .ability = ABILITY_MAGIC_GUARD,
 #line 19705
             .lvl = 88,
 #line 19707
@@ -43882,13 +43882,13 @@ F_TRAINER_FEMALE |
             .species = SPECIES_METAGROSS,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 19726
-            .heldItem = ITEM_METAGROSSITE,
+            .heldItem = ITEM_WEAKNESS_POLICY,
 #line 19731
             .ev = TRAINER_PARTY_EVS(0, 252, 0, 252, 0, 4),
 #line 19730
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 0, 31),
 #line 19728
-            .ability = ABILITY_CLEAR_BODY___TOUGH_CLAWS,
+            .ability = ABILITY_CLEAR_BODY,
 #line 19727
             .lvl = 88,
 #line 19729
@@ -44431,9 +44431,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 19959
-            .nickname = COMPOUND_STRING("Dudunsparce"),
-#line 19959
-            .species = SPECIES_THREE_SEGMENT,
+            .species = SPECIES_DUDUNSPARCE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 19959
             .heldItem = ITEM_KINGS_ROCK,
@@ -45359,7 +45357,7 @@ F_TRAINER_FEMALE |
 #line 20367
             TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
 #line 20368
-        .items = { ITEM_FULL_RESTORE_X2, ITEM_MAX_POTION_X2 },
+        .items = { ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_FULL_RESTORE, ITEM_MAX_POTION },
 #line 20369
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 20370
@@ -45677,7 +45675,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 20519
-            .species = SPECIES_ALOLAN_NINETALES,
+            .species = SPECIES_NINETALES_ALOLA,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 20519
             .heldItem = ITEM_LIGHT_CLAY,

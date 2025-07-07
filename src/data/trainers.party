@@ -5337,7 +5337,7 @@ EVs: 252 HP / 252 Atk / 4 SpD
 - Ice Punch
 - Aqua Jet
 
-Paldean Wooper (M) @ Eviolite
+Wooper-Paldea (M) @ Eviolite
 Level: 36
 Ability: Water Absorb
 Nature: Careful
@@ -14242,7 +14242,7 @@ Ability: Guts
 Nature: Adamant  
 Tera Type: Fighting  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 100 HP / 156 Spe  
@@ -14272,7 +14272,7 @@ Ability: Pure Power
 Nature: Jolly  
 Tera Type: Psychic  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
@@ -14342,7 +14342,7 @@ Ability: Guts
 Nature: Adamant  
 Tera Type: Fighting  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 100 HP / 156 Spe  
@@ -14372,7 +14372,7 @@ Ability: Pure Power
 Nature: Jolly  
 Tera Type: Psychic  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
@@ -14442,7 +14442,7 @@ Ability: Guts
 Nature: Adamant  
 Tera Type: Fighting  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 100 HP / 156 Spe  
@@ -14472,7 +14472,7 @@ Ability: Pure Power
 Nature: Jolly  
 Tera Type: Psychic  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
@@ -14542,7 +14542,7 @@ Ability: Guts
 Nature: Adamant  
 Tera Type: Fighting  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 100 HP / 156 Spe  
@@ -14572,7 +14572,7 @@ Ability: Pure Power
 Nature: Jolly  
 Tera Type: Psychic  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
@@ -14672,7 +14672,7 @@ Ability: Mold Breaker
 Nature: Impish
 Tera Type: Fighting
 Dynamax Level: 10
-Ball: Poké Ball
+Ball: Great Ball
 Shiny: No
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 EVs: 252 HP / 120 Def / 136 Atk
@@ -14772,7 +14772,7 @@ Ability: Battle Armor
 Nature: Adamant
 Tera Type: Fighting
 Dynamax Level: 10
-Ball: Poké Ball
+Ball: Great Ball
 Shiny: No
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 EVs: 252 HP / 252 Atk / 4 Def
@@ -14872,7 +14872,7 @@ Ability: Thick Fat
 Nature: Impish
 Tera Type: Fighting
 Dynamax Level: 10
-Ball: Poké Ball
+Ball: Great Ball
 Shiny: No
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 EVs: 252 HP / 252 Atk / 4 Def
@@ -15457,7 +15457,7 @@ Ability: Soundproof
 Nature: Modest
 Tera Type: Normal
 Dynamax Level: 10
-Ball: Poké Ball
+Ball: Great Ball
 Shiny: No
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
@@ -20155,7 +20155,7 @@ EVs: 252 Atk / 252 SpD / 4 HP
 - U-turn  
 - Close Combat  
 
-Dudunsparce (Three Segment) @ King's Rock  
+Dudunsparce @ King's Rock  
 Level: 84  
 Ability: Serene Grace  
 Nature: Adamant  
@@ -20466,7 +20466,7 @@ Class: Elite Four
 Pic: Elite Four Glacia
 Gender: Female
 Music: Elite Four
-Items: Full Restore x2 / Max Potion x2
+Items: Full Restore / Max Potion / Full Restore / Max Potion 
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 Mugshot: Blue
@@ -21479,7 +21479,7 @@ Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 Tera Type: Fairy  
 - Psychic  
@@ -21494,7 +21494,7 @@ Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 Tera Type: Electric  
 - Spark  
@@ -21509,7 +21509,7 @@ Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 Tera Type: Water  
 - Water Pulse  
@@ -21539,7 +21539,7 @@ Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 4 Def / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 Tera Type: Bug  
 - Leech Life  
@@ -21554,7 +21554,7 @@ Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 252 Atk / 0 Def / 4 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 Tera Type: Ground  
 - Bite  
@@ -21578,7 +21578,7 @@ Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 Tera Type: Fairy  
 - Psychic  
@@ -21677,7 +21677,7 @@ Nature: Modest
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 Tera Type: Fire  
 - Lava Plume  
@@ -21776,7 +21776,7 @@ Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 Tera Type: Fairy  
 - Psychic  
@@ -21875,7 +21875,7 @@ Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: No  
 Tera Type: Fairy  
 - Psychic  
@@ -21974,7 +21974,7 @@ Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: Yes   
 Tera Type: Fairy  
 - Moonblast  
@@ -22073,7 +22073,7 @@ Nature: Timid
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Shiny: Yes   
 Tera Type: Fairy  
 - Moonblast  
