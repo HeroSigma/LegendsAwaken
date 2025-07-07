@@ -5083,7 +5083,7 @@ Linoone (M) @ Sitrus Berry
 Level: 27
 Ability: Pickup
 Nature: Jolly
-IVs: 8 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Sand Attack
 - Pin Missile
@@ -5094,7 +5094,7 @@ Floatzel (M) @ Mystic Water
 Level: 27
 Ability: Swift Swim
 Nature: Jolly
-IVs: 8 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Aqua Jet
 - Crunch
@@ -5105,7 +5105,7 @@ Azumarill (M) @ Sitrus Berry
 Level: 27
 Ability: Huge Power
 Nature: Adamant
-IVs: 8 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 4 SpD
 - Aqua Tail
 - Play Rough
@@ -5116,7 +5116,7 @@ Pyukumuku (M) @ Leftovers
 Level: 27
 Ability: Unaware
 Nature: Bold
-IVs: 8 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpD
 - Recover
 - Toxic
@@ -5127,7 +5127,7 @@ Dewott (M) @ Oran Berry
 Level: 27
 Ability: Torrent
 Nature: Adamant
-IVs: 8 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Razor Shell
 - Aqua Jet
@@ -5138,7 +5138,7 @@ Helioptile (M) @ Focus Sash
 Level: 27
 Ability: Dry Skin
 Nature: Timid
-IVs: 8 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
 - Thunderbolt
 - Surf
@@ -5158,7 +5158,7 @@ Linoone (M) @ Sitrus Berry
 Level: 30
 Ability: Pickup
 Nature: Jolly
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Sand Attack
 - Pin Missile
@@ -5169,7 +5169,7 @@ Floatzel (M) @ Mystic Water
 Level: 30
 Ability: Swift Swim
 Nature: Jolly
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Aqua Jet
 - Crunch
@@ -5180,7 +5180,7 @@ Azumarill (M) @ Sitrus Berry
 Level: 30
 Ability: Huge Power
 Nature: Adamant
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 4 SpD
 - Aqua Tail
 - Play Rough
@@ -5191,7 +5191,7 @@ Pyukumuku (M) @ Leftovers
 Level: 30
 Ability: Unaware
 Nature: Bold
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpD
 - Recover
 - Toxic
@@ -5202,7 +5202,7 @@ Dewott (M) @ Oran Berry
 Level: 30
 Ability: Torrent
 Nature: Adamant
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Razor Shell
 - Aqua Jet
@@ -5213,7 +5213,7 @@ Paldean Wooper (M) @ Eviolite
 Level: 30
 Ability: Water Absorb
 Nature: Careful
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpD
 - Poison Tail
 - Mud Shot
@@ -5233,7 +5233,7 @@ Obstagoon (M) @ Sitrus Berry
 Level: 33
 Ability: Guts
 Nature: Jolly
-IVs: 16 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Obstruct
 - Surf
@@ -5244,7 +5244,7 @@ Floatzel (M) @ Mystic Water
 Level: 33
 Ability: Swift Swim
 Nature: Jolly
-IVs: 16 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Aqua Jet
 - Crunch
@@ -5255,7 +5255,7 @@ Azumarill (M) @ Sitrus Berry
 Level: 33
 Ability: Huge Power
 Nature: Adamant
-IVs: 16 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 4 SpD
 - Aqua Tail
 - Play Rough
@@ -5266,7 +5266,7 @@ Pyukumuku (M) @ Leftovers
 Level: 33
 Ability: Unaware
 Nature: Bold
-IVs: 16 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpD
 - Recover
 - Toxic
@@ -5277,7 +5277,7 @@ Paldean Wooper (M) @ Eviolite
 Level: 33
 Ability: Water Absorb
 Nature: Careful
-IVs: 16 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpD
 - Poison Tail
 - Mud Shot
@@ -5288,7 +5288,7 @@ Dewott (M) @ Oran Berry
 Level: 33
 Ability: Torrent
 Nature: Adamant
-IVs: 16 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Razor Shell
 - Aqua Jet
@@ -5308,7 +5308,7 @@ Obstagoon (M) @ Sitrus Berry
 Level: 36
 Ability: Guts
 Nature: Jolly
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Obstruct
 - Surf
@@ -5319,7 +5319,7 @@ Floatzel (M) @ Mystic Water
 Level: 36
 Ability: Swift Swim
 Nature: Jolly
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Aqua Jet
 - Crunch
@@ -5330,7 +5330,7 @@ Azumarill (M) @ Sitrus Berry
 Level: 36
 Ability: Huge Power
 Nature: Adamant
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 4 SpD
 - Aqua Tail
 - Play Rough
@@ -5341,7 +5341,7 @@ Paldean Wooper (M) @ Eviolite
 Level: 36
 Ability: Water Absorb
 Nature: Careful
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpD
 - Poison Tail
 - Mud Shot
@@ -5352,7 +5352,7 @@ Pyukumuku (M) @ Leftovers
 Level: 36
 Ability: Unaware
 Nature: Bold
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpD
 - Recover
 - Toxic
@@ -5363,7 +5363,7 @@ Samurott (M) @ Leftovers
 Level: 36
 Ability: Torrent
 Nature: Adamant
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Aqua Jet
 - Megahorn
@@ -14161,7 +14161,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Great Ball  
 Shiny: No  
-IVs: 12 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 252 Atk / 4 SpD  
 - Fake Out  
 - Arm Thrust  
@@ -14176,7 +14176,7 @@ Tera Type: Psychic
 Dynamax Level: 10  
 Ball: Poké Ball  
 Shiny: No  
-IVs: 12 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Confusion  
 - Drain Punch  
@@ -14191,7 +14191,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 12 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Karate Chop  
 - U-turn  
@@ -14206,7 +14206,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Timer Ball  
 Shiny: No  
-IVs: 12 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Brick Break  
 - Fake Out  
@@ -14221,7 +14221,7 @@ Tera Type: Steel
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 12 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Force Palm  
 - Bite  
@@ -14246,7 +14246,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Poké Ball  
 Shiny: No  
-IVs: 13 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 100 HP / 156 Spe  
 - Karate Chop  
 - Rock Tomb  
@@ -14261,7 +14261,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Great Ball  
 Shiny: No  
-IVs: 13 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 252 Atk / 4 SpD  
 - Fake Out  
 - Force Palm  
@@ -14276,7 +14276,7 @@ Tera Type: Psychic
 Dynamax Level: 10  
 Ball: Poké Ball  
 Shiny: No  
-IVs: 13 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Psycho Cut  
 - Drain Punch  
@@ -14291,7 +14291,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 13 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Low Kick  
 - U-turn  
@@ -14306,7 +14306,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Timer Ball  
 Shiny: No  
-IVs: 13 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Brick Break  
 - Fake Out  
@@ -14321,7 +14321,7 @@ Tera Type: Steel
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 13 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Force Palm  
 - Crunch  
@@ -14346,7 +14346,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Poké Ball  
 Shiny: No  
-IVs: 14 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 100 HP / 156 Spe  
 - Brick Break  
 - Rock Slide  
@@ -14361,7 +14361,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Great Ball  
 Shiny: No  
-IVs: 14 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 252 Atk / 4 SpD  
 - Fake Out  
 - Force Palm  
@@ -14376,7 +14376,7 @@ Tera Type: Psychic
 Dynamax Level: 10  
 Ball: Poké Ball  
 Shiny: No  
-IVs: 14 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Psycho Cut  
 - Drain Punch  
@@ -14391,7 +14391,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 14 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Low Kick  
 - U-turn  
@@ -14406,7 +14406,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Timer Ball  
 Shiny: No  
-IVs: 14 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Brick Break  
 - Fake Out  
@@ -14421,7 +14421,7 @@ Tera Type: Steel
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 14 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Force Palm  
 - Crunch  
@@ -14446,7 +14446,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Poké Ball  
 Shiny: No  
-IVs: 15 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 100 HP / 156 Spe  
 - Brick Break  
 - Rock Slide  
@@ -14461,7 +14461,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Great Ball  
 Shiny: No  
-IVs: 15 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 252 Atk / 4 SpD  
 - Fake Out  
 - Force Palm  
@@ -14476,7 +14476,7 @@ Tera Type: Psychic
 Dynamax Level: 10  
 Ball: Poké Ball  
 Shiny: No  
-IVs: 15 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Psycho Cut  
 - Drain Punch  
@@ -14491,7 +14491,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 15 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Low Kick  
 - U-turn  
@@ -14506,7 +14506,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Timer Ball  
 Shiny: No  
-IVs: 15 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Brick Break  
 - Fake Out  
@@ -14521,7 +14521,7 @@ Tera Type: Steel
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 15 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Force Palm  
 - Crunch  
@@ -14546,7 +14546,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Poké Ball  
 Shiny: No  
-IVs: 17 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 100 HP / 156 Spe  
 - Brick Break  
 - Rock Slide  
@@ -14561,7 +14561,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Great Ball  
 Shiny: No  
-IVs: 17 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 252 Atk / 4 SpD  
 - Fake Out  
 - Force Palm  
@@ -14576,7 +14576,7 @@ Tera Type: Psychic
 Dynamax Level: 10  
 Ball: Poké Ball  
 Shiny: No  
-IVs: 17 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Psycho Cut  
 - Drain Punch  
@@ -14591,7 +14591,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Ultra Ball  
 Shiny: No  
-IVs: 17 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Close Combat  
 - U-turn  
@@ -14606,7 +14606,7 @@ Tera Type: Fighting
 Dynamax Level: 10  
 Ball: Timer Ball  
 Shiny: No  
-IVs: 17 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Brick Break  
 - Fake Out  
@@ -14621,7 +14621,7 @@ Tera Type: Steel
 Dynamax Level: 10  
 Ball: Heal Ball  
 Shiny: No  
-IVs: 17 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Force Palm  
 - Crunch  
@@ -15446,7 +15446,7 @@ Tera Type: Steel
 Dynamax Level: 10
 Ball: Quick Ball
 Shiny: No
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Thunder Wave
 - Spark
@@ -15461,7 +15461,7 @@ Tera Type: Normal
 Dynamax Level: 10
 Ball: Poké Ball
 Shiny: No
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Echoed Voice
 - Uproar
@@ -15476,7 +15476,7 @@ Tera Type: Electric
 Dynamax Level: 10
 Ball: Premier Ball
 Shiny: No
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Spark
 - Charge Beam
@@ -15491,7 +15491,7 @@ Tera Type: Bug
 Dynamax Level: 10
 Ball: Great Ball
 Shiny: No
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Fury Cutter
 - Sing
@@ -15506,7 +15506,7 @@ Tera Type: Fairy
 Dynamax Level: 10
 Ball: Heal Ball
 Shiny: No
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Disarming Voice
 - Sing
@@ -15521,7 +15521,7 @@ Tera Type: Psychic
 Dynamax Level: 10
 Ball: Luxury Ball
 Shiny: No
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Psywave
 - Uproar
@@ -17416,7 +17416,7 @@ Masquerain @ Heavy-Duty Boots
 Level: 41
 Ability: Intimidate
 Nature: Modest
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Hydro Pump
@@ -17427,7 +17427,7 @@ Orbeetle @ Leftovers
 Level: 42
 Ability: Frisk
 Nature: Calm
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 128 Def / 128 SpD
 - Bug Buzz
 - Psychic
@@ -17438,7 +17438,7 @@ Vikavolt @ Wise Glasses
 Level: 41
 Ability: Levitate
 Nature: Modest
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Thunderbolt
@@ -17449,7 +17449,7 @@ Heracross @ Flame Orb
 Level: 42
 Ability: Guts
 Nature: Adamant
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Close Combat
 - Megahorn
@@ -17460,7 +17460,7 @@ Ribombee @ Focus Sash
 Level: 41
 Ability: Shield Dust
 Nature: Timid
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Quiver Dance
 - Bug Buzz
@@ -17471,7 +17471,7 @@ Frosmoth @ Heavy-Duty Boots
 Level: 43
 Ability: Ice Scales
 Nature: Modest
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Ice Beam
@@ -17492,7 +17492,7 @@ Scyther @ Eviolite
 Level: 40
 Ability: Technician
 Nature: Jolly
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - X-Scissor
 - Wing Attack
@@ -17503,7 +17503,7 @@ Pinsir @ Leftovers
 Level: 41
 Ability: Mold Breaker
 Nature: Adamant
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - X-Scissor
 - Close Combat
@@ -17514,7 +17514,7 @@ Shuckle @ Rocky Helmet
 Level: 40
 Ability: Sturdy
 Nature: Careful
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpD
 - Infestation
 - Toxic
@@ -17525,7 +17525,7 @@ Centiskorch @ Heavy-Duty Boots
 Level: 41
 Ability: Flash Fire
 Nature: Adamant
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Fire Lash
 - Leech Life
@@ -17536,7 +17536,7 @@ Durant @ Choice Band
 Level: 40
 Ability: Hustle
 Nature: Jolly
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - X-Scissor
 - Iron Head
@@ -17547,7 +17547,7 @@ Vespiquen @ Leftovers
 Level: 42
 Ability: Pressure
 Nature: Bold
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpA
 - Defend Order
 - Attack Order
@@ -17568,7 +17568,7 @@ Galvantula @ Focus Sash
 Level: 41
 Ability: Compound Eyes
 Nature: Timid
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Thunder
 - Bug Buzz
@@ -17579,7 +17579,7 @@ Accelgor @ Life Orb
 Level: 41
 Ability: Unburden
 Nature: Timid
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Focus Blast
@@ -17590,7 +17590,7 @@ Escavalier @ Assault Vest
 Level: 40
 Ability: Overcoat
 Nature: Adamant
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 SpD
 - Iron Head
 - Megahorn
@@ -17601,7 +17601,7 @@ Leavanny @ Leftovers
 Level: 41
 Ability: Chlorophyll
 Nature: Jolly
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Leaf Blade
 - X-Scissor
@@ -17612,7 +17612,7 @@ Heracross @ Flame Orb
 Level: 40
 Ability: Guts
 Nature: Adamant
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Close Combat
 - Megahorn
@@ -17623,7 +17623,7 @@ Forretress @ Rocky Helmet
 Level: 42
 Ability: Sturdy
 Nature: Relaxed
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpD
 - Gyro Ball
 - Bug Bite
@@ -17720,7 +17720,7 @@ Dustox @ Black Sludge
 Level: 32
 Ability: Shield Dust
 Nature: Calm
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 36 SpA / 220 SpD
 - Bug Buzz
 - Sludge Bomb
@@ -17731,7 +17731,7 @@ Beautifly @ Silver Powder
 Level: 32
 Ability: Swarm
 Nature: Timid
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 4 SpD / 252 Spe
 - Bug Buzz
 - Air Cutter
@@ -17742,7 +17742,7 @@ Volbeat @ Leftovers
 Level: 33
 Ability: Prankster
 Nature: Impish
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 128 Def / 128 SpD
 - Bug Buzz
 - Tail Glow
@@ -17753,7 +17753,7 @@ Illumise @ Sitrus Berry
 Level: 33
 Ability: Prankster
 Nature: Calm
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 128 Def / 128 SpD
 - Bug Buzz
 - Dazzling Gleam
@@ -17764,7 +17764,7 @@ Venonat @ Eviolite
 Level: 32
 Ability: Compound Eyes
 Nature: Timid
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 4 SpD / 252 Spe
 - Signal Beam
 - Sleep Powder
@@ -17775,7 +17775,7 @@ Vivillon @ Heavy-Duty Boots
 Level: 34
 Ability: Compound Eyes
 Nature: Modest
-IVs: 20 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Hurricane
@@ -17796,7 +17796,7 @@ Masquerain @ Heavy-Duty Boots
 Level: 42
 Ability: Intimidate
 Nature: Modest
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 4 SpD / 252 Spe
 - Bug Buzz
 - Air Slash
@@ -17807,7 +17807,7 @@ Heracross @ Flame Orb
 Level: 42
 Ability: Guts
 Nature: Adamant
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Close Combat
 - Megahorn
@@ -17818,7 +17818,7 @@ Galvantula @ Focus Sash
 Level: 43
 Ability: Compound Eyes
 Nature: Timid
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Thunder
 - Bug Buzz
@@ -17829,7 +17829,7 @@ Escavalier @ Assault Vest
 Level: 42
 Ability: Overcoat
 Nature: Adamant
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 SpD
 - Iron Head
 - Megahorn
@@ -17840,7 +17840,7 @@ Frosmoth @ Leftovers
 Level: 43
 Ability: Ice Scales
 Nature: Modest
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Ice Beam
@@ -17851,7 +17851,7 @@ Vikavolt @ Wise Glasses
 Level: 44
 Ability: Levitate
 Nature: Modest
-IVs: 22 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Thunderbolt
@@ -17872,7 +17872,7 @@ Masquerain @ Heavy-Duty Boots
 Level: 44
 Ability: Intimidate
 Nature: Modest
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 4 SpD / 252 Spe
 - Bug Buzz
 - Air Slash
@@ -17883,7 +17883,7 @@ Volcarona @ Leftovers
 Level: 44
 Ability: Flame Body
 Nature: Timid
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 4 SpD / 252 Spe
 - Fiery Dance
 - Bug Buzz
@@ -17894,7 +17894,7 @@ Scizor @ Choice Band
 Level: 45
 Ability: Technician
 Nature: Adamant
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Bullet Punch
 - X-Scissor
@@ -17905,7 +17905,7 @@ Orbeetle @ Leftovers
 Level: 45
 Ability: Frisk
 Nature: Calm
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 128 Def / 128 SpD
 - Bug Buzz
 - Psychic
@@ -17916,7 +17916,7 @@ Centiskorch @ Heavy-Duty Boots
 Level: 45
 Ability: Flash Fire
 Nature: Adamant
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Fire Lash
 - Leech Life
@@ -17927,7 +17927,7 @@ Frosmoth @ Heavy-Duty Boots
 Level: 46
 Ability: Ice Scales
 Nature: Modest
-IVs: 23 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Ice Beam
@@ -17948,7 +17948,7 @@ Masquerain @ Heavy-Duty Boots
 Level: 46
 Ability: Intimidate
 Nature: Modest
-IVs: 24 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 4 SpD / 252 Spe
 - Bug Buzz
 - Air Slash
@@ -17959,7 +17959,7 @@ Volcarona @ Leftovers
 Level: 47
 Ability: Flame Body
 Nature: Timid
-IVs: 24 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 4 SpD / 252 Spe
 - Fiery Dance
 - Bug Buzz
@@ -17970,7 +17970,7 @@ Heracross @ Heracronite
 Level: 46
 Ability: Skill Link
 Nature: Jolly
-IVs: 24 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Pin Missile
 - Close Combat
@@ -17981,7 +17981,7 @@ Scizor @ Choice Band
 Level: 47
 Ability: Technician
 Nature: Adamant
-IVs: 24 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Bullet Punch
 - X-Scissor
@@ -17992,7 +17992,7 @@ Galvantula @ Focus Sash
 Level: 46
 Ability: Compound Eyes
 Nature: Timid
-IVs: 24 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Thunder
 - Bug Buzz
@@ -18003,7 +18003,7 @@ Frosmoth @ Heavy-Duty Boots
 Level: 48
 Ability: Ice Scales
 Nature: Modest
-IVs: 24 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Ice Beam
@@ -19240,7 +19240,7 @@ Wobbuffet @ Leftovers
 Level: 40  
 Ability: Shadow Tag  
 Nature: Calm  
-IVs: 28 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 252 Def / 4 SpD  
 - Counter  
 - Mirror Coat  
@@ -19251,7 +19251,7 @@ Xatu @ Sitrus Berry
 Level: 40  
 Ability: Magic Bounce  
 Nature: Timid  
-IVs: 28 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Air Slash  
@@ -19262,7 +19262,7 @@ Medicham @ Life Orb
 Level: 40  
 Ability: Pure Power  
 Nature: Jolly  
-IVs: 28 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 Def / 252 Spe  
 - Zen Headbutt  
 - High Jump Kick  
@@ -19273,7 +19273,7 @@ Gothitelle @ Light Clay
 Level: 40  
 Ability: Shadow Tag  
 Nature: Timid  
-IVs: 28 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Thunderbolt  
@@ -19284,7 +19284,7 @@ Grumpig @ Leftovers
 Level: 40  
 Ability: Thick Fat  
 Nature: Bold  
-IVs: 28 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 252 Def / 4 SpA  
 - Psychic  
 - Power Gem  
@@ -19295,7 +19295,7 @@ Alakazam @ Focus Sash
 Level: 40  
 Ability: Magic Guard  
 Nature: Timid  
-IVs: 28 all  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 - Psychic  
 - Shadow Ball  
@@ -26636,7 +26636,7 @@ Treecko (F) @ Miracle Seed
 Level: 10
 Ability: Overgrow
 Nature: Timid
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Absorb
 - Pound
@@ -26647,7 +26647,7 @@ Lotad (F) @ Leftovers
 Level: 9
 Ability: Rain Dish
 Nature: Calm
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 252 Spe
 - Absorb
 - Growl
@@ -26658,7 +26658,7 @@ Poochyena (F) @ Oran Berry
 Level: 9
 Ability: Run Away
 Nature: Jolly
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Bite
 - Tackle
@@ -26669,7 +26669,7 @@ Wingull (F) @ Sitrus Berry
 Level: 8
 Ability: Keen Eye
 Nature: Timid
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Water Gun
 - Growl
@@ -26680,7 +26680,7 @@ Shroomish (F) @ Big Root
 Level: 8
 Ability: Effect Spore
 Nature: Impish
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
 - Absorb
 - Tackle
@@ -26691,7 +26691,7 @@ Electrike (F) @ Cheri Berry
 Level: 8
 Ability: Static
 Nature: Timid
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Tackle
 - Thunder Wave
@@ -26711,7 +26711,7 @@ Grovyle (F) @ Miracle Seed
 Level: 25
 Ability: Overgrow
 Nature: Timid
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Leaf Blade
 - Quick Attack
@@ -26722,7 +26722,7 @@ Lombre (F) @ Leftovers
 Level: 23
 Ability: Rain Dish
 Nature: Modest
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Bubble Beam
 - Mega Drain
@@ -26733,7 +26733,7 @@ Manectric (F) @ Magnet
 Level: 24
 Ability: Static
 Nature: Timid
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Spark
 - Thunder Wave
@@ -26744,7 +26744,7 @@ Swellow (F) @ Sharp Beak
 Level: 23
 Ability: Guts
 Nature: Jolly
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Wing Attack
 - Quick Attack
@@ -26755,7 +26755,7 @@ Roselia (F) @ Big Root
 Level: 23
 Ability: Poison Point
 Nature: Modest
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Mega Drain
 - Leech Seed
@@ -26766,7 +26766,7 @@ Linoone (F) @ Sitrus Berry
 Level: 22
 Ability: Pickup
 Nature: Jolly
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Headbutt
 - Sand Attack
@@ -26861,7 +26861,7 @@ Torchic (F) @ Charcoal
 Level: 10
 Ability: Blaze
 Nature: Adamant
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Ember
 - Scratch
@@ -26872,7 +26872,7 @@ Wingull (F) @ Sitrus Berry
 Level: 9
 Ability: Keen Eye
 Nature: Timid
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Water Gun
 - Growl
@@ -26883,7 +26883,7 @@ Lotad (F) @ Leftovers
 Level: 9
 Ability: Rain Dish
 Nature: Calm
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 252 Spe
 - Absorb
 - Growl
@@ -26894,7 +26894,7 @@ Poochyena (F) @ Oran Berry
 Level: 8
 Ability: Run Away
 Nature: Jolly
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Bite
 - Tackle
@@ -26905,7 +26905,7 @@ Shroomish (F) @ Big Root
 Level: 8
 Ability: Effect Spore
 Nature: Impish
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
 - Absorb
 - Tackle
@@ -26916,7 +26916,7 @@ Electrike (F) @ Cheri Berry
 Level: 8
 Ability: Static
 Nature: Timid
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Tackle
 - Thunder Wave
@@ -26936,7 +26936,7 @@ Combusken (F) @ Charcoal
 Level: 25
 Ability: Blaze
 Nature: Adamant
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Double Kick
 - Flame Charge
@@ -26947,7 +26947,7 @@ Lombre (F) @ Leftovers
 Level: 23
 Ability: Rain Dish
 Nature: Modest
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Bubble Beam
 - Mega Drain
@@ -26958,7 +26958,7 @@ Manectric (F) @ Magnet
 Level: 24
 Ability: Static
 Nature: Timid
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Spark
 - Thunder Wave
@@ -26969,7 +26969,7 @@ Swellow (F) @ Sharp Beak
 Level: 23
 Ability: Guts
 Nature: Jolly
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Wing Attack
 - Quick Attack
@@ -26980,7 +26980,7 @@ Roselia (F) @ Big Root
 Level: 23
 Ability: Poison Point
 Nature: Modest
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Mega Drain
 - Leech Seed
@@ -26991,7 +26991,7 @@ Linoone (F) @ Sitrus Berry
 Level: 22
 Ability: Pickup
 Nature: Jolly
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Headbutt
 - Sand Attack
@@ -27086,7 +27086,7 @@ Mudkip (F) @ Mystic Water
 Level: 10
 Ability: Torrent
 Nature: Adamant
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Water Gun
 - Tackle
@@ -27097,7 +27097,7 @@ Lotad (F) @ Leftovers
 Level: 9
 Ability: Rain Dish
 Nature: Calm
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 252 Spe
 - Absorb
 - Growl
@@ -27108,7 +27108,7 @@ Poochyena (F) @ Oran Berry
 Level: 9
 Ability: Run Away
 Nature: Jolly
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Bite
 - Tackle
@@ -27119,7 +27119,7 @@ Wingull (F) @ Sitrus Berry
 Level: 8
 Ability: Keen Eye
 Nature: Timid
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Water Gun
 - Growl
@@ -27130,7 +27130,7 @@ Shroomish (F) @ Big Root
 Level: 8
 Ability: Effect Spore
 Nature: Impish
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
 - Absorb
 - Tackle
@@ -27141,7 +27141,7 @@ Electrike (F) @ Cheri Berry
 Level: 8
 Ability: Static
 Nature: Timid
-IVs: 12 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Tackle
 - Thunder Wave
@@ -27161,7 +27161,7 @@ Marshtomp (F) @ Mystic Water
 Level: 25
 Ability: Torrent
 Nature: Adamant
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Water Gun
 - Mud Shot
@@ -27172,7 +27172,7 @@ Lombre (F) @ Leftovers
 Level: 23
 Ability: Rain Dish
 Nature: Modest
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Bubble Beam
 - Mega Drain
@@ -27183,7 +27183,7 @@ Manectric (F) @ Magnet
 Level: 24
 Ability: Static
 Nature: Timid
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Spark
 - Thunder Wave
@@ -27194,7 +27194,7 @@ Swellow (F) @ Sharp Beak
 Level: 23
 Ability: Guts
 Nature: Jolly
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Wing Attack
 - Quick Attack
@@ -27205,7 +27205,7 @@ Roselia (F) @ Big Root
 Level: 23
 Ability: Poison Point
 Nature: Modest
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Mega Drain
 - Leech Seed
@@ -27216,7 +27216,7 @@ Linoone (F) @ Sitrus Berry
 Level: 22
 Ability: Pickup
 Nature: Jolly
-IVs: 18 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 - Headbutt
 - Sand Attack
