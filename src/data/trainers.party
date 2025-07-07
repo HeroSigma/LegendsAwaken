@@ -7394,8 +7394,8 @@ EVs: 252 HP / 4 Def / 252 SpD
 - Recover
 - Toxic
 
-=== TRAINER_HOPE ===
-Name: HOPE
+=== TRAINER_SHANNON ===
+Name: SHANNON
 Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
@@ -20567,7 +20567,7 @@ Class: Elite Four
 Pic: Elite Four Drake
 Gender: Male
 Music: Elite Four
-Items: Full Restore x2 / Max Potion x2
+Items: Full Restore / Max Potion / Full Restore / Max Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 Mugshot: Green

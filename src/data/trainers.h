@@ -12315,7 +12315,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 5340
-            .species = SPECIES_PALDEAN_WOOPER,
+            .species = SPECIES_WOOPER_PALDEA,
 #line 5340
             .gender = TRAINER_MON_MALE,
 #line 5340
@@ -31513,7 +31513,7 @@ F_TRAINER_FEMALE |
 #line 14240
             .lvl = 27,
 #line 14245
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14242
             .nature = NATURE_ADAMANT,
 #line 14246
@@ -31577,7 +31577,7 @@ F_TRAINER_FEMALE |
 #line 14270
             .lvl = 27,
 #line 14275
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14272
             .nature = NATURE_JOLLY,
 #line 14276
@@ -31728,7 +31728,7 @@ F_TRAINER_FEMALE |
 #line 14340
             .lvl = 30,
 #line 14345
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14342
             .nature = NATURE_ADAMANT,
 #line 14346
@@ -31792,7 +31792,7 @@ F_TRAINER_FEMALE |
 #line 14370
             .lvl = 30,
 #line 14375
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14372
             .nature = NATURE_JOLLY,
 #line 14376
@@ -31943,7 +31943,7 @@ F_TRAINER_FEMALE |
 #line 14440
             .lvl = 32,
 #line 14445
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14442
             .nature = NATURE_ADAMANT,
 #line 14446
@@ -32007,7 +32007,7 @@ F_TRAINER_FEMALE |
 #line 14470
             .lvl = 32,
 #line 14475
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14472
             .nature = NATURE_JOLLY,
 #line 14476
@@ -32158,7 +32158,7 @@ F_TRAINER_FEMALE |
 #line 14540
             .lvl = 35,
 #line 14545
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14542
             .nature = NATURE_ADAMANT,
 #line 14546
@@ -32222,7 +32222,7 @@ F_TRAINER_FEMALE |
 #line 14570
             .lvl = 35,
 #line 14575
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14572
             .nature = NATURE_JOLLY,
 #line 14576
@@ -32437,7 +32437,7 @@ F_TRAINER_FEMALE |
 #line 14670
             .lvl = 32,
 #line 14675
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14672
             .nature = NATURE_IMPISH,
 #line 14676
@@ -32652,7 +32652,7 @@ F_TRAINER_FEMALE |
 #line 14770
             .lvl = 32,
 #line 14775
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14772
             .nature = NATURE_ADAMANT,
 #line 14776
@@ -32867,7 +32867,7 @@ F_TRAINER_FEMALE |
 #line 14870
             .lvl = 32,
 #line 14875
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 14872
             .nature = NATURE_IMPISH,
 #line 14876
@@ -34127,7 +34127,7 @@ F_TRAINER_FEMALE |
 #line 15455
             .lvl = 22,
 #line 15460
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 15457
             .nature = NATURE_MODEST,
 #line 15461
@@ -44893,9 +44893,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 20158
-            .nickname = COMPOUND_STRING("Dudunsparce"),
-#line 20158
-            .species = SPECIES_THREE_SEGMENT,
+            .species = SPECIES_DUDUNSPARCE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 20158
             .heldItem = ITEM_KINGS_ROCK,
@@ -45570,7 +45568,7 @@ F_TRAINER_FEMALE |
 #line 20468
             TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
 #line 20469
-        .items = { ITEM_FULL_RESTORE_X2, ITEM_MAX_POTION_X2 },
+        .items = { ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_FULL_RESTORE, ITEM_MAX_POTION },
 #line 20470
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 20471
@@ -47711,7 +47709,7 @@ F_TRAINER_FEMALE |
 #line 21476
             .lvl = 18,
 #line 21482
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 21478
             .nature = NATURE_TIMID,
 #line 21483
@@ -47742,7 +47740,7 @@ F_TRAINER_FEMALE |
 #line 21491
             .lvl = 18,
 #line 21497
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 21493
             .nature = NATURE_JOLLY,
 #line 21498
@@ -47773,7 +47771,7 @@ F_TRAINER_FEMALE |
 #line 21506
             .lvl = 18,
 #line 21512
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 21508
             .nature = NATURE_TIMID,
 #line 21513
@@ -47835,7 +47833,7 @@ F_TRAINER_FEMALE |
 #line 21536
             .lvl = 18,
 #line 21542
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 21538
             .nature = NATURE_JOLLY,
 #line 21543
@@ -47866,7 +47864,7 @@ F_TRAINER_FEMALE |
 #line 21551
             .lvl = 18,
 #line 21557
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 21553
             .nature = NATURE_ADAMANT,
 #line 21558
@@ -47918,7 +47916,7 @@ F_TRAINER_FEMALE |
 #line 21575
             .lvl = 24,
 #line 21581
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 21577
             .nature = NATURE_TIMID,
 #line 21582
@@ -48125,7 +48123,7 @@ F_TRAINER_FEMALE |
 #line 21674
             .lvl = 23,
 #line 21680
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 21676
             .nature = NATURE_MODEST,
 #line 21681
@@ -48332,7 +48330,7 @@ F_TRAINER_FEMALE |
 #line 21773
             .lvl = 46,
 #line 21779
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 21775
             .nature = NATURE_TIMID,
 #line 21780
@@ -48539,7 +48537,7 @@ F_TRAINER_FEMALE |
 #line 21872
             .lvl = 55,
 #line 21878
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 21874
             .nature = NATURE_TIMID,
 #line 21879
@@ -48746,7 +48744,7 @@ F_TRAINER_FEMALE |
 #line 21971
             .lvl = 62,
 #line 21977
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 21973
             .nature = NATURE_TIMID,
 #line 21978
@@ -48953,7 +48951,7 @@ F_TRAINER_FEMALE |
 #line 22070
             .lvl = 75,
 #line 22076
-            .ball = ITEM_POK___BALL,
+            .ball = ITEM_GREAT_BALL,
 #line 22072
             .nature = NATURE_TIMID,
 #line 22077
