@@ -308,7 +308,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Earthquake
 - Swords Dance
 
-Gastrodon (East) (M) @ Leftovers
+Gastrodon-East (M) @ Leftovers
 Level: 45
 Ability: Storm Drain
 Nature: Calm
@@ -2676,7 +2676,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Nasty Plot
 - Will-O-Wisp
 
-Alolan Marowak (F) @ Thick Club
+Marowak-Alola (F) @ Thick Club
 Level: 52
 Ability: Rock Head
 Nature: Adamant
@@ -2837,7 +2837,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Knock Off
 - Synthesis
 
-Petalil (F) @ Eviolite
+Petilil (F) @ Eviolite
 Level: 19
 Ability: Chlorophyll
 Nature: Modest
@@ -5209,7 +5209,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Revenge
 - Swords Dance
 
-Paldean Wooper (M) @ Eviolite
+Wooper-Paldea (M) @ Eviolite
 Level: 30
 Ability: Water Absorb
 Nature: Careful
@@ -5489,7 +5489,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Mystical Fire
 - Calm Mind
 
-Dudunsparce (Three Segment) (M) @ Choice Specs
+Dudunsparce-Three (M) @ Choice Specs
 Level: 33
 Ability: Serene Grace
 Nature: Modest
@@ -5774,7 +5774,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Sucker Punch
 - Swords Dance
 
-=== TRAINER_VINCENT_FINAL_TRICK_HOUSE ===
+=== TRAINER_VINCENT ===
 Name: VINCENT
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -6069,7 +6069,7 @@ EVs: 252 HP / 4 Def / 252 SpD
 - U-turn
 - Protect
 
-Alolan Ninetales @ Light Clay
+Ninetales-Alola @ Light Clay
 Level: 54
 Ability: Snow Warning
 Nature: Timid
@@ -6892,7 +6892,7 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion / Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Force Setup First / Prefer Highest Damage Move / Smart Tera
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
 Conkeldurr @ Flame Orb
 Level: 45
@@ -6969,7 +6969,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Close Combat
 - U-turn
 
-Tauros (Paldea Combat) @ Life Orb
+SPECIES_TAUROS_PALDEA_COMBAT @ Life Orb
 Level: 45
 Ability: Intimidate
 Nature: Jolly
@@ -8896,7 +8896,7 @@ EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 - Scratch  
 - Growl  
 
-Skitty (F) @ Pink Bow  
+Skitty (F) @ Throat Spray  
 Level: 14  
 Ability: Cute Charm  
 Nature: Timid  
@@ -8926,7 +8926,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Aromatherapy  
 - Draining Kiss  
 
-Glimmlet (F) @ Nugget  
+Glimmet (F) @ Nugget  
 Level: 14  
 Ability: Purifying Salt  
 Nature: Modest  
@@ -10281,7 +10281,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Ice Beam  
 - Water Pulse  
 
-Vivillon (Elegant) (F) @ Focus Sash  
+Vivillon-Elegant (F) @ Focus Sash  
 Level: 44  
 Ability: Compound Eyes  
 Nature: Timid  
@@ -11311,7 +11311,7 @@ EVs: 0 HP / 252 Atk / 4 SpD / 0 Def / 0 SpA / 252 Spe
 - Ice Punch
 - Revival Blessing
 
-Alolan Persian (M) @ Nugget
+Persian-Alola (M) @ Nugget
 Level: 55
 Ability: Fur Coat
 Nature: Timid
@@ -12426,8 +12426,6 @@ EVs: 252 HP / 252 SpA / 4 Def
 - Ancient Power  
 - Yawn  
 
----
-
 === TRAINER_STEVE_5 ===
 Name: STEVE
 Class: Pokemaniac
@@ -12653,7 +12651,7 @@ EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe
 - Knock Off
 - Toxic Spikes
 
-Basculin (Blue-Striped) (M) @ Choice Band
+Basculin-Blue-Striped (M) @ Choice Band
 Level: 44
 Ability: Adaptability
 Nature: Jolly
@@ -14144,7 +14142,7 @@ Ability: Guts
 Nature: Adamant  
 Tera Type: Fighting  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Dusk Ball  
 Shiny: No  
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe  
 EVs: 76 HP / 252 Atk / 180 Spe  
@@ -19629,7 +19627,7 @@ EVs: 252 HP / 4 Def / 252 SpA
 
 Alakazam @ Alakazite  
 Level: 75  
-Ability: Magic Guard / Trace   
+Ability: Magic Guard   
 Nature: Timid  
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
@@ -19651,7 +19649,7 @@ EVs: 252 Atk / 4 SpD / 252 Spe
 
 Metagross @ Metagrossite  
 Level: 75  
-Ability: Clear Body / Tough Claws   
+Ability: Clear Body   
 Nature: Adamant  
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe 
 EVs: 252 Atk / 4 SpD / 252 Spe  
@@ -19858,7 +19856,7 @@ EVs: 252 SpA / 252 Spe / 4 HP
 - Sludge Bomb
 - Shift Gear
 
-Raichu (Alolan) @ Focus Sash
+Raichu-Alola @ Focus Sash
 Level: 76
 Ability: Surge Surfer
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
@@ -20059,7 +20057,7 @@ EVs: 252 SpA / 252 Spe / 4 HP
 - Snarl  
 - Volt Switch  
 
-Linoone (Galar) @ Sitrus Berry  
+Linoone-Galar @ Sitrus Berry  
 Level: 77  
 Ability: Gluttony  
 Nature: Jolly  
@@ -20272,7 +20270,7 @@ Class: Elite Four
 Pic: Elite Four Sidney
 Gender: Male
 Music: Elite Four
-Items: Full Restore x2 / Max Potion x2
+Items: Full Restore / Max Potion / Full Restore / Max Potion
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 Mugshot: Purple
@@ -20550,7 +20548,7 @@ EVs: 252 Atk / 252 HP / 4 SpD
 
 Calyrex-Ice @ Leftovers
 Level: 100
-Ability: As One (Glastrier)
+Ability: As One Ice Rider
 Nature: Brave
 Tera Type: Ice
 Dynamax Level: 10
@@ -20572,7 +20570,7 @@ Music: Elite Four
 Items: Full Restore x2 / Max Potion x2
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
-Mugshot: Red
+Mugshot: Green
 
 Dragonite @ Weakness Policy
 Level: 100
@@ -20851,7 +20849,7 @@ EVs: 252 Atk / 4 SpD / 252 Spe
 
 Lucario (M) @ Lucarionite
 Level: 30
-Ability: Inner Focus (Adaptability as Mega)
+Ability: Inner Focus
 Nature: Jolly
 Tera Type: Fighting
 Shiny: Yes
@@ -20904,7 +20902,7 @@ EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
 - Volt Switch
 - Mirror Coat
 
-Rotom (Wash) @ Leftovers
+Rotom-Wash @ Leftovers
 Level: 33
 Ability: Levitate
 Nature: Timid
@@ -20951,7 +20949,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 
 Manectric (M) @ Manectite
 Level: 35
-Ability: Lightning Rod (Intimidate as Mega)
+Ability: Lightning Rod
 Nature: Timid
 Tera Type: Electric
 Shiny: Yes
@@ -20962,7 +20960,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Thunderbolt
 - Flamethrower
 - Volt Switch
-- Hidden Power Ice
+- Hidden Power
 
 === TRAINER_FLANNERY_1 ===
 Name: Flannery
@@ -21051,7 +21049,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 
 Houndoom (F) @ Houndoominite
 Level: 41
-Ability: Flash Fire (Solar Power as Mega)
+Ability: Flash Fire
 Nature: Timid
 Tera Type: Fire
 Shiny: Yes
@@ -21151,7 +21149,7 @@ EVs: 252 HP / 252 Atk / 4 Def
 
 Kangaskhan (F) @ Kangaskhanite
 Level: 56
-Ability: Scrappy (Parental Bond as Mega)
+Ability: Scrappy
 Nature: Jolly
 Tera Type: Normal
 Shiny: Yes
@@ -21251,7 +21249,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 
 Altaria (F) @ Altarianite
 Level: 60
-Ability: Natural Cure (Pixilate as Mega)
+Ability: Natural Cure
 Nature: Modest
 Tera Type: Fairy
 Shiny: Yes
@@ -21265,7 +21263,7 @@ EVs: 248 HP / 8 Def / 252 SpA
 - Roost
 
 === TRAINER_TATE_AND_LIZA_1 ===
-Name: Tate & Liza
+Name: Tate&Liza
 Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
@@ -21336,7 +21334,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 
 Gardevoir (F) @ Gardevoirite
 Level: 66
-Ability: Trace (Pixilate as Mega)
+Ability: Trace
 Nature: Modest
 Tera Type: Fairy
 Shiny: Yes
@@ -21351,7 +21349,7 @@ EVs: 252 SpA / 4 SpD / 252 Spe
 
 Gallade (M) @ Galladite
 Level: 66
-Ability: Steadfast (Inner Focus as Mega)
+Ability: Steadfast
 Nature: Adamant
 Tera Type: Psychic
 Shiny: Yes
@@ -21434,7 +21432,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Hurricane
 - Protect
 
-Mega Swampert @ Swampertite
+Swampert @ Swampertite
 Level: 80
 Ability: Swift Swim
 Nature: Adamant
@@ -23160,8 +23158,8 @@ Name: WALLACE
 Class: Champion
 Pic: Champion Wallace
 Gender: Male
-Music: Champion
-Items: Full Restore x2 / Max Potion x2
+Music: Male
+Items: Full Restore / Max Potion / Full Restore / Max Potion 
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 Mugshot: Blue
@@ -33326,7 +33324,7 @@ Class: Champion
 Pic: Steven
 Gender: Male
 Music: Male
-Items: Full Restore x4 / Max Potion x2
+Items: Full Restore / Max Potion / Full Restore / Max Potion 
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
