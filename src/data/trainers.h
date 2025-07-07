@@ -16751,10 +16751,10 @@ F_TRAINER_FEMALE |
         },
     },
 #line 7397
-    [DIFFICULTY_NORMAL][TRAINER_HOPE] =
+    [DIFFICULTY_NORMAL][TRAINER_SHANNON] =
     {
 #line 7398
-        .trainerName = _("HOPE"),
+        .trainerName = _("SHANNON"),
 #line 7399
         .trainerClass = TRAINER_CLASS_COOLTRAINER,
 #line 7400
@@ -45779,7 +45779,7 @@ F_TRAINER_FEMALE |
 #line 20569
             TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
 #line 20570
-        .items = { ITEM_FULL_RESTORE_X2, ITEM_MAX_POTION_X2 },
+        .items = { ITEM_FULL_RESTORE, ITEM_MAX_POTION, ITEM_FULL_RESTORE, ITEM_MAX_POTION },
 #line 20571
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 20572
