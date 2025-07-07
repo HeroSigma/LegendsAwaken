@@ -608,9 +608,7 @@
             },
             {
 #line 331
-            .nickname = COMPOUND_STRING("Clodsire"),
-#line 331
-            .species = SPECIES_PALDEA,
+            .species = SPECIES_CLODSIRE,
 #line 331
             .gender = TRAINER_MON_MALE,
 #line 331
