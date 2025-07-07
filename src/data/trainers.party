@@ -6946,7 +6946,7 @@ Nature: Jolly
 Tera Type: Normal
 Dynamax Level: 10
 Ball: Premier Ball
-Shiny: Yes   : Shiny
+Shiny: Yes
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Swords Dance
@@ -17644,7 +17644,7 @@ Masquerain @ Heavy-Duty Boots
 Level: 47
 Ability: Intimidate
 Nature: Modest
-IVs: 25 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 4 SpD / 252 Spe
 - Bug Buzz
 - Air Slash
@@ -17655,7 +17655,7 @@ Volcarona @ Leftovers
 Level: 48
 Ability: Flame Body
 Nature: Timid
-IVs: 25 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 4 SpD / 252 Spe
 - Fiery Dance
 - Bug Buzz
@@ -17666,7 +17666,7 @@ Heracross @ Heracronite
 Level: 47
 Ability: Skill Link
 Nature: Jolly
-IVs: 25 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Pin Missile
 - Close Combat
@@ -17677,7 +17677,7 @@ Scizor @ Choice Band
 Level: 46
 Ability: Technician
 Nature: Adamant
-IVs: 25 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 Def / 252 Spe
 - Bullet Punch
 - X-Scissor
@@ -17688,7 +17688,7 @@ Frosmoth @ Heavy-Duty Boots
 Level: 47
 Ability: Ice Scales
 Nature: Modest
-IVs: 25 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Bug Buzz
 - Ice Beam
@@ -17699,7 +17699,7 @@ Ribombee @ Focus Sash
 Level: 47
 Ability: Shield Dust
 Nature: Timid
-IVs: 25 all
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 SpA / 252 Spe
 - Quiver Dance
 - Bug Buzz
@@ -22136,7 +22136,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Timer Ball  
-Shiny: Yes (Ace 2)  
+Shiny: Yes  
 Tera Type: Fighting  
 - Psycho Cut  
 - Close Combat  
