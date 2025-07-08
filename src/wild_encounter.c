@@ -484,7 +484,7 @@ void CreateWildMon(u16 species, u8 level)
         return;
     }
 
-    CreateMonWithNature(&gEnemyParty[0], species, level, 31, PickWildMonNature());
+    CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, PickWildMonNature());
 }
 #ifdef BUGFIX
 #define TRY_GET_ABILITY_INFLUENCED_WILD_MON_INDEX(wildPokemon, type, ability, ptr, count) TryGetAbilityInfluencedWildMonIndex(wildPokemon, type, ability, ptr, count)
