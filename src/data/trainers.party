@@ -22163,11 +22163,97 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Shroomish
-Level: 9
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Shroomish @ Eviolite  
+Level: 24  
+Ability: Effect Spore  
+Nature: Careful  
+IVs: 31 all  
+EVs: 252 HP / 252 SpD / 4 Def  
+Dynamax Level: 10  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Grass  
+- Spore  
+- Seed Bomb  
+- Leech Seed  
+- Protect  
+
+Breloom @ Focus Sash  
+Level: 24  
+Ability: Technician  
+Nature: Jolly  
+IVs: 31 all  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Great Ball  
+Shiny: No  
+Tera Type: Fighting  
+- Mach Punch  
+- Bullet Seed  
+- Rock Tomb  
+- Spore  
+
+Toedscruel @ Black Sludge  
+Level: 24  
+Ability: Mycelium Might  
+Nature: Timid  
+IVs: 31 all  
+EVs: 252 HP / 4 SpA / 252 Spe  
+Dynamax Level: 10  
+Ball: Luxury Ball  
+Shiny: No  
+Tera Type: Ground  
+- Spore  
+- Earth Power  
+- Giga Drain  
+- Rapid Spin  
+
+Lilligant @ Sitrus Berry  
+Level: 24  
+Ability: Chlorophyll  
+Nature: Modest  
+IVs: 31 all  
+EVs: 0 HP / 252 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Friend Ball  
+Shiny: No  
+Tera Type: Grass  
+- Giga Drain  
+- Sleep Powder  
+- Quiver Dance  
+- Energy Ball  
+
+Fomantis @ Eviolite  
+Level: 24  
+Ability: Leaf Guard  
+Nature: Impish  
+IVs: 31 all  
+EVs: 252 HP / 252 Def / 4 SpD  
+Dynamax Level: 10  
+Ball: Nest Ball  
+Shiny: No  
+Tera Type: Grass  
+- Leaf Blade  
+- Knock Off  
+- Synthesis  
+- Toxic  
+
+Appletun @ Leftovers  
+Level: 24  
+Ability: Thick Fat  
+Nature: Calm  
+IVs: 31 all  
+EVs: 252 HP / 4 Def / 252 SpD  
+Dynamax Level: 10  
+Ball: Heal Ball  
+Shiny: No  
+Tera Type: Grass  
+- Apple Acid  
+- Recover  
+- Leech Seed  
+- Dragon Pulse  
 
 === TRAINER_GEORGIA ===
 Name: GEORGIA
@@ -22176,15 +22262,97 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Shroomish
-Level: 16
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Beautifly @ Focus Sash  
+Level: 25  
+Ability: Swarm  
+Nature: Modest  
+IVs: 31 all  
+EVs: 0 HP / 252 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Net Ball  
+Shiny: No  
+Tera Type: Bug  
+- Bug Buzz  
+- Air Slash  
+- Quiver Dance  
+- Stun Spore  
 
-Beautifly
-Level: 16
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Vivillon @ Heavy-Duty Boots  
+Level: 25  
+Ability: Compound Eyes  
+Nature: Timid  
+IVs: 31 all  
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Quick Ball  
+Shiny: No  
+Tera Type: Flying  
+- Hurricane  
+- Bug Buzz  
+- Sleep Powder  
+- U-turn  
+
+Orbeetle @ Leftovers  
+Level: 25  
+Ability: Frisk  
+Nature: Bold  
+IVs: 31 all  
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD  
+Dynamax Level: 10  
+Ball: Dusk Ball  
+Shiny: No  
+Tera Type: Psychic  
+- Psychic  
+- Bug Buzz  
+- Recover  
+- Light Screen  
+
+Shroomish @ Eviolite  
+Level: 25  
+Ability: Effect Spore  
+Nature: Careful  
+IVs: 31 all  
+EVs: 252 HP / 252 SpD / 4 Def  
+Dynamax Level: 10  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Grass  
+- Spore  
+- Seed Bomb  
+- Leech Seed  
+- Protect  
+
+Combee-Female @ Honey  
+Level: 25  
+Ability: Hustle  
+Nature: Timid  
+IVs: 31 all  
+EVs: 0 HP / 252 Atk / 4 Def / 252 Spe  
+Dynamax Level: 10  
+Ball: Heal Ball  
+Shiny: No  
+Tera Type: Bug  
+- Bug Bite  
+- Sweet Scent  
+- Gust  
+- Tailwind  
+
+Ribombee @ Wise Glasses  
+Level: 25  
+Ability: Shield Dust  
+Nature: Timid  
+IVs: 31 all  
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Love Ball  
+Shiny: No  
+Tera Type: Fairy  
+- Dazzling Gleam  
+- Bug Buzz  
+- Pollen Puff  
+- Stun Spore  
 
 === TRAINER_KAREN_2 ===
 Name: KAREN
@@ -22193,15 +22361,97 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera / Force Setup First Turn / Setup Then Sweep
 
-Shroomish
-Level: 26
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Shroomish @ Eviolite
+Level: 38
+Ability: Quick Feet
+Nature: Jolly
+Ball: Nest Ball
+Shiny: No
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Spe / 4 Def
+- Spore
+- Seed Bomb
+- Leech Seed
+- Substitute
 
-Whismur
-Level: 26
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Whismur @ Throat Spray
+Level: 38
+Ability: Rattled
+Nature: Modest
+Ball: Great Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 SpA / 252 Spe / 4 HP
+- Hyper Voice
+- Uproar
+- Rest
+- Sleep Talk
+
+Loudred @ Silk Scarf
+Level: 38
+Ability: Soundproof
+Nature: Adamant
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 Atk / 252 HP / 4 Def
+- Stomping Tantrum
+- Ice Punch
+- Crunch
+- Hyper Voice
+
+Breloom @ Toxic Orb
+Level: 38
+Ability: Poison Heal
+Nature: Jolly
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 Atk / 252 Spe / 4 HP
+- Spore
+- Mach Punch
+- Seed Bomb
+- Swords Dance
+
+Exploud @ Choice Specs
+Level: 38
+Ability: Scrappy
+Nature: Modest
+Ball: Premier Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 SpA / 252 HP / 4 SpD
+- Boomburst
+- Ice Beam
+- Fire Blast
+- Focus Blast
+
+Gogoat @ Sitrus Berry
+Level: 38
+Ability: Sap Sipper
+Nature: Impish
+Ball: Safari Ball
+Shiny: No
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 HP / 252 Def / 4 Atk
+- Horn Leech
+- Earthquake
+- Bulk Up
+- Milk Drink
 
 === TRAINER_KAREN_3 ===
 Name: KAREN
@@ -22210,15 +22460,97 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera / Force Setup First Turn / Setup Then Sweep
 
-Shroomish
-Level: 29
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Breloom @ Toxic Orb
+Level: 42
+Ability: Poison Heal
+Nature: Jolly
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 Atk / 252 Spe / 4 HP
+- Spore
+- Mach Punch
+- Seed Bomb
+- Swords Dance
 
-Loudred
-Level: 29
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Loudred @ Silk Scarf
+Level: 42
+Ability: Soundproof
+Nature: Adamant
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 Atk / 252 HP / 4 Def
+- Stomping Tantrum
+- Ice Punch
+- Crunch
+- Hyper Voice
+
+Exploud @ Choice Specs
+Level: 42
+Ability: Scrappy
+Nature: Modest
+Ball: Premier Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 SpA / 252 HP / 4 SpD
+- Boomburst
+- Ice Beam
+- Fire Blast
+- Focus Blast
+
+Whimsicott @ Leftovers
+Level: 42
+Ability: Prankster
+Nature: Timid
+Ball: Friend Ball
+Shiny: No
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 HP / 252 Spe / 4 Def
+- Moonblast
+- Leech Seed
+- Tailwind
+- Encore
+
+Tsareena @ Expert Belt
+Level: 42
+Ability: Queenly Majesty
+Nature: Adamant
+Ball: Love Ball
+Shiny: No
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 Atk / 252 Spe / 4 HP
+- Power Whip
+- High Jump Kick
+- Triple Axel
+- U-turn
+
+Appletun @ Leftovers
+Level: 42
+Ability: Thick Fat
+Nature: Calm
+Ball: Heal Ball
+Shiny: No
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 HP / 252 SpD / 4 Def
+- Apple Acid
+- Recover
+- Leech Seed
+- Dragon Pulse
 
 === TRAINER_KAREN_4 ===
 Name: KAREN
@@ -22227,15 +22559,97 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera / Force Setup First Turn / Setup Then Sweep
 
-Breloom
-Level: 32
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Breloom @ Toxic Orb
+Level: 50
+Ability: Poison Heal
+Nature: Jolly
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 Atk / 252 Spe / 4 HP
+- Spore
+- Mach Punch
+- Seed Bomb
+- Swords Dance
 
-Loudred
-Level: 32
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Exploud @ Choice Specs
+Level: 50
+Ability: Scrappy
+Nature: Modest
+Ball: Premier Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 SpA / 252 HP / 4 SpD
+- Boomburst
+- Ice Beam
+- Fire Blast
+- Focus Blast
+
+Loudred @ Silk Scarf
+Level: 50
+Ability: Soundproof
+Nature: Adamant
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 Atk / 252 HP / 4 Def
+- Stomping Tantrum
+- Ice Punch
+- Crunch
+- Hyper Voice
+
+Tsareena @ Expert Belt
+Level: 50
+Ability: Queenly Majesty
+Nature: Adamant
+Ball: Love Ball
+Shiny: No
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 Atk / 252 Spe / 4 HP
+- Power Whip
+- High Jump Kick
+- Triple Axel
+- U-turn
+
+Appletun @ Leftovers
+Level: 50
+Ability: Thick Fat
+Nature: Calm
+Ball: Heal Ball
+Shiny: No
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 HP / 252 SpD / 4 Def
+- Apple Acid
+- Recover
+- Leech Seed
+- Dragon Pulse
+
+Florges @ Sitrus Berry
+Level: 50
+Ability: Symbiosis
+Nature: Modest
+Ball: Heal Ball
+Shiny: No
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 HP / 252 SpA / 4 SpD
+- Moonblast
+- Wish
+- Aromatherapy
+- Protect
 
 === TRAINER_KAREN_5 ===
 Name: KAREN
@@ -22244,160 +22658,691 @@ Pic: School Kid F
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera / Force Setup First Turn / Setup Then Sweep
 
-Breloom
-Level: 35
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Breloom @ Toxic Orb
+Level: 62
+Ability: Poison Heal
+Nature: Jolly
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 Atk / 252 Spe / 4 HP
+- Spore
+- Mach Punch
+- Seed Bomb
+- Swords Dance
 
-Exploud
-Level: 35
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Exploud @ Choice Specs
+Level: 62
+Ability: Scrappy
+Nature: Modest
+Ball: Premier Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 SpA / 252 HP / 4 SpD
+- Boomburst
+- Ice Beam
+- Fire Blast
+- Focus Blast
+
+Tsareena @ Expert Belt
+Level: 62
+Ability: Queenly Majesty
+Nature: Adamant
+Ball: Love Ball
+Shiny: No
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 Atk / 252 Spe / 4 HP
+- Power Whip
+- High Jump Kick
+- Triple Axel
+- U-turn
+
+Appletun @ Leftovers
+Level: 62
+Ability: Thick Fat
+Nature: Calm
+Ball: Heal Ball
+Shiny: No
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 HP / 252 SpD / 4 Def
+- Apple Acid
+- Recover
+- Leech Seed
+- Dragon Pulse
+
+Florges @ Sitrus Berry
+Level: 62
+Ability: Symbiosis
+Nature: Modest
+Ball: Heal Ball
+Shiny: No
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 HP / 252 SpA / 4 SpD
+- Moonblast
+- Wish
+- Aromatherapy
+- Protect
+
+Amoonguss @ Black Sludge
+Level: 62
+Ability: Regenerator
+Nature: Bold
+Ball: Dusk Ball
+Shiny: No
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 all
+EVs: 252 HP / 252 Def / 4 SpD
+- Spore
+- Giga Drain
+- Sludge Bomb
+- Protect
 
 === TRAINER_KATE_AND_JOY ===
 Name: KATE & JOY
 Class: Sr And Jr
 Pic: Sr And Jr
-Gender: Male
+Gender: Female
 Music: Twins
 Double Battle: Yes
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Spinda
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Hypnosis
-- Psybeam
-- Dizzy Punch
+Spinda (F) @ Focus Sash
+Level: 54
+Ability: Contrary
+Nature: Jolly
+Shiny: No
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Fairy
 - Teeter Dance
+- Close Combat
+- Sucker Punch
+- U-turn
 
-Slaking
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Focus Punch
-- Yawn
+Slaking (M) @ Sitrus Berry
+Level: 55
+Ability: Truant
+Nature: Adamant
+Shiny: No
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe
+Dynamax Level: 10
+Tera Type: Ghost
+- Facade
+- Earthquake
 - Slack Off
-- Feint Attack
+- Night Slash
+
+Indeedee (F) @ Psychic Seed
+Level: 54
+Ability: Psychic Surge
+Nature: Calm
+Shiny: No
+Ball: Heal Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD
+Dynamax Level: 10
+Tera Type: Psychic
+- Psychic
+- Follow Me
+- Helping Hand
+- Protect
+
+Meowstic (M) @ Light Clay
+Level: 54
+Ability: Prankster
+Nature: Timid
+Shiny: No
+Ball: Great Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Electric
+- Reflect
+- Light Screen
+- Psychic
+- Thunder Wave
+
+Pyroar (F) @ Life Orb
+Level: 54
+Ability: Rivalry
+Nature: Modest
+Shiny: No
+Ball: Luxury Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Fire
+- Hyper Voice
+- Flamethrower
+- Dark Pulse
+- Protect
+
+Unfezant (M) @ Scope Lens
+Level: 54
+Ability: Super Luck
+Nature: Jolly
+Shiny: No
+Ball: Premier Ball
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Flying
+- Brave Bird
+- U-turn
+- Facade
+- Quick Attack
 
 === TRAINER_ANNA_AND_MEG_1 ===
 Name: ANNA & MEG
 Class: Sr And Jr
 Pic: Sr And Jr
-Gender: Male
+Gender: Female
 Music: Twins
 Double Battle: Yes
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Zigzagoon
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Growl
-- Tail Whip
+Zigzagoon (F) @ Sitrus Berry
+Level: 25
+Ability: Pickup
+Nature: Jolly
+Shiny: No
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Normal
 - Headbutt
-- Odor Sleuth
+- Baby-Doll Eyes
+- Pin Missile
+- Play Rough
 
-Makuhita
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Makuhita (M) @ Eviolite
+Level: 25
+Ability: Thick Fat
+Nature: Impish
+Shiny: No
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 Def
+Dynamax Level: 10
+Tera Type: Fighting
+- Force Palm
+- Fake Out
+- Knock Off
+- Bullet Punch
+
+Combee (F) @ Focus Sash
+Level: 25
+Ability: Hustle
+Nature: Timid
+Shiny: No
+Ball: Nest Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Bug
+- Bug Buzz
+- Sweet Scent
+- Air Cutter
+- Endeavor
+
+Azurill (F) @ Eviolite
+Level: 25
+Ability: Huge Power
+Nature: Adamant
+Shiny: No
+Ball: Heal Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe
+Dynamax Level: 10
+Tera Type: Fairy
+- Play Rough
+- Water Gun
+- Sing
+- Helping Hand
+
+Gothita (F) @ Berry Juice
+Level: 25
+Ability: Competitive
+Nature: Modest
+Shiny: No
+Ball: Luxury Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Psychic
+- Psybeam
+- Fake Tears
+- Tickle
+- Thunder Wave
+
+Salandit (F) @ Black Sludge
+Level: 25
+Ability: Corrosion
+Nature: Timid
+Shiny: No
+Ball: Quick Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Poison
+- Flame Burst
+- Sludge
+- Nasty Plot
+- Dragon Rage
 
 === TRAINER_ANNA_AND_MEG_2 ===
 Name: ANNA & MEG
 Class: Sr And Jr
 Pic: Sr And Jr
-Gender: Male
+Gender: Female
 Music: Twins
 Double Battle: Yes
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Zigzagoon
-Level: 28
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Growl
-- Tail Whip
+Linoone (F) @ Sitrus Berry
+Level: 36
+Ability: Gluttony
+Nature: Jolly
+Shiny: No
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Normal
 - Headbutt
-- Odor Sleuth
+- Pin Missile
+- Baby-Doll Eyes
+- Play Rough
 
-Makuhita
-Level: 30
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Hariyama (M) @ Assault Vest
+Level: 36
+Ability: Thick Fat
+Nature: Careful
+Shiny: No
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD
+Dynamax Level: 10
+Tera Type: Fighting
+- Force Palm
+- Knock Off
+- Bullet Punch
+- Heavy Slam
+
+Vespiquen (F) @ Leftovers
+Level: 36
+Ability: Pressure
+Nature: Bold
+Shiny: No
+Ball: Nest Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+Dynamax Level: 10
+Tera Type: Bug
+- Attack Order
+- Heal Order
+- Toxic
+- Air Slash
+
+Azumarill (F) @ Assault Vest
+Level: 36
+Ability: Huge Power
+Nature: Adamant
+Shiny: No
+Ball: Heal Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe
+Dynamax Level: 10
+Tera Type: Fairy
+- Play Rough
+- Aqua Jet
+- Waterfall
+- Ice Punch
+
+Gothorita (F) @ Eviolite
+Level: 36
+Ability: Competitive
+Nature: Calm
+Shiny: No
+Ball: Luxury Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD
+Dynamax Level: 10
+Tera Type: Psychic
+- Psychic
+- Thunder Wave
+- Charm
+- Fake Tears
+
+Salazzle (F) @ Black Sludge
+Level: 36
+Ability: Corrosion
+Nature: Timid
+Shiny: No
+Ball: Quick Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Poison
+- Flamethrower
+- Sludge Wave
+- Nasty Plot
+- Dragon Pulse
 
 === TRAINER_ANNA_AND_MEG_3 ===
 Name: ANNA & MEG
 Class: Sr And Jr
 Pic: Sr And Jr
-Gender: Male
+Gender: Female
 Music: Twins
 Double Battle: Yes
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Zigzagoon
-Level: 31
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Growl
-- Tail Whip
-- Headbutt
-- Odor Sleuth
+Obstagoon (F) @ Flame Orb
+Level: 48
+Ability: Guts
+Nature: Jolly
+Shiny: No
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Dark
+- Facade
+- Knock Off
+- Obstruct
+- Close Combat
 
-Makuhita
-Level: 33
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Hariyama (M) @ Assault Vest
+Level: 48
+Ability: Thick Fat
+Nature: Adamant
+Shiny: No
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Dynamax Level: 10
+Tera Type: Fighting
+- Heavy Slam
+- Close Combat
+- Knock Off
+- Fake Out
+
+Vespiquen (F) @ Leftovers
+Level: 48
+Ability: Pressure
+Nature: Bold
+Shiny: No
+Ball: Nest Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+Dynamax Level: 10
+Tera Type: Bug
+- Attack Order
+- Heal Order
+- Defend Order
+- Air Slash
+
+Azumarill (F) @ Sitrus Berry
+Level: 48
+Ability: Huge Power
+Nature: Adamant
+Shiny: No
+Ball: Heal Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe
+Dynamax Level: 10
+Tera Type: Water
+- Aqua Jet
+- Liquidation
+- Play Rough
+- Knock Off
+
+Gothitelle (F) @ Rocky Helmet
+Level: 48
+Ability: Competitive
+Nature: Calm
+Shiny: No
+Ball: Luxury Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD
+Dynamax Level: 10
+Tera Type: Psychic
+- Psychic
+- Thunder Wave
+- Calm Mind
+- Charm
+
+Salazzle (F) @ Black Sludge
+Level: 48
+Ability: Corrosion
+Nature: Timid
+Shiny: No
+Ball: Quick Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Poison
+- Flamethrower
+- Sludge Wave
+- Nasty Plot
+- Dragon Pulse
 
 === TRAINER_ANNA_AND_MEG_4 ===
 Name: ANNA & MEG
 Class: Sr And Jr
 Pic: Sr And Jr
-Gender: Male
+Gender: Female
 Music: Twins
 Double Battle: Yes
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Linoone
-Level: 34
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Growl
-- Tail Whip
-- Headbutt
-- Odor Sleuth
+Obstagoon (M) @ Flame Orb
+Level: 56
+Ability: Guts
+Nature: Jolly
+Shiny: No
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Dark
+- Facade
+- Knock Off
+- Obstruct
+- Close Combat
 
-Makuhita
-Level: 36
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Hariyama (F) @ Assault Vest
+Level: 56
+Ability: Thick Fat
+Nature: Adamant
+Shiny: No
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Dynamax Level: 10
+Tera Type: Fighting
+- Heavy Slam
+- Close Combat
+- Knock Off
+- Fake Out
+
+Vespiquen (F) @ Leftovers
+Level: 56
+Ability: Pressure
+Nature: Bold
+Shiny: No
+Ball: Nest Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+Dynamax Level: 10
+Tera Type: Bug
+- Attack Order
+- Heal Order
+- Defend Order
+- Air Slash
+
+Azumarill (M) @ Sitrus Berry
+Level: 56
+Ability: Huge Power
+Nature: Adamant
+Shiny: No
+Ball: Heal Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe
+Dynamax Level: 10
+Tera Type: Water
+- Aqua Jet
+- Liquidation
+- Play Rough
+- Knock Off
+
+Gothitelle (F) @ Rocky Helmet
+Level: 56
+Ability: Competitive
+Nature: Calm
+Shiny: No
+Ball: Luxury Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD
+Dynamax Level: 10
+Tera Type: Psychic
+- Psychic
+- Thunder Wave
+- Calm Mind
+- Charm
+
+Salazzle (F) @ Black Sludge
+Level: 56
+Ability: Corrosion
+Nature: Timid
+Shiny: No
+Ball: Quick Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Poison
+- Flamethrower
+- Sludge Wave
+- Nasty Plot
+- Dragon Pulse
 
 === TRAINER_ANNA_AND_MEG_5 ===
 Name: ANNA & MEG
 Class: Sr And Jr
 Pic: Sr And Jr
-Gender: Male
+Gender: Female
 Music: Twins
 Double Battle: Yes
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Linoone
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Growl
-- Tail Whip
-- Headbutt
-- Odor Sleuth
+Obstagoon (F) @ Flame Orb
+Level: 66
+Ability: Guts
+Nature: Jolly
+Shiny: Yes
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Dark
+- Facade
+- Knock Off
+- Obstruct
+- Close Combat
 
-Hariyama
-Level: 38
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Tackle
-- Focus Energy
-- Arm Thrust
+Hariyama (M) @ Assault Vest
+Level: 66
+Ability: Thick Fat
+Nature: Adamant
+Shiny: Yes
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Dynamax Level: 10
+Tera Type: Fighting
+- Heavy Slam
+- Close Combat
+- Knock Off
+- Fake Out
+
+Vespiquen (F) @ Leftovers
+Level: 66
+Ability: Pressure
+Nature: Bold
+Shiny: Yes
+Ball: Nest Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+Dynamax Level: 10
+Tera Type: Bug
+- Attack Order
+- Heal Order
+- Defend Order
+- Air Slash
+
+Azumarill (M) @ Sitrus Berry
+Level: 66
+Ability: Huge Power
+Nature: Adamant
+Shiny: Yes
+Ball: Heal Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe
+Dynamax Level: 10
+Tera Type: Water
+- Aqua Jet
+- Liquidation
+- Play Rough
+- Knock Off
+
+Gothitelle (F) @ Rocky Helmet
+Level: 66
+Ability: Competitive
+Nature: Calm
+Shiny: Yes
+Ball: Luxury Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD
+Dynamax Level: 10
+Tera Type: Psychic
+- Psychic
+- Thunder Wave
+- Calm Mind
+- Charm
+
+Salazzle (F) @ Black Sludge
+Level: 66
+Ability: Corrosion
+Nature: Timid
+Shiny: Yes
+Ball: Quick Ball
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Poison
+- Flamethrower
+- Sludge Wave
+- Nasty Plot
+- Dragon Pulse
 
 === TRAINER_VICTOR ===
 Name: VICTOR
@@ -22406,15 +23351,97 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Taillow @ Oran Berry
-Level: 16
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Taillow (M) @ Choice Band
+Level: 40
+Ability: Guts
+Nature: Jolly
+Shiny: No
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Flying
+- Brave Bird
+- Facade
+- Quick Attack
+- U-turn
 
-Zigzagoon @ Oran Berry
-Level: 16
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Zigzagoon-Galar (F) @ Eviolite
+Level: 40
+Ability: Pickup
+Nature: Adamant
+Shiny: No
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD
+Dynamax Level: 10
+Tera Type: Normal
+- Body Slam
+- Knock Off
+- Seed Bomb
+- Belly Drum
+
+Obstagoon (M) @ Flame Orb
+Level: 40
+Ability: Guts
+Nature: Jolly
+Shiny: No
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Dark
+- Facade
+- Obstruct
+- Knock Off
+- Close Combat
+
+Swellow (F) @ Focus Sash
+Level: 40
+Ability: Scrappy
+Nature: Jolly
+Shiny: No
+Ball: Quick Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Flying
+- Brave Bird
+- Boomburst
+- U-turn
+- Roost
+
+Linoone-Galar (F) @ Sitrus Berry
+Level: 40
+Ability: Gluttony
+Nature: Jolly
+Shiny: No
+Ball: Heal Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Tera Type: Normal
+- Belly Drum
+- Extreme Speed
+- Seed Bomb
+- Shadow Claw
+
+Bibarel (M) @ Leftovers
+Level: 40
+Ability: Unaware
+Nature: Careful
+Shiny: No
+Ball: Dive Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 SpD / 4 Def
+Dynamax Level: 10
+Tera Type: Water
+- Waterfall
+- Curse
+- Rest
+- Sleep Talk
 
 === TRAINER_MIGUEL_1 ===
 Name: MIGUEL
@@ -22423,11 +23450,97 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Skitty @ Oran Berry
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Skitty (F) @ Eviolite
+Level: 36
+Ability: Cute Charm
+Nature: Impish
+Shiny: No
+Ball: Poké Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
+- Play Rough
+- Wish
+- Protect
+- Fake Out
+
+Delcatty (M) @ Leftovers
+Level: 36
+Ability: Normalize
+Nature: Jolly
+Shiny: No
+Ball: Luxury Ball
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Double-Edge
+- Thunder Wave
+- Heal Bell
+- U-turn
+
+Greedent (F) @ Sitrus Berry
+Level: 36
+Ability: Cheek Pouch
+Nature: Careful
+Shiny: No
+Ball: Friend Ball
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 SpD / 4 Def
+- Body Slam
+- Bullet Seed
+- Crunch
+- Stuff Cheeks
+
+Bibarel (M) @ Leftovers
+Level: 36
+Ability: Simple
+Nature: Relaxed
+Shiny: No
+Ball: Dive Ball
+Tera Type: Water
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+- Curse
+- Liquidation
+- Rest
+- Sleep Talk
+
+Dubwool (M) @ Rocky Helmet
+Level: 36
+Ability: Fluffy
+Nature: Impish
+Shiny: No
+Ball: Ultra Ball
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 Spe
+- Body Slam
+- Cotton Guard
+- Zen Headbutt
+- Thunder Wave
+
+Miltank (F) @ Lum Berry
+Level: 36
+Ability: Scrappy
+Nature: Jolly
+Shiny: No
+Ball: Heal Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Body Slam
+- Milk Drink
+- Earthquake
+- Thunder Punch
 
 === TRAINER_COLTON ===
 Name: COLTON
@@ -22436,55 +23549,97 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Skitty @ Oran Berry
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
-
-Skitty @ Oran Berry
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
-
-Skitty @ Oran Berry
+Delcatty (F) @ Choice Specs
 Level: 40
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
+Ability: Normalize
+Nature: Modest
+Shiny: No
+Ball: Luxury Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Hyper Voice
+- Thunderbolt
+- Ice Beam
+- Shadow Ball
 
-Skitty @ Oran Berry
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
+Skitty (M) @ Eviolite
+Level: 40
+Ability: Cute Charm
+Nature: Calm
+Shiny: No
+Ball: Heal Ball
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
+- Play Rough
+- Wish
+- Thunder Wave
+- Fake Out
 
-Skitty @ Oran Berry
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
+Wigglytuff (F) @ Assault Vest
+Level: 40
+Ability: Frisk
+Nature: Bold
+Shiny: No
+Ball: Moon Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Hyper Voice
+- Dazzling Gleam
+- Thunderbolt
+- Flamethrower
 
-Delcatty @ Oran Berry
-Level: 42
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
+Lopunny (F) @ Focus Sash
+Level: 40
+Ability: Limber
+Nature: Jolly
+Shiny: No
+Ball: Friend Ball
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- High Jump Kick
+- Ice Punch
+- U-turn
+- Quick Attack
+
+Meloetta (F) @ Leftovers
+Level: 40
+Ability: Serene Grace
+Nature: Timid
+Shiny: No
+Ball: Premier Ball
+Tera Type: Psychic
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Hyper Voice
+- Psychic
+- Thunderbolt
+- U-turn
+
+Greedent (M) @ Sitrus Berry
+Level: 40
+Ability: Cheek Pouch
+Nature: Adamant
+Shiny: No
+Ball: Nest Ball
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 SpD / 4 Def
+- Body Slam
+- Bullet Seed
+- Crunch
+- Stuff Cheeks
 
 === TRAINER_MIGUEL_2 ===
 Name: MIGUEL
@@ -22493,11 +23648,97 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Skitty @ Oran Berry
-Level: 29
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Skitty (F) @ Eviolite
+Level: 42
+Ability: Cute Charm
+Nature: Bold
+Shiny: No
+Ball: Poké Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Play Rough
+- Wish
+- Fake Out
+- Thunder Wave
+
+Delcatty (M) @ Leftovers
+Level: 42
+Ability: Normalize
+Nature: Timid
+Shiny: No
+Ball: Luxury Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Hyper Voice
+- Thunderbolt
+- Ice Beam
+- U-turn
+
+Greedent (M) @ Sitrus Berry
+Level: 42
+Ability: Cheek Pouch
+Nature: Careful
+Shiny: No
+Ball: Friend Ball
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 SpD / 4 Def
+- Body Slam
+- Bullet Seed
+- Crunch
+- Stuff Cheeks
+
+Lopunny (F) @ Focus Sash
+Level: 42
+Ability: Limber
+Nature: Jolly
+Shiny: No
+Ball: Premier Ball
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- High Jump Kick
+- Ice Punch
+- U-turn
+- Quick Attack
+
+Dubwool (M) @ Rocky Helmet
+Level: 42
+Ability: Fluffy
+Nature: Impish
+Shiny: No
+Ball: Great Ball
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 Spe
+- Body Slam
+- Cotton Guard
+- Zen Headbutt
+- Thunder Wave
+
+Miltank (F) @ Lum Berry
+Level: 42
+Ability: Scrappy
+Nature: Jolly
+Shiny: No
+Ball: Heal Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Body Slam
+- Milk Drink
+- Earthquake
+- Thunder Punch
 
 === TRAINER_MIGUEL_3 ===
 Name: MIGUEL
@@ -22506,11 +23747,97 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Skitty @ Oran Berry
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Skitty (M) @ Eviolite
+Level: 48
+Ability: Cute Charm
+Nature: Careful
+Shiny: No
+Ball: Poké Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
+- Play Rough
+- Wish
+- Thunder Wave
+- Fake Out
+
+Delcatty (F) @ Choice Specs
+Level: 48
+Ability: Normalize
+Nature: Modest
+Shiny: No
+Ball: Luxury Ball
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Hyper Voice
+- Thunderbolt
+- Ice Beam
+- Shadow Ball
+
+Greedent (F) @ Sitrus Berry
+Level: 48
+Ability: Cheek Pouch
+Nature: Careful
+Shiny: No
+Ball: Friend Ball
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 SpD / 4 Def
+- Body Slam
+- Bullet Seed
+- Crunch
+- Stuff Cheeks
+
+Lopunny (M) @ Focus Sash
+Level: 48
+Ability: Limber
+Nature: Jolly
+Shiny: No
+Ball: Premier Ball
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- High Jump Kick
+- Ice Punch
+- U-turn
+- Quick Attack
+
+Dubwool (F) @ Leftovers
+Level: 48
+Ability: Fluffy
+Nature: Impish
+Shiny: No
+Ball: Great Ball
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 Spe
+- Body Slam
+- Cotton Guard
+- Zen Headbutt
+- Thunder Wave
+
+Miltank (M) @ Lum Berry
+Level: 48
+Ability: Scrappy
+Nature: Jolly
+Shiny: No
+Ball: Heal Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Body Slam
+- Milk Drink
+- Earthquake
+- Thunder Punch
 
 === TRAINER_MIGUEL_4 ===
 Name: MIGUEL
@@ -22519,24 +23846,196 @@ Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Delcatty @ Oran Berry
-Level: 35
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Delcatty (M) @ Leftovers
+Level: 54
+Ability: Normalize
+Nature: Jolly
+Shiny: No
+Ball: Luxury Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Double-Edge
+- Heal Bell
+- Thunder Wave
+- U-turn
 
-=== TRAINER_MIGUEL_5 ===
+Greedent (F) @ Sitrus Berry
+Level: 54
+Ability: Cheek Pouch
+Nature: Careful
+Shiny: No
+Ball: Friend Ball
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 SpD / 4 Def
+- Body Slam
+- Bullet Seed
+- Crunch
+- Stuff Cheeks
+
+Lopunny (F) @ Focus Sash
+Level: 54
+Ability: Limber
+Nature: Jolly
+Shiny: No
+Ball: Premier Ball
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- High Jump Kick
+- Ice Punch
+- U-turn
+- Quick Attack
+
+Dubwool (M) @ Leftovers
+Level: 54
+Ability: Fluffy
+Nature: Impish
+Shiny: No
+Ball: Great Ball
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 Spe
+- Body Slam
+- Cotton Guard
+- Zen Headbutt
+- Thunder Wave
+
+Miltank (F) @ Lum Berry
+Level: 54
+Ability: Scrappy
+Nature: Jolly
+Shiny: No
+Ball: Heal Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Body Slam
+- Milk Drink
+- Earthquake
+- Thunder Punch
+
+Persian (M) @ Life Orb
+Level: 54
+Ability: Technician
+Nature: Timid
+Shiny: No
+Ball: Ultra Ball
+Tera Type: Dark
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Dark Pulse
+- Nasty Plot
+- Power Gem
+- Hyper Voice
+
+=== TRAINER_MIGUEL_4 ===
 Name: MIGUEL
 Class: Pokefan
 Pic: Pokefan M
 Gender: Male
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Delcatty @ Sitrus Berry
-Level: 38
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Delcatty (M) @ Leftovers
+Level: 54
+Ability: Normalize
+Nature: Jolly
+Shiny: No
+Ball: Luxury Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Double-Edge
+- Heal Bell
+- Thunder Wave
+- U-turn
+
+Greedent (F) @ Sitrus Berry
+Level: 54
+Ability: Cheek Pouch
+Nature: Careful
+Shiny: No
+Ball: Friend Ball
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 SpD / 4 Def
+- Body Slam
+- Bullet Seed
+- Crunch
+- Stuff Cheeks
+
+Lopunny (F) @ Focus Sash
+Level: 54
+Ability: Limber
+Nature: Jolly
+Shiny: No
+Ball: Premier Ball
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- High Jump Kick
+- Ice Punch
+- U-turn
+- Quick Attack
+
+Dubwool (M) @ Leftovers
+Level: 54
+Ability: Fluffy
+Nature: Impish
+Shiny: No
+Ball: Great Ball
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 Spe
+- Body Slam
+- Cotton Guard
+- Zen Headbutt
+- Thunder Wave
+
+Miltank (F) @ Lum Berry
+Level: 54
+Ability: Scrappy
+Nature: Jolly
+Shiny: No
+Ball: Heal Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Body Slam
+- Milk Drink
+- Earthquake
+- Thunder Punch
+
+Persian (M) @ Life Orb
+Level: 54
+Ability: Technician
+Nature: Timid
+Shiny: No
+Ball: Ultra Ball
+Tera Type: Dark
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Dark Pulse
+- Nasty Plot
+- Power Gem
+- Hyper Voice
 
 === TRAINER_VICTORIA ===
 Name: VICTORIA
