@@ -22169,7 +22169,7 @@ Shroomish @ Eviolite
 Level: 24  
 Ability: Effect Spore  
 Nature: Careful  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 252 SpD / 4 Def  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -22184,7 +22184,7 @@ Breloom @ Focus Sash
 Level: 24  
 Ability: Technician  
 Nature: Jolly  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 252 Atk / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Great Ball  
@@ -22199,7 +22199,7 @@ Toedscruel @ Black Sludge
 Level: 24  
 Ability: Mycelium Might  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 4 SpA / 252 Spe  
 Dynamax Level: 10  
 Ball: Luxury Ball  
@@ -22214,7 +22214,7 @@ Lilligant @ Sitrus Berry
 Level: 24  
 Ability: Chlorophyll  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 0 HP / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Friend Ball  
@@ -22229,7 +22229,7 @@ Fomantis @ Eviolite
 Level: 24  
 Ability: Leaf Guard  
 Nature: Impish  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 252 Def / 4 SpD  
 Dynamax Level: 10  
 Ball: Nest Ball  
@@ -22244,7 +22244,7 @@ Appletun @ Leftovers
 Level: 24  
 Ability: Thick Fat  
 Nature: Calm  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 4 Def / 252 SpD  
 Dynamax Level: 10  
 Ball: Heal Ball  
@@ -22268,7 +22268,7 @@ Beautifly @ Focus Sash
 Level: 25  
 Ability: Swarm  
 Nature: Modest  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 0 HP / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Net Ball  
@@ -22283,7 +22283,7 @@ Vivillon @ Heavy-Duty Boots
 Level: 25  
 Ability: Compound Eyes  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Quick Ball  
@@ -22298,7 +22298,7 @@ Orbeetle @ Leftovers
 Level: 25  
 Ability: Frisk  
 Nature: Bold  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 0 Atk / 252 Def / 4 SpD  
 Dynamax Level: 10  
 Ball: Dusk Ball  
@@ -22313,7 +22313,7 @@ Shroomish @ Eviolite
 Level: 25  
 Ability: Effect Spore  
 Nature: Careful  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 252 HP / 252 SpD / 4 Def  
 Dynamax Level: 10  
 Ball: Poké Ball  
@@ -22328,7 +22328,7 @@ Combee-Female @ Honey
 Level: 25  
 Ability: Hustle  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 0 HP / 252 Atk / 4 Def / 252 Spe  
 Dynamax Level: 10  
 Ball: Heal Ball  
@@ -22343,7 +22343,7 @@ Ribombee @ Wise Glasses
 Level: 25  
 Ability: Shield Dust  
 Nature: Timid  
-IVs: 31 all  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
 Dynamax Level: 10  
 Ball: Love Ball  
@@ -22386,7 +22386,7 @@ Ball: Great Ball
 Shiny: No
 Tera Type: Normal
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 Spe / 4 HP
 - Hyper Voice
 - Uproar
@@ -22401,7 +22401,7 @@ Ball: Ultra Ball
 Shiny: No
 Tera Type: Normal
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 HP / 4 Def
 - Stomping Tantrum
 - Ice Punch
@@ -22416,7 +22416,7 @@ Ball: Ultra Ball
 Shiny: No
 Tera Type: Fighting
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Spore
 - Mach Punch
@@ -22431,7 +22431,7 @@ Ball: Premier Ball
 Shiny: No
 Tera Type: Normal
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 HP / 4 SpD
 - Boomburst
 - Ice Beam
@@ -22446,7 +22446,7 @@ Ball: Safari Ball
 Shiny: No
 Tera Type: Grass
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 Atk
 - Horn Leech
 - Earthquake
@@ -22470,7 +22470,7 @@ Ball: Ultra Ball
 Shiny: No
 Tera Type: Fighting
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Spore
 - Mach Punch
@@ -22485,7 +22485,7 @@ Ball: Ultra Ball
 Shiny: No
 Tera Type: Normal
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 HP / 4 Def
 - Stomping Tantrum
 - Ice Punch
@@ -22500,7 +22500,7 @@ Ball: Premier Ball
 Shiny: No
 Tera Type: Normal
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 HP / 4 SpD
 - Boomburst
 - Ice Beam
@@ -22515,7 +22515,7 @@ Ball: Friend Ball
 Shiny: No
 Tera Type: Fairy
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Spe / 4 Def
 - Moonblast
 - Leech Seed
@@ -22530,7 +22530,7 @@ Ball: Love Ball
 Shiny: No
 Tera Type: Grass
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Power Whip
 - High Jump Kick
@@ -22545,7 +22545,7 @@ Ball: Heal Ball
 Shiny: No
 Tera Type: Grass
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD / 4 Def
 - Apple Acid
 - Recover
@@ -22569,7 +22569,7 @@ Ball: Ultra Ball
 Shiny: No
 Tera Type: Fighting
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Spore
 - Mach Punch
@@ -22584,7 +22584,7 @@ Ball: Premier Ball
 Shiny: No
 Tera Type: Normal
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 HP / 4 SpD
 - Boomburst
 - Ice Beam
@@ -22599,7 +22599,7 @@ Ball: Ultra Ball
 Shiny: No
 Tera Type: Normal
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 HP / 4 Def
 - Stomping Tantrum
 - Ice Punch
@@ -22614,7 +22614,7 @@ Ball: Love Ball
 Shiny: No
 Tera Type: Grass
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Power Whip
 - High Jump Kick
@@ -22629,7 +22629,7 @@ Ball: Heal Ball
 Shiny: No
 Tera Type: Grass
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD / 4 Def
 - Apple Acid
 - Recover
@@ -22644,7 +22644,7 @@ Ball: Heal Ball
 Shiny: No
 Tera Type: Fairy
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpA / 4 SpD
 - Moonblast
 - Wish
@@ -22668,7 +22668,7 @@ Ball: Ultra Ball
 Shiny: No
 Tera Type: Fighting
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Spore
 - Mach Punch
@@ -22683,7 +22683,7 @@ Ball: Premier Ball
 Shiny: No
 Tera Type: Normal
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 SpA / 252 HP / 4 SpD
 - Boomburst
 - Ice Beam
@@ -22698,7 +22698,7 @@ Ball: Love Ball
 Shiny: No
 Tera Type: Grass
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe / 4 HP
 - Power Whip
 - High Jump Kick
@@ -22713,7 +22713,7 @@ Ball: Heal Ball
 Shiny: No
 Tera Type: Grass
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpD / 4 Def
 - Apple Acid
 - Recover
@@ -22728,7 +22728,7 @@ Ball: Heal Ball
 Shiny: No
 Tera Type: Fairy
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 SpA / 4 SpD
 - Moonblast
 - Wish
@@ -22743,7 +22743,7 @@ Ball: Dusk Ball
 Shiny: No
 Tera Type: Grass
 Dynamax Level: 10
-IVs: 31 all
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Def / 4 SpD
 - Spore
 - Giga Drain
