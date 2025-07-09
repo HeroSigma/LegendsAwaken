@@ -24044,11 +24044,97 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Check Bad Move / Try To Faint
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Roselia @ Oran Berry
-Level: 17
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Roselia (F) @ Focus Sash
+Level: 42
+Ability: Natural Cure
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Leaf Storm
+- Sludge Bomb
+- Spikes
+- Sleep Powder
+
+Tsareena (F) @ Leftovers
+Level: 42
+Ability: Queenly Majesty
+Nature: Jolly
+Shiny: No
+Ball: Luxury Ball
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Power Whip
+- U-turn
+- High Jump Kick
+- Rapid Spin
+
+Roserade (F) @ Black Sludge
+Level: 42
+Ability: Technician
+Nature: Modest
+Shiny: No
+Ball: Dusk Ball
+Tera Type: Poison
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Sludge Bomb
+- Giga Drain
+- Shadow Ball
+- Toxic Spikes
+
+Lurantis (F) @ Sitrus Berry
+Level: 42
+Ability: Contrary
+Nature: Adamant
+Shiny: No
+Ball: Friend Ball
+Tera Type: Grass
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+- Leaf Blade
+- Superpower
+- Knock Off
+- Synthesis
+
+Bellossom (F) @ Leftovers
+Level: 42
+Ability: Chlorophyll
+Nature: Calm
+Shiny: No
+Ball: Heal Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 SpD / 4 SpA
+- Moonblast
+- Giga Drain
+- Quiver Dance
+- Strength Sap
+
+Florges (F) @ Life Orb
+Level: 42
+Ability: Flower Veil
+Nature: Modest
+Shiny: Yes
+Ball: Love Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD
+- Moonblast
+- Psychic
+- Aromatherapy
+- Calm Mind
 
 === TRAINER_VANESSA ===
 Name: VANESSA
@@ -24057,11 +24143,97 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Pikachu @ Oran Berry
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pikachu (F) @ Light Ball
+Level: 44
+Ability: Lightning Rod
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Volt Tackle
+- Iron Tail
+- Fake Out
+
+Raichu-Alola (F) @ Focus Sash
+Level: 44
+Ability: Surge Surfer
+Nature: Timid
+Shiny: No
+Ball: Ultra Ball
+Tera Type: Psychic
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Psychic
+- Thunderbolt
+- Grass Knot
+- Nasty Plot
+
+Dedenne (M) @ Sitrus Berry
+Level: 44
+Ability: Cheek Pouch
+Nature: Jolly
+Shiny: No
+Ball: Heal Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Play Rough
+- Volt Switch
+- Nuzzle
+- Super Fang
+
+Morpeko (F) @ Life Orb
+Level: 44
+Ability: Hunger Switch
+Nature: Jolly
+Shiny: No
+Ball: Quick Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Aura Wheel
+- Crunch
+- Seed Bomb
+- Protect
+
+Pawmot (F) @ Leftovers
+Level: 44
+Ability: Volt Absorb
+Nature: Adamant
+Shiny: No
+Ball: Great Ball
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Double Shock
+- Close Combat
+- Ice Punch
+- Revival Blessing
+
+Raichu (M) @ Air Balloon
+Level: 44
+Ability: Static
+Nature: Timid
+Shiny: Yes
+Ball: Premier Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Focus Blast
+- Nasty Plot
+- Grass Knot
 
 === TRAINER_BETHANY ===
 Name: BETHANY
@@ -24070,19 +24242,97 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Azurill @ Oran Berry
-Level: 35
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Azurill (F) @ Eviolite
+Level: 45
+Ability: Huge Power
+Nature: Careful
+Shiny: No
+Ball: Poké Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD
+- Play Rough
+- Water Gun
+- Aqua Ring
+- Sing
 
-Marill @ Oran Berry
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Marill (M) @ Sitrus Berry
+Level: 45
+Ability: Huge Power
+Nature: Jolly
+Shiny: No
+Ball: Heal Ball
+Tera Type: Water
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe
+- Aqua Jet
+- Play Rough
+- Belly Drum
+- Ice Punch
 
-Azumarill @ Oran Berry
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Azumarill (F) @ Choice Band
+Level: 45
+Ability: Huge Power
+Nature: Adamant
+Shiny: No
+Ball: Dive Ball
+Tera Type: Water
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+- Aqua Jet
+- Play Rough
+- Liquidation
+- Ice Punch
+
+Azumarill (M) @ Assault Vest
+Level: 45
+Ability: Sap Sipper
+Nature: Careful
+Shiny: No
+Ball: Great Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD / 4 Atk
+- Play Rough
+- Liquidation
+- Knock Off
+- Aqua Jet
+
+Wigglytuff (F) @ Leftovers
+Level: 45
+Ability: Competitive
+Nature: Bold
+Shiny: No
+Ball: Premier Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpA
+- Hyper Voice
+- Dazzling Gleam
+- Wish
+- Thunderbolt
+
+Azumarill (F) @ Sitrus Berry
+Level: 45
+Ability: Huge Power
+Nature: Adamant
+Shiny: Yes
+Ball: Love Ball
+Tera Type: Water
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+- Aqua Jet
+- Play Rough
+- Liquidation
+- Ice Punch
 
 === TRAINER_ISABEL_1 ===
 Name: ISABEL
@@ -24091,15 +24341,97 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Plusle @ Oran Berry
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Plusle (F) @ Oran Berry
+Level: 25
+Ability: Plus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Charm
+- Encore
 
-Minun @ Oran Berry
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Minun (F) @ Oran Berry
+Level: 25
+Ability: Minus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Charm
+- Encore
+
+Pikachu (F) @ Light Ball
+Level: 25
+Ability: Lightning Rod
+Nature: Jolly
+Shiny: No
+Ball: Premier Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Volt Tackle
+- Iron Tail
+- Quick Attack
+- Thunder Wave
+
+Mareep (F) @ Eviolite
+Level: 25
+Ability: Static
+Nature: Calm
+Shiny: No
+Ball: Heal Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 SpA / 252 SpD
+- Discharge
+- Cotton Guard
+- Thunder Wave
+- Signal Beam
+
+Pichu (F) @ Sitrus Berry
+Level: 25
+Ability: Static
+Nature: Timid
+Shiny: No
+Ball: Love Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Nasty Plot
+- Thunderbolt
+- Sweet Kiss
+- Fake Out
+
+Plusle (M) @ Oran Berry
+Level: 25
+Ability: Plus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunder Wave
+- Electro Ball
+- Copycat
+- Baton Pass
 
 === TRAINER_ISABEL_2 ===
 Name: ISABEL
@@ -24108,15 +24440,97 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Plusle @ Oran Berry
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Plusle (F) @ Sitrus Berry
+Level: 32
+Ability: Plus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Encore
+- Grass Knot
 
-Minun @ Oran Berry
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Minun (F) @ Sitrus Berry
+Level: 32
+Ability: Minus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Encore
+- Signal Beam
+
+Raichu (F) @ Light Clay
+Level: 32
+Ability: Lightning Rod
+Nature: Timid
+Shiny: No
+Ball: Ultra Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Reflect
+- Light Screen
+- Thunderbolt
+- Psychic
+
+Flaaffy (F) @ Eviolite
+Level: 32
+Ability: Static
+Nature: Modest
+Shiny: No
+Ball: Heal Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 SpA / 252 SpD
+- Discharge
+- Thunder Wave
+- Cotton Guard
+- Volt Switch
+
+Dedenne (F) @ Sitrus Berry
+Level: 32
+Ability: Cheek Pouch
+Nature: Jolly
+Shiny: No
+Ball: Luxury Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Nuzzle
+- Play Rough
+- Thunderbolt
+- Super Fang
+
+Minun (M) @ Oran Berry
+Level: 32
+Ability: Minus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Charm
+- Quick Attack
+- Encore
 
 === TRAINER_ISABEL_3 ===
 Name: ISABEL
@@ -24125,15 +24539,97 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Plusle @ Oran Berry
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Plusle (F) @ Sitrus Berry
+Level: 38
+Ability: Plus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Encore
+- Signal Beam
 
-Minun @ Oran Berry
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Minun (F) @ Sitrus Berry
+Level: 38
+Ability: Minus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Encore
+- Signal Beam
+
+Ampharos (F) @ Leftovers
+Level: 38
+Ability: Static
+Nature: Modest
+Shiny: No
+Ball: Ultra Ball
+Tera Type: Dragon
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Thunderbolt
+- Dragon Pulse
+- Cotton Guard
+- Heal Bell
+
+Pawmot (F) @ Life Orb
+Level: 38
+Ability: Volt Absorb
+Nature: Jolly
+Shiny: No
+Ball: Quick Ball
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Double Shock
+- Close Combat
+- Revival Blessing
+- Ice Punch
+
+Morpeko (F) @ Sitrus Berry
+Level: 38
+Ability: Hunger Switch
+Nature: Jolly
+Shiny: No
+Ball: Friend Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Aura Wheel
+- Crunch
+- Protect
+- Spark
+
+Minun (M) @ Sitrus Berry
+Level: 38
+Ability: Minus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Encore
+- Quick Attack
 
 === TRAINER_ISABEL_4 ===
 Name: ISABEL
@@ -24142,15 +24638,97 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Plusle @ Oran Berry
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Plusle (F) @ Sitrus Berry
+Level: 44
+Ability: Plus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Encore
+- Grass Knot
 
-Minun @ Oran Berry
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Minun (F) @ Sitrus Berry
+Level: 44
+Ability: Minus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Encore
+- Signal Beam
+
+Ampharos (F) @ Ampharosite
+Level: 44
+Ability: Mold Breaker
+Nature: Modest
+Shiny: Yes
+Ball: Ultra Ball
+Tera Type: Dragon
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Thunderbolt
+- Dragon Pulse
+- Cotton Guard
+- Heal Bell
+
+Dedenne (F) @ Sitrus Berry
+Level: 44
+Ability: Cheek Pouch
+Nature: Jolly
+Shiny: No
+Ball: Luxury Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Nuzzle
+- Play Rough
+- Thunderbolt
+- Super Fang
+
+Morpeko (F) @ Sitrus Berry
+Level: 44
+Ability: Hunger Switch
+Nature: Jolly
+Shiny: No
+Ball: Friend Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Aura Wheel
+- Crunch
+- Protect
+- Spark
+
+Minun (M) @ Sitrus Berry
+Level: 44
+Ability: Minus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Encore
+- Quick Attack
 
 === TRAINER_ISABEL_5 ===
 Name: ISABEL
@@ -24159,15 +24737,78 @@ Pic: Pokefan F
 Gender: Female
 Music: Twins
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Plusle @ Sitrus Berry
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Plusle (F) @ Sitrus Berry
+Level: 51
+Ability: Plus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Encore
+- Grass Knot
 
-Minun @ Sitrus Berry
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Minun (F) @ Sitrus Berry
+Level: 51
+Ability: Minus
+Nature: Timid
+Shiny: No
+Ball: Poké Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Nuzzle
+- Encore
+- Signal Beam
+
+Ampharos (F) @ Ampharosite
+Level: 51
+Ability: Mold Breaker
+Nature: Modest
+Shiny: Yes
+Ball: Ultra Ball
+Tera Type: Dragon
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+- Thunderbolt
+- Dragon Pulse
+- Cotton Guard
+- Heal Bell
+
+Dedenne (F) @ Sitrus Berry
+Level: 51
+Ability: Cheek Pouch
+Nature: Jolly
+Shiny: No
+Ball: Luxury Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Nuzzle
+- Play Rough
+- Thunderbolt
+- Super Fang
+
+Morpeko (F) @ Sitrus Berry
+Level: 51
+Ability: Hunger Switch
+Nature: Jolly
+Shiny: No
+Ball: Friend Ball
+Tera Type: Electric
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 
 === TRAINER_TIMOTHY_1 ===
 Name: TIMOTHY
@@ -24176,11 +24817,91 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Hariyama
+Hariyama (M) @ Sitrus Berry
 Level: 27
-IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+Ability: Guts
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Shiny: No
+- Knock Off
+- Close Combat
+- Fake Out
+- Heavy Slam
+
+Primeape (F) @ Eviolite
+Level: 27
+Ability: Vital Spirit
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Shiny: No
+- Ice Punch
+- Close Combat
+- U-turn
+- Bulk Up
+
+Hitmontop (M) @ Leftovers
+Level: 27
+Ability: Intimidate
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Shiny: No
+- Rapid Spin
+- Close Combat
+- Triple Axel
+- Sucker Punch
+
+Hawlucha (F) @ Flying Gem
+Level: 27
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Shiny: No
+- Acrobatics
+- Swords Dance
+- High Jump Kick
+- Roost
+
+Crabominable (F) @ Assault Vest
+Level: 27
+Ability: Iron Fist
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Shiny: No
+- Ice Hammer
+- Close Combat
+- Stone Edge
+- Mach Punch
+
+Toxicroak (M) @ Black Sludge
+Level: 27
+Ability: Dry Skin
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Shiny: No
+- Poison Jab
+- Drain Punch
+- Sucker Punch
+- Swords Dance
 
 === TRAINER_TIMOTHY_2 ===
 Name: TIMOTHY
@@ -24189,15 +24910,91 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Hariyama
+Hariyama (F) @ Sitrus Berry
 Level: 33
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Arm Thrust
+Ability: Thick Fat
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Shiny: No
+- Heavy Slam
+- Close Combat
+- Bullet Punch
+- Fake Out
+
+Annihilape (M) @ Leftovers
+Level: 33
+Ability: Defiant
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Shiny: No
+- Rage Fist
+- Close Combat
+- U-turn
+- Ice Punch
+
+Falinks (M) @ Wide Lens
+Level: 33
+Ability: Battle Armor
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 HP / 0 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Shiny: No
+- No Retreat
+- Iron Head
+- Close Combat
+- Megahorn
+
+Gallade (M) @ Choice Scarf
+Level: 33
+Ability: Steadfast
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Shiny: No
+- Psycho Cut
+- Close Combat
+- Leaf Blade
+- Night Slash
+
+Heracross (F) @ Flame Orb
+Level: 33
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Nest Ball
+Shiny: No
+- Megahorn
+- Close Combat
+- Facade
 - Knock Off
-- Sand Attack
-- Dig
+
+Lucario (M) @ Focus Sash
+Level: 33
+Ability: Inner Focus
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Premier Ball
+Shiny: No
+- Aura Sphere
+- Flash Cannon
+- Dark Pulse
+- Nasty Plot
 
 === TRAINER_TIMOTHY_3 ===
 Name: TIMOTHY
@@ -24206,15 +25003,91 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Hariyama
-Level: 36
-IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Arm Thrust
+Hariyama (M) @ Sitrus Berry
+Level: 39
+Ability: Guts
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Shiny: No
+- Close Combat
 - Knock Off
-- Sand Attack
-- Dig
+- Fake Out
+- Heavy Slam
+
+Iron Hands (F) @ Assault Vest
+Level: 39
+Ability: Quark Drive
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD / 0 Def / 0 SpA / 0 Spe
+Dynamax Level: 10
+Ball: Heavy Ball
+Shiny: No
+- Drain Punch
+- Wild Charge
+- Ice Punch
+- Fake Out
+
+Gallade (M) @ Galladite
+Level: 39
+Ability: Steadfast
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Shiny: Yes
+- Close Combat
+- Psycho Cut
+- Knock Off
+- Swords Dance
+
+Annihilape (F) @ Leftovers
+Level: 39
+Ability: Defiant
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Shiny: No
+- Rage Fist
+- Close Combat
+- U-turn
+- Bulk Up
+
+Mienshao (F) @ Life Orb
+Level: 39
+Ability: Regenerator
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Fast Ball
+Shiny: No
+- High Jump Kick
+- U-turn
+- Knock Off
+- Stone Edge
+
+Lucario (M) @ Lucarionite
+Level: 39
+Ability: Inner Focus
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Premier Ball
+Shiny: Yes
+- Aura Sphere
+- Flash Cannon
+- Dark Pulse
+- Nasty Plot
 
 === TRAINER_TIMOTHY_4 ===
 Name: TIMOTHY
@@ -24223,15 +25096,91 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Hariyama
-Level: 39
-IVs: 27 HP / 27 Atk / 27 Def / 27 SpA / 27 SpD / 27 Spe
-- Arm Thrust
-- Belly Drum
-- Sand Attack
-- Dig
+Hariyama (F) @ Sitrus Berry
+Level: 45
+Ability: Guts
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Shiny: No
+- Close Combat
+- Knock Off
+- Bullet Punch
+- Heavy Slam
+
+Iron Hands (M) @ Assault Vest
+Level: 45
+Ability: Quark Drive
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD / 0 Def / 0 SpA / 0 Spe
+Dynamax Level: 10
+Ball: Heavy Ball
+Shiny: No
+- Drain Punch
+- Wild Charge
+- Ice Punch
+- Fake Out
+
+Gallade (M) @ Galladite
+Level: 45
+Ability: Steadfast
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Shiny: Yes
+- Close Combat
+- Psycho Cut
+- Leaf Blade
+- Swords Dance
+
+Annihilape (F) @ Leftovers
+Level: 45
+Ability: Defiant
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Shiny: No
+- Rage Fist
+- Close Combat
+- U-turn
+- Bulk Up
+
+Mienshao (M) @ Life Orb
+Level: 45
+Ability: Regenerator
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Fast Ball
+Shiny: No
+- High Jump Kick
+- U-turn
+- Knock Off
+- Stone Edge
+
+Lucario (M) @ Lucarionite
+Level: 45
+Ability: Inner Focus
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Premier Ball
+Shiny: Yes
+- Aura Sphere
+- Flash Cannon
+- Dark Pulse
+- Nasty Plot
 
 === TRAINER_TIMOTHY_5 ===
 Name: TIMOTHY
@@ -24240,15 +25189,91 @@ Pic: Expert M
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Hariyama
-Level: 42
-IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
-- Arm Thrust
-- Belly Drum
-- Sand Attack
-- Dig
+Hariyama (M) @ Sitrus Berry
+Level: 52
+Ability: Guts
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Shiny: No
+- Close Combat
+- Knock Off
+- Bullet Punch
+- Heavy Slam
+
+Iron Hands (F) @ Assault Vest
+Level: 52
+Ability: Quark Drive
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD / 0 Def / 0 SpA / 0 Spe
+Dynamax Level: 10
+Ball: Heavy Ball
+Shiny: No
+- Drain Punch
+- Wild Charge
+- Ice Punch
+- Fake Out
+
+Gallade (M) @ Galladite
+Level: 52
+Ability: Steadfast
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Shiny: Yes
+- Close Combat
+- Psycho Cut
+- Leaf Blade
+- Swords Dance
+
+Annihilape (F) @ Leftovers
+Level: 52
+Ability: Defiant
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Shiny: No
+- Rage Fist
+- Close Combat
+- U-turn
+- Bulk Up
+
+Mienshao (M) @ Life Orb
+Level: 52
+Ability: Regenerator
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Fast Ball
+Shiny: No
+- High Jump Kick
+- U-turn
+- Knock Off
+- Stone Edge
+
+Lucario (M) @ Lucarionite
+Level: 52
+Ability: Inner Focus
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Premier Ball
+Shiny: Yes
+- Aura Sphere
+- Flash Cannon
+- Dark Pulse
+- Nasty Plot
 
 === TRAINER_VICKY ===
 Name: VICKY
@@ -24257,15 +25282,97 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Meditite
-Level: 18
-IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+Meditite (F) @ Light Clay
+Level: 48
+Ability: Pure Power
+Nature: Jolly
+Shiny: No
+Ball: Ultra Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Psychic
+- Fake Out
+- Drain Punch
+- Reflect
+- Light Screen
+
+Gallade (M) @ Choice Scarf
+Level: 48
+Ability: Sharpness
+Nature: Adamant
+Shiny: No
+Ball: Ultra Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Fairy
+- Close Combat
+- Psycho Cut
+- Knock Off
+- Sacred Sword
+
+Medicham (F) @ Medichamite
+Level: 50
+Ability: Pure Power
+Nature: Jolly
+Shiny: Yes
+Ball: Premier Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Psychic
 - High Jump Kick
-- Meditate
-- Confusion
-- Detect
+- Zen Headbutt
+- Ice Punch
+- Bullet Punch
+
+Lucario (M) @ Life Orb
+Level: 48
+Ability: Inner Focus
+Nature: Timid
+Shiny: No
+Ball: Dusk Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 Atk / 252 SpA / 252 Spe
+Tera Type: Steel
+- Aura Sphere
+- Flash Cannon
+- Vacuum Wave
+- Dark Pulse
+
+Toxicroak (M) @ Black Sludge
+Level: 48
+Ability: Dry Skin
+Nature: Adamant
+Shiny: No
+Ball: Timer Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Poison
+- Drain Punch
+- Gunk Shot
+- Sucker Punch
+- Ice Punch
+
+Indeedee-F @ Psychic Seed
+Level: 48
+Ability: Psychic Surge
+Nature: Calm
+Shiny: No
+Ball: Heal Ball
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+Tera Type: Fairy
+- Expanding Force
+- Helping Hand
+- Follow Me
+- Heal Pulse
 
 === TRAINER_SHELBY_1 ===
 Name: SHELBY
@@ -24274,15 +25381,97 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Meditite
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+Meditite (F) @ Eviolite
+Level: 35
+Ability: Pure Power
+Nature: Jolly
+Shiny: No
+Ball: Poke Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Psychic
+- Drain Punch
+- Zen Headbutt
+- Fake Out
+- Thunder Punch
 
-Makuhita
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+Makuhita (F) @ Sitrus Berry
+Level: 35
+Ability: Thick Fat
+Nature: Adamant
+Shiny: No
+Ball: Great Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def
+Tera Type: Fighting
+- Close Combat
+- Bullet Punch
+- Knock Off
+- Belly Drum
+
+Riolu (F) @ Focus Sash
+Level: 35
+Ability: Inner Focus
+Nature: Jolly
+Shiny: No
+Ball: Quick Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Steel
+- High Jump Kick
+- Crunch
+- Swords Dance
+- Bullet Punch
+
+Throh (F) @ Black Belt
+Level: 35
+Ability: Guts
+Nature: Adamant
+Shiny: No
+Ball: Timer Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Tera Type: Fighting
+- Storm Throw
+- Ice Punch
+- Earthquake
+- Bulk Up
+
+Hitmontop (F) @ Leftovers
+Level: 35
+Ability: Intimidate
+Nature: Careful
+Shiny: No
+Ball: Premier Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 Def
+Tera Type: Fighting
+- Triple Axel
+- Mach Punch
+- Rapid Spin
+- Wide Guard
+
+Gurdurr (F) @ Eviolite
+Level: 35
+Ability: Guts
+Nature: Impish
+Shiny: No
+Ball: Nest Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def
+Tera Type: Fighting
+- Drain Punch
+- Knock Off
+- Rock Slide
+- Bulk Up
 
 === TRAINER_SHELBY_2 ===
 Name: SHELBY
@@ -24291,15 +25480,97 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Meditite
-Level: 30
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+Meditite (F) @ Eviolite
+Level: 42
+Ability: Pure Power
+Nature: Jolly
+Shiny: No
+Ball: Poke Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Psychic
+- Drain Punch
+- Zen Headbutt
+- Ice Punch
+- Fake Out
 
-Makuhita
-Level: 30
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+Makuhita (F) @ Sitrus Berry
+Level: 42
+Ability: Thick Fat
+Nature: Adamant
+Shiny: No
+Ball: Great Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def
+Tera Type: Fighting
+- Close Combat
+- Bullet Punch
+- Knock Off
+- Belly Drum
+
+Riolu (F) @ Focus Sash
+Level: 42
+Ability: Inner Focus
+Nature: Jolly
+Shiny: No
+Ball: Quick Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Steel
+- High Jump Kick
+- Crunch
+- Swords Dance
+- Bullet Punch
+
+Throh (F) @ Black Belt
+Level: 42
+Ability: Guts
+Nature: Adamant
+Shiny: No
+Ball: Timer Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Tera Type: Fighting
+- Storm Throw
+- Ice Punch
+- Earthquake
+- Bulk Up
+
+Hitmontop (F) @ Leftovers
+Level: 42
+Ability: Intimidate
+Nature: Careful
+Shiny: No
+Ball: Premier Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 Def
+Tera Type: Fighting
+- Triple Axel
+- Mach Punch
+- Rapid Spin
+- Wide Guard
+
+Gurdurr (F) @ Eviolite
+Level: 42
+Ability: Guts
+Nature: Impish
+Shiny: No
+Ball: Nest Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def
+Tera Type: Fighting
+- Drain Punch
+- Knock Off
+- Rock Slide
+- Bulk Up
 
 === TRAINER_SHELBY_3 ===
 Name: SHELBY
@@ -24308,15 +25579,97 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Medicham
-Level: 33
-IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+Medicham (F) @ Life Orb
+Level: 49
+Ability: Pure Power
+Nature: Jolly
+Shiny: No
+Ball: Poke Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Psychic
+- High Jump Kick
+- Zen Headbutt
+- Ice Punch
+- Fake Out
 
-Hariyama
-Level: 33
-IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
+Hariyama (F) @ Assault Vest
+Level: 49
+Ability: Thick Fat
+Nature: Adamant
+Shiny: No
+Ball: Great Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Tera Type: Fighting
+- Close Combat
+- Knock Off
+- Heavy Slam
+- Bullet Punch
+
+Gallade (F) @ Choice Scarf
+Level: 49
+Ability: Sharpness
+Nature: Adamant
+Shiny: No
+Ball: Timer Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Fairy
+- Close Combat
+- Psycho Cut
+- Knock Off
+- Sacred Sword
+
+Hawlucha (F) @ Focus Sash
+Level: 49
+Ability: Unburden
+Nature: Jolly
+Shiny: No
+Ball: Repeat Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Flying
+- Acrobatics
+- Swords Dance
+- High Jump Kick
+- Roost
+
+Toxicroak (F) @ Black Sludge
+Level: 49
+Ability: Dry Skin
+Nature: Adamant
+Shiny: No
+Ball: Quick Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Poison
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Ice Punch
+
+Primeape (F) @ Choice Band
+Level: 49
+Ability: Vital Spirit
+Nature: Jolly
+Shiny: No
+Ball: Ultra Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Fighting
+- Close Combat
+- U-turn
+- Ice Punch
+- Earthquake
 
 === TRAINER_SHELBY_4 ===
 Name: SHELBY
@@ -24325,15 +25678,97 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Medicham
-Level: 36
-IVs: 27 HP / 27 Atk / 27 Def / 27 SpA / 27 SpD / 27 Spe
+Medicham (F) @ Medichamite
+Level: 63
+Ability: Pure Power
+Nature: Jolly
+Shiny: Yes
+Ball: Premier Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Psychic
+- High Jump Kick
+- Zen Headbutt
+- Thunder Punch
+- Fake Out
 
-Hariyama
-Level: 36
-IVs: 27 HP / 27 Atk / 27 Def / 27 SpA / 27 SpD / 27 Spe
+Hariyama (F) @ Assault Vest
+Level: 63
+Ability: Thick Fat
+Nature: Adamant
+Shiny: No
+Ball: Ultra Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Tera Type: Fighting
+- Close Combat
+- Knock Off
+- Heavy Slam
+- Bullet Punch
+
+Gallade (F) @ Choice Scarf
+Level: 63
+Ability: Sharpness
+Nature: Adamant
+Shiny: No
+Ball: Timer Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Fairy
+- Close Combat
+- Psycho Cut
+- Knock Off
+- Sacred Sword
+
+Hawlucha (F) @ Focus Sash
+Level: 63
+Ability: Unburden
+Nature: Jolly
+Shiny: No
+Ball: Repeat Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Flying
+- Acrobatics
+- Swords Dance
+- High Jump Kick
+- Roost
+
+Toxicroak (F) @ Black Sludge
+Level: 63
+Ability: Dry Skin
+Nature: Adamant
+Shiny: No
+Ball: Quick Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Poison
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Ice Punch
+
+Annihilape (F) @ Choice Band
+Level: 63
+Ability: Defiant
+Nature: Jolly
+Shiny: No
+Ball: Ultra Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Ghost
+- Rage Fist
+- Close Combat
+- U-turn
+- Ice Punch
 
 === TRAINER_SHELBY_5 ===
 Name: SHELBY
@@ -24342,15 +25777,97 @@ Pic: Expert F
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Medicham
-Level: 39
-IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
+Medicham (F) @ Medichamite
+Level: 70
+Ability: Pure Power
+Nature: Jolly
+Shiny: Yes
+Ball: Premier Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Psychic
+- High Jump Kick
+- Zen Headbutt
+- Thunder Punch
+- Fake Out
 
-Hariyama
-Level: 39
-IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
+Hariyama (F) @ Assault Vest
+Level: 70
+Ability: Thick Fat
+Nature: Adamant
+Shiny: No
+Ball: Ultra Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+Tera Type: Fighting
+- Close Combat
+- Knock Off
+- Heavy Slam
+- Bullet Punch
+
+Lucario (F) @ Life Orb
+Level: 70
+Ability: Inner Focus
+Nature: Timid
+Shiny: No
+Ball: Dusk Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 Atk / 252 SpA / 252 Spe
+Tera Type: Steel
+- Aura Sphere
+- Flash Cannon
+- Dark Pulse
+- Extreme Speed
+
+Gallade (M) @ Choice Scarf
+Level: 70
+Ability: Sharpness
+Nature: Adamant
+Shiny: No
+Ball: Timer Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+Tera Type: Fairy
+- Close Combat
+- Psycho Cut
+- Knock Off
+- Sacred Sword
+
+Hawlucha (F) @ Focus Sash
+Level: 70
+Ability: Unburden
+Nature: Jolly
+Shiny: No
+Ball: Repeat Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Flying
+- Acrobatics
+- Swords Dance
+- High Jump Kick
+- Roost
+
+Toxicroak (M) @ Black Sludge
+Level: 70
+Ability: Dry Skin
+Nature: Adamant
+Shiny: No
+Ball: Quick Ball
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+Tera Type: Poison
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Ice Punch
 
 === TRAINER_CALVIN_1 ===
 Name: CALVIN
@@ -24359,11 +25876,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Poochyena
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Poochyena (M) @ Oran Berry
+Level: 13
+Ability: Quick Feet
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Shiny: No
+Tera Type: Dark
+- Bite
+- Howl
+- Sand Attack
+- Quick Attack
+
+Fletchling (F) @ Oran Berry
+Level: 13
+Ability: Gale Wings
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Shiny: No
+Tera Type: Flying
+- Peck
+- Quick Attack
+- Tailwind
+- Growl
+
+Yungoos (M) @ Oran Berry
+Level: 13
+Ability: Strong Jaw
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Shiny: No
+Tera Type: Normal
+- Tackle
+- Leer
+- Pursuit
+- Sand Attack
+
+Shinx (F) @ Oran Berry
+Level: 13
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Shiny: No
+Tera Type: Electric
+- Spark
+- Leer
+- Charge
+- Tackle
+
+Rookidee (M) @ Oran Berry
+Level: 13
+Ability: Keen Eye
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Shiny: No
+Tera Type: Flying
+- Peck
+- Leer
+- Power Trip
+- Hone Claws
+
+Zigzagoon-Galar (F) @ Oran Berry
+Level: 13
+Ability: Pickup
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Shiny: No
+Tera Type: Dark
+- Tackle
+- Sand Attack
+- Lick
+- Baby-Doll Eyes
 
 === TRAINER_BILLY ===
 Name: BILLY
@@ -24372,15 +25975,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Zigzagoon
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Zigzagoon (M) @ Oran Berry  
+Level: 13  
+Ability: Pickup  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Normal  
+Dynamax Level: 10  
+- Headbutt  
+- Sand Attack  
+- Growl  
+- Thunderbolt  
 
-Seedot
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Seedot (F) @ Oran Berry  
+Level: 13  
+Ability: Chlorophyll  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Grass  
+Dynamax Level: 10  
+- Bullet Seed  
+- Growth  
+- Harden  
+- Sunny Day  
+
+Poochyena (M) @ Oran Berry  
+Level: 13  
+Ability: Run Away  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Dark  
+Dynamax Level: 10  
+- Tackle  
+- Howl  
+- Sand Attack  
+- Bite  
+
+Taillow (F) @ Oran Berry  
+Level: 13  
+Ability: Guts  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Flying  
+Dynamax Level: 10  
+- Peck  
+- Growl  
+- Quick Attack  
+- Wing Attack  
+
+Lotad (M) @ Oran Berry  
+Level: 13  
+Ability: Swift Swim  
+Nature: Modest  
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Water  
+Dynamax Level: 10  
+- Water Gun  
+- Absorb  
+- Astonish  
+- Growl  
+
+Wurmple (F) @ Oran Berry  
+Level: 13  
+Ability: Shield Dust  
+Nature: Timid  
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Bug  
+Dynamax Level: 10  
+- Tackle  
+- String Shot  
+- Poison Sting  
+- Bug Bite  
 
 === TRAINER_JOSH ===
 Name: JOSH
@@ -24389,12 +26074,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Geodude
-Level: 10
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
+Geodude (M) @ Hard Stone  
+Level: 15  
+Ability: Sturdy  
+Nature: Impish  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 HP / 252 Def / 4 SpD / 0 Atk / 0 SpA / 0 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Rock  
+Dynamax Level: 10  
+- Tackle  
+- Rock Throw  
+- Defense Curl  
+- Magnitude  
+
+Mudbray (F) @ Oran Berry  
+Level: 15  
+Ability: Stamina  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 Atk / 0 HP / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Ground  
+Dynamax Level: 10  
+- Mud-Slap  
+- Bulldoze  
+- Double Kick  
+- Rock Smash  
+
+Roggenrola (M) @ Oran Berry  
+Level: 15  
+Ability: Sturdy  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 Atk / 0 HP / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Rock  
+Dynamax Level: 10  
+- Rock Blast  
+- Tackle  
+- Harden  
+- Headbutt  
+
+Sandshrew (F) @ Oran Berry  
+Level: 15  
+Ability: Sand Veil  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Ground  
+Dynamax Level: 10  
+- Scratch  
+- Defense Curl  
+- Sand Attack  
+- Rollout  
+
+Onix (M) @ Oran Berry  
+Level: 15  
+Ability: Sturdy  
+Nature: Impish  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 HP / 252 Def / 4 SpD / 0 Atk / 0 SpA / 0 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Rock  
+Dynamax Level: 10  
+- Rock Throw  
+- Bind  
+- Screech  
+- Rock Polish  
+
+Wooper-Paldea (F) @ Oran Berry  
+Level: 15  
+Ability: Water Absorb  
+Nature: Careful  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Poison  
+Dynamax Level: 10  
+- Mud Shot  
+- Poison Tail  
+- Tail Whip  
+- Slam  
 
 === TRAINER_TOMMY ===
 Name: TOMMY
@@ -24403,15 +26173,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Geodude
-Level: 8
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Geodude (F) @ Hard Stone  
+Level: 13  
+Ability: Sturdy  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 Atk / 0 HP / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Rock  
+Dynamax Level: 10  
+- Rock Throw  
+- Defense Curl  
+- Tackle  
+- Rollout  
 
-Geodude
-Level: 8
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Machop (M) @ Oran Berry  
+Level: 13  
+Ability: Guts  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Fighting  
+Dynamax Level: 10  
+- Low Kick  
+- Karate Chop  
+- Focus Energy  
+- Leer  
+
+Cubone (M) @ Thick Club  
+Level: 13  
+Ability: Rock Head  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 Atk / 0 HP / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Ground  
+Dynamax Level: 10  
+- Bone Club  
+- Headbutt  
+- Growl  
+- Tail Whip  
+
+Wooper (F) @ Oran Berry  
+Level: 13  
+Ability: Water Absorb  
+Nature: Careful  
+IVs: 31 HP / 0 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Water  
+Dynamax Level: 10  
+- Water Gun  
+- Mud Shot  
+- Slam  
+- Tail Whip  
+
+Roggenrola (F) @ Oran Berry  
+Level: 13  
+Ability: Sturdy  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 Atk / 0 HP / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Rock  
+Dynamax Level: 10  
+- Tackle  
+- Rock Blast  
+- Harden  
+- Sand Attack  
+
+Baltoy (M) @ Oran Berry  
+Level: 13  
+Ability: Levitate  
+Nature: Bold  
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe  
+Ball: Poké Ball  
+Shiny: No  
+Tera Type: Ground  
+Dynamax Level: 10  
+- Confusion  
+- Rapid Spin  
+- Harden  
+- Mud-Slap  
 
 === TRAINER_JOEY ===
 Name: JOEY
@@ -24420,11 +26272,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Machop
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Machop (M) @ Oran Berry
+Level: 12
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Fighting
+Dynamax Level: 10
+- Karate Chop
+- Focus Energy
+- Leer
+- Low Sweep
+
+Pawniard (M) @ Oran Berry
+Level: 12
+Ability: Defiant
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Steel
+Dynamax Level: 10
+- Metal Claw
+- Scratch
+- Leer
+- Fury Cutter
+
+Zubat (F) @ Oran Berry
+Level: 12
+Ability: Inner Focus
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Wing Attack
+- Bite
+- Supersonic
+- Astonish
+
+Bunnelby (M) @ Oran Berry
+Level: 12
+Ability: Huge Power
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Quick Attack
+- Tackle
+- Mud Slap
+- Leer
+
+Diglett (Alola) (F) @ Oran Berry
+Level: 12
+Ability: Tangling Hair
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Steel
+Dynamax Level: 10
+- Metal Claw
+- Mud-Slap
+- Astonish
+- Growl
+
+Nacli (M) @ Oran Berry
+Level: 12
+Ability: Purifying Salt
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD / 0 Atk / 0 SpA / 0 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Rock
+Dynamax Level: 10
+- Rock Throw
+- Harden
+- Tackle
+- Mud-Slap
 
 === TRAINER_BEN ===
 Name: BEN
@@ -24433,23 +26371,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Zigzagoon
-Level: 17
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Zigzagoon (Galar) (M) @ Oran Berry
+Level: 16
+Ability: Pickup
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
 - Headbutt
-- Sand Attack
-- Growl
+- Baby-Doll Eyes
+- Pin Missile
 - Thunderbolt
 
-Gulpin
-Level: 17
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-- Amnesia
+Gulpin (F) @ Oran Berry
+Level: 16
+Ability: Liquid Ooze
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
 - Sludge
 - Yawn
+- Amnesia
 - Pound
+
+Rookidee (M) @ Oran Berry
+Level: 16
+Ability: Keen Eye
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Peck
+- Leer
+- Power Trip
+- Fury Attack
+
+Poochyena (F) @ Oran Berry
+Level: 16
+Ability: Run Away
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Bite
+- Howl
+- Sand Attack
+- Tackle
+
+Fletchling (M) @ Oran Berry
+Level: 16
+Ability: Gale Wings
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Peck
+- Quick Attack
+- Tackle
+- Growl
+
+Lechonk (F) @ Oran Berry
+Level: 16
+Ability: Aroma Veil
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Tackle
+- Tail Whip
+- Mud-Slap
+- Disarming Voice
 
 === TRAINER_QUINCY ===
 Name: QUINCY
@@ -24459,23 +26471,97 @@ Gender: Male
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Slaking
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Attract
-- Ice Beam
-- Thunderbolt
+Slaking (M) @ Sitrus Berry
+Level: 50
+Ability: Truant
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe / 0 Def / 0 SpA / 0 SpD
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Return
+- Ice Punch
+- Thunder Punch
 - Flamethrower
 
-Dusclops
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Dusclops (M) @ Eviolite
+Level: 50
+Ability: Frisk
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Ball: Dusk Ball
+Shiny: No
+Tera Type: Ghost
+Dynamax Level: 10
 - Skill Swap
+- Will-O-Wisp
 - Protect
-- Will O Wisp
-- Toxic
+- Shadow Punch
+
+Braviary-Hisui (M) @ Choice Scarf
+Level: 50
+Ability: Sheer Force
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Psychic
+Dynamax Level: 10
+- Brave Bird
+- Psychic
+- Shadow Ball
+- U-turn
+
+Garchomp (M) @ Yache Berry
+Level: 50
+Ability: Rough Skin
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Earthquake
+- Dragon Claw
+- Stone Edge
+- Swords Dance
+
+Incineroar (M) @ Figy Berry
+Level: 50
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 252 SpD / 4 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Flare Blitz
+- Knock Off
+- Parting Shot
+- Fake Out
+
+Lycanroc-Midnight (M) @ Focus Sash
+Level: 50
+Ability: No Guard
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dusk Ball
+Shiny: No
+Tera Type: Rock
+Dynamax Level: 10
+- Stone Edge
+- Sucker Punch
+- Fire Fang
+- Taunt
 
 === TRAINER_KATELYNN ===
 Name: KATELYNN
@@ -24485,23 +26571,97 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Gardevoir
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Skill Swap
+Gardevoir (F) @ Leftovers
+Level: 50
+Ability: Trace
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Fairy
+Dynamax Level: 10
 - Psychic
+- Moonblast
 - Thunderbolt
 - Calm Mind
 
-Slaking
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Slaking (F) @ Sitrus Berry
+Level: 50
+Ability: Truant
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe / 0 Def / 0 SpA / 0 SpD
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
 - Earthquake
+- Shadow Claw
+- Rock Slide
+- Bulk Up
+
+Alcremie (F) @ Kee Berry
+Level: 50
+Ability: Sweet Veil
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 0 Atk / 0 SpA / 0 SpD / 4 Spe
+Ball: Heal Ball
+Shiny: No
+Tera Type: Fairy
+Dynamax Level: 10
+- Dazzling Gleam
+- Mystical Fire
+- Recover
+- Calm Mind
+
+Gallade (M) @ Choice Scarf
+Level: 50
+Ability: Steadfast
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Fighting
+Dynamax Level: 10
+- Close Combat
+- Psycho Cut
+- Night Slash
+- Leaf Blade
+
+Glaceon (F) @ Icy Rock
+Level: 50
+Ability: Snow Cloak
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ice
+Dynamax Level: 10
+- Ice Beam
 - Shadow Ball
-- Aerial Ace
-- Brick Break
+- Water Pulse
+- Hail
+
+Sylveon (F) @ Throat Spray
+Level: 50
+Ability: Pixilate
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Ball: Luxury Ball
+Shiny: No
+Tera Type: Fairy
+Dynamax Level: 10
+- Hyper Voice
+- Mystical Fire
+- Shadow Ball
+- Quick Attack
 
 === TRAINER_JAYLEN ===
 Name: JAYLEN
@@ -24510,11 +26670,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Trapinch
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Trapinch (M) @ Oran Berry
+Level: 22
+Ability: Arena Trap
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Bulldoze
+- Bite
+- Rock Slide
+- Sand Attack
+
+Gible (M) @ Oran Berry
+Level: 22
+Ability: Sand Veil
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Dragon
+Dynamax Level: 10
+- Dragon Claw
+- Dig
+- Sandstorm
+- Tackle
+
+Axew (M) @ Oran Berry
+Level: 22
+Ability: Mold Breaker
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Dragon
+Dynamax Level: 10
+- Dual Chop
+- Bite
+- Dragon Dance
+- Leer
+
+Phanpy (M) @ Oran Berry
+Level: 22
+Ability: Pickup
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 0 SpD / 4 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Bulldoze
+- Defense Curl
+- Tackle
+- Rollout
+
+Hippopotas (M) @ Oran Berry
+Level: 22
+Ability: Sand Stream
+Nature: Careful
+IVs: 31 HP / 0 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 0 Atk / 0 SpA / 4 SpD / 0 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Sand Tomb
+- Yawn
+- Crunch
+- Stealth Rock
+
+Sandile (M) @ Oran Berry
+Level: 22
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Bite
+- Bulldoze
+- Leer
+- Torment
 
 === TRAINER_DILLON ===
 Name: DILLON
@@ -24523,11 +26769,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Aron
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Aron (M) @ Oran Berry
+Level: 22
+Ability: Sturdy
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 4 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Steel
+Dynamax Level: 10
+- Iron Head
+- Rock Tomb
+- Headbutt
+- Protect
+
+Tinkatink (F) @ Oran Berry
+Level: 22
+Ability: Own Tempo
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Fairy
+Dynamax Level: 10
+- Play Rough
+- Metal Claw
+- Fake Out
+- Covet
+
+Rockruff (M) @ Oran Berry
+Level: 22
+Ability: Own Tempo
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Rock
+Dynamax Level: 10
+- Rock Slide
+- Bite
+- Howl
+- Sand Attack
+
+Teddiursa (M) @ Oran Berry
+Level: 22
+Ability: Quick Feet
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Play Rough
+- Slash
+- Baby-Doll Eyes
+- Charm
+
+Larvitar (M) @ Oran Berry
+Level: 22
+Ability: Guts
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Rock
+Dynamax Level: 10
+- Rock Slide
+- Bite
+- Leer
+- Sandstorm
+
+Cubone (M) @ Oran Berry
+Level: 22
+Ability: Lightning Rod
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Fire
+Dynamax Level: 10
+- Flame Wheel
+- Bone Club
+- Growl
+- Headbutt
 
 === TRAINER_CALVIN_2 ===
 Name: CALVIN
@@ -24536,11 +26868,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Mightyena
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Mightyena (M) @ Sitrus Berry
+Level: 42
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Crunch
+- Play Rough
+- Fire Fang
+- Howl
+
+Pidgeot (M) @ Leftovers
+Level: 42
+Ability: Keen Eye
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Brave Bird
+- U-turn
+- Roost
+- Quick Attack
+
+Boltund (M) @ Life Orb
+Level: 42
+Ability: Strong Jaw
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Electric
+Dynamax Level: 10
+- Wild Charge
+- Play Rough
+- Crunch
+- Fire Fang
+
+Zangoose (M) @ Sitrus Berry
+Level: 42
+Ability: Immunity
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Timer Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Close Combat
+- Facade
+- Knock Off
+- Swords Dance
+
+Obstagoon (M) @ Flame Orb
+Level: 42
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Obstruct
+- Facade
+- Knock Off
+- Close Combat
+
+Luxray (M) @ Choice Band
+Level: 42
+Ability: Guts
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Electric
+Dynamax Level: 10
+- Wild Charge
+- Crunch
+- Play Rough
+- Ice Fang
 
 === TRAINER_CALVIN_3 ===
 Name: CALVIN
@@ -24549,15 +26967,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Swellow
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Swellow (F) @ Flame Orb
+Level: 46
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Facade
+- Brave Bird
+- U-turn
+- Protect
 
-Mightyena
-Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Mightyena (F) @ Black Glasses
+Level: 46
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dusk Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Crunch
+- Fire Fang
+- Play Rough
+- Sucker Punch
+
+Boltund (F) @ Magnet
+Level: 46
+Ability: Strong Jaw
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Electric
+Dynamax Level: 10
+- Thunderbolt
+- Nuzzle
+- Play Rough
+- Crunch
+
+Obstagoon (M) @ Sitrus Berry
+Level: 46
+Ability: Guts
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Timer Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Obstruct
+- Facade
+- Close Combat
+- Knock Off
+
+Linoone (F) @ Sitrus Berry
+Level: 46
+Ability: Gluttony
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Belly Drum
+- Extreme Speed
+- Seed Bomb
+- Play Rough
+
+Arcanine-Hisui (M) @ Choice Band
+Level: 46
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Fire
+Dynamax Level: 10
+- Flare Blitz
+- Rock Slide
+- Extreme Speed
+- Wild Charge
 
 === TRAINER_CALVIN_4 ===
 Name: CALVIN
@@ -24566,19 +27066,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Swellow
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Swellow (M) @ Flame Orb
+Level: 50
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Brave Bird
+- Facade
+- U-turn
+- Protect
 
-Linoone
-Level: 29
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Linoone (F) @ Sitrus Berry
+Level: 50
+Ability: Gluttony
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Belly Drum
+- Extreme Speed
+- Play Rough
+- Seed Bomb
 
-Mightyena
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Mightyena (F) @ Black Glasses
+Level: 50
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dusk Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Crunch
+- Play Rough
+- Fire Fang
+- Howl
+
+Obstagoon (M) @ Flame Orb
+Level: 50
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Timer Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Obstruct
+- Facade
+- Knock Off
+- Close Combat
+
+Boltund (M) @ Magnet
+Level: 50
+Ability: Strong Jaw
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Electric
+Dynamax Level: 10
+- Wild Charge
+- Play Rough
+- Crunch
+- Fire Fang
+
+Arcanine (M) @ Choice Band
+Level: 50
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Fire
+Dynamax Level: 10
+- Flare Blitz
+- Wild Charge
+- Close Combat
+- Extreme Speed
 
 === TRAINER_CALVIN_5 ===
 Name: CALVIN
@@ -24587,19 +27165,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Swellow
-Level: 34
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Swellow (F) @ Flame Orb
+Level: 54
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Facade
+- Brave Bird
+- Quick Attack
+- U-turn
 
-Linoone
-Level: 32
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Linoone (F) @ Sitrus Berry
+Level: 54
+Ability: Gluttony
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Belly Drum
+- Extreme Speed
+- Play Rough
+- Seed Bomb
 
-Mightyena
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Mightyena (M) @ Black Glasses
+Level: 54
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dusk Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Crunch
+- Fire Fang
+- Play Rough
+- Sucker Punch
+
+Obstagoon (M) @ Flame Orb
+Level: 54
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Timer Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Obstruct
+- Facade
+- Knock Off
+- Close Combat
+
+Boltund (M) @ Magnet
+Level: 54
+Ability: Strong Jaw
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Electric
+Dynamax Level: 10
+- Wild Charge
+- Play Rough
+- Crunch
+- Fire Fang
+
+Arcanine-Hisui (M) @ Choice Band
+Level: 54
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Rock
+Dynamax Level: 10
+- Flare Blitz
+- Rock Slide
+- Wild Charge
+- Crunch
 
 === TRAINER_EDDIE ===
 Name: EDDIE
@@ -24608,15 +27264,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Zigzagoon
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Zigzagoon (M) @ Sitrus Berry
+Level: 41
+Ability: Pickup
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poke Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Facade
+- Play Rough
+- Belly Drum
+- Shadow Claw
 
-Zigzagoon
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Zigzagoon-Galar (M) @ Sitrus Berry
+Level: 41
+Ability: Pickup
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Knock Off
+- Play Rough
+- Belly Drum
+- Headbutt
+
+Linoone (M) @ Sitrus Berry
+Level: 41
+Ability: Gluttony
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Extreme Speed
+- Play Rough
+- Belly Drum
+- Seed Bomb
+
+Linoone-Galar (M) @ Sitrus Berry
+Level: 41
+Ability: Gluttony
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dusk Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Knock Off
+- Belly Drum
+- Extreme Speed
+- Seed Bomb
+
+Obstagoon (M) @ Flame Orb
+Level: 41
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Obstruct
+- Facade
+- Knock Off
+- Close Combat
+
+Persian-Alola (M) @ Black Glasses
+Level: 41
+Ability: Fur Coat
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Luxury Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Dark Pulse
+- Nasty Plot
+- Power Gem
+- Hyper Voice
 
 === TRAINER_ALLEN ===
 Name: ALLEN
@@ -24625,15 +27363,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Zigzagoon
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Zigzagoon (M) @ Sitrus Berry
+Level: 22
+Ability: Pickup
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poke Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Facade
+- Baby-Doll Eyes
+- Headbutt
+- Shadow Claw
 
-Taillow
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Taillow (F) @ Sharp Beak
+Level: 22
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Brave Bird
+- U-turn
+- Quick Attack
+- Facade
+
+Poochyena (M) @ Black Glasses
+Level: 22
+Ability: Quick Feet
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Crunch
+- Fire Fang
+- Play Rough
+- Sucker Punch
+
+Seedot (M) @ Eviolite
+Level: 22
+Ability: Chlorophyll
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Grass
+Dynamax Level: 10
+- Bullet Seed
+- Leech Seed
+- Explosion
+- Sunny Day
+
+Lotad (M) @ Leftovers
+Level: 22
+Ability: Rain Dish
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Giga Drain
+- Scald
+- Rain Dance
+- Protect
+
+Linoone (M) @ Sitrus Berry
+Level: 22
+Ability: Gluttony
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Luxury Ball
+Shiny: No
+Tera Type: Normal
+Dynamax Level: 10
+- Extreme Speed
+- Play Rough
+- Shadow Claw
+- Belly Drum
 
 === TRAINER_TIMMY ===
 Name: TIMMY
@@ -24642,15 +27462,97 @@ Pic: Youngster
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Aron
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Aron (M) @ Eviolite
+Level: 36
+Ability: Sturdy
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 0 Atk / 0 SpA / 0 SpD / 4 Spe
+Ball: Dusk Ball
+Shiny: No
+Tera Type: Steel
+Dynamax Level: 10
+- Iron Head
+- Stealth Rock
+- Body Press
+- Roar
 
-Electrike
-Level: 13
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Electrike (M) @ Shuca Berry
+Level: 36
+Ability: Lightning Rod
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Electric
+Dynamax Level: 10
+- Thunderbolt
+- Flamethrower
+- Volt Switch
+- Thunder Wave
+
+Manectric (M) @ Manectite
+Level: 36
+Ability: Lightning Rod
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: Yes
+Tera Type: Electric
+Dynamax Level: 10
+- Thunderbolt
+- Flamethrower
+- Volt Switch
+- Hidden Power Ice
+
+Magnezone @ Air Balloon
+Level: 36
+Ability: Sturdy
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 Def / 0 Atk / 0 SpD / 0 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Steel
+Dynamax Level: 10
+- Flash Cannon
+- Thunderbolt
+- Volt Switch
+- Tri Attack
+
+Aggron (M) @ Leftovers
+Level: 36
+Ability: Rock Head
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 0 Atk / 0 SpA / 0 SpD / 4 Spe
+Ball: Timer Ball
+Shiny: No
+Tera Type: Steel
+Dynamax Level: 10
+- Heavy Slam
+- Body Press
+- Stealth Rock
+- Thunder Wave
+
+Luxray (M) @ Choice Band
+Level: 36
+Ability: Guts
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Luxury Ball
+Shiny: No
+Tera Type: Electric
+Dynamax Level: 10
+- Wild Charge
+- Play Rough
+- Crunch
+- Ice Fang
 
 === TRAINER_WALLACE ===
 Name: WALLACE
@@ -24760,19 +27662,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Magikarp
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Magikarp (M) @ Focus Sash
+Level: 22
+Ability: Swift Swim
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poke Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Flail
+- Tackle
+- Bounce
+- Splash
 
-Tentacool
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tentacool (M) @ Black Sludge
+Level: 22
+Ability: Liquid Ooze
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Sludge Bomb
+- Scald
+- Rapid Spin
+- Acid Spray
 
-Magikarp
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Feebas (F) @ Leftovers
+Level: 22
+Ability: Oblivious
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Surf
+- Ice Beam
+- Hypnosis
+- Protect
+
+Barboach (M) @ Eviolite
+Level: 22
+Ability: Oblivious
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 252 SpD / 4 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Earthquake
+- Waterfall
+- Amnesia
+- Rest
+
+Goldeen (F) @ Mystic Water
+Level: 22
+Ability: Lightning Rod
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Poison Jab
+- Horn Attack
+- Agility
+
+Gyarados (M) @ Lum Berry
+Level: 22
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_IVAN ===
 Name: IVAN
@@ -24781,19 +27761,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Magikarp
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Magikarp (M) @ Focus Sash
+Level: 22
+Ability: Swift Swim
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poke Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Flail
+- Tackle
+- Bounce
+- Splash
 
-Magikarp
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Magikarp (F) @ Focus Sash
+Level: 22
+Ability: Rattled
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Tackle
+- Flail
+- Splash
+- Bounce
 
-Magikarp
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Barboach (M) @ Eviolite
+Level: 22
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Amnesia
+- Rest
+
+Remoraid (F) @ Mystic Water
+Level: 22
+Ability: Hustle
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Gun
+- Bullet Seed
+- Aurora Beam
+- Psybeam
+
+Finizen (M) @ Leftovers
+Level: 22
+Ability: Water Veil
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Aqua Jet
+- Flip Turn
+- Ice Punch
+- Double Hit
+
+Gyarados (M) @ Lum Berry
+Level: 22
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_CLAUDE ===
 Name: CLAUDE
@@ -24802,19 +27860,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Magikarp
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Magikarp (M) @ Focus Sash
+Level: 22
+Ability: Swift Swim
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poke Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Flail
+- Tackle
+- Bounce
+- Splash
 
-Goldeen
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Goldeen (F) @ Mystic Water
+Level: 22
+Ability: Lightning Rod
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Poison Jab
+- Horn Attack
+- Agility
 
-Barboach
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Barboach (M) @ Eviolite
+Level: 22
+Ability: Oblivious
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 252 SpD / 4 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Earthquake
+- Waterfall
+- Amnesia
+- Rest
+
+Finneon (F) @ Leftovers
+Level: 22
+Ability: Storm Drain
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Surf
+- Ice Beam
+- Attract
+- U-turn
+
+Remoraid (M) @ Expert Belt
+Level: 22
+Ability: Hustle
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Pulse
+- Bullet Seed
+- Aurora Beam
+- Psybeam
+
+Whiscash (F) @ Leftovers
+Level: 22
+Ability: Oblivious
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Rest
+- Sleep Talk
 
 === TRAINER_ELLIOT_1 ===
 Name: ELLIOT
@@ -24823,19 +27959,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Magikarp
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Magikarp (M) @ Focus Sash
+Level: 22
+Ability: Swift Swim
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poke Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Flail
+- Tackle
+- Bounce
+- Splash
 
-Tentacool
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tentacool (M) @ Black Sludge
+Level: 22
+Ability: Liquid Ooze
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Sludge Bomb
+- Scald
+- Rapid Spin
+- Acid Spray
 
-Magikarp
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Goldeen (F) @ Mystic Water
+Level: 22
+Ability: Lightning Rod
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Poison Jab
+- Horn Attack
+- Agility
+
+Barboach (M) @ Eviolite
+Level: 22
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Amnesia
+- Rest
+
+Feebas (F) @ Leftovers
+Level: 22
+Ability: Oblivious
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Surf
+- Ice Beam
+- Hypnosis
+- Protect
+
+Gyarados (M) @ Lum Berry
+Level: 22
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_NED ===
 Name: NED
@@ -24844,11 +28058,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Tentacool
-Level: 11
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Tentacool (M) @ Black Sludge
+Level: 22
+Ability: Liquid Ooze
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Sludge Bomb
+- Scald
+- Rapid Spin
+- Acid Spray
+
+Goldeen (F) @ Mystic Water
+Level: 22
+Ability: Lightning Rod
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Poison Jab
+- Horn Attack
+- Agility
+
+Barboach (M) @ Eviolite
+Level: 22
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Amnesia
+- Rest
+
+Feebas (F) @ Leftovers
+Level: 22
+Ability: Oblivious
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Surf
+- Ice Beam
+- Hypnosis
+- Protect
+
+Magikarp (M) @ Focus Sash
+Level: 22
+Ability: Swift Swim
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poke Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Flail
+- Tackle
+- Bounce
+- Splash
+
+Gyarados (M) @ Lum Berry
+Level: 22
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_DALE ===
 Name: DALE
@@ -24857,23 +28157,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Tentacool
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tentacool (M) @ Black Sludge
+Level: 22
+Ability: Liquid Ooze
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Sludge Bomb
+- Scald
+- Rapid Spin
+- Acid Spray
 
-Wailmer
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wailmer (M) @ Sitrus Berry
+Level: 22
+Ability: Water Veil
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Pulse
+- Ice Beam
+- Rest
+- Sleep Talk
 
-Tentacool
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tentacool (F) @ Black Sludge
+Level: 22
+Ability: Clear Body
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Toxic Spikes
+- Scald
+- Ice Beam
+- Acid Spray
 
-Wailmer
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wailmer (F) @ Sitrus Berry
+Level: 22
+Ability: Oblivious
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Pulse
+- Rest
+- Sleep Talk
+- Ice Beam
+
+Finizen (F) @ Leftovers
+Level: 22
+Ability: Water Veil
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Aqua Jet
+- Flip Turn
+- Ice Punch
+- Double Hit
+
+Gyarados (M) @ Lum Berry
+Level: 22
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_NOLAN ===
 Name: NOLAN
@@ -24882,11 +28256,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Barboach
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Barboach (M) @ Eviolite
+Level: 22
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Amnesia
+- Rest
+
+Goldeen (F) @ Mystic Water
+Level: 22
+Ability: Lightning Rod
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Poison Jab
+- Horn Attack
+- Agility
+
+Finneon (F) @ Leftovers
+Level: 22
+Ability: Storm Drain
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Surf
+- Ice Beam
+- Attract
+- U-turn
+
+Remoraid (M) @ Expert Belt
+Level: 22
+Ability: Hustle
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Pulse
+- Bullet Seed
+- Aurora Beam
+- Psybeam
+
+Feebas (F) @ Leftovers
+Level: 22
+Ability: Oblivious
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Surf
+- Ice Beam
+- Hypnosis
+- Protect
+
+Gyarados (M) @ Lum Berry
+Level: 22
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_BARNY ===
 Name: BARNY
@@ -24895,15 +28355,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Tentacool
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tentacool (M) @ Black Sludge
+Level: 22
+Ability: Liquid Ooze
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Sludge Bomb
+- Scald
+- Rapid Spin
+- Acid Spray
 
-Carvanha
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Carvanha (M) @ Focus Sash
+Level: 22
+Ability: Speed Boost
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Crunch
+- Aqua Jet
+- Ice Fang
+- Protect
+
+Remoraid (F) @ Expert Belt
+Level: 22
+Ability: Hustle
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Pulse
+- Aurora Beam
+- Psybeam
+- Bullet Seed
+
+Goldeen (M) @ Mystic Water
+Level: 22
+Ability: Lightning Rod
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Poison Jab
+- Megahorn
+- Agility
+
+Barboach (M) @ Eviolite
+Level: 22
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Amnesia
+- Rest
+
+Gyarados (M) @ Lum Berry
+Level: 22
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_WADE ===
 Name: WADE
@@ -24912,11 +28454,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Tentacool
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tentacool (F) @ Black Sludge
+Level: 22
+Ability: Liquid Ooze
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Toxic Spikes
+- Scald
+- Ice Beam
+- Acid Spray
+
+Finneon (M) @ Leftovers
+Level: 22
+Ability: Storm Drain
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Surf
+- Ice Beam
+- Attract
+- U-turn
+
+Remoraid (M) @ Expert Belt
+Level: 22
+Ability: Hustle
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Pulse
+- Aurora Beam
+- Psybeam
+- Bullet Seed
+
+Magikarp (M) @ Focus Sash
+Level: 22
+Ability: Swift Swim
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Poke Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Flail
+- Tackle
+- Bounce
+- Splash
+
+Barboach (F) @ Eviolite
+Level: 22
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Amnesia
+- Rest
+
+Gyarados (M) @ Lum Berry
+Level: 22
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_CARTER ===
 Name: CARTER
@@ -24925,15 +28553,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Wailmer
-Level: 25
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Wailmer (M) @ Sitrus Berry
+Level: 22
+Ability: Water Veil
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Pulse
+- Ice Beam
+- Rest
+- Sleep Talk
 
-Tentacruel
-Level: 25
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Tentacruel (M) @ Black Sludge
+Level: 22
+Ability: Liquid Ooze
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Sludge Bomb
+- Scald
+- Rapid Spin
+- Acid Spray
+
+Goldeen (F) @ Mystic Water
+Level: 22
+Ability: Lightning Rod
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Poison Jab
+- Horn Attack
+- Agility
+
+Barboach (M) @ Eviolite
+Level: 22
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Amnesia
+- Rest
+
+Remoraid (M) @ Expert Belt
+Level: 22
+Ability: Hustle
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Pulse
+- Aurora Beam
+- Psybeam
+- Bullet Seed
+
+Gyarados (M) @ Lum Berry
+Level: 22
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_ELLIOT_2 ===
 Name: ELLIOT
@@ -24942,19 +28652,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Tentacool
-Level: 24
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Pelipper (M) @ Damp Rock
+Level: 28
+Ability: Drizzle
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Scald
+- Hurricane
+- U-turn
+- Roost
 
-Gyarados
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Lanturn (F) @ Leftovers
+Level: 28
+Ability: Volt Absorb
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 32 Def / 220 SpD / 4 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Electric
+Dynamax Level: 10
+- Volt Switch
+- Scald
+- Ice Beam
+- Heal Bell
 
-Gyarados
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Barboach (M) @ Eviolite
+Level: 28
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Amnesia
+- Rest
+
+Tentacool (M) @ Black Sludge
+Level: 28
+Ability: Liquid Ooze
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Sludge Bomb
+- Scald
+- Rapid Spin
+- Acid Spray
+
+Remoraid (M) @ Expert Belt
+Level: 28
+Ability: Hustle
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Quick Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Pulse
+- Aurora Beam
+- Psybeam
+- Bullet Seed
+
+Gyarados (M) @ Lum Berry
+Level: 28
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_ELLIOT_3 ===
 Name: ELLIOT
@@ -24963,23 +28751,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Gyarados
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Lumineon (F) @ Leftovers
+Level: 36
+Ability: Storm Drain
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Surf
+- Air Slash
+- Ice Beam
+- Tailwind
 
-Carvanha
-Level: 26
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Seaking (M) @ Mystic Water
+Level: 36
+Ability: Lightning Rod
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Premier Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Poison Jab
+- Megahorn
+- Agility
 
-Tentacool
-Level: 26
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Whiscash (M) @ Rindo Berry
+Level: 36
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Earthquake
+- Waterfall
+- Dragon Dance
+- Rest
 
-Gyarados
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Pelipper (M) @ Damp Rock
+Level: 36
+Ability: Drizzle
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Scald
+- Hurricane
+- U-turn
+- Roost
+
+Tentacruel (M) @ Black Sludge
+Level: 36
+Ability: Liquid Ooze
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Sludge Bomb
+- Scald
+- Rapid Spin
+- Acid Spray
+
+Gyarados (M) @ Lum Berry
+Level: 36
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_ELLIOT_4 ===
 Name: ELLIOT
@@ -24988,23 +28850,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Gyarados
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Lanturn (F) @ Leftovers
+Level: 43
+Ability: Volt Absorb
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 32 Def / 220 SpD / 4 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Electric
+Dynamax Level: 10
+- Volt Switch
+- Scald
+- Ice Beam
+- Heal Bell
 
-Carvanha
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Whiscash (M) @ Rindo Berry
+Level: 43
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Earthquake
+- Waterfall
+- Dragon Dance
+- Rest
 
-Tentacruel
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Pelipper (M) @ Damp Rock
+Level: 43
+Ability: Drizzle
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Scald
+- Hurricane
+- U-turn
+- Roost
 
-Gyarados
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Tentacruel (M) @ Black Sludge
+Level: 43
+Ability: Liquid Ooze
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Sludge Bomb
+- Scald
+- Rapid Spin
+- Acid Spray
+
+Sharpedo (M) @ Focus Sash
+Level: 43
+Ability: Speed Boost
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Crunch
+- Aqua Jet
+- Ice Fang
+- Protect
+
+Gyarados (M) @ Lum Berry
+Level: 43
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_ELLIOT_5 ===
 Name: ELLIOT
@@ -25013,23 +28949,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move / Try To Faint
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Gyarados
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Lanturn (F) @ Leftovers
+Level: 48
+Ability: Volt Absorb
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 32 Def / 220 SpD / 4 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Electric
+Dynamax Level: 10
+- Volt Switch
+- Scald
+- Ice Beam
+- Heal Bell
 
-Sharpedo
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Whiscash (M) @ Rindo Berry
+Level: 48
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Earthquake
+- Waterfall
+- Dragon Dance
+- Rest
 
-Gyarados
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Pelipper (M) @ Damp Rock
+Level: 48
+Ability: Drizzle
+Nature: Bold
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Scald
+- Hurricane
+- U-turn
+- Roost
 
-Tentacruel
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Tentacruel (M) @ Black Sludge
+Level: 48
+Ability: Liquid Ooze
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ball: Net Ball
+Shiny: No
+Tera Type: Poison
+Dynamax Level: 10
+- Sludge Bomb
+- Scald
+- Rapid Spin
+- Acid Spray
+
+Sharpedo (M) @ Focus Sash
+Level: 48
+Ability: Speed Boost
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Crunch
+- Aqua Jet
+- Ice Fang
+- Protect
+
+Gyarados (M) @ Lum Berry
+Level: 48
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Flying
+Dynamax Level: 10
+- Waterfall
+- Ice Fang
+- Crunch
+- Dragon Dance
 
 === TRAINER_RONALD ===
 Name: RONALD
@@ -25038,31 +29048,97 @@ Pic: Fisherman
 Gender: Male
 Music: Hiker
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Force Setup First Turn / Smart Switching / Omniscient / Predict Switch / Risky / Prefer Highest Damage Move / Smart Tera
 
-Magikarp
-Level: 19
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Gyarados (M) @ Mystic Water
+Level: 41
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Ultra Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Crunch
+- Dragon Dance
+- Ice Fang
 
-Gyarados
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sharpedo (F) @ Focus Sash
+Level: 41
+Ability: Speed Boost
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Dark
+Dynamax Level: 10
+- Crunch
+- Ice Fang
+- Aqua Jet
+- Protect
 
-Gyarados
-Level: 23
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Barboach (M) @ Rindo Berry
+Level: 40
+Ability: Oblivious
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Ball: Poké Ball
+Shiny: No
+Tera Type: Ground
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Amnesia
+- Rest
 
-Gyarados
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Whiscash (F) @ Leftovers
+Level: 41
+Ability: Oblivious
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 4 Def / 0 SpA / 252 SpD / 0 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Waterfall
+- Earthquake
+- Ice Beam
+- Rest
 
-Gyarados
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Lanturn (M) @ Sitrus Berry
+Level: 41
+Ability: Volt Absorb
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Ball: Great Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Surf
+- Thunderbolt
+- Ice Beam
+- Confuse Ray
 
-Gyarados
-Level: 35
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wailmer (F) @ Chesto Berry
+Level: 40
+Ability: Water Veil
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 0 Spe
+Ball: Dive Ball
+Shiny: No
+Tera Type: Water
+Dynamax Level: 10
+- Water Pulse
+- Ice Beam
+- Rest
+- Sleep Talk
 
 === TRAINER_JACOB ===
 Name: JACOB
@@ -25071,19 +29147,97 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Voltorb
-Level: 6
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Pikachu (M) @ Light Ball
+Level: 22
+Ability: Static
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Electric
+- Thunderbolt
+- Volt Switch
+- Nuzzle
+- Grass Knot
 
-Voltorb
-Level: 6
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Voltorb (F) @ Focus Sash
+Level: 22
+Ability: Aftermath
+Nature: Jolly
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 Spe / 0 SpA / 0 SpD
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Electric
+- Thunder Wave
+- Self-Destruct
+- Spark
+- Charge Beam
 
-Magnemite
-Level: 14
+Magnemite (M) @ Eviolite
+Level: 22
+Ability: Sturdy
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Thunder Wave
+- Flash Cannon
+- Thunderbolt
+- Volt Switch
+
+Emolga (F) @ Sitrus Berry
+Level: 23
+Ability: Motor Drive
+Nature: Jolly
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 Spe / 0 SpA / 0 SpD
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Flying
+- Acrobatics
+- Nuzzle
+- Volt Switch
+- Encore
+
+Yamper (M) @ Leftovers
+Level: 23
+Ability: Ball Fetch
+Nature: Impish
+Shiny: No
 IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Electric
+- Spark
+- Roar
+- Charm
+- Crunch
+
+Toxel (F) @ Eviolite
+Level: 24
+Ability: Punk Rock
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Spark
+- Acid
+- Nuzzle
+- Growl
 
 === TRAINER_ANTHONY ===
 Name: ANTHONY
@@ -25092,15 +29246,97 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Magnemite
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Magnemite (F) @ Eviolite
+Level: 22
+Ability: Magnet Pull
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Thunder Wave
 
-Magnemite
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pawmi (M) @ Oran Berry
+Level: 22
+Ability: Natural Cure
+Nature: Jolly
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Electric
+- Spark
+- Quick Attack
+- Dig
+- Encore
+
+Plusle (F) @ Air Balloon
+Level: 23
+Ability: Plus
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Electric
+- Thunderbolt
+- Nuzzle
+- Encore
+- Charm
+
+Minun (M) @ Air Balloon
+Level: 23
+Ability: Minus
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Electric
+- Thunderbolt
+- Thunder Wave
+- Quick Attack
+- Helping Hand
+
+Mareep (F) @ Leftovers
+Level: 24
+Ability: Static
+Nature: Bold
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Thunder Wave
+- Thunderbolt
+- Cotton Guard
+- Signal Beam
+
+Voltorb (M) @ Focus Sash
+Level: 24
+Ability: Soundproof
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 Spe / 0 SpA / 0 SpD
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Electric
+- Thunder Wave
+- Self-Destruct
+- Spark
+- Charge Beam
 
 === TRAINER_BENJAMIN_1 ===
 Name: BENJAMIN
@@ -25109,11 +29345,97 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Magnemite
-Level: 16
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Magnemite (M) @ Eviolite
+Level: 22
+Ability: Sturdy
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Thunder Wave
+
+Helioptile (M) @ Sitrus Berry
+Level: 22
+Ability: Dry Skin
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Electric
+- Parabolic Charge
+- Thunder Wave
+- Quick Attack
+- Bulldoze
+
+Voltorb (F) @ Focus Sash
+Level: 23
+Ability: Aftermath
+Nature: Jolly
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 Spe / 0 SpA / 0 SpD
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Electric
+- Thunder Wave
+- Self-Destruct
+- Spark
+- Charge Beam
+
+Toxel (F) @ Eviolite
+Level: 23
+Ability: Punk Rock
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Spark
+- Acid
+- Nuzzle
+- Growl
+
+Mareep (M) @ Leftovers
+Level: 24
+Ability: Static
+Nature: Bold
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Thunder Wave
+- Thunderbolt
+- Cotton Guard
+- Signal Beam
+
+Pikachu (F) @ Light Ball
+Level: 24
+Ability: Static
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Electric
+- Thunderbolt
+- Volt Switch
+- Nuzzle
+- Grass Knot
 
 === TRAINER_BENJAMIN_2 ===
 Name: BENJAMIN
@@ -25122,11 +29444,97 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Magnemite
-Level: 30
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Magneton (M) @ Eviolite
+Level: 37
+Ability: Sturdy
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Metal Sound
+
+Electrode (F) @ Focus Sash
+Level: 37
+Ability: Aftermath
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 Spe / 0 SpA / 0 SpD
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Electric
+- Thunder Wave
+- Explosion
+- Thunderbolt
+- Mirror Coat
+
+Ampharos (M) @ Assault Vest
+Level: 38
+Ability: Static
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Electric
+- Thunderbolt
+- Dragon Pulse
+- Focus Blast
+- Volt Switch
+
+Eelektross (F) @ Leftovers
+Level: 38
+Ability: Levitate
+Nature: Quiet
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Wild Charge
+- Flamethrower
+- Knock Off
+- Giga Drain
+
+Rotom (M) @ Sitrus Berry
+Level: 39
+Ability: Levitate
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Thunderbolt
+- Shadow Ball
+- Will-O-Wisp
+- Volt Switch
+
+Luxray (F) @ Life Orb
+Level: 39
+Ability: Guts
+Nature: Adamant
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Electric
+- Wild Charge
+- Crunch
+- Play Rough
+- Volt Switch
 
 === TRAINER_BENJAMIN_3 ===
 Name: BENJAMIN
@@ -25135,11 +29543,97 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Magnemite
-Level: 33
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Magnezone (M) @ Air Balloon
+Level: 44
+Ability: Sturdy
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Magnet Rise
+
+Electivire (F) @ Life Orb
+Level: 44
+Ability: Motor Drive
+Nature: Adamant
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Electric
+- Wild Charge
+- Ice Punch
+- Cross Chop
+- Earthquake
+
+Eelektross (M) @ Leftovers
+Level: 45
+Ability: Levitate
+Nature: Quiet
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Wild Charge
+- Flamethrower
+- Knock Off
+- Giga Drain
+
+Rotom-Heat (F) @ Sitrus Berry
+Level: 45
+Ability: Levitate
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Overheat
+- Thunderbolt
+- Will-O-Wisp
+- Volt Switch
+
+Toxtricity (M) @ Choice Specs
+Level: 46
+Ability: Punk Rock
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Electric
+- Overdrive
+- Sludge Wave
+- Volt Switch
+- Boomburst
+
+Raichu-Alola (F) @ Focus Sash
+Level: 46
+Ability: Surge Surfer
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Thunderbolt
+- Psychic
+- Grass Knot
+- Nuzzle
 
 === TRAINER_BENJAMIN_4 ===
 Name: BENJAMIN
@@ -25148,11 +29642,97 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Magneton
-Level: 36
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Magnezone (M) @ Air Balloon
+Level: 59
+Ability: Sturdy
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Magnet Rise
+
+Electivire (F) @ Life Orb
+Level: 59
+Ability: Motor Drive
+Nature: Adamant
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Electric
+- Wild Charge
+- Ice Punch
+- Cross Chop
+- Earthquake
+
+Eelektross (M) @ Leftovers
+Level: 60
+Ability: Levitate
+Nature: Quiet
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Wild Charge
+- Flamethrower
+- Knock Off
+- Giga Drain
+
+Rotom-Heat (F) @ Sitrus Berry
+Level: 60
+Ability: Levitate
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Overheat
+- Thunderbolt
+- Will-O-Wisp
+- Volt Switch
+
+Toxtricity (M) @ Choice Specs
+Level: 61
+Ability: Punk Rock
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Electric
+- Overdrive
+- Sludge Wave
+- Volt Switch
+- Boomburst
+
+Raichu-Alola (F) @ Focus Sash
+Level: 61
+Ability: Surge Surfer
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 0 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Thunderbolt
+- Psychic
+- Grass Knot
+- Nuzzle
 
 === TRAINER_BENJAMIN_5 ===
 Name: BENJAMIN
@@ -25161,11 +29741,97 @@ Pic: Cycling Triathlete M
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Magneton
-Level: 39
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Magnezone (Shiny) @ Air Balloon
+Level: 81
+Ability: Sturdy
+Nature: Modest
+Shiny: Yes
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Magnet Rise
+
+Electivire (F) @ Life Orb
+Level: 81
+Ability: Motor Drive
+Nature: Adamant
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Poké Ball
+Tera Type: Electric
+- Wild Charge
+- Ice Punch
+- Cross Chop
+- Earthquake
+
+Eelektross (M) @ Leftovers
+Level: 82
+Ability: Levitate
+Nature: Quiet
+Shiny: No
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Wild Charge
+- Flamethrower
+- Knock Off
+- Giga Drain
+
+Rotom-Wash (F) @ Sitrus Berry
+Level: 82
+Ability: Levitate
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Hydro Pump
+- Thunderbolt
+- Will-O-Wisp
+- Volt Switch
+
+Toxtricity (M) @ Choice Specs
+Level: 83
+Ability: Punk Rock
+Nature: Modest
+Shiny: No
+IVs: 31 HP / 0 Atk / 0 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Electric
+- Overdrive
+- Sludge Wave
+- Volt Switch
+- Boomburst
+
+Raichu-Alola (F) @ Focus Sash
+Level: 83
+Ability: Surge Surfer
+Nature: Timid
+Shiny: No
+IVs: 31 HP / 0 Atk / 0 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Thunderbolt
+- Psychic
+- Grass Knot
+- Nuzzle
 
 === TRAINER_ABIGAIL_1 ===
 Name: ABIGAIL
