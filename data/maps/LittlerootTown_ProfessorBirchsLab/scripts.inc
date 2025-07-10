@@ -530,6 +530,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 	giveitem ITEM_MEGA_RING, 1
 	giveitem ITEM_Z_POWER_RING, 1
 	giveitem ITEM_DYNAMAX_BAND, 1
+	giveitem ITEM_POKEMON_BOX_LINK, 1
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_MayNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 0
@@ -542,6 +543,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls::
 	giveitem ITEM_MEGA_RING, 1
 	giveitem ITEM_Z_POWER_RING, 1
 	giveitem ITEM_DYNAMAX_BAND, 1
+	giveitem ITEM_POKEMON_BOX_LINK, 1
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CatchCoolPokemonWithPokeBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 1

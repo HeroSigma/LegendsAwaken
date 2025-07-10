@@ -234,7 +234,14 @@ static const struct MenuAction sItemStorage_MenuActions[] =
 
 static const u16 sNewGamePCItems[][2] =
 {
-    { ITEM_POTION, 1 },
+	{ITEM_HEALTH_MOCHI, 999},
+	{ITEM_MUSCLE_MOCHI, 999},
+	{ITEM_RESIST_MOCHI, 999},
+	{ITEM_GENIUS_MOCHI, 999},
+	{ITEM_CLEVER_MOCHI, 999},
+	{ITEM_SWIFT_MOCHI, 999}, 
+	{ITEM_FRESH_START_MOCHI, 999},
+	{ITEM_RARE_CANDY, 999},
     { ITEM_NONE, 0 }
 };
 

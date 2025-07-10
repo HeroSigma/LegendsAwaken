@@ -32550,15 +32550,97 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Omniscient / Smart Tera
 
-Altaria
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Axew (M) @ Eviolite
+Level: 46
+Ability: Mold Breaker
+Nature: Adamant
+Shiny: Yes
+Ball: Ultra Ball
+Tera Type: Steel
+Dynamax Level: 6
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Dragon Claw
+- Iron Tail
+- X-Scissor
+- Swords Dance
 
-Altaria
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Gabite (M) @ Yache Berry
+Level: 46
+Ability: Sand Veil
+Nature: Jolly
+Shiny: No
+Ball: Timer Ball
+Tera Type: Ground
+Dynamax Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Dragon Claw
+- Earthquake
+- Rock Slide
+- Crunch
+
+Drakloak (F) @ Focus Sash
+Level: 46
+Ability: Infiltrator
+Nature: Naive
+Shiny: No
+Ball: Quick Ball
+Tera Type: Ghost
+Dynamax Level: 4
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Dragon Pulse
+- Shadow Ball
+- U-turn
+- Thunderbolt
+
+Altaria (F) @ Leftovers
+Level: 47
+Ability: Natural Cure
+Nature: Bold
+Shiny: Yes
+Ball: Heal Ball
+Tera Type: Fairy
+Dynamax Level: 7
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+- Dragon Pulse
+- Roost
+- Flamethrower
+- Cotton Guard
+
+Noibat (M) @ Eviolite
+Level: 47
+Ability: Frisk
+Nature: Timid
+Shiny: No
+Ball: Dusk Ball
+Tera Type: Flying
+Dynamax Level: 6
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Air Slash
+- Dragon Pulse
+- Roost
+- Super Fang
+
+Duraludon (M) @ Expert Belt
+Level: 48
+Ability: Light Metal
+Nature: Modest
+Shiny: Yes
+Ball: Great Ball
+Tera Type: Dragon
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Flash Cannon
+- Dragon Pulse
+- Thunderbolt
+- Dark Pulse
 
 === TRAINER_NICOLAS_2 ===
 Name: NICOLAS
@@ -32567,15 +32649,97 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Omniscient / Smart Tera
 
-Altaria
-Level: 41
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Fraxure (M) @ Eviolite
+Level: 52
+Ability: Mold Breaker
+Nature: Adamant
+Shiny: Yes
+Ball: Ultra Ball
+Tera Type: Steel
+Dynamax Level: 7
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Outrage
+- Iron Tail
+- Poison Jab
+- Dragon Dance
 
-Altaria
-Level: 41
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Gabite (M) @ Focus Sash
+Level: 52
+Ability: Sand Veil
+Nature: Jolly
+Shiny: No
+Ball: Timer Ball
+Tera Type: Ground
+Dynamax Level: 7
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Dragon Claw
+- Earthquake
+- Stone Edge
+- Crunch
+
+Dragalge (F) @ Black Sludge
+Level: 52
+Ability: Adaptability
+Nature: Modest
+Shiny: Yes
+Ball: Net Ball
+Tera Type: Water
+Dynamax Level: 9
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+- Sludge Bomb
+- Dragon Pulse
+- Hydro Pump
+- Thunderbolt
+
+Altaria (F) @ Leftovers
+Level: 53
+Ability: Natural Cure
+Nature: Calm
+Shiny: Yes
+Ball: Heal Ball
+Tera Type: Fairy
+Dynamax Level: 8
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 252 SpD / 4 Spe
+- Dragon Pulse
+- Roost
+- Flamethrower
+- Cotton Guard
+
+Noivern (M) @ Wise Glasses
+Level: 53
+Ability: Infiltrator
+Nature: Timid
+Shiny: No
+Ball: Dusk Ball
+Tera Type: Flying
+Dynamax Level: 9
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Air Slash
+- Draco Meteor
+- Roost
+- Flamethrower
+
+Duraludon (M) @ Assault Vest
+Level: 54
+Ability: Heavy Metal
+Nature: Modest
+Shiny: Yes
+Ball: Great Ball
+Tera Type: Dragon
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Flash Cannon
+- Draco Meteor
+- Thunderbolt
+- Dark Pulse
 
 === TRAINER_NICOLAS_3 ===
 Name: NICOLAS
@@ -32584,15 +32748,97 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Omniscient / Smart Tera
 
-Altaria
-Level: 44
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Haxorus (M) @ Lum Berry
+Level: 58
+Ability: Mold Breaker
+Nature: Jolly
+Shiny: Yes
+Ball: Ultra Ball
+Tera Type: Steel
+Dynamax Level: 9
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Outrage
+- Earthquake
+- Iron Tail
+- Swords Dance
 
-Altaria
-Level: 44
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Garchomp (M) @ Yache Berry
+Level: 58
+Ability: Rough Skin
+Nature: Jolly
+Shiny: No
+Ball: Timer Ball
+Tera Type: Ground
+Dynamax Level: 9
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Dragon Claw
+- Earthquake
+- Fire Fang
+- Swords Dance
+
+Dragalge (F) @ Black Sludge
+Level: 58
+Ability: Adaptability
+Nature: Modest
+Shiny: Yes
+Ball: Net Ball
+Tera Type: Water
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+- Sludge Bomb
+- Draco Meteor
+- Thunderbolt
+- Hydro Pump
+
+Noivern (M) @ Wise Glasses
+Level: 59
+Ability: Infiltrator
+Nature: Timid
+Shiny: No
+Ball: Dusk Ball
+Tera Type: Flying
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Hurricane
+- Draco Meteor
+- Roost
+- Flamethrower
+
+Altaria (F) @ Altarianite
+Level: 59
+Ability: Pixilate
+Nature: Modest
+Shiny: Yes
+Ball: Heal Ball
+Tera Type: Fairy
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+- Hyper Voice
+- Flamethrower
+- Roost
+- Cotton Guard
+
+Duraludon (M) @ Weakness Policy
+Level: 60
+Ability: Stalwart
+Nature: Modest
+Shiny: Yes
+Ball: Great Ball
+Tera Type: Dragon
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Flash Cannon
+- Draco Meteor
+- Thunderbolt
+- Dark Pulse
 
 === TRAINER_NICOLAS_4 ===
 Name: NICOLAS
@@ -32601,19 +32847,97 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Omniscient / Smart Tera
 
-Bagon
-Level: 46
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Dragapult (M) @ Spell Tag
+Level: 64
+Ability: Infiltrator
+Nature: Timid
+Shiny: Yes
+Ball: Quick Ball
+Tera Type: Dragon
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Draco Meteor
+- Shadow Ball
+- Thunderbolt
+- Flamethrower
 
-Altaria
-Level: 46
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Hydreigon (F) @ Life Orb
+Level: 64
+Ability: Levitate
+Nature: Modest
+Shiny: Yes
+Ball: Dusk Ball
+Tera Type: Dark
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Dark Pulse
+- Draco Meteor
+- Fire Blast
+- Flash Cannon
 
-Altaria
-Level: 46
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Garchomp (M) @ Yache Berry
+Level: 64
+Ability: Rough Skin
+Nature: Jolly
+Shiny: No
+Ball: Timer Ball
+Tera Type: Ground
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Earthquake
+- Dragon Claw
+- Iron Head
+- Swords Dance
+
+Baxcalibur (M) @ Loaded Dice
+Level: 64
+Ability: Thermal Exchange
+Nature: Adamant
+Shiny: No
+Ball: Ultra Ball
+Tera Type: Ice
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Glaive Rush
+- Icicle Spear
+- Ice Shard
+- Earthquake
+
+Salamence (M) @ Salamencite
+Level: 65
+Ability: Intimidate
+Nature: Jolly
+Shiny: Yes
+Ball: Premier Ball
+Tera Type: Flying
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Double-Edge
+- Dragon Dance
+- Earthquake
+- Roost
+
+Duraludon (M) @ Assault Vest
+Level: 65
+Ability: Stalwart
+Nature: Modest
+Shiny: Yes
+Ball: Great Ball
+Tera Type: Dragon
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Flash Cannon
+- Draco Meteor
+- Thunderbolt
+- Dark Pulse
 
 === TRAINER_NICOLAS_5 ===
 Name: NICOLAS
@@ -32622,19 +32946,97 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Omniscient / Smart Tera
 
-Altaria
-Level: 49
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Dragapult (M) @ Choice Specs
+Level: 72
+Ability: Infiltrator
+Nature: Timid
+Shiny: Yes
+Ball: Quick Ball
+Tera Type: Dragon
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Draco Meteor
+- Shadow Ball
+- Thunderbolt
+- Flamethrower
 
-Altaria
-Level: 49
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Garchomp (F) @ Yache Berry
+Level: 72
+Ability: Rough Skin
+Nature: Jolly
+Shiny: Yes
+Ball: Timer Ball
+Tera Type: Ground
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Earthquake
+- Scale Shot
+- Iron Head
+- Swords Dance
 
-Shelgon @ Dragon Fang
-Level: 49
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Baxcalibur (M) @ Loaded Dice
+Level: 72
+Ability: Thermal Exchange
+Nature: Adamant
+Shiny: Yes
+Ball: Ultra Ball
+Tera Type: Ice
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Glaive Rush
+- Icicle Spear
+- Ice Shard
+- Earthquake
+
+Hydreigon (M) @ Life Orb
+Level: 72
+Ability: Levitate
+Nature: Modest
+Shiny: Yes
+Ball: Dusk Ball
+Tera Type: Dark
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Dark Pulse
+- Draco Meteor
+- Fire Blast
+- Flash Cannon
+
+Salamence (F) @ Salamencite
+Level: 73
+Ability: Moxie
+Nature: Jolly
+Shiny: Yes
+Ball: Premier Ball
+Tera Type: Flying
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Double-Edge
+- Dragon Dance
+- Earthquake
+- Roost
+
+Archaludon (M) @ Leftovers
+Level: 74
+Ability: Stamina
+Nature: Modest
+Shiny: Yes
+Ball: Heavy Ball
+Tera Type: Steel
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+- Electro Shot
+- Flash Cannon
+- Dragon Pulse
+- Body Press
 
 === TRAINER_AARON ===
 Name: AARON
@@ -32643,322 +33045,1864 @@ Pic: Dragon Tamer
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Bagon
-Level: 34
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Dragon Breath
-- Headbutt
-- Focus Energy
-- Ember
+Dragonite (M) @ Weakness Policy
+Level: 56
+Ability: Multiscale
+Nature: Adamant
+Shiny: Yes
+Ball: Premier Ball
+Tera Type: Normal
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Outrage
+- Extreme Speed
+- Fire Punch
+- Dragon Dance
+
+Garchomp (F) @ Yache Berry
+Level: 55
+Ability: Rough Skin
+Nature: Jolly
+Shiny: Yes
+Ball: Quick Ball
+Tera Type: Ground
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Earthquake
+- Dragon Claw
+- Iron Head
+- Swords Dance
+
+Dragapult (F) @ Focus Sash
+Level: 55
+Ability: Clear Body
+Nature: Timid
+Shiny: Yes
+Ball: Dusk Ball
+Tera Type: Ghost
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Draco Meteor
+- Shadow Ball
+- Thunderbolt
+- U-turn
+
+Hydreigon (M) @ Life Orb
+Level: 55
+Ability: Levitate
+Nature: Modest
+Shiny: Yes
+Ball: Ultra Ball
+Tera Type: Steel
+Dynamax Level: 10
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe
+- Dark Pulse
+- Draco Meteor
+- Flash Cannon
+- Fire Blast
+
+Baxcalibur (M) @ Assault Vest
+Level: 56
+Ability: Thermal Exchange
+Nature: Adamant
+Shiny: Yes
+Ball: Timer Ball
+Tera Type: Ice
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Glaive Rush
+- Icicle Crash
+- Earthquake
+- Crunch
+
+Kommo-o (F) @ Leftovers
+Level: 56
+Ability: Bulletproof
+Nature: Careful
+Shiny: Yes
+Ball: Repeat Ball
+Tera Type: Fighting
+Dynamax Level: 10
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 252 SpD / 4 Spe
+- Drain Punch
+- Dragon Claw
+- Protect
+- Poison Jab
 
 === TRAINER_PERRY ===
 Name: PERRY
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Prefer Highest Damage Move
 
-Wingull
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Starly (M) @ Sharp Beak  
+Level: 13  
+Ability: Keen Eye  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Poké Ball  
+Tera Type: Flying  
+- Brave Bird  
+- Quick Attack  
+- Double Team  
+- Roost  
+
+Pidgey (F) @ Eviolite  
+Level: 13  
+Ability: Keen Eye  
+Nature: Timid  
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Poké Ball  
+Tera Type: Flying  
+- Air Slash  
+- Sand Attack  
+- Quick Attack  
+- U-turn  
+
+Fletchling (M) @ Sitrus Berry  
+Level: 13  
+Ability: Gale Wings  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Poké Ball  
+Tera Type: Flying  
+- Acrobatics  
+- Flame Charge  
+- Tailwind  
+- Roost  
+
+Taillow (F) @ Silk Scarf  
+Level: 13  
+Ability: Guts  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Poké Ball  
+Tera Type: Normal  
+- Double-Edge  
+- Quick Attack  
+- Aerial Ace  
+- U-turn  
+
+Rookidee (M) @ Leftovers  
+Level: 13  
+Ability: Keen Eye  
+Nature: Impish  
+IVs: 31 HP / 0 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe  
+Dynamax Level: 10  
+Ball: Poké Ball  
+Tera Type: Flying  
+- Pluck  
+- Iron Defense  
+- Roost  
+- Taunt  
+
+Ducklett (F) @ Wacan Berry  
+Level: 13  
+Ability: Keen Eye  
+Nature: Modest  
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Poké Ball  
+Tera Type: Flying  
+- Air Cutter  
+- Water Pulse  
+- Feather Dance  
+- Roost  
 
 === TRAINER_HUGH ===
 Name: HUGH
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Prefer Highest Damage Move
 
-Wingull
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Swellow (M) @ Silk Scarf  
+Level: 38  
+Ability: Guts  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Great Ball  
+Tera Type: Normal  
+- Facade  
+- Brave Bird  
+- Quick Attack  
+- U-turn  
 
-Tropius
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Staraptor (F) @ Sharp Beak  
+Level: 38  
+Ability: Intimidate  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Great Ball  
+Tera Type: Flying  
+- Brave Bird  
+- Double-Edge  
+- Close Combat  
+- U-turn  
+
+Corvisquire (M) @ Leftovers  
+Level: 38  
+Ability: Unnerve  
+Nature: Impish  
+IVs: 31 HP / 0 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe  
+Dynamax Level: 10  
+Ball: Great Ball  
+Tera Type: Flying  
+- Pluck  
+- Iron Defense  
+- Roost  
+- Taunt  
+
+Pelipper (F) @ Damp Rock  
+Level: 38  
+Ability: Drizzle  
+Nature: Bold  
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 0 Spe  
+Dynamax Level: 10  
+Ball: Great Ball  
+Tera Type: Water  
+- Hurricane  
+- Scald  
+- Roost  
+- U-turn  
+
+Unfezant (M) @ Scope Lens  
+Level: 38  
+Ability: Super Luck  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Great Ball  
+Tera Type: Flying  
+- Air Slash  
+- Night Slash  
+- U-turn  
+- Detect  
+
+Talonflame (F) @ Sitrus Berry  
+Level: 38  
+Ability: Gale Wings  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 10  
+Ball: Great Ball  
+Tera Type: Flying  
+- Acrobatics  
+- Flare Blitz  
+- Roost  
+- Tailwind  
 
 === TRAINER_PHIL ===
 Name: PHIL
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Predict Switch / Omniscient / Prefer Highest Damage Move
 
-Swellow
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Staraptor (M) @ Choice Band
+Level: 48
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Brave Bird
+- Double-Edge
+- U-turn
+- Close Combat
+
+Corviknight (F) @ Leftovers
+Level: 48
+Ability: Pressure
+Nature: Impish
+IVs: 31 HP / 0 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Iron Head
+- Brave Bird
+- Roost
+- Body Press
+
+Togekiss (M) @ Sitrus Berry
+Level: 48
+Ability: Serene Grace
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Fairy
+- Air Slash
+- Aura Sphere
+- Thunder Wave
+- Roost
+
+Pelipper (F) @ Damp Rock
+Level: 48
+Ability: Drizzle
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Water
+- Hurricane
+- Scald
+- Roost
+- U-turn
+
+Talonflame (M) @ Heavy-Duty Boots
+Level: 48
+Ability: Gale Wings
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Brave Bird
+- Flare Blitz
+- Tailwind
+- Roost
+
+Altaria (F) @ Leftovers
+Level: 48
+Ability: Natural Cure
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 128 Def / 0 SpA / 128 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Dragon
+- Dragon Pulse
+- Roost
+- Flamethrower
+- Heal Bell
 
 === TRAINER_JARED ===
 Name: JARED
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Prefer Highest Damage Move / Predict Switch / Omniscient
 
-Doduo
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Hawlucha (M) @ Sitrus Berry
+Level: 54
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Acrobatics
+- Close Combat
+- Swords Dance
+- Roost
 
-Skarmory
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Toucannon (F) @ Assault Vest
+Level: 54
+Ability: Skill Link
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Beak Blast
+- Rock Blast
+- Bullet Seed
+- U-turn
 
-Tropius
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Noivern (M) @ Life Orb
+Level: 54
+Ability: Infiltrator
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Dragon
+- Hurricane
+- Draco Meteor
+- Flamethrower
+- Roost
+
+Braviary (Hisuian) (M) @ Choice Scarf
+Level: 54
+Ability: Sheer Force
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Psychic
+- Brave Bird
+- Zen Headbutt
+- U-turn
+- Close Combat
+
+Swellow (F) @ Flame Orb
+Level: 54
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Facade
+- Brave Bird
+- U-turn
+- Protect
+
+Oricorio (Pom-Pom) (F) @ Leftovers
+Level: 54
+Ability: Dancer
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Revelation Dance
+- Roost
+- Hurricane
+- Calm Mind
 
 === TRAINER_HUMBERTO ===
 Name: HUMBERTO
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Prefer Highest Damage Move / Predict Switch / Omniscient
 
-Skarmory
-Level: 30
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+Corviknight (M) @ Leftovers
+Level: 54
+Ability: Mirror Armor
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 64 Atk / 188 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Brave Bird
+- Iron Head
+- Roost
+- Body Press
+
+Swellow (F) @ Flame Orb
+Level: 54
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Facade
+- Brave Bird
+- Protect
+- U-turn
+
+Talonflame (M) @ Heavy-Duty Boots
+Level: 54
+Ability: Gale Wings
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Fire
+- Flare Blitz
+- Brave Bird
+- Taunt
+- Roost
+
+Pelipper (F) @ Damp Rock
+Level: 54
+Ability: Drizzle
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Water
+- Hurricane
+- Scald
+- U-turn
+- Roost
+
+Staraptor (M) @ Choice Band
+Level: 54
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Brave Bird
+- Double-Edge
+- Close Combat
+- U-turn
+
+Mandibuzz (F) @ Rocky Helmet
+Level: 54
+Ability: Overcoat
+Nature: Careful
+IVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Dark
+- Foul Play
+- Roost
+- U-turn
+- Defog
 
 === TRAINER_PRESLEY ===
 Name: PRESLEY
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Prefer Highest Damage Move / Predict Switch / Omniscient
 
-Tropius
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dodrio (M) @ Choice Scarf
+Level: 54
+Ability: Early Bird
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Brave Bird
+- Jump Kick
+- Knock Off
+- U-turn
 
-Xatu
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Noivern (F) @ Expert Belt
+Level: 54
+Ability: Infiltrator
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Dragon
+- Hurricane
+- Draco Meteor
+- Flamethrower
+- Taunt
+
+Braviary (M) @ Life Orb
+Level: 54
+Ability: Defiant
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Brave Bird
+- Close Combat
+- U-turn
+- Roost
+
+Oricorio-Pom-Pom (F) @ Sitrus Berry
+Level: 54
+Ability: Dancer
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Revelation Dance
+- Air Slash
+- Roost
+- Quiver Dance
+
+Xatu (M) @ Light Clay
+Level: 54
+Ability: Magic Bounce
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Psychic
+- Psychic
+- Air Slash
+- Reflect
+- Light Screen
+
+Tornadus-Therian (M) @ Assault Vest
+Level: 54
+Ability: Regenerator
+Nature: Hasty
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 4 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Flying
+- Hurricane
+- Knock Off
+- U-turn
+- Heat Wave
 
 === TRAINER_EDWARDO ===
 Name: EDWARDO
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Predict Switch / Omniscient / Prefer Highest Damage Move
 
-Doduo
-Level: 29
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Altaria (F) @ Leftovers
+Level: 54
+Ability: Natural Cure
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 140 Def / 92 SpD / 24 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Fairy
+- Roost
+- Draco Meteor
+- Flamethrower
+- Heal Bell
 
-Pelipper
-Level: 29
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Staraptor (M) @ Choice Band
+Level: 54
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Flying
+- Brave Bird
+- Double-Edge
+- Close Combat
+- U-turn
+
+Corviknight (M) @ Rocky Helmet
+Level: 54
+Ability: Mirror Armor
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 Def / 0 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Steel
+- Iron Head
+- Brave Bird
+- Roost
+- U-turn
+
+Swellow (F) @ Flame Orb
+Level: 54
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Flying
+- Facade
+- Brave Bird
+- Protect
+- U-turn
+
+Talonflame (M) @ Heavy-Duty Boots
+Level: 54
+Ability: Gale Wings
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Fire
+- Brave Bird
+- Flare Blitz
+- Taunt
+- Roost
+
+Hawlucha (M) @ White Herb
+Level: 54
+Ability: Unburden
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Roost
 
 === TRAINER_COLIN ===
 Name: COLIN
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Smart Switching / Predict Switch / Omniscient / Prefer Highest Damage Move
 
-Wingull
-Level: 28
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Swellow (M) @ Flame Orb
+Level: 54
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Flying
+- Facade
+- Brave Bird
+- Protect
+- U-turn
 
-Natu
-Level: 28
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Noivern (F) @ Life Orb
+Level: 54
+Ability: Infiltrator
+Nature: Timid
+IVs: 0 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Dragon
+- Draco Meteor
+- Air Slash
+- Flamethrower
+- Taunt
+
+Pelipper (M) @ Focus Sash
+Level: 54
+Ability: Drizzle
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Water
+- Scald
+- Hurricane
+- Tailwind
+- Roost
+
+Braviary (F) @ Leftovers
+Level: 54
+Ability: Defiant
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 252 Atk / 0 Def / 0 SpA / 8 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Flying
+- Brave Bird
+- Close Combat
+- Bulk Up
+- Roost
+
+Oricorio-Sensu (F) @ Expert Belt
+Level: 54
+Ability: Dancer
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Heal Ball
+Tera Type: Ghost
+- Revelation Dance
+- Air Slash
+- Shadow Ball
+- Quiver Dance
+
+Unfezant (M) @ Scope Lens
+Level: 54
+Ability: Super Luck
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Flying
+- Brave Bird
+- Return
+- Night Slash
+- Tailwind
 
 === TRAINER_ROBERT_1 ===
 Name: ROBERT
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Predict Switch / Prefer Highest Damage Move / Smart Tera
 
-Swablu
-Level: 29
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Altaria (M) @ Leftovers
+Level: 48
+Ability: Natural Cure
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 68 Def / 124 SpA / 60 SpD / 4 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Fairy
+- Flamethrower
+- Hurricane
+- Roost
+- Heal Bell
+
+Corviknight (F) @ Rocky Helmet
+Level: 48
+Ability: Mirror Armor
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 196 Def / 0 SpA / 60 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Steel
+- Brave Bird
+- Iron Head
+- U-turn
+- Roost
+
+Talonflame (M) @ Sharp Beak
+Level: 48
+Ability: Gale Wings
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Fire
+- Brave Bird
+- Flare Blitz
+- Tailwind
+- Taunt
+
+Togekiss (F) @ Sitrus Berry
+Level: 48
+Ability: Serene Grace
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Premier Ball
+Tera Type: Fairy
+- Air Slash
+- Dazzling Gleam
+- Aura Sphere
+- Thunder Wave
+
+Hawlucha (M) @ White Herb
+Level: 48
+Ability: Unburden
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Fighting
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Taunt
+
+Swellow (F) @ Flame Orb
+Level: 48
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Normal
+- Facade
+- Brave Bird
+- Protect
+- U-turn
 
 === TRAINER_BENNY ===
 Name: BENNY
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Prefer Highest Damage Move / Smart Tera / Smart Switching / Predict Switch
 
-Swellow
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Staraptor (M) @ Choice Scarf
+Level: 42
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Normal
+- Brave Bird
+- Double-Edge
+- U-turn
+- Close Combat
 
-Pelipper
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Noivern (F) @ Wise Glasses
+Level: 42
+Ability: Infiltrator
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Dragon
+- Hurricane
+- Draco Meteor
+- Flamethrower
+- Roost
 
-Xatu
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pidgeot (M) @ Heavy-Duty Boots
+Level: 42
+Ability: Keen Eye
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 0 Atk / 0 Def / 252 SpA / 8 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Flying
+- Hurricane
+- Heat Wave
+- U-turn
+- Roost
+
+Pelipper (F) @ Damp Rock
+Level: 42
+Ability: Drizzle
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Water
+- Scald
+- Hurricane
+- U-turn
+- Roost
+
+Oricorio-Pom-Pom (F) @ Sitrus Berry
+Level: 42
+Ability: Dancer
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Luxury Ball
+Tera Type: Electric
+- Revelation Dance
+- Air Slash
+- Quiver Dance
+- Roost
+
+Dodrio (M) @ Focus Sash
+Level: 42
+Ability: Early Bird
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Flying
+- Brave Bird
+- Jump Kick
+- Swords Dance
+- Quick Attack
 
 === TRAINER_CHESTER ===
 Name: CHESTER
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Prefer Highest Damage Move / Smart Tera / Smart Switching / Predict Switch
 
-Taillow
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Talonflame (M) @ Sharp Beak
+Level: 42
+Ability: Gale Wings
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Flying
+- Brave Bird
+- Flare Blitz
+- U-turn
+- Roost
 
-Swellow
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Swellow (F) @ Flame Orb
+Level: 42
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Fast Ball
+Tera Type: Normal
+- Facade
+- Brave Bird
+- Quick Attack
+- Protect
+
+Hawlucha (M) @ Sitrus Berry
+Level: 42
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Roost
+
+Corviknight (M) @ Leftovers
+Level: 42
+Ability: Mirror Armor
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Brave Bird
+- Iron Head
+- Roost
+- Bulk Up
+
+Togekiss (F) @ Babiri Berry
+Level: 42
+Ability: Serene Grace
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Heal Ball
+Tera Type: Fairy
+- Air Slash
+- Dazzling Gleam
+- Aura Sphere
+- Roost
+
+Altaria (F) @ Life Orb
+Level: 42
+Ability: Natural Cure
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Nest Ball
+Tera Type: Dragon
+- Hurricane
+- Dragon Pulse
+- Flamethrower
+- Roost
 
 === TRAINER_ROBERT_2 ===
 Name: ROBERT
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Prefer Highest Damage Move / Smart Tera / Smart Switching
 
-Natu
-Level: 32
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Staraptor (M) @ Choice Scarf
+Level: 44
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Flying
+- Brave Bird
+- Close Combat
+- U-turn
+- Double-Edge
 
-Swablu
-Level: 32
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Talonflame (F) @ Sharp Beak
+Level: 44
+Ability: Gale Wings
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Flying
+- Brave Bird
+- Flare Blitz
+- Roost
+- U-turn
+
+Swellow (M) @ Flame Orb
+Level: 44
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Fast Ball
+Tera Type: Normal
+- Facade
+- Brave Bird
+- Quick Attack
+- Protect
+
+Togekiss (F) @ Leftovers
+Level: 44
+Ability: Serene Grace
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Heal Ball
+Tera Type: Fairy
+- Air Slash
+- Aura Sphere
+- Thunder Wave
+- Roost
+
+Altaria (F) @ Life Orb
+Level: 44
+Ability: Natural Cure
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Nest Ball
+Tera Type: Dragon
+- Hurricane
+- Dragon Pulse
+- Flamethrower
+- Roost
+
+Hawlucha (M) @ Sitrus Berry
+Level: 44
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Roost
 
 === TRAINER_ROBERT_3 ===
 Name: ROBERT
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Prefer Highest Damage Move / Smart Tera / Smart Switching
 
-Natu
-Level: 35
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Corviknight (M) @ Leftovers
+Level: 47
+Ability: Mirror Armor
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Brave Bird
+- Iron Head
+- Roost
+- Bulk Up
 
-Altaria
-Level: 35
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Talonflame (F) @ Sharp Beak
+Level: 47
+Ability: Gale Wings
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Flying
+- Brave Bird
+- Flare Blitz
+- Roost
+- U-turn
+
+Staraptor (M) @ Choice Scarf
+Level: 47
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Flying
+- Brave Bird
+- Close Combat
+- U-turn
+- Double-Edge
+
+Swellow (F) @ Flame Orb
+Level: 47
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Fast Ball
+Tera Type: Normal
+- Facade
+- Brave Bird
+- Quick Attack
+- Protect
+
+Togekiss (F) @ Babiri Berry
+Level: 47
+Ability: Serene Grace
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Heal Ball
+Tera Type: Fairy
+- Air Slash
+- Aura Sphere
+- Dazzling Gleam
+- Roost
+
+Hawlucha (M) @ Sitrus Berry
+Level: 47
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Roost
 
 === TRAINER_ROBERT_4 ===
 Name: ROBERT
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Prefer Highest Damage Move / Smart Tera / Smart Switching
 
-Natu
-Level: 38
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Corviknight (M) @ Leftovers
+Level: 50
+Ability: Mirror Armor
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Brave Bird
+- Iron Head
+- Roost
+- Bulk Up
 
-Altaria
-Level: 38
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+Staraptor (F) @ Choice Band
+Level: 50
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Flying
+- Brave Bird
+- Close Combat
+- U-turn
+- Double-Edge
+
+Talonflame (M) @ Heavy-Duty Boots
+Level: 50
+Ability: Gale Wings
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Flying
+- Brave Bird
+- Flare Blitz
+- Roost
+- U-turn
+
+Swellow (F) @ Flame Orb
+Level: 50
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Fast Ball
+Tera Type: Normal
+- Facade
+- Brave Bird
+- Quick Attack
+- Protect
+
+Togekiss (M) @ Babiri Berry
+Level: 50
+Ability: Serene Grace
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Heal Ball
+Tera Type: Fairy
+- Air Slash
+- Dazzling Gleam
+- Aura Sphere
+- Roost
+
+Hawlucha (M) @ Sitrus Berry
+Level: 50
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Roost
 
 === TRAINER_ROBERT_5 ===
 Name: ROBERT
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Prefer Highest Damage Move / Smart Tera / Smart Switching / Omniscient
 
-Altaria
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Corviknight (M) @ Leftovers
+Level: 53
+Ability: Mirror Armor
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Brave Bird
+- Iron Head
+- Roost
+- Bulk Up
 
-Xatu
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Staraptor (M) @ Choice Band
+Level: 53
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Flying
+- Brave Bird
+- Close Combat
+- U-turn
+- Double-Edge
+
+Talonflame (M) @ Heavy-Duty Boots
+Level: 53
+Ability: Gale Wings
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Flying
+- Brave Bird
+- Flare Blitz
+- Roost
+- U-turn
+
+Swellow (F) @ Flame Orb
+Level: 53
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Fast Ball
+Tera Type: Normal
+- Facade
+- Brave Bird
+- Quick Attack
+- Protect
+
+Togekiss (M) @ Babiri Berry
+Level: 53
+Ability: Serene Grace
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Heal Ball
+Tera Type: Fairy
+- Air Slash
+- Dazzling Gleam
+- Aura Sphere
+- Roost
+
+Hawlucha (M) @ Sitrus Berry
+Level: 53
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Roost
 
 === TRAINER_ALEX ===
 Name: ALEX
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Smart Tera / Omniscient
 
-Natu
-Level: 33
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Corviknight (M) @ Leftovers
+Level: 48
+Ability: Mirror Armor
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Steel
+- Brave Bird
+- Iron Head
+- Roost
+- Bulk Up
 
-Swellow
-Level: 33
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Staraptor (F) @ Choice Band
+Level: 48
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Flying
+- Brave Bird
+- Double-Edge
+- Close Combat
+- U-turn
+
+Hawlucha (M) @ Sitrus Berry
+Level: 48
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Roost
+
+Talonflame (F) @ Heavy-Duty Boots
+Level: 48
+Ability: Gale Wings
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Flying
+- Brave Bird
+- Flare Blitz
+- Taunt
+- U-turn
+
+Noivern (F) @ Life Orb
+Level: 48
+Ability: Infiltrator
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Dragon
+- Draco Meteor
+- Hurricane
+- Flamethrower
+- Roost
+
+Togekiss (M) @ Babiri Berry
+Level: 48
+Ability: Serene Grace
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Heal Ball
+Tera Type: Fairy
+- Air Slash
+- Aura Sphere
+- Dazzling Gleam
+- Roost
 
 === TRAINER_BECK ===
 Name: BECK
 Class: Bird Keeper
-Pic: Bird Keeper
+Pic: Bird Keeper M
 Gender: Male
 Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Smart Tera / Omniscient
 
-Tropius
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Kilowattrel (F) @ Magnet
+Level: 48
+Ability: Wind Power
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Electric
+- Thunderbolt
+- Hurricane
+- Tailwind
+- Protect
+
+Pelipper (M) @ Damp Rock
+Level: 48
+Ability: Drizzle
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Water
+- Scald
+- Hurricane
+- Tailwind
+- Roost
+
+Salamence (F) @ Yache Berry
+Level: 48
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Dragon
+- Dragon Claw
+- Dual Wingbeat
+- Earthquake
+- Protect
+
+Tornadus (M) @ Sitrus Berry
+Level: 48
+Ability: Prankster
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Flying
+- Hurricane
+- Taunt
+- Tailwind
+- Protect
+
+Swellow (F) @ Flame Orb
+Level: 48
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Flying
+- Brave Bird
+- Facade
+- U-turn
+- Protect
+
+Altaria (M) @ Leftovers
+Level: 48
+Ability: Natural Cure
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 4 Def / 0 SpA / 252 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Heal Ball
+Tera Type: Fairy
+- Hyper Voice
+- Flamethrower
+- Roost
+- Protect
 
 === TRAINER_YASU ===
 Name: YASU
 Class: Ninja Boy
 Pic: Ninja Boy
 Gender: Male
-Music: Suspicious
+Music: Intense
 Double Battle: No
-AI: Check Bad Move / Try To Faint
+AI: Smart Switching / Omniscient / Prefer Highest Damage Move / Smart Tera
 
-Ninjask
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Greninja (M) @ Focus Sash
+Level: 43
+Ability: Protean
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Dark
+- Hydro Pump
+- Dark Pulse
+- Ice Beam
+- Protect
+
+Weezing (F) @ Black Sludge
+Level: 43
+Ability: Levitate
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Poison
+- Sludge Bomb
+- Will-O-Wisp
+- Strange Steam
+- Protect
+
+Toxicroak (M) @ Life Orb
+Level: 43
+Ability: Dry Skin
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Poison
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Protect
+
+Ninjask (M) @ Sitrus Berry
+Level: 43
+Ability: Speed Boost
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Flying
+- X-Scissor
+- U-turn
+- Swords Dance
+- Protect
+
+Drapion (F) @ Assault Vest
+Level: 43
+Ability: Battle Armor
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Dark
+- Knock Off
+- Poison Jab
+- Earthquake
+- Cross Poison
+
+Lucario (M) @ Shuca Berry
+Level: 43
+Ability: Inner Focus
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 4 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Steel
+- Flash Cannon
+- Close Combat
+- Dark Pulse
+- Protect
 
 === TRAINER_TAKASHI ===
 Name: TAKASHI
 Class: Ninja Boy
 Pic: Ninja Boy
 Gender: Male
-Music: Suspicious
+Music: Intense
 Double Battle: No
-AI: Check Bad Move / Try To Faint
+AI: Smart Switching / Omniscient / Prefer Highest Damage Move / Smart Tera
 
-Ninjask
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dragapult (M) @ Choice Specs
+Level: 44
+Ability: Infiltrator
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Dragon
+- Draco Meteor
+- Shadow Ball
+- Flamethrower
+- Thunderbolt
 
-Koffing
-Level: 25
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Toxapex (F) @ Black Sludge
+Level: 44
+Ability: Regenerator
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Water
+- Baneful Bunker
+- Scald
+- Sludge Bomb
+- Recover
+
+Ninjask (M) @ Focus Sash
+Level: 44
+Ability: Speed Boost
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Bug
+- X-Scissor
+- Aerial Ace
+- Swords Dance
+- Protect
+
+Toxtricity-Amped (M) @ Throat Spray
+Level: 44
+Ability: Punk Rock
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Electric
+- Overdrive
+- Sludge Bomb
+- Boomburst
+- Volt Switch
+
+Skuntank (F) @ Assault Vest
+Level: 44
+Ability: Aftermath
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Dark
+- Poison Jab
+- Night Slash
+- Sucker Punch
+- Play Rough
+
+Greninja (M) @ Expert Belt
+Level: 44
+Ability: Protean
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Water
+- Hydro Pump
+- Ice Beam
+- Gunk Shot
+- Dark Pulse
 
 === TRAINER_DIANNE ===
 Name: DIANNE
@@ -32968,30 +34912,184 @@ Gender: Female
 Music: Cool
 Items: Full Restore
 Double Battle: No
+AI: Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Claydol
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Skill Swap
+Flygon (F) @ Life Orb
+Level: 46
+Ability: Levitate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Ground
 - Earthquake
+- Dragon Claw
+- Rock Slide
+- U-turn
 
-Lanturn
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Thunderbolt
+Arcanine (F) @ Safety Goggles
+Level: 46
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Fire
+- Flare Blitz
+- Extreme Speed
+- Close Combat
+- Will-O-Wisp
+
+Gastrodon (East Sea) (F) @ Leftovers
+Level: 46
+Ability: Storm Drain
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 108 Def / 148 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Water
+- Earth Power
+- Scald
+- Recover
+- Ice Beam
+
+Hawlucha (F) @ Sitrus Berry
+Level: 46
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Taunt
+
+Excadrill (F) @ Focus Sash
+Level: 46
+Ability: Sand Rush
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Steel
+- Iron Head
 - Earthquake
+- Rock Slide
+- Protect
+
+Tyranitar (F) @ Chople Berry
+Level: 46
+Ability: Sand Stream
+Nature: Brave
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD / 0 Def / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Rock
+- Stone Edge
+- Crunch
+- Superpower
+- Stealth Rock
 
 === TRAINER_JANI ===
 Name: JANI
-Class: Tuber F
+Class: Tuber
 Pic: Tuber F
 Gender: Female
-Music: Girl
+Music: Male
 Double Battle: No
+AI: Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Marill
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Azumarill (F) @ Sitrus Berry
+Level: 39
+Ability: Huge Power
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Spe / 0 Def / 0 SpD
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Water
+- Aqua Jet
+- Play Rough
+- Liquidation
+- Belly Drum
+
+Pelipper (F) @ Focus Sash
+Level: 39
+Ability: Drizzle
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Flying
+- Hurricane
+- Surf
+- Tailwind
+- Protect
+
+Toxapex (F) @ Black Sludge
+Level: 39
+Ability: Regenerator
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD / 0 Atk / 0 Spe
+Dynamax Level: 10
+Ball: Net Ball
+Tera Type: Water
+- Baneful Bunker
+- Scald
+- Recover
+- Toxic
+
+Lanturn (F) @ Leftovers
+Level: 39
+Ability: Volt Absorb
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 252 SpD / 4 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Electric
+- Volt Switch
+- Surf
+- Ice Beam
+- Thunder Wave
+
+Barraskewda (F) @ Mystic Water
+Level: 39
+Ability: Swift Swim
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Water
+- Liquidation
+- Close Combat
+- Aqua Jet
+- Psychic Fangs
+
+Dondozo (F) @ Rocky Helmet
+Level: 39
+Ability: Unaware
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD / 0 Atk / 0 Spe
+Dynamax Level: 10
+Ball: Luxury Ball
+Tera Type: Water
+- Wave Crash
+- Body Press
+- Yawn
+- Protect
 
 === TRAINER_LAO_1 ===
 Name: LAO
@@ -33000,30 +35098,35 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
+AI: Smart Switching / Omniscient / Smart Tera
 
-Koffing
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Smog
-- Self Destruct
+Koffing (M) @ Black Sludge
+Level: 30
+Ability: Levitate
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Poison
+- Sludge Bomb
+- Will-O-Wisp
+- Haze
+- Pain Split
 
-Koffing
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Smog
-- Self Destruct
-
-Koffing
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Salandit (M) @ Focus Sash
+Level: 30
+Ability: Corrosion
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Fire
+- Flamethrower
+- Toxic
+- Dragon Pulse
+- Protect
 
 === TRAINER_LUNG ===
 Name: LUNG
@@ -33032,14 +35135,91 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
+AI: Smart Switching / Omniscient / Smart Tera
 
-Koffing
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Greninja (M) @ Focus Sash
+Level: 45
+Ability: Torrent
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Dark
+- Hydro Pump
+- Dark Pulse
+- Ice Beam
+- Taunt
 
-Ninjask
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Crobat (M) @ Black Sludge
+Level: 45
+Ability: Inner Focus
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Poison
+- Brave Bird
+- Cross Poison
+- U-turn
+- Roost
+
+Ninjask (M) @ Heavy-Duty Boots
+Level: 45
+Ability: Speed Boost
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Bug
+- X-Scissor
+- Swords Dance
+- Baton Pass
+- Protect
+
+Salazzle (F) @ Focus Sash
+Level: 45
+Ability: Corrosion
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Luxury Ball
+Tera Type: Fire
+- Flamethrower
+- Sludge Bomb
+- Toxic
+- Protect
+
+Zoroark (M) @ Life Orb
+Level: 45
+Ability: Illusion
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Dark
+- Night Daze
+- Flamethrower
+- U-turn
+- Focus Blast
+
+Toxapex (M) @ Rocky Helmet
+Level: 45
+Ability: Regenerator
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Water
+- Baneful Bunker
+- Scald
+- Toxic Spikes
+- Recover
 
 === TRAINER_LAO_2 ===
 Name: LAO
@@ -33048,35 +35228,49 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
+AI: Smart Switching / Omniscient / Smart Tera
 
-Koffing
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Koffing (M) @ Black Sludge
+Level: 34
+Ability: Levitate
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Poison
+- Sludge Bomb
+- Will-O-Wisp
+- Haze
+- Pain Split
 
-Koffing
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Salandit (M) @ Focus Sash
+Level: 34
+Ability: Corrosion
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Fire
+- Flamethrower
+- Toxic
+- Dragon Pulse
+- Protect
 
-Koffing
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
-
-Koffing
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Sludge
+Skorupi (M) @ Eviolite
+Level: 34
+Ability: Battle Armor
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 Def / 0 SpA / 0 SpD
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Poison
+- Poison Jab
+- Knock Off
+- Toxic Spikes
+- Protect
 
 === TRAINER_LAO_3 ===
 Name: LAO
@@ -33085,35 +35279,63 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
+AI: Smart Switching / Omniscient / Smart Tera
 
-Koffing
-Level: 27
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Weezing (M) @ Black Sludge
+Level: 38
+Ability: Levitate
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Fairy
+- Sludge Bomb
+- Will-O-Wisp
+- Strange Steam
+- Pain Split
 
-Koffing
-Level: 27
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Salazzle (M) @ Focus Sash
+Level: 38
+Ability: Corrosion
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Fire
+- Flamethrower
+- Toxic
+- Dragon Pulse
+- Protect
 
-Koffing
-Level: 27
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Drapion (M) @ Assault Vest
+Level: 38
+Ability: Battle Armor
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 0 Def / 0 SpA / 252 SpD
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Dark
+- Knock Off
+- Poison Jab
+- Cross Poison
+- Earthquake
 
-Koffing
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Tackle
-- Sludge
+Greninja (M) @ Expert Belt
+Level: 38
+Ability: Torrent
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Dark
+- Hydro Pump
+- Ice Beam
+- Dark Pulse
+- U-turn
 
 === TRAINER_LAO_4 ===
 Name: LAO
@@ -33122,33 +35344,77 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
+AI: Smart Switching / Omniscient / Smart Tera
 
-Koffing
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Weezing-Galar (M) @ Black Sludge
+Level: 42
+Ability: Neutralizing Gas
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 SpD / 4 Def / 0 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Fairy
+- Sludge Bomb
+- Strange Steam
+- Will-O-Wisp
+- Protect
 
-Koffing
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Salazzle (M) @ Focus Sash
+Level: 42
+Ability: Corrosion
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Fire
+- Flamethrower
+- Toxic
+- Dragon Pulse
+- Protect
 
-Koffing
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Drapion (M) @ Assault Vest
+Level: 42
+Ability: Battle Armor
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 0 Def / 0 SpA / 252 SpD
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Dark
+- Knock Off
+- Poison Jab
+- Cross Poison
+- Earthquake
 
-Koffing
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Tackle
-- Sludge
+Greninja (M) @ Expert Belt
+Level: 42
+Ability: Torrent
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Dark
+- Hydro Pump
+- Ice Beam
+- Dark Pulse
+- U-turn
+
+Zoroark (M) @ Life Orb
+Level: 42
+Ability: Illusion
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Luxury Ball
+Tera Type: Dark
+- Night Daze
+- Flamethrower
+- Focus Blast
+- U-turn
 
 === TRAINER_LAO_5 ===
 Name: LAO
@@ -33157,35 +35423,91 @@ Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
+AI: Smart Switching / Omniscient / Smart Tera
 
-Koffing
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Poison Gas
-- Tackle
-- Sludge
+Weezing-Galar (M) @ Black Sludge
+Level: 48
+Ability: Neutralizing Gas
+Nature: Calm
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 SpD / 4 Def / 0 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Fairy
+- Sludge Bomb
+- Strange Steam
+- Will-O-Wisp
+- Protect
 
-Koffing
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Salazzle (M) @ Focus Sash
+Level: 48
+Ability: Corrosion
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Fire
+- Flamethrower
+- Toxic
+- Dragon Pulse
+- Protect
 
-Koffing
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
+Drapion (M) @ Assault Vest
+Level: 48
+Ability: Battle Armor
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 0 Def / 0 SpA / 252 SpD
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Dark
+- Knock Off
+- Poison Jab
+- Cross Poison
+- Earthquake
 
-Weezing @ Smoke Ball
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Tackle
-- Sludge
+Greninja (M) @ Expert Belt
+Level: 48
+Ability: Torrent
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Dark
+- Hydro Pump
+- Ice Beam
+- Dark Pulse
+- U-turn
+
+Zoroark (M) @ Life Orb
+Level: 48
+Ability: Illusion
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Luxury Ball
+Tera Type: Dark
+- Night Daze
+- Flamethrower
+- Focus Blast
+- U-turn
+
+Crobat (M) @ Black Glasses
+Level: 48
+Ability: Inner Focus
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Poison
+- Brave Bird
+- Cross Poison
+- Taunt
+- U-turn
 
 === TRAINER_JOCELYN ===
 Name: JOCELYN
@@ -33194,11 +35516,91 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Smart Tera / Omniscient / Predict Switch
 
-Meditite
-Level: 13
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Iron Valiant (F) @ Booster Energy
+Level: 49
+Ability: Quark Drive
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Fairy
+- Close Combat
+- Spirit Break
+- Knock Off
+- Swords Dance
+
+Hawlucha (F) @ White Herb
+Level: 49
+Ability: Unburden
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Swords Dance
+- Taunt
+
+Medicham (F) @ Medichamite
+Level: 49
+Ability: Pure Power
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Psychic
+- Zen Headbutt
+- Drain Punch
+- Fake Out
+- Ice Punch
+
+Kommo-o (F) @ Throat Spray
+Level: 49
+Ability: Bulletproof
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Steel
+- Clanging Scales
+- Flash Cannon
+- Focus Blast
+- Protect
+
+Mienshao (F) @ Focus Sash
+Level: 49
+Ability: Regenerator
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Fighting
+- High Jump Kick
+- U-turn
+- Knock Off
+- Fake Out
+
+Tsareena (F) @ Assault Vest
+Level: 49
+Ability: Queenly Majesty
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Nest Ball
+Tera Type: Grass
+- Power Whip
+- Triple Axel
+- U-turn
+- High Jump Kick
 
 === TRAINER_LAURA ===
 Name: LAURA
@@ -33207,11 +35609,91 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Omniscient / Predict Switch / Smart Tera
 
-Meditite
-Level: 13
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Urshifu-Rapid-Strike (F) @ Choice Scarf
+Level: 49
+Ability: Unseen Fist
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dive Ball
+Tera Type: Water
+- Surging Strikes
+- Close Combat
+- U-turn
+- Ice Punch
+
+Falinks (F) @ Leftovers
+Level: 49
+Ability: Defiant
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD / 0 SpA / 0 Def / 0 Spe
+Dynamax Level: 10
+Ball: Ultra Ball
+Tera Type: Fighting
+- No Retreat
+- Close Combat
+- Iron Head
+- Rock Slide
+
+Lucario (F) @ Life Orb
+Level: 49
+Ability: Inner Focus
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Steel
+- Aura Sphere
+- Flash Cannon
+- Vacuum Wave
+- Nasty Plot
+
+Gallade (F) @ Focus Sash
+Level: 49
+Ability: Steadfast
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Psychic
+- Psycho Cut
+- Sacred Sword
+- Shadow Sneak
+- Swords Dance
+
+Primeape (F) @ Choice Band
+Level: 49
+Ability: Vital Spirit
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Repeat Ball
+Tera Type: Fighting
+- Close Combat
+- Ice Punch
+- U-turn
+- Stone Edge
+
+Toxicroak (F) @ Black Sludge
+Level: 49
+Ability: Dry Skin
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Poison
+- Gunk Shot
+- Drain Punch
+- Sucker Punch
+- Swords Dance
 
 === TRAINER_CYNDY_1 ===
 Name: CYNDY
@@ -33220,15 +35702,91 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Predict Switch
 
-Meditite
-Level: 18
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Meditite (F) @ Eviolite
+Level: 34
+Ability: Pure Power
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 6
+Ball: Great Ball
+Tera Type: Psychic
+- High Jump Kick
+- Psycho Cut
+- Fake Out
+- Thunder Punch
 
-Makuhita
-Level: 18
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Hitmontop (F) @ Sitrus Berry
+Level: 34
+Ability: Intimidate
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
+Dynamax Level: 6
+Ball: Timer Ball
+Tera Type: Fighting
+- Close Combat
+- Sucker Punch
+- Detect
+- Triple Axel
+
+Hawlucha (F) @ Muscle Band
+Level: 34
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 6
+Ball: Quick Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Roost
+- Taunt
+
+Mienfoo (F) @ Eviolite
+Level: 34
+Ability: Regenerator
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 6
+Ball: Heal Ball
+Tera Type: Fighting
+- Drain Punch
+- Knock Off
+- Fake Out
+- U-turn
+
+Passimian (F) @ Choice Scarf
+Level: 34
+Ability: Receiver
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 6
+Ball: Ultra Ball
+Tera Type: Fighting
+- Close Combat
+- Rock Slide
+- Iron Head
+- U-turn
+
+Scraggy (F) @ Focus Sash
+Level: 34
+Ability: Intimidate
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 6
+Ball: Dusk Ball
+Tera Type: Dark
+- Drain Punch
+- Crunch
+- Fake Out
+- Ice Punch
 
 === TRAINER_CORA ===
 Name: CORA
@@ -33237,11 +35795,91 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Predict Switch
 
-Meditite
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Falinks (F) @ Wide Lens  
+Level: 42  
+Ability: Defiant  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
+Dynamax Level: 8  
+Ball: Ultra Ball  
+Tera Type: Fighting  
+- No Retreat  
+- Close Combat  
+- Iron Head  
+- Rock Slide  
+
+Heracross (F) @ Flame Orb  
+Level: 42  
+Ability: Guts  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
+Dynamax Level: 8  
+Ball: Timer Ball  
+Tera Type: Bug  
+- Facade  
+- Close Combat  
+- Knock Off  
+- Swords Dance  
+
+Gallade (F) @ Focus Sash  
+Level: 42  
+Ability: Steadfast  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
+Dynamax Level: 8  
+Ball: Repeat Ball  
+Tera Type: Psychic  
+- Psycho Cut  
+- Sacred Sword  
+- Shadow Sneak  
+- Swords Dance  
+
+Grapploct (F) @ Assault Vest  
+Level: 42  
+Ability: Technician  
+Nature: Careful  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 252 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 0 Spe  
+Dynamax Level: 8  
+Ball: Dive Ball  
+Tera Type: Water  
+- Octolock  
+- Ice Punch  
+- Drain Punch  
+- Circle Throw  
+
+Toxicroak (F) @ Black Sludge  
+Level: 42  
+Ability: Dry Skin  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
+Dynamax Level: 8  
+Ball: Dusk Ball  
+Tera Type: Poison  
+- Gunk Shot  
+- Close Combat  
+- Sucker Punch  
+- Swords Dance  
+
+Iron Valiant (F) @ Booster Energy  
+Level: 42  
+Ability: Quark Drive  
+Nature: Naive  
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 8  
+Ball: Beast Ball  
+Tera Type: Fairy  
+- Moonblast  
+- Close Combat  
+- Thunderbolt  
+- Destiny Bond  
 
 === TRAINER_PAULA ===
 Name: PAULA
@@ -33250,11 +35888,91 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Predict Switch
 
-Breloom
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Medicham (F) @ Expert Belt  
+Level: 40  
+Ability: Pure Power  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
+Dynamax Level: 8  
+Ball: Quick Ball  
+Tera Type: Psychic  
+- High Jump Kick  
+- Zen Headbutt  
+- Thunder Punch  
+- Ice Punch  
+
+Passimian (F) @ Sitrus Berry  
+Level: 40  
+Ability: Receiver  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 100 HP / 252 Atk / 0 Def / 0 SpA / 156 Spe  
+Dynamax Level: 8  
+Ball: Ultra Ball  
+Tera Type: Fighting  
+- Close Combat  
+- U-turn  
+- Rock Slide  
+- Knock Off  
+
+Mienfoo (F) @ Eviolite  
+Level: 40  
+Ability: Regenerator  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe  
+Dynamax Level: 8  
+Ball: Heal Ball  
+Tera Type: Fighting  
+- Drain Punch  
+- U-turn  
+- Knock Off  
+- Fake Out  
+
+Pangoro (F) @ Black Glasses  
+Level: 40  
+Ability: Iron Fist  
+Nature: Adamant  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 8  
+Ball: Dusk Ball  
+Tera Type: Dark  
+- Crunch  
+- Drain Punch  
+- Bullet Punch  
+- Parting Shot  
+
+Kommo-o (F) @ Throat Spray  
+Level: 40  
+Ability: Soundproof  
+Nature: Timid  
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 8  
+Ball: Timer Ball  
+Tera Type: Steel  
+- Clanging Scales  
+- Flash Cannon  
+- Focus Blast  
+- Flamethrower  
+
+Hawlucha (F) @ Electric Seed  
+Level: 40  
+Ability: Unburden  
+Nature: Jolly  
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe  
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe  
+Dynamax Level: 8  
+Ball: Repeat Ball  
+Tera Type: Flying  
+- Acrobatics  
+- High Jump Kick  
+- Swords Dance  
+- Roost  
 
 === TRAINER_CYNDY_2 ===
 Name: CYNDY
@@ -33263,15 +35981,91 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Predict Switch
 
-Meditite
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Medicham (F) @ Life Orb
+Level: 37
+Ability: Pure Power
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 7
+Ball: Great Ball
+Tera Type: Psychic
+- High Jump Kick
+- Zen Headbutt
+- Ice Punch
+- Fake Out
 
-Makuhita
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
+Hitmonchan (F) @ Assault Vest
+Level: 37
+Ability: Iron Fist
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD / 0 SpA / 0 Def / 0 Spe
+Dynamax Level: 7
+Ball: Timer Ball
+Tera Type: Fighting
+- Drain Punch
+- Thunder Punch
+- Ice Punch
+- Fire Punch
+
+Hawlucha (F) @ Flying Gem
+Level: 37
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 7
+Ball: Quick Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Roost
+- Taunt
+
+Mienshao (F) @ Focus Sash
+Level: 37
+Ability: Regenerator
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 7
+Ball: Heal Ball
+Tera Type: Fighting
+- Drain Punch
+- Knock Off
+- Fake Out
+- U-turn
+
+Passimian (F) @ Choice Band
+Level: 37
+Ability: Receiver
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 7
+Ball: Ultra Ball
+Tera Type: Fighting
+- Close Combat
+- Rock Slide
+- Iron Head
+- U-turn
+
+Scrafty (F) @ Leftovers
+Level: 37
+Ability: Intimidate
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD / 0 SpA / 0 Def / 0 Spe
+Dynamax Level: 7
+Ball: Dusk Ball
+Tera Type: Dark
+- Drain Punch
+- Crunch
+- Fake Out
+- Dragon Dance
 
 === TRAINER_CYNDY_3 ===
 Name: CYNDY
@@ -33280,15 +36074,91 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Predict Switch
 
-Meditite
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Medicham (F) @ Life Orb
+Level: 41
+Ability: Pure Power
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 8
+Ball: Great Ball
+Tera Type: Psychic
+- High Jump Kick
+- Zen Headbutt
+- Ice Punch
+- Fake Out
 
-Makuhita
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Kommo-o (F) @ Throat Spray
+Level: 41
+Ability: Soundproof
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 8
+Ball: Timer Ball
+Tera Type: Dragon
+- Clanging Scales
+- Focus Blast
+- Flash Cannon
+- Protect
+
+Hawlucha (F) @ Flying Gem
+Level: 41
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 8
+Ball: Quick Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Roost
+- Taunt
+
+Mienshao (F) @ Focus Sash
+Level: 41
+Ability: Regenerator
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 8
+Ball: Heal Ball
+Tera Type: Fighting
+- Drain Punch
+- Knock Off
+- Fake Out
+- U-turn
+
+Passimian (F) @ Choice Band
+Level: 41
+Ability: Receiver
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 8
+Ball: Ultra Ball
+Tera Type: Fighting
+- Close Combat
+- Rock Slide
+- Iron Head
+- U-turn
+
+Scrafty (F) @ Leftovers
+Level: 41
+Ability: Intimidate
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD / 0 SpA / 0 Def / 0 Spe
+Dynamax Level: 8
+Ball: Dusk Ball
+Tera Type: Dark
+- Drain Punch
+- Crunch
+- Fake Out
+- Dragon Dance
 
 === TRAINER_CYNDY_4 ===
 Name: CYNDY
@@ -33297,15 +36167,91 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Predict Switch
 
-Medicham
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Medicham (F) @ Life Orb
+Level: 45
+Ability: Pure Power
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 9
+Ball: Great Ball
+Tera Type: Psychic
+- High Jump Kick
+- Zen Headbutt
+- Ice Punch
+- Fake Out
 
-Hariyama
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+Kommo-o (F) @ Throat Spray
+Level: 45
+Ability: Soundproof
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 9
+Ball: Timer Ball
+Tera Type: Dragon
+- Clanging Scales
+- Focus Blast
+- Flash Cannon
+- Protect
+
+Hawlucha (F) @ Flying Gem
+Level: 45
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 9
+Ball: Quick Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Roost
+- Taunt
+
+Mienshao (F) @ Focus Sash
+Level: 45
+Ability: Regenerator
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 9
+Ball: Heal Ball
+Tera Type: Fighting
+- Drain Punch
+- Knock Off
+- Fake Out
+- U-turn
+
+Passimian (F) @ Choice Band
+Level: 45
+Ability: Receiver
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 9
+Ball: Ultra Ball
+Tera Type: Fighting
+- Close Combat
+- Rock Slide
+- Iron Head
+- U-turn
+
+Scrafty (F) @ Leftovers
+Level: 45
+Ability: Intimidate
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD / 0 SpA / 0 Def / 0 Spe
+Dynamax Level: 9
+Ball: Dusk Ball
+Tera Type: Dark
+- Drain Punch
+- Crunch
+- Fake Out
+- Dragon Dance
 
 === TRAINER_CYNDY_5 ===
 Name: CYNDY
@@ -33314,15 +36260,91 @@ Pic: Battle Girl
 Gender: Female
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Prefer Highest Damage Move / Smart Switching / Predict Switch
 
-Medicham
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Medicham (F) @ Life Orb
+Level: 50
+Ability: Pure Power
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Great Ball
+Tera Type: Psychic
+- High Jump Kick
+- Zen Headbutt
+- Ice Punch
+- Fake Out
 
-Hariyama
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
+Kommo-o (F) @ Throat Spray
+Level: 50
+Ability: Soundproof
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Timer Ball
+Tera Type: Dragon
+- Clanging Scales
+- Focus Blast
+- Flash Cannon
+- Protect
+
+Iron Valiant (F) @ Booster Energy
+Level: 50
+Ability: Quark Drive
+Nature: Naive
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Beast Ball
+Tera Type: Fairy
+- Close Combat
+- Moonblast
+- Swords Dance
+- Knock Off
+
+Hawlucha (F) @ Flying Gem
+Level: 50
+Ability: Unburden
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Quick Ball
+Tera Type: Flying
+- Acrobatics
+- High Jump Kick
+- Roost
+- Taunt
+
+Mienshao (F) @ Focus Sash
+Level: 50
+Ability: Regenerator
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+Dynamax Level: 10
+Ball: Heal Ball
+Tera Type: Fighting
+- Drain Punch
+- Knock Off
+- Fake Out
+- U-turn
+
+Scrafty (F) @ Leftovers
+Level: 50
+Ability: Intimidate
+Nature: Careful
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 252 SpD / 0 SpA / 0 Def / 0 Spe
+Dynamax Level: 10
+Ball: Dusk Ball
+Tera Type: Dark
+- Drain Punch
+- Crunch
+- Fake Out
+- Dragon Dance
 
 === TRAINER_MADELINE_1 ===
 Name: MADELINE
@@ -34864,11 +37886,73 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Treecko
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Treecko (F) @ Miracle Seed  
+Level: 10
+Ability: Overgrow
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Absorb
+- Pound
+- Quick Attack
+- Leer
+
+Lotad (F) @ Leftovers
+Level: 9
+Ability: Rain Dish
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 252 Spe
+- Absorb
+- Growl
+- Astonish
+- Water Gun
+
+Poochyena (F) @ Oran Berry
+Level: 9
+Ability: Run Away
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Bite
+- Tackle
+- Howl
+- Sand Attack
+
+Wingull (F) @ Sitrus Berry
+Level: 8
+Ability: Keen Eye
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Water Gun
+- Growl
+- Quick Attack
+- Supersonic
+
+Shroomish (F) @ Big Root
+Level: 8
+Ability: Effect Spore
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+- Absorb
+- Tackle
+- Stun Spore
+- Leech Seed
+
+Electrike (F) @ Cheri Berry
+Level: 8
+Ability: Static
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Tackle
+- Thunder Wave
+- Leer
+- Quick Attack
 
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
 Name: BRENDAN
@@ -34877,19 +37961,73 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Slugma
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Grovyle (F) @ Miracle Seed  
+Level: 25
+Ability: Overgrow
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Leaf Blade
+- Quick Attack
+- Mega Drain
+- Rock Tomb
 
-Wingull
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Lombre (F) @ Leftovers
+Level: 23
+Ability: Rain Dish
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Bubble Beam
+- Mega Drain
+- Fake Out
+- Astonish
 
-Grovyle
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Manectric (F) @ Magnet
+Level: 24
+Ability: Static
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Spark
+- Thunder Wave
+- Quick Attack
+- Bite
+
+Swellow (F) @ Sharp Beak
+Level: 23
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Wing Attack
+- Quick Attack
+- Double Team
+- Aerial Ace
+
+Roselia (F) @ Big Root
+Level: 23
+Ability: Poison Point
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Mega Drain
+- Leech Seed
+- Poison Sting
+- Stun Spore
+
+Linoone-Galar (F) @ Sitrus Berry
+Level: 22
+Ability: Pickup
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Headbutt
+- Sand Attack
+- Thunder Wave
+- Pin Missile
 
 === TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
 Name: BRENDAN
@@ -34898,19 +38036,73 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Slugma
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Sceptile (F) @ Miracle Seed  
+Level: 48
+Ability: Unburden
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Leaf Blade
+- Dragon Pulse
+- Earthquake
+- Rock Slide
 
-Pelipper
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Ludicolo (F) @ Leftovers
+Level: 46
+Ability: Rain Dish
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Scald
+- Giga Drain
+- Ice Beam
+- Fake Out
 
-Grovyle
-Level: 31
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Manectric (F) @ Manectite
+Level: 47
+Ability: Lightning Rod
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Flamethrower
+- Volt Switch
+- Signal Beam
+
+Swellow (F) @ Flame Orb
+Level: 46
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Facade
+- Brave Bird
+- U-turn
+- Quick Attack
+
+Roserade (F) @ Black Sludge
+Level: 45
+Ability: Technician
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Sludge Bomb
+- Giga Drain
+- Shadow Ball
+- Toxic Spikes
+
+Pelipper (F) @ Damp Rock
+Level: 44
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+- Scald
+- Hurricane
+- Roost
+- U-turn
 
 === TRAINER_BRENDAN_ROUTE_103_TREECKO ===
 Name: BRENDAN
@@ -34919,11 +38111,73 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Force Setup First Turn
+AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Torchic
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Torchic (F) @ Charcoal  
+Level: 10
+Ability: Speed Boost
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Ember
+- Scratch
+- Growl
+- Quick Attack
+
+Wingull (F) @ Sitrus Berry
+Level: 9
+Ability: Keen Eye
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Water Gun
+- Growl
+- Quick Attack
+- Supersonic
+
+Lotad (F) @ Leftovers
+Level: 9
+Ability: Rain Dish
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 252 Spe
+- Absorb
+- Growl
+- Astonish
+- Water Gun
+
+Poochyena (F) @ Oran Berry
+Level: 8
+Ability: Run Away
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Bite
+- Tackle
+- Howl
+- Sand Attack
+
+Shroomish (F) @ Big Root
+Level: 8
+Ability: Effect Spore
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+- Absorb
+- Tackle
+- Stun Spore
+- Leech Seed
+
+Electrike (F) @ Cheri Berry
+Level: 8
+Ability: Static
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Tackle
+- Thunder Wave
+- Leer
+- Quick Attack
 
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
 Name: BRENDAN
@@ -34932,19 +38186,73 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Wingull
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Combusken (F) @ Charcoal  
+Level: 25
+Ability: Blaze
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Double Kick
+- Flame Charge
+- Rock Tomb
+- Peck
 
-Lombre
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Lombre (F) @ Leftovers
+Level: 23
+Ability: Rain Dish
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Bubble Beam
+- Mega Drain
+- Fake Out
+- Astonish
 
-Combusken
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Manectric (F) @ Magnet
+Level: 24
+Ability: Static
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Spark
+- Thunder Wave
+- Quick Attack
+- Bite
+
+Swellow (F) @ Sharp Beak
+Level: 23
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Wing Attack
+- Quick Attack
+- Double Team
+- Aerial Ace
+
+Roselia (F) @ Big Root
+Level: 23
+Ability: Poison Point
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Mega Drain
+- Leech Seed
+- Poison Sting
+- Stun Spore
+
+Linoone (F) @ Sitrus Berry
+Level: 22
+Ability: Pickup
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Headbutt
+- Sand Attack
+- Thunder Wave
+- Pin Missile
 
 === TRAINER_BRENDAN_ROUTE_119_TREECKO ===
 Name: BRENDAN
@@ -34953,19 +38261,73 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Pelipper
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Blaziken (F) @ Charcoal  
+Level: 48
+Ability: Speed Boost
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Blaze Kick
+- Close Combat
+- Brave Bird
+- Thunder Punch
 
-Lombre
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Ludicolo (F) @ Leftovers
+Level: 46
+Ability: Rain Dish
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Scald
+- Giga Drain
+- Ice Beam
+- Fake Out
 
-Combusken
-Level: 31
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Manectric (F) @ Manectite
+Level: 47
+Ability: Lightning Rod
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Flamethrower
+- Volt Switch
+- Signal Beam
+
+Swellow (F) @ Flame Orb
+Level: 46
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Facade
+- Brave Bird
+- U-turn
+- Quick Attack
+
+Roserade (F) @ Black Sludge
+Level: 45
+Ability: Technician
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Sludge Bomb
+- Giga Drain
+- Shadow Ball
+- Toxic Spikes
+
+Pelipper (F) @ Damp Rock
+Level: 44
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+- Scald
+- Hurricane
+- Roost
+- U-turn
 
 === TRAINER_BRENDAN_ROUTE_103_TORCHIC ===
 Name: BRENDAN
@@ -34974,11 +38336,73 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Mudkip
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Mudkip (F) @ Mystic Water  
+Level: 10
+Ability: Torrent
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Water Gun
+- Tackle
+- Mud-Slap
+- Growl
+
+Lotad (F) @ Leftovers
+Level: 9
+Ability: Rain Dish
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 252 Def / 0 SpA / 4 SpD / 252 Spe
+- Absorb
+- Growl
+- Astonish
+- Water Gun
+
+Poochyena (F) @ Oran Berry
+Level: 9
+Ability: Run Away
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Bite
+- Tackle
+- Howl
+- Sand Attack
+
+Wingull (F) @ Sitrus Berry
+Level: 8
+Ability: Keen Eye
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Water Gun
+- Growl
+- Quick Attack
+- Supersonic
+
+Shroomish (F) @ Big Root
+Level: 8
+Ability: Effect Spore
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpD / 0 Spe
+- Absorb
+- Tackle
+- Stun Spore
+- Leech Seed
+
+Electrike (F) @ Cheri Berry
+Level: 8
+Ability: Static
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Tackle
+- Thunder Wave
+- Leer
+- Quick Attack
 
 === TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
 Name: BRENDAN
@@ -34987,19 +38411,73 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Lombre
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Marshtomp (F) @ Mystic Water  
+Level: 25
+Ability: Torrent
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Water Gun
+- Mud Shot
+- Rock Slide
+- Ice Punch
 
-Slugma
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Lombre (F) @ Leftovers
+Level: 23
+Ability: Rain Dish
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Bubble Beam
+- Mega Drain
+- Fake Out
+- Astonish
 
-Marshtomp
-Level: 20
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Manectric (F) @ Magnet
+Level: 24
+Ability: Static
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Spark
+- Thunder Wave
+- Quick Attack
+- Bite
+
+Swellow (F) @ Sharp Beak
+Level: 23
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Wing Attack
+- Quick Attack
+- Double Team
+- Aerial Ace
+
+Roselia (F) @ Big Root
+Level: 23
+Ability: Poison Point
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Mega Drain
+- Leech Seed
+- Poison Sting
+- Stun Spore
+
+Linoone (F) @ Sitrus Berry
+Level: 22
+Ability: Pickup
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Headbutt
+- Sand Attack
+- Thunder Wave
+- Pin Missile
 
 === TRAINER_BRENDAN_ROUTE_119_TORCHIC ===
 Name: BRENDAN
@@ -35008,19 +38486,73 @@ Pic: Brendan
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Risky / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
-Lombre
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Swampert (F) @ Mystic Water  
+Level: 48
+Ability: Torrent
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
+- Earthquake
+- Liquidation
+- Ice Punch
+- Rock Slide
 
-Slugma
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Ludicolo (F) @ Leftovers
+Level: 46
+Ability: Rain Dish
+Nature: Modest
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Scald
+- Giga Drain
+- Ice Beam
+- Fake Out
 
-Marshtomp
-Level: 31
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Manectric (F) @ Manectite
+Level: 47
+Ability: Lightning Rod
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Thunderbolt
+- Flamethrower
+- Volt Switch
+- Signal Beam
+
+Swellow (F) @ Flame Orb
+Level: 46
+Ability: Guts
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
+- Facade
+- Brave Bird
+- U-turn
+- Quick Attack
+
+Roserade (F) @ Black Sludge
+Level: 45
+Ability: Technician
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+- Sludge Bomb
+- Giga Drain
+- Shadow Ball
+- Toxic Spikes
+
+Pelipper (F) @ Damp Rock
+Level: 44
+Ability: Drizzle
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
+- Scald
+- Hurricane
+- Roost
+- U-turn
 
 === TRAINER_MAY_ROUTE_103_MUDKIP ===
 Name: MAY
