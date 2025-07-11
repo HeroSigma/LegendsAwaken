@@ -1622,42 +1622,20 @@ BattleScript_EffectPsychoShiftCanWork:
 BattleScript_EffectSynchronoise::
 	attackcanceler
 	attackstring
+	pause B_WAIT_TIME_MED
 	ppreduce
-	selectfirstvalidtarget
-BattleScript_SynchronoiseLoop:
-	movevaluescleanup
-	jumpifcantusesynchronoise BattleScript_SynchronoiseNoEffect
-	accuracycheck BattleScript_SynchronoiseMissed, ACC_CURR_MOVE
-	critcalc
-	damagecalc
-	adjustdamage
-	attackanimation
-	waitanimation
-	effectivenesssound
-	hitanimation BS_TARGET
-	waitstate
-	healthbarupdate BS_TARGET
-	datahpupdate BS_TARGET
-	critmessage
-	waitmessage B_WAIT_TIME_LONG
-	resultmessage
-	waitmessage B_WAIT_TIME_LONG
+	trysynchronoise BattleScript_MoveEnd
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	goto BattleScript_HitFromCritCalc
+
+BattleScript_ItDoesntAffectFoe::
+	savetarget
+	copybyte gBattlerTarget, sBATTLER
+	printstring STRINGID_ITDOESNTAFFECT
+	waitmessage B_WAIT_TIME_SHORT
 	flushtextbox
-	tryfaintmon BS_TARGET
-BattleScript_SynchronoiseMoveTargetEnd:
-	moveendto MOVEEND_NEXT_TARGET
-	jumpifnexttargetvalid BattleScript_SynchronoiseLoop
-	end
-BattleScript_SynchronoiseMissed:
-	pause B_WAIT_TIME_SHORT
-	resultmessage
-	waitmessage B_WAIT_TIME_LONG
-	goto BattleScript_SynchronoiseMoveTargetEnd
-BattleScript_SynchronoiseNoEffect:
-	pause B_WAIT_TIME_SHORT
-	printstring STRINGID_NOEFFECTONTARGET
-	waitmessage B_WAIT_TIME_LONG
-	goto BattleScript_SynchronoiseMoveTargetEnd
+	restoretarget
+	return
 
 BattleScript_MoveEffectSmackDown::
 	printstring STRINGID_FELLSTRAIGHTDOWN
@@ -6135,53 +6113,13 @@ BattleScript_LeechSeedFree::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
-BattleScript_SpikesFree::
-	printstring STRINGID_PKMNBLEWAWAYSPIKES
+BattleScript_SpinHazardsAway::
+	printfromtable gSpinHazardsStringIds
 	waitmessage B_WAIT_TIME_LONG
 	return
 
-BattleScript_ToxicSpikesFree::
-	printstring STRINGID_PKMNBLEWAWAYTOXICSPIKES
-	waitmessage B_WAIT_TIME_LONG
-	return
-
-BattleScript_StickyWebFree::
-	printstring STRINGID_PKMNBLEWAWAYSTICKYWEB
-	waitmessage B_WAIT_TIME_LONG
-	return
-
-BattleScript_StealthRockFree::
-	printstring STRINGID_PKMNBLEWAWAYSTEALTHROCK
-	waitmessage B_WAIT_TIME_LONG
-	return
-
-BattleScript_SteelsurgeFree::
-	printstring STRINGID_PKMNBLEWAWAYSHARPSTEEL
-	waitmessage B_WAIT_TIME_LONG
-	return
-
-BattleScript_SpikesDefog::
-	printstring STRINGID_SPIKESDISAPPEAREDFROMTEAM
-	waitmessage B_WAIT_TIME_LONG
-	return
-
-BattleScript_ToxicSpikesDefog::
-	printstring STRINGID_TOXICSPIKESDISAPPEAREDFROMTEAM
-	waitmessage B_WAIT_TIME_LONG
-	return
-
-BattleScript_StickyWebDefog::
-	printstring STRINGID_STICKYWEBDISAPPEAREDFROMTEAM
-	waitmessage B_WAIT_TIME_LONG
-	return
-
-BattleScript_StealthRockDefog::
-	printstring STRINGID_STEALTHROCKDISAPPEAREDFROMTEAM
-	waitmessage B_WAIT_TIME_LONG
-	return
-
-BattleScript_SteelsurgeDefog::
-	printstring STRINGID_SHARPSTEELDISAPPEAREDFROMTEAM
+BattleScript_DefogClearHazards::
+	printfromtable gDefogHazardsStringIds
 	waitmessage B_WAIT_TIME_LONG
 	return
 
@@ -7215,7 +7153,7 @@ BattleScript_AbilityPopUp::
 	tryactivateabilityshield BS_ABILITY_BATTLER
 	.if B_ABILITY_POP_UP == TRUE
 	showabilitypopup BS_ABILITY_BATTLER
-	pause 40
+	pause B_WAIT_TIME_SHORT
 	.endif
 	recordability BS_ABILITY_BATTLER
 	sethword sABILITY_OVERWRITE, 0
@@ -7228,13 +7166,13 @@ BattleScript_AbilityPopUpScripting:
 BattleScript_AbilityPopUpOverwriteThenNormal:
 	setbyte sFIXED_ABILITY_POPUP, TRUE
 	showabilitypopup BS_ABILITY_BATTLER
-	pause 60
+	pause B_WAIT_TIME_SHORT
 	sethword sABILITY_OVERWRITE, 0
 	updateabilitypopup BS_ABILITY_BATTLER
-	pause 20
+	pause B_WAIT_TIME_SHORT
 	recordability BS_ABILITY_BATTLER
 	destroyabilitypopup
-	pause 40
+	setbyte sFIXED_ABILITY_POPUP, FALSE
 	return
 
 BattleScript_SpeedBoostActivates::
@@ -7463,7 +7401,6 @@ BattleScript_TryIntimidateHoldEffectsRet:
 BattleScript_IntimidateActivates::
 	savetarget
 	call BattleScript_AbilityPopUp
-	destroyabilitypopup
 	setbyte gBattlerTarget, 0
 BattleScript_IntimidateLoop:
 	jumpiftargetally BattleScript_IntimidateLoopIncrement
@@ -8026,8 +7963,8 @@ BattleScript_CursedBodyActivates::
 
 BattleScript_MummyActivates::
 .if B_ABILITY_POP_UP == TRUE
-	call BattleScript_AbilityPopUpTarget
 	setbyte sFIXED_ABILITY_POPUP, TRUE
+	call BattleScript_AbilityPopUpTarget
 	copybyte gBattlerAbility, gBattlerAttacker
 	copyhword sABILITY_OVERWRITE, gLastUsedAbility
 	call BattleScript_AbilityPopUpOverwriteThenNormal
