@@ -401,7 +401,7 @@ OldaleTown_EventScript_TeraChanger::
         msgbox OldaleTown_Text_TeraIntro, MSGBOX_YESNO
         goto_if_eq VAR_RESULT, NO, OldaleTown_EventScript_TeraCancel
         msgbox OldaleTown_Text_TeraWhichMon, MSGBOX_DEFAULT
-        special ChooseMonForMoveTutor
+        special ChoosePartyMon
         waitstate
         goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_EventScript_TeraCancel
         copyvar VAR_0x8006, VAR_0x8004
@@ -446,79 +446,110 @@ OldaleTown_EventScript_TeraTypePage2::
         end
 
 OldaleTown_SetTeraTypeNormal::
-        setvar VAR_0x8009, TYPE_NORMAL
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeFighting::
-        setvar VAR_0x8009, TYPE_FIGHTING
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeFlying::
-        setvar VAR_0x8009, TYPE_FLYING
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypePoison::
-        setvar VAR_0x8009, TYPE_POISON
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeGround::
-        setvar VAR_0x8009, TYPE_GROUND
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeRock::
-        setvar VAR_0x8009, TYPE_ROCK
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeBug::
-        setvar VAR_0x8009, TYPE_BUG
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeGhost::
-        setvar VAR_0x8009, TYPE_GHOST
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeSteel::
-        setvar VAR_0x8009, TYPE_STEEL
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeFire::
-        setvar VAR_0x8009, TYPE_FIRE
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeWater::
-        setvar VAR_0x8009, TYPE_WATER
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeGrass::
-        setvar VAR_0x8009, TYPE_GRASS
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeElectric::
-        setvar VAR_0x8009, TYPE_ELECTRIC
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypePsychic::
-        setvar VAR_0x8009, TYPE_PSYCHIC
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeIce::
-        setvar VAR_0x8009, TYPE_ICE
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeDragon::
-        setvar VAR_0x8009, TYPE_DRAGON
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeDark::
-        setvar VAR_0x8009, TYPE_DARK
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeFairy::
-        setvar VAR_0x8009, TYPE_FAIRY
-        goto OldaleTown_EventScript_TeraProcess
-OldaleTown_SetTeraTypeStellar::
-        setvar VAR_0x8009, TYPE_STELLAR
-        goto OldaleTown_EventScript_TeraProcess
-
-OldaleTown_EventScript_TeraProcess::
-        compare VAR_0x8009, TYPE_STELLAR
-        goto_if_eq VAR_RESULT, TRUE, OldaleTown_EventScript_TeraSetPriceStellar
         setvar VAR_0x800A, 1000
-        goto OldaleTown_EventScript_TeraTakeMoney
-
-OldaleTown_EventScript_TeraSetPriceStellar::
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_NORMAL, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeFighting::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_FIGHTING, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeFlying::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_FLYING, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypePoison::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_POISON, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeGround::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_GROUND, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeRock::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_ROCK, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeBug::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_BUG, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeGhost::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_GHOST, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeSteel::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_STEEL, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeFire::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_FIRE, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeWater::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_WATER, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeGrass::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_GRASS, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeElectric::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_ELECTRIC, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypePsychic::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_PSYCHIC, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeIce::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_ICE, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeDragon::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_DRAGON, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeDark::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_DARK, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeFairy::
+        setvar VAR_0x800A, 1000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_FAIRY, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
+OldaleTown_SetTeraTypeStellar::
         setvar VAR_0x800A, 5000
+        call OldaleTown_EventScript_TeraPay
+        setteratype TYPE_STELLAR, VAR_0x8006
+        goto OldaleTown_EventScript_TeraFinish
 
-OldaleTown_EventScript_TeraTakeMoney::
+OldaleTown_EventScript_TeraPay::
         showmoneybox 0, 0
         checkmoney VAR_0x800A
         goto_if_eq VAR_RESULT, FALSE, OldaleTown_EventScript_TeraNoMoney
         removemoney VAR_0x800A
         updatemoneybox
-        setteratype VAR_0x8009, VAR_0x8006
+        return
+
+OldaleTown_EventScript_TeraFinish::
         msgbox OldaleTown_Text_TeraDone, MSGBOX_DEFAULT
         hidemoneybox
         release
