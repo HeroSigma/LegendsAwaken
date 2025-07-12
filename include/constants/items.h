@@ -994,10 +994,26 @@
 
 #define ITEM_STRANGE_BALL 828
 
+// IV Candies
+#define ITEM_IVCANDY_ATK 829
+#define ITEM_IVCANDY_HP 830
+#define ITEM_IVCANDY_DEF 831
+#define ITEM_IVCANDY_SPATK 832
+#define ITEM_IVCANDY_SPDEF 833
+#define ITEM_IVCANDY_SPEED 834
+
+// IV Reducers
+#define ITEM_IVREDUCER_ATK 835
+#define ITEM_IVREDUCER_HP 836
+#define ITEM_IVREDUCER_DEF 837
+#define ITEM_IVREDUCER_SPATK 838
+#define ITEM_IVREDUCER_SPDEF 839
+#define ITEM_IVREDUCER_SPEED 840
+
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 829
+#define ITEMS_COUNT 841
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

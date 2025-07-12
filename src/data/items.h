@@ -14033,4 +14033,184 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    [ITEM_IVCANDY_ATK] =
+    {
+        .name = _("IV Candy Atk"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Maximizes the\n"
+            "Attack IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvCandy,
+        .iconPic = gItemIcon_IvCandyAtk,
+        .iconPalette = gItemIconPalette_IvCandy,
+    },
+
+    [ITEM_IVCANDY_HP] =
+    {
+        .name = _("IV Candy HP"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Maximizes the\n"
+            "HP IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvCandy,
+        .iconPic = gItemIcon_IvCandyHp,
+        .iconPalette = gItemIconPalette_IvCandy,
+    },
+
+    [ITEM_IVCANDY_DEF] =
+    {
+        .name = _("IV Candy Def"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Maximizes the\n"
+            "Defense IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvCandy,
+        .iconPic = gItemIcon_IvCandyDef,
+        .iconPalette = gItemIconPalette_IvCandy,
+    },
+
+    [ITEM_IVCANDY_SPATK] =
+    {
+        .name = _("IV Candy SpAtk"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Maximizes the\n"
+            "Sp. Atk IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvCandy,
+        .iconPic = gItemIcon_IvCandySpatk,
+        .iconPalette = gItemIconPalette_IvCandy,
+    },
+
+    [ITEM_IVCANDY_SPDEF] =
+    {
+        .name = _("IV Candy SpDef"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Maximizes the\n"
+            "Sp. Def IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvCandy,
+        .iconPic = gItemIcon_IvCandySpdef,
+        .iconPalette = gItemIconPalette_IvCandy,
+    },
+
+    [ITEM_IVCANDY_SPEED] =
+    {
+        .name = _("IV Candy Spe"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Maximizes the\n"
+            "Speed IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvCandy,
+        .iconPic = gItemIcon_IvCandySpe,
+        .iconPalette = gItemIconPalette_IvCandy,
+    },
+
+    [ITEM_IVREDUCER_ATK] =
+    {
+        .name = _("IV Reducer Atk"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Minimizes the\n"
+            "Attack IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvReducer,
+        .iconPic = gItemIcon_IvReducerAtk,
+        .iconPalette = gItemIconPalette_IvReducer,
+    },
+
+    [ITEM_IVREDUCER_HP] =
+    {
+        .name = _("IV Reducer HP"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Minimizes the\n"
+            "HP IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvReducer,
+        .iconPic = gItemIcon_IvReducerHp,
+        .iconPalette = gItemIconPalette_IvReducer,
+    },
+
+    [ITEM_IVREDUCER_DEF] =
+    {
+        .name = _("IV Reducer Def"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Minimizes the\n"
+            "Defense IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvReducer,
+        .iconPic = gItemIcon_IvReducerDef,
+        .iconPalette = gItemIconPalette_IvReducer,
+    },
+
+    [ITEM_IVREDUCER_SPATK] =
+    {
+        .name = _("IV Reducer SpAtk"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Minimizes the\n"
+            "Sp. Atk IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvReducer,
+        .iconPic = gItemIcon_IvReducerSpatk,
+        .iconPalette = gItemIconPalette_IvReducer,
+    },
+
+    [ITEM_IVREDUCER_SPDEF] =
+    {
+        .name = _("IV Reducer SpDef"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Minimizes the\n"
+            "Sp. Def IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvReducer,
+        .iconPic = gItemIcon_IvReducerSpdef,
+        .iconPalette = gItemIconPalette_IvReducer,
+    },
+
+    [ITEM_IVREDUCER_SPEED] =
+    {
+        .name = _("IV Reducer Spe"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Minimizes the\n"
+            "Speed IV of a\n"
+            "single Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IvReducer,
+        .iconPic = gItemIcon_IvReducerSpe,
+        .iconPalette = gItemIconPalette_IvReducer,
+    },
 };
