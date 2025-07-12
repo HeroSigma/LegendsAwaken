@@ -568,7 +568,7 @@ OldaleTown_EventScript_TeraCancel::
 
 OldaleTown_Text_TeraIntro:
         .string "I can change a POKéMON's Tera Type for\n"
-        .string "$1000. Stellar Type costs $5000.$"
+        .string "¥1000. Stellar Type costs ¥5000.$"
 
 OldaleTown_Text_TeraWhichMon:
         .string "Which POKéMON should I work on?$"

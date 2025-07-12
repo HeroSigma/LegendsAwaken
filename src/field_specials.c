@@ -5,7 +5,6 @@
 #include "battle_tower.h"
 #include "cable_club.h"
 #include "data.h"
-#include "battle_main.h"
 #include "decoration.h"
 #include "diploma.h"
 #include "event_data.h"
@@ -2421,9 +2420,9 @@ void ShowScrollableMultichoice(void)
     case SCROLL_MULTI_TERA_TYPES_PAGE1:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
         task->tNumItems = 10; // 9 types + Next
-        task->tLeft = 18;
+        task->tLeft = 15;
         task->tTop = 1;
-        task->tWidth = 10;
+        task->tWidth = 14;
         task->tHeight = 12;
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
@@ -2431,9 +2430,9 @@ void ShowScrollableMultichoice(void)
     case SCROLL_MULTI_TERA_TYPES_PAGE2:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
         task->tNumItems = 11; // 10 types + Back
-        task->tLeft = 18;
+        task->tLeft = 15;
         task->tTop = 1;
-        task->tWidth = 10;
+        task->tWidth = 14;
         task->tHeight = 12;
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
@@ -2601,29 +2600,29 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_TERA_TYPES_PAGE1] =
     {
-        gTypesInfo[TYPE_NORMAL].name,
-        gTypesInfo[TYPE_FIGHTING].name,
-        gTypesInfo[TYPE_FLYING].name,
-        gTypesInfo[TYPE_POISON].name,
-        gTypesInfo[TYPE_GROUND].name,
-        gTypesInfo[TYPE_ROCK].name,
-        gTypesInfo[TYPE_BUG].name,
-        gTypesInfo[TYPE_GHOST].name,
-        gTypesInfo[TYPE_STEEL].name,
+        COMPOUND_STRING("NORMAL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("FIGHTING{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("FLYING{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("POISON{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("GROUND{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("ROCK{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("BUG{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("GHOST{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("STEEL{CLEAR_TO 0x48}¥1000"),
         COMPOUND_STRING("NEXT")
     },
     [SCROLL_MULTI_TERA_TYPES_PAGE2] =
     {
-        gTypesInfo[TYPE_FIRE].name,
-        gTypesInfo[TYPE_WATER].name,
-        gTypesInfo[TYPE_GRASS].name,
-        gTypesInfo[TYPE_ELECTRIC].name,
-        gTypesInfo[TYPE_PSYCHIC].name,
-        gTypesInfo[TYPE_ICE].name,
-        gTypesInfo[TYPE_DRAGON].name,
-        gTypesInfo[TYPE_DARK].name,
-        gTypesInfo[TYPE_FAIRY].name,
-        gTypesInfo[TYPE_STELLAR].name,
+        COMPOUND_STRING("FIRE{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("WATER{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("GRASS{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("ELECTRIC{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("PSYCHIC{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("ICE{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("DRAGON{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("DARK{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("FAIRY{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("STELLAR{CLEAR_TO 0x48}¥5000"),
         COMPOUND_STRING("BACK")
     }
 };
