@@ -2077,11 +2077,25 @@ static u8 AddDecorationIconObjectFromIconTable(u16 tilesTag, u16 paletteTag, u8 
     struct SpriteTemplate *template;
     u8 spriteId;
 
-    if (!AllocItemIconTemporaryBuffers())
+    const u32 *pic = GetDecorationIconPic(decor);
+    u32 size = GetDecompressedDataSize(pic);
+
+    gItemIconDecompressionBuffer = Alloc(size);
+    if (gItemIconDecompressionBuffer == NULL)
         return MAX_SPRITES;
 
-    DecompressDataWithHeaderWram(GetDecorationIconPic(decor), gItemIconDecompressionBuffer);
-    CopyItemIconPicTo4x4Buffer(gItemIconDecompressionBuffer, gItemIcon4x4Buffer);
+    gItemIcon4x4Buffer = AllocZeroed(0x200);
+    if (gItemIcon4x4Buffer == NULL)
+    {
+        Free(gItemIconDecompressionBuffer);
+        return MAX_SPRITES;
+    }
+
+    DecompressDataWithHeaderWram(pic, gItemIconDecompressionBuffer);
+    if (size > 0x120)
+        CpuCopy16(gItemIconDecompressionBuffer, gItemIcon4x4Buffer, 0x200);
+    else
+        CopyItemIconPicTo4x4Buffer(gItemIconDecompressionBuffer, gItemIcon4x4Buffer);
     sheet.data = gItemIcon4x4Buffer;
     sheet.size = 0x200;
     sheet.tag = tilesTag;
