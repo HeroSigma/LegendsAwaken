@@ -5204,6 +5204,127 @@ static void ItemEffectToStatString(u8 effectType, u8 *dest)
     }
 }
 
+static void IvItemToStatString(u16 item, u8 *dest)
+{
+    switch (item)
+    {
+    case ITEM_IVCANDY_HP:
+    case ITEM_IVREDUCER_HP:
+        StringCopy(dest, gText_HP3);
+        break;
+    case ITEM_IVCANDY_ATK:
+    case ITEM_IVREDUCER_ATK:
+        StringCopy(dest, gText_Attack3);
+        break;
+    case ITEM_IVCANDY_DEF:
+    case ITEM_IVREDUCER_DEF:
+        StringCopy(dest, gText_Defense3);
+        break;
+    case ITEM_IVCANDY_SPEED:
+    case ITEM_IVREDUCER_SPEED:
+        StringCopy(dest, gText_Speed2);
+        break;
+    case ITEM_IVCANDY_SPATK:
+    case ITEM_IVREDUCER_SPATK:
+        StringCopy(dest, gText_SpAtk3);
+        break;
+    case ITEM_IVCANDY_SPDEF:
+    case ITEM_IVREDUCER_SPDEF:
+        StringCopy(dest, gText_SpDef3);
+        break;
+    }
+}
+
+static u8 ItemIdToIvDataId(u16 item)
+{
+    switch (item)
+    {
+    case ITEM_IVCANDY_HP:
+    case ITEM_IVREDUCER_HP:
+        return MON_DATA_HP_IV;
+    case ITEM_IVCANDY_ATK:
+    case ITEM_IVREDUCER_ATK:
+        return MON_DATA_ATK_IV;
+    case ITEM_IVCANDY_DEF:
+    case ITEM_IVREDUCER_DEF:
+        return MON_DATA_DEF_IV;
+    case ITEM_IVCANDY_SPEED:
+    case ITEM_IVREDUCER_SPEED:
+        return MON_DATA_SPEED_IV;
+    case ITEM_IVCANDY_SPATK:
+    case ITEM_IVREDUCER_SPATK:
+        return MON_DATA_SPATK_IV;
+    case ITEM_IVCANDY_SPDEF:
+    case ITEM_IVREDUCER_SPDEF:
+        return MON_DATA_SPDEF_IV;
+    }
+    return MON_DATA_HP_IV;
+}
+
+void ItemUseCB_IvCandy(u8 taskId, TaskFunc task)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u16 item = gSpecialVar_ItemId;
+    u8 dataId = ItemIdToIvDataId(item);
+    u8 iv = GetMonData(mon, dataId);
+
+    if (iv >= MAX_PER_STAT_IVS)
+    {
+        gPartyMenuUseExitCallback = FALSE;
+        PlaySE(SE_SELECT);
+        DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = task;
+    }
+    else
+    {
+        iv = MAX_PER_STAT_IVS;
+        SetMonData(mon, dataId, &iv);
+        CalculateMonStats(mon);
+        gPartyMenuUseExitCallback = TRUE;
+        PlaySE(SE_USE_ITEM);
+        RemoveBagItem(item, 1);
+        GetMonNickname(mon, gStringVar1);
+        IvItemToStatString(item, gStringVar2);
+        StringExpandPlaceholders(gStringVar4, gText_PkmnBaseVar2StatIncreased);
+        DisplayPartyMenuMessage(gStringVar4, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = task;
+    }
+}
+
+void ItemUseCB_IvReducer(u8 taskId, TaskFunc task)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u16 item = gSpecialVar_ItemId;
+    u8 dataId = ItemIdToIvDataId(item);
+    u8 iv = GetMonData(mon, dataId);
+
+    if (iv == 0)
+    {
+        gPartyMenuUseExitCallback = FALSE;
+        PlaySE(SE_SELECT);
+        DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = task;
+    }
+    else
+    {
+        iv = 0;
+        SetMonData(mon, dataId, &iv);
+        CalculateMonStats(mon);
+        gPartyMenuUseExitCallback = TRUE;
+        PlaySE(SE_USE_ITEM);
+        RemoveBagItem(item, 1);
+        GetMonNickname(mon, gStringVar1);
+        IvItemToStatString(item, gStringVar2);
+        StringExpandPlaceholders(gStringVar4, gText_PkmnBaseVar2StatDecreased);
+        DisplayPartyMenuMessage(gStringVar4, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = task;
+    }
+}
+
 static void ShowMoveSelectWindow(u8 slot)
 {
     u8 i;

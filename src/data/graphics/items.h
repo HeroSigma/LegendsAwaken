@@ -2099,3 +2099,19 @@ const u16 gItemIconPalette_SwapSnack[] = INCBIN_U16("graphics/items/icon_palette
 
 const u32 gItemIcon_TwiceSpicedRadish[] = INCBIN_U32("graphics/items/icons/twice_spiced_radish.4bpp.smol");
 const u16 gItemIconPalette_TwiceSpicedRadish[] = INCBIN_U16("graphics/items/icon_palettes/twice_spiced_radish.gbapal");
+
+const u32 gItemIcon_IvCandyAtk[] = INCBIN_U32("graphics/items/icons/ivcandy_atk.4bpp.smol");
+const u32 gItemIcon_IvCandyHp[] = INCBIN_U32("graphics/items/icons/ivcandy_hp.4bpp.smol");
+const u32 gItemIcon_IvCandyDef[] = INCBIN_U32("graphics/items/icons/ivcandy_def.4bpp.smol");
+const u32 gItemIcon_IvCandySpatk[] = INCBIN_U32("graphics/items/icons/ivcandy_spatk.4bpp.smol");
+const u32 gItemIcon_IvCandySpdef[] = INCBIN_U32("graphics/items/icons/ivcandy_spdef.4bpp.smol");
+const u32 gItemIcon_IvCandySpe[] = INCBIN_U32("graphics/items/icons/ivcandy_spe.4bpp.smol");
+const u16 gItemIconPalette_IvCandy[] = INCBIN_U16("graphics/items/icon_palettes/ivcandy.gbapal");
+
+const u32 gItemIcon_IvReducerAtk[] = INCBIN_U32("graphics/items/icons/ivreducer_atk.4bpp.smol");
+const u32 gItemIcon_IvReducerHp[] = INCBIN_U32("graphics/items/icons/ivreducer_hp.4bpp.smol");
+const u32 gItemIcon_IvReducerDef[] = INCBIN_U32("graphics/items/icons/ivreducer_def.4bpp.smol");
+const u32 gItemIcon_IvReducerSpatk[] = INCBIN_U32("graphics/items/icons/ivreducer_spatk.4bpp.smol");
+const u32 gItemIcon_IvReducerSpdef[] = INCBIN_U32("graphics/items/icons/ivreducer_spdef.4bpp.smol");
+const u32 gItemIcon_IvReducerSpe[] = INCBIN_U32("graphics/items/icons/ivreducer_spe.4bpp.smol");
+const u16 gItemIconPalette_IvReducer[] = INCBIN_U16("graphics/items/icon_palettes/ivreducer.gbapal");
