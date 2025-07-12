@@ -404,7 +404,7 @@ OldaleTown_EventScript_TeraChanger::
         special ChooseMonForMoveTutor
         waitstate
         goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OldaleTown_EventScript_TeraCancel
-        setvar VAR_0x8006, VAR_0x8004
+        copyvar VAR_0x8006, VAR_0x8004
         call OldaleTown_EventScript_TeraTypePage1
         end
 
