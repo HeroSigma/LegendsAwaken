@@ -1,5 +1,7 @@
 #include "constants/battle.h"
 #include "constants/pokemon.h"
+#include "constants/rgb.h"
+#include "graphics.h"
 
 #define X UQ_4_12
 #define ______ X(1.0) // Regular effectiveness.
