@@ -235,6 +235,7 @@ static const struct MenuAction sItemStorage_MenuActions[] =
 static const u16 sNewGamePCItems[][2] =
 {
 	{ITEM_EXP_CANDY_M, 999},
+	{ITEM_IVCANDY_ATK, 1},
     { ITEM_NONE, 0 }
 };
 
