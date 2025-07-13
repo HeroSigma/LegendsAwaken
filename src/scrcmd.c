@@ -3247,12 +3247,13 @@ bool8 ScrCmd_fwdweekday(struct ScriptContext *ctx)
     FakeRtc_AdvanceTimeBy(daysToAdd, 0, 0, 0);
     return FALSE;
 }
+	void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
+  {
+      u8 condition = ScriptReadByte(ctx);
+	  if (ctx->breakOnTrainerBattle && sScriptConditionTable[condition][ctx->comparisonResult] == 1)
+      StopScript(ctx);
+}
 
-void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
-{
-    u8 condition = ScriptReadByte(ctx);
-    if (ctx->breakOnTrainerBattle && sScriptConditionTable[condition][ctx->comparisonResult] == 1)
-        StopScript(ctx);
 
 bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
 {
