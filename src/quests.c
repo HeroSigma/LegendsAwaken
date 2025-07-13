@@ -1175,7 +1175,6 @@ static bool8 LoadGraphics(void)
 			return TRUE;
 	}
 	return FALSE;
-}
 
 // Stub implementations for the quest menu system. These allow the project to
 // compile even though the full feature is not present.
@@ -1216,7 +1215,6 @@ void QuestMenu_CopySubquestName(u8 *dest, u8 parentId, u8 childId)
     if (dest)
         dest[0] = EOS;
 }
-
 static bool8 InitBackgrounds(void)
 {
 	ResetAllBgsCoordinatesAndBgCntRegs();

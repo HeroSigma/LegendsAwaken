@@ -43,6 +43,8 @@
 #include "overworld.h"
 #include "rotating_tile_puzzle.h"
 #include "rtc.h"
+#include "quests.h"
+#include "constants/quest_menu.h"
 #include "script.h"
 #include "script_menu.h"
 #include "script_movement.h"
@@ -3273,7 +3275,7 @@ bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
         ScriptContext_Stop();
         break;
     case QUEST_MENU_UNLOCK_QUEST:
-		QuestMenu_GetSetQuestState(questId, QUEST_FLAG_SET_UNLOCKED);
+        QuestMenu_GetSetQuestState(questId, QUEST_FLAG_SET_UNLOCKED);
         break;
     case QUEST_MENU_SET_ACTIVE:
         QuestMenu_GetSetQuestState(questId, QUEST_FLAG_SET_UNLOCKED);
@@ -3349,7 +3351,6 @@ bool8 ScrCmd_subquestmenu(struct ScriptContext *ctx)
 
     return TRUE;
 }
-
 bool8 ScrCmd_returnqueststate(struct ScriptContext *ctx)
 {
     u8 questId = VarGet(ScriptReadByte(ctx));
