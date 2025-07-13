@@ -64,10 +64,12 @@ const struct TmHmIndexKey gTMHMItemMoveIds[NUM_ALL_MACHINES + 1] =
 static void (*const sBagPocket_GetSetSlotDataFuncs[])(struct BagPocket *pocket, u32 pocketPos, u16 *itemId, u16 *quantity, bool32 isSetting) =
 {
     [POCKET_ITEMS] = BagPocket_GetSetSlotDataGeneric,
-    [POCKET_KEY_ITEMS] = BagPocket_GetSetSlotDataGeneric,
+    [POCKET_MEDICINE] = BagPocket_GetSetSlotDataGeneric,
+    [POCKET_BATTLE_ITEMS] = BagPocket_GetSetSlotDataGeneric,
     [POCKET_POKE_BALLS] = BagPocket_GetSetSlotDataGeneric,
     [POCKET_TM_HM] = BagPocket_GetSetSlotDataGeneric,
     [POCKET_BERRIES] = BagPocket_GetSetSlotDataGeneric,
+    [POCKET_KEY_ITEMS] = BagPocket_GetSetSlotDataGeneric,
     [POCKET_DUMMY] = BagPocket_GetSetSlotDataPC,
 };
 
@@ -145,6 +147,14 @@ void SetBagItemsPointers(void)
     gBagPockets[POCKET_ITEMS].itemSlots = gSaveBlock1Ptr->bag.items;
     gBagPockets[POCKET_ITEMS].capacity = BAG_ITEMS_COUNT;
     gBagPockets[POCKET_ITEMS].id = POCKET_ITEMS;
+
+    gBagPockets[POCKET_MEDICINE].itemSlots = gSaveBlock1Ptr->bag.medicine;
+    gBagPockets[POCKET_MEDICINE].capacity = BAG_MEDICINE_COUNT;
+    gBagPockets[POCKET_MEDICINE].id = POCKET_MEDICINE;
+
+    gBagPockets[POCKET_BATTLE_ITEMS].itemSlots = gSaveBlock1Ptr->bag.battleItems;
+    gBagPockets[POCKET_BATTLE_ITEMS].capacity = BAG_BATTLE_COUNT;
+    gBagPockets[POCKET_BATTLE_ITEMS].id = POCKET_BATTLE_ITEMS;
 
     gBagPockets[POCKET_KEY_ITEMS].itemSlots = gSaveBlock1Ptr->bag.keyItems;
     gBagPockets[POCKET_KEY_ITEMS].capacity = BAG_KEYITEMS_COUNT;
