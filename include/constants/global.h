@@ -78,6 +78,8 @@
 
 // Bag constants
 #define BAG_ITEMS_COUNT 30
+#define BAG_MEDICINE_COUNT 30
+#define BAG_BATTLE_COUNT 50
 #define BAG_KEYITEMS_COUNT 30
 #define BAG_POKEBALLS_COUNT 16
 #define BAG_TMHM_COUNT 64
