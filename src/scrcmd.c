@@ -59,8 +59,10 @@
 #include "list_menu.h"
 #include "malloc.h"
 #include "quests.h"
+#include "constants/quest_menu.h"
 #include "constants/event_objects.h"
 #include "constants/map_types.h"
+
 
 typedef u16 (*SpecialFunc)(void);
 typedef void (*NativeFunc)(struct ScriptContext *ctx);
@@ -3254,6 +3256,8 @@ bool8 ScrCmd_fwdweekday(struct ScriptContext *ctx)
       StopScript(ctx);
 }
 
+// Quest menu script commands. These are simple wrappers around the quest menu
+// API and are provided as stubs so that scripts referencing them will compile.
 
 bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
 {
@@ -3287,34 +3291,62 @@ bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
         QuestMenu_GetSetQuestState(questId, FLAG_REMOVE_REWARD);
         break;
     case QUEST_MENU_CHECK_UNLOCKED:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED))
-            gSpecialVar_Result = TRUE;
-        else
-            gSpecialVar_Result = FALSE;
+        gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_UNLOCKED);
         break;
     case QUEST_MENU_CHECK_ACTIVE:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
-            gSpecialVar_Result = TRUE;
-        else
-            gSpecialVar_Result = FALSE;
+        gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE);
         break;
     case QUEST_MENU_CHECK_REWARD:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_REWARD))
-            gSpecialVar_Result = TRUE;
-        else
-            gSpecialVar_Result = FALSE;
+        gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_REWARD);
         break;
     case QUEST_MENU_CHECK_COMPLETE:
-        if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
-            gSpecialVar_Result = TRUE;
-        else
-            gSpecialVar_Result = FALSE;
+        gSpecialVar_Result = QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED);
         break;
     case QUEST_MENU_BUFFER_QUEST_NAME:
-            QuestMenu_CopyQuestName(gStringVar1, questId);
+        QuestMenu_CopyQuestName(gStringVar1, questId);
         break;
     }
-    
+
+    return TRUE;
+}
+
+bool8 ScrCmd_returnqueststate(struct ScriptContext *ctx)
+{
+    u8 questId = VarGet(ScriptReadByte(ctx));
+
+    if (QuestMenu_GetSetQuestState(questId, FLAG_GET_INACTIVE))
+        gSpecialVar_Result = FLAG_GET_INACTIVE;
+    else if (QuestMenu_GetSetQuestState(questId, FLAG_GET_ACTIVE))
+        gSpecialVar_Result = FLAG_GET_ACTIVE;
+    else if (QuestMenu_GetSetQuestState(questId, FLAG_GET_REWARD))
+        gSpecialVar_Result = FLAG_GET_REWARD;
+    else if (QuestMenu_GetSetQuestState(questId, FLAG_GET_COMPLETED))
+        gSpecialVar_Result = FLAG_GET_COMPLETED;
+    else
+        gSpecialVar_Result = FLAG_GET_INACTIVE;
+
+    return FALSE;
+}
+
+bool8 ScrCmd_subquestmenu(struct ScriptContext *ctx)
+{
+    u8 caseId = ScriptReadByte(ctx);
+    u8 parentId = VarGet(ScriptReadHalfword(ctx));
+    u8 childId = VarGet(ScriptReadHalfword(ctx));
+
+    switch (caseId)
+    {
+    case QUEST_MENU_COMPLETE_QUEST:
+        QuestMenu_GetSetSubquestState(parentId, FLAG_SET_COMPLETED, childId);
+        break;
+    case QUEST_MENU_CHECK_COMPLETE:
+        gSpecialVar_Result = QuestMenu_GetSetSubquestState(parentId, FLAG_GET_COMPLETED, childId);
+        break;
+    case QUEST_MENU_BUFFER_QUEST_NAME:
+        QuestMenu_CopySubquestName(gStringVar1, parentId, childId);
+        break;
+    }
+
     return TRUE;
 }
 

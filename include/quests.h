@@ -73,8 +73,11 @@ void QuestMenu_Init(u8 a0, MainCallback callback);
 u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest);
 u8 QuestMenu_GetSetQuestState(u8 quest, u8 caseId);
 void Task_QuestMenu_OpenFromStartMenu(u8);
-void QuestMenu_CopyQuestName(u8 *dst, u8 questId);
-void QuestMenu_CopySubquestName(u8 *dst, u8 parentId, u8 childId);
+void QuestMenu_Init(u8 a, MainCallback callback);
+bool8 QuestMenu_GetSetQuestState(u8 questId, u8 action);
+bool8 QuestMenu_GetSetSubquestState(u8 parentId, u8 action, u8 childId);
+void QuestMenu_CopyQuestName(u8 *dest, u8 questId);
+void QuestMenu_CopySubquestName(u8 *dest, u8 parentId, u8 childId);
 void QuestMenu_ResetMenuSaveData(void);
 
 #endif // GUARD_QUESTS_H
