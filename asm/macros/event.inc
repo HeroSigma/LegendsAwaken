@@ -1917,26 +1917,26 @@
 	.macro startquest quest:req
 	closemessage
 	delay 30
-	questmenu QUEST_MENU_SET_ACTIVE, \quest
-	questmenu QUEST_MENU_BUFFER_QUEST_NAME \quest
-    bufferstring 1 gText_QuestActive
-        playfanfare MUS_LEVEL_UP
-        msgbox gText_QuestAnnounce, MSGBOX_SIGN
-        waitfanfare
-        .endm
+       questmenu QUEST_MENU_SET_ACTIVE, \quest
+       questmenu QUEST_MENU_BUFFER_QUEST_NAME \quest
+       bufferstring 1 gText_QuestActive
+       playfanfare MUS_LEVEL_UP
+       msgbox gText_QuestAnnounce, MSGBOX_SIGN
+       waitfanfare
+       .endm
 
 
     @ Completes the specified quest.
         .macro completequest quest:req
         closemessage
         delay 30
-        questmenu QUEST_MENU_COMPLETE_QUEST, \quest
-        questmenu QUEST_MENU_BUFFER_QUEST_NAME \quest
-
-	.macro goto_if_quest_active quest:req, dest:req
-	questmenu QUEST_MENU_CHECK_ACTIVE \quest
-	goto_if_eq VAR_RESULT, TRUE, \dest
-	.endm
+       questmenu QUEST_MENU_COMPLETE_QUEST, \quest
+       questmenu QUEST_MENU_BUFFER_QUEST_NAME \quest
+       bufferstring 1 gText_QuestComplete
+       playfanfare MUS_LEVEL_UP
+       msgbox gText_QuestAnnounce, MSGBOX_SIGN
+       waitfanfare
+       .endm
 
 	.macro goto_if_quest_reward quest:req, dest:req
 	questmenu QUEST_MENU_CHECK_REWARD \quest
