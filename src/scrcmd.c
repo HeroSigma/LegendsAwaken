@@ -3257,6 +3257,8 @@ bool8 ScrCmd_fwdweekday(struct ScriptContext *ctx)
       StopScript(ctx);
 }
 
+bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
+{
     u8 caseId = ScriptReadByte(ctx);
     u8 questId = VarGet(ScriptReadByte(ctx));
 
@@ -3311,7 +3313,7 @@ bool8 ScrCmd_fwdweekday(struct ScriptContext *ctx)
             gSpecialVar_Result = FALSE;
         break;
     case QUEST_MENU_BUFFER_QUEST_NAME:
-            QuestMenu_CopyQuestName(gStringVar1, questId);
+        QuestMenu_CopyQuestName(gStringVar1, questId);
         break;
     }
 

@@ -1340,16 +1340,16 @@ static bool8 LoadGraphics(void)
 			DecompressAndCopyTileDataToVram(1, sQuestMenuTiles, 0, 0, 0);
 			sStateDataPtr->data[0]++;
 			break;
-		case 1:
-			if (FreeTempTileDataBuffersIfPossible() != TRUE)
-			{
-				DecompressDataWithHeaderWram(sQuestMenuTilemap, sBg1TilemapBuffer);
-				sStateDataPtr->data[0]++;
-			}
-			break;
-		case 2:
-			LoadCompressedPalette(sQuestMenuBgPals, 0x00, 0x60);
-			sStateDataPtr->data[0]++;
+                case 1:
+                        if (FreeTempTileDataBuffersIfPossible() != TRUE)
+                        {
+                                DecompressDataWithHeaderWram(sQuestMenuTilemap, sBg1TilemapBuffer);
+                                sStateDataPtr->data[0]++;
+                        }
+                        break;
+                case 2:
+                        LoadPalette(sQuestMenuBgPals, 0x00, 0x60);
+                        sStateDataPtr->data[0]++;
 			break;
 		case 3:
 			sStateDataPtr->data[0]++;
@@ -1379,7 +1379,7 @@ static void QuestMenu_InitWindows(void)
 
 static bool8 InitBackgrounds(void)
 {
-	ResetAllBgsCoordinates();
+        ResetAllBgsCoordinates();
 	sBg1TilemapBuffer = Alloc(0x800);
 	if (sBg1TilemapBuffer == NULL)
 	{
@@ -2374,7 +2374,7 @@ static void QuestMenu_CreateSprite(u16 itemId, u8 idx, u8 spriteType)
 				break;
 			case PKMN:
 				LoadMonIconPalettes();
-				spriteId = CreateMonIcon(itemId, SpriteCallbackDummy, 20, 132, 0, 1);
+                                spriteId = CreateMonIcon(itemId, SpriteCallbackDummy, 20, 132, 0, 1);
 				break;
 			default:
 				break;
