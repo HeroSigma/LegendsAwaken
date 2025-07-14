@@ -58,6 +58,8 @@
 #include "window.h"
 #include "list_menu.h"
 #include "malloc.h"
+#include "quests.h"
+#include "constants/quests.h"
 #include "constants/event_objects.h"
 #include "constants/map_types.h"
 
@@ -3254,6 +3256,8 @@ void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
         StopScript(ctx);
 }
 
+bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
+{
     u8 caseId = ScriptReadByte(ctx);
     u8 questId = VarGet(ScriptReadByte(ctx));
 
@@ -3308,12 +3312,13 @@ void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
             gSpecialVar_Result = FALSE;
         break;
     case QUEST_MENU_BUFFER_QUEST_NAME:
-            QuestMenu_CopyQuestName(gStringVar1, questId);
+        QuestMenu_CopyQuestName(gStringVar1, questId);
         break;
     }
 
     return TRUE;
 }
+
 
 bool8 ScrCmd_returnqueststate(struct ScriptContext *ctx)
 {

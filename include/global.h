@@ -19,6 +19,7 @@
 #include "constants/easy_chat.h"
 #include "constants/trainer_hill.h"
 #include "constants/items.h"
+#include "constants/quests.h"
 #include "config/save.h"
 
 // Prevent cross-jump optimization.
@@ -598,6 +599,8 @@ struct SaveBlock2
 #endif //FREE_RECORD_MIXING_HALL_RECORDS
     /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x64C*/ struct BattleFrontier frontier;
+    u8 questData[(QUEST_COUNT * 5 + 7) / 8];
+    u8 subQuests[(SUB_QUEST_COUNT + 7) / 8];
 }; // sizeof=0xF2C
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
