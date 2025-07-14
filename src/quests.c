@@ -2966,17 +2966,6 @@ static void Task_QuestMenuTurnOff2(u8 taskId)
 #define tPageItems      data[4]
 #define tItemPcParam    data[6]
 
-struct QuestMenuResources
-{
-	s16 *data = gTasks[taskId].data;
-	if (!gPaletteFade.active)
-	{
-		CleanupOverworldWindowsAndTilemaps();
-		QuestMenu_Init(tItemPcParam, CB2_ReturnToFieldWithOpenMenu);
-		DestroyTask(taskId);
-	}
-}
-
 void QuestMenu_CopyQuestName(u8 *dst, u8 questId)
 {
 	StringCopy(dst, sSideQuests[questId].name);
