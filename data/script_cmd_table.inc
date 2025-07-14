@@ -20,6 +20,7 @@
         .ifndef SCRIPT_CMD_ENUMS_DEFINED
         .set SCRIPT_CMD_ENUMS_DEFINED, 1
         enum_start
+		.endif
         .if ALLOCATE_SCRIPT_CMD_TABLE
         .align 2
 gScriptCmdTable::
@@ -259,5 +260,4 @@ gScriptCmdTable::
 		.if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::
         .4byte ScrCmd_nop
-        .endif
         .endif
