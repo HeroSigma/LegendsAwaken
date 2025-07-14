@@ -19,6 +19,7 @@
 #include "constants/easy_chat.h"
 #include "constants/trainer_hill.h"
 #include "constants/items.h"
+#include "constants/quests.h"
 #include "config/save.h"
 
 // Prevent cross-jump optimization.
@@ -601,14 +602,9 @@ struct SaveBlock2
 #endif //FREE_RECORD_MIXING_HALL_RECORDS
     /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x64C*/ struct BattleFrontier frontier;
-
-#define QUEST_FLAGS_COUNT ROUND_BITS_TO_BYTES(QUEST_COUNT)
-#define SUB_FLAGS_COUNT ROUND_BITS_TO_BYTES(SUB_QUEST_COUNT)
-#define QUEST_STATES 5 //Number of different quest states tracked in the saveblock
-
-    u8 questData[QUEST_FLAGS_COUNT * QUEST_STATES];
-    u8 subQuests[SUB_FLAGS_COUNT];
-}; 
+    u8 questData[(QUEST_COUNT * 5 + 7) / 8];
+    u8 subQuests[(SUB_QUEST_COUNT + 7) / 8];
+}; // sizeof=0xF2C
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
 
@@ -1175,6 +1171,7 @@ struct SaveBlock1
 #endif //FREE_TRAINER_HILL
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3???
+    /* size = 0x3D88 */
     /*0x3598*/ u8 unused_3598[0x180];
     /*0x3B24*/ u8 seen2[NUM_DEX_FLAG_BYTES];
     /*0x3D5A*/ u8 unused_3D5A[10];

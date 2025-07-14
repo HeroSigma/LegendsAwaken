@@ -48,9 +48,9 @@
 #include "union_room.h"
 #include "dexnav.h"
 #include "wild_encounter.h"
+#include "quests.h"
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
-#include "quests.h"
 #include "constants/songs.h"
 
 // Menu actions
@@ -71,7 +71,7 @@ enum
     MENU_ACTION_RETIRE_FRONTIER,
     MENU_ACTION_PYRAMID_BAG,
     MENU_ACTION_DEBUG,
-    MENU_ACTION_QUEST_MENU,
+	MENU_ACTION_QUEST_MENU,
 };
 
 // Save status
@@ -91,7 +91,7 @@ EWRAM_DATA static u8 sSafariBallsWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
-EWRAM_DATA static u8 sCurrentStartMenuActions[9] = {0};
+EWRAM_DATA static u8 sCurrentStartMenuActions[10] = {0};
 EWRAM_DATA static s8 sInitStartMenuData[2] = {0};
 
 EWRAM_DATA static u8 (*sSaveDialogCallback)(void) = NULL;
@@ -192,6 +192,7 @@ static const struct WindowTemplate sWindowTemplate_PyramidPeak = {
 };
 
 static const u8 sText_MenuDebug[] = _("DEBUG");
+
 
 static const u8 sText_QuestMenu[] = _("QUESTS");
 static const struct MenuAction sStartMenuItems[] =
@@ -377,6 +378,7 @@ static void BuildNormalStartMenu(void)
         AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     
     AddStartMenuAction(MENU_ACTION_SAVE);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -392,9 +394,8 @@ static void BuildDebugStartMenu(void)
     if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKENAV);
     AddStartMenuAction(MENU_ACTION_PLAYER);
-    if (FlagGet(FLAG_SYS_QUEST_MENU_GET))
-        AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_SAVE);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
 }
 
@@ -405,8 +406,7 @@ static void BuildSafariZoneStartMenu(void)
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_BAG);
     AddStartMenuAction(MENU_ACTION_PLAYER);
-    if (FlagGet(FLAG_SYS_QUEST_MENU_GET))
-        AddStartMenuAction(MENU_ACTION_QUEST_MENU);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -422,6 +422,7 @@ static void BuildLinkModeStartMenu(void)
     }
 
     AddStartMenuAction(MENU_ACTION_PLAYER_LINK);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -437,8 +438,7 @@ static void BuildUnionRoomStartMenu(void)
     }
 
     AddStartMenuAction(MENU_ACTION_PLAYER);
-    if (FlagGet(FLAG_SYS_QUEST_MENU_GET))
-        AddStartMenuAction(MENU_ACTION_QUEST_MENU);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -448,8 +448,7 @@ static void BuildBattlePikeStartMenu(void)
     AddStartMenuAction(MENU_ACTION_POKEDEX);
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_PLAYER);
-    if (FlagGet(FLAG_SYS_QUEST_MENU_GET))
-        AddStartMenuAction(MENU_ACTION_QUEST_MENU);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -459,8 +458,7 @@ static void BuildBattlePyramidStartMenu(void)
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_PYRAMID_BAG);
     AddStartMenuAction(MENU_ACTION_PLAYER);
-    if (FlagGet(FLAG_SYS_QUEST_MENU_GET))
-        AddStartMenuAction(MENU_ACTION_QUEST_MENU);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_REST_FRONTIER);
     AddStartMenuAction(MENU_ACTION_RETIRE_FRONTIER);
     AddStartMenuAction(MENU_ACTION_OPTION);
@@ -471,8 +469,7 @@ static void BuildMultiPartnerRoomStartMenu(void)
 {
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_PLAYER);
-    if (FlagGet(FLAG_SYS_QUEST_MENU_GET))
-        AddStartMenuAction(MENU_ACTION_QUEST_MENU);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -1541,6 +1538,12 @@ static bool8 StartMenuDexNavCallback(void)
     return TRUE;
 }
 
+static bool8 QuestMenuCallback(void)
+{
+    CreateTask(Task_QuestMenu_OpenFromStartMenu, 0);
+    return TRUE;
+}
+
 void Script_ForceSaveGame(struct ScriptContext *ctx)
 {
     SaveGame();
@@ -1553,4 +1556,3 @@ static bool8 QuestMenuCallback(void)
     CreateTask(Task_QuestMenu_OpenFromStartMenu, 0);
     return TRUE;
 }
-
