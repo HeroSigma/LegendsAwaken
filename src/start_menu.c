@@ -89,7 +89,7 @@ EWRAM_DATA static u8 sSafariBallsWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
-EWRAM_DATA static u8 sCurrentStartMenuActions[9] = {0};
+EWRAM_DATA static u8 sCurrentStartMenuActions[10] = {0};
 EWRAM_DATA static s8 sInitStartMenuData[2] = {0};
 
 EWRAM_DATA static u8 (*sSaveDialogCallback)(void) = NULL;
@@ -352,6 +352,7 @@ static void BuildNormalStartMenu(void)
 
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -368,6 +369,7 @@ static void BuildDebugStartMenu(void)
         AddStartMenuAction(MENU_ACTION_POKENAV);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
 }
 
@@ -378,6 +380,7 @@ static void BuildSafariZoneStartMenu(void)
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_BAG);
     AddStartMenuAction(MENU_ACTION_PLAYER);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -393,6 +396,7 @@ static void BuildLinkModeStartMenu(void)
     }
 
     AddStartMenuAction(MENU_ACTION_PLAYER_LINK);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -408,6 +412,7 @@ static void BuildUnionRoomStartMenu(void)
     }
 
     AddStartMenuAction(MENU_ACTION_PLAYER);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -417,6 +422,7 @@ static void BuildBattlePikeStartMenu(void)
     AddStartMenuAction(MENU_ACTION_POKEDEX);
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_PLAYER);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -426,6 +432,7 @@ static void BuildBattlePyramidStartMenu(void)
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_PYRAMID_BAG);
     AddStartMenuAction(MENU_ACTION_PLAYER);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_REST_FRONTIER);
     AddStartMenuAction(MENU_ACTION_RETIRE_FRONTIER);
     AddStartMenuAction(MENU_ACTION_OPTION);
@@ -436,6 +443,7 @@ static void BuildMultiPartnerRoomStartMenu(void)
 {
     AddStartMenuAction(MENU_ACTION_POKEMON);
     AddStartMenuAction(MENU_ACTION_PLAYER);
+	AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
