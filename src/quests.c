@@ -24,6 +24,7 @@
 #include "task.h"
 #include "text_window.h"
 #include "quests.h"
+#include "constants/quests.h"
 #include "overworld.h"
 #include "event_data.h"
 #include "constants/items.h"

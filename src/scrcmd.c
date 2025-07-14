@@ -58,6 +58,8 @@
 #include "window.h"
 #include "list_menu.h"
 #include "malloc.h"
+#include "quests.h"
+#include "constants/quests.h"
 #include "constants/event_objects.h"
 #include "constants/map_types.h"
 
@@ -3314,6 +3316,7 @@ void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
 
     return TRUE;
 }
+
 
 bool8 ScrCmd_returnqueststate(struct ScriptContext *ctx)
 {
