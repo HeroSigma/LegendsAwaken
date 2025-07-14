@@ -48,10 +48,7 @@
 #include "wild_encounter.h"
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
-<<<<<<< Updated upstream
 #include "constants/songs.h"
-=======
->>>>>>> Stashed changes
 
 // Menu actions
 enum
@@ -208,8 +205,6 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_RETIRE_FRONTIER] = {gText_MenuRetire,  {.u8_void = StartMenuBattlePyramidRetireCallback}},
     [MENU_ACTION_PYRAMID_BAG]     = {gText_MenuBag,     {.u8_void = StartMenuBattlePyramidBagCallback}},
     [MENU_ACTION_DEBUG]           = {sText_MenuDebug,   {.u8_void = StartMenuDebugCallback}},
-<<<<<<< Updated upstream
-=======
 	[MENU_ACTION_QUEST_MENU]      = {sText_QuestMenu, 	{.u8_void = QuestMenuCallback}},
 
 static const u8 sText_QuestMenu[] = _("QUESTS");
@@ -231,7 +226,6 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_PYRAMID_BAG]     = {gText_MenuBag,     {.u8_void = StartMenuBattlePyramidBagCallback}},
     [MENU_ACTION_DEBUG]           = {sText_MenuDebug,   {.u8_void = StartMenuDebugCallback}},
     [MENU_ACTION_QUEST_MENU]        = {sText_QuestMenu, {.u8_void = QuestMenuCallback}},
->>>>>>> Stashed changes
 };
 
 static const struct BgTemplate sBgTemplates_LinkBattleSave[] =

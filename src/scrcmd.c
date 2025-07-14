@@ -3249,12 +3249,11 @@ bool8 ScrCmd_fwdweekday(struct ScriptContext *ctx)
 
 void Script_EndTrainerCanSeeIf(struct ScriptContext *ctx)
 {
-<<<<<<< Updated upstream
     u8 condition = ScriptReadByte(ctx);
     if (ctx->breakOnTrainerBattle && sScriptConditionTable[condition][ctx->comparisonResult] == 1)
         StopScript(ctx);
 }
-=======
+
     u8 caseId = ScriptReadByte(ctx);
     u8 questId = VarGet(ScriptReadByte(ctx));
 
@@ -3364,4 +3363,4 @@ bool8 ScrCmd_subquestmenu(struct ScriptContext *ctx)
 
     return TRUE;
 }
->>>>>>> Stashed changes
+

@@ -1886,10 +1886,6 @@
 	.2byte \id
 	.endm
 
-<<<<<<< Updated upstream
-	.macro dynmultistack left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req
-	_dynmultichoice \left, \top, \ignoreBPress, \maxBeforeScroll, \shouldSort, \initialSelected, \callbacks, NULL
-=======
         .macro dynmultistack left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req
         _dynmultichoice \left, \top, \ignoreBPress, \maxBeforeScroll, \shouldSort, \initialSelected, \callbacks, NULL
         .endm
@@ -1939,7 +1935,6 @@
 	playfanfare MUS_LEVEL_UP
 	msgbox gText_QuestAnnounce, MSGBOX_SIGN
 	waitfanfare
->>>>>>> Stashed changes
 	.endm
 
 @ Supplementary
