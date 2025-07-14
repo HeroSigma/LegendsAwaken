@@ -1163,7 +1163,15 @@ struct SaveBlock1
     /*0x3???*/ struct TrainerHillSave trainerHill;
 #endif //FREE_TRAINER_HILL
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
+<<<<<<< Updated upstream
     // sizeof: 0x3???
+=======
+    /* size = 0x3D88 */
+    /*0x3598*/ u8 unused_3598[0x180];
+    /*0x3B24*/ u8 seen2[NUM_DEX_FLAG_BYTES];
+    /*0x3D5A*/ u8 unused_3D5A[10];
+
+>>>>>>> Stashed changes
 };
 
 extern struct SaveBlock1 *gSaveBlock1Ptr;

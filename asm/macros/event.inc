@@ -1886,8 +1886,60 @@
 	.2byte \id
 	.endm
 
+<<<<<<< Updated upstream
 	.macro dynmultistack left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req
 	_dynmultichoice \left, \top, \ignoreBPress, \maxBeforeScroll, \shouldSort, \initialSelected, \callbacks, NULL
+=======
+        .macro dynmultistack left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req
+        _dynmultichoice \left, \top, \ignoreBPress, \maxBeforeScroll, \shouldSort, \initialSelected, \callbacks, NULL
+        .endm
+
+    .macro questmenu case:req, questId:req
+    .byte SCR_OP_QUESTMENU
+    .byte \case
+    .byte \questId
+    .endm
+
+    .macro subquestmenu case:req, parentId:req, childId:req
+    .byte SCR_OP_SUBQUESTMENU
+    .byte \case
+    .2byte \parentId
+    .2byte \childId
+    .endm
+
+    @ Check the quest state and return a number associated with quest state
+    .macro returnqueststate questId:req
+    .byte SCR_OP_RETURNQUESTSTATE
+    .byte \questId
+    .endm
+
+    .macro openquestmenu
+    questmenu 0 0
+    .endm
+
+    @ Starts the specified quest.
+	.macro startquest quest:req
+	closemessage
+	delay 30
+	questmenu QUEST_MENU_SET_ACTIVE, \quest
+	questmenu QUEST_MENU_BUFFER_QUEST_NAME \quest
+    bufferstring 1 gText_QuestActive
+	playfanfare MUS_LEVEL_UP
+	msgbox gText_QuestAnnounce, MSGBOX_SIGN
+	waitfanfare
+	.endm
+
+    @ Completes the specified quest.
+	.macro completequest quest:req
+	closemessage
+	delay 30
+	questmenu QUEST_MENU_COMPLETE_QUEST, \quest
+	questmenu QUEST_MENU_BUFFER_QUEST_NAME \quest
+    bufferstring 1 gText_QuestComplete
+	playfanfare MUS_LEVEL_UP
+	msgbox gText_QuestAnnounce, MSGBOX_SIGN
+	waitfanfare
+>>>>>>> Stashed changes
 	.endm
 
 @ Supplementary
