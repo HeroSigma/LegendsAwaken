@@ -17,11 +17,13 @@
 	.endif
 
 
-	enum_start
-	.if ALLOCATE_SCRIPT_CMD_TABLE
-	.align 2
+        .ifndef SCRIPT_CMD_ENUMS_DEFINED
+        .set SCRIPT_CMD_ENUMS_DEFINED, 1
+        enum_start
+        .if ALLOCATE_SCRIPT_CMD_TABLE
+        .align 2
 gScriptCmdTable::
-	.endif
+		.endif
 	script_cmd_table_entry SCR_OP_NOP                           ScrCmd_nop,                         requests_effects=1  @ 0x00
 	script_cmd_table_entry SCR_OP_NOP1                          ScrCmd_nop1,                        requests_effects=1  @ 0x01
 	script_cmd_table_entry SCR_OP_END                           ScrCmd_end,                         requests_effects=1  @ 0x02
@@ -254,7 +256,8 @@ gScriptCmdTable::
     script_cmd_table_entry SCR_OP_QUESTMENU                     ScrCmd_questmenu,                   requests_effects=1  @ 0xe5
     script_cmd_table_entry SCR_OP_RETURNQUESTSTATE              ScrCmd_returnqueststate,            requests_effects=1  @ 0xe6
     script_cmd_table_entry SCR_OP_SUBQUESTMENU                  ScrCmd_subquestmenu,                requests_effects=1  @ 0xe7	
-	.if ALLOCATE_SCRIPT_CMD_TABLE
+		.if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::
-	.4byte ScrCmd_nop
-	.endif
+        .4byte ScrCmd_nop
+        .endif
+        .endif
