@@ -82,7 +82,7 @@ static EWRAM_DATA struct {
 } *sFlyMap = NULL;
 
 static bool32 sDrawFlyDestTextWindow;
-static EWRAM_DATA u8 sRoamerIconSpriteIds[ROAMER_COUNT] = {SPRITE_NONE};
+static EWRAM_DATA u8 sRoamerIconSpriteIds[ROAMER_COUNT];
 
 static u8 ProcessRegionMapInput_Full(void);
 static u8 MoveRegionMapCursor_Full(void);
@@ -115,8 +115,8 @@ static void LoadFlyDestIcons(void);
 static void CreateFlyDestIcons(void);
 static void TryCreateRedOutlineFlyDestIcons(void);
 static void SpriteCB_FlyDestIcon(struct Sprite *sprite);
-static void CreateRoamerIcons(void);
-static void FreeRoamerIcons(void);
+void CreateRoamerIcons(void);
+void FreeRoamerIcons(void);
 static void CB_FadeInFlyMap(void);
 static void CB_HandleFlyMapInput(void);
 static void CB_ExitFlyMap(void);
@@ -1943,7 +1943,7 @@ static void TryCreateRedOutlineFlyDestIcons(void)
     }
 }
 
-static void CreateRoamerIcons(void)
+void CreateRoamerIcons(void)
 {
     u8 i, spriteId;
     u8 mapGroup, mapNum;
@@ -1970,7 +1970,7 @@ static void CreateRoamerIcons(void)
     }
 }
 
-static void FreeRoamerIcons(void)
+void FreeRoamerIcons(void)
 {
     u8 i;
 
