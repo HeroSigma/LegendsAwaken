@@ -1,0 +1,67 @@
+# Legendary Encounters
+
+This document lists where to find legendary Pokémon in this project.
+
+- **Must defeat Winona (6th Gym) to begin accessing legendaries.**
+- **Must catch Hoopa (roaming) to unlock all other legendaries.**
+
+## Event Unlocks
+
+| Pokémon         | Requirements                                                    | Location                                               |
+|-----------------|-----------------------------------------------------------------|--------------------------------------------------------|
+| Hoopa           | Roaming (must catch first)                                      | Roaming in Hoenn (trigger after Winona)                |
+| Mewtwo          | Have Mew in your party                                          | Altering Cave                                          |
+| Celebi          | After catching Mew                                              | Petalburg Woods deeper area                            |
+| Lake Trio       | No prereqs                                                      | Uxie: Mirage Tower, Mesprit: Roaming, Azelf: Scorched Slab |
+| Dialga/Palkia   | Catch Uxie, Mesprit, and Azelf, all in party                    | Meteor Falls space-time rift (2F/3F)                   |
+| Giratina        | Have Dialga and Palkia in party                                 | Cave of Origin                                         |
+| Arceus          | Have Dialga, Palkia, and Giratina in party                      | Altering Cave                                          |
+| Zekrom/Reshiram | No prereqs                                                      | Sky Pillar alternate floor                             |
+| Kyurem          | Have Zekrom and Reshiram in party                               | Shoal Cave winter chamber                              |
+| Keldeo          | Catch Cobalion, Terrakion, Virizion                             | Outside Victory Road                                   |
+| Landorus        | Roaming                                                         |                                                        |
+| Enamorus        | Roaming, unlocked after catching Tornadus, Thundurus, Landorus  | Roaming                                                |
+| Xerneas         | No prereqs                                                      | Petalburg Woods (right side grove)                     |
+| Yveltal         | No prereqs                                                      | Granite Cave (Steven’s old spot)                       |
+| Zygarde         | Catch Xerneas and Yveltal                                       | Altering Cave                                          |
+| Necrozma        | Catch Solgaleo and Lunala, both in party                        | Cave of Origin postgame crystal path                   |
+| Eternatus       | Have Zacian and Zamazenta in party                              | Sky Pillar rooftop                                     |
+| Type: Null      | After catching Hoopa                                           | Devon Corp lab                                         |
+| Terapagos       | Catch all Paradox Pokémon                                       | Special shrine opens post-Paradox quest                |
+
+## Stationary Encounters
+
+| Pokémon   | Location                             |
+|-----------|--------------------------------------|
+| Articuno  | Shoal Cave Ice Chamber               |
+| Zapdos    | New Mauville Generator Room          |
+| Moltres   | Mt. Chimney Summit                   |
+| Lugia     | Navel Rock                           |
+| Ho-Oh     | Navel Rock                           |
+| Cobalion  | Victory Road B2F                     |
+| Terrakion | Victory Road B1F                     |
+| Virizion  | Route 123 secret garden              |
+| Volcanion | Scorched Slab                        |
+| Tapu Bulu | Outside Safari Zone                  |
+| Solgaleo  | Victory Road inner cave (left)       |
+| Lunala    | Victory Road inner cave (right)      |
+| Calyrex   | Mirage Island                        |
+| Glastrier | Mirage Island (Day, after Calyrex)   |
+| Spectrier | Mirage Island (Night, after Calyrex) |
+
+## Roaming Legendaries
+
+- Raikou, Entei, Suicune
+- Mesprit
+- Tornadus
+- Thundurus
+- Landorus
+- Enamorus (after catching Incarnate Trio)
+- Zacian
+- Zamazenta
+- Paldea Quartet (after catching all other legendaries)
+- Wo-Chien
+- Chien-Pao
+- Ting-Lu
+- Chi-Yu
+
