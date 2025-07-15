@@ -9,6 +9,7 @@
 #include "menu.h"
 #include "overworld.h"
 #include "palette.h"
+#include "roamer.h"
 #include "region_map.h"
 #include "sound.h"
 #include "strings.h"
@@ -151,6 +152,7 @@ static void FieldUpdateRegionMap(void)
             InitRegionMap(&sFieldRegionMapHandler->regionMap, FALSE);
             CreateRegionMapPlayerIcon(TAG_PLAYER_ICON, TAG_PLAYER_ICON);
             CreateRegionMapCursor(TAG_CURSOR, TAG_CURSOR);
+            CreateRoamerIcons();
             sFieldRegionMapHandler->state++;
             break;
         case 1:
@@ -204,6 +206,7 @@ static void FieldUpdateRegionMap(void)
         case 6:
             if (!gPaletteFade.active)
             {
+                FreeRoamerIcons();
                 FreeRegionMapIconResources();
                 SetMainCallback2(sFieldRegionMapHandler->callback);
                 TRY_FREE_AND_SET_NULL(sFieldRegionMapHandler);
