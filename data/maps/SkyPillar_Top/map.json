@@ -44,8 +44,8 @@
     {
       "local_id": "LOCALID_SKY_PILLAR_ETERNATUS",
       "graphics_id": "OBJ_EVENT_GFX_ETERNATUS",
-      "x": 20,
-      "y": 6,
+      "x": 14,
+      "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
