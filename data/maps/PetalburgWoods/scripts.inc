@@ -1,5 +1,62 @@
 PetalburgWoods_MapScripts::
-	.byte 0
+        map_script MAP_SCRIPT_ON_TRANSITION, PetalburgWoods_OnTransition
+        map_script MAP_SCRIPT_ON_RESUME, PetalburgWoods_OnResume
+        .byte 0
+
+PetalburgWoods_OnTransition:
+        call_if_set FLAG_CAUGHT_CELEBI, PetalburgWoods_HideCelebi
+        call_if_unset FLAG_CAUGHT_CELEBI, PetalburgWoods_TryShowCelebi
+        end
+
+PetalburgWoods_OnResume:
+        call_if_set FLAG_SYS_CTRL_OBJ_DELETE, PetalburgWoods_TryRemoveCelebi
+        end
+
+PetalburgWoods_HideCelebi::
+        setflag FLAG_HIDE_CELEBI
+        return
+
+PetalburgWoods_TryShowCelebi::
+        goto_if_unset FLAG_CAUGHT_MEW, Common_EventScript_NopReturn
+        goto_if_set FLAG_DEFEATED_CELEBI, Common_EventScript_NopReturn
+        clearflag FLAG_HIDE_CELEBI
+        return
+
+PetalburgWoods_TryRemoveCelebi::
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+        removeobject LOCALID_PETALBURG_WOODS_CELEBI
+        return
+
+PetalburgWoods_Celebi::
+        lock
+        faceplayer
+        waitse
+        playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
+        waitmoncry
+        seteventmon SPECIES_CELEBI, 30
+        setflag FLAG_SYS_CTRL_OBJ_DELETE
+        special BattleSetup_StartLegendaryBattle
+        waitstate
+        clearflag FLAG_SYS_CTRL_OBJ_DELETE
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_eq VAR_RESULT, B_OUTCOME_WON, PetalburgWoods_DefeatedCelebi
+        goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PetalburgWoods_RanFromCelebi
+        goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PetalburgWoods_RanFromCelebi
+        setflag FLAG_CAUGHT_CELEBI
+        release
+        end
+
+PetalburgWoods_DefeatedCelebi::
+        setflag FLAG_DEFEATED_CELEBI
+        setvar VAR_0x8004, SPECIES_CELEBI
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+PetalburgWoods_RanFromCelebi::
+        setvar VAR_0x8004, SPECIES_CELEBI
+        goto Common_EventScript_LegendaryFlewAway
+        end
 
 PetalburgWoods_EventScript_DevonResearcherLeft::
 	lockall
