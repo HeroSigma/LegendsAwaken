@@ -291,3 +291,31 @@ void GetRoamerLocation(u32 roamerIndex, u8 *mapGroup, u8 *mapNum)
     *mapGroup = sRoamerLocation[roamerIndex][MAP_GRP];
     *mapNum = sRoamerLocation[roamerIndex][MAP_NUM];
 }
+
+void AddRoamerByVar(void)
+{
+    TryAddRoamer(gSpecialVar_0x8004, gSpecialVar_0x8005);
+}
+
+u16 GetRoamerSpecies(u32 roamerIndex)
+{
+    return ROAMER(roamerIndex)->species;
+}
+
+void SpawnPostHoopaRoamers(void)
+{
+    TryAddRoamer(SPECIES_MESPRIT, 50);
+    TryAddRoamer(SPECIES_TORNADUS, 50);
+    TryAddRoamer(SPECIES_THUNDURUS, 50);
+    TryAddRoamer(SPECIES_LANDORUS, 50);
+    TryAddRoamer(SPECIES_ENAMORUS, 50);
+    TryAddRoamer(SPECIES_ZACIAN, 70);
+    TryAddRoamer(SPECIES_ZAMAZENTA, 70);
+    TryAddRoamer(SPECIES_RAIKOU, 60);
+    TryAddRoamer(SPECIES_ENTEI, 60);
+    TryAddRoamer(SPECIES_SUICUNE, 60);
+    TryAddRoamer(SPECIES_WO_CHIEN, 60);
+    TryAddRoamer(SPECIES_CHIEN_PAO, 60);
+    TryAddRoamer(SPECIES_TING_LU, 60);
+    TryAddRoamer(SPECIES_CHI_YU, 60);
+}

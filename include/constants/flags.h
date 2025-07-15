@@ -76,8 +76,8 @@
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_HIDE_ZAPDOS     0x40
 #define FLAG_HIDE_MOLTRES    0x41
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
+#define FLAG_CAUGHT_HOOPA    0x42
+#define FLAG_ROAMING_LEGENDS_UNLOCKED 0x43
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
 #define FLAG_UNUSED_0x046    0x46 // Unused Flag
