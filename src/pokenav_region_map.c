@@ -8,6 +8,7 @@
 #include "menu.h"
 #include "overworld.h"
 #include "palette.h"
+#include "roamer.h"
 #include "pokenav.h"
 #include "region_map.h"
 #include "sound.h"
@@ -280,6 +281,7 @@ bool32 IsRegionMapLoopedTaskActive(void)
 void FreeRegionMapSubstruct2(void)
 {
     struct Pokenav_RegionMapGfx *state = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_ZOOM);
+    FreeRoamerIcons();
     FreeRegionMapIconResources();
     FreeCityZoomViewGfx();
     RemoveWindow(state->infoWindowId);
@@ -337,6 +339,7 @@ static u32 LoopedTask_OpenRegionMap(s32 taskState)
         {
             CreateRegionMapPlayerIcon(4, 9);
             CreateRegionMapCursor(5, 10);
+            CreateRoamerIcons();
             TrySetPlayerIconBlink();
         }
         else

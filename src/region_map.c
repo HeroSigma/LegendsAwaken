@@ -19,6 +19,7 @@
 #include "field_effect.h"
 #include "field_specials.h"
 #include "fldeff.h"
+#include "roamer.h"
 #include "region_map.h"
 #include "decompress.h"
 #include "constants/region_map_sections.h"
@@ -51,6 +52,7 @@ enum {
     TAG_CURSOR,
     TAG_PLAYER_ICON,
     TAG_FLY_ICON,
+    TAG_ROAMER_ICON,
 };
 
 // Window IDs for the fly map
@@ -80,6 +82,7 @@ static EWRAM_DATA struct {
 } *sFlyMap = NULL;
 
 static bool32 sDrawFlyDestTextWindow;
+static EWRAM_DATA u8 sRoamerIconSpriteIds[ROAMER_COUNT];
 
 static u8 ProcessRegionMapInput_Full(void);
 static u8 MoveRegionMapCursor_Full(void);
@@ -112,6 +115,8 @@ static void LoadFlyDestIcons(void);
 static void CreateFlyDestIcons(void);
 static void TryCreateRedOutlineFlyDestIcons(void);
 static void SpriteCB_FlyDestIcon(struct Sprite *sprite);
+void CreateRoamerIcons(void);
+void FreeRoamerIcons(void);
 static void CB_FadeInFlyMap(void);
 static void CB_HandleFlyMapInput(void);
 static void CB_ExitFlyMap(void);
@@ -285,6 +290,8 @@ static const u32 sRegionMapFrameGfxLZ[] = INCBIN_U32("graphics/pokenav/region_ma
 static const u32 sRegionMapFrameTilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/frame.bin.smolTM");
 static const u16 sFlyTargetIcons_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons.gbapal");
 static const u32 sFlyTargetIcons_Gfx[] = INCBIN_U32("graphics/pokenav/region_map/fly_target_icons.4bpp.smol");
+static const u16 sRoamerIcon_Pal[] = INCBIN_U16("graphics/pokedex/area_marker.gbapal");
+static const u8 sRoamerIcon_Tiles[] = INCBIN_U8("graphics/pokedex/area_marker.4bpp");
 
 static const u8 sMapHealLocations[][3] =
 {
@@ -500,6 +507,23 @@ static const struct SpriteTemplate sFlyDestIconSpriteTemplate =
     .paletteTag = TAG_FLY_ICON,
     .oam = &sFlyDestIcon_OamData,
     .anims = sFlyDestIcon_Anims,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
+};
+
+static const struct SpriteSheet sRoamerIconSpriteSheet = { sRoamerIcon_Tiles, 0x80, TAG_ROAMER_ICON };
+static const struct SpritePalette sRoamerIconSpritePalette = { sRoamerIcon_Pal, TAG_ROAMER_ICON };
+static const struct OamData sRoamerIconOamData = {
+    .shape = SPRITE_SHAPE(16x16),
+    .size = SPRITE_SIZE(16x16),
+    .priority = 1
+};
+static const struct SpriteTemplate sRoamerIconSpriteTemplate = {
+    .tileTag = TAG_ROAMER_ICON,
+    .paletteTag = TAG_ROAMER_ICON,
+    .oam = &sRoamerIconOamData,
+    .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy
@@ -1724,6 +1748,7 @@ void CB2_OpenFlyMap(void)
         break;
     case 8:
         LoadFlyDestIcons();
+        CreateRoamerIcons();
         gMain.state++;
         break;
     case 9:
@@ -1918,6 +1943,48 @@ static void TryCreateRedOutlineFlyDestIcons(void)
     }
 }
 
+void CreateRoamerIcons(void)
+{
+    u8 i, spriteId;
+    u8 mapGroup, mapNum;
+    u16 mapSecId;
+    u16 x, y, width, height;
+
+    LoadSpriteSheet(&sRoamerIconSpriteSheet);
+    LoadSpritePalette(&sRoamerIconSpritePalette);
+
+    for (i = 0; i < ROAMER_COUNT; i++)
+    {
+        sRoamerIconSpriteIds[i] = SPRITE_NONE;
+        if (gSaveBlock1Ptr->roamer[i].active)
+        {
+            GetRoamerLocation(i, &mapGroup, &mapNum);
+            mapSecId = Overworld_GetMapHeaderByGroupAndId(mapGroup, mapNum)->regionMapSectionId;
+            GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
+            x = (x + MAPCURSOR_X_MIN) * 8 + 4;
+            y = (y + MAPCURSOR_Y_MIN) * 8 + 4;
+            spriteId = CreateSprite(&sRoamerIconSpriteTemplate, x, y, 0);
+            if (spriteId != MAX_SPRITES)
+                sRoamerIconSpriteIds[i] = spriteId;
+        }
+    }
+}
+
+void FreeRoamerIcons(void)
+{
+    u8 i;
+
+    for (i = 0; i < ROAMER_COUNT; i++)
+    {
+        if (sRoamerIconSpriteIds[i] != SPRITE_NONE)
+            DestroySprite(&gSprites[sRoamerIconSpriteIds[i]]);
+        sRoamerIconSpriteIds[i] = SPRITE_NONE;
+    }
+
+    FreeSpriteTilesByTag(TAG_ROAMER_ICON);
+    FreeSpritePaletteByTag(TAG_ROAMER_ICON);
+}
+
 // Flickers fly destination icon color (by hiding the fly icon sprite) if the cursor is currently on it
 static void SpriteCB_FlyDestIcon(struct Sprite *sprite)
 {
@@ -1997,6 +2064,7 @@ static void CB_ExitFlyMap(void)
     case 1:
         if (!UpdatePaletteFade())
         {
+            FreeRoamerIcons();
             FreeRegionMapIconResources();
             if (sFlyMap->choseFlyLocation)
             {

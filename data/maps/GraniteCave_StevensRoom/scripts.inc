@@ -1,5 +1,16 @@
 GraniteCave_StevensRoom_MapScripts::
-	.byte 0
+        map_script MAP_SCRIPT_ON_TRANSITION, GraniteCave_StevensRoom_OnTransition
+        map_script MAP_SCRIPT_ON_RESUME, GraniteCave_StevensRoom_OnResume
+        .byte 0
+
+GraniteCave_StevensRoom_OnTransition:
+        call_if_set FLAG_CAUGHT_YVELTAL, GraniteCave_StevensRoom_HideYveltal
+        call_if_unset FLAG_CAUGHT_YVELTAL, GraniteCave_StevensRoom_TryShowYveltal
+        return
+
+GraniteCave_StevensRoom_OnResume:
+        call_if_set FLAG_SYS_CTRL_OBJ_DELETE, GraniteCave_StevensRoom_TryRemoveYveltal
+        end
 
 GraniteCave_StevensRoom_EventScript_Steven::
 	lock
@@ -43,14 +54,59 @@ GraniteCave_StevensRoom_EventScript_StevenExitWestEast::
 	return
 
 GraniteCave_StevensRoom_EventScript_StevenExitSouth::
-	applymovement LOCALID_PLAYER, GraniteCave_StevensRoom_Movement_PlayerTurnTowardExit
-	applymovement LOCALID_GRANITE_CAVE_STEVEN, GraniteCave_StevensRoom_Movement_StevenExitSouth
-	waitmovement 0
-	return
+        applymovement LOCALID_PLAYER, GraniteCave_StevensRoom_Movement_PlayerTurnTowardExit
+        applymovement LOCALID_GRANITE_CAVE_STEVEN, GraniteCave_StevensRoom_Movement_StevenExitSouth
+        waitmovement 0
+        return
 
 GraniteCave_StevensRoom_EventScript_BagFull::
-	msgbox GraniteCave_StevensRoom_Text_OhBagIsFull, MSGBOX_DEFAULT
-	return
+        msgbox GraniteCave_StevensRoom_Text_OhBagIsFull, MSGBOX_DEFAULT
+        return
+
+GraniteCave_StevensRoom_HideYveltal::
+        setflag FLAG_HIDE_YVELTAL
+        return
+
+GraniteCave_StevensRoom_TryShowYveltal::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
+        clearflag FLAG_HIDE_YVELTAL
+        return
+
+GraniteCave_StevensRoom_TryRemoveYveltal::
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+        removeobject LOCALID_GRANITE_CAVE_YVELTAL
+        return
+
+GraniteCave_StevensRoom_Yveltal::
+        lock
+        faceplayer
+        waitse
+        playmoncry SPECIES_YVELTAL, CRY_MODE_ENCOUNTER
+        waitmoncry
+        seteventmon SPECIES_YVELTAL, 70
+        setflag FLAG_SYS_CTRL_OBJ_DELETE
+        special BattleSetup_StartLegendaryBattle
+        waitstate
+        clearflag FLAG_SYS_CTRL_OBJ_DELETE
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_eq VAR_RESULT, B_OUTCOME_WON, GraniteCave_StevensRoom_DefeatedYveltal
+        goto_if_eq VAR_RESULT, B_OUTCOME_RAN, GraniteCave_StevensRoom_RanFromYveltal
+        goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, GraniteCave_StevensRoom_RanFromYveltal
+        setflag FLAG_CAUGHT_YVELTAL
+        release
+        end
+
+GraniteCave_StevensRoom_DefeatedYveltal::
+        setvar VAR_0x8004, SPECIES_YVELTAL
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+GraniteCave_StevensRoom_RanFromYveltal::
+        setvar VAR_0x8004, SPECIES_YVELTAL
+        goto Common_EventScript_LegendaryFlewAway
+        end
 
 GraniteCave_StevensRoom_Movement_StevenExit:
 	walk_up
