@@ -53,7 +53,7 @@
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define I_EXP_SHARE_FLAG     0x2A // EXP Share
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_HIDE_ZYGARDE    0x2B
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
@@ -86,10 +86,10 @@
 #define FLAG_HIDE_DIALGA    0x49
 #define FLAG_HIDE_PALKIA    0x4A
 #define FLAG_HIDE_GIRATINA  0x4B
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_HIDE_ZEKROM    0x4C
+#define FLAG_HIDE_RESHIRAM  0x4D
+#define FLAG_HIDE_KYUREM    0x4E
+#define FLAG_HIDE_KELDEO    0x4F
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -97,8 +97,8 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_HIDE_XERNEAS                    0x54
+#define FLAG_HIDE_YVELTAL                    0x55
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
@@ -522,23 +522,23 @@
 #define FLAG_DEFEATED_MOLTRES                0x1E2
 #define FLAG_CAUGHT_MOLTRES                  0x1E3
 
-// Mystery Gift Flags (Unknown)
-#define FLAG_MYSTERY_GIFT_DONE               0x1E4
-#define FLAG_MYSTERY_GIFT_1                  0x1E5
-#define FLAG_MYSTERY_GIFT_2                  0x1E6
-#define FLAG_MYSTERY_GIFT_3                  0x1E7
-#define FLAG_MYSTERY_GIFT_4                  0x1E8
-#define FLAG_MYSTERY_GIFT_5                  0x1E9
-#define FLAG_MYSTERY_GIFT_6                  0x1EA
-#define FLAG_MYSTERY_GIFT_7                  0x1EB
-#define FLAG_MYSTERY_GIFT_8                  0x1EC
-#define FLAG_MYSTERY_GIFT_9                  0x1ED
-#define FLAG_MYSTERY_GIFT_10                 0x1EE
-#define FLAG_MYSTERY_GIFT_11                 0x1EF
-#define FLAG_MYSTERY_GIFT_12                 0x1F0
-#define FLAG_MYSTERY_GIFT_13                 0x1F1
-#define FLAG_MYSTERY_GIFT_14                 0x1F2
-#define FLAG_MYSTERY_GIFT_15                 0x1F3
+// Legendary encounter flags (formerly Mystery Gift)
+#define FLAG_DEFEATED_ZEKROM                 0x1E4
+#define FLAG_CAUGHT_ZEKROM                   0x1E5
+#define FLAG_DEFEATED_RESHIRAM               0x1E6
+#define FLAG_CAUGHT_RESHIRAM                 0x1E7
+#define FLAG_DEFEATED_KYUREM                 0x1E8
+#define FLAG_CAUGHT_KYUREM                   0x1E9
+#define FLAG_DEFEATED_KELDEO                 0x1EA
+#define FLAG_CAUGHT_KELDEO                   0x1EB
+#define FLAG_DEFEATED_XERNEAS                0x1EC
+#define FLAG_CAUGHT_XERNEAS                  0x1ED
+#define FLAG_DEFEATED_YVELTAL                0x1EE
+#define FLAG_CAUGHT_YVELTAL                  0x1EF
+#define FLAG_DEFEATED_ZYGARDE                0x1F0
+#define FLAG_CAUGHT_ZYGARDE                  0x1F1
+#define FLAG_UNUSED_0x1F2                    0x1F2 // Unused Flag
+#define FLAG_UNUSED_0x1F3                    0x1F3 // Unused Flag
 
 // Hidden Items
 #define FLAG_HIDDEN_ITEMS_START                                                         0x1F4

@@ -6,10 +6,13 @@ PetalburgWoods_MapScripts::
 PetalburgWoods_OnTransition:
         call_if_set FLAG_CAUGHT_CELEBI, PetalburgWoods_HideCelebi
         call_if_unset FLAG_CAUGHT_CELEBI, PetalburgWoods_TryShowCelebi
+        call_if_set FLAG_CAUGHT_XERNEAS, PetalburgWoods_HideXerneas
+        call_if_unset FLAG_CAUGHT_XERNEAS, PetalburgWoods_TryShowXerneas
         end
 
 PetalburgWoods_OnResume:
         call_if_set FLAG_SYS_CTRL_OBJ_DELETE, PetalburgWoods_TryRemoveCelebi
+        call_if_set FLAG_SYS_CTRL_OBJ_DELETE, PetalburgWoods_TryRemoveXerneas
         end
 
 PetalburgWoods_HideCelebi::
@@ -55,6 +58,51 @@ PetalburgWoods_DefeatedCelebi::
 
 PetalburgWoods_RanFromCelebi::
         setvar VAR_0x8004, SPECIES_CELEBI
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+PetalburgWoods_HideXerneas::
+        setflag FLAG_HIDE_XERNEAS
+        return
+
+PetalburgWoods_TryShowXerneas::
+        goto_if_set FLAG_DEFEATED_XERNEAS, Common_EventScript_NopReturn
+        clearflag FLAG_HIDE_XERNEAS
+        return
+
+PetalburgWoods_TryRemoveXerneas::
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+        removeobject LOCALID_PETALBURG_WOODS_XERNEAS
+        return
+
+PetalburgWoods_Xerneas::
+        lock
+        faceplayer
+        waitse
+        playmoncry SPECIES_XERNEAS, CRY_MODE_ENCOUNTER
+        waitmoncry
+        seteventmon SPECIES_XERNEAS, 70
+        setflag FLAG_SYS_CTRL_OBJ_DELETE
+        special BattleSetup_StartLegendaryBattle
+        waitstate
+        clearflag FLAG_SYS_CTRL_OBJ_DELETE
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_eq VAR_RESULT, B_OUTCOME_WON, PetalburgWoods_DefeatedXerneas
+        goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PetalburgWoods_RanFromXerneas
+        goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PetalburgWoods_RanFromXerneas
+        setflag FLAG_CAUGHT_XERNEAS
+        release
+        end
+
+PetalburgWoods_DefeatedXerneas::
+        setflag FLAG_DEFEATED_XERNEAS
+        setvar VAR_0x8004, SPECIES_XERNEAS
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+PetalburgWoods_RanFromXerneas::
+        setvar VAR_0x8004, SPECIES_XERNEAS
         goto Common_EventScript_LegendaryFlewAway
         end
 

@@ -7,10 +7,13 @@ AlteringCave_OnTransition:
         setflag FLAG_LANDMARK_ALTERING_CAVE
         call_if_set FLAG_CAUGHT_MEWTWO, AlteringCave_HideMewtwo
         call_if_unset FLAG_CAUGHT_MEWTWO, AlteringCave_TryShowMewtwo
+        call_if_set FLAG_CAUGHT_ZYGARDE, AlteringCave_HideZygarde
+        call_if_unset FLAG_CAUGHT_ZYGARDE, AlteringCave_TryShowZygarde
         end
 
 AlteringCave_OnResume:
         call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AlteringCave_TryRemoveMewtwo
+        call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AlteringCave_TryRemoveZygarde
         end
 
 AlteringCave_HideMewtwo::
@@ -57,6 +60,57 @@ AlteringCave_DefeatedMewtwo::
 
 AlteringCave_RanFromMewtwo::
         setvar VAR_0x8004, SPECIES_MEWTWO
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+AlteringCave_HideZygarde::
+        setflag FLAG_HIDE_ZYGARDE
+        return
+
+AlteringCave_TryShowZygarde::
+        goto_if_set FLAG_DEFEATED_ZYGARDE, Common_EventScript_NopReturn
+        checkspecies SPECIES_DIALGA
+        goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
+        checkspecies SPECIES_PALKIA
+        goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
+        checkspecies SPECIES_GIRATINA
+        goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
+        clearflag FLAG_HIDE_ZYGARDE
+        return
+
+AlteringCave_TryRemoveZygarde::
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+        removeobject LOCALID_ALTERING_CAVE_ZYGARDE
+        return
+
+AlteringCave_Zygarde::
+        lock
+        faceplayer
+        waitse
+        playmoncry SPECIES_ZYGARDE, CRY_MODE_ENCOUNTER
+        waitmoncry
+        seteventmon SPECIES_ZYGARDE, 70
+        setflag FLAG_SYS_CTRL_OBJ_DELETE
+        special BattleSetup_StartLegendaryBattle
+        waitstate
+        clearflag FLAG_SYS_CTRL_OBJ_DELETE
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_eq VAR_RESULT, B_OUTCOME_WON, AlteringCave_DefeatedZygarde
+        goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AlteringCave_RanFromZygarde
+        goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AlteringCave_RanFromZygarde
+        setflag FLAG_CAUGHT_ZYGARDE
+        release
+        end
+
+AlteringCave_DefeatedZygarde::
+        setflag FLAG_DEFEATED_ZYGARDE
+        setvar VAR_0x8004, SPECIES_ZYGARDE
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+AlteringCave_RanFromZygarde::
+        setvar VAR_0x8004, SPECIES_ZYGARDE
         goto Common_EventScript_LegendaryFlewAway
         end
 

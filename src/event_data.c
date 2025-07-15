@@ -125,7 +125,7 @@ void EnableMysteryGift(void)
 
 bool32 IsMysteryGiftEnabled(void)
 {
-    return FlagGet(FLAG_SYS_MYSTERY_GIFT_ENABLE);
+    return FALSE; // Mystery Gift is disabled to free space
 }
 
 void ClearMysteryGiftFlags(void)
