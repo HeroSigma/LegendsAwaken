@@ -549,7 +549,6 @@ MtChimney_HideMoltres::
         return
 
 MtChimney_TryShowMoltres::
-        goto_if_set FLAG_DEFEATED_MOLTRES, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_MOLTRES
         return
 
@@ -579,7 +578,6 @@ MtChimney_Moltres::
         end
 
 MtChimney_DefeatedMoltres::
-        setflag FLAG_DEFEATED_MOLTRES
         setvar VAR_0x8004, SPECIES_MOLTRES
         goto Common_EventScript_LegendaryFlewAway
         end

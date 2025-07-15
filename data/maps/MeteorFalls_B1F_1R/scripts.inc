@@ -20,7 +20,8 @@ MeteorFalls_B1F_1R_HideDialga::
         return
 
 MeteorFalls_B1F_1R_TryShowDialga::
-        goto_if_set FLAG_DEFEATED_DIALGA, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_UXIE, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_MESPRIT, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_AZELF, Common_EventScript_NopReturn
@@ -44,7 +45,8 @@ MeteorFalls_B1F_1R_HidePalkia::
         return
 
 MeteorFalls_B1F_1R_TryShowPalkia::
-        goto_if_set FLAG_DEFEATED_PALKIA, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_UXIE, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_MESPRIT, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_AZELF, Common_EventScript_NopReturn
@@ -83,7 +85,6 @@ MeteorFalls_B1F_1R_Dialga::
         end
 
 MeteorFalls_B1F_1R_DefeatedDialga::
-        setflag FLAG_DEFEATED_DIALGA
         setvar VAR_0x8004, SPECIES_DIALGA
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -113,7 +114,6 @@ MeteorFalls_B1F_1R_Palkia::
         end
 
 MeteorFalls_B1F_1R_DefeatedPalkia::
-        setflag FLAG_DEFEATED_PALKIA
         setvar VAR_0x8004, SPECIES_PALKIA
         goto Common_EventScript_LegendaryFlewAway
         end

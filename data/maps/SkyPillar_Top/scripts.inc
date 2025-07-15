@@ -20,7 +20,8 @@ SkyPillar_Top_HideEternatus::
         return
 
 SkyPillar_Top_TryShowEternatus::
-        goto_if_set FLAG_DEFEATED_ETERNATUS, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         checkflag FLAG_CAUGHT_ZACIAN
         goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
         checkflag FLAG_CAUGHT_ZAMAZENTA
@@ -54,7 +55,6 @@ SkyPillar_Top_Eternatus::
         end
 
 SkyPillar_Top_DefeatedEternatus::
-        setflag FLAG_DEFEATED_ETERNATUS
         setvar VAR_0x8004, SPECIES_ETERNATUS
         goto Common_EventScript_LegendaryFlewAway
         end

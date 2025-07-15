@@ -316,7 +316,7 @@ RustboroCity_DevonCorp_3F_HideTypeNull::
         return
 
 RustboroCity_DevonCorp_3F_TryShowTypeNull::
-        goto_if_set FLAG_DEFEATED_TYPE_NULL, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_TYPE_NULL
         return
@@ -347,7 +347,6 @@ RustboroCity_DevonCorp_3F_TypeNull::
         end
 
 RustboroCity_DevonCorp_3F_DefeatedTypeNull::
-        setflag FLAG_DEFEATED_TYPE_NULL
         setvar VAR_0x8004, SPECIES_TYPE_NULL
         goto Common_EventScript_LegendaryFlewAway
         end

@@ -11,16 +11,16 @@ This document lists where to find legendary Pokémon in this project.
 |-----------------|-----------------------------------------------------------------|--------------------------------------------------------|
 
 | Hoopa           | Roaming (must catch first)                | Roaming in Hoenn (trigger after Winona) |
-| Mew             | No prereqs                                | Littleroot Town |
-| Mewtwo          | Have Mew in your party                    | Altering Cave |
-| Celebi          | After catching Mew                        | Petalburg Woods deeper area |
-| Lake Trio       | No prereqs                                | Uxie: Mirage Tower, Mesprit: Roaming, Azelf: Scorched Slab |
-| Dialga/Palkia   | Catch Uxie, Mesprit, and Azelf, all in party | Meteor Falls space-time rift (2F/3F) |
-| Giratina        | Have Dialga and Palkia in party           | Cave of Origin |
-| Arceus          | Have Dialga, Palkia, and Giratina in party | Altering Cave |
-| Zekrom/Reshiram | No prereqs                                | Sky Pillar alternate floor |
-| Kyurem          | Have Zekrom and Reshiram in party         | Shoal Cave winter chamber |
-| Keldeo          | Catch Cobalion, Terrakion, Virizion       | Outside Victory Road |
+| Mew             | After catching Hoopa                      | Faraway Island |
+| Mewtwo          | After catching Hoopa, have Mew in your party | Altering Cave |
+| Celebi          | After catching Hoopa and Mew              | Petalburg Woods deeper area |
+| Lake Trio       | After catching Hoopa                      | Uxie: Mirage Tower, Mesprit: Roaming, Azelf: Scorched Slab |
+| Dialga/Palkia   | After catching Hoopa, with Lake Trio in party | Meteor Falls space-time rift (2F/3F) |
+| Giratina        | After catching Hoopa, with Dialga and Palkia in party | Cave of Origin |
+| Arceus          | After catching Hoopa, with Dialga, Palkia, and Giratina in party | Altering Cave |
+| Zekrom/Reshiram | After catching Hoopa                      | Sky Pillar alternate floor |
+| Kyurem          | After catching Hoopa, with Zekrom and Reshiram in party | Shoal Cave winter chamber |
+| Keldeo          | After catching Hoopa and Cobalion, Terrakion, Virizion | Outside Victory Road |
 | Landorus        | Roaming                                   | |
 | Enamorus        | Roaming, unlocked after catching Tornadus, Thundurus, Landorus | Roaming |
 | Xerneas         | No prereqs                                | Petalburg Woods (right side grove) |
@@ -74,9 +74,9 @@ This document lists where to find legendary Pokémon in this project.
 - Chi-Yu
 
 | Hoopa           | Roaming (must catch first)                | Roaming in Hoenn (trigger after Winona) |
-| Mew             | No prereqs                                | Littleroot Town |
-| Mewtwo          | Have Mew in your party                    | Altering Cave |
-| Celebi          | After catching Mew                        | Petalburg Woods deeper area |
-| Lake Trio       | No prereqs                                | Uxie: Mirage Tower, Mesprit: Roaming, Azelf: Scorched Slab |
-| Dialga/Palkia   | Catch Uxie, Mesprit, and Azelf, all in party | Meteor Falls space-time rift (2F/3F) |
-| Giratina        | Have Dialga and Palkia in party           | Cave of Origin |
+| Mew             | After catching Hoopa                      | Faraway Island |
+| Mewtwo          | After catching Hoopa, have Mew in your party | Altering Cave |
+| Celebi          | After catching Hoopa and Mew              | Petalburg Woods deeper area |
+| Lake Trio       | After catching Hoopa                      | Uxie: Mirage Tower, Mesprit: Roaming, Azelf: Scorched Slab |
+| Dialga/Palkia   | After catching Hoopa, with Lake Trio in party | Meteor Falls space-time rift (2F/3F) |
+| Giratina        | After catching Hoopa, with Dialga and Palkia in party | Cave of Origin |

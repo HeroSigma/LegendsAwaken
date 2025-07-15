@@ -232,7 +232,10 @@ VictoryRoad_1F_HideSolgaleo::
         return
 
 VictoryRoad_1F_TryShowSolgaleo::
-        goto_if_set FLAG_DEFEATED_SOLGALEO, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_SOLGALEO
         return
 
@@ -262,7 +265,6 @@ VictoryRoad_1F_Solgaleo::
         end
 
 VictoryRoad_1F_DefeatedSolgaleo::
-        setflag FLAG_DEFEATED_SOLGALEO
         setvar VAR_0x8004, SPECIES_SOLGALEO
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -277,7 +279,10 @@ VictoryRoad_1F_HideLunala::
         return
 
 VictoryRoad_1F_TryShowLunala::
-        goto_if_set FLAG_DEFEATED_LUNALA, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_LUNALA
         return
 
@@ -307,7 +312,6 @@ VictoryRoad_1F_Lunala::
         end
 
 VictoryRoad_1F_DefeatedLunala::
-        setflag FLAG_DEFEATED_LUNALA
         setvar VAR_0x8004, SPECIES_LUNALA
         goto Common_EventScript_LegendaryFlewAway
         end

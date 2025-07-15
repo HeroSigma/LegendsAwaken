@@ -259,7 +259,8 @@ NewMauville_Inside_HideZapdos::
         return
 
 NewMauville_Inside_TryShowZapdos::
-        goto_if_set FLAG_DEFEATED_ZAPDOS, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_ZAPDOS
         return
 
@@ -289,7 +290,6 @@ NewMauville_Inside_Zapdos::
         end
 
 NewMauville_Inside_DefeatedZapdos::
-        setflag FLAG_DEFEATED_ZAPDOS
         setvar VAR_0x8004, SPECIES_ZAPDOS
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -304,7 +304,8 @@ NewMauville_Inside_HideRegidrago::
         return
 
 NewMauville_Inside_TryShowRegidrago::
-        goto_if_set FLAG_DEFEATED_REGIDRAGO, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGIROCK, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGICE, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGISTEEL, Common_EventScript_NopReturn
@@ -337,7 +338,6 @@ NewMauville_Inside_Regidrago::
         end
 
 NewMauville_Inside_DefeatedRegidrago::
-        setflag FLAG_DEFEATED_REGIDRAGO
         setvar VAR_0x8004, SPECIES_REGIDRAGO
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -352,7 +352,8 @@ NewMauville_Inside_HideRegieleki::
         return
 
 NewMauville_Inside_TryShowRegieleki::
-        goto_if_set FLAG_DEFEATED_REGIELEKI, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGIROCK, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGICE, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGISTEEL, Common_EventScript_NopReturn
@@ -385,7 +386,6 @@ NewMauville_Inside_Regieleki::
         end
 
 NewMauville_Inside_DefeatedRegieleki::
-        setflag FLAG_DEFEATED_REGIELEKI
         setvar VAR_0x8004, SPECIES_REGIELEKI
         goto Common_EventScript_LegendaryFlewAway
         end

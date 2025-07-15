@@ -39,7 +39,8 @@ Route121_SafariZoneEntrance_HideTapuBulu::
         return
 
 Route121_SafariZoneEntrance_TryShowTapuBulu::
-        goto_if_set FLAG_DEFEATED_TAPU_BULU, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_TAPU_BULU
         return
 
@@ -69,7 +70,6 @@ Route121_SafariZoneEntrance_TapuBulu::
         end
 
 Route121_SafariZoneEntrance_DefeatedTapuBulu::
-        setflag FLAG_DEFEATED_TAPU_BULU
         setvar VAR_0x8004, SPECIES_TAPU_BULU
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -84,7 +84,8 @@ Route121_SafariZoneEntrance_HideTapuKoko::
         return
 
 Route121_SafariZoneEntrance_TryShowTapuKoko::
-        goto_if_set FLAG_DEFEATED_TAPU_KOKO, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_TAPU_KOKO
         return
 
@@ -114,7 +115,6 @@ Route121_SafariZoneEntrance_TapuKoko::
         end
 
 Route121_SafariZoneEntrance_DefeatedTapuKoko::
-        setflag FLAG_DEFEATED_TAPU_KOKO
         setvar VAR_0x8004, SPECIES_TAPU_KOKO
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -129,7 +129,8 @@ Route121_SafariZoneEntrance_HideTapuLele::
         return
 
 Route121_SafariZoneEntrance_TryShowTapuLele::
-        goto_if_set FLAG_DEFEATED_TAPU_LELE, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_TAPU_LELE
         return
 
@@ -159,7 +160,6 @@ Route121_SafariZoneEntrance_TapuLele::
         end
 
 Route121_SafariZoneEntrance_DefeatedTapuLele::
-        setflag FLAG_DEFEATED_TAPU_LELE
         setvar VAR_0x8004, SPECIES_TAPU_LELE
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -174,7 +174,8 @@ Route121_SafariZoneEntrance_HideTapuFini::
         return
 
 Route121_SafariZoneEntrance_TryShowTapuFini::
-        goto_if_set FLAG_DEFEATED_TAPU_FINI, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_TAPU_FINI
         return
 
@@ -204,7 +205,6 @@ Route121_SafariZoneEntrance_TapuFini::
         end
 
 Route121_SafariZoneEntrance_DefeatedTapuFini::
-        setflag FLAG_DEFEATED_TAPU_FINI
         setvar VAR_0x8004, SPECIES_TAPU_FINI
         goto Common_EventScript_LegendaryFlewAway
         end

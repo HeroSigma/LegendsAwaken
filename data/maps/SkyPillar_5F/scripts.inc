@@ -25,7 +25,8 @@ SkyPillar_5F_HideZekrom::
         return
 
 SkyPillar_5F_TryShowZekrom::
-        goto_if_set FLAG_DEFEATED_ZEKROM, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_ZEKROM
         return
 
@@ -40,8 +41,8 @@ SkyPillar_5F_HideReshiram::
         return
 
 SkyPillar_5F_TryShowReshiram::
-        goto_if_set FLAG_DEFEATED_RESHIRAM, Common_EventScript_NopReturn
-        clearflag FLAG_HIDE_RESHIRAM
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         return
 
 SkyPillar_5F_TryRemoveReshiram::
@@ -70,7 +71,6 @@ SkyPillar_5F_Zekrom::
         end
 
 SkyPillar_5F_DefeatedZekrom::
-        setflag FLAG_DEFEATED_ZEKROM
         setvar VAR_0x8004, SPECIES_ZEKROM
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -100,7 +100,6 @@ SkyPillar_5F_Reshiram::
         end
 
 SkyPillar_5F_DefeatedReshiram::
-        setflag FLAG_DEFEATED_RESHIRAM
         setvar VAR_0x8004, SPECIES_RESHIRAM
         goto Common_EventScript_LegendaryFlewAway
         end

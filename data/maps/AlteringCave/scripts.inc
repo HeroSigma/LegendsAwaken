@@ -21,9 +21,12 @@ AlteringCave_HideMewtwo::
         return
 
 AlteringCave_TryShowMewtwo::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         checkspecies SPECIES_MEW
         goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
-        goto_if_set FLAG_DEFEATED_MEWTWO, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_MEWTWO
         return
 
@@ -53,7 +56,6 @@ AlteringCave_Mewtwo::
         end
 
 AlteringCave_DefeatedMewtwo::
-        setflag FLAG_DEFEATED_MEWTWO
         setvar VAR_0x8004, SPECIES_MEWTWO
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -68,7 +70,10 @@ AlteringCave_HideZygarde::
         return
 
 AlteringCave_TryShowZygarde::
-        goto_if_set FLAG_DEFEATED_ZYGARDE, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         checkspecies SPECIES_DIALGA
         goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
         checkspecies SPECIES_PALKIA
@@ -104,7 +109,6 @@ AlteringCave_Zygarde::
         end
 
 AlteringCave_DefeatedZygarde::
-        setflag FLAG_DEFEATED_ZYGARDE
         setvar VAR_0x8004, SPECIES_ZYGARDE
         goto Common_EventScript_LegendaryFlewAway
         end

@@ -20,8 +20,9 @@ PetalburgWoods_HideCelebi::
         return
 
 PetalburgWoods_TryShowCelebi::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_MEW, Common_EventScript_NopReturn
-        goto_if_set FLAG_DEFEATED_CELEBI, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_CELEBI
         return
 
@@ -51,7 +52,6 @@ PetalburgWoods_Celebi::
         end
 
 PetalburgWoods_DefeatedCelebi::
-        setflag FLAG_DEFEATED_CELEBI
         setvar VAR_0x8004, SPECIES_CELEBI
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -66,7 +66,8 @@ PetalburgWoods_HideXerneas::
         return
 
 PetalburgWoods_TryShowXerneas::
-        goto_if_set FLAG_DEFEATED_XERNEAS, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_XERNEAS
         return
 
@@ -96,7 +97,6 @@ PetalburgWoods_Xerneas::
         end
 
 PetalburgWoods_DefeatedXerneas::
-        setflag FLAG_DEFEATED_XERNEAS
         setvar VAR_0x8004, SPECIES_XERNEAS
         goto Common_EventScript_LegendaryFlewAway
         end

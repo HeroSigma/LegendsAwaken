@@ -60,7 +60,8 @@ Route130_HideCalyrex::
         return
 
 Route130_TryShowCalyrex::
-        goto_if_set FLAG_DEFEATED_CALYREX, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_CALYREX
         return
 
@@ -90,7 +91,6 @@ Route130_Calyrex::
         end
 
 Route130_DefeatedCalyrex::
-        setflag FLAG_DEFEATED_CALYREX
         setvar VAR_0x8004, SPECIES_CALYREX
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -105,7 +105,8 @@ Route130_HideGlastrier::
         return
 
 Route130_TryShowGlastrier::
-        goto_if_set FLAG_DEFEATED_GLASTRIER, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_CALYREX, Common_EventScript_NopReturn
         specialvar VAR_RESULT, GetTimeOfDay
         compare VAR_RESULT, TIME_DAY
@@ -139,7 +140,6 @@ Route130_Glastrier::
         end
 
 Route130_DefeatedGlastrier::
-        setflag FLAG_DEFEATED_GLASTRIER
         setvar VAR_0x8004, SPECIES_GLASTRIER
         goto Common_EventScript_LegendaryFlewAway
         end
@@ -154,7 +154,8 @@ Route130_HideSpectrier::
         return
 
 Route130_TryShowSpectrier::
-        goto_if_set FLAG_DEFEATED_SPECTRIER, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_CALYREX, Common_EventScript_NopReturn
         specialvar VAR_RESULT, GetTimeOfDay
         compare VAR_RESULT, TIME_NIGHT
@@ -188,7 +189,6 @@ Route130_Spectrier::
         end
 
 Route130_DefeatedSpectrier::
-        setflag FLAG_DEFEATED_SPECTRIER
         setvar VAR_0x8004, SPECIES_SPECTRIER
         goto Common_EventScript_LegendaryFlewAway
         end

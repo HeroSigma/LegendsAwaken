@@ -17,7 +17,8 @@ MirageTower_4F_HideUxie::
         return
 
 MirageTower_4F_TryShowUxie::
-        goto_if_set FLAG_DEFEATED_UXIE, Common_EventScript_NopReturn
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_UXIE
         return
 
@@ -47,7 +48,6 @@ MirageTower_4F_Uxie::
         end
 
 MirageTower_4F_DefeatedUxie::
-        setflag FLAG_DEFEATED_UXIE
         setvar VAR_0x8004, SPECIES_UXIE
         goto Common_EventScript_LegendaryFlewAway
         end
