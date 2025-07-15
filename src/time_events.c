@@ -40,7 +40,8 @@ void UpdateMirageRnd(u16 days)
 }
 
 bool8 IsMirageIslandPresent(void)
-            return TRUE;
+{
+    return TRUE;
 }
 
 void UpdateShoalTideFlag(void)
