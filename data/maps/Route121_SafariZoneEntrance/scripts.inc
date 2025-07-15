@@ -1,6 +1,17 @@
 Route121_SafariZoneEntrance_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route121_SafariZoneEntrance_OnFrame
-	.byte 0
+        map_script MAP_SCRIPT_ON_TRANSITION, Route121_SafariZoneEntrance_OnTransition
+        map_script MAP_SCRIPT_ON_RESUME, Route121_SafariZoneEntrance_OnResume
+        map_script MAP_SCRIPT_ON_FRAME_TABLE, Route121_SafariZoneEntrance_OnFrame
+        .byte 0
+
+Route121_SafariZoneEntrance_OnTransition:
+        call_if_set FLAG_CAUGHT_TAPU_BULU, Route121_SafariZoneEntrance_HideTapuBulu
+        call_if_unset FLAG_CAUGHT_TAPU_BULU, Route121_SafariZoneEntrance_TryShowTapuBulu
+        end
+
+Route121_SafariZoneEntrance_OnResume:
+        call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route121_SafariZoneEntrance_TryRemoveTapuBulu
+        return
 
 Route121_SafariZoneEntrance_OnFrame:
 	map_script_2 VAR_SAFARI_ZONE_STATE, 1, Route121_SafariZoneEntrance_EventScript_ExitSafariZone
@@ -11,8 +22,53 @@ Route121_SafariZoneEntrance_EventScript_ExitSafariZone::
 	applymovement LOCALID_PLAYER, Route121_SafariZoneEntrance_Movement_ExitSafariZone
 	waitmovement 0
 	setvar VAR_SAFARI_ZONE_STATE, 0
-	releaseall
-	end
+        releaseall
+        end
+
+Route121_SafariZoneEntrance_HideTapuBulu::
+        setflag FLAG_HIDE_TAPU_BULU
+        return
+
+Route121_SafariZoneEntrance_TryShowTapuBulu::
+        goto_if_set FLAG_DEFEATED_TAPU_BULU, Common_EventScript_NopReturn
+        clearflag FLAG_HIDE_TAPU_BULU
+        return
+
+Route121_SafariZoneEntrance_TryRemoveTapuBulu::
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+        removeobject LOCALID_SAFARI_ZONE_ENTRANCE_TAPU_BULU
+        return
+
+Route121_SafariZoneEntrance_TapuBulu::
+        lock
+        faceplayer
+        waitse
+        playmoncry SPECIES_TAPU_BULU, CRY_MODE_ENCOUNTER
+        waitmoncry
+        seteventmon SPECIES_TAPU_BULU, 70
+        setflag FLAG_SYS_CTRL_OBJ_DELETE
+        special BattleSetup_StartLegendaryBattle
+        waitstate
+        clearflag FLAG_SYS_CTRL_OBJ_DELETE
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route121_SafariZoneEntrance_DefeatedTapuBulu
+        goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route121_SafariZoneEntrance_RanFromTapuBulu
+        goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route121_SafariZoneEntrance_RanFromTapuBulu
+        setflag FLAG_CAUGHT_TAPU_BULU
+        release
+        end
+
+Route121_SafariZoneEntrance_DefeatedTapuBulu::
+        setflag FLAG_DEFEATED_TAPU_BULU
+        setvar VAR_0x8004, SPECIES_TAPU_BULU
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+Route121_SafariZoneEntrance_RanFromTapuBulu::
+        setvar VAR_0x8004, SPECIES_TAPU_BULU
+        goto Common_EventScript_LegendaryFlewAway
+        end
 
 Route121_SafariZoneEntrance_Movement_ExitSafariZone:
 	walk_up
