@@ -56,6 +56,22 @@ This document lists where to find legendary Pokémon in this project.
 | Tapu Koko | Safari Zone Entrance                 |
 | Tapu Lele | Safari Zone Entrance                 |
 | Tapu Fini | Safari Zone Entrance                 |
+| Deoxys    | Birth Island                         |
+| Phione    | Underwater Marine Cave               |
+| Manaphy   | Marine Cave End                      |
+| Darkrai   | Mt. Pyre Summit                      |
+| Shaymin   | Route 123 Flower Field               |
+| Victini   | Victory Road 1F                      |
+| Meloetta  | Lilycove Contest Hall                |
+| Genesect  | New Mauville Generator Room          |
+| Diancie   | Granite Cave Stevens Room            |
+| Magearna  | Devon Corp 3F                        |
+| Marshadow | Mt. Pyre 6F                          |
+| Zeraora   | New Mauville Generator Room          |
+| Meltan    | Devon Corp 1F                        |
+| Melmetal  | Devon Corp 2F                        |
+| Zarude    | Safari Zone Deep Forest              |
+| Pecharunt | Special shrine after all mythicals   |
 
 ## Roaming Legendaries
 
