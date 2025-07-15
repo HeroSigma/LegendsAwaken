@@ -40,7 +40,6 @@ FarawayIsland_Interior_OnTransition:
 
 FarawayIsland_Interior_EventScript_TryShowMew::
         goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
-        goto_if_set FLAG_DEFEATED_MEW, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_MEW
         setvar VAR_TEMP_1, 0
         return
@@ -143,7 +142,6 @@ FarawayIsland_Interior_EventScript_Mew::
 	end
 
 FarawayIsland_Interior_EventScript_MewDefeated::
-	setflag FLAG_DEFEATED_MEW
 	setvar VAR_0x8004, SPECIES_MEW
 	goto Common_EventScript_LegendaryFlewAway
 	end

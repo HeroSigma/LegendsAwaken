@@ -20,7 +20,6 @@ CaveOfOrigin_UnusedRubySapphireMap3_HideNecrozma::
 CaveOfOrigin_UnusedRubySapphireMap3_TryShowNecrozma::
         goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
-        goto_if_set FLAG_DEFEATED_NECROZMA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_NECROZMA
         return
 
@@ -50,7 +49,6 @@ CaveOfOrigin_UnusedRubySapphireMap3_Necrozma::
         end
 
 CaveOfOrigin_UnusedRubySapphireMap3_DefeatedNecrozma::
-        setflag FLAG_DEFEATED_NECROZMA
         setvar VAR_0x8004, SPECIES_NECROZMA
         goto Common_EventScript_LegendaryFlewAway
         end

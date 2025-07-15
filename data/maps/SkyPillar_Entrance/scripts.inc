@@ -20,7 +20,6 @@ SkyPillar_Entrance_HideRegigigas::
 SkyPillar_Entrance_TryShowRegigigas::
         goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
-        goto_if_set FLAG_DEFEATED_REGIGIGAS, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGIROCK, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGICE, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGISTEEL, Common_EventScript_NopReturn
@@ -55,7 +54,6 @@ SkyPillar_Entrance_Regigigas::
         end
 
 SkyPillar_Entrance_DefeatedRegigigas::
-        setflag FLAG_DEFEATED_REGIGIGAS
         setvar VAR_0x8004, SPECIES_REGIGIGAS
         goto Common_EventScript_LegendaryFlewAway
         end

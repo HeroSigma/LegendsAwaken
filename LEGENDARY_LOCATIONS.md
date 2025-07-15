@@ -11,7 +11,7 @@ This document lists where to find legendary Pokémon in this project.
 |-----------------|-----------------------------------------------------------------|--------------------------------------------------------|
 
 | Hoopa           | Roaming (must catch first)                | Roaming in Hoenn (trigger after Winona) |
-| Mew             | After catching Hoopa                      | Littleroot Town |
+| Mew             | After catching Hoopa                      | Faraway Island |
 | Mewtwo          | After catching Hoopa, have Mew in your party | Altering Cave |
 | Celebi          | After catching Hoopa and Mew              | Petalburg Woods deeper area |
 | Lake Trio       | After catching Hoopa                      | Uxie: Mirage Tower, Mesprit: Roaming, Azelf: Scorched Slab |
@@ -74,7 +74,7 @@ This document lists where to find legendary Pokémon in this project.
 - Chi-Yu
 
 | Hoopa           | Roaming (must catch first)                | Roaming in Hoenn (trigger after Winona) |
-| Mew             | After catching Hoopa                      | Littleroot Town |
+| Mew             | After catching Hoopa                      | Faraway Island |
 | Mewtwo          | After catching Hoopa, have Mew in your party | Altering Cave |
 | Celebi          | After catching Hoopa and Mew              | Petalburg Woods deeper area |
 | Lake Trio       | After catching Hoopa                      | Uxie: Mirage Tower, Mesprit: Roaming, Azelf: Scorched Slab |

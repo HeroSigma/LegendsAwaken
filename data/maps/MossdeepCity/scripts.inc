@@ -74,7 +74,6 @@ MossdeepCity_TryShowJirachi::
         goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
         checkspecies SPECIES_MEW
         goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
-        goto_if_set FLAG_DEFEATED_JIRACHI, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_JIRACHI
         return
 
@@ -104,7 +103,6 @@ MossdeepCity_Jirachi::
         end
 
 MossdeepCity_DefeatedJirachi::
-        setflag FLAG_DEFEATED_JIRACHI
         setvar VAR_0x8004, SPECIES_JIRACHI
         goto Common_EventScript_LegendaryFlewAway
         end

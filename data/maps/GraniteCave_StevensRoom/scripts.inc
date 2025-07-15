@@ -70,7 +70,6 @@ GraniteCave_StevensRoom_HideYveltal::
 GraniteCave_StevensRoom_TryShowYveltal::
         goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
-        goto_if_set FLAG_DEFEATED_YVELTAL, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_YVELTAL
         return
 
@@ -100,7 +99,6 @@ GraniteCave_StevensRoom_Yveltal::
         end
 
 GraniteCave_StevensRoom_DefeatedYveltal::
-        setflag FLAG_DEFEATED_YVELTAL
         setvar VAR_0x8004, SPECIES_YVELTAL
         goto Common_EventScript_LegendaryFlewAway
         end

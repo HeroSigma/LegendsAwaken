@@ -19,7 +19,6 @@ CaveOfOrigin_B1F_HideGiratina::
 CaveOfOrigin_B1F_TryShowGiratina::
         goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
-        goto_if_set FLAG_DEFEATED_GIRATINA, Common_EventScript_NopReturn
         checkspecies SPECIES_DIALGA
         goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
         checkspecies SPECIES_PALKIA
@@ -53,7 +52,6 @@ CaveOfOrigin_B1F_Giratina::
         end
 
 CaveOfOrigin_B1F_DefeatedGiratina::
-        setflag FLAG_DEFEATED_GIRATINA
         setvar VAR_0x8004, SPECIES_GIRATINA
         goto Common_EventScript_LegendaryFlewAway
         end

@@ -21,7 +21,6 @@ VictoryRoad_B1F_TryShowTerrakion::
         goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
-        goto_if_set FLAG_DEFEATED_TERRAKION, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_TERRAKION
         return
 
@@ -51,7 +50,6 @@ VictoryRoad_B1F_Terrakion::
         end
 
 VictoryRoad_B1F_DefeatedTerrakion::
-        setflag FLAG_DEFEATED_TERRAKION
         setvar VAR_0x8004, SPECIES_TERRAKION
         goto Common_EventScript_LegendaryFlewAway
         end
