@@ -73,6 +73,7 @@ This document lists where to find legendary Pokémon in this project.
 - Ting-Lu
 - Chi-Yu
 
+
 | Hoopa           | Roaming (must catch first)                | Roaming in Hoenn (trigger after Winona) |
 | Mew             | After catching Hoopa                      | Faraway Island |
 | Mewtwo          | After catching Hoopa, have Mew in your party | Altering Cave |
