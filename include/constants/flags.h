@@ -701,8 +701,8 @@
 #define FLAG_UNUSED_0x28F  0x28F // Unused Flag
 #define FLAG_DEFEATED_JIRACHI                                 0x290
 #define FLAG_CAUGHT_JIRACHI                                   0x291
-#define FLAG_UNUSED_0x292  0x292 // Unused Flag
-#define FLAG_UNUSED_0x293  0x293 // Unused Flag
+#define FLAG_DEFEATED_DEOXYS_RS                               0x292
+#define FLAG_CAUGHT_DEOXYS_RS                                 0x293
 #define FLAG_UNUSED_0x294  0x294 // Unused Flag
 #define FLAG_UNUSED_0x295  0x295 // Unused Flag
 #define FLAG_UNUSED_0x296  0x296 // Unused Flag
