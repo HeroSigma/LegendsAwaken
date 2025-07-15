@@ -252,8 +252,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name1,
 	      gText_SubQuest1_Desc1,
 	      gText_SideQuestMap1,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -262,8 +262,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name2,
 	      gText_SubQuest1_Desc2,
 	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -272,8 +272,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name3,
 	      gText_SubQuest1_Desc3,
 	      gText_SideQuestMap3,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -282,8 +282,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name4,
 	      gText_SubQuest1_Desc4,
 	      gText_SideQuestMap4,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -354,9 +354,9 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      10,
 	      gText_SubQuest2_Name1,
 	      gText_SubQuest2_Desc1,
-	      gText_SideQuestMap1,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              gText_SideQuestMap1,
+              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -364,9 +364,9 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      11,
 	      gText_SubQuest2_Name2,
 	      gText_SubQuest2_Desc2,
-	      gText_SideQuestMap2,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              gText_SideQuestMap2,
+              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -374,9 +374,9 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      12,
 	      gText_SubQuest2_Name3,
 	      gText_SubQuest2_Desc3,
-	      gText_SideQuestMap3,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              gText_SideQuestMap3,
+              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -384,9 +384,9 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 	      13,
 	      gText_SubQuest2_Name4,
 	      gText_SubQuest2_Desc4,
-	      gText_SideQuestMap4,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              gText_SideQuestMap4,
+              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -852,16 +852,17 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
               PKMN,
               &sSubQuests2[18],
               1
-        )
-	side_quest(
-	      gText_SideQuestName_30,
-	      gText_SideQuestDesc_30,
-	      gText_SideQuestDoneDesc_30,
-	      gText_SideQuestMap30,
-	      SPECIES_HOOPA,
+        ),
+        side_quest(
+              gText_SideQuestName_30,
+              gText_SideQuestDesc_30,
+              gText_SideQuestDoneDesc_30,
+              gText_SideQuestMap30,
+              SPECIES_HOOPA,
+              PKMN,
               &sSubQuests2[19],
               1
-	),
+        ),
 };
 ////////////////////////END QUEST CUSTOMIZATION////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -2751,6 +2752,7 @@ void Task_QuestMenu_OpenFromStartMenu(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
+        QuestMenu_UnlockAllQuests();
         CleanupOverworldWindowsAndTilemaps();
         QuestMenu_Init(0, CB2_ReturnToFieldWithOpenMenu);
         DestroyTask(taskId);
@@ -2814,6 +2816,10 @@ void QuestMenu_ResetMenuSaveData(void)
 void QuestMenu_UnlockAllQuests(void)
 {
     int i;
+
     for (i = 0; i < QUEST_COUNT; i++)
+    {
         QuestMenu_GetSetQuestState(i, FLAG_SET_UNLOCKED);
+        QuestMenu_GetSetQuestState(i, FLAG_SET_ACTIVE);
+    }
 }
