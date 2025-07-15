@@ -313,9 +313,10 @@ gSpecials::
 	def_special GiveLeadMonEffortRibbon
 	def_special Special_AreLeadMonEVsMaxedOut
 	def_special Script_FacePlayer
-	def_special Script_ClearHeldMovement
-	def_special InitRoamer
-	def_special TryUpdateRusturfTunnelState
+        def_special Script_ClearHeldMovement
+        def_special InitRoamer
+        def_special AddRoamerByVar
+        def_special TryUpdateRusturfTunnelState
 	def_special IsGrassTypeInParty
 	def_special DoContestHallWarp
 	def_special LoadWallyZigzagoon
@@ -563,4 +564,5 @@ gSpecials::
 	def_special UseBlankMessageToCancelPokemonPic
 	def_special EnterCode
 	def_special GetCodeFeedback
-	def_special SetHiddenNature
+        def_special SetHiddenNature
+        def_special GetTimeOfDay
