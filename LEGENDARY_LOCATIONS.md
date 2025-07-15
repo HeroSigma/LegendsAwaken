@@ -49,6 +49,13 @@ This document lists where to find legendary Pokémon in this project.
 | Calyrex   | Mirage Island                        |
 | Glastrier | Mirage Island (Day, after Calyrex)   |
 | Spectrier | Mirage Island (Night, after Calyrex) |
+| Jirachi   | Mossdeep City White Rock             |
+| Regidrago | New Mauville Generator Room          |
+| Regieleki | New Mauville Generator Room          |
+| Regigigas | Sky Pillar Entrance                  |
+| Tapu Koko | Safari Zone Entrance                 |
+| Tapu Lele | Safari Zone Entrance                 |
+| Tapu Fini | Safari Zone Entrance                 |
 
 ## Roaming Legendaries
 

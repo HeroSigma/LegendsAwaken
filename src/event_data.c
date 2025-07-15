@@ -130,10 +130,9 @@ bool32 IsMysteryGiftEnabled(void)
 
 void ClearMysteryGiftFlags(void)
 {
-   // Mystery Gift was removed to make room for additional
+    // Mystery Gift was removed to make room for additional
     // legendary encounter logic. Keep this function so calls
     // remain valid, but it no longer manipulates any flags.
-
 }
 
 void ClearMysteryGiftVars(void)
