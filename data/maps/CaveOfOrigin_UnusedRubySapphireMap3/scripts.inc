@@ -18,6 +18,8 @@ CaveOfOrigin_UnusedRubySapphireMap3_HideNecrozma::
         return
 
 CaveOfOrigin_UnusedRubySapphireMap3_TryShowNecrozma::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_NECROZMA, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_NECROZMA
         return

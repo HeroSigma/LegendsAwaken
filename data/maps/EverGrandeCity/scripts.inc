@@ -18,6 +18,8 @@ EverGrandeCity_HideKeldeo::
         return
 
 EverGrandeCity_TryShowKeldeo::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_KELDEO, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_COBALION, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_TERRAKION, Common_EventScript_NopReturn

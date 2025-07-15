@@ -17,6 +17,8 @@ CaveOfOrigin_B1F_HideGiratina::
         return
 
 CaveOfOrigin_B1F_TryShowGiratina::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_GIRATINA, Common_EventScript_NopReturn
         checkspecies SPECIES_DIALGA
         goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn

@@ -916,6 +916,7 @@ LittlerootTown_HideMew::
         return
 
 LittlerootTown_TryShowMew::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_MEW, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_MEW
         return

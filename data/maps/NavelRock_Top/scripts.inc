@@ -14,6 +14,8 @@ NavelRock_Top_EventScript_HideHoOh::
 	return
 
 NavelRock_Top_EventScript_TryShowHoOh::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
 	setvar VAR_TEMP_1, 1
 	goto_if_set FLAG_DEFEATED_HO_OH, Common_EventScript_NopReturn
 	setvar VAR_TEMP_1, 0

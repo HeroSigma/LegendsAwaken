@@ -17,6 +17,8 @@ MirageTower_4F_HideUxie::
         return
 
 MirageTower_4F_TryShowUxie::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_UXIE, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_UXIE
         return

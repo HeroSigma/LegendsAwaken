@@ -18,6 +18,8 @@ SkyPillar_Entrance_HideRegigigas::
         return
 
 SkyPillar_Entrance_TryShowRegigigas::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_REGIGIGAS, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGIROCK, Common_EventScript_NopReturn
         goto_if_unset FLAG_DEFEATED_REGICE, Common_EventScript_NopReturn

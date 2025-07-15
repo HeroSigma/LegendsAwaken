@@ -21,6 +21,8 @@ ScorchedSlab_HideAzelf::
         return
 
 ScorchedSlab_TryShowAzelf::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_AZELF, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_AZELF
         return
@@ -36,6 +38,8 @@ ScorchedSlab_HideVolcanion::
         return
 
 ScorchedSlab_TryShowVolcanion::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_VOLCANION, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_VOLCANION
         return

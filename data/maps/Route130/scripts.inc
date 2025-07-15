@@ -60,6 +60,8 @@ Route130_HideCalyrex::
         return
 
 Route130_TryShowCalyrex::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_CALYREX, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_CALYREX
         return
@@ -105,6 +107,8 @@ Route130_HideGlastrier::
         return
 
 Route130_TryShowGlastrier::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_GLASTRIER, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_CALYREX, Common_EventScript_NopReturn
         specialvar VAR_RESULT, GetTimeOfDay
@@ -154,6 +158,8 @@ Route130_HideSpectrier::
         return
 
 Route130_TryShowSpectrier::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_SPECTRIER, Common_EventScript_NopReturn
         goto_if_unset FLAG_CAUGHT_CALYREX, Common_EventScript_NopReturn
         specialvar VAR_RESULT, GetTimeOfDay

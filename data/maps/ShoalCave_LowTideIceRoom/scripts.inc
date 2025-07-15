@@ -15,6 +15,8 @@ ShoalCave_LowTideIceRoom_HideArticuno::
         return
 
 ShoalCave_LowTideIceRoom_TryShowArticuno::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_ARTICUNO, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_ARTICUNO
         return
@@ -65,6 +67,8 @@ ShoalCave_LowTideIceRoom_HideKyurem::
         return
 
 ShoalCave_LowTideIceRoom_TryShowKyurem::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_KYUREM, Common_EventScript_NopReturn
         checkspecies SPECIES_ZEKROM
         goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn

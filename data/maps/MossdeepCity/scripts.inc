@@ -68,6 +68,8 @@ MossdeepCity_HideJirachi::
         return
 
 MossdeepCity_TryShowJirachi::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         checkflag FLAG_CAUGHT_MEW
         goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
         checkspecies SPECIES_MEW

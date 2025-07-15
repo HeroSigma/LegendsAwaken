@@ -18,6 +18,8 @@ Route123_HideVirizion::
         return
 
 Route123_TryShowVirizion::
+        goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
+        goto_if_unset FLAG_CAUGHT_HOOPA, Common_EventScript_NopReturn
         goto_if_set FLAG_DEFEATED_VIRIZION, Common_EventScript_NopReturn
         clearflag FLAG_HIDE_VIRIZION
         return
