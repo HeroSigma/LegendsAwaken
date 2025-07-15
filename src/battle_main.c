@@ -5745,6 +5745,10 @@ static void ReturnFromBattleToOverworld(void)
                     FlagSet(FLAG_ROAMING_LEGENDS_UNLOCKED);
                 }
             }
+            else if (GetRoamerSpecies(gEncounteredRoamerIndex) == SPECIES_MESPRIT && gBattleOutcome == B_OUTCOME_CAUGHT)
+            {
+                FlagSet(FLAG_CAUGHT_MESPRIT);
+            }
     }
 
     m4aSongNumStop(SE_LOW_HEALTH);
