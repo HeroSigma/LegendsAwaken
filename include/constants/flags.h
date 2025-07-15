@@ -67,13 +67,13 @@
 #define FLAG_HIDE_NECROZMA    0x36
 #define FLAG_HIDE_TYPE_NULL   0x37
 #define FLAG_HIDE_ETERNATUS   0x38
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
+#define FLAG_HIDE_JIRACHI    0x39
+#define FLAG_HIDE_REGIDRAGO  0x3A
+#define FLAG_HIDE_REGIELEKI  0x3B
+#define FLAG_HIDE_REGIGIGAS  0x3C
+#define FLAG_HIDE_TAPU_KOKO  0x3D
+#define FLAG_HIDE_TAPU_LELE  0x3E
+#define FLAG_HIDE_TAPU_FINI  0x3F
 #define FLAG_HIDE_ZAPDOS     0x40
 #define FLAG_HIDE_MOLTRES    0x41
 #define FLAG_CAUGHT_HOOPA    0x42
@@ -681,26 +681,26 @@
 #define FLAG_CAUGHT_TYPE_NULL                                 0x27B
 #define FLAG_DEFEATED_ETERNATUS                               0x27C
 #define FLAG_CAUGHT_ETERNATUS                                 0x27D
-#define FLAG_UNUSED_0x27E                                     0x27E // Unused Flag
-#define FLAG_UNUSED_0x27F                                     0x27F // Unused Flag
-#define FLAG_UNUSED_0x280                                     0x280 // Unused Flag
-#define FLAG_UNUSED_0x281                                     0x281 // Unused Flag
-#define FLAG_UNUSED_0x282                                     0x282 // Unused Flag
-#define FLAG_UNUSED_0x283                                     0x283 // Unused Flag
-#define FLAG_UNUSED_0x284                                     0x284 // Unused Flag
-#define FLAG_UNUSED_0x285                                     0x285 // Unused Flag
-#define FLAG_UNUSED_0x286                                     0x286 // Unused Flag
-#define FLAG_UNUSED_0x287                                     0x287 // Unused Flag
-#define FLAG_UNUSED_0x288                                     0x288 // Unused Flag
-#define FLAG_UNUSED_0x289                                     0x289 // Unused Flag
-#define FLAG_UNUSED_0x28A                                     0x28A // Unused Flag
-#define FLAG_UNUSED_0x28B                                     0x28B // Unused Flag
-#define FLAG_UNUSED_0x28C                                     0x28C // Unused Flag
-#define FLAG_UNUSED_0x28D                                     0x28D // Unused Flag
+#define FLAG_DEFEATED_ZACIAN                                  0x27E
+#define FLAG_CAUGHT_ZACIAN                                    0x27F
+#define FLAG_DEFEATED_ZAMAZENTA                               0x280
+#define FLAG_CAUGHT_ZAMAZENTA                                 0x281
+#define FLAG_DEFEATED_REGIDRAGO                               0x282
+#define FLAG_CAUGHT_REGIDRAGO                                 0x283
+#define FLAG_DEFEATED_REGIELEKI                               0x284
+#define FLAG_CAUGHT_REGIELEKI                                 0x285
+#define FLAG_DEFEATED_REGIGIGAS                               0x286
+#define FLAG_CAUGHT_REGIGIGAS                                 0x287
+#define FLAG_DEFEATED_TAPU_KOKO                               0x288
+#define FLAG_CAUGHT_TAPU_KOKO                                 0x289
+#define FLAG_DEFEATED_TAPU_LELE                               0x28A
+#define FLAG_CAUGHT_TAPU_LELE                                 0x28B
+#define FLAG_DEFEATED_TAPU_FINI                               0x28C
+#define FLAG_CAUGHT_TAPU_FINI                                 0x28D
 #define FLAG_UNUSED_0x28E                                     0x28E // Unused Flag
 #define FLAG_UNUSED_0x28F  0x28F // Unused Flag
-#define FLAG_UNUSED_0x290  0x290 // Unused Flag
-#define FLAG_UNUSED_0x291  0x291 // Unused Flag
+#define FLAG_DEFEATED_JIRACHI                                 0x290
+#define FLAG_CAUGHT_JIRACHI                                   0x291
 #define FLAG_UNUSED_0x292  0x292 // Unused Flag
 #define FLAG_UNUSED_0x293  0x293 // Unused Flag
 #define FLAG_UNUSED_0x294  0x294 // Unused Flag

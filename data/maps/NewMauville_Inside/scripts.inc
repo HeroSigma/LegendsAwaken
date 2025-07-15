@@ -9,6 +9,8 @@ NewMauville_Inside_OnResume:
         call_if_eq VAR_TEMP_2, 1, NewMauville_Inside_EventScript_SetBarrierStateGreenButton
         call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_Inside_EventScript_TryRemoveVoltorb
         call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_Inside_TryRemoveZapdos
+        call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_Inside_TryRemoveRegidrago
+        call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_Inside_TryRemoveRegieleki
         end
 
 NewMauville_Inside_EventScript_TryRemoveVoltorb::
@@ -25,6 +27,10 @@ NewMauville_Inside_OnTransition:
         call_if_unset FLAG_DEFEATED_VOLTORB_3_NEW_MAUVILLE, NewMauville_Inside_EventScript_ShowVoltorb3
         call_if_set FLAG_CAUGHT_ZAPDOS, NewMauville_Inside_HideZapdos
         call_if_unset FLAG_CAUGHT_ZAPDOS, NewMauville_Inside_TryShowZapdos
+        call_if_set FLAG_CAUGHT_REGIDRAGO, NewMauville_Inside_HideRegidrago
+        call_if_unset FLAG_CAUGHT_REGIDRAGO, NewMauville_Inside_TryShowRegidrago
+        call_if_set FLAG_CAUGHT_REGIELEKI, NewMauville_Inside_HideRegieleki
+        call_if_unset FLAG_CAUGHT_REGIELEKI, NewMauville_Inside_TryShowRegieleki
         end
 
 NewMauville_Inside_EventScript_ShowVoltorb1::
@@ -290,6 +296,102 @@ NewMauville_Inside_DefeatedZapdos::
 
 NewMauville_Inside_RanFromZapdos::
         setvar VAR_0x8004, SPECIES_ZAPDOS
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+NewMauville_Inside_HideRegidrago::
+        setflag FLAG_HIDE_REGIDRAGO
+        return
+
+NewMauville_Inside_TryShowRegidrago::
+        goto_if_set FLAG_DEFEATED_REGIDRAGO, Common_EventScript_NopReturn
+        goto_if_unset FLAG_DEFEATED_REGIROCK, Common_EventScript_NopReturn
+        goto_if_unset FLAG_DEFEATED_REGICE, Common_EventScript_NopReturn
+        goto_if_unset FLAG_DEFEATED_REGISTEEL, Common_EventScript_NopReturn
+        clearflag FLAG_HIDE_REGIDRAGO
+        return
+
+NewMauville_Inside_TryRemoveRegidrago::
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+        removeobject LOCALID_NEW_MAUVILLE_REGIDRAGO
+        return
+
+NewMauville_Inside_Regidrago::
+        lock
+        faceplayer
+        waitse
+        playmoncry SPECIES_REGIDRAGO, CRY_MODE_ENCOUNTER
+        waitmoncry
+        seteventmon SPECIES_REGIDRAGO, 70
+        setflag FLAG_SYS_CTRL_OBJ_DELETE
+        special BattleSetup_StartLegendaryBattle
+        waitstate
+        clearflag FLAG_SYS_CTRL_OBJ_DELETE
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_DefeatedRegidrago
+        goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_RanFromRegidrago
+        goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_RanFromRegidrago
+        setflag FLAG_CAUGHT_REGIDRAGO
+        release
+        end
+
+NewMauville_Inside_DefeatedRegidrago::
+        setflag FLAG_DEFEATED_REGIDRAGO
+        setvar VAR_0x8004, SPECIES_REGIDRAGO
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+NewMauville_Inside_RanFromRegidrago::
+        setvar VAR_0x8004, SPECIES_REGIDRAGO
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+NewMauville_Inside_HideRegieleki::
+        setflag FLAG_HIDE_REGIELEKI
+        return
+
+NewMauville_Inside_TryShowRegieleki::
+        goto_if_set FLAG_DEFEATED_REGIELEKI, Common_EventScript_NopReturn
+        goto_if_unset FLAG_DEFEATED_REGIROCK, Common_EventScript_NopReturn
+        goto_if_unset FLAG_DEFEATED_REGICE, Common_EventScript_NopReturn
+        goto_if_unset FLAG_DEFEATED_REGISTEEL, Common_EventScript_NopReturn
+        clearflag FLAG_HIDE_REGIELEKI
+        return
+
+NewMauville_Inside_TryRemoveRegieleki::
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+        removeobject LOCALID_NEW_MAUVILLE_REGIELEKI
+        return
+
+NewMauville_Inside_Regieleki::
+        lock
+        faceplayer
+        waitse
+        playmoncry SPECIES_REGIELEKI, CRY_MODE_ENCOUNTER
+        waitmoncry
+        seteventmon SPECIES_REGIELEKI, 70
+        setflag FLAG_SYS_CTRL_OBJ_DELETE
+        special BattleSetup_StartLegendaryBattle
+        waitstate
+        clearflag FLAG_SYS_CTRL_OBJ_DELETE
+        specialvar VAR_RESULT, GetBattleOutcome
+        goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_DefeatedRegieleki
+        goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_RanFromRegieleki
+        goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_RanFromRegieleki
+        setflag FLAG_CAUGHT_REGIELEKI
+        release
+        end
+
+NewMauville_Inside_DefeatedRegieleki::
+        setflag FLAG_DEFEATED_REGIELEKI
+        setvar VAR_0x8004, SPECIES_REGIELEKI
+        goto Common_EventScript_LegendaryFlewAway
+        end
+
+NewMauville_Inside_RanFromRegieleki::
+        setvar VAR_0x8004, SPECIES_REGIELEKI
         goto Common_EventScript_LegendaryFlewAway
         end
 
