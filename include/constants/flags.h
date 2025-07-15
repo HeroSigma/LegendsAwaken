@@ -74,8 +74,8 @@
 #define FLAG_UNUSED_0x03D    0x3D // Unused Flag
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
+#define FLAG_HIDE_ZAPDOS     0x40
+#define FLAG_HIDE_MOLTRES    0x41
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
@@ -517,10 +517,10 @@
 
 #define FLAG_DEFEATED_ARTICUNO               0x1DE
 #define FLAG_CAUGHT_ARTICUNO                 0x1DF
-#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
-#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
-#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_DEFEATED_ZAPDOS                 0x1E0
+#define FLAG_CAUGHT_ZAPDOS                   0x1E1
+#define FLAG_DEFEATED_MOLTRES                0x1E2
+#define FLAG_CAUGHT_MOLTRES                  0x1E3
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
