@@ -549,8 +549,8 @@ void HandleAction_UseMove(void)
     }
     else
     {
-        TryLegendPlateJudgmentTypeChange();
         gBattlescriptCurrInstr = GetMoveBattleScript(gCurrentMove);
+        TryLegendPlateJudgmentTypeChange();
     }
 
     if (gBattleTypeFlags & BATTLE_TYPE_ARENA)
@@ -2891,6 +2891,28 @@ bool32 ChangeTypeBasedOnTerrain(u32 battler)
     return TRUE;
 }
 
+static const u16 sArceusFormsByType[NUMBER_OF_MON_TYPES] =
+{
+    [TYPE_NORMAL]   = SPECIES_ARCEUS_NORMAL,
+    [TYPE_FIGHTING] = SPECIES_ARCEUS_FIGHTING,
+    [TYPE_FLYING]   = SPECIES_ARCEUS_FLYING,
+    [TYPE_POISON]   = SPECIES_ARCEUS_POISON,
+    [TYPE_GROUND]   = SPECIES_ARCEUS_GROUND,
+    [TYPE_ROCK]     = SPECIES_ARCEUS_ROCK,
+    [TYPE_BUG]      = SPECIES_ARCEUS_BUG,
+    [TYPE_GHOST]    = SPECIES_ARCEUS_GHOST,
+    [TYPE_STEEL]    = SPECIES_ARCEUS_STEEL,
+    [TYPE_FIRE]     = SPECIES_ARCEUS_FIRE,
+    [TYPE_WATER]    = SPECIES_ARCEUS_WATER,
+    [TYPE_GRASS]    = SPECIES_ARCEUS_GRASS,
+    [TYPE_ELECTRIC] = SPECIES_ARCEUS_ELECTRIC,
+    [TYPE_PSYCHIC]  = SPECIES_ARCEUS_PSYCHIC,
+    [TYPE_ICE]      = SPECIES_ARCEUS_ICE,
+    [TYPE_DRAGON]   = SPECIES_ARCEUS_DRAGON,
+    [TYPE_DARK]     = SPECIES_ARCEUS_DARK,
+    [TYPE_FAIRY]    = SPECIES_ARCEUS_FAIRY,
+};
+
 static void TryLegendPlateJudgmentTypeChange(void)
 {
     if (gCurrentMove != MOVE_JUDGMENT)
@@ -2905,11 +2927,12 @@ static void TryLegendPlateJudgmentTypeChange(void)
     if (!IsBattlerAlive(gBattlerTarget))
         return;
 
-    uq4_12_t currentMult = CalcTypeEffectivenessMultiplierHelper(MOVE_JUDGMENT, TYPE_NORMAL,
+    u8 currentType = gBattleMons[gBattlerAttacker].types[0];
+    uq4_12_t currentMult = CalcTypeEffectivenessMultiplierHelper(MOVE_JUDGMENT, currentType,
                                                                 gBattlerAttacker, gBattlerTarget,
                                                                 GetBattlerAbility(gBattlerTarget), FALSE);
     uq4_12_t bestMult = currentMult;
-    u8 bestType = TYPE_NORMAL;
+    u8 bestType = currentType;
 
     for (u8 type = 0; type < NUMBER_OF_MON_TYPES; type++)
     {
@@ -2925,14 +2948,26 @@ static void TryLegendPlateJudgmentTypeChange(void)
         }
     }
 
-    if (bestType != TYPE_NORMAL && bestMult > currentMult)
+    if (bestType != currentType && bestMult >= UQ_4_12(2.0))
     {
+        u32 monId = gBattlerPartyIndexes[gBattlerAttacker];
+        u32 side = GetBattlerSide(gBattlerAttacker);
+        struct Pokemon *party = GetBattlerParty(gBattlerAttacker);
+        u16 targetSpecies = sArceusFormsByType[bestType];
+
+        if (gBattleStruct->changedSpecies[side][monId] == SPECIES_NONE)
+            gBattleStruct->changedSpecies[side][monId] = gBattleMons[gBattlerAttacker].species;
+
+        gBattleMons[gBattlerAttacker].species = targetSpecies;
+        SetMonData(&party[monId], MON_DATA_SPECIES, &targetSpecies);
+        RecalcBattlerStats(gBattlerAttacker, &party[monId], FALSE);
         SET_BATTLER_TYPE(gBattlerAttacker, bestType);
         gBattleStruct->dynamicMoveType = bestType | F_DYNAMIC_TYPE_SET;
+        BattleScriptCall(BattleScript_AttackerFormChange);
     }
     else
     {
-        gBattleStruct->dynamicMoveType = TYPE_NORMAL | F_DYNAMIC_TYPE_SET;
+        gBattleStruct->dynamicMoveType = currentType | F_DYNAMIC_TYPE_SET;
     }
 }
 
