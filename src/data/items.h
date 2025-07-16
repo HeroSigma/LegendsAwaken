@@ -14213,4 +14213,44 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_IvReducerSpe,
         .iconPalette = gItemIconPalette_IvReducer,
     },
+
+    [ITEM_HOPO_BERRY] =
+    {
+        .name = _("Hopo Berry"),
+        .pluralName = _("Hopo Berries"),
+        .price = 80,
+        .holdEffect = HOLD_EFFECT_RESTORE_PP,
+        .holdEffectParam = 10,
+        .description = COMPOUND_STRING(
+            "A hold item that\n"
+            "restores 10 PP in\n"
+            "battle."),
+        .pocket = POCKET_BERRIES,
+        .type = ITEM_USE_PARTY_MENU_MOVES,
+        .fieldUseFunc = ItemUseOutOfBattle_PPRecovery,
+        .battleUsage = EFFECT_ITEM_RESTORE_PP,
+        .effect = gItemEffect_HopoBerry,
+        .flingPower = 10,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
+
+    [ITEM_LEGEND_PLATE] =
+    {
+        .name = _("Legend Plate"),
+        .price = 1000,
+        .holdEffect = HOLD_EFFECT_PLATE,
+        .holdEffectParam = 20,
+        .description = COMPOUND_STRING(
+            "A stone tablet that\n"
+            "radiates every type\n"
+            "of energy."),
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_STELLAR,
+        .flingPower = 90,
+        .iconPic = gItemIcon_QuestionMark,
+        .iconPalette = gItemIconPalette_QuestionMark,
+    },
 };

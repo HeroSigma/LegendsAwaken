@@ -399,6 +399,11 @@ const u8 gItemEffect_LeppaBerry[7] = {
     [6] = 10, // Amount of PP to recover
 };
 
+const u8 gItemEffect_HopoBerry[7] = {
+    [4] = ITEM4_HEAL_PP_ONE | ITEM4_HEAL_PP,
+    [6] = 10, // Amount of PP to recover
+};
+
 const u8 gItemEffect_OranBerry[7] = {
     [4] = ITEM4_HEAL_HP,
     [6] = 10, // Amount of HP to recover
