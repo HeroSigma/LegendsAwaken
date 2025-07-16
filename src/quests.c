@@ -467,9 +467,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
               gText_SideQuestDesc_1,
               gText_SideQuestDoneDesc_1,
               gText_SideQuestMap1,
-
-              SPECIES_HOOPA,
-              PKMN,
+              OBJ_EVENT_GFX_STEVEN,
+              OBJECT,
               sSubQuests1,
               QUEST_1_SUB_COUNT
         ),
@@ -478,7 +477,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_2,
 	      gText_SideQuestDoneDesc_2,
 	      gText_SideQuestMap2,
-              SPECIES_MEW,
+              SPECIES_HOOPA,
               PKMN,
               sSubQuests2,
               QUEST_2_SUB_COUNT
@@ -488,8 +487,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_3,
 	      gText_SideQuestDoneDesc_3,
 	      gText_SideQuestMap3,
-              SPECIES_MEWTWO,
-              PKMN,
+          OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJECT,
               NULL,
               0
 	),
@@ -498,8 +497,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_4,
 	      gText_SideQuestDoneDesc_4,
 	      gText_SideQuestMap4,
-	      SPECIES_CELEBI,
-	      PKMN,
+	      OBJ_EVENT_GFX_WALLY,
+	      OBJECT,
 	      NULL,
 	      0
 	),
@@ -508,7 +507,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_5,
 	      gText_SideQuestDoneDesc_5,
 	      gText_SideQuestMap5,
-	      SPECIES_UXIE,
+	      SPECIES_CELEBI,
 	      PKMN,
 	      NULL,
 	      0
@@ -518,7 +517,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_6,
 	      gText_SideQuestDoneDesc_6,
 	      gText_SideQuestMap6,
-	      SPECIES_MESPRIT,
+	      SPECIES_SOLGALEO,
 	      PKMN,
 	      NULL,
 	      0
@@ -528,7 +527,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_7,
 	      gText_SideQuestDoneDesc_7,
 	      gText_SideQuestMap7,
-	      SPECIES_AZELF,
+	      SPECIES_VICTINI,
 	      PKMN,
 	      NULL,
 	      0
@@ -538,7 +537,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_8,
 	      gText_SideQuestDoneDesc_8,
 	      gText_SideQuestMap8,
-	      SPECIES_DIALGA,
+	      SPECIES_TERAPAGOS,
 	      PKMN,
 	      NULL,
 	      0
@@ -548,7 +547,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_9,
 	      gText_SideQuestDoneDesc_9,
 	      gText_SideQuestMap9,
-	      SPECIES_PALKIA,
+	      SPECIES_RAYQUAZA,
 	      PKMN,
 	      NULL,
 	      0
@@ -558,7 +557,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_10,
 	      gText_SideQuestDoneDesc_10,
 	      gText_SideQuestMap10,
-	      SPECIES_GIRATINA,
+	      SPECIES_EEVEE,
 	      PKMN,
 	      NULL,
 	      0
@@ -568,8 +567,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_11,
 	      gText_SideQuestDoneDesc_11,
 	      gText_SideQuestMap11,
-	      SPECIES_ARCEUS,
-	      PKMN,
+	      OBJ_EVENT_GFX_NORMAN,
+	      OBJECT,
 	      NULL,
 	      0
 	),
@@ -578,7 +577,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_12,
 	      gText_SideQuestDoneDesc_12,
 	      gText_SideQuestMap12,
-	      SPECIES_ZEKROM,
+	      SPECIES_MEOWTH,
 	      PKMN,
 	      NULL,
 	      0
@@ -588,8 +587,8 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_13,
 	      gText_SideQuestDoneDesc_13,
 	      gText_SideQuestMap13,
-	      SPECIES_RESHIRAM,
-	      PKMN,
+	      OBJ_EVENT_GFX_MOM,
+	      OBJECT,
 	      NULL,
 	      0
 	),
@@ -598,7 +597,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_14,
 	      gText_SideQuestDoneDesc_14,
 	      gText_SideQuestMap14,
-	      SPECIES_KYUREM,
+	      SPECIES_GREEDENT,
 	      PKMN,
 	      NULL,
 	      0
@@ -608,7 +607,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      gText_SideQuestDesc_15,
 	      gText_SideQuestDoneDesc_15,
 	      gText_SideQuestMap15,
-	      SPECIES_KELDEO,
+	      SPECIES_AERODACTYL,
 	      PKMN,
 	      NULL,
 	      0
