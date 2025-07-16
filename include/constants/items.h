@@ -1010,10 +1010,10 @@
 #define ITEM_IVREDUCER_SPDEF 839
 #define ITEM_IVREDUCER_SPEED 840
 
-// HOPO BERRY
-// LEGEND PLATE
+#define ITEM_HOPO_BERRY 841
+#define ITEM_LEGEND_PLATE 842
 
-#define ITEMS_COUNT 841
+#define ITEMS_COUNT 843
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
