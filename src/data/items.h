@@ -14250,7 +14250,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = TYPE_STELLAR,
         .flingPower = 90,
-        .iconPic = gItemIcon_QuestionMark,
-        .iconPalette = gItemIconPalette_QuestionMark,
+        .iconPic = gItemIcon_LegendPlate,
+        .iconPalette = gItemIconPalette_LegendPlate,
     },
 };
