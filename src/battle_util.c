@@ -548,6 +548,7 @@ void HandleAction_UseMove(void)
     }
     else
     {
+        TryLegendPlateJudgmentTypeChange();
         gBattlescriptCurrInstr = GetMoveBattleScript(gCurrentMove);
     }
 
@@ -2887,6 +2888,51 @@ bool32 ChangeTypeBasedOnTerrain(u32 battler)
     SET_BATTLER_TYPE(battler, battlerType);
     PREPARE_TYPE_BUFFER(gBattleTextBuff1, battlerType);
     return TRUE;
+}
+
+static void TryLegendPlateJudgmentTypeChange(void)
+{
+    if (gCurrentMove != MOVE_JUDGMENT)
+        return;
+
+    if (gBattleMons[gBattlerAttacker].item != ITEM_LEGEND_PLATE)
+        return;
+
+    if (GET_BASE_SPECIES_ID(gBattleMons[gBattlerAttacker].species) != SPECIES_ARCEUS)
+        return;
+
+    if (!IsBattlerAlive(gBattlerTarget))
+        return;
+
+    uq4_12_t currentMult = CalcTypeEffectivenessMultiplierHelper(MOVE_JUDGMENT, TYPE_NORMAL,
+                                                                gBattlerAttacker, gBattlerTarget,
+                                                                GetBattlerAbility(gBattlerTarget), FALSE);
+    uq4_12_t bestMult = currentMult;
+    u8 bestType = TYPE_NORMAL;
+
+    for (u8 type = 0; type < NUMBER_OF_MON_TYPES; type++)
+    {
+        if (type == TYPE_MYSTERY || type == TYPE_STELLAR)
+            continue;
+        uq4_12_t mult = CalcTypeEffectivenessMultiplierHelper(MOVE_JUDGMENT, type,
+                                                              gBattlerAttacker, gBattlerTarget,
+                                                              GetBattlerAbility(gBattlerTarget), FALSE);
+        if (mult > bestMult && mult >= UQ_4_12(2.0))
+        {
+            bestMult = mult;
+            bestType = type;
+        }
+    }
+
+    if (bestType != TYPE_NORMAL && bestMult > currentMult)
+    {
+        SET_BATTLER_TYPE(gBattlerAttacker, bestType);
+        gBattleStruct->dynamicMoveType = bestType | F_DYNAMIC_TYPE_SET;
+    }
+    else
+    {
+        gBattleStruct->dynamicMoveType = TYPE_NORMAL | F_DYNAMIC_TYPE_SET;
+    }
 }
 
 static inline u8 GetSideFaintCounter(u32 side)
