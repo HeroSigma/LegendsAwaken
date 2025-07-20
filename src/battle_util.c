@@ -3003,6 +3003,7 @@ bool32 HadMoreThanHalfHpNowDoesnt(u32 battler)
 #define ANIM_STAT_SPEED   5
 #define ANIM_STAT_ACC     6
 #define ANIM_STAT_EVASION 7
+
 static void ChooseStatBoostAnimation(u32 battler)
 {
     u32 stat;
