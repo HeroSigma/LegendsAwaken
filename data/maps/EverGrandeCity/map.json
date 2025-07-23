@@ -20,6 +20,7 @@
     }
   ],
   "object_events": [
+<<<<<<< HEAD
     {
       "local_id": "LOCALID_EVER_GRANDE_KELDEO",
       "graphics_id": "OBJ_EVENT_GFX_KELDEO",
@@ -34,6 +35,9 @@
       "script": "EverGrandeCity_Keldeo",
       "flag": "FLAG_HIDE_KELDEO"
     }
+=======
+
+>>>>>>> ibs/master
   ],
   "warp_events": [
     {
