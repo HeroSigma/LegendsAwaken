@@ -397,25 +397,6 @@ static void HandleInputChooseAction(u32 battler)
                 ActionSelectionCreateCursorAt(gActionSelectionCursor[battler], 0);
             }
         }
-        else if(!(gBattleTypeFlags & BATTLE_TYPE_TRAINER))
-        {
-            PlaySE(SE_SELECT);
-
-            // Auto jump to run option
-            switch (gActionSelectionCursor[battler])
-            {
-            case 3: // Bottom right
-                BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_RUN, 0);
-                PlayerBufferExecCompleted(battler);
-                break;
-
-            default: // Bottom left
-                ActionSelectionDestroyCursorAt(gActionSelectionCursor[battler]);
-                gActionSelectionCursor[battler] = 3;
-                ActionSelectionCreateCursorAt(gActionSelectionCursor[battler], 0);
-                break;
-            }
-        }
     }
     else if (JOY_NEW(START_BUTTON))
     {
