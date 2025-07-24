@@ -96,6 +96,7 @@ gSpecialVars::
 	.4byte gSpecialVar_Unused_0x8014
 	.4byte gTrainerBattleParameter + 2 // gTrainerBattleParameter.params.opponentA
 
+
 	.include "data/specials.inc"
 
 gStdScripts::
