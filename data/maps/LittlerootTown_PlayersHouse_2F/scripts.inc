@@ -95,4 +95,4 @@ PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
         .string "Everything's put away neatly.\n"
         .string "They finished moving everything\n"
         .string "in downstairs, too!\p"
-        .string "POK\xe9MON movers are so convenient!$"
+        .string "POKEMON movers are so convenient!$"
