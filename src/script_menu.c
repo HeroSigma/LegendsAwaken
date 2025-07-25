@@ -1560,11 +1560,7 @@ static void CreateSeviiSSTidalMultichoice(void)
 {
     u8 selectionCount = 0;
     u8 count;
-    u32 pixelWidth;
-    u8 width;
-    u8 windowId;
     u8 i;
-    u32 j;
 
     for (i = 0; i < SSTIDAL_SELECTION_COUNT_S; i++)
     {
