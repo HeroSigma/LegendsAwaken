@@ -1675,7 +1675,7 @@
 #define FLAG_VISITED_SIX_ISLAND               0x6012
 #define FLAG_VISITED_THREE_ISLAND             0x6013
 #define FLAG_VISITED_TWO_ISLAND               0x6014
-#define FLAG_VISITED_VERMILION_CIT            0x6015
+#define FLAG_VISITED_VERMILION_CITY           0x6015
 #define FLAG_VISITED_VIOLET_CITY              0x6016
 #define FLAG_VISITED_VIRIDIAN_CITY            0x6017
 #define FLAG_VISITED_PALLET_TOWN              0x6018
