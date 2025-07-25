@@ -2667,3 +2667,7 @@ static void CB_ExitFlyMap(void)
 void SetMapGraphics(u8 mapNum) {
     mapNumber = mapNum;
 }
+
+void SetFieldMapNumber(u8 mapNum) {
+    mapNumber = mapNum;
+}

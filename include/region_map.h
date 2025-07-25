@@ -117,6 +117,8 @@ void BlendRegionMap(u16 color, u32 coeff);
 void SetRegionMapDataForZoom(void);
 void CreateRoamerIcons(void);
 void FreeRoamerIcons(void);
+void SetMapGraphics(u8 mapNum);
+void SetFieldMapNumber(u8 mapNum);
 
 //Pokenav Fly funcs
 u32 FilterFlyDestination(struct RegionMap* regionMap);

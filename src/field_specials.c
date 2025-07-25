@@ -33,6 +33,7 @@
 #include "pokeblock.h"
 #include "pokedex.h"
 #include "pokemon.h"
+#include "move.h"
 #include "pokemon_storage_system.h"
 #include "random.h"
 #include "rayquaza_scene.h"
@@ -91,7 +92,6 @@ static EWRAM_DATA u8 sTutorMoveAndElevatorWindowId = 0;
 static EWRAM_DATA u16 sLilycoveDeptStore_NeverRead = 0;
 static EWRAM_DATA u16 sLilycoveDeptStore_DefaultFloorChoice = 0;
 static EWRAM_DATA struct ListMenuItem *sScrollableMultichoice_ListMenuItem = NULL;
-static EWRAM_DATA u16 sScrollableMultichoice_ScrollOffset = 0;
 static EWRAM_DATA u16 sFrontierExchangeCorner_NeverRead = 0;
 static EWRAM_DATA u8 sScrollableMultichoice_ItemSpriteId = 0;
 static EWRAM_DATA u8 sBattlePointsWindowId = 0;
@@ -1712,7 +1712,7 @@ bool8 BufferTMHMMoveName(void)
 {
     if (gSpecialVar_0x8004 >= ITEM_TM01 && gSpecialVar_0x8004 <= ITEM_HM08)
     {
-        StringCopy(gStringVar2, gMoveNames[ItemIdToBattleMoveId(gSpecialVar_0x8004)]);
+        StringCopy(gStringVar2, GetMoveName(ItemIdToBattleMoveId(gSpecialVar_0x8004)));
         return TRUE;
     }
 
@@ -2485,17 +2485,7 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
-    case SCROLL_MULTI_BATTLE_TENT_RULES:
-	    task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 7;
-        task->tLeft = 17;
-        task->tTop = 1;
-        task->tWidth = 12;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-	case SCROLL_MULTI_TERA_TYPES_PAGE1:
+        case SCROLL_MULTI_TERA_TYPES_PAGE1:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
         task->tNumItems = 10; // 9 types + Next
         task->tLeft = 15;
@@ -3184,34 +3174,6 @@ void SetBattleTowerLinkPlayerGfx(void)
 
 void ShowNatureGirlMessage(void)
 {
-    static const u8 *const sNatureGirlMessages[NUM_NATURES] = {
-        [NATURE_HARDY]   = BattleFrontier_Lounge5_Text_NatureGirlHardy,
-        [NATURE_LONELY]  = BattleFrontier_Lounge5_Text_NatureGirlLonely,
-        [NATURE_BRAVE]   = BattleFrontier_Lounge5_Text_NatureGirlBrave,
-        [NATURE_ADAMANT] = BattleFrontier_Lounge5_Text_NatureGirlAdamant,
-        [NATURE_NAUGHTY] = BattleFrontier_Lounge5_Text_NatureGirlNaughty,
-        [NATURE_BOLD]    = BattleFrontier_Lounge5_Text_NatureGirlBold,
-        [NATURE_DOCILE]  = BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky,
-        [NATURE_RELAXED] = BattleFrontier_Lounge5_Text_NatureGirlRelaxed,
-        [NATURE_IMPISH]  = BattleFrontier_Lounge5_Text_NatureGirlImpish,
-        [NATURE_LAX]     = BattleFrontier_Lounge5_Text_NatureGirlLax,
-        [NATURE_TIMID]   = BattleFrontier_Lounge5_Text_NatureGirlTimid,
-        [NATURE_HASTY]   = BattleFrontier_Lounge5_Text_NatureGirlHasty,
-        [NATURE_SERIOUS] = BattleFrontier_Lounge5_Text_NatureGirlSerious,
-        [NATURE_JOLLY]   = BattleFrontier_Lounge5_Text_NatureGirlJolly,
-        [NATURE_NAIVE]   = BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky,
-        [NATURE_MODEST]  = BattleFrontier_Lounge5_Text_NatureGirlModest,
-        [NATURE_MILD]    = BattleFrontier_Lounge5_Text_NatureGirlMild,
-        [NATURE_QUIET]   = BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky,
-        [NATURE_BASHFUL] = BattleFrontier_Lounge5_Text_NatureGirlBashful,
-        [NATURE_RASH]    = BattleFrontier_Lounge5_Text_NatureGirlRash,
-        [NATURE_CALM]    = BattleFrontier_Lounge5_Text_NatureGirlCalm,
-        [NATURE_GENTLE]  = BattleFrontier_Lounge5_Text_NatureGirlGentle,
-        [NATURE_SASSY]   = BattleFrontier_Lounge5_Text_NatureGirlSassy,
-        [NATURE_CAREFUL] = BattleFrontier_Lounge5_Text_NatureGirlCareful,
-        [NATURE_QUIRKY]  = BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky,
-    };
-
     u8 nature;
 
     if (gSpecialVar_0x8004 >= PARTY_SIZE)
@@ -3494,11 +3456,10 @@ static const u16 sBattleFrontier_TutorMoves2[] =
 
 void BufferBattleFrontierTutorMoveName(void)
 {
-	StringCopy(gStringVar1, GetMoveName(gSpecialVar_0x8005));
     if (gSpecialVar_0x8005 != 0)
-        StringCopy(gStringVar1, gMoveNames[sBattleFrontier_TutorMoves2[gSpecialVar_0x8004]]);
+        StringCopy(gStringVar1, GetMoveName(sBattleFrontier_TutorMoves2[gSpecialVar_0x8004]));
     else
-        StringCopy(gStringVar1, gMoveNames[sBattleFrontier_TutorMoves1[gSpecialVar_0x8004]]);
+        StringCopy(gStringVar1, GetMoveName(sBattleFrontier_TutorMoves1[gSpecialVar_0x8004]));
 }
 
 static void ShowBattleFrontierTutorWindow(u8 menu, u16 selection)
@@ -3606,29 +3567,25 @@ void GetBattleFrontierTutorMoveIndex(void)
 
     if (moveTutor != 0)
     {
-        i = 0;
-        do
+        for (i = 0; gTutorMoves[i] != MOVE_UNAVAILABLE; i++)
         {
             if (gTutorMoves[i] == sBattleFrontier_TutorMoves2[moveIndex])
             {
                 gSpecialVar_0x8005 = i;
                 break;
             }
-            i++;
-        } while (i < TUTOR_MOVE_COUNT);
+        }
     }
     else
     {
-        i = 0;
-        do
+        for (i = 0; gTutorMoves[i] != MOVE_UNAVAILABLE; i++)
         {
             if (gTutorMoves[i] == sBattleFrontier_TutorMoves1[moveIndex])
             {
                 gSpecialVar_0x8005 = i;
                 break;
             }
-            i++;
-        } while (i < TUTOR_MOVE_COUNT);
+        }
     }
 }
 

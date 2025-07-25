@@ -512,11 +512,21 @@ extern const u8 gText_RankingHall[];
 extern const u8 gText_ExchangeService[];
 
 extern const u8 gText_SlateportCity[];
+extern const u8 gText_VermilionCity[];
+extern const u8 gText_OlivineCity[];
+extern const u8 gText_Sevii[];
 extern const u8 gText_BattleFrontier[];
 extern const u8 gText_SouthernIsland[];
 extern const u8 gText_NavelRock[];
 extern const u8 gText_BirthIsland[];
 extern const u8 gText_FarawayIsland[];
+extern const u8 gText_Sevii1[];
+extern const u8 gText_Sevii2[];
+extern const u8 gText_Sevii3[];
+extern const u8 gText_Sevii4[];
+extern const u8 gText_Sevii5[];
+extern const u8 gText_Sevii6[];
+extern const u8 gText_Sevii7[];
 
 extern const u8 gText_BattleTrainers[];
 extern const u8 gText_BattleBasics[];
