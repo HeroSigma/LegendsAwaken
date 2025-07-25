@@ -1022,6 +1022,7 @@ static bool8 IsPlayerInFrontOfPC(void)
     tileInFront = MapGridGetMetatileIdAt(x, y);
 
     return IsBuildingPCTile(tileInFront) || IsPlayerHousePCTile(tileInFront);
+}
 
 void FieldShowRegionMapKanto(void)
 {
