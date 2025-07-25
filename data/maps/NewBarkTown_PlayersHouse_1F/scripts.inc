@@ -201,12 +201,32 @@ NewBarkTown_PlayersHouse_1F_Movement_MomLeave:
 	step_end
 
 NewBarkTown_PlayersHouse_1F_Text_AlmostForgot:
-	.string "I almost forgot!\p"
-	.string "I spoke to a man named Professor Elm\n"
-	.string "here in New Bark Town earlier today.\p" 
-	.string "He wants you to visit him in his lab,\n"
-	.string "please go and see him!\p"
-	.string "Bye {PLAYER}!$"
+        .string "I almost forgot!\p"
+        .string "I spoke to a man named Professor Elm\n"
+        .string "here in New Bark Town earlier today.\p"
+        .string "He wants you to visit him in his lab,\n"
+        .string "please go and see him!\p"
+        .string "Bye {PLAYER}!$"
+
+PlayersHouse_1F_Text_PlayerReceivedPichu:
+        .string "{PLAYER} received PICHU!$"
+
+PlayersHouse_1F_Text_ThingsMovedOut:
+        .string "MOM: All of our things are finally\n"
+        .string "moved in.\p"
+        .string "It feels like everything is ready\n"
+        .string "for you to begin your journey.$"
+
+PlayersHouse_1F_Text_StartYourAdventure:
+        .string "MOM: It's time to start your very own\n"
+        .string "adventure, {PLAYER}!\p"
+        .string "Go make friends and discover new\n"
+        .string "POK\xe9MON!$"
+
+PlayersHouse_1F_Text_TakeCareOfHouse:
+        .string "MOM: Take care of the house while\n"
+        .string "I'm away, okay?\p"
+        .string "I'll be thinking of you!$"
 
 NewBarkTown_PlayersHouse_1F_Text_MaybeDadWillBeOn:
 	.string "MOM: Look! It's Violet City Gym!\n"
