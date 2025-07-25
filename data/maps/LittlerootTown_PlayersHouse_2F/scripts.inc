@@ -86,6 +86,13 @@ Common_Text_LookCloserAtMapSevii:
 	.string "SEVII ISLES map.$"
 
 PlayersHouse_2F_Text_ItsAGameCube:
-	.string "It's a Nintendo GameCube.\p"
-	.string "A Game Boy Advance is connected to\n"
-	.string "serve as the Controller.$"
+        .string "It's a Nintendo GameCube.\p"
+        .string "A Game Boy Advance is connected to\n"
+        .string "serve as the Controller.$"
+
+PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
+        .string "MOM: How do you like your room?\p"
+        .string "Everything's put away neatly.\n"
+        .string "They finished moving everything\n"
+        .string "in downstairs, too!\p"
+        .string "POK\xe9MON movers are so convenient!$"
