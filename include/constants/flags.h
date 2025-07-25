@@ -1666,7 +1666,7 @@
 #define FLAG_UNUSED_0X6009         			  0x6009
 #define FLAG_UNUSED_0X600A        			  0x600A
 #define FLAG_UNUSED_0X600B       			  0x600B
-#define FLAG_UNUSED_0X600B         			  0x600C
+#define FLAG_UNUSED_0X600C         			  0x600C
 #define FLAG_UNUSED_0X600D         			  0x600D
 #define FLAG_UNUSED_0X600E        			  0x600E
 #define FLAG_UNUSED_0X600F			          0x600F
