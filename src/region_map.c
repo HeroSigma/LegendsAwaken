@@ -304,6 +304,9 @@ static const u32 sRegionMapFrameGfxLZ[] = INCBIN_U32("graphics/pokenav/region_ma
 static const u32 sRegionMapFrameTilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/frame.bin.lz");
 static const u16 sFlyTargetIcons_Pal[] = INCBIN_U16("graphics/pokenav/region_map/fly_target_icons.gbapal");
 static const u32 sFlyTargetIcons_Gfx[] = INCBIN_U32("graphics/pokenav/region_map/fly_target_icons.4bpp.lz");
+static const u16 sRoamerIcon_Pal[] = INCBIN_U16("graphics/pokedex/area_marker.gbapal");
+static const u8 sRoamerIcon_Tiles[] = INCBIN_U8("graphics/pokedex/area_marker.4bpp");
+
 
 static const u8 sMapHealLocations[][3] =
 {
