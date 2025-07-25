@@ -221,7 +221,7 @@ NewBarkTown_PlayersHouse_1F_Text_StartYourAdventure:
         .string "MOM: It's time to start your very own\n"
         .string "adventure, {PLAYER}!\p"
         .string "Go make friends and discover new\n"
-        .string "POKéMON!$"
+        .string "POKEMON!$"
 
 NewBarkTown_PlayersHouse_1F_Text_TakeCareOfHouse_Away:
         .string "MOM: Take care of the house while\n"
