@@ -192,24 +192,21 @@
       "map": "MAP_ROUTE4",
       "x": 12,
       "y": 5,
-      "respawn_map": "MAP_ROUTE4_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_NURSE"
+      "respawn_map": "MAP_ROUTE4_POKEMON_CENTER_1F"
     },
     {
       "id": "HEAL_LOCATION_ROUTE10",
       "map": "MAP_ROUTE10",
       "x": 13,
       "y": 20,
-      "respawn_map": "MAP_ROUTE10_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_NURSE"
+      "respawn_map": "MAP_ROUTE10_POKEMON_CENTER_1F"
     },
     {
       "id": "HEAL_LOCATION_ROUTE32",
       "map": "MAP_ROUTE32",
       "x": 17,
       "y": 99,
-      "respawn_map": "MAP_ROUTE32_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_NURSE"
+      "respawn_map": "MAP_ROUTE32_POKEMON_CENTER_1F"
     },
 	{
       "id": "HEAL_LOCATION_PALLET_TOWN",
@@ -288,7 +285,7 @@
       "map": "MAP_NEW_BARK_TOWN",
       "x": 8,
       "y": 6,
-      "respawn_map": "MAP_NEW_BARK_TOWN_POKEMON_CENTER_1F"
+      "respawn_map": "MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_1F"
     },
     {
       "id": "HEAL_LOCATION_CHERRYGROVE_CITY",
