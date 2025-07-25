@@ -671,5 +671,20 @@ PlayersHouse_1F_Movement_PlayerApproachTVForLatiFemale:
 	step_end
 
 EventScript_RunningShoesManual::
-	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
-	end
+        msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
+        end
+
+PlayersHouse_1F_Movement_MomMakeRoomToSeeTV:
+        walk_left
+        walk_in_place_faster_right
+        step_end
+
+PlayersHouse_1F_Movement_PlayerMoveToTV:
+        walk_left
+        step_end
+
+PlayersHouse_1F_Movement_MomLeave:
+        walk_down
+        walk_left
+        walk_in_place_faster_down
+        step_end
