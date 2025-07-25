@@ -91,7 +91,7 @@ static EWRAM_DATA u8 sTutorMoveAndElevatorWindowId = 0;
 static EWRAM_DATA u16 sLilycoveDeptStore_NeverRead = 0;
 static EWRAM_DATA u16 sLilycoveDeptStore_DefaultFloorChoice = 0;
 static EWRAM_DATA struct ListMenuItem *sScrollableMultichoice_ListMenuItem = NULL;
-
+static EWRAM_DATA u16 sScrollableMultichoice_ScrollOffset = 0;
 static EWRAM_DATA u16 sFrontierExchangeCorner_NeverRead = 0;
 static EWRAM_DATA u8 sScrollableMultichoice_ItemSpriteId = 0;
 static EWRAM_DATA u8 sBattlePointsWindowId = 0;
@@ -532,7 +532,7 @@ void SpawnLinkPartnerObjectEvent(void)
     };
     u8 myLinkPlayerNumber;
     u8 playerFacingDirection;
-    u8 linkSpriteId;
+    u16 linkSpriteId;
     u8 i;
 
     myLinkPlayerNumber = GetMultiplayerId();
@@ -586,6 +586,7 @@ void SpawnLinkPartnerObjectEvent(void)
             }
             SpawnSpecialObjectEventParameterized(linkSpriteId, movementTypes[j], LOCALID_BERRY_BLENDER_PLAYER_END - i, coordOffsets[j][0] + x + MAP_OFFSET, coordOffsets[j][1] + y + MAP_OFFSET, 0);
             LoadLinkPartnerObjectEventSpritePalette(linkSpriteId, LOCALID_BERRY_BLENDER_PLAYER_END - i, i);
+            LoadLinkPartnerObjectEventSpritePalette(linkSpriteId, 240 - i, i);
             j++;
             if (j == MAX_LINK_PLAYERS)
                 j = 0;
@@ -969,7 +970,21 @@ u16 GetWeekCount(void)
 
 u8 GetLeadMonFriendshipScore(void)
 {
-    return GetMonFriendshipScore(&gPlayerParty[GetLeadMonIndex()]);
+    struct Pokemon *pokemon = &gPlayerParty[GetLeadMonIndex()];
+    if (GetMonData(pokemon, MON_DATA_FRIENDSHIP) == MAX_FRIENDSHIP)
+        return FRIENDSHIP_MAX;
+    if (GetMonData(pokemon, MON_DATA_FRIENDSHIP) >= 200)
+        return FRIENDSHIP_200_TO_254;
+    if (GetMonData(pokemon, MON_DATA_FRIENDSHIP) >= 150)
+        return FRIENDSHIP_150_TO_199;
+    if (GetMonData(pokemon, MON_DATA_FRIENDSHIP) >= 100)
+        return FRIENDSHIP_100_TO_149;
+    if (GetMonData(pokemon, MON_DATA_FRIENDSHIP) >= 50)
+        return FRIENDSHIP_50_TO_99;
+    if (GetMonData(pokemon, MON_DATA_FRIENDSHIP) >= 1)
+        return FRIENDSHIP_1_TO_49;
+
+    return FRIENDSHIP_NONE;
 }
 
 static void CB2_FieldShowRegionMap(void)
@@ -979,6 +994,8 @@ static void CB2_FieldShowRegionMap(void)
 
 void FieldShowRegionMap(void)
 {
+    SetMapGraphics(2);
+    SetFieldMapNumber(2);
     SetMainCallback2(CB2_FieldShowRegionMap);
 }
 
@@ -1005,6 +1022,26 @@ static bool8 IsPlayerInFrontOfPC(void)
     tileInFront = MapGridGetMetatileIdAt(x, y);
 
     return IsBuildingPCTile(tileInFront) || IsPlayerHousePCTile(tileInFront);
+
+void FieldShowRegionMapKanto(void)
+{
+    SetMapGraphics(0);
+    SetFieldMapNumber(0);
+    SetMainCallback2(CB2_FieldShowRegionMap);
+}
+
+void FieldShowRegionMapJohto(void)
+{
+    SetMapGraphics(1);
+    SetFieldMapNumber(1);
+    SetMainCallback2(CB2_FieldShowRegionMap);
+}
+
+void FieldShowRegionMapSevii(void)
+{
+    SetMapGraphics(3);
+    SetFieldMapNumber(3);
+    SetMainCallback2(CB2_FieldShowRegionMap);
 }
 
 // Task data for Task_PCTurnOnEffect and Task_LotteryCornerComputerEffect
@@ -1433,8 +1470,8 @@ bool8 Special_AreLeadMonEVsMaxedOut(void)
 u8 TryUpdateRusturfTunnelState(void)
 {
     if (!FlagGet(FLAG_RUSTURF_TUNNEL_OPENED)
-        && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_RUSTURF_TUNNEL)
-        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_RUSTURF_TUNNEL))
+       && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_RUSTURF_TUNNEL)
+       && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_RUSTURF_TUNNEL))
     {
         if (FlagGet(FLAG_HIDE_RUSTURF_TUNNEL_ROCK_1))
         {
@@ -1672,9 +1709,9 @@ u16 GetMysteryGiftCardStat(void)
 
 bool8 BufferTMHMMoveName(void)
 {
-    if (gItemsInfo[gSpecialVar_0x8004].pocket == POCKET_TM_HM)
+    if (gSpecialVar_0x8004 >= ITEM_TM01 && gSpecialVar_0x8004 <= ITEM_HM08)
     {
-        StringCopy(gStringVar2, GetMoveName(ItemIdToBattleMoveId(gSpecialVar_0x8004)));
+        StringCopy(gStringVar2, gMoveNames[ItemIdToBattleMoveId(gSpecialVar_0x8004)]);
         return TRUE;
     }
 
@@ -2232,7 +2269,7 @@ void ShowFrontierManiacMessage(void)
         break;
     default:
         return;
-    }
+	}
 
     for (i = 0; i < FRONTIER_MANIAC_MESSAGE_COUNT - 1 && sFrontierManiacStreakThresholds[facility][i] < winStreak; i++);
 
@@ -2399,6 +2436,162 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_SS_TIDAL_DESTINATION:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 10;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_DESTINATION_SLATEPORT:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 10;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_DESTINATION_VERMILION:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 10;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_DESTINATION_OLIVINE:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 10;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_DESTINATION_SEVII:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 7;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_BATTLE_TENT_RULES:
+	    task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 7;
+        task->tLeft = 17;
+        task->tTop = 1;
+        task->tWidth = 12;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+	case SCROLL_MULTI_TERA_TYPES_PAGE1:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 10; // 9 types + Next
+        task->tLeft = 15;
+        task->tTop = 1;
+        task->tWidth = 14;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_TERA_TYPES_PAGE2:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 11; // 10 types + Back
+        task->tLeft = 15;
+        task->tTop = 1;
+        task->tWidth = 14;
+    case SCROLL_MULTI_SS_TIDAL_DESTINATION_S:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 11;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 8;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION1:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 7;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION2:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 7;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+            break;
+    case SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION3:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 7;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION4:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 7;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION5:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 7;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION6:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 7;
+        task->tLeft = 19;
+        task->tTop = 1;
+        task->tWidth = 10;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION7:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
         task->tNumItems = 7;
         task->tLeft = 19;
         task->tTop = 1;
@@ -2417,26 +2610,6 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
-    case SCROLL_MULTI_TERA_TYPES_PAGE1:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 10; // 9 types + Next
-        task->tLeft = 15;
-        task->tTop = 1;
-        task->tWidth = 14;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
-    case SCROLL_MULTI_TERA_TYPES_PAGE2:
-        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 11; // 10 types + Back
-        task->tLeft = 15;
-        task->tTop = 1;
-        task->tWidth = 14;
-        task->tHeight = 12;
-        task->tKeepOpenAfterSelect = FALSE;
-        task->tTaskId = taskId;
-        break;
     default:
         gSpecialVar_Result = MULTI_B_PRESSED;
         DestroyTask(taskId);
@@ -2450,7 +2623,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     {
         gText_Exit
     },
-    [SCROLL_MULTI_GLASS_WORKSHOP_VENDOR] =
+   [SCROLL_MULTI_GLASS_WORKSHOP_VENDOR] =
     {
         COMPOUND_STRING("BLUE FLUTE"),
         COMPOUND_STRING("YELLOW FLUTE"),
@@ -2581,11 +2754,158 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     [SCROLL_MULTI_SS_TIDAL_DESTINATION] =
     {
         gText_SlateportCity,
+        gText_VermilionCity,
+        gText_OlivineCity,
+        gText_Sevii,
         gText_BattleFrontier,
         gText_SouthernIsland,
         gText_NavelRock,
         gText_BirthIsland,
         gText_FarawayIsland,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_DESTINATION_SLATEPORT] =
+    {
+        gText_LilycoveCity,
+        gText_VermilionCity,
+        gText_OlivineCity,
+        gText_Sevii,
+        gText_BattleFrontier,
+        gText_SouthernIsland,
+        gText_NavelRock,
+        gText_BirthIsland,
+        gText_FarawayIsland,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_DESTINATION_VERMILION] =
+    {
+        gText_SlateportCity,
+        gText_LilycoveCity,
+        gText_OlivineCity,
+        gText_Sevii,
+        gText_BattleFrontier,
+        gText_SouthernIsland,
+        gText_NavelRock,
+        gText_BirthIsland,
+        gText_FarawayIsland,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_DESTINATION_OLIVINE] =
+    {
+        gText_SlateportCity,
+        gText_LilycoveCity,
+        gText_VermilionCity,
+        gText_Sevii,
+        gText_BattleFrontier,
+        gText_SouthernIsland,
+        gText_NavelRock,
+        gText_BirthIsland,
+        gText_FarawayIsland,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_DESTINATION_SEVII] =
+    {
+        gText_SlateportCity,
+        gText_LilycoveCity,
+        gText_VermilionCity,
+        gText_OlivineCity,
+        gText_Sevii,
+        gText_BattleFrontier,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_DESTINATION_S] =
+    {
+        gText_SlateportCity,
+        gText_LilycoveCity,
+        gText_VermilionCity,
+        gText_OlivineCity,
+        gText_Sevii,
+        gText_BattleFrontier,
+        gText_SouthernIsland,
+        gText_NavelRock,
+        gText_BirthIsland,
+        gText_FarawayIsland,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION] =
+    {
+        gText_Sevii1,
+        gText_Sevii2,
+        gText_Sevii3,
+        gText_Sevii4,
+        gText_Sevii5,
+        gText_Sevii6,
+        gText_Sevii7,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION1] =
+    {
+        gText_Sevii2,
+        gText_Sevii3,
+        gText_Sevii4,
+        gText_Sevii5,
+        gText_Sevii6,
+        gText_Sevii7,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION2] =
+    {
+        gText_Sevii1,
+        gText_Sevii3,
+        gText_Sevii4,
+        gText_Sevii5,
+        gText_Sevii6,
+        gText_Sevii7,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION3] =
+    {
+        gText_Sevii1,
+        gText_Sevii2,
+        gText_Sevii4,
+        gText_Sevii5,
+        gText_Sevii6,
+        gText_Sevii7,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION4] =
+    {
+        gText_Sevii1,
+        gText_Sevii2,
+        gText_Sevii3,
+        gText_Sevii5,
+        gText_Sevii6,
+        gText_Sevii7,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION5] =
+    {
+        gText_Sevii1,
+        gText_Sevii2,
+        gText_Sevii3,
+        gText_Sevii4,
+        gText_Sevii6,
+        gText_Sevii7,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION6] =
+    {
+        gText_Sevii1,
+        gText_Sevii2,
+        gText_Sevii3,
+        gText_Sevii4,
+        gText_Sevii5,
+        gText_Sevii7,
+        gText_Exit
+    },
+    [SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION7] =
+    {
+        gText_Sevii1,
+        gText_Sevii2,
+        gText_Sevii3,
+        gText_Sevii4,
+        gText_Sevii5,
+        gText_Sevii6,
         gText_Exit
     },
     [SCROLL_MULTI_BATTLE_TENT_RULES] =
@@ -2597,7 +2917,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_Underpowered,
         gText_WhenInDanger,
         gText_Exit
-    },
+   },
     [SCROLL_MULTI_TERA_TYPES_PAGE1] =
     {
         COMPOUND_STRING("NORMAL{CLEAR_TO 0x48}¥1000"),
@@ -2824,8 +3144,8 @@ static void ScrollableMultichoice_UpdateScrollArrows(u8 taskId)
     struct ScrollArrowsTemplate template = sScrollableMultichoice_ScrollArrowsTemplate;
     if (task->tMaxItemsOnScreen != task->tNumItems)
     {
-        u32 y0 = (8 * (task->tTop - 1));
-
+	u32 y0 = (8 * (task->tTop - 1));
+		
         template.firstX = (task->tWidth / 2) * 8 + 12 + (task->tLeft - 1) * 8;
         template.firstY = 8 + y0;
         template.secondX = (task->tWidth / 2) * 8 + 12 + (task->tLeft - 1) * 8;
@@ -2863,6 +3183,34 @@ void SetBattleTowerLinkPlayerGfx(void)
 
 void ShowNatureGirlMessage(void)
 {
+    static const u8 *const sNatureGirlMessages[NUM_NATURES] = {
+        [NATURE_HARDY]   = BattleFrontier_Lounge5_Text_NatureGirlHardy,
+        [NATURE_LONELY]  = BattleFrontier_Lounge5_Text_NatureGirlLonely,
+        [NATURE_BRAVE]   = BattleFrontier_Lounge5_Text_NatureGirlBrave,
+        [NATURE_ADAMANT] = BattleFrontier_Lounge5_Text_NatureGirlAdamant,
+        [NATURE_NAUGHTY] = BattleFrontier_Lounge5_Text_NatureGirlNaughty,
+        [NATURE_BOLD]    = BattleFrontier_Lounge5_Text_NatureGirlBold,
+        [NATURE_DOCILE]  = BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky,
+        [NATURE_RELAXED] = BattleFrontier_Lounge5_Text_NatureGirlRelaxed,
+        [NATURE_IMPISH]  = BattleFrontier_Lounge5_Text_NatureGirlImpish,
+        [NATURE_LAX]     = BattleFrontier_Lounge5_Text_NatureGirlLax,
+        [NATURE_TIMID]   = BattleFrontier_Lounge5_Text_NatureGirlTimid,
+        [NATURE_HASTY]   = BattleFrontier_Lounge5_Text_NatureGirlHasty,
+        [NATURE_SERIOUS] = BattleFrontier_Lounge5_Text_NatureGirlSerious,
+        [NATURE_JOLLY]   = BattleFrontier_Lounge5_Text_NatureGirlJolly,
+        [NATURE_NAIVE]   = BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky,
+        [NATURE_MODEST]  = BattleFrontier_Lounge5_Text_NatureGirlModest,
+        [NATURE_MILD]    = BattleFrontier_Lounge5_Text_NatureGirlMild,
+        [NATURE_QUIET]   = BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky,
+        [NATURE_BASHFUL] = BattleFrontier_Lounge5_Text_NatureGirlBashful,
+        [NATURE_RASH]    = BattleFrontier_Lounge5_Text_NatureGirlRash,
+        [NATURE_CALM]    = BattleFrontier_Lounge5_Text_NatureGirlCalm,
+        [NATURE_GENTLE]  = BattleFrontier_Lounge5_Text_NatureGirlGentle,
+        [NATURE_SASSY]   = BattleFrontier_Lounge5_Text_NatureGirlSassy,
+        [NATURE_CAREFUL] = BattleFrontier_Lounge5_Text_NatureGirlCareful,
+        [NATURE_QUIRKY]  = BattleFrontier_Lounge5_Text_NatureGirlDocileNaiveQuietQuirky,
+    };
+
     u8 nature;
 
     if (gSpecialVar_0x8004 >= PARTY_SIZE)
@@ -3115,9 +3463,41 @@ static void HideFrontierExchangeCornerItemIcon(u16 menu, u16 unused)
     }
 }
 
+static const u16 sBattleFrontier_TutorMoves1[] =
+{
+    MOVE_SOFT_BOILED,
+    MOVE_SEISMIC_TOSS,
+    MOVE_DREAM_EATER,
+    MOVE_MEGA_PUNCH,
+    MOVE_MEGA_KICK,
+    MOVE_BODY_SLAM,
+    MOVE_ROCK_SLIDE,
+    MOVE_COUNTER,
+    MOVE_THUNDER_WAVE,
+    MOVE_SWORDS_DANCE
+};
+
+static const u16 sBattleFrontier_TutorMoves2[] =
+{
+    MOVE_DEFENSE_CURL,
+    MOVE_SNORE,
+    MOVE_MUD_SLAP,
+    MOVE_SWIFT,
+    MOVE_ICY_WIND,
+    MOVE_ENDURE,
+    MOVE_PSYCH_UP,
+    MOVE_ICE_PUNCH,
+    MOVE_THUNDER_PUNCH,
+    MOVE_FIRE_PUNCH
+};
+
 void BufferBattleFrontierTutorMoveName(void)
 {
-    StringCopy(gStringVar1, GetMoveName(gSpecialVar_0x8005));
+	StringCopy(gStringVar1, GetMoveName(gSpecialVar_0x8005));
+    if (gSpecialVar_0x8005 != 0)
+        StringCopy(gStringVar1, gMoveNames[sBattleFrontier_TutorMoves2[gSpecialVar_0x8004]]);
+    else
+        StringCopy(gStringVar1, gMoveNames[sBattleFrontier_TutorMoves1[gSpecialVar_0x8004]]);
 }
 
 static void ShowBattleFrontierTutorWindow(u8 menu, u16 selection)
@@ -3210,6 +3590,44 @@ void ScrollableMultichoice_RedrawPersistentMenu(void)
         AddTextPrinterParameterized(task->tWindowId, FONT_NORMAL, gText_SelectorArrow, 0, selectedRow * 16, TEXT_SKIP_DRAW, NULL);
         PutWindowTilemap(task->tWindowId);
         CopyWindowToVram(task->tWindowId, COPYWIN_FULL);
+    }
+}
+
+void GetBattleFrontierTutorMoveIndex(void)
+{
+    u8 i;
+    u16 moveTutor = 0;
+    u16 moveIndex = 0;
+    gSpecialVar_0x8005 = 0;
+
+    moveTutor = VarGet(VAR_TEMP_FRONTIER_TUTOR_ID);
+    moveIndex = VarGet(VAR_TEMP_FRONTIER_TUTOR_SELECTION);
+
+    if (moveTutor != 0)
+    {
+        i = 0;
+        do
+        {
+            if (gTutorMoves[i] == sBattleFrontier_TutorMoves2[moveIndex])
+            {
+                gSpecialVar_0x8005 = i;
+                break;
+            }
+            i++;
+        } while (i < TUTOR_MOVE_COUNT);
+    }
+    else
+    {
+        i = 0;
+        do
+        {
+            if (gTutorMoves[i] == sBattleFrontier_TutorMoves1[moveIndex])
+            {
+                gSpecialVar_0x8005 = i;
+                break;
+            }
+            i++;
+        } while (i < TUTOR_MOVE_COUNT);
     }
 }
 
@@ -3324,6 +3742,9 @@ static void Task_DeoxysRockInteraction(u8 taskId)
         }
     }
 }
+
+// duplicate of event_object_movement
+#define OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE      0x111F
 
 static void ChangeDeoxysRockLevel(u8 rockLevel)
 {
