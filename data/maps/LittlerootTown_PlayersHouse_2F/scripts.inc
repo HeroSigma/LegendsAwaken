@@ -90,9 +90,10 @@ PlayersHouse_2F_Text_ItsAGameCube:
         .string "A Game Boy Advance is connected to\n"
         .string "serve as the Controller.$"
 
-PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
+LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
         .string "MOM: How do you like your room?\p"
         .string "Everything's put away neatly.\n"
         .string "They finished moving everything\n"
         .string "in downstairs, too!\p"
         .string "POKEMON movers are so convenient!$"
+        .equ PlayersHouse_2F_Text_HowDoYouLikeYourRoom, LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom

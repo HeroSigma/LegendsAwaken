@@ -97,13 +97,13 @@ PalletTown_PlayersHouse_1F_EventScript_PetalburgGymReport::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
-	msgbox PlayersHouse_1F_Text_ThingsMovedOut, MSGBOX_DEFAULT
-	msgbox PlayersHouse_1F_Text_StartYourAdventure, MSGBOX_DEFAULT
+        msgbox PalletTown_PlayersHouse_1F_Text_ThingsMovedOut, MSGBOX_DEFAULT
+        msgbox PalletTown_PlayersHouse_1F_Text_StartYourAdventure, MSGBOX_DEFAULT
 	givemon SPECIES_PICHU, 3
 	setflag FLAG_SYS_POKEMON_GET
 	bufferleadmonspeciesname STR_VAR_1
 	playfanfare MUS_OBTAIN_ITEM
-	message PlayersHouse_1F_Text_PlayerReceivedPichu
+        message PalletTown_PlayersHouse_1F_Text_PlayerReceivedPichu
 	waitmessage
 	waitfanfare
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
@@ -117,7 +117,7 @@ PalletTown_PlayersHouse_1F_EventScript_NicknameMon::
 	return
 
 PalletTown_PlayersHouse_1F_EventScript_MomLeaving::
-	msgbox PlayersHouse_1F_Text_TakeCareOfHouse, MSGBOX_DEFAULT
+        msgbox PalletTown_PlayersHouse_1F_Text_TakeCareOfHouse, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, PalletTown_PlayersHouse_1F_Movement_WalkToDoor
 	applymovement VAR_0x8005, PalletTown_PlayersHouse_1F_Movement_MomLeaveAndReturn
@@ -184,22 +184,22 @@ PalletTown_PlayersHouse_1F_Text_AlmostForgot:
         .string "please go and see him!\p"
         .string "Bye {PLAYER}!$"
 
-PlayersHouse_1F_Text_PlayerReceivedPichu:
+PalletTown_PlayersHouse_1F_Text_PlayerReceivedPichu:
         .string "{PLAYER} received PICHU!$"
 
-PlayersHouse_1F_Text_ThingsMovedOut:
+PalletTown_PlayersHouse_1F_Text_ThingsMovedOut:
         .string "MOM: All of our things are finally\n"
         .string "moved in.\p"
         .string "It feels like everything is ready\n"
         .string "for you to begin your journey.$"
 
-PlayersHouse_1F_Text_StartYourAdventure:
+PalletTown_PlayersHouse_1F_Text_StartYourAdventure:
         .string "MOM: It's time to start your very own\n"
         .string "adventure, {PLAYER}!\p"
         .string "Go make friends and discover new\n"
-        .string "POK\xe9MON!$"
+        .string "POKéMON!$"
 
-PlayersHouse_1F_Text_TakeCareOfHouse:
+PalletTown_PlayersHouse_1F_Text_TakeCareOfHouse:
         .string "MOM: Take care of the house while\n"
         .string "I'm away, okay?\p"
         .string "I'll be thinking of you!$"

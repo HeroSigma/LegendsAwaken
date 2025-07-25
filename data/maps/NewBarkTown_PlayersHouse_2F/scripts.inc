@@ -18,9 +18,9 @@ NewBarkTown_PlayersHouse_2F_EventScript_CheckInitDecor::
         goto_if_eq VAR_RESULT, MALE, SecretBase_EventScript_InitDecorations
         end
 
-PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
+NewBarkTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
         .string "MOM: How do you like your room?\p"
         .string "Everything's put away neatly.\n"
         .string "They finished moving everything\n"
         .string "in downstairs, too!\p"
-        .string "POK\xe9MON movers are so convenient!$"
+        .string "POKéMON movers are so convenient!$"
