@@ -164,6 +164,7 @@
 #define VAR_BRINEY_HOUSE_STATE                           0x4090
 #define VAR_UNUSED_0x4091                                0x4091 // Unused Var
 #define VAR_LITTLEROOT_INTRO_STATE                       0x4092
+#define VAR_INTRO_STATE                                  VAR_LITTLEROOT_INTRO_STATE
 #define VAR_MAUVILLE_GYM_STATE                           0x4093
 #define VAR_LILYCOVE_MUSEUM_2F_STATE                     0x4094
 #define VAR_LILYCOVE_FAN_CLUB_STATE                      0x4095
@@ -273,8 +274,12 @@
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_ELM_LAB_STATE                                0x4100
+#define VAR_OAK_LAB_STATE                                0x4101
+#define VAR_INTRO_BATTLE_STATE                           0x4102
+#define VAR_PARENTS_HOUSE_STATE                          0x4103
 
-#define VARS_END                                         0x40FF
+#define VARS_END                                         0x4103
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
 
 #define SPECIAL_VARS_START            0x8000

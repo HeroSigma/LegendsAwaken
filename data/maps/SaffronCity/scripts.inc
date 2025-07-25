@@ -52,3 +52,4 @@ SaffronCity_Text_TrainerFanClubSign::
     .string "POKéMON TRAINER FAN CLUB\p"
     .string "Many TRAINERS have scribbled their\n"
     .string "names on this sign.$"
+
