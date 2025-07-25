@@ -513,6 +513,8 @@ gStdScripts_End::
     .include "data/maps/LittlerootTown/scripts.inc"
     .include "data/maps/LittlerootTown_PlayersHouse_1F/scripts.inc"
     .include "data/maps/LittlerootTown_PlayersHouse_2F/scripts.inc"
+    .include "data/maps/LittlerootTown_BrendansHouse_1F/scripts.inc"
+    .include "data/maps/LittlerootTown_BrendansHouse_2F/scripts.inc"
     .include "data/maps/LittlerootTown_MaysHouse_1F/scripts.inc"
     .include "data/maps/LittlerootTown_MaysHouse_2F/scripts.inc"
     .include "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc"
