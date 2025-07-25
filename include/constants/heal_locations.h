@@ -43,4 +43,7 @@ enum {
     NUM_HEAL_LOCATIONS
 };
 
+// Compatibility alias for the player's bedroom in Littleroot Town
+#define HEAL_LOCATION_LITTLEROOT_TOWN_PLAYERS_HOUSE_2F HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
+
 #endif // GUARD_CONSTANTS_HEAL_LOCATIONS_H
