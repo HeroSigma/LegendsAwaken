@@ -7,6 +7,14 @@
 // The number of pitch tables there are for each pitch table size (see sPitchTables).
 #define NUM_BARD_PITCH_TABLES_PER_SIZE 5
 
+#include "constants/songs.h"
+
+// Macros and constants for handling bard phoneme songs.
+#define FIRST_PHONEME_SONG (PH_TRAP_BLEND - 1)
+#define NUM_PHONEME_SONGS (PH_NURSE_SOLO - FIRST_PHONEME_SONG)
+#define PHONEME_ID_NONE 0xFF
+#define PHONEME_ID(songConst) ((songConst) - FIRST_PHONEME_SONG - 1)
+
 // This struct describes which phoneme song to play for the sound, and whether to
 // make any adjustments to its length or volume. Very few sounds make any adjustments.
 struct BardSoundTemplate
