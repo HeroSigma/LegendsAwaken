@@ -36,6 +36,7 @@ If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Paw
 
 ## 📥 [Installing **`pokeemerald-expansion`**](INSTALL.md)
 ## 🏗️ [Building **`pokeemerald-expansion`**](INSTALL.md#Building-pokeemerald-expansion)
+* When adding new constants, you may need to run `make clean` before building so the changes are picked up.
 ## 🚚 [Migrating from **`pokeemerald`**](INSTALL.md#Migrating-from-pokeemerald)
 ## 🚀 [Updating **`pokeemerald-expansion`**](INSTALL.md#Updating-pokeemerald-expansion)
 
