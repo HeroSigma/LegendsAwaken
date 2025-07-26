@@ -416,12 +416,32 @@ LittlerootTown_EventScript_BirchsHouseSignFemale::
 	return
 
 LittlerootTown_EventScript_MaysHouseSign::
-	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_BirchsHouseSignMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_PlayersHouseSignFemale
-	releaseall
-	end
+        lockall
+        checkplayergender
+        call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_BirchsHouseSignMale
+        call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_PlayersHouseSignFemale
+        releaseall
+        end
+
+LittlerootTown_EventScript_TeleportPallet::
+        lockall
+        msgbox LittlerootTown_Text_TeleportPallet, MSGBOX_YESNO
+        goto_if_eq VAR_RESULT, NO, LittlerootTown_EventScript_TeleportEnd
+        warpteleport MAP_PALLET_TOWN, 3, 10
+        waitstate
+        goto LittlerootTown_EventScript_TeleportEnd
+
+LittlerootTown_EventScript_TeleportNewBark::
+        lockall
+        msgbox LittlerootTown_Text_TeleportNewBark, MSGBOX_YESNO
+        goto_if_eq VAR_RESULT, NO, LittlerootTown_EventScript_TeleportEnd
+        warpteleport MAP_NEW_BARK_TOWN, 3, 10
+        waitstate
+        goto LittlerootTown_EventScript_TeleportEnd
+
+LittlerootTown_EventScript_TeleportEnd::
+        releaseall
+        end
 
 LittlerootTown_EventScript_BirchsHouseSignMale::
 	msgbox LittlerootTown_Text_ProfBirchsHouse, MSGBOX_DEFAULT
@@ -995,8 +1015,14 @@ LittlerootTown_Text_GoodLuckCatchingPokemon:
 	.string "Good luck!$"
 
 LittlerootTown_Text_TownSign:
-	.string "LITTLEROOT TOWN\n"
-	.string "“A town that can't be shaded any hue.”$"
+        .string "LITTLEROOT TOWN\n"
+        .string "“A town that can't be shaded any hue.”$"
+
+LittlerootTown_Text_TeleportPallet:
+        .string "Warp to PALLET TOWN?$"
+
+LittlerootTown_Text_TeleportNewBark:
+        .string "Warp to NEW BARK TOWN?$"
 
 LittlerootTown_Text_ProfBirchsLab:
 	.string "PROF. BIRCH'S POKéMON LAB$"

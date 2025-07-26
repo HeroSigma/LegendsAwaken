@@ -123,6 +123,14 @@ PalletTown_EventScript_TeleportEnd::
         releaseall
         end
 
+PalletTown_EventScript_TeleportNewBark::
+        lockall
+        msgbox PalletTown_Text_TeleportNewBark, MSGBOX_YESNO
+        goto_if_eq VAR_RESULT, NO, PalletTown_EventScript_TeleportEnd
+        warpteleport MAP_NEW_BARK_TOWN, 3, 10
+        waitstate
+        goto PalletTown_EventScript_TeleportEnd
+
 PalletTown_Text_YoureBack:
 	.string "MOM: {PLAYER}, you're back, honey!\p"
 	.string "It must be tiring riding with your things\n"
@@ -144,3 +152,6 @@ PalletTown_Text_TownSign::
 
 PalletTown_Text_TeleportLittleroot:
     .string "Warp to LITTLEROOT TOWN?$"
+
+PalletTown_Text_TeleportNewBark:
+    .string "Warp to NEW BARK TOWN?$"
