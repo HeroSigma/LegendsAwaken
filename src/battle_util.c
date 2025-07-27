@@ -2976,19 +2976,18 @@ static void TryLegendPlateJudgmentTypeChange(void)
     if (bestType != currentType && bestMult >= UQ_4_12(2.0))
     {
         u32 monId = gBattlerPartyIndexes[gBattlerAttacker];
-        u32 side = GetBattlerSide(gBattlerAttacker);
         struct Pokemon *party = GetBattlerParty(gBattlerAttacker);
         u16 targetSpecies = sArceusFormsByType[bestType];
 
-        if (gBattleStruct->changedSpecies[side][monId] == SPECIES_NONE)
-            gBattleStruct->changedSpecies[side][monId] = gBattleMons[gBattlerAttacker].species;
+        if (GetBattlerPartyState(gBattlerAttacker)->changedSpecies == SPECIES_NONE)
+            GetBattlerPartyState(gBattlerAttacker)->changedSpecies = gBattleMons[gBattlerAttacker].species;
 
         gBattleMons[gBattlerAttacker].species = targetSpecies;
         SetMonData(&party[monId], MON_DATA_SPECIES, &targetSpecies);
         RecalcBattlerStats(gBattlerAttacker, &party[monId], FALSE);
         SET_BATTLER_TYPE(gBattlerAttacker, bestType);
         gBattleStruct->dynamicMoveType = bestType | F_DYNAMIC_TYPE_SET;
-        BattleScriptCall(BattleScript_AttackerFormChange);
+        BattleScriptCall(BattleScript_BattlerFormChange);
     }
     else
     {
