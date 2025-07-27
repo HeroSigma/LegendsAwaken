@@ -220,6 +220,12 @@ const u16 gMetatileAttributes_KantoBuilding[] = INCBIN_U16("data/tilesets/primar
 const u16 gMetatiles_JohtoBuilding[] = INCBIN_U16("data/tilesets/primary/johtobuilding/metatiles.bin");
 const u16 gMetatileAttributes_JohtoBuilding[] = INCBIN_U16("data/tilesets/primary/johtobuilding/metatile_attributes.bin");
 
+const u16 gMetatiles_SinnohGeneral[] = INCBIN_U16("data/tilesets/primary/sinnohgeneral/metatiles.bin");
+const u16 gMetatileAttributes_SinnohGeneral[] = INCBIN_U16("data/tilesets/primary/sinnohgeneral/metatile_attributes.bin");
+
+const u16 gMetatiles_SinnohBuilding[] = INCBIN_U16("data/tilesets/primary/sinnohbuilding/metatiles.bin");
+const u16 gMetatileAttributes_SinnohBuilding[] = INCBIN_U16("data/tilesets/primary/sinnohbuilding/metatile_attributes.bin");
+
 const u16 gMetatiles_CeladonCity[] = INCBIN_U16("data/tilesets/secondary/celadoncity/metatiles.bin");
 const u16 gMetatileAttributes_CeladonCity[] = INCBIN_U16("data/tilesets/secondary/celadoncity/metatile_attributes.bin");
 

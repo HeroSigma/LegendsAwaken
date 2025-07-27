@@ -853,6 +853,17 @@ const struct Tileset gTileset_JohtoGeneral =
     .callback = InitTilesetAnim_JohtoGeneral,
 };
 
+const struct Tileset gTileset_SinnohGeneral =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_SinnohGeneral,
+    .palettes = gTilesetPalettes_SinnohGeneral,
+    .metatiles = gMetatiles_SinnohGeneral,
+    .metatileAttributes = gMetatileAttributes_SinnohGeneral,
+    .callback = InitTilesetAnim_SinnohGeneral,
+};
+
 const struct Tileset gTileset_KantoBuilding =
 {
     .isCompressed = TRUE,
@@ -872,6 +883,17 @@ const struct Tileset gTileset_JohtoBuilding =
     .palettes = gTilesetPalettes_JohtoBuilding,
     .metatiles = gMetatiles_JohtoBuilding,
     .metatileAttributes = gMetatileAttributes_JohtoBuilding,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SinnohBuilding =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_SinnohBuilding,
+    .palettes = gTilesetPalettes_SinnohBuilding,
+    .metatiles = gMetatiles_SinnohBuilding,
+    .metatileAttributes = gMetatileAttributes_SinnohBuilding,
     .callback = NULL,
 };
 
