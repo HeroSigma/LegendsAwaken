@@ -33140,7 +33140,7 @@ EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 252 SpD / 4 Spe
 === TRAINER_PERRY ===
 Name: PERRY
 Class: Bird Keeper
-Pic: Bird Keeper M
+Pic: Bird Keeper
 Gender: Male
 Music: Cool
 Double Battle: No
@@ -33153,7 +33153,7 @@ Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe  
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe  
 Dynamax Level: 10  
-Ball: Poké Ball  
+Ball: Great Ball  
 Tera Type: Flying  
 - Brave Bird  
 - Quick Attack  
@@ -33467,7 +33467,7 @@ Tera Type: Dragon
 - Flamethrower
 - Roost
 
-Braviary (Hisuian) (M) @ Choice Scarf
+Braviary-Hisui (M) @ Choice Scarf
 Level: 54
 Ability: Sheer Force
 Nature: Adamant
@@ -33495,7 +33495,7 @@ Tera Type: Flying
 - U-turn
 - Protect
 
-Oricorio (Pom-Pom) (F) @ Leftovers
+SPECIES_ORICORIO_POM_POM (F) @ Leftovers
 Level: 54
 Ability: Dancer
 Nature: Bold
@@ -34942,7 +34942,7 @@ Tera Type: Fire
 - Close Combat
 - Will-O-Wisp
 
-Gastrodon (East Sea) (F) @ Leftovers
+SPECIES_GASTRODON_EAST (F) @ Leftovers
 Level: 46
 Ability: Storm Drain
 Nature: Calm
@@ -35000,7 +35000,7 @@ Tera Type: Rock
 
 === TRAINER_JANI ===
 Name: JANI
-Class: Tuber
+Class: Tuber F
 Pic: Tuber F
 Gender: Female
 Music: Male
