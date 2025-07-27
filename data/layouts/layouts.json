@@ -2438,8 +2438,8 @@
       "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "0",
-      "border_filepath": "data/layouts/Unknown_08447028/border.bin",
-      "blockdata_filepath": "data/layouts/Unknown_08447028/map.bin"
+      "border_filepath": "data/layouts/UnusedOutdoorArea/border.bin",
+      "blockdata_filepath": "data/layouts/UnusedOutdoorArea/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE109_SEASHORE_HOUSE",
