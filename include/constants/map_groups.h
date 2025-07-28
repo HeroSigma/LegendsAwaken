@@ -1425,7 +1425,7 @@
 #define MAP_TWINLEAF_TOWN_MAIN_HOUSE_2F   (1 | (101 << 8))
 #define MAP_TWINLEAF_TOWN_RIVALS_HOUSE_F1 (2 | (101 << 8))
 #define MAP_TWINLEAF_TOWN_RIVALS_HOUSE_F2 (3 | (101 << 8))
-#define MAP_TWINLEAF_TOWN_HAOUSE1         (4 | (101 << 8))
+#define MAP_TWINLEAF_TOWN_HOUSE1          (4 | (101 << 8))
 #define MAP_TWINLEAF_TOWN_HOUSE2          (5 | (101 << 8))
 
 // gMapGroup_IndoorSandgem
@@ -1478,7 +1478,7 @@
 #define MAP_FLOAROMA_TOWN_HOUSE2            (1 | (105 << 8))
 #define MAP_FLOAROMA_TOWN_FLOWER_SHOP       (2 | (105 << 8))
 #define MAP_FLOAROMA_TOWN_POKEMON_CENTER_1F (3 | (105 << 8))
-#define MAP_FLOAROMA_TWON_POKEMON_CENTER_2F (4 | (105 << 8))
+#define MAP_FLOAROMA_TOWN_POKEMON_CENTER_2F (4 | (105 << 8))
 #define MAP_FLOAROMA_TOWN_MART              (5 | (105 << 8))
 
 #define MAP_GROUPS_COUNT 106

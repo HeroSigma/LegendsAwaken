@@ -11482,14 +11482,14 @@
       "blockdata_filepath": "data/layouts/Twinleaf_Town_RivalsHouse_F2/map.bin"
     },
     {
-      "id": "LAYOUT_TWINLEAF_TOWN_HAOUSE1",
-      "name": "TwinleafTown_Haouse1_Layout",
+      "id": "LAYOUT_TWINLEAF_TOWN_HOUSE1",
+      "name": "TwinleafTown_House1_Layout",
       "width": 11,
       "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/TwinleafTown_Haouse1/border.bin",
-      "blockdata_filepath": "data/layouts/TwinleafTown_Haouse1/map.bin"
+      "border_filepath": "data/layouts/TwinleafTown_House1/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTown_House1/map.bin"
     },
     {
       "id": "LAYOUT_TWINLEAF_TOWN_HOUSE2",
@@ -11932,14 +11932,14 @@
       "blockdata_filepath": "data/layouts/FloaromaTown_PokemonCenter_1F/map.bin"
     },
     {
-      "id": "LAYOUT_FLOAROMA_TWON_POKEMON_CENTER_2F",
-      "name": "FloaromaTwon_PokemonCenter_2F_Layout",
+      "id": "LAYOUT_FLOAROMA_TOWN_POKEMON_CENTER_2F",
+      "name": "FloaromaTown_PokemonCenter_2F_Layout",
       "width": 14,
       "height": 10,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonCenter",
-      "border_filepath": "data/layouts/FloaromaTwon_PokemonCenter_2F/border.bin",
-      "blockdata_filepath": "data/layouts/FloaromaTwon_PokemonCenter_2F/map.bin"
+      "border_filepath": "data/layouts/FloaromaTown_PokemonCenter_2F/border.bin",
+      "blockdata_filepath": "data/layouts/FloaromaTown_PokemonCenter_2F/map.bin"
     },
     {
       "id": "LAYOUT_FLOAROMA_TOWN_MART",
