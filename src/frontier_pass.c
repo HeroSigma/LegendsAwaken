@@ -606,7 +606,7 @@ static void LeaveFrontierPass(void)
 
 static u32 AllocateFrontierPassData(void (*callback)(void))
 {
-    u8 i;
+    u16 i;
 
     if (sPassData != NULL)
         return ERR_ALREADY_DONE;
@@ -1632,7 +1632,7 @@ static void InitFrontierMapSprites(void)
 {
     struct SpriteTemplate sprite;
     u8 spriteId;
-    u8 id;
+    u16 id;
     s16 x = 0, y;
 
     FreeAllSpritePalettes();
