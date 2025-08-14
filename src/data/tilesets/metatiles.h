@@ -226,6 +226,9 @@ const u16 gMetatileAttributes_SinnohGeneral[] = INCBIN_U16("data/tilesets/primar
 const u16 gMetatiles_SinnohBuilding[] = INCBIN_U16("data/tilesets/primary/sinnohbuilding/metatiles.bin");
 const u16 gMetatileAttributes_SinnohBuilding[] = INCBIN_U16("data/tilesets/primary/sinnohbuilding/metatile_attributes.bin");
 
+const u16 gMetatiles_SinnohOutdoor[] = INCBIN_U16("data/tilesets/primary/sinnohoutdoor/metatiles.bin");
+const u16 gMetatileAttributes_SinnohOutdoor[] = INCBIN_U16("data/tilesets/primary/sinnohoutdoor/metatile_attributes.bin");
+
 const u16 gMetatiles_CeladonCity[] = INCBIN_U16("data/tilesets/secondary/celadoncity/metatiles.bin");
 const u16 gMetatileAttributes_CeladonCity[] = INCBIN_U16("data/tilesets/secondary/celadoncity/metatile_attributes.bin");
 
@@ -468,6 +471,9 @@ const u16 gMetatileAttributes_DottedHole[] = INCBIN_U16("data/tilesets/secondary
 
 const u16 gMetatiles_CeruleanCave[] = INCBIN_U16("data/tilesets/secondary/ceruleancave/metatiles.bin");
 const u16 gMetatileAttributes_CeruleanCave[] = INCBIN_U16("data/tilesets/secondary/ceruleancave/metatile_attributes.bin");
+
+const u16 gMetatiles_Twinleaf[] = INCBIN_U16("data/tilesets/secondarysinnoh/twinleaf/metatiles.bin");
+const u16 gMetatileAttributes_Twinleaf[] = INCBIN_U16("data/tilesets/secondarysinnoh/twinleaf/metatile_attributes.bin");
 
 const u16 gMetatiles_Jubilife[] = INCBIN_U16("data/tilesets/secondary/jubilife/metatiles.bin");
 const u16 gMetatileAttributes_Jubilife[] = INCBIN_U16("data/tilesets/secondary/jubilife/metatile_attributes.bin");

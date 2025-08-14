@@ -220,7 +220,11 @@ $(TILESETGFXDIR)/secondary/battle_frontier_ranking_hall/tiles.4bpp: %.4bpp: %.pn
 $(TILESETGFXDIR)/secondary/mystery_events_house/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 509 -Wnum_tiles
 
+$(TILESETGFXDIR)/primary/sinnohoutdoor/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 432 -Wnum_tiles
 
+$(TILESETGFXDIR)/secondarysinnoh/twinleaf/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 128 -Wnum_tiles
 
 ### Fonts ###
 

@@ -897,6 +897,17 @@ const struct Tileset gTileset_SinnohBuilding =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_SinnohOutdoor =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_SinnohOutdoor,
+    .palettes = gTilesetPalettes_SinnohOutdoor,
+    .metatiles = gMetatiles_SinnohOutdoor,
+    .metatileAttributes = gMetatileAttributes_SinnohOutdoor,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_CeladonCity =
 {
     .isCompressed = TRUE,
@@ -1785,6 +1796,17 @@ const struct Tileset gTileset_CeruleanCave =
     .palettes = gTilesetPalettes_CeruleanCave,
     .metatiles = gMetatiles_CeruleanCave,
     .metatileAttributes = gMetatileAttributes_CeruleanCave,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Twinleaf =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Twinleaf,
+    .palettes = gTilesetPalettes_Twinleaf,
+    .metatiles = gMetatiles_Twinleaf,
+    .metatileAttributes = gMetatileAttributes_Twinleaf,
     .callback = NULL,
 };
 
