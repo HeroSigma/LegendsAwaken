@@ -532,8 +532,8 @@ const u16 gMetatileAttributes_PokemonSchool[] = INCBIN_U16("data/tilesets/second
 const u16 gMetatiles_PokemonFanClub[] = INCBIN_U16("data/tilesets/secondarysinnoh/pokemon_fan_clu/metatiles.bin");
 const u16 gMetatileAttributes_PokemonFanClub[] = INCBIN_U16("data/tilesets/secondarysinnoh/pokemon_fan_clu/metatile_attributes.bin");
 
-const u16 gMetatiles_Unused1[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_3/metatiles.bin");
-const u16 gMetatileAttributes_Unused1[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_3/metatile_attributes.bin");
+const u16 gMetatiles_Unused3[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_3/metatiles.bin");
+const u16 gMetatileAttributes_Unused3[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_3/metatile_attributes.bin");
 
 const u16 gMetatiles_MeteorFalls[] = INCBIN_U16("data/tilesets/secondarysinnoh/meteor_fall/metatiles.bin");
 const u16 gMetatileAttributes_MeteorFalls[] = INCBIN_U16("data/tilesets/secondarysinnoh/meteor_fall/metatile_attributes.bin");
@@ -562,8 +562,6 @@ const u16 gMetatileAttributes_BikeShop[] = INCBIN_U16("data/tilesets/secondarysi
 const u16 gMetatiles_RusturfTunnel[] = INCBIN_U16("data/tilesets/secondarysinnoh/rusturf_tunne/metatiles.bin");
 const u16 gMetatileAttributes_RusturfTunnel[] = INCBIN_U16("data/tilesets/secondarysinnoh/rusturf_tunne/metatile_attributes.bin");
 
-const u16 gMetatiles_SecretBasesecondarysinnoh[] = INCBIN_U16("data/tilesets/secondarysinnoh/secret_bas/metatiles.bin");
-const u16 gMetatileAttributes_SecretBasesecondarysinnoh[] = INCBIN_U16("data/tilesets/secondarysinnoh/secret_bas/metatile_attributes.bin");
 
 const u16 gMetatiles_InsideOfTruck[] = INCBIN_U16("data/tilesets/secondarysinnoh/inside_of_truc/metatiles.bin");
 const u16 gMetatileAttributes_InsideOfTruck[] = INCBIN_U16("data/tilesets/secondarysinnoh/inside_of_truc/metatile_attributes.bin");
@@ -589,8 +587,8 @@ const u16 gMetatileAttributes_GenericBuilding[] = INCBIN_U16("data/tilesets/seco
 const u16 gMetatiles_MauvilleGameCorner[] = INCBIN_U16("data/tilesets/secondarysinnoh/mauville_game_corne/metatiles.bin");
 const u16 gMetatileAttributes_MauvilleGameCorner[] = INCBIN_U16("data/tilesets/secondarysinnoh/mauville_game_corne/metatile_attributes.bin");
 
-const u16 gMetatiles_Unused2[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_4/metatiles.bin");
-const u16 gMetatileAttributes_Unused2[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_4/metatile_attributes.bin");
+const u16 gMetatiles_Unused4[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_4/metatiles.bin");
+const u16 gMetatileAttributes_Unused4[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_4/metatile_attributes.bin");
 
 const u16 gMetatiles_RustboroGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/rustboro_gy/metatiles.bin");
 const u16 gMetatileAttributes_RustboroGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/rustboro_gy/metatile_attributes.bin");
@@ -781,8 +779,8 @@ const u16 gMetatileAttributes_BikeShop[] = INCBIN_U16("data/tilesets/secondarysi
 const u16 gMetatiles_RusturfTunnel[] = INCBIN_U16("data/tilesets/secondarysinnoh/rusturf_tunne/metatiles.bin");
 const u16 gMetatileAttributes_RusturfTunnel[] = INCBIN_U16("data/tilesets/secondarysinnoh/rusturf_tunne/metatile_attributes.bin");
 
-const u16 gMetatiles_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/secondarysinnoh/secret_bas/metatiles.bin");
-const u16 gMetatileAttributes_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/secondarysinnoh/secret_bas/metatile_attributes.bin");
+const u16 gMetatiles_SecretBas[] = INCBIN_U16("data/tilesets/secondarysinnoh/secret_bas/metatiles.bin");
+const u16 gMetatileAttributes_SecretBas[] = INCBIN_U16("data/tilesets/secondarysinnoh/secret_bas/metatile_attributes.bin");
 
 const u16 gMetatiles_InsideOfTruck[] = INCBIN_U16("data/tilesets/secondarysinnoh/inside_of_truc/metatiles.bin");
 const u16 gMetatileAttributes_InsideOfTruck[] = INCBIN_U16("data/tilesets/secondarysinnoh/inside_of_truc/metatile_attributes.bin");

@@ -223,8 +223,248 @@ $(TILESETGFXDIR)/secondary/mystery_events_house/tiles.4bpp: %.4bpp: %.png
 $(TILESETGFXDIR)/primary/sinnohoutdoor/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 432 -Wnum_tiles
 
-$(TILESETGFXDIR)/secondarysinnoh/twinleaf/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 128 -Wnum_tiles
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/brown_cave/unused_tiles.4bpp: $(TILESETGFXDIR)/secondarysinnoh/secret_bas/brown_cave/tiles.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/tree/unused_tiles.4bpp: $(TILESETGFXDIR)/secondarysinnoh/secret_bas/tree/tiles.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/shrub/unused_tiles.4bpp: $(TILESETGFXDIR)/secondarysinnoh/secret_bas/shrub/tiles.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/blue_cave/unused_tiles.4bpp: $(TILESETGFXDIR)/secondarysinnoh/secret_bas/blue_cave/tiles.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/yellow_cave/unused_tiles.4bpp: $(TILESETGFXDIR)/secondarysinnoh/secret_bas/yellow_cave/tiles.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/red_cave/unused_tiles.4bpp: $(TILESETGFXDIR)/secondarysinnoh/secret_bas/red_cave/tiles.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/barrys_house/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 480 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_aren/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 272 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_dome/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 464 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_factor/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 432 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_frontie/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 320 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_frontier_outside_eas/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_frontier_outside_wes/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_frontier_ranking_hal/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 144 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_palac/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 144 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_pik/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 384 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_pyrami/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 464 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/battle_ten/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 256 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/bike_sho/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/brendans_mays_hous/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 480 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/cable_clu/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/cav/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 432 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/contes/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 432 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/dewfor/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/dewford_gy/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 64 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/elite_fou/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/ever_grand/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 320 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/facilit/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/fallarbo/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 448 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/fortre/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 496 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/fortree_gy/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 64 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/generic_buildin/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/inside_of_truc/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 64 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/inside_shi/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 352 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/island_harbo/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/jubilife_city_secondary/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/la/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/lavaridg/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 464 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/lavaridge_gy/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 64 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/lilycov/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 432 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/lilycove_museu/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 432 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/mauvill/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/mauville_game_corne/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 480 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/mauville_gy/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 160 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/meteor_fall/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 464 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/mirage_towe/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 432 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/mossdee/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/mossdeep_game_corne/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/mossdeep_gy/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/mystery_events_hous/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/navel_roc/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 432 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/oceanic_museu/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 320 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/pacifidlo/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/petalbur/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 160 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/petalburg_gy/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 160 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/pokemon_cente/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 480 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/pokemon_day_car/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 368 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/pokemon_fan_clu/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 320 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/pokemon_schoo/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 288 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/pretty_petal_flower_sho/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 352 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/rustbor/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/rustboro_gy/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 64 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/rusturf_tunne/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 144 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/sandgem_town/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/seashore_house/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 320 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/blue_cave/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/brown_cave/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/red_cave/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/shrub/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/tree/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/secret_bas/yellow_cave/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/sho/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/slatepor/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/sootopoli/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 336 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/sootopolis_gy/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 496 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/trainer_hil/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 384 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/trick_house_puzzl/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 304 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/underwate/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 512 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/union_roo/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 208 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/unused_3/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 32 -Wnum_tiles
+
+$(TILESETGFXDIR)/secondarysinnoh/unused_4/tiles.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 160 -Wnum_tiles
 
 ### Fonts ###
 
