@@ -1798,3 +1798,80 @@ const struct Tileset gTileset_CeruleanCave =
     .metatileAttributes = gMetatileAttributes_CeruleanCave,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_UnionRoomSinnoh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_UnionRoomSinnoh,
+    .palettes = gTilesetPalettes_UnionRoomSinnoh,
+    .metatiles = gMetatiles_UnionRoomSinnoh,
+    .metatileAttributes = gMetatileAttributes_UnionRoomSinnoh,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_JubilifeCitySecondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_JubilifeCitySecondary,
+    .palettes = gTilesetPalettes_JubilifeCitySecondary,
+    .metatiles = gMetatiles_JubilifeCitySecondary,
+    .metatileAttributes = gMetatileAttributes_JubilifeCitySecondary,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_General_Jubilife =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Jubilife,
+    .palettes = gTilesetPalettes_General_Jubilife,
+    .metatiles = gMetatiles_General_Jubilife,
+    .metatileAttributes = gMetatileAttributes_General_Jubilife,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SandgemTown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SandgemTown,
+    .palettes = gTilesetPalettes_SandgemTown,
+    .metatiles = gMetatiles_SandgemTown,
+    .metatileAttributes = gMetatileAttributes_SandgemTown,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_BarrysHouse =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_BarrysHouse,
+    .palettes = gTilesetPalettes_BarrysHouse,
+    .metatiles = gMetatiles_BarrysHouse,
+    .metatileAttributes = gMetatileAttributes_BarrysHouse,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Unused3 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Unused3,
+    .palettes = gTilesetPalettes_Unused3,
+    .metatiles = gMetatiles_Unused3,
+    .metatileAttributes = gMetatileAttributes_Unused3,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Unused4 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Unused4,
+    .palettes = gTilesetPalettes_Unused4,
+    .metatiles = gMetatiles_Unused4,
+    .metatileAttributes = gMetatileAttributes_Unused4,
+    .callback = NULL,
+};
