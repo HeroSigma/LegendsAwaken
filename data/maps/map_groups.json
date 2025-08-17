@@ -1519,12 +1519,12 @@
     "HotelGrandLake"
   ],
   "gMapGroup_IndoorTwinleaf": [
-    "TwinleafTown_MainHouse_1F",
-    "TwinleafTown_MainHouse_2F",
-    "Twinleaf_Town_RivalsHouse_F1",
-    "Twinleaf_Town_RivalsHouse_F2",
-    "TwinleafTown_House1",
-    "TwinleafTown_House2"
+    "TwinleafTown_DawnsHouse_2F",
+    "TwinleafTown_DawnsHouse_1F",
+    "TwinleafTown_BarrysHouse_1F",
+    "TwinleafTown_BarrysHouse_2F",
+    "TwinleafTown_IndoorLeft",
+    "TwinleafTown_IndoorRight"
   ],
   "gMapGroup_IndoorSandgem": [
     "SandgemTown_RivalHouse_F1",

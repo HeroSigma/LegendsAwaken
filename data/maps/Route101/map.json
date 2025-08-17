@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE101",
   "name": "Route101",
   "layout": "LAYOUT_ROUTE101",
-  "music": "MUS_ROUTE101",
+  "music": "MUS_DP_ROUTE201_DAY",
   "region_map_section": "MAPSEC_ROUTE_101",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -39,7 +39,6 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_ROUTE101_BIRCH",
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
       "x": 9,
       "y": 13,
@@ -66,7 +65,6 @@
       "flag": "FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG"
     },
     {
-      "local_id": "LOCALID_ROUTE101_ZIGZAGOON",
       "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_1",
       "x": 10,
       "y": 13,
@@ -106,7 +104,9 @@
       "flag": "FLAG_HIDE_ROUTE_101_BOY"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+
+  ],
   "coord_events": [
     {
       "type": "trigger",
