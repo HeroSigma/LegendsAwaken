@@ -51,4 +51,12 @@ const struct RegionMapLocation gRegionMapEntries_Sevii[] = {
 ## endfor
 };
 
+const struct RegionMapLocation gRegionMapEntries_Sinnh[] = {
+## for map_section in map_sections_sevii
+{% if existsIn(map_section, "name") %}
+    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
+{% endif %}
+## endfor
+};
+
 #endif // GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H

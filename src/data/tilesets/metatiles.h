@@ -472,32 +472,218 @@ const u16 gMetatileAttributes_DottedHole[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatiles_CeruleanCave[] = INCBIN_U16("data/tilesets/secondary/ceruleancave/metatiles.bin");
 const u16 gMetatileAttributes_CeruleanCave[] = INCBIN_U16("data/tilesets/secondary/ceruleancave/metatile_attributes.bin");
 
-const u16 gMetatiles_Twinleaf[] = INCBIN_U16("data/tilesets/secondarysinnoh/twinleaf/metatiles.bin");
-const u16 gMetatileAttributes_Twinleaf[] = INCBIN_U16("data/tilesets/secondarysinnoh/twinleaf/metatile_attributes.bin");
+const u16 gMetatiles_Petalburg[] = INCBIN_U16("data/tilesets/secondarysinnoh/petalbur/metatiles.bin");
+const u16 gMetatileAttributes_Petalburg[] = INCBIN_U16("data/tilesets/secondarysinnoh/petalbur/metatile_attributes.bin");
 
-const u16 gMetatiles_Jubilife[] = INCBIN_U16("data/tilesets/secondary/jubilife/metatiles.bin");
-const u16 gMetatileAttributes_Jubilife[] = INCBIN_U16("data/tilesets/secondary/jubilife/metatile_attributes.bin");
+const u16 gMetatiles_Rustboro[] = INCBIN_U16("data/tilesets/secondarysinnoh/rustbor/metatiles.bin");
+const u16 gMetatileAttributes_Rustboro[] = INCBIN_U16("data/tilesets/secondarysinnoh/rustbor/metatile_attributes.bin");
 
-const u16 gMetatiles_Hearthome[] = INCBIN_U16("data/tilesets/secondary/hearthome/metatiles.bin");
-const u16 gMetatileAttributes_Hearthome[] = INCBIN_U16("data/tilesets/secondary/hearthome/metatile_attributes.bin");
+const u16 gMetatiles_Dewford[] = INCBIN_U16("data/tilesets/secondarysinnoh/dewfor/metatiles.bin");
+const u16 gMetatileAttributes_Dewford[] = INCBIN_U16("data/tilesets/secondarysinnoh/dewfor/metatile_attributes.bin");
 
-const u16 gMetatiles_Celestic[] = INCBIN_U16("data/tilesets/secondary/celestic/metatiles.bin");
-const u16 gMetatileAttributes_Celestic[] = INCBIN_U16("data/tilesets/secondary/celestic/metatile_attributes.bin");
+const u16 gMetatiles_Slateport[] = INCBIN_U16("data/tilesets/secondarysinnoh/slatepor/metatiles.bin");
+const u16 gMetatileAttributes_Slateport[] = INCBIN_U16("data/tilesets/secondarysinnoh/slatepor/metatile_attributes.bin");
 
-const u16 gMetatiles_Veilstone[] = INCBIN_U16("data/tilesets/secondary/veilstone/metatiles.bin");
-const u16 gMetatileAttributes_Veilstone[] = INCBIN_U16("data/tilesets/secondary/veilstone/metatile_attributes.bin");
+const u16 gMetatiles_Mauville[] = INCBIN_U16("data/tilesets/secondarysinnoh/mauvill/metatiles.bin");
+const u16 gMetatileAttributes_Mauville[] = INCBIN_U16("data/tilesets/secondarysinnoh/mauvill/metatile_attributes.bin");
 
-const u16 gMetatiles_Canalave[] = INCBIN_U16("data/tilesets/secondary/canalave/metatiles.bin");
-const u16 gMetatileAttributes_Canalave[] = INCBIN_U16("data/tilesets/secondary/canalave/metatile_attributes.bin");
+const u16 gMetatiles_Lavaridge[] = INCBIN_U16("data/tilesets/secondarysinnoh/lavaridg/metatiles.bin");
+const u16 gMetatileAttributes_Lavaridge[] = INCBIN_U16("data/tilesets/secondarysinnoh/lavaridg/metatile_attributes.bin");
 
-const u16 gMetatiles_Snowpoint[] = INCBIN_U16("data/tilesets/secondary/snowpoint/metatiles.bin");
-const u16 gMetatileAttributes_Snowpoint[] = INCBIN_U16("data/tilesets/secondary/snowpoint/metatile_attributes.bin");
+const u16 gMetatiles_Fallarbor[] = INCBIN_U16("data/tilesets/secondarysinnoh/fallarbo/metatiles.bin");
+const u16 gMetatileAttributes_Fallarbor[] = INCBIN_U16("data/tilesets/secondarysinnoh/fallarbo/metatile_attributes.bin");
 
-const u16 gMetatiles_Sunnyshore[] = INCBIN_U16("data/tilesets/secondary/sunnyshore/metatiles.bin");
-const u16 gMetatileAttributes_Sunnyshore[] = INCBIN_U16("data/tilesets/secondary/sunnyshore/metatile_attributes.bin");
+const u16 gMetatiles_Fortree[] = INCBIN_U16("data/tilesets/secondarysinnoh/fortre/metatiles.bin");
+const u16 gMetatileAttributes_Fortree[] = INCBIN_U16("data/tilesets/secondarysinnoh/fortre/metatile_attributes.bin");
 
-const u16 gMetatiles_Valor[] = INCBIN_U16("data/tilesets/secondary/valor/metatiles.bin");
-const u16 gMetatileAttributes_Valor[] = INCBIN_U16("data/tilesets/secondary/valor/metatile_attributes.bin");
+const u16 gMetatiles_Lilycove[] = INCBIN_U16("data/tilesets/secondarysinnoh/lilycov/metatiles.bin");
+const u16 gMetatileAttributes_Lilycove[] = INCBIN_U16("data/tilesets/secondarysinnoh/lilycov/metatile_attributes.bin");
 
-const u16 gMetatiles_Pasos[] = INCBIN_U16("data/tilesets/secondary/pasos/metatiles.bin");
-const u16 gMetatileAttributes_Pasos[] = INCBIN_U16("data/tilesets/secondary/pasos/metatile_attributes.bin");
+const u16 gMetatiles_Mossdeep[] = INCBIN_U16("data/tilesets/secondarysinnoh/mossdee/metatiles.bin");
+const u16 gMetatileAttributes_Mossdeep[] = INCBIN_U16("data/tilesets/secondarysinnoh/mossdee/metatile_attributes.bin");
+
+const u16 gMetatiles_EverGrande[] = INCBIN_U16("data/tilesets/secondarysinnoh/ever_grand/metatiles.bin");
+const u16 gMetatileAttributes_EverGrande[] = INCBIN_U16("data/tilesets/secondarysinnoh/ever_grand/metatile_attributes.bin");
+
+const u16 gMetatiles_Pacifidlog[] = INCBIN_U16("data/tilesets/secondarysinnoh/pacifidlo/metatiles.bin");
+const u16 gMetatileAttributes_Pacifidlog[] = INCBIN_U16("data/tilesets/secondarysinnoh/pacifidlo/metatile_attributes.bin");
+
+const u16 gMetatiles_Sootopolis[] = INCBIN_U16("data/tilesets/secondarysinnoh/sootopoli/metatiles.bin");
+const u16 gMetatileAttributes_Sootopolis[] = INCBIN_U16("data/tilesets/secondarysinnoh/sootopoli/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleFrontierOutsideWest[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_frontier_outside_wes/metatiles.bin");
+const u16 gMetatileAttributes_BattleFrontierOutsideWest[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_frontier_outside_wes/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleFrontierOutsideEast[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_frontier_outside_eas/metatiles.bin");
+const u16 gMetatileAttributes_BattleFrontierOutsideEast[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_frontier_outside_eas/metatile_attributes.bin");
+
+const u16 gMetatiles_Shop[] = INCBIN_U16("data/tilesets/secondarysinnoh/sho/metatiles.bin");
+const u16 gMetatileAttributes_Shop[] = INCBIN_U16("data/tilesets/secondarysinnoh/sho/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonCenter[] = INCBIN_U16("data/tilesets/secondarysinnoh/pokemon_cente/metatiles.bin");
+const u16 gMetatileAttributes_PokemonCenter[] = INCBIN_U16("data/tilesets/secondarysinnoh/pokemon_cente/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave[] = INCBIN_U16("data/tilesets/secondarysinnoh/cav/metatiles.bin");
+const u16 gMetatileAttributes_Cave[] = INCBIN_U16("data/tilesets/secondarysinnoh/cav/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonSchool[] = INCBIN_U16("data/tilesets/secondarysinnoh/pokemon_schoo/metatiles.bin");
+const u16 gMetatileAttributes_PokemonSchool[] = INCBIN_U16("data/tilesets/secondarysinnoh/pokemon_schoo/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonFanClub[] = INCBIN_U16("data/tilesets/secondarysinnoh/pokemon_fan_clu/metatiles.bin");
+const u16 gMetatileAttributes_PokemonFanClub[] = INCBIN_U16("data/tilesets/secondarysinnoh/pokemon_fan_clu/metatile_attributes.bin");
+
+const u16 gMetatiles_Unused1[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_3/metatiles.bin");
+const u16 gMetatileAttributes_Unused1[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_3/metatile_attributes.bin");
+
+const u16 gMetatiles_MeteorFalls[] = INCBIN_U16("data/tilesets/secondarysinnoh/meteor_fall/metatiles.bin");
+const u16 gMetatileAttributes_MeteorFalls[] = INCBIN_U16("data/tilesets/secondarysinnoh/meteor_fall/metatile_attributes.bin");
+
+const u16 gMetatiles_OceanicMuseum[] = INCBIN_U16("data/tilesets/secondarysinnoh/oceanic_museu/metatiles.bin");
+const u16 gMetatileAttributes_OceanicMuseum[] = INCBIN_U16("data/tilesets/secondarysinnoh/oceanic_museu/metatile_attributes.bin");
+
+const u16 gMetatiles_CableClub[] = INCBIN_U16("data/tilesets/secondarysinnoh/cable_clu/metatiles.bin");
+const u16 gMetatileAttributes_CableClub[] = INCBIN_U16("data/tilesets/secondarysinnoh/cable_clu/metatile_attributes.bin");
+
+const u16 gMetatiles_SeashoreHouse[] = INCBIN_U16("data/tilesets/secondarysinnoh/seashore_house/metatiles.bin");
+const u16 gMetatileAttributes_SeashoreHouse[] = INCBIN_U16("data/tilesets/secondarysinnoh/seashore_house/metatile_attributes.bin");
+
+const u16 gMetatiles_PrettyPetalFlowerShop[] = INCBIN_U16("data/tilesets/secondarysinnoh/pretty_petal_flower_sho/metatiles.bin");
+const u16 gMetatileAttributes_PrettyPetalFlowerShop[] = INCBIN_U16("data/tilesets/secondarysinnoh/pretty_petal_flower_sho/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonDayCare[] = INCBIN_U16("data/tilesets/secondarysinnoh/pokemon_day_car/metatiles.bin");
+const u16 gMetatileAttributes_PokemonDayCare[] = INCBIN_U16("data/tilesets/secondarysinnoh/pokemon_day_car/metatile_attributes.bin");
+
+const u16 gMetatiles_Facility[] = INCBIN_U16("data/tilesets/secondarysinnoh/facilit/metatiles.bin");
+const u16 gMetatileAttributes_Facility[] = INCBIN_U16("data/tilesets/secondarysinnoh/facilit/metatile_attributes.bin");
+
+const u16 gMetatiles_BikeShop[] = INCBIN_U16("data/tilesets/secondarysinnoh/bike_sho/metatiles.bin");
+const u16 gMetatileAttributes_BikeShop[] = INCBIN_U16("data/tilesets/secondarysinnoh/bike_sho/metatile_attributes.bin");
+
+const u16 gMetatiles_RusturfTunnel[] = INCBIN_U16("data/tilesets/secondarysinnoh/rusturf_tunne/metatiles.bin");
+const u16 gMetatileAttributes_RusturfTunnel[] = INCBIN_U16("data/tilesets/secondarysinnoh/rusturf_tunne/metatile_attributes.bin");
+
+const u16 gMetatiles_SecretBasesecondarysinnoh[] = INCBIN_U16("data/tilesets/secondarysinnoh/secret_bas/metatiles.bin");
+const u16 gMetatileAttributes_SecretBasesecondarysinnoh[] = INCBIN_U16("data/tilesets/secondarysinnoh/secret_bas/metatile_attributes.bin");
+
+const u16 gMetatiles_InsideOfTruck[] = INCBIN_U16("data/tilesets/secondarysinnoh/inside_of_truc/metatiles.bin");
+const u16 gMetatileAttributes_InsideOfTruck[] = INCBIN_U16("data/tilesets/secondarysinnoh/inside_of_truc/metatile_attributes.bin");
+
+const u16 gMetatiles_Contest[] = INCBIN_U16("data/tilesets/secondarysinnoh/contes/metatiles.bin");
+const u16 gMetatileAttributes_Contest[] = INCBIN_U16("data/tilesets/secondarysinnoh/contes/metatile_attributes.bin");
+
+const u16 gMetatiles_LilycoveMuseum[] = INCBIN_U16("data/tilesets/secondarysinnoh/lilycove_museu/metatiles.bin");
+const u16 gMetatileAttributes_LilycoveMuseum[] = INCBIN_U16("data/tilesets/secondarysinnoh/lilycove_museu/metatile_attributes.bin");
+
+const u16 gMetatiles_BrendansMaysHouse[] = INCBIN_U16("data/tilesets/secondarysinnoh/brendans_mays_hous/metatiles.bin");
+const u16 gMetatileAttributes_BrendansMaysHouse[] = INCBIN_U16("data/tilesets/secondarysinnoh/brendans_mays_hous/metatile_attributes.bin");
+
+const u16 gMetatiles_Lab[] = INCBIN_U16("data/tilesets/secondarysinnoh/la/metatiles.bin");
+const u16 gMetatileAttributes_Lab[] = INCBIN_U16("data/tilesets/secondarysinnoh/la/metatile_attributes.bin");
+
+const u16 gMetatiles_Underwater[] = INCBIN_U16("data/tilesets/secondarysinnoh/underwate/metatiles.bin");
+const u16 gMetatileAttributes_Underwater[] = INCBIN_U16("data/tilesets/secondarysinnoh/underwate/metatile_attributes.bin");
+
+const u16 gMetatiles_GenericBuilding[] = INCBIN_U16("data/tilesets/secondarysinnoh/generic_buildin/metatiles.bin");
+const u16 gMetatileAttributes_GenericBuilding[] = INCBIN_U16("data/tilesets/secondarysinnoh/generic_buildin/metatile_attributes.bin");
+
+const u16 gMetatiles_MauvilleGameCorner[] = INCBIN_U16("data/tilesets/secondarysinnoh/mauville_game_corne/metatiles.bin");
+const u16 gMetatileAttributes_MauvilleGameCorner[] = INCBIN_U16("data/tilesets/secondarysinnoh/mauville_game_corne/metatile_attributes.bin");
+
+const u16 gMetatiles_Unused2[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_4/metatiles.bin");
+const u16 gMetatileAttributes_Unused2[] = INCBIN_U16("data/tilesets/secondarysinnoh/unused_4/metatile_attributes.bin");
+
+const u16 gMetatiles_RustboroGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/rustboro_gy/metatiles.bin");
+const u16 gMetatileAttributes_RustboroGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/rustboro_gy/metatile_attributes.bin");
+
+const u16 gMetatiles_DewfordGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/dewford_gy/metatiles.bin");
+const u16 gMetatileAttributes_DewfordGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/dewford_gy/metatile_attributes.bin");
+
+const u16 gMetatiles_MauvilleGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/mauville_gym/metatiles.bin");
+const u16 gMetatileAttributes_MauvilleGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/mauville_gy/metatile_attributes.bin");
+
+const u16 gMetatiles_LavaridgeGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/lavaridge_gym/metatiles.bin");
+const u16 gMetatileAttributes_LavaridgeGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/lavaridge_gy/metatile_attributes.bin");
+
+const u16 gMetatiles_PetalburgGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/petalburg_gy/metatiles.bin");
+const u16 gMetatileAttributes_PetalburgGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/petalburg_gy/metatile_attributes.bin");
+
+const u16 gMetatiles_FortreeGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/fortree_gy/metatiles.bin");
+const u16 gMetatileAttributes_FortreeGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/fortree_gy/metatile_attributes.bin");
+
+const u16 gMetatiles_MossdeepGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/mossdeep_gy/metatiles.bin");
+const u16 gMetatileAttributes_MossdeepGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/mossdeep_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_SootopolisGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/sootopolis_gy/metatiles.bin");
+const u16 gMetatileAttributes_SootopolisGym[] = INCBIN_U16("data/tilesets/secondarysinnoh/sootopolis_gy/metatile_attributes.bin");
+
+const u16 gMetatiles_TrickHousePuzzle[] = INCBIN_U16("data/tilesets/secondarysinnoh/trick_house_puzzl/metatiles.bin");
+const u16 gMetatileAttributes_TrickHousePuzzle[] = INCBIN_U16("data/tilesets/secondarysinnoh/trick_house_puzzl/metatile_attributes.bin");
+
+const u16 gMetatiles_InsideShip[] = INCBIN_U16("data/tilesets/secondarysinnoh/inside_shi/metatiles.bin");
+const u16 gMetatileAttributes_InsideShip[] = INCBIN_U16("data/tilesets/secondarysinnoh/inside_shi/metatile_attributes.bin");
+
+const u16 gMetatiles_SecretBasePrimary[] = INCBIN_U16("data/tilesets/primary/secret_bas/metatiles.bin");
+const u16 gMetatileAttributes_SecretBasePrimary[] = INCBIN_U16("data/tilesets/primary/secret_bas/metatile_attributes.bin");
+
+const u16 gMetatiles_EliteFour[] = INCBIN_U16("data/tilesets/secondarysinnoh/elite_fou/metatiles.bin");
+const u16 gMetatileAttributes_EliteFour[] = INCBIN_U16("data/tilesets/secondarysinnoh/elite_fou/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleFrontier[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_frontie/metatiles.bin");
+const u16 gMetatileAttributes_BattleFrontier[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_frontie/metatile_attributes.bin");
+
+const u16 gMetatiles_BattlePalace[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_palac/metatiles.bin");
+const u16 gMetatileAttributes_BattlePalace[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_palac/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleDome[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_dom/metatiles.bin");
+const u16 gMetatileAttributes_BattleDome[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_dom/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleFactory[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_factor/metatiles.bin");
+const u16 gMetatileAttributes_BattleFactory[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_factor/metatile_attributes.bin");
+
+const u16 gMetatiles_BattlePike[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_pik/metatiles.bin");
+const u16 gMetatileAttributes_BattlePike[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_pik/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleArena[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_aren/metatiles.bin");
+const u16 gMetatileAttributes_BattleArena[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_aren/metatile_attributes.bin");
+
+const u16 gMetatiles_BattlePyramid[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_pyrami/metatiles.bin");
+const u16 gMetatileAttributes_BattlePyramid[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_pyrami/metatile_attributes.bin");
+
+const u16 gMetatiles_MirageTower[] = INCBIN_U16("data/tilesets/secondarysinnoh/mirage_towe/metatiles.bin");
+const u16 gMetatileAttributes_MirageTower[] = INCBIN_U16("data/tilesets/secondarysinnoh/mirage_towe/metatile_attributes.bin");
+
+const u16 gMetatiles_MossdeepGameCorner[] = INCBIN_U16("data/tilesets/secondarysinnoh/mossdeep_game_corne/metatiles.bin");
+const u16 gMetatileAttributes_MossdeepGameCorner[] = INCBIN_U16("data/tilesets/secondarysinnoh/mossdeep_game_corne/metatile_attributes.bin");
+
+const u16 gMetatiles_IslandHarbor[] = INCBIN_U16("data/tilesets/secondarysinnoh/island_harbo/metatiles.bin");
+const u16 gMetatileAttributes_IslandHarbor[] = INCBIN_U16("data/tilesets/secondarysinnoh/island_harbo/metatile_attributes.bin");
+
+const u16 gMetatiles_TrainerHill[] = INCBIN_U16("data/tilesets/secondarysinnoh/trainer_hil/metatiles.bin");
+const u16 gMetatileAttributes_TrainerHill[] = INCBIN_U16("data/tilesets/secondarysinnoh/trainer_hil/metatile_attributes.bin");
+
+const u16 gMetatiles_NavelRock[] = INCBIN_U16("data/tilesets/secondarysinnoh/navel_roc/metatiles.bin");
+const u16 gMetatileAttributes_NavelRock[] = INCBIN_U16("data/tilesets/secondarysinnoh/navel_roc/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleFrontierRankingHall[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_frontier_ranking_hal/metatiles.bin");
+const u16 gMetatileAttributes_BattleFrontierRankingHall[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_frontier_ranking_hal/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleTent[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_ten/metatiles.bin");
+const u16 gMetatileAttributes_BattleTent[] = INCBIN_U16("data/tilesets/secondarysinnoh/battle_ten/metatile_attributes.bin");
+
+const u16 gMetatiles_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/secondarysinnoh/mystery_events_hous/metatiles.bin");
+const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/secondarysinnoh/mystery_events_hous/metatile_attributes.bin");
+
+const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondarysinnoh/union_roo/metatiles.bin");
+const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondarysinnoh/union_roo/metatile_attributes.bin");
+
+const u16 gMetatiles_JubilifeCitySecondary[] = INCBIN_U16("data/tilesets/secondarysinnoh/jubilife_city_secondary/metatiles.bin");
+const u16 gMetatileAttributes_JubilifeCitySecondary[] = INCBIN_U16("data/tilesets/secondarysinnoh/jubilife_city_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Jubilife[] = INCBIN_U16("data/tilesets/primary/general_jubilife/metatiles.bin");
+const u16 gMetatileAttributes_General_Jubilife[] = INCBIN_U16("data/tilesets/primary/general_jubilife/metatile_attributes.bin");
+
+const u16 gMetatiles_SandgemTown[] = INCBIN_U16("data/tilesets/secondarysinnoh/sandgem_town/metatiles.bin");
+const u16 gMetatileAttributes_SandgemTown[] = INCBIN_U16("data/tilesets/secondarysinnoh/sandgem_town/metatile_attributes.bin");
+
+const u16 gMetatiles_BarrysHouse[] = INCBIN_U16("data/tilesets/secondarysinnoh/barrys_house/metatiles.bin");
+const u16 gMetatileAttributes_BarrysHouse[] = INCBIN_U16("data/tilesets/secondarysinnoh/barrys_house/metatile_attributes.bin");
