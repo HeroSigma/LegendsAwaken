@@ -8,8 +8,8 @@
       "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/PetalburgCity/border.bin",
-      "blockdata_filepath": "data/layouts/PetalburgCity/map.bin"
+      "border_filepath": "data/layouts/PetalburgCity1/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgCity1/map.bin"
     },
     {
       "id": "LAYOUT_SLATEPORT_CITY",
@@ -18,18 +18,18 @@
       "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
-      "border_filepath": "data/layouts/SlateportCity/border.bin",
-      "blockdata_filepath": "data/layouts/SlateportCity/map.bin"
+      "border_filepath": "data/layouts/Slate/border.bin",
+      "blockdata_filepath": "data/layouts/Slate/map.bin"
     },
     {
       "id": "LAYOUT_MAUVILLE_CITY",
       "name": "MauvilleCity_Layout",
       "width": 40,
       "height": 20,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_MauvillePrime",
       "secondary_tileset": "gTileset_Mauville",
-      "border_filepath": "data/layouts/MauvilleCity/border.bin",
-      "blockdata_filepath": "data/layouts/MauvilleCity/map.bin"
+      "border_filepath": "data/layouts/Mauv/border.bin",
+      "blockdata_filepath": "data/layouts/Mauv/map.bin"
     },
     {
       "id": "LAYOUT_RUSTBORO_CITY",
@@ -38,8 +38,8 @@
       "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/RustboroCity/border.bin",
-      "blockdata_filepath": "data/layouts/RustboroCity/map.bin"
+      "border_filepath": "data/layouts/Rust/border.bin",
+      "blockdata_filepath": "data/layouts/Rust/map.bin"
     },
     {
       "id": "LAYOUT_FORTREE_CITY",
@@ -48,8 +48,8 @@
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
-      "border_filepath": "data/layouts/FortreeCity/border.bin",
-      "blockdata_filepath": "data/layouts/FortreeCity/map.bin"
+      "border_filepath": "data/layouts/fort/border.bin",
+      "blockdata_filepath": "data/layouts/fort/map.bin"
     },
     {
       "id": "LAYOUT_LILYCOVE_CITY",
@@ -58,8 +58,8 @@
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
-      "border_filepath": "data/layouts/LilycoveCity/border.bin",
-      "blockdata_filepath": "data/layouts/LilycoveCity/map.bin"
+      "border_filepath": "data/layouts/Lily/border.bin",
+      "blockdata_filepath": "data/layouts/Lily/map.bin"
     },
     {
       "id": "LAYOUT_MOSSDEEP_CITY",
@@ -68,8 +68,8 @@
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mossdeep",
-      "border_filepath": "data/layouts/MossdeepCity/border.bin",
-      "blockdata_filepath": "data/layouts/MossdeepCity/map.bin"
+      "border_filepath": "data/layouts/Moss/border.bin",
+      "blockdata_filepath": "data/layouts/Moss/map.bin"
     },
     {
       "id": "LAYOUT_SOOTOPOLIS_CITY",
@@ -78,8 +78,8 @@
       "height": 60,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/SootopolisCity/border.bin",
-      "blockdata_filepath": "data/layouts/SootopolisCity/map.bin"
+      "border_filepath": "data/layouts/soot/border.bin",
+      "blockdata_filepath": "data/layouts/soot/map.bin"
     },
     {
       "id": "LAYOUT_EVER_GRANDE_CITY",
@@ -88,8 +88,8 @@
       "height": 80,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_EverGrande",
-      "border_filepath": "data/layouts/EverGrandeCity/border.bin",
-      "blockdata_filepath": "data/layouts/EverGrandeCity/map.bin"
+      "border_filepath": "data/layouts/ever/border.bin",
+      "blockdata_filepath": "data/layouts/ever/map.bin"
     },
     {
       "id": "LAYOUT_LITTLEROOT_TOWN",
@@ -97,9 +97,9 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/LittlerootTown/border.bin",
-      "blockdata_filepath": "data/layouts/LittlerootTown/map.bin"
+      "secondary_tileset": "gTileset_Littleroot",
+      "border_filepath": "data/layouts/Little/border.bin",
+      "blockdata_filepath": "data/layouts/Little/map.bin"
     },
     {
       "id": "LAYOUT_OLDALE_TOWN",
@@ -108,8 +108,8 @@
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/OldaleTown/border.bin",
-      "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
+      "border_filepath": "data/layouts/old/border.bin",
+      "blockdata_filepath": "data/layouts/old/map.bin"
     },
     {
       "id": "LAYOUT_DEWFORD_TOWN",
@@ -118,8 +118,8 @@
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/DewfordTown/border.bin",
-      "blockdata_filepath": "data/layouts/DewfordTown/map.bin"
+      "border_filepath": "data/layouts/Dew/border.bin",
+      "blockdata_filepath": "data/layouts/Dew/map.bin"
     },
     {
       "id": "LAYOUT_LAVARIDGE_TOWN",
@@ -128,8 +128,8 @@
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
-      "border_filepath": "data/layouts/LavaridgeTown/border.bin",
-      "blockdata_filepath": "data/layouts/LavaridgeTown/map.bin"
+      "border_filepath": "data/layouts/lava/border.bin",
+      "blockdata_filepath": "data/layouts/lava/map.bin"
     },
     {
       "id": "LAYOUT_FALLARBOR_TOWN",
@@ -138,8 +138,8 @@
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fallarbor",
-      "border_filepath": "data/layouts/FallarborTown/border.bin",
-      "blockdata_filepath": "data/layouts/FallarborTown/map.bin"
+      "border_filepath": "data/layouts/fall/border.bin",
+      "blockdata_filepath": "data/layouts/fall/map.bin"
     },
     {
       "id": "LAYOUT_VERDANTURF_TOWN",
@@ -148,8 +148,8 @@
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
-      "border_filepath": "data/layouts/VerdanturfTown/border.bin",
-      "blockdata_filepath": "data/layouts/VerdanturfTown/map.bin"
+      "border_filepath": "data/layouts/verd/border.bin",
+      "blockdata_filepath": "data/layouts/verd/map.bin"
     },
     {
       "id": "LAYOUT_PACIFIDLOG_TOWN",
@@ -158,8 +158,8 @@
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Pacifidlog",
-      "border_filepath": "data/layouts/PacifidlogTown/border.bin",
-      "blockdata_filepath": "data/layouts/PacifidlogTown/map.bin"
+      "border_filepath": "data/layouts/Paci/border.bin",
+      "blockdata_filepath": "data/layouts/Paci/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE101",
@@ -10624,12 +10624,12 @@
     {
       "id": "LAYOUT_TWINLEAF_TOWN",
       "name": "TwinleafTown_Layout",
-      "width": 24,
-      "height": 30,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/TwinleafTown/border.bin",
-      "blockdata_filepath": "data/layouts/TwinleafTown/map.bin"
+      "width": 32,
+      "height": 34,
+      "primary_tileset": "gTileset_AMapS",
+      "secondary_tileset": "gTileset_AMapSI",
+      "border_filepath": "data/layouts/TwinleafTownNew/border.bin",
+      "blockdata_filepath": "data/layouts/TwinleafTownNew/map.bin"
     },
     {
       "id": "LAYOUT_SANDGEM_TOWN",

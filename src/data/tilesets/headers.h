@@ -1908,3 +1908,47 @@ const struct Tileset gTileset_Pasos =
     .metatileAttributes = gMetatileAttributes_Pasos,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_AMapS =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_AMapS,
+    .palettes = gTilesetPalettes_AMapS,
+    .metatiles = gMetatiles_AMapS,
+    .metatileAttributes = gMetatileAttributes_AMapS,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_AMapSI =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_AMapSI,
+    .palettes = gTilesetPalettes_AMapSI,
+    .metatiles = gMetatiles_AMapSI,
+    .metatileAttributes = gMetatileAttributes_AMapSI,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Littleroot =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Littleroot,
+    .palettes = gTilesetPalettes_Littleroot,
+    .metatiles = gMetatiles_Littleroot,
+    .metatileAttributes = gMetatileAttributes_Littleroot,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_MauvillePrime =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_MauvillePrime,
+    .palettes = gTilesetPalettes_MauvillePrime,
+    .metatiles = gMetatiles_MauvillePrime,
+    .metatileAttributes = gMetatileAttributes_MauvillePrime,
+    .callback = NULL,
+};

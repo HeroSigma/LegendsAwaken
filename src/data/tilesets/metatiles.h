@@ -501,3 +501,15 @@ const u16 gMetatileAttributes_Valor[] = INCBIN_U16("data/tilesets/secondary/valo
 
 const u16 gMetatiles_Pasos[] = INCBIN_U16("data/tilesets/secondary/pasos/metatiles.bin");
 const u16 gMetatileAttributes_Pasos[] = INCBIN_U16("data/tilesets/secondary/pasos/metatile_attributes.bin");
+
+const u16 gMetatiles_AMapS[] = INCBIN_U16("data/tilesets/primary/amap_s/metatiles.bin");
+const u16 gMetatileAttributes_AMapS[] = INCBIN_U16("data/tilesets/primary/amap_s/metatile_attributes.bin");
+
+const u16 gMetatiles_AMapSI[] = INCBIN_U16("data/tilesets/secondary/amap_si/metatiles.bin");
+const u16 gMetatileAttributes_AMapSI[] = INCBIN_U16("data/tilesets/secondary/amap_si/metatile_attributes.bin");
+
+const u16 gMetatiles_Littleroot[] = INCBIN_U16("data/tilesets/secondary/littleroot/metatiles.bin");
+const u16 gMetatileAttributes_Littleroot[] = INCBIN_U16("data/tilesets/secondary/littleroot/metatile_attributes.bin");
+
+const u16 gMetatiles_MauvillePrime[] = INCBIN_U16("data/tilesets/primary/mauville_prime/metatiles.bin");
+const u16 gMetatileAttributes_MauvillePrime[] = INCBIN_U16("data/tilesets/primary/mauville_prime/metatile_attributes.bin");
