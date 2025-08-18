@@ -516,14 +516,14 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 13,
+      "x": 14,
       "y": 26,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 26,
+      "x": 27,
       "y": 38,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_STERNS_SHIPYARD_1F",
@@ -579,7 +579,7 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 21,
+      "x": 30,
       "y": 44,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_HOUSE",
@@ -600,7 +600,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 8,
+      "x": 4,
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -608,7 +608,7 @@
     },
     {
       "type": "sign",
-      "x": 20,
+      "x": 18,
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -624,7 +624,7 @@
     },
     {
       "type": "sign",
-      "x": 14,
+      "x": 13,
       "y": 26,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -640,7 +640,7 @@
     },
     {
       "type": "sign",
-      "x": 15,
+      "x": 16,
       "y": 26,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",

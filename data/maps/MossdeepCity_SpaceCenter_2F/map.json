@@ -162,6 +162,13 @@
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MOSSDEEP_CITY",
+      "dest_warp_id": "10"
     }
   ],
   "coord_events": [],

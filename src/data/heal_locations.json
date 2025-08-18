@@ -48,7 +48,7 @@
       "id": "HEAL_LOCATION_RUSTBORO_CITY",
       "map": "MAP_RUSTBORO_CITY",
       "x": 16,
-      "y": 39,
+      "y": 47,
       "respawn_map": "MAP_RUSTBORO_CITY_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_RUSTBORO_NURSE"
     },
@@ -131,7 +131,7 @@
     {
       "id": "HEAL_LOCATION_LAVARIDGE_TOWN",
       "map": "MAP_LAVARIDGE_TOWN",
-      "x": 9,
+      "x": 10,
       "y": 7,
       "respawn_map": "MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_LAVARIDGE_NURSE"
@@ -155,8 +155,8 @@
     {
       "id": "HEAL_LOCATION_PACIFIDLOG_TOWN",
       "map": "MAP_PACIFIDLOG_TOWN",
-      "x": 8,
-      "y": 16,
+      "x": 9,
+      "y": 11,
       "respawn_map": "MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_PACIFIDLOG_NURSE"
     },

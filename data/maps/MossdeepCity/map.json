@@ -32,7 +32,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 38,
+      "x": 35,
       "y": 12,
       "elevation": 5,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -84,8 +84,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
-      "x": 45,
-      "y": 18,
+      "x": 42,
+      "y": 12,
       "elevation": 7,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -110,8 +110,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 55,
-      "y": 5,
+      "x": 54,
+      "y": 4,
       "elevation": 7,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -137,7 +137,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
       "x": 23,
-      "y": 13,
+      "y": 17,
       "elevation": 5,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -324,14 +324,14 @@
     },
     {
       "x": 18,
-      "y": 16,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY_HOUSE4",
       "dest_warp_id": "1"
     },
     {
       "x": 64,
-      "y": 15,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F",
       "dest_warp_id": "0"
@@ -341,6 +341,13 @@
       "y": 24,
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY_GAME_CORNER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 64,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "dest_warp_id": "0"
     }
   ],
@@ -439,8 +446,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 25,
-      "y": 16,
+      "x": 46,
+      "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MossdeepCity_EventScript_CitySign"
@@ -479,7 +486,7 @@
     },
     {
       "type": "sign",
-      "x": 30,
+      "x": 27,
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
@@ -487,7 +494,7 @@
     },
     {
       "type": "sign",
-      "x": 39,
+      "x": 36,
       "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
