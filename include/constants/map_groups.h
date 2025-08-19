@@ -67,6 +67,8 @@
 #define MAP_UNDERWATER_ROUTE129 (54 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE105 (55 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE125 (56 | (0 << 8))
+#define MAP_TIMELESS_WOOD       (57 | (0 << 8))
+#define MAP_TOURNAMENT_ISLAND   (58 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_PLAYERS_HOUSE_1F     (0 | (1 << 8))

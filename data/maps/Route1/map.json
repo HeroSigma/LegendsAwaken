@@ -39,9 +39,7 @@
       "flag": "FLAG_HIDE_ROUTE_1_PROF_OAK"
     }
   ],
-  "warp_events": [
-
-  ],
+  "warp_events": [],
   "coord_events": [
     {
       "type": "trigger",

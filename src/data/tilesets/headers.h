@@ -1952,3 +1952,234 @@ const struct Tileset gTileset_MauvillePrime =
     .metatileAttributes = gMetatileAttributes_MauvillePrime,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Jublife =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Jublife,
+    .palettes = gTilesetPalettes_Jublife,
+    .metatiles = gMetatiles_Jublife,
+    .metatileAttributes = gMetatileAttributes_Jublife,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_JublifePrime =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_JublifePrime,
+    .palettes = gTilesetPalettes_JublifePrime,
+    .metatiles = gMetatiles_JublifePrime,
+    .metatileAttributes = gMetatileAttributes_JublifePrime,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_general_jubilife =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_general_jubilife,
+    .palettes = gTilesetPalettes_general_jubilife,
+    .metatiles = gMetatiles_general_jubilife,
+    .metatileAttributes = gMetatileAttributes_general_jubilife,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_jubilife_city_secondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_jubilife_city_secondary,
+    .palettes = gTilesetPalettes_jubilife_city_secondary,
+    .metatiles = gMetatiles_jubilife_city_secondary,
+    .metatileAttributes = gMetatileAttributes_jubilife_city_secondary,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Ore =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Ore,
+    .palettes = gTilesetPalettes_Ore,
+    .metatiles = gMetatiles_Ore,
+    .metatileAttributes = gMetatileAttributes_Ore,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Ore2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Ore2,
+    .palettes = gTilesetPalettes_Ore2,
+    .metatiles = gMetatiles_Ore2,
+    .metatileAttributes = gMetatileAttributes_Ore2,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SinnohSecond =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_SinnohSecond,
+    .palettes = gTilesetPalettes_SinnohSecond,
+    .metatiles = gMetatiles_SinnohSecond,
+    .metatileAttributes = gMetatileAttributes_SinnohSecond,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SinnohSecon =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SinnohSecon,
+    .palettes = gTilesetPalettes_SinnohSecon,
+    .metatiles = gMetatiles_SinnohSecon,
+    .metatileAttributes = gMetatileAttributes_SinnohSecon,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_EternaCity =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_EternaCity,
+    .palettes = gTilesetPalettes_EternaCity,
+    .metatiles = gMetatiles_EternaCity,
+    .metatileAttributes = gMetatileAttributes_EternaCity,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Celesti =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Celesti,
+    .palettes = gTilesetPalettes_Celesti,
+    .metatiles = gMetatiles_Celesti,
+    .metatileAttributes = gMetatileAttributes_Celesti,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Snowpoin =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Snowpoin,
+    .palettes = gTilesetPalettes_Snowpoin,
+    .metatiles = gMetatiles_Snowpoin,
+    .metatileAttributes = gMetatileAttributes_Snowpoin,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Snow =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Snow,
+    .palettes = gTilesetPalettes_Snow,
+    .metatiles = gMetatiles_Snow,
+    .metatileAttributes = gMetatileAttributes_Snow,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Sunny =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Sunny,
+    .palettes = gTilesetPalettes_Sunny,
+    .metatiles = gMetatiles_Sunny,
+    .metatileAttributes = gMetatileAttributes_Sunny,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_route212 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_route212,
+    .palettes = gTilesetPalettes_route212,
+    .metatiles = gMetatiles_route212,
+    .metatileAttributes = gMetatileAttributes_route212,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_juu =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_juu,
+    .palettes = gTilesetPalettes_juu,
+    .metatiles = gMetatiles_juu,
+    .metatileAttributes = gMetatileAttributes_juu,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_209 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_209,
+    .palettes = gTilesetPalettes_209,
+    .metatiles = gMetatiles_209,
+    .metatileAttributes = gMetatileAttributes_209,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_jubi =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_jubi,
+    .palettes = gTilesetPalettes_jubi,
+    .metatiles = gMetatiles_jubi,
+    .metatileAttributes = gMetatileAttributes_jubi,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Distortion =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Distortion,
+    .palettes = gTilesetPalettes_Distortion,
+    .metatiles = gMetatiles_Distortion,
+    .metatileAttributes = gMetatileAttributes_Distortion,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_NewCave =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_NewCave,
+    .palettes = gTilesetPalettes_NewCave,
+    .metatiles = gMetatiles_NewCave,
+    .metatileAttributes = gMetatileAttributes_NewCave,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Champion =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Champion,
+    .palettes = gTilesetPalettes_Champion,
+    .metatiles = gMetatiles_Champion,
+    .metatileAttributes = gMetatileAttributes_Champion,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Newturf =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Newturf,
+    .palettes = gTilesetPalettes_Newturf,
+    .metatiles = gMetatiles_Newturf,
+    .metatileAttributes = gMetatileAttributes_Newturf,
+    .callback = NULL,
+};

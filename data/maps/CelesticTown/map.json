@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE210_NORTH",
-      "offset": 6,
+      "offset": 5,
       "direction": "right"
     },
     {

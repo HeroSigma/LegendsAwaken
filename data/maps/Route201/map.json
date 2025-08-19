@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_TWINLEAF_TOWN",
-      "offset": 4,
+      "offset": 0,
       "direction": "down"
     },
     {
       "map": "MAP_SANDGEM_TOWN",
-      "offset": -6,
+      "offset": -8,
       "direction": "right"
     },
     {
