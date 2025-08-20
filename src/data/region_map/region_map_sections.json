@@ -4924,14 +4924,6 @@
       "width": 1,
       "x": 23,
       "y": 5
-    },
-    {
-      "height": 1,
-      "map_section": "MAPSEC_DYNAMIC",
-      "name": "",
-      "width": 1,
-      "x": 0,
-      "y": 0
     }
   ],
   "map_sections_kanto": [
@@ -6942,14 +6934,6 @@
       "width": 1,
       "x": 0,
       "y": 0
-    },
-    {
-      "height": 1,
-      "map_section": "MAPSEC_DYNAMIC",
-      "name": "",
-      "width": 1,
-      "x": 0,
-      "y": 0
     }
   ],
   "map_sections_sevii": [
@@ -8957,14 +8941,6 @@
       "height": 1,
       "map_section": "MAPSEC_MT_SILVER",
       "name": "MT. SILVER",
-      "width": 1,
-      "x": 0,
-      "y": 0
-    },
-    {
-      "height": 1,
-      "map_section": "MAPSEC_DYNAMIC",
-      "name": "",
       "width": 1,
       "x": 0,
       "y": 0

@@ -812,10 +812,14 @@ static void TilesetAnim_Building(u16 timer)
         QueueAnimTiles_Building_TVTurnedOn(timer / 8);
 }
 
+#define FLOWER_DEST_8X8 208  // x=16, y=6  -> 16 + 6*32
+
 static void QueueAnimTiles_General_Flower(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_Flower);
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Flower[i],
+        (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(FLOWER_DEST_8X8)),  // now correct
+        4 * TILE_SIZE_4BPP);   // copies TL,TR,BL,BR (4×8x8) contiguously
 }
 
 static void QueueAnimTiles_KantoGeneral_Kantoflower(u16 timer)
