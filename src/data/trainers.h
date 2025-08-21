@@ -1,9 +1,7 @@
 //
 // DO NOT MODIFY THIS FILE! It is auto-generated from src/data/trainers.party
 //
-// If you want to modify this file set COMPETITIVE_PARTY_SYNTAX to FALSE
-// in include/config/general.h and remove this notice.
-// Use sed -i '/^#line/d' 'src/data/trainers.h' to remove #line markers.
+// If you want to modify this file see expansion PR #7154
 //
 
 #line 1 "src/data/trainers.party"
@@ -20,6 +18,8 @@
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 82
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 0,
         .party = (const struct TrainerMon[])
         {
@@ -41,6 +41,8 @@
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 91
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -248,6 +250,8 @@
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 190
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -425,6 +429,8 @@
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 265
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -601,6 +607,8 @@
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 340
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -778,6 +786,8 @@
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 415
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -955,6 +965,8 @@
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 490
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -1132,6 +1144,8 @@
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 565
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -1308,6 +1322,8 @@
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 640
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -1486,6 +1502,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 715
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -1663,6 +1681,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 790
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -1842,6 +1862,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 866
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -2017,6 +2039,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 941
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -2194,6 +2218,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1016
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COLLECTOR,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -2357,6 +2383,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1083
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -2534,6 +2562,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1158
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -2703,6 +2733,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1229
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -2880,6 +2912,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1304
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -3057,6 +3091,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1379
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -3234,6 +3270,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1454
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -3411,6 +3449,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1529
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -3588,6 +3628,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1604
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -3765,6 +3807,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1679
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -3942,6 +3986,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1754
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -4118,6 +4164,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1829
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -4297,6 +4345,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1904
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -4476,6 +4526,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 1979
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -4655,6 +4707,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 2054
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -4832,6 +4886,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 2129
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -5010,6 +5066,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 2205
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_ADMIN_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -5187,6 +5245,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 2280
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -5368,6 +5428,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 2356
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_ADMIN_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -5579,6 +5641,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 2456
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_ADMIN_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -5794,6 +5858,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 2556
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_LEADER_ARCHIE,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -6009,6 +6075,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 2655
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -6188,6 +6256,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 2730
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AROMA_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -6367,6 +6437,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 2805
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AROMA_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -6546,6 +6618,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 2881
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -6723,6 +6797,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 2956
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AROMA_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -6902,6 +6978,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3031
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AROMA_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -7081,6 +7159,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3106
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AROMA_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -7260,6 +7340,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3181
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AROMA_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -7439,6 +7521,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3256
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AROMA_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -7616,6 +7700,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3331
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -7793,6 +7879,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3406
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -7970,6 +8058,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3481
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -8147,6 +8237,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3556
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -8324,6 +8416,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3631
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -8501,6 +8595,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3706
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -8678,6 +8774,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 3781
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -8855,6 +8953,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 3856
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_INTERVIEWER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -9062,6 +9162,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 3955
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_INTERVIEWER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -9233,6 +9335,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 4030
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_INTERVIEWER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -9404,6 +9508,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 4105
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_INTERVIEWER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -9575,6 +9681,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 4180
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_INTERVIEWER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -9746,6 +9854,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 4255
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_INTERVIEWER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -9919,6 +10029,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 4330
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -10098,6 +10210,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 4405
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -10277,6 +10391,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 4480
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -10456,6 +10572,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 4555
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -10635,6 +10753,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 4630
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -10814,6 +10934,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 4705
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -10993,6 +11115,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 4780
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -11170,6 +11294,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 4855
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -11347,6 +11473,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 4930
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -11524,6 +11652,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 5005
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -11701,6 +11831,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 5080
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -11878,6 +12010,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 5155
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -12055,6 +12189,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 5230
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -12232,6 +12368,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 5305
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -12411,6 +12549,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 5381
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -12590,6 +12730,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 5457
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -12768,6 +12910,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 5533
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -12947,6 +13091,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 5609
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -13125,6 +13271,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 5685
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -13334,6 +13482,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 5785
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -13543,6 +13693,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 5885
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -13752,6 +13904,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 5985
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -13868,6 +14022,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 6040
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -13984,6 +14140,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 6095
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -14100,6 +14258,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 6150
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -14216,6 +14376,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 6205
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -14363,6 +14525,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 6275
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -14479,6 +14643,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 6330
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -14595,6 +14761,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 6385
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -14711,6 +14879,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 6440
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -14827,6 +14997,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 6495
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -15036,6 +15208,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 6595
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_RISKY | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -15247,6 +15421,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 6695
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -15458,6 +15634,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 6795
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -15669,6 +15847,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 6895
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -15880,6 +16060,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 6995
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -16096,6 +16278,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7095
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -16312,6 +16496,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7195
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -16433,6 +16619,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7250
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -16553,6 +16741,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7305
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -16770,6 +16960,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7405
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -16987,6 +17179,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7505
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -17198,6 +17392,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7605
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -17409,6 +17605,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7705
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -17620,6 +17818,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7805
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -17738,6 +17938,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7860
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -17856,6 +18058,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7915
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -17974,6 +18178,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 7970
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -18092,6 +18298,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8026
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -18303,6 +18511,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8126
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -18520,6 +18730,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8227
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -18737,6 +18949,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8327
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -18954,6 +19168,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8427
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -19171,6 +19387,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8527
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -19356,6 +19574,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8612
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -19541,6 +19761,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8697
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -19726,6 +19948,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8782
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -19911,6 +20135,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8867
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -20128,6 +20354,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 8967
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -20343,6 +20571,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9067
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -20496,6 +20726,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9137
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -20707,6 +20939,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9237
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -20924,6 +21158,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9337
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -21141,6 +21377,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9437
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -21358,6 +21596,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9537
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -21575,6 +21815,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9637
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -21792,6 +22034,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9737
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LADY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -22009,6 +22253,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9837
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -22226,6 +22472,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9937
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -22443,6 +22691,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 10037
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -22660,6 +22910,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 10137
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -22877,6 +23129,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 10237
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -23094,6 +23348,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 10337
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -23311,6 +23567,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 10437
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -23528,6 +23786,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 10537
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -23745,6 +24005,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 10637
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -23962,6 +24224,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 10737
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -24179,6 +24443,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 10837
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -24396,6 +24662,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 10937
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -24611,6 +24879,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 11037
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RICH_BOY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -24828,6 +25098,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 11137
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -25043,6 +25315,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 11237
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RICH_BOY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -25258,6 +25532,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 11337
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RICH_BOY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -25473,6 +25749,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 11437
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RICH_BOY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -25688,6 +25966,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 11537
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RICH_BOY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -25903,6 +26183,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 11637
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RICH_BOY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -26118,6 +26400,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 11737
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -26335,6 +26619,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 11837
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -26550,6 +26836,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 11937
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -26767,6 +27055,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 12037
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -26982,6 +27272,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 12137
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -27197,6 +27489,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 12237
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -27412,6 +27706,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 12337
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -27627,6 +27923,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 12437
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -27842,6 +28140,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 12537
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -28057,6 +28357,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 12637
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -28271,6 +28573,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 12737
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -28486,6 +28790,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 12837
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -28701,6 +29007,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 12937
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -28916,6 +29224,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 13037
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -29130,6 +29440,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 13137
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -29345,6 +29657,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 13237
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -29560,6 +29874,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 13337
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -29775,6 +30091,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 13437
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -29990,6 +30308,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 13537
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -30205,6 +30525,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 13637
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -30419,6 +30741,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 13737
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -30634,6 +30958,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 13837
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -30849,6 +31175,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 13937
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -31064,6 +31392,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 14037
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -31279,6 +31609,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 14137
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -31494,6 +31826,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 14237
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -31709,6 +32043,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 14337
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -31924,6 +32260,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 14437
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -32139,6 +32477,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 14537
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -32354,6 +32694,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 14637
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -32569,6 +32911,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 14737
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -32784,6 +33128,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 14837
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -32999,6 +33345,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 14937
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -33216,6 +33564,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15037
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -33431,6 +33781,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15137
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -33646,6 +33998,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15237
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -33861,6 +34215,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15337
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -34076,6 +34432,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15437
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -34291,6 +34649,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15537
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -34464,6 +34824,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15613
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -34637,6 +34999,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15689
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -34810,6 +35174,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15765
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -34983,6 +35349,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15841
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -35156,6 +35524,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15917
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -35329,6 +35699,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 15993
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -35502,6 +35874,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16069
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -35675,6 +36049,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16145
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -35848,6 +36224,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16221
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -36009,6 +36387,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16291
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -36170,6 +36550,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16361
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -36331,6 +36713,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16431
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -36492,6 +36876,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16501
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -36653,6 +37039,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16571
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -36814,6 +37202,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16641
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -36975,6 +37365,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16711
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -37136,6 +37528,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16781
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -37297,6 +37691,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16851
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -37458,6 +37854,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16921
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -37621,6 +38019,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16991
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -37782,6 +38182,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17061
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -37943,6 +38345,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17131
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -38104,6 +38508,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17201
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -38265,6 +38671,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17271
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -38426,6 +38834,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17341
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -38587,6 +38997,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17411
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -38760,6 +39172,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17487
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -38933,6 +39347,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17563
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -39106,6 +39522,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17639
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -39279,6 +39697,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17715
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -39452,6 +39872,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17791
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -39625,6 +40047,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17867
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -39798,6 +40222,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17943
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -39971,6 +40397,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18019
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -40144,6 +40572,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18095
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -40317,6 +40747,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18171
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -40490,6 +40922,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18247
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -40663,6 +41097,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18323
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -40836,6 +41272,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18399
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -41009,6 +41447,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18475
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -41182,6 +41622,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18551
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -41355,6 +41797,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18627
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -41528,6 +41972,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18703
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -41701,6 +42147,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18779
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -41874,6 +42322,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18855
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42049,6 +42499,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 18931
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42224,6 +42676,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19007
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42399,6 +42853,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19083
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42574,6 +43030,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19159
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42749,6 +43207,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19235
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42924,6 +43384,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19311
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -43099,6 +43561,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19387
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -43274,6 +43738,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19463
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -43449,6 +43915,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19539
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -43624,6 +44092,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19615
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -43799,6 +44269,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19691
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -43972,6 +44444,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19767
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GENTLEMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -44139,6 +44613,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19837
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GENTLEMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -44306,6 +44782,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19907
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GENTLEMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -44473,6 +44951,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 19977
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GENTLEMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -44640,6 +45120,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 20047
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GENTLEMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -44813,6 +45295,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 20123
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GENTLEMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -44986,6 +45470,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 20199
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GENTLEMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -45161,6 +45647,8 @@ F_TRAINER_FEMALE |
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
 #line 20276
         .mugshotColor = MUGSHOT_COLOR_PURPLE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_ELITE_FOUR_SIDNEY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -45362,6 +45850,8 @@ F_TRAINER_FEMALE |
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
 #line 20371
         .mugshotColor = MUGSHOT_COLOR_GREEN,
+#line 0
+        .trainerBackPic = TRAINER_PIC_ELITE_FOUR_PHOEBE,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -45575,6 +46065,8 @@ F_TRAINER_FEMALE |
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
 #line 20472
         .mugshotColor = MUGSHOT_COLOR_BLUE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_ELITE_FOUR_GLACIA,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -45786,6 +46278,8 @@ F_TRAINER_FEMALE |
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
 #line 20573
         .mugshotColor = MUGSHOT_COLOR_GREEN,
+#line 0
+        .trainerBackPic = TRAINER_PIC_ELITE_FOUR_DRAKE,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -45997,6 +46491,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 20673
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_ROXANNE,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -46206,6 +46702,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 20773
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_BRAWLY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -46421,6 +46919,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 20873
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_WATTSON,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -46633,6 +47133,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 20973
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_FLANNERY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -46843,6 +47345,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 21073
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_NORMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -47055,6 +47559,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 21173
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_WINONA,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -47270,6 +47776,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 21273
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_TATE_AND_LIZA,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -47481,6 +47989,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 21373
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_JUAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -47690,6 +48200,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 21473
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -47898,6 +48410,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 21572
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -48105,6 +48619,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 21671
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -48312,6 +48828,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 21770
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -48519,6 +49037,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 21869
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -48726,6 +49246,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 21968
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -48933,6 +49455,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 22067
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -49142,6 +49666,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 22166
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -49351,6 +49877,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 22265
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -49561,6 +50089,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 22364
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -49770,6 +50300,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 22463
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -49979,6 +50511,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 22562
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -50188,6 +50722,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 22661
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SCHOOL_KID_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -50397,6 +50933,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 22760
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SR_AND_JR,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -50610,6 +51148,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 22859
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SR_AND_JR,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -50825,6 +51365,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 22958
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SR_AND_JR,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -51040,6 +51582,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 23057
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SR_AND_JR,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -51255,6 +51799,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 23156
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SR_AND_JR,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -51470,6 +52016,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 23255
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SR_AND_JR,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -51683,6 +52231,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 23354
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -51896,6 +52446,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 23453
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -52109,6 +52661,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 23552
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -52322,6 +52876,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 23651
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -52535,6 +53091,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 23750
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -52748,6 +53306,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 23849
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -52961,6 +53521,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 23948
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -53176,6 +53738,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 24047
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -53391,6 +53955,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 24146
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -53606,6 +54172,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 24245
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -53821,6 +54389,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 24344
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -54036,6 +54606,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 24443
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -54251,6 +54823,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 24542
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -54466,6 +55040,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 24641
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -54681,6 +55257,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 24740
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_F,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -54855,6 +55433,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 24820
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -55068,6 +55648,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 24913
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -55281,6 +55863,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25006
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -55494,6 +56078,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25099
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -55707,6 +56293,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25192
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -55922,6 +56510,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25285
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -56136,6 +56726,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25384
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -56351,6 +56943,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25483
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -56566,6 +57160,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25582
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -56781,6 +57377,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25681
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -56996,6 +57594,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25780
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -57209,6 +57809,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25879
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -57422,6 +58024,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 25978
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -57635,6 +58239,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 26077
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -57848,6 +58454,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 26176
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -58061,6 +58669,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 26275
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -58274,6 +58884,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 26374
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -58489,6 +59101,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 26474
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -58706,6 +59320,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 26574
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -58919,6 +59535,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 26673
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -59132,6 +59750,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 26772
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -59345,6 +59965,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 26871
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -59558,6 +60180,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 26970
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -59771,6 +60395,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 27069
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -59984,6 +60610,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 27168
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -60197,6 +60825,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 27267
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -60410,6 +61040,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 27366
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -60623,6 +61255,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 27465
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -60839,6 +61473,8 @@ F_TRAINER_FEMALE |
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
 #line 27566
         .mugshotColor = MUGSHOT_COLOR_BLUE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CHAMPION_WALLACE,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -61046,6 +61682,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 27665
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -61259,6 +61897,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 27764
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -61472,6 +62112,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 27863
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -61685,6 +62327,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 27962
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -61898,6 +62542,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 28061
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -62111,6 +62757,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 28160
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -62324,6 +62972,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 28259
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -62537,6 +63187,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 28358
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -62750,6 +63402,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 28457
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -62963,6 +63617,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 28556
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -63176,6 +63832,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 28655
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -63389,6 +64047,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 28754
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -63602,6 +64262,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 28853
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -63815,6 +64477,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 28952
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -64028,6 +64692,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29051
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -64241,6 +64907,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29150
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -64454,6 +65122,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29249
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -64667,6 +65337,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29348
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -64880,6 +65552,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29447
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -65093,6 +65767,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29546
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -65306,6 +65982,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29645
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -65519,6 +66197,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29744
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -65735,6 +66415,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29844
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -65886,6 +66568,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29908
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -66037,6 +66721,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 29972
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -66188,6 +66874,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30036
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -66339,6 +67027,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30100
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -66490,6 +67180,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30164
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -66639,6 +67331,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30228
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -66788,6 +67482,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30292
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -66937,6 +67633,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30356
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -67086,6 +67784,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30420
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -67235,6 +67935,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30484
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -67386,6 +68088,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30548
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -67537,6 +68241,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30612
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -67688,6 +68394,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30676
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -67839,6 +68547,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30740
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -67990,6 +68700,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30804
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -68137,6 +68849,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30867
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -68349,6 +69063,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 30966
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -68561,6 +69277,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31065
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -68762,6 +69480,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31158
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -68963,6 +69683,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31251
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -69164,6 +69886,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31344
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -69365,6 +70089,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31437
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -69566,6 +70292,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31530
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -69767,6 +70495,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31623
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -69970,6 +70700,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31716
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -70173,6 +70905,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31809
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -70376,6 +71110,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31902
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -70579,6 +71315,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 31995
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -70782,6 +71520,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 32088
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -70985,6 +71725,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 32181
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -71188,6 +71930,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 32274
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -71391,6 +72135,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 32367
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -71594,6 +72340,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 32460
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -71795,6 +72543,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 32553
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_DRAGON_TAMER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -72008,6 +72758,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 32652
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_DRAGON_TAMER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -72221,6 +72973,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 32751
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_DRAGON_TAMER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -72434,6 +73188,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 32850
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_DRAGON_TAMER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -72647,6 +73403,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 32949
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_DRAGON_TAMER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -72860,6 +73618,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33048
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_DRAGON_TAMER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -73073,6 +73833,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33147
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -73274,6 +74036,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33240
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -73475,6 +74239,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33333
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -73676,6 +74442,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33426
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -73877,6 +74645,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33519
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -74078,6 +74848,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33612
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -74279,6 +75051,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33705
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -74480,6 +75254,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33798
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -74681,6 +75457,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33891
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -74882,6 +75660,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33984
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -75083,6 +75863,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 34077
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -75284,6 +76066,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 34170
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -75485,6 +76269,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 34263
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -75686,6 +76472,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 34356
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA | AI_FLAG_SMART_SWITCHING,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -75887,6 +76675,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 34449
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -76088,6 +76878,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 34542
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -76289,6 +77081,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 34635
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA | AI_FLAG_OMNISCIENT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -76490,6 +77284,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 34728
         .aiFlags = AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -76691,6 +77487,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 34821
         .aiFlags = AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -76896,6 +77694,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 34915
         .aiFlags = AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -77099,6 +77899,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35008
         .aiFlags = AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -77300,6 +78102,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35101
         .aiFlags = AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -77381,6 +78185,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35138
         .aiFlags = AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -77582,6 +78388,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35231
         .aiFlags = AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -77693,6 +78501,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35282
         .aiFlags = AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -77834,6 +78644,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35347
         .aiFlags = AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -78005,6 +78817,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35426
         .aiFlags = AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -78208,6 +79022,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35519
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_TERA | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -78411,6 +79227,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35612
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -78614,6 +79432,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35705
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -78817,6 +79637,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35798
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -79020,6 +79842,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35891
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -79223,6 +80047,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 35984
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -79426,6 +80252,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36077
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -79629,6 +80457,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36170
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -79832,6 +80662,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36263
         .aiFlags = AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_SMART_SWITCHING | AI_FLAG_PREDICT_SWITCH,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -80035,6 +80867,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36356
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PARASOL_LADY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80076,6 +80910,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36373
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PARASOL_LADY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -80121,6 +80957,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36390
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PARASOL_LADY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80162,6 +81000,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36407
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PARASOL_LADY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80203,6 +81043,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36424
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PARASOL_LADY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80244,6 +81086,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36441
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PARASOL_LADY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -80303,6 +81147,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36466
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PARASOL_LADY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -80362,6 +81208,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36491
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -80407,6 +81255,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36508
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80441,6 +81291,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36521
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80475,6 +81327,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36534
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -80520,6 +81374,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36551
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80554,6 +81410,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36564
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -80599,6 +81457,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36581
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80633,6 +81493,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36594
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -80689,6 +81551,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36615
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80723,6 +81587,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36628
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80757,6 +81623,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36641
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80791,6 +81659,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36654
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80825,6 +81695,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36667
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -80870,6 +81742,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36684
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80904,6 +81778,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36697
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -80949,6 +81825,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36714
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -80983,6 +81861,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36727
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -81017,6 +81897,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36740
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -81051,6 +81933,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36753
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81096,6 +81980,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36770
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -81130,6 +82016,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36783
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81175,6 +82063,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36800
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81220,6 +82110,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36817
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81265,6 +82157,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36834
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -81299,6 +82193,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36847
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -81333,6 +82229,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36860
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -81367,6 +82265,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36873
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81412,6 +82312,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36890
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -81468,6 +82370,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36911
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81527,6 +82431,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36936
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81586,6 +82492,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36961
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81631,6 +82539,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36978
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81676,6 +82586,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 36995
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81721,6 +82633,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37012
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -81775,6 +82689,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37033
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -81816,6 +82732,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37050
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -81861,6 +82779,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37067
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -81917,6 +82837,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37088
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -81973,6 +82895,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37109
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -82029,6 +82953,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37130
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -82083,6 +83009,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 37151
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TWINS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82126,6 +83054,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 37168
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TWINS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82169,6 +83099,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 37185
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TWINS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82212,6 +83144,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 37202
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TWINS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82255,6 +83189,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 37219
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TWINS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82298,6 +83234,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 37236
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TWINS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82351,6 +83289,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 37257
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TWINS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82394,6 +83334,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 37274
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TWINS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82451,6 +83393,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 37299
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TWINS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82508,6 +83452,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37324
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82551,6 +83497,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37341
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -82583,6 +83531,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37354
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82626,6 +83576,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37371
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -82680,6 +83632,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37392
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82723,6 +83677,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37409
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -82777,6 +83733,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37430
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -82820,6 +83778,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37447
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -82874,6 +83834,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37468
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -82928,6 +83890,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37489
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -82982,6 +83946,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37510
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -83036,6 +84002,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37531
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -83070,6 +84038,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37544
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83135,6 +84105,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37570
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -83167,6 +84139,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37583
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -83208,6 +84182,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37600
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PARASOL_LADY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -83247,6 +84223,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37617
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_M,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83290,6 +84268,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37634
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83337,6 +84317,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37652
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -83378,6 +84360,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37669
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83421,6 +84405,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37686
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -83453,6 +84439,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37699
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_M,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83496,6 +84484,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37716
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COLLECTOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83539,6 +84529,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37733
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COLLECTOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83582,6 +84574,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37750
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_ADMIN,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -83636,6 +84630,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37771
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COLLECTOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83679,6 +84675,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37788
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COLLECTOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83722,6 +84720,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37805
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COLLECTOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83765,6 +84765,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37822
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COLLECTOR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -83810,6 +84812,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37840
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_WALLY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -83921,6 +84925,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37889
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -84098,6 +85104,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 37964
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -84275,6 +85283,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38039
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -84452,6 +85462,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38114
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -84629,6 +85641,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38189
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -84806,6 +85820,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38264
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -84983,6 +85999,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38339
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -85160,6 +86178,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38414
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -85337,6 +86357,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38489
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -85516,6 +86538,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38564
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -85695,6 +86719,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38639
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -85874,6 +86900,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38714
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -86053,6 +87081,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38789
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -86232,6 +87262,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38864
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -86411,6 +87443,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 38939
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -86590,6 +87624,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39014
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -86769,6 +87805,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39089
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -86948,6 +87986,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39164
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -87125,6 +88165,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39239
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -87302,6 +88344,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39314
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -87479,6 +88523,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39389
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -87650,6 +88696,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39464
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -87827,6 +88875,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39539
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -88004,6 +89054,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39614
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -88181,6 +89233,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39689
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -88360,6 +89414,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39764
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -88541,6 +89597,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39840
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -88718,6 +89776,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39915
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -88896,6 +89956,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 39990
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -89075,6 +90137,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40065
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -89254,6 +90318,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40140
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -89433,6 +90499,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40215
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -89612,6 +90680,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40291
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -89773,6 +90843,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40355
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -89934,6 +91006,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40419
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -90095,6 +91169,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40483
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -90256,6 +91332,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40547
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -90417,6 +91495,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40611
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -90578,6 +91658,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40675
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -90741,6 +91823,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40739
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -90904,6 +91988,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40803
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -91067,6 +92153,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40867
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -91230,6 +92318,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40931
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -91393,6 +92483,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 40995
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -91556,6 +92648,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41059
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -91719,6 +92813,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41123
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_RANGER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -91878,6 +92974,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41186
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -92035,6 +93133,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41249
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -92196,6 +93296,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41312
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -92357,6 +93459,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41375
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -92516,6 +93620,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41438
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -92675,6 +93781,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41501
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -92718,6 +93826,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41518
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -92752,6 +93862,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41531
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -92784,6 +93896,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41544
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -92818,6 +93932,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41557
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -92850,6 +93966,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41570
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -92886,6 +94004,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41584
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -92940,6 +94060,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41606
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -92972,6 +94094,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41619
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93004,6 +94128,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41632
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93038,6 +94164,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41645
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93070,6 +94198,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41658
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GENTLEMAN,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93104,6 +94234,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41671
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HEX_MANIAC,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93136,6 +94268,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41684
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GENTLEMAN,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93168,6 +94302,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41697
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93202,6 +94338,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41710
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -93245,6 +94383,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41727
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93277,6 +94417,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41740
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93309,6 +94451,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41753
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93341,6 +94485,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41766
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93375,6 +94521,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41779
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93407,6 +94555,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41792
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -93450,6 +94600,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41809
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -93493,6 +94645,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41826
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_M,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -93538,6 +94692,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41843
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -93572,6 +94728,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41856
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AQUA_GRUNT_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -93615,6 +94773,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41873
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_ADMIN,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -93682,6 +94842,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41899
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -93725,6 +94887,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41916
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -93770,6 +94934,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41933
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -93815,6 +94981,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41951
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_LEADER_MAXIE,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -93871,6 +95039,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41973
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_LEADER_MAXIE,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -93927,6 +95097,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 41994
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -93972,6 +95144,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42011
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94017,6 +95191,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42028
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -94051,6 +95227,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42041
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -94107,6 +95285,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42062
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94152,6 +95332,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42079
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94197,6 +95379,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42096
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94242,6 +95426,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42113
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -94298,6 +95484,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42134
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -94332,6 +95520,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42147
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -94388,6 +95578,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42168
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -94422,6 +95614,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42181
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LASS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94465,6 +95659,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42198
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94508,6 +95704,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42215
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -94573,6 +95771,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42240
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94616,6 +95816,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42257
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94659,6 +95861,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42274
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94702,6 +95906,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42291
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -94734,6 +95940,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42304
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94777,6 +95985,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42321
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -94809,6 +96019,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42334
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -94852,6 +96064,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42351
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -94906,6 +96120,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42372
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_CATCHER,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -94971,6 +96187,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42397
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95014,6 +96232,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42414
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -95068,6 +96288,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42435
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95111,6 +96333,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42452
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95154,6 +96378,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42469
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -95208,6 +96434,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42490
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -95240,6 +96468,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42503
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95283,6 +96513,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42520
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -95320,6 +96552,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42535
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95373,6 +96607,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42556
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -95427,6 +96663,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42577
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -95492,6 +96730,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42602
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -95557,6 +96797,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42627
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -95622,6 +96864,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42652
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -95687,6 +96931,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 42677
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNG_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95730,6 +96976,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 42694
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNG_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95773,6 +97021,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 42711
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNG_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95816,6 +97066,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 42728
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNG_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95859,6 +97111,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 42745
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNG_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95902,6 +97156,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 42762
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNG_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95945,6 +97201,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 42779
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNG_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -95990,6 +97248,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42796
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -96024,6 +97284,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42810
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -96065,6 +97327,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42827
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -96124,6 +97388,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42852
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -96163,6 +97429,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42869
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -96220,6 +97488,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42894
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -96277,6 +97547,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42919
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -96334,6 +97606,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42944
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -96379,6 +97653,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42961
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -96433,6 +97709,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42982
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_WALLY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -96467,6 +97745,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 42996
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_WALLY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -96580,6 +97860,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43046
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_WALLY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -96693,6 +97975,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43096
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_WALLY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -96806,6 +98090,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43146
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_WALLY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -96917,6 +98203,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43195
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -96982,6 +98270,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43220
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -97047,6 +98337,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43245
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BRENDAN,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -97114,6 +98406,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43270
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -97181,6 +98475,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43295
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -97248,6 +98544,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43320
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -97313,6 +98611,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43345
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -97367,6 +98667,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43366
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -97410,6 +98712,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43383
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -97468,6 +98772,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43405
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -97513,6 +98819,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43423
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -97556,6 +98864,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43440
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -97588,6 +98898,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43453
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -97642,6 +98954,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43474
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -97685,6 +98999,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43491
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -97730,6 +99046,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43508
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -97762,6 +99080,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43521
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TWINS,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -97805,6 +99125,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43538
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SR_AND_JR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -97862,6 +99184,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43563
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SR_AND_JR,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -97919,6 +99243,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43588
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNG_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -97976,6 +99302,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43613
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_OLD_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98033,6 +99361,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43638
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_OLD_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98090,6 +99420,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43663
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_OLD_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98147,6 +99479,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43688
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_FORCE_SETUP_FIRST_TURN,
+#line 0
+        .trainerBackPic = TRAINER_PIC_OLD_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98204,6 +99538,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43713
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_OLD_COUPLE,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98261,6 +99597,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43738
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SIS_AND_BRO,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98304,6 +99642,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43755
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SIS_AND_BRO,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98347,6 +99687,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43772
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SIS_AND_BRO,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98390,6 +99732,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43789
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SIS_AND_BRO,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98433,6 +99777,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43806
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SIS_AND_BRO,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98476,6 +99822,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43823
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SIS_AND_BRO,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98519,6 +99867,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 43840
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SIS_AND_BRO,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98562,6 +99912,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43857
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -98627,6 +99979,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43882
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RICH_BOY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98676,6 +100030,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43900
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LADY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98721,6 +100077,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43917
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -98755,6 +100113,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43930
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -98787,6 +100147,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43943
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_TUBER_M,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98830,6 +100192,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43960
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEFAN_M,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98877,6 +100241,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43977
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -98922,6 +100288,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 43994
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CYCLING_TRIATHLETE_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -98954,6 +100322,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44007
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -98986,6 +100356,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44020
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99018,6 +100390,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44033
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99052,6 +100426,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44046
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AROMA_LADY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99086,6 +100462,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44059
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99118,6 +100496,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44072
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99152,6 +100532,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44085
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -99195,6 +100577,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44102
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -99238,6 +100622,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44119
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -99281,6 +100667,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44136
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMANIAC,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -99326,6 +100714,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44153
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -99369,6 +100759,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44170
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FISHERMAN,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99403,6 +100795,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44183
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99435,6 +100829,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44196
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -99489,6 +100885,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44217
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99521,6 +100919,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44230
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99553,6 +100953,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44243
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99585,6 +100987,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44256
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -99628,6 +101032,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44273
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -99671,6 +101077,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44290
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99703,6 +101111,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44303
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99735,6 +101145,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44316
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99767,6 +101179,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44329
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99799,6 +101213,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44342
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99831,6 +101247,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44355
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99863,6 +101281,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44368
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99895,6 +101315,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44381
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99929,6 +101351,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44394
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99963,6 +101387,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44407
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -99997,6 +101423,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44420
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_GRUNT_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -100029,6 +101457,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44433
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_ADMIN,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -100098,6 +101528,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44459
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100141,6 +101573,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44476
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAGMA_LEADER_MAXIE,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -100195,6 +101629,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44497
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -100229,6 +101665,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44510
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMER_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -100261,6 +101699,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44523
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100304,6 +101744,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44540
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100347,6 +101789,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44557
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -100379,6 +101823,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44570
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -100437,6 +101883,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44592
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -100491,6 +101939,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44613
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100536,6 +101986,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44630
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PICNICKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100579,6 +102031,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44647
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100622,6 +102076,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44664
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_CAMPER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100665,6 +102121,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44681
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100710,6 +102168,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44698
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_AROMA_LADY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100755,6 +102215,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44715
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100798,6 +102260,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44732
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_NINJA_BOY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100843,6 +102307,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44749
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100888,6 +102354,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44766
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100933,6 +102401,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44783
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -100976,6 +102446,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44800
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -101019,6 +102491,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44817
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_YOUNGSTER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -101064,6 +102538,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44834
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUNNING_TRIATHLETE_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -101098,6 +102574,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44847
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -101132,6 +102610,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44860
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -101168,6 +102648,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44874
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_EXPERT_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -101211,6 +102693,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44891
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -101243,6 +102727,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44904
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_KINDLER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -101288,6 +102774,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44921
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PARASOL_LADY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -101322,6 +102810,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44935
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_M,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -101362,6 +102852,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44951
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BATTLE_GIRL,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -101405,6 +102897,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44968
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -101448,6 +102942,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 44985
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -101537,6 +103033,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 45018
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -101628,6 +103126,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 45052
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -101673,6 +103173,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 45069
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -101718,6 +103220,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 45086
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_MAY,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -101765,6 +103269,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45104
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_ROXANNE,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -101866,6 +103372,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45146
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_ROXANNE,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -101985,6 +103493,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45196
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_ROXANNE,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -102104,6 +103614,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45246
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_ROXANNE,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -102239,6 +103751,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45304
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_BRAWLY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -102338,6 +103852,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45346
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_BRAWLY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -102437,6 +103953,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45388
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_BRAWLY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -102554,6 +104072,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45438
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_BRAWLY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -102689,6 +104209,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45496
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_WATTSON,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -102788,6 +104310,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45538
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_WATTSON,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -102905,6 +104429,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45588
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_WATTSON,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -103022,6 +104548,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45638
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_WATTSON,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -103159,6 +104687,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45696
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_FLANNERY,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -103262,6 +104792,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45738
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_FLANNERY,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -103383,6 +104915,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45788
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_FLANNERY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -103522,6 +105056,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45846
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_FLANNERY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -103659,6 +105195,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45904
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_NORMAN,
         .partySize = 4,
         .party = (const struct TrainerMon[])
         {
@@ -103758,6 +105296,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45946
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_NORMAN,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -103875,6 +105415,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 45996
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_NORMAN,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -103992,6 +105534,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46046
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_NORMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -104129,6 +105673,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46104
         .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_RISKY,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_WINONA,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -104248,6 +105794,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46154
         .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_RISKY,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_WINONA,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -104385,6 +105933,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46212
         .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_RISKY,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_WINONA,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -104522,6 +106072,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46270
         .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_RISKY,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_WINONA,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -104657,6 +106209,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46328
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_TATE_AND_LIZA,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -104776,6 +106330,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46378
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_TATE_AND_LIZA,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -104913,6 +106469,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46436
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_TATE_AND_LIZA,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -105050,6 +106608,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46494
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_TATE_AND_LIZA,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -105187,6 +106747,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46552
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_JUAN,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -105304,6 +106866,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46602
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_JUAN,
         .partySize = 5,
         .party = (const struct TrainerMon[])
         {
@@ -105421,6 +106985,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46652
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_JUAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -105556,6 +107122,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46710
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEADER_JUAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -105689,6 +107257,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 46767
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BUG_MANIAC,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -105744,6 +107314,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 46790
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BIRD_KEEPER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -105778,6 +107350,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 46804
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_STEVEN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -105988,6 +107562,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 46903
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SALON_MAIDEN_ANABEL,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -106020,6 +107596,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 46916
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_DOME_ACE_TUCKER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -106052,6 +107630,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 46929
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PALACE_MAVEN_SPENSER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -106086,6 +107666,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 46942
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_ARENA_TYCOON_GRETA,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -106118,6 +107700,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 46955
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FACTORY_HEAD_NOLAND,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -106152,6 +107736,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 46968
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PIKE_QUEEN_LUCY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -106184,6 +107770,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 46981
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PYRAMID_KING_BRANDON,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -106216,6 +107804,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 46994
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -106259,6 +107849,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47011
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -106313,6 +107905,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47032
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -106367,6 +107961,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47053
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RUIN_MANIAC,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -106421,6 +108017,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47074
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -106475,6 +108073,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47095
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -106529,6 +108129,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47116
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -106583,6 +108185,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47137
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SAILOR,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -106637,6 +108241,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47158
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -106829,6 +108435,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47245
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -107030,6 +108638,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47338
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -107231,6 +108841,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47431
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -107432,6 +109044,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47524
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -107620,6 +109234,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47611
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -107808,6 +109424,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47698
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -107996,6 +109614,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47785
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BLACK_BELT,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -108188,6 +109808,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47873
         .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
@@ -108235,6 +109857,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47891
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -108428,6 +110052,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 47979
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -108621,6 +110247,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48067
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_COOLTRAINER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -108810,6 +110438,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48154
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -108998,6 +110628,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48241
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -109186,6 +110818,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48328
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -109373,6 +111007,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48415
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GUITARIST,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -109560,6 +111196,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48502
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -109749,6 +111387,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48589
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -109938,6 +111578,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48676
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -110127,6 +111769,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48763
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_HIKER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -110318,6 +111962,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48850
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -110509,6 +112155,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 48937
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -110700,6 +112348,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 49024
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -110891,6 +112541,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 49111
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_POKEMON_BREEDER_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -111082,6 +112734,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 49198
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -111285,6 +112939,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 49291
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -111488,6 +113144,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 49384
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -111691,6 +113349,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 49477
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_BEAUTY,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -111894,6 +113554,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 49570
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_F,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -112104,6 +113766,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 49669
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_PSYCHIC_M,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -112317,6 +113981,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 49768
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_GENTLEMAN,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -112531,6 +114197,8 @@ F_TRAINER_FEMALE |
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 49868
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_RISKY | AI_FLAG_SMART_SWITCHING | AI_FLAG_OMNISCIENT | AI_FLAG_PREFER_HIGHEST_DAMAGE_MOVE | AI_FLAG_PREDICT_SWITCH | AI_FLAG_SMART_TERA,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RED,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -112744,6 +114412,8 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 49966
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 0
+        .trainerBackPic = TRAINER_PIC_LEAF,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -112774,6 +114444,8 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 49978
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RS_BRENDAN,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -112806,6 +114478,8 @@ F_TRAINER_FEMALE |
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 49990
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 0
+        .trainerBackPic = TRAINER_PIC_RS_MAY,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {

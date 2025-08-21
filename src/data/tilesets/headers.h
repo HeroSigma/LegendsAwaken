@@ -2161,25 +2161,3 @@ const struct Tileset gTileset_Newturf =
     .metatileAttributes = gMetatileAttributes_Newturf,
     .callback = NULL,
 };
-
-const struct Tileset gTileset_192 =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_192,
-    .palettes = gTilesetPalettes_192,
-    .metatiles = gMetatiles_192,
-    .metatileAttributes = gMetatileAttributes_192,
-    .callback = NULL,
-};
-
-const struct Tileset gTileset_195 =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_195,
-    .palettes = gTilesetPalettes_195,
-    .metatiles = gMetatiles_195,
-    .metatileAttributes = gMetatileAttributes_195,
-    .callback = NULL,
-};

@@ -2956,6 +2956,7 @@ static void TryLegendPlateJudgmentTypeChange(void)
     u8 currentType = gBattleMons[gBattlerAttacker].types[0];
     uq4_12_t currentMult = CalcTypeEffectivenessMultiplierHelper(MOVE_JUDGMENT, currentType,
                                                                 gBattlerAttacker, gBattlerTarget,
+                                                                GetBattlerAbility(gBattlerAttacker),
                                                                 GetBattlerAbility(gBattlerTarget), FALSE);
     uq4_12_t bestMult = currentMult;
     u8 bestType = currentType;
@@ -2966,6 +2967,7 @@ static void TryLegendPlateJudgmentTypeChange(void)
             continue;
         uq4_12_t mult = CalcTypeEffectivenessMultiplierHelper(MOVE_JUDGMENT, type,
                                                               gBattlerAttacker, gBattlerTarget,
+                                                              GetBattlerAbility(gBattlerAttacker),
                                                               GetBattlerAbility(gBattlerTarget), FALSE);
         if (mult > bestMult && mult >= UQ_4_12(2.0))
         {

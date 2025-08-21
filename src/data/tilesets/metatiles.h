@@ -570,9 +570,3 @@ const u16 gMetatileAttributes_Champion[] = INCBIN_U16("data/tilesets/secondary/c
 
 const u16 gMetatiles_Newturf[] = INCBIN_U16("data/tilesets/secondary/newturf/metatiles.bin");
 const u16 gMetatileAttributes_Newturf[] = INCBIN_U16("data/tilesets/secondary/newturf/metatile_attributes.bin");
-
-const u16 gMetatiles_192[] = INCBIN_U16("data/tilesets/primary/192/metatiles.bin");
-const u16 gMetatileAttributes_192[] = INCBIN_U16("data/tilesets/primary/192/metatile_attributes.bin");
-
-const u16 gMetatiles_195[] = INCBIN_U16("data/tilesets/secondary/195/metatiles.bin");
-const u16 gMetatileAttributes_195[] = INCBIN_U16("data/tilesets/secondary/195/metatile_attributes.bin");
