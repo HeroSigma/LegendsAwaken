@@ -42,6 +42,8 @@ extern const struct SpriteTemplate gFieldEffectObjectTemplate_SpotTracks;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_CaveDust;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_ORASDowsingBrendan;
 extern const struct SpriteTemplate gFieldEffectObjectTemplate_ORASDowsingMay;
+extern const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbBlob;
+extern const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbDust;
 
 const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[] = {
     [FLDEFFOBJ_SHADOW_S]              = &gFieldEffectObjectTemplate_ShadowSmall,
