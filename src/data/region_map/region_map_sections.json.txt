@@ -4,13 +4,13 @@
 
 ## for map_section in map_sections
 {% if existsIn(map_section, "name") %}
-{% if isEmptyString(getVar(map_section.name)) and not existsIn(map_section, "name_clone") %}{{ setVar(map_section.name, map_section.map_section) }}{% endif %}
+{% if isEmptyString(getVar(map_section.name)) and not existsIn(map_section, "name_clone") %}{% if existsIn(map_section, "map_section") %}{{ setVar(map_section.name, map_section.map_section) }}{% else %}{{ setVar(map_section.name, map_section.id) }}{% endif %}{% endif %}
 {% endif %}
 ## endfor
 
 ## for map_section in map_sections
 {% if existsIn(map_section, "name") %}
-{% if getVar(map_section.name) == map_section.map_section %}
+{% if existsIn(map_section, "map_section") and getVar(map_section.name) == map_section.map_section or (not existsIn(map_section, "map_section") and getVar(map_section.name) == map_section.id) %}
 static const u8 sMapName_{{ cleanString(map_section.name) }}[] = _("{{ map_section.name }}");
 {% endif %}
 {% if existsIn(map_section, "name_clone") %}
@@ -26,28 +26,6 @@ const struct RegionMapLocation gRegionMapEntries[] = {
         .x = {{ map_section.x }},
 {% else %}
         .x = 0,
-
-const struct RegionMapLocation gRegionMapEntries_Johto[] = {
-## for map_section in map_sections_johto
-{% if existsIn(map_section, "name") %}
-    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
-{% endif %}
-## endfor
-};
-
-const struct RegionMapLocation gRegionMapEntries_Kanto[] = {
-## for map_section in map_sections_kanto
-{% if existsIn(map_section, "name") %}
-    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
-{% endif %}
-## endfor
-};
-
-const struct RegionMapLocation gRegionMapEntries_Sevii[] = {
-## for map_section in map_sections_sevii
-{% if existsIn(map_section, "name") %}
-    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
-
 {% endif %}
 {% if existsIn(map_section, "y") %}
         .y = {{ map_section.y }},
@@ -70,6 +48,38 @@ const struct RegionMapLocation gRegionMapEntries_Sevii[] = {
         .name = (const u8[])_(""),
 {% endif %}
     },
+## endfor
+};
+
+const struct RegionMapLocation gRegionMapEntries_Johto[] = {
+## for map_section in map_sections_johto
+{% if existsIn(map_section, "name") %}
+    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
+{% endif %}
+## endfor
+};
+
+const struct RegionMapLocation gRegionMapEntries_Kanto[] = {
+## for map_section in map_sections_kanto
+{% if existsIn(map_section, "name") %}
+    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
+{% endif %}
+## endfor
+};
+
+const struct RegionMapLocation gRegionMapEntries_Sevii[] = {
+## for map_section in map_sections_sevii
+{% if existsIn(map_section, "name") %}
+    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
+{% endif %}
+## endfor
+};
+
+const struct RegionMapLocation gRegionMapEntries_Sinnoh[] = {
+## for map_section in map_sections_sinnoh
+{% if existsIn(map_section, "name") %}
+    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
+{% endif %}
 ## endfor
 };
 

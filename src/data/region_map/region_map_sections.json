@@ -9339,5 +9339,31 @@
       "x": 9,
       "y": 0
     }
+  ],
+  "map_sections_sinnoh": [
+    {
+      "height": 1,
+      "map_section": "MAPSEC_TWINLEAF_TOWN",
+      "name": "TWINLEAF TOWN",
+      "width": 1,
+      "x": 2,
+      "y": 14
+    },
+    {
+      "height": 1,
+      "map_section": "MAPSEC_SANDGEM_TOWN",
+      "name": "SANDGEM TOWN",
+      "width": 1,
+      "x": 4,
+      "y": 13
+    },
+    {
+      "height": 1,
+      "map_section": "MAPSEC_JUBILIFE_CITY",
+      "name": "JUBILIFE CITY",
+      "width": 2,
+      "x": 3,
+      "y": 11
+    }
   ]
 }
