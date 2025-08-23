@@ -570,3 +570,15 @@ const u16 gMetatileAttributes_Champion[] = INCBIN_U16("data/tilesets/secondary/c
 
 const u16 gMetatiles_Newturf[] = INCBIN_U16("data/tilesets/secondary/newturf/metatiles.bin");
 const u16 gMetatileAttributes_Newturf[] = INCBIN_U16("data/tilesets/secondary/newturf/metatile_attributes.bin");
+
+const u16 gMetatiles_JubiPrime[] = INCBIN_U16("data/tilesets/primary/jubi_prime/metatiles.bin");
+const u16 gMetatileAttributes_JubiPrime[] = INCBIN_U16("data/tilesets/primary/jubi_prime/metatile_attributes.bin");
+
+const u16 gMetatiles_JubiSecond[] = INCBIN_U16("data/tilesets/secondary/jubi_second/metatiles.bin");
+const u16 gMetatileAttributes_JubiSecond[] = INCBIN_U16("data/tilesets/secondary/jubi_second/metatile_attributes.bin");
+
+const u16 gMetatiles_world[] = INCBIN_U16("data/tilesets/secondary/world/metatiles.bin");
+const u16 gMetatileAttributes_world[] = INCBIN_U16("data/tilesets/secondary/world/metatile_attributes.bin");
+
+const u16 gMetatiles_distortion[] = INCBIN_U16("data/tilesets/primary/distortion/metatiles.bin");
+const u16 gMetatileAttributes_distortion[] = INCBIN_U16("data/tilesets/primary/distortion/metatile_attributes.bin");

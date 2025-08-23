@@ -12250,6 +12250,36 @@
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/TimelessWood/border.bin",
       "blockdata_filepath": "data/layouts/TimelessWood/map.bin"
+    },
+    {
+      "id": "LAYOUT_JUBI",
+      "name": "Jubi",
+      "width": 66,
+      "height": 54,
+      "primary_tileset": "gTileset_JubiPrime",
+      "secondary_tileset": "gTileset_JubiSecond",
+      "border_filepath": "data/layouts/Jubi/border.bin",
+      "blockdata_filepath": "data/layouts/Jubi/map.bin"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD",
+      "name": "DistortionWorld",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_distortion",
+      "secondary_tileset": "gTileset_world",
+      "border_filepath": "data/layouts/DistortionWorld/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld/map.bin"
+    },
+    {
+      "id": "LAYOUT_DISTORTION_WORLD1",
+      "name": "DistortionWorld1",
+      "width": 50,
+      "height": 41,
+      "primary_tileset": "gTileset_distortion",
+      "secondary_tileset": "gTileset_world",
+      "border_filepath": "data/layouts/DistortionWorld1/border.bin",
+      "blockdata_filepath": "data/layouts/DistortionWorld1/map.bin"
     }
   ]
 }
