@@ -1,6 +1,6 @@
 {
   "id": "MAP_NAVEL_ROCK_PEAK",
-  "name": "NavelRock Peak",
+  "name": "NavelRock_Peak",
   "layout": "LAYOUT_NAVEL_ROCK_PEAK",
   "music": "MUS_RG_SEVII_CAVE",
   "region_map_section": "MAPSEC_NAVEL_ROCK",
