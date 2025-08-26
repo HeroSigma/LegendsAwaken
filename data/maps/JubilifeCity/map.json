@@ -2,7 +2,7 @@
   "id": "MAP_JUBILIFE_CITY",
   "name": "JubilifeCity",
   "layout": "LAYOUT_JUBILIFE_CITY",
-  "music": "MUS_DP_JUBILIFE_DAY",
+  "music": "MUS_LITTLEROOT",
   "region_map_section": "MAPSEC_JUBILIFE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
