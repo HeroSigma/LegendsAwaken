@@ -1968,10 +1968,10 @@ const struct Tileset gTileset_general_jubilife =
 {
     .isCompressed = TRUE,
     .isSecondary = FALSE,
-    .tiles = gTilesetTiles_general_jubilife,
-    .palettes = gTilesetPalettes_general_jubilife,
-    .metatiles = gMetatiles_general_jubilife,
-    .metatileAttributes = gMetatileAttributes_general_jubilife,
+    .tiles = gTilesetTiles_General_Jubilife,
+    .palettes = gTilesetPalettes_General_Jubilife,
+    .metatiles = gMetatiles_General_Jubilife,
+    .metatileAttributes = gMetatileAttributes_General_Jubilife,
     .callback = NULL,
 };
 
@@ -1979,10 +1979,10 @@ const struct Tileset gTileset_jubilife_city_secondary =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_jubilife_city_secondary,
-    .palettes = gTilesetPalettes_jubilife_city_secondary,
-    .metatiles = gMetatiles_jubilife_city_secondary,
-    .metatileAttributes = gMetatileAttributes_jubilife_city_secondary,
+    .tiles = gTilesetTiles_JubilifeCitySecondary,
+    .palettes = gTilesetPalettes_JubilifeCitySecondary,
+    .metatiles = gMetatiles_JubilifeCitySecondary,
+    .metatileAttributes = gMetatileAttributes_JubilifeCitySecondary,
     .callback = NULL,
 };
 
