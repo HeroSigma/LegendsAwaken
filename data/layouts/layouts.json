@@ -10857,7 +10857,7 @@
       "width": 64,
       "height": 32,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Jubilife",
+      "secondary_tileset": "gTileset_JubilifeCitySecondary",
       "border_filepath": "data/layouts/Route207/border.bin",
       "blockdata_filepath": "data/layouts/Route207/map.bin"
     },
@@ -10917,7 +10917,7 @@
       "width": 36,
       "height": 28,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Jubilife",
+      "secondary_tileset": "gTileset_JubilifeCitySecondary",
       "border_filepath": "data/layouts/Route211_West/border.bin",
       "blockdata_filepath": "data/layouts/Route211_West/map.bin"
     },
@@ -10997,7 +10997,7 @@
       "width": 64,
       "height": 32,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Jubilife",
+      "secondary_tileset": "gTileset_JubilifeCitySecondary",
       "border_filepath": "data/layouts/Route218/border.bin",
       "blockdata_filepath": "data/layouts/Route218/map.bin"
     },
@@ -11227,7 +11227,7 @@
       "width": 24,
       "height": 26,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Jubilife",
+      "secondary_tileset": "gTileset_JubilifeCitySecondary",
       "border_filepath": "data/layouts/OreburghMine_B1F/border.bin",
       "blockdata_filepath": "data/layouts/OreburghMine_B1F/map.bin"
     },
