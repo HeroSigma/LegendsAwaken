@@ -2002,18 +2002,21 @@ u8 *GetMapName(u8 *dest, u16 regionMapId, u16 padLength)
     }
     else if (regionMapId < MAPSEC_NONE)
     {
-        //Kanto
-        if(mapNumber == 0)
+        // Kanto
+        if (mapNumber == 0)
             str = StringCopy(dest, gRegionMapEntries_Kanto[regionMapId].name);
-        //Johto
-        else if(mapNumber == 1)
+        // Johto
+        else if (mapNumber == 1)
             str = StringCopy(dest, gRegionMapEntries_Johto[regionMapId].name);
-        //Hoenn
-        else if(mapNumber == 2)
-            str = StringCopy(dest, gRegionMapEntries[regionMapId].name);
-        //Sevii
-        else
+        // Sevii Islands
+        else if (mapNumber == 3)
             str = StringCopy(dest, gRegionMapEntries_Sevii[regionMapId].name);
+        // Sinnoh
+        else if (mapNumber == 4)
+            str = StringCopy(dest, gRegionMapEntries_Sinnoh[regionMapId].name);
+        // Hoenn and any other regions fall back to the main entries table
+        else
+            str = StringCopy(dest, gRegionMapEntries[regionMapId].name);
     }
     else
     {
