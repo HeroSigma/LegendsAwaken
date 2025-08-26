@@ -32,7 +32,7 @@
   "warp_events": [
     {
       "x": 10,
-      "y": 29,
+      "y": 30,
       "elevation": 3,
       "dest_map": "MAP_METEOR_FALLS_1F_1R",
       "dest_warp_id": "5"

@@ -1948,3 +1948,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TimelessWood/scripts.inc"
 
 	.include "data/maps/TournamentIsland/scripts.inc"
+
+	.include "data/maps/NAVEL_ROCK_PEAK/scripts.inc"

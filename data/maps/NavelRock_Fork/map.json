@@ -16,24 +16,31 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 4,
-      "y": 6,
+      "x": 3,
+      "y": 16,
       "elevation": 3,
       "dest_map": "MAP_NAVEL_ROCK_UP1",
       "dest_warp_id": "0"
     },
     {
-      "x": 11,
-      "y": 79,
+      "x": 13,
+      "y": 81,
       "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_B1F",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_NAVEL_ROCK_ENTRANCE",
+      "dest_warp_id": "0"
     },
     {
-      "x": 22,
+      "x": 13,
       "y": 6,
       "elevation": 3,
       "dest_map": "MAP_NAVEL_ROCK_DOWN01",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
       "dest_warp_id": "0"
     }
   ],

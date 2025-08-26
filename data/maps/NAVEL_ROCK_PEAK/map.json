@@ -1,0 +1,28 @@
+{
+  "id": "MAP_NAVEL_ROCK_PEAK",
+  "name": "NavelRock Peak",
+  "layout": "LAYOUT_NAVEL_ROCK_PEAK",
+  "music": "MUS_RG_SEVII_CAVE",
+  "region_map_section": "MAPSEC_NAVEL_ROCK",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 19,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_warp_id": "11"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

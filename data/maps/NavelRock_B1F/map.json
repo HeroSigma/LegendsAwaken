@@ -17,17 +17,87 @@
   "warp_events": [
     {
       "x": 4,
-      "y": 3,
+      "y": 4,
       "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_ENTRANCE",
+      "dest_map": "MAP_NAVEL_ROCK_FORK",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 20,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
       "dest_warp_id": "0"
     },
     {
       "x": 18,
-      "y": 9,
-      "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_FORK",
-      "dest_warp_id": "1"
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 20,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_PEAK",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
