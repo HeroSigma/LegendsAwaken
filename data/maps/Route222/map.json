@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_SUNYSHORE_CITY",
-      "offset": -25,
+      "offset": -22,
       "direction": "right"
     },
     {
       "map": "MAP_VALOR_LAKEFRONT",
-      "offset": -36,
+      "offset": -26,
       "direction": "left"
     }
   ],

@@ -166,7 +166,8 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "TimelessWood",
-    "TournamentIsland"
+    "TournamentIsland",
+    "Route213B"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_PlayersHouse_1F",
@@ -1486,7 +1487,8 @@
     "AcuityLakefront",
     "FightArea",
     "SurvivalArea",
-    "ResortArea"
+    "ResortArea",
+    "Springpath"
   ],
   "gMapGroup_SpecialAreasSinnoh": [
     "LakeVerity",

@@ -15,17 +15,17 @@
   "connections": [
     {
       "map": "MAP_ROUTE205_NORTH",
-      "offset": 0,
+      "offset": 3,
       "direction": "left"
     },
     {
-      "map": "MAP_ROUTE211_WEST",
-      "offset": 0,
+      "map": "MAP_ROUTE211_EAST",
+      "offset": 2,
       "direction": "right"
     },
     {
       "map": "MAP_ROUTE206",
-      "offset": 1,
+      "offset": 2,
       "direction": "down"
     }
   ],

@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_ROUTE210_SOUTH",
-      "offset": 57,
-      "direction": "down"
+      "offset": -16,
+      "direction": "right"
     },
     {
       "map": "MAP_CELESTIC_TOWN",
-      "offset": -5,
+      "offset": -4,
       "direction": "left"
     }
   ],

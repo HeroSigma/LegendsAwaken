@@ -1950,3 +1950,7 @@ EventScript_VsSeekerChargingDone::
 .include "data/maps/TournamentIsland/scripts.inc"
 
 .include "data/maps/NavelRock_Peak/scripts.inc"
+
+	.include "data/maps/Route213B/scripts.inc"
+
+	.include "data/maps/Springpath/scripts.inc"

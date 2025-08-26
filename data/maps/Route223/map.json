@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_SUNYSHORE_CITY",
-      "offset": 2,
+      "offset": -9,
       "direction": "down"
     },
     {
       "map": "MAP_POKMON_LEAGUE",
-      "offset": -1,
+      "offset": 0,
       "direction": "up"
     }
   ],

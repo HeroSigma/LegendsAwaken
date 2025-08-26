@@ -15,13 +15,18 @@
   "connections": [
     {
       "map": "MAP_VEILSTONE_CITY",
-      "offset": -26,
+      "offset": -28,
       "direction": "up"
     },
     {
       "map": "MAP_VALOR_LAKEFRONT",
-      "offset": -24,
+      "offset": -32,
       "direction": "down"
+    },
+    {
+      "map": "MAP_SPRINGPATH",
+      "offset": 62,
+      "direction": "right"
     }
   ],
   "object_events": [],

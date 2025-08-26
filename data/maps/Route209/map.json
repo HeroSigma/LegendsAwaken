@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_HEARTHOME_CITY",
-      "offset": 17,
+      "offset": 9,
       "direction": "left"
     },
     {
       "map": "MAP_SOLACEON_TOWN",
-      "offset": 37,
+      "offset": 36,
       "direction": "up"
     }
   ],

@@ -15,13 +15,13 @@
   "connections": [
     {
       "map": "MAP_PASTORIA_CITY",
-      "offset": -1,
+      "offset": 6,
       "direction": "left"
     },
     {
-      "map": "MAP_VALOR_LAKEFRONT",
-      "offset": 40,
-      "direction": "up"
+      "map": "MAP_ROUTE213B",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [],

@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ETERNA_CITY",
-      "offset": -1,
+      "offset": -2,
       "direction": "up"
     },
     {

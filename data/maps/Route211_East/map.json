@@ -14,8 +14,13 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+      "map": "MAP_ETERNA_CITY",
+      "offset": -2,
+      "direction": "left"
+    },
+    {
       "map": "MAP_CELESTIC_TOWN",
-      "offset": -3,
+      "offset": -1,
       "direction": "right"
     }
   ],

@@ -645,3 +645,12 @@ const u16 gMetatileAttributes_NavelRockNew[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_NavelRockNewTop[] = INCBIN_U16("data/tilesets/secondary/navel_rock_new_top/metatiles.bin");
 const u16 gMetatileAttributes_NavelRockNewTop[] = INCBIN_U16("data/tilesets/secondary/navel_rock_new_top/metatile_attributes.bin");
+
+const u16 gMetatiles_Route206[] = INCBIN_U16("data/tilesets/secondary/route_206/metatiles.bin");
+const u16 gMetatileAttributes_Route206[] = INCBIN_U16("data/tilesets/secondary/route_206/metatile_attributes.bin");
+
+const u16 gMetatiles_JubilifePrimary[] = INCBIN_U16("data/tilesets/primary/jubilife_primary/metatiles.bin");
+const u16 gMetatileAttributes_JubilifePrimary[] = INCBIN_U16("data/tilesets/primary/jubilife_primary/metatile_attributes.bin");
+
+const u16 gMetatiles_JubilifeSecondary[] = INCBIN_U16("data/tilesets/secondary/jubilife_secondary/metatiles.bin");
+const u16 gMetatileAttributes_JubilifeSecondary[] = INCBIN_U16("data/tilesets/secondary/jubilife_secondary/metatile_attributes.bin");

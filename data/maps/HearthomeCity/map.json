@@ -20,13 +20,18 @@
     },
     {
       "map": "MAP_ROUTE209",
-      "offset": -17,
+      "offset": -9,
       "direction": "right"
     },
     {
       "map": "MAP_ROUTE212_NORTH",
-      "offset": -4,
+      "offset": 2,
       "direction": "down"
+    },
+    {
+      "map": "MAP_AMITY_SQUARE",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [],

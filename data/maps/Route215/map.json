@@ -15,12 +15,12 @@
   "connections": [
     {
       "map": "MAP_ROUTE210_SOUTH",
-      "offset": -26,
+      "offset": -79,
       "direction": "left"
     },
     {
       "map": "MAP_VEILSTONE_CITY",
-      "offset": 1,
+      "offset": -1,
       "direction": "right"
     }
   ],

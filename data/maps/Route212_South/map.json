@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_PASTORIA_CITY",
-      "offset": -32,
+      "offset": -28,
       "direction": "right"
     },
     {

@@ -15,17 +15,17 @@
   "connections": [
     {
       "map": "MAP_SOLACEON_TOWN",
-      "offset": 6,
+      "offset": 5,
       "direction": "down"
     },
     {
       "map": "MAP_ROUTE210_NORTH",
-      "offset": -57,
-      "direction": "up"
+      "offset": 16,
+      "direction": "left"
     },
     {
       "map": "MAP_ROUTE215",
-      "offset": 26,
+      "offset": 79,
       "direction": "right"
     }
   ],
