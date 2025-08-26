@@ -10644,10 +10644,10 @@
     {
       "id": "LAYOUT_JUBILIFE_CITY",
       "name": "JubilifeCity_Layout",
-      "width": 72,
-      "height": 78,
-      "primary_tileset": "gTileset_General_Jubilife",
-      "secondary_tileset": "gTileset_JubilifeCitySecondary",
+      "width": 66,
+      "height": 54,
+      "primary_tileset": "gTileset_JubilifePrimary",
+      "secondary_tileset": "gTileset_JubilifeSecondary",
       "border_filepath": "data/layouts/JubilifeCity/border.bin",
       "blockdata_filepath": "data/layouts/JubilifeCity/map.bin"
     },
@@ -10796,8 +10796,8 @@
       "name": "Route202_Layout",
       "width": 38,
       "height": 36,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_JubilifePrimary",
+      "secondary_tileset": "gTileset_JubilifeSecondary",
       "border_filepath": "data/layouts/ROUTE202A/border.bin",
       "blockdata_filepath": "data/layouts/ROUTE202A/map.bin"
     },
@@ -10806,8 +10806,8 @@
       "name": "Route203_Layout",
       "width": 62,
       "height": 30,
-      "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_JubilifePrimary",
+      "secondary_tileset": "gTileset_JubilifeSecondary",
       "border_filepath": "data/layouts/ROUTE203A/border.bin",
       "blockdata_filepath": "data/layouts/ROUTE203A/map.bin"
     },
@@ -10817,7 +10817,7 @@
       "width": 36,
       "height": 61,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_SinnohSecon",
       "border_filepath": "data/layouts/ROUTE204A/border.bin",
       "blockdata_filepath": "data/layouts/ROUTE204A/map.bin"
     },
@@ -10855,19 +10855,19 @@
       "id": "LAYOUT_ROUTE207",
       "name": "Route207_Layout",
       "width": 64,
-      "height": 32,
+      "height": 31,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_JubilifeCitySecondary",
+      "secondary_tileset": "gTileset_Ore2",
       "border_filepath": "data/layouts/Route207/border.bin",
       "blockdata_filepath": "data/layouts/Route207/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE208",
       "name": "Route208_Layout",
-      "width": 68,
-      "height": 38,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "width": 64,
+      "height": 33,
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_JubilifeSecondary",
       "border_filepath": "data/layouts/Route208/border.bin",
       "blockdata_filepath": "data/layouts/Route208/map.bin"
     },
@@ -10876,8 +10876,8 @@
       "name": "Route209_Layout",
       "width": 64,
       "height": 67,
-      "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_209",
+      "primary_tileset": "gTileset_JubilifePrimary",
+      "secondary_tileset": "gTileset_JubilifeSecondary",
       "border_filepath": "data/layouts/Route209/border.bin",
       "blockdata_filepath": "data/layouts/Route209/map.bin"
     },
@@ -10967,27 +10967,27 @@
       "width": 96,
       "height": 32,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Celesti",
+      "secondary_tileset": "gTileset_Ore2",
       "border_filepath": "data/layouts/Route215/border.bin",
       "blockdata_filepath": "data/layouts/Route215/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE216",
       "name": "Route216_Layout",
-      "width": 96,
-      "height": 40,
+      "width": 95,
+      "height": 33,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Snowpoint",
+      "secondary_tileset": "gTileset_Snow",
       "border_filepath": "data/layouts/Route216/border.bin",
       "blockdata_filepath": "data/layouts/Route216/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE217",
       "name": "Route217_Layout",
-      "width": 36,
-      "height": 118,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Snowpoint",
+      "width": 32,
+      "height": 88,
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_Snow",
       "border_filepath": "data/layouts/Route217/border.bin",
       "blockdata_filepath": "data/layouts/Route217/map.bin"
     },
@@ -11144,10 +11144,10 @@
     {
       "id": "LAYOUT_ACUITY_LAKEFRONT",
       "name": "AcuityLakefront_Layout",
-      "width": 64,
-      "height": 66,
+      "width": 60,
+      "height": 50,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Snowpoint",
+      "secondary_tileset": "gTileset_Snow",
       "border_filepath": "data/layouts/AcuityLakefront/border.bin",
       "blockdata_filepath": "data/layouts/AcuityLakefront/map.bin"
     },
@@ -11184,30 +11184,30 @@
     {
       "id": "LAYOUT_LAKE_VERITY",
       "name": "LakeVerity_Layout",
-      "width": 48,
+      "width": 50,
       "height": 46,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/LakeVerity/border.bin",
       "blockdata_filepath": "data/layouts/LakeVerity/map.bin"
     },
     {
       "id": "LAYOUT_LAKE_VALOR",
       "name": "LakeValor_Layout",
-      "width": 48,
-      "height": 52,
+      "width": 44,
+      "height": 50,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Valor",
+      "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/LakeValor/border.bin",
       "blockdata_filepath": "data/layouts/LakeValor/map.bin"
     },
     {
       "id": "LAYOUT_LAKE_ACUITY",
       "name": "LakeAcuity_Layout",
-      "width": 48,
-      "height": 52,
+      "width": 44,
+      "height": 48,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Snowpoint",
+      "secondary_tileset": "gTileset_Snow",
       "border_filepath": "data/layouts/LakeAcuity/border.bin",
       "blockdata_filepath": "data/layouts/LakeAcuity/map.bin"
     },
@@ -11264,10 +11264,10 @@
     {
       "id": "LAYOUT_ETERNA_FOREST",
       "name": "EternaForest_Layout",
-      "width": 82,
-      "height": 84,
+      "width": 70,
+      "height": 64,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_Valor",
+      "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/EternaForest/border.bin",
       "blockdata_filepath": "data/layouts/EternaForest/map.bin"
     },
@@ -12350,6 +12350,116 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Springpath/border.bin",
       "blockdata_filepath": "data/layouts/Springpath/map.bin"
+    },
+    {
+      "id": "LAYOUT_SSPRING",
+      "name": "SSpring",
+      "width": 46,
+      "height": 58,
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/SSpring/border.bin",
+      "blockdata_filepath": "data/layouts/SSpring/map.bin"
+    },
+    {
+      "id": "LAYOUT_SEND_OFF_SPRING",
+      "name": "SendOffSpring_Layout",
+      "width": 46,
+      "height": 58,
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/SendOffSpring/border.bin",
+      "blockdata_filepath": "data/layouts/SendOffSpring/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_VERITY_CAVE",
+      "name": "LakeVerityCave_Layout",
+      "width": 29,
+      "height": 22,
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_NewCave",
+      "border_filepath": "data/layouts/LakeVerityCave/border.bin",
+      "blockdata_filepath": "data/layouts/LakeVerityCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_VALOR_CAVE",
+      "name": "LakeValorCave_Layout",
+      "width": 29,
+      "height": 22,
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_NewCave",
+      "border_filepath": "data/layouts/LakeValorCave/border.bin",
+      "blockdata_filepath": "data/layouts/LakeValorCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_ACUITY_CAVE",
+      "name": "LakeAcuityCave_Layout",
+      "width": 29,
+      "height": 22,
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_NewCave",
+      "border_filepath": "data/layouts/LakeAcuityCave/border.bin",
+      "blockdata_filepath": "data/layouts/LakeAcuityCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETERNA_FOREST_A",
+      "name": "EternaForestA_Layout",
+      "width": 21,
+      "height": 16,
+      "primary_tileset": "gTileset_JubilifePrimary",
+      "secondary_tileset": "gTileset_JubilifeSecondary",
+      "border_filepath": "data/layouts/EternaForestA/border.bin",
+      "blockdata_filepath": "data/layouts/EternaForestA/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_GATE",
+      "name": "OreburghGate_Layout",
+      "width": 28,
+      "height": 23,
+      "primary_tileset": "gTileset_NewCavePrime",
+      "secondary_tileset": "gTileset_NewCave",
+      "border_filepath": "data/layouts/OreburghGate/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghGate/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_GATE2F",
+      "name": "OreburghGate2F_Layout",
+      "width": 64,
+      "height": 25,
+      "primary_tileset": "gTileset_NewCavePrime",
+      "secondary_tileset": "gTileset_NewCave",
+      "border_filepath": "data/layouts/OreburghGate2F/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghGate2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_CITY_A",
+      "name": "OreburghCityA_Layout",
+      "width": 33,
+      "height": 28,
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/OreburghCityA/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghCityA/map.bin"
+    },
+    {
+      "id": "LAYOUT_OREBURGH_MINE",
+      "name": "OreburghMine_Layout",
+      "width": 31,
+      "height": 28,
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/OreburghMine/border.bin",
+      "blockdata_filepath": "data/layouts/OreburghMine/map.bin"
+    },
+    {
+      "id": "LAYOUT_FUEGO_IRONWORKS",
+      "name": "FuegoIronworks",
+      "width": 32,
+      "height": 31,
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/FuegoIronworks/border.bin",
+      "blockdata_filepath": "data/layouts/FuegoIronworks/map.bin"
     }
   ]
 }

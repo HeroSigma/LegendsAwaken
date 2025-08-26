@@ -2469,3 +2469,14 @@ const struct Tileset gTileset_JubilifeSecondary =
     .metatileAttributes = gMetatileAttributes_JubilifeSecondary,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_NewCavePrime =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_NewCavePrime,
+    .palettes = gTilesetPalettes_NewCavePrime,
+    .metatiles = gMetatiles_NewCavePrime,
+    .metatileAttributes = gMetatileAttributes_NewCavePrime,
+    .callback = NULL,
+};

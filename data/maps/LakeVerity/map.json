@@ -1,7 +1,7 @@
 {
   "id": "MAP_LAKE_VERITY",
   "name": "LakeVerity",
-  "layout": "LAYOUT_LAKE_VERITY",
+  "layout": "LAYOUT_LAKE_VERITYA",
   "music": "MUS_RG_SURF",
   "region_map_section": "MAPSEC_LAKE_VERITY",
   "requires_flash": false,

@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_HEARTHOME_CITY",
-      "offset": -21,
+      "offset": -24,
       "direction": "right"
     }
   ],

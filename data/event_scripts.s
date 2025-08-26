@@ -1954,3 +1954,17 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route213B/scripts.inc"
 
 	.include "data/maps/Springpath/scripts.inc"
+
+	.include "data/maps/SendOffSpring/scripts.inc"
+
+	.include "data/maps/LakeVerityCave/scripts.inc"
+
+	.include "data/maps/LakeValorCave/scripts.inc"
+
+	.include "data/maps/LakeAcuityCave/scripts.inc"
+
+	.include "data/maps/EternaForestA/scripts.inc"
+
+	.include "data/maps/OreburghGate2F/scripts.inc"
+
+	.include "data/maps/OreburghCityA/scripts.inc"

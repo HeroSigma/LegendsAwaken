@@ -167,7 +167,8 @@
     "Underwater_Route125",
     "TimelessWood",
     "TournamentIsland",
-    "Route213B"
+    "Route213B",
+    "EternaForestA"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_PlayersHouse_1F",
@@ -1488,14 +1489,20 @@
     "FightArea",
     "SurvivalArea",
     "ResortArea",
-    "Springpath"
+    "Springpath",
+    "OreburghGate2F",
+    "OreburghCityA"
   ],
   "gMapGroup_SpecialAreasSinnoh": [
     "LakeVerity",
     "LakeValor",
     "LakeAcuity",
     "ValleyWindworks",
-    "EternaForest"
+    "EternaForest",
+    "SendOffSpring",
+    "LakeVerityCave",
+    "LakeValorCave",
+    "LakeAcuityCave"
   ],
   "gMapGroup_DungeonsSinnoh": [
     "OreburghGate_1F",

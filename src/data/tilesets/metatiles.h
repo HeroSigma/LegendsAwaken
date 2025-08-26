@@ -654,3 +654,6 @@ const u16 gMetatileAttributes_JubilifePrimary[] = INCBIN_U16("data/tilesets/prim
 
 const u16 gMetatiles_JubilifeSecondary[] = INCBIN_U16("data/tilesets/secondary/jubilife_secondary/metatiles.bin");
 const u16 gMetatileAttributes_JubilifeSecondary[] = INCBIN_U16("data/tilesets/secondary/jubilife_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_NewCavePrime[] = INCBIN_U16("data/tilesets/primary/new_cave_prime/metatiles.bin");
+const u16 gMetatileAttributes_NewCavePrime[] = INCBIN_U16("data/tilesets/primary/new_cave_prime/metatile_attributes.bin");
