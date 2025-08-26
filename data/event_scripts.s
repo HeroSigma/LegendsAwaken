@@ -1949,4 +1949,4 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/TournamentIsland/scripts.inc"
 
-	.include "data/maps/NAVEL_ROCK_PEAK/scripts.inc"
+	.include "data/maps/NavelRock_Peak/scripts.inc"

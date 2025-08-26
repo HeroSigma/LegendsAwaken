@@ -3572,7 +3572,7 @@ const u16 gTilesetPalettes_JublifePrime[][16] =
 
 const u32 gTilesetTiles_JublifePrime[] = INCBIN_U32("data/tilesets/primary/jublife_prime/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_general_jubilife[][16] =
+const u16 gTilesetPalettes_General_Jubilife[][16] =
 {
     INCBIN_U16("data/tilesets/primary/general_jubilife/palettes/00.gbapal"),
     INCBIN_U16("data/tilesets/primary/general_jubilife/palettes/01.gbapal"),
@@ -3589,9 +3589,9 @@ const u16 gTilesetPalettes_general_jubilife[][16] =
     INCBIN_U16("data/tilesets/primary/general_jubilife/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_general_jubilife[] = INCBIN_U32("data/tilesets/primary/general_jubilife/tiles.4bpp.lz");
+const u32 gTilesetTiles_General_Jubilife[] = INCBIN_U32("data/tilesets/primary/general_jubilife/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_jubilife_city_secondary[][16] =
+const u16 gTilesetPalettes_JubilifeCitySecondary[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/jubilife_city_secondary/palettes/00.gbapal"),
     INCBIN_U16("data/tilesets/secondary/jubilife_city_secondary/palettes/01.gbapal"),
@@ -3608,7 +3608,7 @@ const u16 gTilesetPalettes_jubilife_city_secondary[][16] =
     INCBIN_U16("data/tilesets/secondary/jubilife_city_secondary/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_jubilife_city_secondary[] = INCBIN_U32("data/tilesets/secondary/jubilife_city_secondary/tiles.4bpp.lz");
+const u32 gTilesetTiles_JubilifeCitySecondary[] = INCBIN_U32("data/tilesets/secondary/jubilife_city_secondary/tiles.4bpp.lz");
 
 const u16 gTilesetPalettes_Ore[][16] =
 {

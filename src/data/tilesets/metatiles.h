@@ -472,8 +472,11 @@ const u16 gMetatileAttributes_DottedHole[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatiles_CeruleanCave[] = INCBIN_U16("data/tilesets/secondary/ceruleancave/metatiles.bin");
 const u16 gMetatileAttributes_CeruleanCave[] = INCBIN_U16("data/tilesets/secondary/ceruleancave/metatile_attributes.bin");
 
-const u16 gMetatiles_Jubilife[] = INCBIN_U16("data/tilesets/secondary/jubilife/metatiles.bin");
-const u16 gMetatileAttributes_Jubilife[] = INCBIN_U16("data/tilesets/secondary/jubilife/metatile_attributes.bin");
+const u16 gMetatiles_JubilifeCitySecondary[] = INCBIN_U16("data/tilesets/secondary/jubilife_city_secondary/metatiles.bin");
+const u16 gMetatileAttributes_JubilifeCitySecondary[] = INCBIN_U16("data/tilesets/secondary/jubilife_city_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Jubilife[] = INCBIN_U16("data/tilesets/primary/general_jubilife/metatiles.bin");
+const u16 gMetatileAttributes_General_Jubilife[] = INCBIN_U16("data/tilesets/primary/general_jubilife/metatile_attributes.bin");
 
 const u16 gMetatiles_Hearthome[] = INCBIN_U16("data/tilesets/secondary/hearthome/metatiles.bin");
 const u16 gMetatileAttributes_Hearthome[] = INCBIN_U16("data/tilesets/secondary/hearthome/metatile_attributes.bin");

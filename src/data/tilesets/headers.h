@@ -1799,14 +1799,25 @@ const struct Tileset gTileset_CeruleanCave =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_Jubilife =
+const struct Tileset gTileset_JubilifeCitySecondary =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Jubilife,
-    .palettes = gTilesetPalettes_Jubilife,
-    .metatiles = gMetatiles_Jubilife,
-    .metatileAttributes = gMetatileAttributes_Jubilife,
+    .tiles = gTilesetTiles_JubilifeCitySecondary,
+    .palettes = gTilesetPalettes_JubilifeCitySecondary,
+    .metatiles = gMetatiles_JubilifeCitySecondary,
+    .metatileAttributes = gMetatileAttributes_JubilifeCitySecondary,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_General_Jubilife =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Jubilife,
+    .palettes = gTilesetPalettes_General_Jubilife,
+    .metatiles = gMetatiles_General_Jubilife,
+    .metatileAttributes = gMetatileAttributes_General_Jubilife,
     .callback = NULL,
 };
 

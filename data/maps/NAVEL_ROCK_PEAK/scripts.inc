@@ -1,2 +1,2 @@
-NAVEL_ROCK_PEAK_MapScripts::
+NavelRock_Peak_MapScripts::
 	.byte 0
