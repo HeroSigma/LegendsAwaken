@@ -1945,8 +1945,8 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/scripts/dexnav.inc"
 
-	.include "data/maps/TimelessWood/scripts.inc"
+.include "data/maps/TimelessWood/scripts.inc"
 
-	.include "data/maps/TournamentIsland/scripts.inc"
+.include "data/maps/TournamentIsland/scripts.inc"
 
-	.include "data/maps/NavelRock_Peak/scripts.inc"
+.include "data/maps/NavelRock_Peak/scripts.inc"
