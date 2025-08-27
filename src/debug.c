@@ -2095,7 +2095,8 @@ static void DebugAction_Give_Item_SelectId(u8 taskId)
     if (JOY_NEW(DPAD_ANY))
     {
         PlaySE(SE_SELECT);
-        Debug_HandleInput_Numeric(taskId, 1, ITEMS_COUNT - 1, DEBUG_NUMBER_DIGITS_ITEMS);
+        // ITEM_LEGEND_PLATE lacks valid data and will crash if selected, so limit to the previous item
+        Debug_HandleInput_Numeric(taskId, 1, ITEM_LEGEND_PLATE - 1, DEBUG_NUMBER_DIGITS_ITEMS);
         Debug_Display_ItemInfo(gTasks[taskId].tInput, gTasks[taskId].tDigit, gTasks[taskId].tSubWindowId);
         DestroyItemIcon(taskId);
         gTasks[taskId].tSpriteId = AddItemIconSprite(ITEM_TAG, ITEM_TAG, gTasks[taskId].tInput);
