@@ -17,14 +17,14 @@
   "warp_events": [
     {
       "x": 40,
-      "y": 4,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_VALOR_LAKEFRONT",
       "dest_warp_id": "1"
     },
     {
-      "x": 40,
-      "y": 3,
+      "x": 41,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_VALOR_LAKEFRONT",
       "dest_warp_id": "0"

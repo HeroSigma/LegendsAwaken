@@ -22,6 +22,11 @@
       "map": "MAP_CANALAVE_CITY",
       "offset": -30,
       "direction": "left"
+    },
+    {
+      "map": "MAP_JUBILIFE_CITY",
+      "offset": 2,
+      "direction": "right"
     }
   ],
   "object_events": [],

@@ -32,15 +32,15 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 41,
-      "y": 27,
+      "x": 44,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_LAKE_VALOR",
       "dest_warp_id": "1"
     },
     {
-      "x": 41,
-      "y": 28,
+      "x": 45,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_LAKE_VALOR",
       "dest_warp_id": "0"

@@ -27,53 +27,15 @@
       "map": "MAP_ROUTE204",
       "offset": 34,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE218",
+      "offset": -2,
+      "direction": "left"
     }
   ],
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 39,
-      "y": 52,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 12,
-      "y": 52,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 21,
-      "y": 40,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 18,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 13,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 37,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_JUBILIFE_CITY",
-      "dest_warp_id": "0"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

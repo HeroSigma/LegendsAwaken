@@ -22,109 +22,81 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 6,
-      "y": 12,
+      "x": 5,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_GATE_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 18,
-      "y": 13,
+      "x": 16,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_FLAT1_F1",
       "dest_warp_id": "0"
     },
     {
-      "x": 25,
-      "y": 13,
+      "x": 24,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_FLAT2_F1",
       "dest_warp_id": "0"
     },
     {
       "x": 31,
-      "y": 13,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 54,
-      "y": 14,
+      "x": 53,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_LILYCOVE_CITY_LILYCOVE_MUSEUM_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 20,
-      "y": 21,
+      "x": 19,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_HOUSE2",
       "dest_warp_id": "0"
     },
     {
-      "x": 30,
-      "y": 22,
+      "x": 28,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_GYM",
       "dest_warp_id": "0"
     },
     {
-      "x": 40,
-      "y": 19,
+      "x": 47,
+      "y": 22,
       "elevation": 0,
-      "dest_map": "MAP_OREBURGH_CITY_HOUSE1",
+      "dest_map": "MAP_OREBURGH_MINE_B1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 51,
-      "y": 22,
+      "x": 49,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 59,
-      "y": 29,
+      "x": 58,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_FLAT3_F1",
       "dest_warp_id": "0"
     },
     {
-      "x": 56,
-      "y": 37,
+      "x": 36,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_OREBURGH_CITY_HOUSE3",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 50,
-      "y": 57,
-      "elevation": 0,
-      "dest_map": "MAP_OREBURGH_MINE_B1F",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 51,
-      "y": 57,
-      "elevation": 0,
-      "dest_map": "MAP_OREBURGH_MINE_B1F",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 52,
-      "y": 57,
-      "elevation": 0,
-      "dest_map": "MAP_OREBURGH_MINE_B1F",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 53,
-      "y": 57,
-      "elevation": 0,
-      "dest_map": "MAP_OREBURGH_MINE_B1F",
-      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

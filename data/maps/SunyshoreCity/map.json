@@ -25,15 +25,7 @@
     }
   ],
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 4,
-      "y": 48,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE222_ACCESS",
-      "dest_warp_id": "1"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

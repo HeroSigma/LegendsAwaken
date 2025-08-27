@@ -22,8 +22,8 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 87,
-      "y": 23,
+      "x": 82,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_MT_CORONET_1F_NORTH_ROOM2",
       "dest_warp_id": "1"

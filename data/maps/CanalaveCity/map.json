@@ -20,15 +20,7 @@
     }
   ],
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 33,
-      "y": 50,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE218_WEST",
-      "dest_warp_id": "1"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

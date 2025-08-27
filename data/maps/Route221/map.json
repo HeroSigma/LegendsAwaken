@@ -15,25 +15,12 @@
   "connections": [
     {
       "map": "MAP_ROUTE220",
-      "offset": 4,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_ROUTE220",
-      "offset": 4,
+      "offset": 0,
       "direction": "left"
     }
   ],
-  "object_events": [
-
-  ],
-  "warp_events": [
-
-  ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
 }

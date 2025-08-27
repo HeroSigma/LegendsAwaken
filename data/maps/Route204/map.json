@@ -35,7 +35,7 @@
     },
     {
       "x": 19,
-      "y": 24,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_RAVAGED_PATH",
       "dest_warp_id": "1"

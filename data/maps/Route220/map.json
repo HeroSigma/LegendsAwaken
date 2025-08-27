@@ -20,12 +20,12 @@
     },
     {
       "map": "MAP_ROUTE219",
-      "offset": -5,
+      "offset": 0,
       "direction": "up"
     },
     {
       "map": "MAP_ROUTE221",
-      "offset": -4,
+      "offset": 0,
       "direction": "right"
     }
   ],
