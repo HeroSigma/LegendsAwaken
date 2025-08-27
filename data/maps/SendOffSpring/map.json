@@ -3,7 +3,7 @@
   "name": "SendOffSpring",
   "layout": "LAYOUT_SEND_OFF_SPRING",
   "music": "MUS_EVER_GRANDE",
-  "region_map_section": "MAPSEC_ROUTE_214",
+  "region_map_section": "MAPSEC_SENDOFF_SPRING",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",

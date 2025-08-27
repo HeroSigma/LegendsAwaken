@@ -2376,12 +2376,21 @@
     },
     {
       "id": "MAPSEC_ROUTE_214",
-      "name": "Send Off Spring",
+      "name": "ROUTE 214",
       "x": 17,
       "y": 9,
       "width": 1,
       "height": 2,
       "map_section": "MAPSEC_ROUTE_214"
+    },
+    {
+      "id": "MAPSEC_SENDOFF_SPRING",
+      "name": "SENDOFF SPRING",
+      "x": 17,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "map_section": "MAPSEC_SENDOFF_SPRING"
     },
     {
       "id": "MAPSEC_ROUTE_213",
@@ -2538,12 +2547,21 @@
     },
     {
       "id": "MAPSEC_HEARTHOME_CITY",
-      "name": "AMITY SQUARE",
+      "name": "HEARTHOME CITY",
       "x": 11,
       "y": 10,
       "width": 2,
       "height": 1,
       "map_section": "MAPSEC_HEARTHOME_CITY"
+    },
+    {
+      "id": "MAPSEC_AMITY_SQUARE",
+      "name": "AMITY SQUARE",
+      "x": 11,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "map_section": "MAPSEC_AMITY_SQUARE"
     },
     {
       "id": "MAPSEC_ETERNA_CITY",
