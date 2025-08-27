@@ -12460,6 +12460,26 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/FuegoIronworks/border.bin",
       "blockdata_filepath": "data/layouts/FuegoIronworks/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPEAR_PILLAR",
+      "name": "SpearPillar",
+      "width": 22,
+      "height": 45,
+      "primary_tileset": "gTileset_distortion",
+      "secondary_tileset": "gTileset_world",
+      "border_filepath": "data/layouts/SpearPillar/border.bin",
+      "blockdata_filepath": "data/layouts/SpearPillar/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPEAR_PILLAR1A",
+      "name": "SpearPillar1A",
+      "width": 32,
+      "height": 30,
+      "primary_tileset": "gTileset_distortion",
+      "secondary_tileset": "gTileset_world",
+      "border_filepath": "data/layouts/SpearPillar1A/border.bin",
+      "blockdata_filepath": "data/layouts/SpearPillar1A/map.bin"
     }
   ]
 }

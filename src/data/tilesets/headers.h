@@ -2480,3 +2480,25 @@ const struct Tileset gTileset_NewCavePrime =
     .metatileAttributes = gMetatileAttributes_NewCavePrime,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_SpearPillarPrimary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_SpearPillarPrimary,
+    .palettes = gTilesetPalettes_SpearPillarPrimary,
+    .metatiles = gMetatiles_SpearPillarPrimary,
+    .metatileAttributes = gMetatileAttributes_SpearPillarPrimary,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SpearPillarSecondary =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SpearPillarSecondary,
+    .palettes = gTilesetPalettes_SpearPillarSecondary,
+    .metatiles = gMetatiles_SpearPillarSecondary,
+    .metatileAttributes = gMetatileAttributes_SpearPillarSecondary,
+    .callback = NULL,
+};

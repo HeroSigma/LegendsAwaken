@@ -69,6 +69,8 @@
 #define MAP_UNDERWATER_ROUTE125 (56 | (0 << 8))
 #define MAP_TIMELESS_WOOD       (57 | (0 << 8))
 #define MAP_TOURNAMENT_ISLAND   (58 | (0 << 8))
+#define MAP_ROUTE213B           (59 | (0 << 8))
+#define MAP_ETERNA_FOREST_A     (60 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_PLAYERS_HOUSE_1F     (0 | (1 << 8))
@@ -1389,6 +1391,9 @@
 #define MAP_FIGHT_AREA       (52 | (97 << 8))
 #define MAP_SURVIVAL_AREA    (53 | (97 << 8))
 #define MAP_RESORT_AREA      (54 | (97 << 8))
+#define MAP_SPRINGPATH       (55 | (97 << 8))
+#define MAP_OREBURGH_GATE2F  (56 | (97 << 8))
+#define MAP_OREBURGH_CITY_A  (57 | (97 << 8))
 
 // gMapGroup_SpecialAreasSinnoh
 #define MAP_LAKE_VERITY      (0 | (98 << 8))
@@ -1396,6 +1401,10 @@
 #define MAP_LAKE_ACUITY      (2 | (98 << 8))
 #define MAP_VALLEY_WINDWORKS (3 | (98 << 8))
 #define MAP_ETERNA_FOREST    (4 | (98 << 8))
+#define MAP_SEND_OFF_SPRING  (5 | (98 << 8))
+#define MAP_LAKE_VERITY_CAVE (6 | (98 << 8))
+#define MAP_LAKE_VALOR_CAVE  (7 | (98 << 8))
+#define MAP_LAKE_ACUITY_CAVE (8 | (98 << 8))
 
 // gMapGroup_DungeonsSinnoh
 #define MAP_OREBURGH_GATE_1F          (0 | (99 << 8))

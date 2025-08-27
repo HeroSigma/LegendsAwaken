@@ -657,3 +657,9 @@ const u16 gMetatileAttributes_JubilifeSecondary[] = INCBIN_U16("data/tilesets/se
 
 const u16 gMetatiles_NewCavePrime[] = INCBIN_U16("data/tilesets/primary/new_cave_prime/metatiles.bin");
 const u16 gMetatileAttributes_NewCavePrime[] = INCBIN_U16("data/tilesets/primary/new_cave_prime/metatile_attributes.bin");
+
+const u16 gMetatiles_SpearPillarPrimary[] = INCBIN_U16("data/tilesets/primary/spear_pillar_primary/metatiles.bin");
+const u16 gMetatileAttributes_SpearPillarPrimary[] = INCBIN_U16("data/tilesets/primary/spear_pillar_primary/metatile_attributes.bin");
+
+const u16 gMetatiles_SpearPillarSecondary[] = INCBIN_U16("data/tilesets/secondary/spear_pillar_secondary/metatiles.bin");
+const u16 gMetatileAttributes_SpearPillarSecondary[] = INCBIN_U16("data/tilesets/secondary/spear_pillar_secondary/metatile_attributes.bin");
