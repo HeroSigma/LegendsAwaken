@@ -43,12 +43,12 @@ gText_Birch_SoItsPlayer::
 	.string "So it's {PLAYER}{KUN}?$"
 
 gText_Birch_YourePlayer::
-        .string "Ah—{PLAYER}, is it?\p"
+        .string "Ah--{PLAYER}, is it?\p"
         .string "Of course… it's been 8 years since I last\n"
         .string "saw you.\p"
         .string "I imagine you've grown quite a bit in that\n"
         .string "time.\p"
-        .string "Brendan and May have been talking nonstop—\n"
+        .string "Brendan and May have been talking nonstop--\n"
         .string "they're excited about your return!\p"
         .string "Well then, hurry along to your house in\n"
         .string "LITTLEROOT.\p"
