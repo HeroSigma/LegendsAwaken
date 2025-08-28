@@ -1214,7 +1214,6 @@ gStdScripts_End::
     .include "data/maps/FloaromaTown_PokemonCenter_2F/scripts.inc"
     .include "data/maps/HearthomeCity/scripts.inc"
     .include "data/maps/HotelGrandLake/scripts.inc"
-    .include "data/maps/JubilifeCity/scripts.inc"
     .include "data/maps/JubilifeCity_Flat1_F1/scripts.inc"
     .include "data/maps/JubilifeCity_Flat1_F2/scripts.inc"
     .include "data/maps/JubilifeCity_Flat1_F3/scripts.inc"
@@ -1955,16 +1954,3 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/Springpath/scripts.inc"
 
-	.include "data/maps/SendOffSpring/scripts.inc"
-
-	.include "data/maps/LakeVerityCave/scripts.inc"
-
-	.include "data/maps/LakeValorCave/scripts.inc"
-
-	.include "data/maps/LakeAcuityCave/scripts.inc"
-
-	.include "data/maps/EternaForestA/scripts.inc"
-
-	.include "data/maps/OreburghGate2F/scripts.inc"
-
-	.include "data/maps/OreburghCityA/scripts.inc"
