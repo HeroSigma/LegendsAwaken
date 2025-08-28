@@ -18,6 +18,11 @@ bool8 IsFieldMessageBoxHidden(void);
 u8 GetFieldMessageBoxMode(void);
 void StopFieldMessage(void);
 void InitFieldMessageBox(void);
+void SetFieldMessageBoxSpeaker(const u8 *speaker);
+void ClearFieldMessageBoxSpeaker(void);
+
+// Temporary compatibility alias until all call sites are updated
+#define SetSpeakerName SetFieldMessageBoxSpeaker
 
 extern u8 gWalkAwayFromSignpostTimer;
 

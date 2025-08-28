@@ -1,3 +1,4 @@
-	.include "constants/gba_constants.inc"
-	.include "constants/global.inc"
-	.include "constants/tms_hms.inc"
+        .include "constants/gba_constants.inc"
+        .include "constants/global.inc"
+        .include "constants/tms_hms.inc"
+        .include "constants/speakers.inc"
