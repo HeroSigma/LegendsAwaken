@@ -43,11 +43,17 @@ gText_Birch_SoItsPlayer::
 	.string "So it's {PLAYER}{KUN}?$"
 
 gText_Birch_YourePlayer::
-	.string "Ah, okay!\p"
-	.string "You're {PLAYER}{KUN} who's moving to my\n"
-	.string "hometown of LITTLEROOT.\l"
-	.string "I get it now!\p"
-	.string "$"
+        .string "Ah--{PLAYER}, is it?\p"
+        .string "Of course… it's been 8 years since I last\n"
+        .string "saw you.\p"
+        .string "I imagine you've grown quite a bit in that\n"
+        .string "time.\p"
+        .string "Brendan and May have been talking nonstop--\n"
+        .string "they're excited about your return!\p"
+        .string "Well then, hurry along to your house in\n"
+        .string "LITTLEROOT.\p"
+        .string "I'll see you there soon.\p"
+        .string "$"
 
 gText_Birch_AreYouReady::
 	.string "All right, are you ready?\p"
