@@ -13,6 +13,7 @@ static EWRAM_DATA u8 sFieldMessageBoxMode = 0;
 static EWRAM_DATA const u8 *sFieldMessageBoxSpeaker = NULL;
 EWRAM_DATA u8 gWalkAwayFromSignpostTimer = 0;
 EWRAM_DATA const u8* gSpeakerName = NULL;
+static EWRAM_DATA u8 sSpeakerNameBuffer[0x20];
 
 static void ExpandStringAndStartDrawFieldMessage(const u8 *, bool32);
 static void StartDrawFieldMessage(void);
@@ -135,15 +136,7 @@ bool8 ShowFieldMessageFromBuffer(void)
 
 static void ExpandStringAndStartDrawFieldMessage(const u8 *str, bool32 allowSkippingDelayWithButtonPress)
 {
-    u8 buffer[0x200];
-
     StringExpandPlaceholders(gStringVar4, str);
-    if (sFieldMessageBoxSpeaker != NULL)
-    {
-        StringExpandPlaceholders(buffer, sFieldMessageBoxSpeaker);
-        StringAppend(buffer, gStringVar4);
-        StringCopy(gStringVar4, buffer);
-    }
     AddTextPrinterForMessage(allowSkippingDelayWithButtonPress);
     CreateTask_DrawFieldMessage();
 }
@@ -190,9 +183,28 @@ void StopFieldMessage(void)
 void SetFieldMessageBoxSpeaker(const u8 *speaker)
 {
     sFieldMessageBoxSpeaker = speaker;
+    if (speaker != NULL)
+    {
+        u8 i;
+        StringExpandPlaceholders(sSpeakerNameBuffer, speaker);
+        for (i = 0; sSpeakerNameBuffer[i] != EOS; i++)
+        {
+            if (sSpeakerNameBuffer[i] == ':' || sSpeakerNameBuffer[i] == '\n')
+            {
+                sSpeakerNameBuffer[i] = EOS;
+                break;
+            }
+        }
+        gSpeakerName = sSpeakerNameBuffer;
+        FillWindowPixelBuffer(1, PIXEL_FILL(1));
+        FillDialogFramePlate();
+        AddTextPrinterParameterized(1, FONT_NORMAL, gSpeakerName, 0, 1, TEXT_SKIP_DRAW, NULL);
+    }
 }
 
 void ClearFieldMessageBoxSpeaker(void)
 {
     sFieldMessageBoxSpeaker = NULL;
+    gSpeakerName = NULL;
+    FillWindowPixelBuffer(1, PIXEL_FILL(1));
 }
