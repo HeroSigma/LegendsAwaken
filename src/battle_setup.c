@@ -1366,24 +1366,56 @@ void ShowTrainerIntroSpeech(void)
 {
     if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
     {
+        // Battle Pyramid: copy the facility trainer's name into gStringVar1 and set as speaker
         if (gNoOfApproachingTrainers == 0 || gNoOfApproachingTrainers == 1)
-            CopyPyramidTrainerSpeechBefore(LocalIdToPyramidTrainerId(gSpecialVar_LastTalked));
+        {
+            u16 trainerId = LocalIdToPyramidTrainerId(gSpecialVar_LastTalked);
+            GetFrontierTrainerName(gStringVar1, trainerId);
+            SetSpeakerName(gStringVar1);
+            CopyPyramidTrainerSpeechBefore(trainerId);
+        }
         else
-            CopyPyramidTrainerSpeechBefore(LocalIdToPyramidTrainerId(gObjectEvents[gApproachingTrainers[gApproachingTrainerId].objectEventId].localId));
+        {
+            u16 trainerId = LocalIdToPyramidTrainerId(gObjectEvents[gApproachingTrainers[gApproachingTrainerId].objectEventId].localId);
+            GetFrontierTrainerName(gStringVar1, trainerId);
+            SetSpeakerName(gStringVar1);
+            CopyPyramidTrainerSpeechBefore(trainerId);
+        }
 
         ShowFieldMessageFromBuffer();
     }
     else if (InTrainerHillChallenge())
     {
+        // Trainer Hill: copy the hill trainer's name into gStringVar1 and set as speaker
         if (gNoOfApproachingTrainers == 0 || gNoOfApproachingTrainers == 1)
-            CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_INTRO, LocalIdToHillTrainerId(gSpecialVar_LastTalked));
+        {
+            u16 trainerId = LocalIdToHillTrainerId(gSpecialVar_LastTalked);
+            GetTrainerHillTrainerName(gStringVar1, trainerId);
+            SetSpeakerName(gStringVar1);
+            CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_INTRO, trainerId);
+        }
         else
-            CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_INTRO, LocalIdToHillTrainerId(gObjectEvents[gApproachingTrainers[gApproachingTrainerId].objectEventId].localId));
+        {
+            u16 trainerId = LocalIdToHillTrainerId(gObjectEvents[gApproachingTrainers[gApproachingTrainerId].objectEventId].localId);
+            GetTrainerHillTrainerName(gStringVar1, trainerId);
+            SetSpeakerName(gStringVar1);
+            CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_INTRO, trainerId);
+        }
 
         ShowFieldMessageFromBuffer();
     }
     else
     {
+        // Standard trainer encounters: set speaker to the trainer's name
+        {
+            u16 trainerId;
+            if (gApproachingTrainerId == 0)
+                trainerId = TRAINER_BATTLE_PARAM.opponentA;
+            else
+                trainerId = TRAINER_BATTLE_PARAM.opponentB;
+
+            SetSpeakerName(GetTrainerNameFromId(trainerId));
+        }
         ShowFieldMessage(GetIntroSpeechOfApproachingTrainer());
     }
 }

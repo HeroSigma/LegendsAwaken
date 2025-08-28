@@ -2028,12 +2028,18 @@
     goto_if_eq VAR_RESULT, FALSE, \dest
     .endm
 
-    .macro call_if_subquest_not_complete parent:req,child:req, dest:req
-    subquestmenu QUEST_MENU_CHECK_COMPLETE \parent \child
-    call_if_eq VAR_RESULT, FALSE, \dest
-    .endm
+        .macro call_if_subquest_not_complete parent:req,child:req, dest:req
+        subquestmenu QUEST_MENU_CHECK_COMPLETE \parent \child
+        call_if_eq VAR_RESULT, FALSE, \dest
+        .endm
 
-@ Supplementary
+        @ Sets the current speaker name for subsequent messages.
+        .macro speakername text:req
+        .byte SCR_OP_SETSPEAKER
+        .4byte \text
+        .endm
+
+ @ Supplementary
 
 	.macro goto_if_unset flag:req, dest:req
 	checkflag \flag

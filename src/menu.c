@@ -53,6 +53,9 @@ static void WindowFunc_DrawStandardFrame(u8, u8, u8, u8, u8, u8);
 static void WindowFunc_DrawSignFrame(u8, u8, u8, u8, u8, u8);
 static inline void *GetWindowFunc_DialogueFrame(void);
 static void WindowFunc_DrawDialogueFrame(u8, u8, u8, u8, u8, u8);
+// Nameplate-enabled dialogue frame helpers
+static void WindowFunc_DrawDialogueFrameWithPlate(u8, u8, u8, u8, u8, u8);
+void FillDialogFramePlate(u8 bg, u8 tilemapLeft, u8 tilemapTop, u8 width, u8 height, u8 paletteNum);
 static void WindowFunc_ClearStdWindowAndFrame(u8, u8, u8, u8, u8, u8);
 static void WindowFunc_ClearDialogWindowAndFrame(u8, u8, u8, u8, u8, u8);
 static void WindowFunc_DrawDialogFrameWithCustomTileAndPalette(u8, u8, u8, u8, u8, u8);
@@ -341,6 +344,18 @@ void DrawDialogueFrame(u8 windowId, bool8 copyToVram)
         CopyWindowToVram(windowId, COPYWIN_FULL);
 }
 
+// Draws the dialogue frame, with an optional nameplate region hook.
+// The default FillDialogFramePlate implementation is a no-op;
+// projects may customize it to render a speaker plate.
+void DrawDialogueFrameWithNameplate(u8 windowId, bool8 copyToVram)
+{
+    CallWindowFunction(windowId, WindowFunc_DrawDialogueFrameWithPlate);
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
+    PutWindowTilemap(windowId);
+    if (copyToVram == TRUE)
+        CopyWindowToVram(windowId, COPYWIN_FULL);
+}
+
 void DrawStdWindowFrame(u8 windowId, bool8 copyToVram)
 {
     CallWindowFunction(windowId, WindowFunc_DrawStandardFrame);
@@ -528,6 +543,30 @@ static void WindowFunc_DrawDialogueFrame(u8 bg, u8 tilemapLeft, u8 tilemapTop, u
                             1,
                             1,
                             DLG_WINDOW_PALETTE_NUM);
+}
+
+// Wrapper that draws the standard dialogue frame and then allows
+// an additional pass to render a nameplate area if desired.
+static void WindowFunc_DrawDialogueFrameWithPlate(u8 bg, u8 tilemapLeft, u8 tilemapTop, u8 width, u8 height, u8 paletteNum)
+{
+    // First, draw the normal dialogue frame
+    WindowFunc_DrawDialogueFrame(bg, tilemapLeft, tilemapTop, width, height, paletteNum);
+    // Then, draw a plate region (default implementation is a no-op)
+    FillDialogFramePlate(bg, tilemapLeft, tilemapTop, width, height, paletteNum);
+}
+
+// Default plate filler. This is intentionally empty so that projects
+// without a nameplate design still compile and behave normally.
+// If a plate design is desired, this function can be extended to
+// place additional tiles for a label area above the top border.
+void FillDialogFramePlate(u8 bg, u8 tilemapLeft, u8 tilemapTop, u8 width, u8 height, u8 paletteNum)
+{
+    (void)bg;
+    (void)tilemapLeft;
+    (void)tilemapTop;
+    (void)width;
+    (void)height;
+    (void)paletteNum;
 }
 
 static void WindowFunc_ClearStdWindowAndFrame(u8 bg, u8 tilemapLeft, u8 tilemapTop, u8 width, u8 height, u8 paletteNum)

@@ -1685,6 +1685,10 @@ bool8 ScrCmd_message(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
+    // Apply speaker name if previously set via setspeaker
+    if (ctx->data[1] != 0)
+        SetSpeakerName((const u8 *)ctx->data[1]);
+
     if (msg == NULL)
         msg = (const u8 *)ctx->data[0];
     ShowFieldMessage(msg);
@@ -1697,6 +1701,9 @@ bool8 ScrCmd_pokenavcall(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
+    if (ctx->data[1] != 0)
+        SetSpeakerName((const u8 *)ctx->data[1]);
+
     if (msg == NULL)
         msg = (const u8 *)ctx->data[0];
     ShowPokenavFieldMessage(msg);
@@ -1708,6 +1715,9 @@ bool8 ScrCmd_messageautoscroll(struct ScriptContext *ctx)
     const u8 *msg = (const u8 *)ScriptReadWord(ctx);
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+
+    if (ctx->data[1] != 0)
+        SetSpeakerName((const u8 *)ctx->data[1]);
 
     if (msg == NULL)
         msg = (const u8 *)ctx->data[0];
@@ -1723,6 +1733,9 @@ bool8 ScrCmd_messageinstant(struct ScriptContext *ctx)
     const u8 *msg = (const u8 *)ScriptReadWord(ctx);
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+
+    if (ctx->data[1] != 0)
+        SetSpeakerName((const u8 *)ctx->data[1]);
 
     if (msg == NULL)
         msg = (const u8 *)ctx->data[0];
@@ -2093,6 +2106,9 @@ bool8 ScrCmd_vmessage(struct ScriptContext *ctx)
     u32 msg = ScriptReadWord(ctx);
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+
+    if (ctx->data[1] != 0)
+        SetSpeakerName((const u8 *)ctx->data[1]);
 
     ShowFieldMessage((u8 *)(msg - sAddressOffset));
     return FALSE;
@@ -3368,4 +3384,14 @@ bool8 ScrCmd_subquestmenu(struct ScriptContext *ctx)
     }
 
     return TRUE;
+}
+
+bool8 ScrCmd_setspeaker(struct ScriptContext *ctx)
+{
+    const u8 *speaker = (const u8 *)ScriptReadWord(ctx);
+
+    Script_RequestEffects(SCREFF_V1);
+
+    ctx->data[1] = (u32)speaker;
+    return FALSE;
 }

@@ -7,6 +7,14 @@
 #include "field_message_box.h"
 #include "text_window.h"
 #include "script.h"
+#include "window.h"
+#include "event_data.h"
+
+// Optional speaker nameplate support
+const u8 *gSpeakerName = NULL;
+static EWRAM_DATA u8 sNamePlateWindowId = WINDOW_NONE;
+static void TryShowNamePlate(void);
+static void DestroyNamePlate(void);
 
 static EWRAM_DATA u8 sFieldMessageBoxMode = 0;
 EWRAM_DATA u8 gWalkAwayFromSignpostTimer = 0;
@@ -36,6 +44,8 @@ static void Task_DrawFieldMessage(u8 taskId)
                 LoadSignPostWindowFrameGfx();
             else
                 LoadMessageBoxAndBorderGfx();
+            // If a speaker name is set, prepare the name plate before the main message box
+            TryShowNamePlate();
             task->tState++;
             break;
         case 1:
@@ -124,6 +134,8 @@ bool8 ShowFieldMessageFromBuffer(void)
 static void ExpandStringAndStartDrawFieldMessage(const u8 *str, bool32 allowSkippingDelayWithButtonPress)
 {
     StringExpandPlaceholders(gStringVar4, str);
+    // If a speaker name is set, render the name plate window before starting the message
+    TryShowNamePlate();
     AddTextPrinterForMessage(allowSkippingDelayWithButtonPress);
     CreateTask_DrawFieldMessage();
 }
@@ -138,6 +150,9 @@ void HideFieldMessageBox(void)
 {
     DestroyTask_DrawFieldMessage();
     ClearDialogWindowAndFrame(0, TRUE);
+    // Clear any existing name plate and reset the speaker name
+    DestroyNamePlate();
+    gSpeakerName = NULL;
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
 }
 
@@ -164,4 +179,61 @@ void StopFieldMessage(void)
 {
     DestroyTask_DrawFieldMessage();
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
+}
+
+// Public setter to specify a speaker name for the next field message
+void SetSpeakerName(const u8 *name)
+{
+    gSpeakerName = name;
+}
+
+// Helpers for name plate handling
+static void TryShowNamePlate(void)
+{
+    // Skip drawing nameplate if suppressed via config or flag
+    if (OW_SUPPRESS_SPEAKER_NAME || FlagGet(OW_FLAG_SUPPRESS_SPEAKER_NAME))
+        return;
+
+    if (gSpeakerName == NULL)
+        return;
+
+    if (sNamePlateWindowId == WINDOW_NONE)
+    {
+        // Compute a reasonable width for the name plate based on string width (in pixels)
+        u16 widthPx = GetStringWidth(FONT_NORMAL, gSpeakerName, 0);
+        // Add padding and convert to tiles (8px). Clamp within message box width.
+        u8 widthTiles = (widthPx + 12 + 7) / 8; // ~1 tile padding
+        if (widthTiles < 6)
+            widthTiles = 6;
+        if (widthTiles > 23)
+            widthTiles = 23; // Leave margin inside 27-tile wide dialog
+
+        // Position just above the main dialogue frame so clearing the frame also clears the plate
+        struct WindowTemplate win = {
+            .bg = 0,
+            .tilemapLeft = 3,
+            .tilemapTop = 14,
+            .width = widthTiles,
+            .height = 2,
+            .paletteNum = STD_WINDOW_PALETTE_NUM,
+            .baseBlock = 0x120 // use a free-ish range separate from 0's default
+        };
+
+        sNamePlateWindowId = AddWindow(&win);
+        DrawStdWindowFrame(sNamePlateWindowId, TRUE);
+        // Print the name (no delay) with slight inset
+        AddTextPrinterParameterized(sNamePlateWindowId, FONT_NORMAL, gSpeakerName, 1, 1, TEXT_SKIP_DRAW, NULL);
+        PutWindowTilemap(sNamePlateWindowId);
+        CopyWindowToVram(sNamePlateWindowId, COPYWIN_FULL);
+    }
+}
+
+static void DestroyNamePlate(void)
+{
+    if (sNamePlateWindowId != WINDOW_NONE)
+    {
+        ClearStdWindowAndFrame(sNamePlateWindowId, TRUE);
+        RemoveWindow(sNamePlateWindowId);
+        sNamePlateWindowId = WINDOW_NONE;
+    }
 }
