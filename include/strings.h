@@ -2636,4 +2636,47 @@ extern const u8 gText_Rename[]; // change nickname from summary screen
 // Switch Caught Mon into Party
 extern const u8 gText_CannotSendMonToBoxHM[];
 
+extern const u8 gText_QoLChooseMon[];
+extern const u8 gText_QoLChooseNature[];
+extern const u8 gText_QoLPickStat1[];
+extern const u8 gText_QoLPickStat2[];
+extern const u8 gText_QoLPickAStat[];
+extern const u8 gText_QoLPickBall[];
+extern const u8 gText_QoLPickHPType[];
+extern const u8 gText_EVs[];
+extern const u8 gText_IVs[];
+extern const u8 gText_HiddenPower[];
+extern const u8 gText_PresetByNature[];
+extern const u8 gText_QuickCustom252[];
+extern const u8 gText_ClearEVs[];
+extern const u8 gText_Perfect31[];
+extern const u8 gText_TrickRoom0Spe[];
+extern const u8 gText_FullCustomAll[];
+extern const u8 gText_SetExactIV[];
+extern const u8 gText_QoLHello_Hoenn[];
+extern const u8 gText_QoLHello_Johto[];
+extern const u8 gText_QoLHello_Kanto[];
+extern const u8 gText_QoLHello_Sevii[];
+extern const u8 gText_QoLHello_Sinnoh[];
+extern const u8 gText_QoL_NotEnoughMoney_Hoenn[];
+extern const u8 gText_QoL_NotEnoughMoney_Johto[];
+extern const u8 gText_QoL_NotEnoughMoney_Kanto[];
+extern const u8 gText_QoL_NotEnoughMoney_Sevii[];
+extern const u8 gText_QoL_NotEnoughMoney_Sinnoh[];
+extern const u8 gText_QoL_IllegalBall_Hoenn[];
+extern const u8 gText_QoL_IllegalBall_Johto[];
+extern const u8 gText_QoL_IllegalBall_Kanto[];
+extern const u8 gText_QoL_IllegalBall_Sevii[];
+extern const u8 gText_QoL_IllegalBall_Sinnoh[];
+extern const u8 gText_QoL_Charged_Hoenn[];
+extern const u8 gText_QoL_Charged_Johto[];
+extern const u8 gText_QoL_Charged_Kanto[];
+extern const u8 gText_QoL_Charged_Sevii[];
+extern const u8 gText_QoL_Charged_Sinnoh[];
+extern const u8 gText_QoL_Canceled_Hoenn[];
+extern const u8 gText_QoL_Canceled_Johto[];
+extern const u8 gText_QoL_Canceled_Kanto[];
+extern const u8 gText_QoL_Canceled_Sevii[];
+extern const u8 gText_QoL_Canceled_Sinnoh[];
+
 #endif // GUARD_STRINGS_H

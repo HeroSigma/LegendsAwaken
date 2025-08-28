@@ -1444,10 +1444,11 @@ EventScript_SetBrineyLocation_Route109::
 	setvar VAR_BRINEY_LOCATION, 3
 	return
 
-	.include "data/scripts/pkmn_center_nurse.inc"
-	.include "data/scripts/obtain_item.inc"
-	.include "data/scripts/record_mix.inc"
-	.include "data/scripts/pc.inc"
+        .include "data/scripts/pkmn_center_nurse.inc"
+        .include "data/scripts/obtain_item.inc"
+        .include "data/scripts/record_mix.inc"
+        .include "data/scripts/pc.inc"
+        .include "data/scripts/qol_scientist.inc"
 
 @ scripts/notices.inc? signs.inc? See comment about text/notices.inc
 Common_EventScript_ShowPokemartSign::
@@ -1923,7 +1924,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/berries.inc"
 	.include "data/text/shoal_cave.inc"
 	.include "data/text/check_furniture.inc"
-	.include "data/scripts/cave_hole.inc"
+        .include "data/scripts/cave_hole.inc"
 	.include "data/scripts/lilycove_lady.inc"
 	.include "data/text/match_call.inc"
 	.include "data/scripts/apprentice.inc"

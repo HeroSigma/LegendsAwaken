@@ -778,6 +778,58 @@ static const struct MenuAction MultichoiceList_BerryPlot[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_QoLMain[] =
+{
+    {gText_Nature}, {gText_EVs}, {gText_IVs}, {gText_PokeBall}, {gText_HiddenPower}, {gText_Cancel},
+};
+
+static const struct MenuAction MultichoiceList_QoLEVs[] =
+{
+    {gText_PresetByNature}, {gText_QuickCustom252}, {gText_FullCustomAll}, {gText_ClearEVs}, {gText_Back},
+};
+
+static const struct MenuAction MultichoiceList_QoLIVs[] =
+{
+    {gText_Perfect31}, {gText_TrickRoom0Spe}, {gText_SetExactIV}, {gText_Back},
+};
+
+static const struct MenuAction MultichoiceList_QoLStats[] =
+{
+    {gText_HP}, {gText_Attack}, {gText_Defense}, {gText_Speed}, {gText_SpAttack}, {gText_SpDefense}, {gText_Back},
+};
+
+static const struct MenuAction MultichoiceList_QoLBalls[] =
+{
+    {ItemId_GetName(ITEM_POKE_BALL)},
+    {ItemId_GetName(ITEM_GREAT_BALL)},
+    {ItemId_GetName(ITEM_ULTRA_BALL)},
+    {ItemId_GetName(ITEM_PREMIER_BALL)},
+    {ItemId_GetName(ITEM_DIVE_BALL)},
+    {ItemId_GetName(ITEM_DUSK_BALL)},
+    {ItemId_GetName(ITEM_TIMER_BALL)},
+    {ItemId_GetName(ITEM_QUICK_BALL)},
+    {ItemId_GetName(ITEM_CHERISH_BALL)},
+    {ItemId_GetName(ITEM_BEAST_BALL)},
+    {gText_Back},
+};
+
+static const struct MenuAction MultichoiceList_QoLNatures[] =
+{
+    {gText_Hardy}, {gText_Lonely}, {gText_Brave}, {gText_Adamant}, {gText_Naughty},
+    {gText_Bold}, {gText_Docile}, {gText_Relaxed}, {gText_Impish}, {gText_Lax},
+    {gText_Timid}, {gText_Hasty}, {gText_Serious}, {gText_Jolly}, {gText_Naive},
+    {gText_Modest}, {gText_Mild}, {gText_Quiet}, {gText_Bashful}, {gText_Rash},
+    {gText_Calm}, {gText_Gentle}, {gText_Sassy}, {gText_Careful}, {gText_Quirky},
+};
+
+static const struct MenuAction MultichoiceList_QoLHpTypes[] =
+{
+    {gText_Fighting}, {gText_Flying}, {gText_Poison}, {gText_Ground},
+    {gText_Rock}, {gText_Bug}, {gText_Ghost}, {gText_Steel},
+    {gText_Fire}, {gText_Water}, {gText_Grass}, {gText_Electric},
+    {gText_Psychic}, {gText_Ice}, {gText_Dragon}, {gText_Dark}, {gText_Back},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -906,6 +958,13 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    [MULTI_QOL_MAIN]                   = MULTICHOICE(MultichoiceList_QoLMain),
+    [MULTI_QOL_EVS]                    = MULTICHOICE(MultichoiceList_QoLEVs),
+    [MULTI_QOL_IVS]                    = MULTICHOICE(MultichoiceList_QoLIVs),
+    [MULTI_QOL_STATS]                  = MULTICHOICE(MultichoiceList_QoLStats),
+    [MULTI_QOL_BALLS]                  = MULTICHOICE(MultichoiceList_QoLBalls),
+    [MULTI_QOL_NATURES]                = MULTICHOICE(MultichoiceList_QoLNatures),
+    [MULTI_QOL_HP_TYPES]               = MULTICHOICE(MultichoiceList_QoLHpTypes),
 };
 
 const u8 *const gStdStrings[] =

@@ -1510,3 +1510,5 @@ const u8 gText_SubQuest2_Desc17[] = _("Catch Kyogre, Groudon, and Rayquaza.");
 const u8 gText_SubQuest2_Desc18[] = _("Breed and hatch three Eevees.");
 const u8 gText_SubQuest2_Desc19[] = _("Hatch a shiny Pokemon from an egg.");
 const u8 gText_SubQuest2_Desc20[] = _("Obtain all type-boosting held items.");
+
+#include "data/strings/qol_scientist.inc"
