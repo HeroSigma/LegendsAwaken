@@ -1748,6 +1748,22 @@ bool8 ScrCmd_closemessage(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_setspeaker(struct ScriptContext *ctx)
+{
+    const u8 *speaker = (const u8 *)ScriptReadWord(ctx);
+
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+    SetFieldMessageBoxSpeaker(speaker);
+    return FALSE;
+}
+
+bool8 ScrCmd_clearspeaker(struct ScriptContext *ctx)
+{
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+    ClearFieldMessageBoxSpeaker();
+    return FALSE;
+}
+
 static bool8 WaitForAorBPress(void)
 {
     if (JOY_NEW(A_BUTTON))

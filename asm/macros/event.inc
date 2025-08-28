@@ -2183,10 +2183,21 @@
 	NO  = 0
 
 	@ Buffers the given text and calls the relevant standard message script (see gStdScripts).
-	.macro msgbox text:req, type=MSGBOX_DEFAULT
-	loadword 0, \text
-	callstd \type
-	.endm
+        .macro msgbox text:req, type=MSGBOX_DEFAULT
+        loadword 0, \text
+        callstd \type
+        .endm
+
+        @ Sets the speaker label for subsequent msgbox calls
+        .macro setspeaker speaker:req
+        .byte SCR_OP_SETSPEAKER
+        .4byte \speaker
+        .endm
+
+        @ Clears any previously set speaker label
+        .macro clearspeaker
+        .byte SCR_OP_CLEARSPEAKER
+        .endm
 
 	@ Gives 'amount' of the specified 'item' to the player and prints a message with fanfare.
 	@ If the player doesn't have space for all the items then as many are added as possible, the
