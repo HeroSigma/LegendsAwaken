@@ -13,7 +13,8 @@
 #define OW_DEFOG_FIELD_MOVE             TRUE      // If enabled, Defog can be used as a Field Move as seen in DPPt.
 #define OW_ROCK_CLIMB_FIELD_MOVE        TRUE      // If enabled, Rock Climb can be used as a Field Move as seen in DPPt.
 // When TRUE, the nameplate with the speaker's name is not drawn on dialogue boxes.
-#define OW_SUPPRESS_SPEAKER_NAME        TRUE
+// Set to FALSE to enable the speaker nameplate feature.
+#define OW_SUPPRESS_SPEAKER_NAME        FALSE
 
 // Item Obtain Description Box
 #define OW_ITEM_DESCRIPTIONS_OFF        0   // never show descriptions

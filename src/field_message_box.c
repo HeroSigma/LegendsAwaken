@@ -12,7 +12,8 @@
 
 // Optional speaker nameplate support
 const u8 *gSpeakerName = NULL;
-static EWRAM_DATA u8 sNamePlateWindowId = WINDOW_NONE;
+// EWRAM .sbss requires zero-initialization; set to WINDOW_NONE at init
+static EWRAM_DATA u8 sNamePlateWindowId = 0;
 static void TryShowNamePlate(void);
 static void DestroyNamePlate(void);
 
@@ -25,6 +26,8 @@ static void StartDrawFieldMessage(void);
 void InitFieldMessageBox(void)
 {
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
+    // Ensure nameplate window is marked as not present
+    sNamePlateWindowId = WINDOW_NONE;
     gTextFlags.canABSpeedUpPrint = FALSE;
     gTextFlags.useAlternateDownArrow = FALSE;
     gTextFlags.autoScroll = FALSE;
