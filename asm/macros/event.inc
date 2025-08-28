@@ -2199,6 +2199,24 @@
         .byte SCR_OP_CLEARSPEAKER
         .endm
 
+        @ Sets the speaker label using a buffered string var
+        .macro setspeakervar stringVarId:req
+        .byte SCR_OP_SETSPEAKERVAR
+        stringvar \stringVarId
+        .endm
+
+        @ Buffers the given trainer class as the speaker label
+        .macro setspeakerclass trainerClass:req, stringVarId=STR_VAR_1
+        buffertrainerclassname \stringVarId, \trainerClass
+        setspeakervar \stringVarId
+        .endm
+
+        @ Buffers the given trainer's name as the speaker label
+        .macro setspeakertrainer trainerId:req, stringVarId=STR_VAR_1
+        buffertrainername \stringVarId, \trainerId
+        setspeakervar \stringVarId
+        .endm
+
 	@ Gives 'amount' of the specified 'item' to the player and prints a message with fanfare.
 	@ If the player doesn't have space for all the items then as many are added as possible, the
 	@ message indicates there is no room, and VAR_RESULT is set to FALSE.

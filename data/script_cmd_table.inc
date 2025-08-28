@@ -259,6 +259,7 @@ gScriptCmdTable::
     script_cmd_table_entry SCR_OP_SUBQUESTMENU                  ScrCmd_subquestmenu,                requests_effects=1  @ 0xe7
     script_cmd_table_entry SCR_OP_SETSPEAKER                    ScrCmd_setspeaker,                  requests_effects=1  @ 0xe8
     script_cmd_table_entry SCR_OP_CLEARSPEAKER                  ScrCmd_clearspeaker,                requests_effects=1  @ 0xe9
+    script_cmd_table_entry SCR_OP_SETSPEAKERVAR                 ScrCmd_setvarspeaker,               requests_effects=1  @ 0xea
                 .if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::
         .4byte ScrCmd_nop

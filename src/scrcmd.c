@@ -1757,6 +1757,15 @@ bool8 ScrCmd_setspeaker(struct ScriptContext *ctx)
     return FALSE;
 }
 
+bool8 ScrCmd_setvarspeaker(struct ScriptContext *ctx)
+{
+    u8 stringVarIndex = ScriptReadByte(ctx);
+
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+    SetFieldMessageBoxSpeaker(sScriptStringVars[stringVarIndex]);
+    return FALSE;
+}
+
 bool8 ScrCmd_clearspeaker(struct ScriptContext *ctx)
 {
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
