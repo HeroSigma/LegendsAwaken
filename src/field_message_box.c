@@ -10,6 +10,7 @@
 #include "script.h"
 
 static EWRAM_DATA u8 sFieldMessageBoxMode = 0;
+static EWRAM_DATA const u8 *sFieldMessageBoxSpeaker = NULL;
 EWRAM_DATA u8 gWalkAwayFromSignpostTimer = 0;
 EWRAM_DATA const u8* gSpeakerName = NULL;
 
@@ -19,6 +20,7 @@ static void StartDrawFieldMessage(void);
 void InitFieldMessageBox(void)
 {
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
+    sFieldMessageBoxSpeaker = NULL;
     gTextFlags.canABSpeedUpPrint = FALSE;
     gTextFlags.useAlternateDownArrow = FALSE;
     gTextFlags.autoScroll = FALSE;
@@ -133,28 +135,15 @@ bool8 ShowFieldMessageFromBuffer(void)
 
 static void ExpandStringAndStartDrawFieldMessage(const u8 *str, bool32 allowSkippingDelayWithButtonPress)
 {
-    if (gSpeakerName != NULL && !(FlagGet(OW_FLAG_SUPPRESS_SPEAKER_NAME) || OW_SUPPRESS_SPEAKER_NAME)) 
-    {
-        int strLen = GetStringWidth(FONT_SMALL, gSpeakerName, -1);
-        if (strLen > 0) {
-            strLen = (DLW_WIN_PLATE_SIZE * 8) / 2 - (strLen / 2);
-            gNamePlateBuffer[0] = EXT_CTRL_CODE_BEGIN;
-            gNamePlateBuffer[1] = EXT_CTRL_CODE_CLEAR_TO;
-            gNamePlateBuffer[2] = strLen;
-            StringExpandPlaceholders(&gNamePlateBuffer[3], gSpeakerName);
-        } 
-        else 
-        {
-            StringExpandPlaceholders(&gNamePlateBuffer[0], gSpeakerName);
-        }
-
-        FillDialogFramePlate();
-        AddTextPrinterParameterized2(1, FONT_SMALL, gNamePlateBuffer, 0, NULL, 1, 0, 2);
-        PutWindowTilemap(1);
-        CopyWindowToVram(1, COPYWIN_FULL);
-    }
+    u8 buffer[0x200];
 
     StringExpandPlaceholders(gStringVar4, str);
+    if (sFieldMessageBoxSpeaker != NULL)
+    {
+        StringExpandPlaceholders(buffer, sFieldMessageBoxSpeaker);
+        StringAppend(buffer, gStringVar4);
+        StringCopy(gStringVar4, buffer);
+    }
     AddTextPrinterForMessage(allowSkippingDelayWithButtonPress);
     CreateTask_DrawFieldMessage();
 }
@@ -198,7 +187,12 @@ void StopFieldMessage(void)
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
 }
 
-void SetSpeakerName(const u8* name)
+void SetFieldMessageBoxSpeaker(const u8 *speaker)
 {
-    gSpeakerName = name;
+    sFieldMessageBoxSpeaker = speaker;
+}
+
+void ClearFieldMessageBoxSpeaker(void)
+{
+    sFieldMessageBoxSpeaker = NULL;
 }
