@@ -9,6 +9,7 @@
 #include "script.h"
 
 static EWRAM_DATA u8 sFieldMessageBoxMode = 0;
+static EWRAM_DATA const u8 *sFieldMessageBoxSpeaker = NULL;
 EWRAM_DATA u8 gWalkAwayFromSignpostTimer = 0;
 
 static void ExpandStringAndStartDrawFieldMessage(const u8 *, bool32);
@@ -17,6 +18,7 @@ static void StartDrawFieldMessage(void);
 void InitFieldMessageBox(void)
 {
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
+    sFieldMessageBoxSpeaker = NULL;
     gTextFlags.canABSpeedUpPrint = FALSE;
     gTextFlags.useAlternateDownArrow = FALSE;
     gTextFlags.autoScroll = FALSE;
@@ -123,7 +125,15 @@ bool8 ShowFieldMessageFromBuffer(void)
 
 static void ExpandStringAndStartDrawFieldMessage(const u8 *str, bool32 allowSkippingDelayWithButtonPress)
 {
+    u8 buffer[0x200];
+
     StringExpandPlaceholders(gStringVar4, str);
+    if (sFieldMessageBoxSpeaker != NULL)
+    {
+        StringExpandPlaceholders(buffer, sFieldMessageBoxSpeaker);
+        StringAppend(buffer, gStringVar4);
+        StringCopy(gStringVar4, buffer);
+    }
     AddTextPrinterForMessage(allowSkippingDelayWithButtonPress);
     CreateTask_DrawFieldMessage();
 }
@@ -164,4 +174,14 @@ void StopFieldMessage(void)
 {
     DestroyTask_DrawFieldMessage();
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
+}
+
+void SetFieldMessageBoxSpeaker(const u8 *speaker)
+{
+    sFieldMessageBoxSpeaker = speaker;
+}
+
+void ClearFieldMessageBoxSpeaker(void)
+{
+    sFieldMessageBoxSpeaker = NULL;
 }
