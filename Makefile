@@ -185,6 +185,46 @@ else
     ROMTESTHYDRA := $(TOOLS_DIR)/mgba-rom-test-hydra/mgba-rom-test-hydra$(EXE)
 endif
 
+# --- Poryscript integration ---
+PORYSCRIPT := tools/poryscript/poryscript
+
+# Find all .pory under data/
+PORYSCRIPTS := $(shell find data -name '*.pory')
+
+# Where the compiled .inc files go (in the build dir, mirroring source paths)
+PORYINC := $(patsubst %.pory,$(OBJ_DIR)/%.pory.inc,$(PORYSCRIPTS))
+
+# Ensure the tool is built when needed
+$(PORYSCRIPT):
+	$(MAKE) -C tools/poryscript
+
+# Compile .pory -> .pory.inc
+$(OBJ_DIR)/%.pory.inc: %.pory | $(PORYSCRIPT)
+	@mkdir -p $(dir $@)
+	$(PORYSCRIPT) \
+	  -cc tools/poryscript/command_config.json \
+	  -fc tools/poryscript/font_config.json \
+	  -i $< -o $@
+
+
+# Aggregate all compiled .pory.inc into a single include list the assembler can consume
+DATA_PORY_INC := $(DATA_ASM_SUBDIR)/poryscripts.inc
+DATA_PORY_S   := $(DATA_ASM_SUBDIR)/poryscripts.s
+
+# Generate poryscripts.inc after all .pory.inc are built
+$(DATA_PORY_INC): $(PORYINC)
+	@{ \
+	  for f in $(PORYINC); do echo ".include \"$$f\""; done; \
+	} > $@
+
+# Thin wrapper .s that the normal data build will pick up
+$(DATA_PORY_S): $(DATA_PORY_INC)
+	@printf ".include \"data/poryscripts.inc\"\n" > $@
+
+# Make 'generated' also build our poryscript includes
+AUTO_GEN_TARGETS += $(DATA_PORY_INC) $(DATA_PORY_S)
+# --- end Poryscript integration ---
+
 # Learnset helper is a Python script
 LEARNSET_HELPERS_DIR := $(TOOLS_DIR)/learnset_helpers
 LEARNSET_HELPERS_DATA_DIR := $(LEARNSET_HELPERS_DIR)/porymoves_files
@@ -328,6 +368,7 @@ clean-assets:
 	rm -f $(MID_SUBDIR)/*.s
 	rm -f $(DATA_ASM_SUBDIR)/layouts/layouts.inc $(DATA_ASM_SUBDIR)/layouts/layouts_table.inc
 	rm -f $(DATA_ASM_SUBDIR)/maps/connections.inc $(DATA_ASM_SUBDIR)/maps/events.inc $(DATA_ASM_SUBDIR)/maps/groups.inc $(DATA_ASM_SUBDIR)/maps/headers.inc $(DATA_SRC_SUBDIR)/map_group_count.h
+	rm -f $(DATA_ASM_SUBDIR)/poryscripts.inc $(DATA_ASM_SUBDIR)/poryscripts.s
 	find sound -iname '*.bin' -exec rm {} +
 	find . \( -iname '*.1bpp' -o -iname '*.4bpp' -o -iname '*.8bpp' -o -iname '*.gbapal' -o -iname '*.lz' -o -iname '*.smol' -o -iname '*.fastSmol' -o -iname '*.smolTM' -o -iname '*.rl' -o -iname '*.latfont' -o -iname '*.hwjpnfont' -o -iname '*.fwjpnfont' \) -exec rm {} +
 	find $(DATA_ASM_SUBDIR)/maps \( -iname 'connections.inc' -o -iname 'events.inc' -o -iname 'header.inc' \) -exec rm {} +
