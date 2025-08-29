@@ -124,6 +124,15 @@
 #define MULTI_TAG_MATCH_TYPE               113
 #define MULTI_BERRY_PLOT                   114
 
+// QoL Scientist Menus
+#define MULTI_QOL_MAIN                     115
+#define MULTI_QOL_EVS                      116
+#define MULTI_QOL_IVS                      117
+#define MULTI_QOL_STATS                    118
+#define MULTI_QOL_BALLS                    119
+#define MULTI_QOL_NATURES                  120
+#define MULTI_QOL_HP_TYPES                 121
+
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
 #define SSTIDAL_SELECTION_VERMILION       1

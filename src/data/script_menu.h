@@ -598,6 +598,78 @@ static const struct MenuAction MultichoiceList_UnusedSSTidal4[] =
     {gText_Exit},
 };
 
+// ---------------- QoL Scientist Menus ----------------
+static const struct MenuAction MultichoiceList_QoL_Main[] =
+{
+    { COMPOUND_STRING("NATURE") },
+    { COMPOUND_STRING("EVs") },
+    { COMPOUND_STRING("IVs") },
+    { COMPOUND_STRING("POKé BALL") },
+    { COMPOUND_STRING("HIDDEN POWER") },
+    { COMPOUND_STRING("TERA TYPE") },
+    { gText_Exit },
+};
+
+static const struct MenuAction MultichoiceList_QoL_EVs[] =
+{
+    { COMPOUND_STRING("Preset by nature") },
+    { COMPOUND_STRING("Quick: 252/252/6") },
+    { COMPOUND_STRING("Full custom") },
+    { COMPOUND_STRING("Clear EVs") },
+    { gText_Exit },
+};
+
+static const struct MenuAction MultichoiceList_QoL_IVs[] =
+{
+    { COMPOUND_STRING("Perfect 31") },
+    { COMPOUND_STRING("Trick Room: 0 Spe") },
+    { COMPOUND_STRING("Set IV") },
+    { gText_Exit },
+};
+
+static const struct MenuAction MultichoiceList_QoL_Stats[] =
+{
+    { gText_HP4 },
+    { gText_Attack3 },
+    { gText_Defense3 },
+    { gText_Speed2 },
+    { gText_SpAtk4 },
+    { gText_SpDef4 },
+    { gText_Exit },
+};
+
+static const struct MenuAction MultichoiceList_QoL_Balls[] =
+{
+    { COMPOUND_STRING("POKé BALL") },
+    { COMPOUND_STRING("GREAT BALL") },
+    { COMPOUND_STRING("ULTRA BALL") },
+    { COMPOUND_STRING("PREMIER BALL") },
+    { COMPOUND_STRING("DIVE BALL") },
+    { COMPOUND_STRING("DUSK BALL") },
+    { COMPOUND_STRING("TIMER BALL") },
+    { COMPOUND_STRING("QUICK BALL") },
+    { COMPOUND_STRING("CHERISH BALL") },
+    { COMPOUND_STRING("BEAST BALL") },
+    { gText_Exit },
+};
+
+static const struct MenuAction MultichoiceList_QoL_Natures[] =
+{
+    { COMPOUND_STRING("HARDY") }, { COMPOUND_STRING("LONELY") }, { COMPOUND_STRING("BRAVE") }, { COMPOUND_STRING("ADAMANT") }, { COMPOUND_STRING("NAUGHTY") },
+    { COMPOUND_STRING("BOLD") }, { COMPOUND_STRING("DOCILE") }, { COMPOUND_STRING("RELAXED") }, { COMPOUND_STRING("IMPISH") }, { COMPOUND_STRING("LAX") },
+    { COMPOUND_STRING("TIMID") }, { COMPOUND_STRING("HASTY") }, { COMPOUND_STRING("SERIOUS") }, { COMPOUND_STRING("JOLLY") }, { COMPOUND_STRING("NAIVE") },
+    { COMPOUND_STRING("MODEST") }, { COMPOUND_STRING("MILD") }, { COMPOUND_STRING("QUIET") }, { COMPOUND_STRING("BASHFUL") }, { COMPOUND_STRING("RASH") },
+    { COMPOUND_STRING("CALM") }, { COMPOUND_STRING("GENTLE") }, { COMPOUND_STRING("SASSY") }, { COMPOUND_STRING("CAREFUL") }, { COMPOUND_STRING("QUIRKY") },
+};
+
+static const struct MenuAction MultichoiceList_QoL_HpTypes[] =
+{
+    { COMPOUND_STRING("FIGHTING") }, { COMPOUND_STRING("FLYING") }, { COMPOUND_STRING("POISON") }, { COMPOUND_STRING("GROUND") },
+    { COMPOUND_STRING("ROCK") }, { COMPOUND_STRING("BUG") }, { COMPOUND_STRING("GHOST") }, { COMPOUND_STRING("STEEL") },
+    { COMPOUND_STRING("FIRE") }, { COMPOUND_STRING("WATER") }, { COMPOUND_STRING("GRASS") }, { COMPOUND_STRING("ELECTRIC") },
+    { COMPOUND_STRING("PSYCHIC") }, { COMPOUND_STRING("ICE") }, { COMPOUND_STRING("DRAGON") }, { COMPOUND_STRING("DARK") }, { gText_Exit },
+};
+
 static const struct MenuAction MultichoiceList_Fossil[] =
 {
     {COMPOUND_STRING("CLAW FOSSIL")},
@@ -906,6 +978,13 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    [MULTI_QOL_MAIN]                   = MULTICHOICE(MultichoiceList_QoL_Main),
+    [MULTI_QOL_EVS]                    = MULTICHOICE(MultichoiceList_QoL_EVs),
+    [MULTI_QOL_IVS]                    = MULTICHOICE(MultichoiceList_QoL_IVs),
+    [MULTI_QOL_STATS]                  = MULTICHOICE(MultichoiceList_QoL_Stats),
+    [MULTI_QOL_BALLS]                  = MULTICHOICE(MultichoiceList_QoL_Balls),
+    [MULTI_QOL_NATURES]                = MULTICHOICE(MultichoiceList_QoL_Natures),
+    [MULTI_QOL_HP_TYPES]               = MULTICHOICE(MultichoiceList_QoL_HpTypes),
 };
 
 const u8 *const gStdStrings[] =

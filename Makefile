@@ -501,6 +501,11 @@ ifneq ($(NODEP),1)
 -include $(addprefix $(OBJ_DIR)/,$(REGULAR_DATA_ASM_SRCS:.s=.d))
 endif
 
+# Ensure Poryscript includes are generated before assembling the aggregator
+# object. This avoids races where data/poryscripts.s gets assembled before
+# the corresponding build/*.pory.inc files exist.
+$(DATA_ASM_BUILDDIR)/poryscripts.o: $(DATA_PORY_INC)
+
 $(OBJ_DIR)/sym_bss.ld: sym_bss.txt
 	$(RAMSCRGEN) .bss $< ENGLISH > $@
 

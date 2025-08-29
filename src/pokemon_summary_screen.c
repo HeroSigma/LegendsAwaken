@@ -744,6 +744,11 @@ static void (*const sTextPrinterTasks[])(u8 taskId) =
 
 static const u8 sMemoNatureTextColor[] = _("{COLOR LIGHT_RED}{SHADOW GREEN}");
 static const u8 sMemoMiscTextColor[] = _("{COLOR WHITE}{SHADOW DARK_GRAY}"); // This is also affected by palettes, apparently
+// Helpers for rendering nature with mint override
+static const u8 sNatureOpenParen[]  = _(" (");
+static const u8 sNatureCloseParen[] = _(")");
+// Color to emphasize the mint nature inside parentheses
+static const u8 sMintNatureTextColor[] = _("{COLOR LIGHT_GREEN}{SHADOW BLUE}");
 static const u8 sStatsLeftColumnLayout[] = _("{DYNAMIC 0}/{DYNAMIC 1}\n{DYNAMIC 2}\n{DYNAMIC 3}");
 static const u8 sStatsLeftIVEVColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}");
 static const u8 sStatsRightColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}");
@@ -3536,7 +3541,27 @@ static void PrintMonTrainerMemo(void)
 static void BufferNatureString(void)
 {
     struct PokemonSummaryScreenData *sumStruct = sMonSummaryScreen;
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gNaturesInfo[sumStruct->summary.nature].name);
+    u8 base = sumStruct->summary.nature;
+    u8 mint = sumStruct->summary.mintNature;
+    // Show "Base (Mint)" if a mint nature overrides stats.
+    if (mint < NUM_NATURES && mint != base)
+    {
+        static u8 sNatureBuf[64];
+        u8 *p = sNatureBuf;
+        p = StringCopy(p, gNaturesInfo[base].name);
+        p = StringCopy(p, sNatureOpenParen);
+        // Apply a distinct color for the mint (effective) nature
+        p = StringCopy(p, sMintNatureTextColor);
+        p = StringCopy(p, gNaturesInfo[mint].name);
+        // Restore the base memo nature color for trailing ')' and comma
+        p = StringCopy(p, sMemoNatureTextColor);
+        p = StringCopy(p, sNatureCloseParen);
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, sNatureBuf);
+    }
+    else
+    {
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gNaturesInfo[base].name);
+    }
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(5, gText_EmptyString5);
 }
 

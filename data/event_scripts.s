@@ -1943,6 +1943,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/scripts/dexnav.inc"
+	.include "data/scripts/qol_scientist.inc"
 
 .include "data/maps/TimelessWood/scripts.inc"
 
@@ -1953,4 +1954,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route213B/scripts.inc"
 
 	.include "data/maps/Springpath/scripts.inc"
-
