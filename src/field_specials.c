@@ -3008,6 +3008,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     {
         COMPOUND_STRING("Perfect 31"),
         COMPOUND_STRING("Trick Room: 0 Spe"),
+        COMPOUND_STRING("Set stat"),
         gText_Exit
     },
     [SCROLL_MULTI_QOL_STATS] =
