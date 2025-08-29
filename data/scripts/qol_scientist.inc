@@ -62,13 +62,16 @@ EventScript_QoLScientist::
     goto .MainLoop
 
 .DoEVs:
-	multichoice 15, 1, MULTI_QOL_EVS, FALSE
-	switch VAR_RESULT
-		case 0, .EV_Preset
-		case 1, .EV_Quick
-		case 2, .EV_Full
-		case 3, .EV_Clear
-		case 4, .MainLoop
+        setvar VAR_0x8004, SCROLL_MULTI_QOL_EVS
+        special ShowScrollableMultichoice
+        waitstate
+        switch VAR_RESULT
+                case 0, .EV_Preset
+                case 1, .EV_Quick
+                case 2, .EV_Full
+                case 3, .EV_Clear
+                case 4, .MainLoop
+                case MULTI_B_PRESSED, .MainLoop
 
 .EV_Preset:
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
@@ -85,18 +88,26 @@ EventScript_QoLScientist::
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoEVs
     msgbox gText_QoLPickStat1, MSGBOX_DEFAULT
-    multichoice 15, 1, MULTI_QOL_STATS, FALSE
+    setvar VAR_0x8004, SCROLL_MULTI_QOL_STATS
+    special ShowScrollableMultichoice
+    waitstate
     compare VAR_RESULT, 6
     goto_if_eq .DoEVs
+    compare VAR_RESULT, MULTI_B_PRESSED
+    goto_if_eq .DoEVs
     setvar VAR_0x8000, VAR_RESULT
-	msgbox gText_QoLPickStat2, MSGBOX_DEFAULT
-	multichoice 0, 0, MULTI_QOL_STATS, FALSE
-	compare VAR_RESULT, 6
-	goto_if_eq .DoEVs
-	setvar VAR_0x8001, VAR_RESULT
-	callnative Script_QoL_EVs_QuickCustom
-	call .ResultMsg
-	goto .DoEVs
+        msgbox gText_QoLPickStat2, MSGBOX_DEFAULT
+        setvar VAR_0x8004, SCROLL_MULTI_QOL_STATS
+        special ShowScrollableMultichoice
+        waitstate
+        compare VAR_RESULT, 6
+        goto_if_eq .DoEVs
+        compare VAR_RESULT, MULTI_B_PRESSED
+        goto_if_eq .DoEVs
+        setvar VAR_0x8001, VAR_RESULT
+        callnative Script_QoL_EVs_QuickCustom
+        call .ResultMsg
+        goto .DoEVs
 
 .EV_Full:
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
@@ -145,12 +156,15 @@ EventScript_QoLScientist::
     goto .DoEVs
 
 .DoIVs:
-	multichoice 15, 1, MULTI_QOL_IVS, FALSE
-	switch VAR_RESULT
-		case 0, .IV_31
-		case 1, .IV_TR
-		case 2, .IV_SetStat
-		case 3, .MainLoop
+        setvar VAR_0x8004, SCROLL_MULTI_QOL_IVS
+        special ShowScrollableMultichoice
+        waitstate
+        switch VAR_RESULT
+                case 0, .IV_31
+                case 1, .IV_TR
+                case 2, .IV_SetStat
+                case 3, .MainLoop
+                case MULTI_B_PRESSED, .MainLoop
 
 .IV_31:
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
@@ -172,8 +186,12 @@ EventScript_QoLScientist::
 
 .IV_SetStat:
     msgbox gText_QoLPickAStat, MSGBOX_DEFAULT
-    multichoice 15, 1, MULTI_QOL_STATS, FALSE
+    setvar VAR_0x8004, SCROLL_MULTI_QOL_STATS
+    special ShowScrollableMultichoice
+    waitstate
     compare VAR_RESULT, 6
+    goto_if_eq .DoIVs
+    compare VAR_RESULT, MULTI_B_PRESSED
     goto_if_eq .DoIVs
     setvar VAR_0x8000, VAR_RESULT        @ store chosen stat
     copyvar VAR_0x8003, VAR_0x8000       @ preserve stat across number prompt
@@ -196,21 +214,25 @@ EventScript_QoLScientist::
     special ChoosePartyMon
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
-	msgbox gText_QoLPickBall, MSGBOX_DEFAULT
-	multichoice 0, 0, MULTI_QOL_BALLS, FALSE
-	compare VAR_RESULT, 10
-	goto_if_eq .MainLoop
-	switch VAR_RESULT
-		case 0, .B0
-		case 1, .B1
-		case 2, .B2
-		case 3, .B3
-		case 4, .B4
-		case 5, .B5
-		case 6, .B6
-		case 7, .B7
-		case 8, .B8
-		case 9, .B9
+        msgbox gText_QoLPickBall, MSGBOX_DEFAULT
+        setvar VAR_0x8004, SCROLL_MULTI_QOL_BALLS
+        special ShowScrollableMultichoice
+        waitstate
+        compare VAR_RESULT, 10
+        goto_if_eq .MainLoop
+        compare VAR_RESULT, MULTI_B_PRESSED
+        goto_if_eq .MainLoop
+        switch VAR_RESULT
+                case 0, .B0
+                case 1, .B1
+                case 2, .B2
+                case 3, .B3
+                case 4, .B4
+                case 5, .B5
+                case 6, .B6
+                case 7, .B7
+                case 8, .B8
+                case 9, .B9
 .B0: setvar VAR_0x8000, ITEM_POKE_BALL;    goto .BApply
 .B1: setvar VAR_0x8000, ITEM_GREAT_BALL;   goto .BApply
 .B2: setvar VAR_0x8000, ITEM_ULTRA_BALL;   goto .BApply
@@ -311,15 +333,19 @@ EventScript_QoLScientist::
     special ChoosePartyMon
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
-	msgbox gText_QoLPickHPType, MSGBOX_DEFAULT
-	multichoice 0, 0, MULTI_QOL_HP_TYPES, FALSE
-	compare VAR_RESULT, 16
-	goto_if_eq .MainLoop
-	setvar VAR_0x8000, TYPE_FIGHTING
-	addvar VAR_0x8000, VAR_RESULT
-	callnative Script_QoL_SetHiddenPowerType
-	call .ResultMsg
-	goto .MainLoop
+        msgbox gText_QoLPickHPType, MSGBOX_DEFAULT
+        setvar VAR_0x8004, SCROLL_MULTI_QOL_HP_TYPES
+        special ShowScrollableMultichoice
+        waitstate
+        compare VAR_RESULT, 16
+        goto_if_eq .MainLoop
+        compare VAR_RESULT, MULTI_B_PRESSED
+        goto_if_eq .MainLoop
+        setvar VAR_0x8000, TYPE_FIGHTING
+        addvar VAR_0x8000, VAR_RESULT
+        callnative Script_QoL_SetHiddenPowerType
+        call .ResultMsg
+        goto .MainLoop
 
 .ResultMsg:
 	compare VAR_RESULT, 1
