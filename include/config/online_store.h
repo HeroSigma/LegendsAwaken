@@ -2,13 +2,13 @@
 #define GUARD_CONFIG_ONLINE_STORE_H
 
 // Online Store global configuration
-#define ONLINE_STORE_ENABLED      FALSE   // Master switch for the online store feature
-#define ONLINE_STORE_SURCHARGE    0       // Percentage surcharge applied to all prices
+#define ONLINE_STORE_ENABLED      __GCC_ATOMIC_TEST_AND_SET_TRUEVAL   // Master switch for the online store feature
+#define ONLINE_STORE_SURCHARGE    0.5       // Percentage surcharge applied to all prices
 
 // Context availability
-#define ONLINE_STORE_LINK         TRUE    // Allow purchases while in link mode
-#define ONLINE_STORE_BATTLE       TRUE    // Allow purchases during battles
-#define ONLINE_STORE_SAFARI       TRUE    // Allow purchases inside the Safari Zone
+#define ONLINE_STORE_LINK         FALSE    // Allow purchases while in link mode
+#define ONLINE_STORE_BATTLE       FALSE    // Allow purchases during battles
+#define ONLINE_STORE_SAFARI       FALSE    // Allow purchases inside the Safari Zone
 
 // Category toggles
 #define ONLINE_STORE_CATEGORY_ITEMS        TRUE
