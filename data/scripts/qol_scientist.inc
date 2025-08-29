@@ -337,15 +337,64 @@ EventScript_QoLScientist::
     special ChoosePartyMon
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
-	msgbox gText_QoLPickHPType, MSGBOX_DEFAULT
-	multichoice 0, 0, MULTI_QOL_HP_TYPES, FALSE
-	compare VAR_RESULT, 16
-	goto_if_eq .MainLoop
-	setvar VAR_0x8000, TYPE_FIGHTING
-	addvar VAR_0x8000, VAR_RESULT
-	callnative Script_QoL_SetHiddenPowerType
-	call .ResultMsg
-	goto .MainLoop
+    copyvar VAR_0x8006, VAR_0x8004 @ preserve chosen slot for HP edits
+    @ Page 1 of Hidden Power types
+.HPPage1:
+    setvar VAR_0x8004, SCROLL_MULTI_QOL_HP_TYPES_PAGE1
+    special ShowScrollableMultichoice
+    waitstate
+    switch VAR_RESULT
+            case 0, .HPSetFighting
+            case 1, .HPSetFlying
+            case 2, .HPSetPoison
+            case 3, .HPSetGround
+            case 4, .HPSetRock
+            case 5, .HPSetBug
+            case 6, .HPSetGhost
+            case 7, .HPSetSteel
+            case 8, .HPPage2
+            case MULTI_B_PRESSED, .MainLoop
+    end
+
+.HPPage2:
+    setvar VAR_0x8004, SCROLL_MULTI_QOL_HP_TYPES_PAGE2
+    special ShowScrollableMultichoice
+    waitstate
+    switch VAR_RESULT
+            case 0, .HPSetFire
+            case 1, .HPSetWater
+            case 2, .HPSetGrass
+            case 3, .HPSetElectric
+            case 4, .HPSetPsychic
+            case 5, .HPSetIce
+            case 6, .HPSetDragon
+            case 7, .HPSetDark
+            case 8, .HPPage1
+            case MULTI_B_PRESSED, .MainLoop
+    end
+
+.HPSetFighting: setvar VAR_0x8000, TYPE_FIGHTING; goto .HPApply
+.HPSetFlying:   setvar VAR_0x8000, TYPE_FLYING;   goto .HPApply
+.HPSetPoison:   setvar VAR_0x8000, TYPE_POISON;   goto .HPApply
+.HPSetGround:   setvar VAR_0x8000, TYPE_GROUND;   goto .HPApply
+.HPSetRock:     setvar VAR_0x8000, TYPE_ROCK;     goto .HPApply
+.HPSetBug:      setvar VAR_0x8000, TYPE_BUG;      goto .HPApply
+.HPSetGhost:    setvar VAR_0x8000, TYPE_GHOST;    goto .HPApply
+.HPSetSteel:    setvar VAR_0x8000, TYPE_STEEL;    goto .HPApply
+.HPSetFire:     setvar VAR_0x8000, TYPE_FIRE;     goto .HPApply
+.HPSetWater:    setvar VAR_0x8000, TYPE_WATER;    goto .HPApply
+.HPSetGrass:    setvar VAR_0x8000, TYPE_GRASS;    goto .HPApply
+.HPSetElectric: setvar VAR_0x8000, TYPE_ELECTRIC; goto .HPApply
+.HPSetPsychic:  setvar VAR_0x8000, TYPE_PSYCHIC;  goto .HPApply
+.HPSetIce:      setvar VAR_0x8000, TYPE_ICE;      goto .HPApply
+.HPSetDragon:   setvar VAR_0x8000, TYPE_DRAGON;   goto .HPApply
+.HPSetDark:     setvar VAR_0x8000, TYPE_DARK;     goto .HPApply
+
+.HPApply:
+    copyvar VAR_0x8004, VAR_0x8006 @ restore chosen slot for callnative
+    callnative Script_QoL_SetHiddenPowerType
+    call .ResultMsg
+    goto .MainLoop
 
 .ResultMsg:
 	compare VAR_RESULT, 1

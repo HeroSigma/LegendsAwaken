@@ -662,13 +662,6 @@ static const struct MenuAction MultichoiceList_QoL_Natures[] =
     { COMPOUND_STRING("CALM") }, { COMPOUND_STRING("GENTLE") }, { COMPOUND_STRING("SASSY") }, { COMPOUND_STRING("CAREFUL") }, { COMPOUND_STRING("QUIRKY") },
 };
 
-static const struct MenuAction MultichoiceList_QoL_HpTypes[] =
-{
-    { COMPOUND_STRING("FIGHTING") }, { COMPOUND_STRING("FLYING") }, { COMPOUND_STRING("POISON") }, { COMPOUND_STRING("GROUND") },
-    { COMPOUND_STRING("ROCK") }, { COMPOUND_STRING("BUG") }, { COMPOUND_STRING("GHOST") }, { COMPOUND_STRING("STEEL") },
-    { COMPOUND_STRING("FIRE") }, { COMPOUND_STRING("WATER") }, { COMPOUND_STRING("GRASS") }, { COMPOUND_STRING("ELECTRIC") },
-    { COMPOUND_STRING("PSYCHIC") }, { COMPOUND_STRING("ICE") }, { COMPOUND_STRING("DRAGON") }, { COMPOUND_STRING("DARK") }, { gText_Exit },
-};
 
 static const struct MenuAction MultichoiceList_Fossil[] =
 {
@@ -984,7 +977,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_QOL_STATS]                  = MULTICHOICE(MultichoiceList_QoL_Stats),
     [MULTI_QOL_BALLS]                  = MULTICHOICE(MultichoiceList_QoL_Balls),
     [MULTI_QOL_NATURES]                = MULTICHOICE(MultichoiceList_QoL_Natures),
-    [MULTI_QOL_HP_TYPES]               = MULTICHOICE(MultichoiceList_QoL_HpTypes),
 };
 
 const u8 *const gStdStrings[] =
