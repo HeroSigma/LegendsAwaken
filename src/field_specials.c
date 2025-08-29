@@ -2601,6 +2601,46 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
+    case SCROLL_MULTI_QOL_EVS:
+        task->tMaxItemsOnScreen = 5;
+        task->tNumItems = 5;
+        task->tLeft = 15;
+        task->tTop = 1;
+        task->tWidth = 14;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_QOL_IVS:
+        task->tMaxItemsOnScreen = 4;
+        task->tNumItems = 4;
+        task->tLeft = 15;
+        task->tTop = 1;
+        task->tWidth = 14;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_QOL_STATS:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 7;
+        task->tLeft = 15;
+        task->tTop = 1;
+        task->tWidth = 14;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_QOL_BALLS:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 11;
+        task->tLeft = 0;
+        task->tTop = 0;
+        task->tWidth = 14;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
     default:
         gSpecialVar_Result = MULTI_B_PRESSED;
         DestroyTask(taskId);
@@ -2935,6 +2975,45 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("FAIRY{CLEAR_TO 0x48}¥1000"),
         COMPOUND_STRING("STELLAR{CLEAR_TO 0x48}¥5000"),
         COMPOUND_STRING("BACK")
+    },
+    [SCROLL_MULTI_QOL_EVS] =
+    {
+        COMPOUND_STRING("Preset by nature"),
+        COMPOUND_STRING("Quick: 252/252/6"),
+        COMPOUND_STRING("Full custom"),
+        COMPOUND_STRING("Clear EVs"),
+        gText_Exit
+    },
+    [SCROLL_MULTI_QOL_IVS] =
+    {
+        COMPOUND_STRING("Perfect 31"),
+        COMPOUND_STRING("Trick Room: 0 Spe"),
+        COMPOUND_STRING("Set IV"),
+        gText_Exit
+    },
+    [SCROLL_MULTI_QOL_STATS] =
+    {
+        gText_HP4,
+        gText_Attack3,
+        gText_Defense3,
+        gText_Speed2,
+        gText_SpAtk4,
+        gText_SpDef4,
+        gText_Exit
+    },
+    [SCROLL_MULTI_QOL_BALLS] =
+    {
+        COMPOUND_STRING("POKé BALL"),
+        COMPOUND_STRING("GREAT BALL"),
+        COMPOUND_STRING("ULTRA BALL"),
+        COMPOUND_STRING("PREMIER BALL"),
+        COMPOUND_STRING("DIVE BALL"),
+        COMPOUND_STRING("DUSK BALL"),
+        COMPOUND_STRING("TIMER BALL"),
+        COMPOUND_STRING("QUICK BALL"),
+        COMPOUND_STRING("CHERISH BALL"),
+        COMPOUND_STRING("BEAST BALL"),
+        gText_Exit
     }
 };
 

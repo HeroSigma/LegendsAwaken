@@ -55,6 +55,10 @@
 #define SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION5          25
 #define SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION6          26
 #define SCROLL_MULTI_SS_TIDAL_SEVII_DESTINATION7          27
+#define SCROLL_MULTI_QOL_EVS                              28
+#define SCROLL_MULTI_QOL_IVS                              29
+#define SCROLL_MULTI_QOL_STATS                            30
+#define SCROLL_MULTI_QOL_BALLS                            31
 
 #define MAX_SCROLL_MULTI_ON_SCREEN 6
 #define MAX_SCROLL_MULTI_LENGTH 16
