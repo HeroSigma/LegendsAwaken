@@ -2670,4 +2670,17 @@ extern const u8 gText_Rename[]; // change nickname from summary screen
 // Switch Caught Mon into Party
 extern const u8 gText_CannotSendMonToBoxHM[];
 
+// Online Store
+extern const u8 gText_OnlineStore[];
+extern const u8 gText_Cart[];
+extern const u8 gText_AddToCart[];
+extern const u8 gText_Checkout[];
+extern const u8 gText_EmptyCart[];
+extern const u8 gText_OutOfFunds[];
+extern const u8 gText_NoBagSpace[];
+extern const u8 gText_ItemsDelivered[];
+extern const u8 gText_SurchargeNote[];
+extern const u8 gText_ChooseCategory[];
+extern const u8 gText_ViewCartHint[];
+
 #endif // GUARD_STRINGS_H

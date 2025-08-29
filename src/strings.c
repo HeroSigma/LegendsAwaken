@@ -1550,3 +1550,16 @@ const u8 gText_SubQuest2_Desc17[] = _("Catch Kyogre, Groudon, and Rayquaza.");
 const u8 gText_SubQuest2_Desc18[] = _("Breed and hatch three Eevees.");
 const u8 gText_SubQuest2_Desc19[] = _("Hatch a shiny Pokemon from an egg.");
 const u8 gText_SubQuest2_Desc20[] = _("Obtain all type-boosting held items.");
+
+// -------- Online Store strings --------
+const u8 gText_OnlineStore[]    = _("ONLINE STORE");
+const u8 gText_Cart[]           = _("CART");
+const u8 gText_AddToCart[]      = _("Add to cart");
+const u8 gText_Checkout[]       = _("CHECKOUT");
+const u8 gText_EmptyCart[]      = _("Your cart is empty.");
+const u8 gText_OutOfFunds[]     = _("You don't have enough money.");
+const u8 gText_NoBagSpace[]     = _("There's no room in your BAG.");
+const u8 gText_ItemsDelivered[] = _("The items were sent to your PC.");
+const u8 gText_SurchargeNote[]  = _("Note: A surcharge applies.");
+const u8 gText_ChooseCategory[] = _("Choose a category.");
+const u8 gText_ViewCartHint[]   = _("{SELECT_BUTTON}VIEW CART");
