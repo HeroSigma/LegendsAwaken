@@ -188,5 +188,6 @@ bool32 AddToCart(u16 itemId, u16 quantity);
 u32 CartGetTotalCost(void);
 bool32 CartWillFitInBag(void);
 void OnlineStore_StartCheckout(void);
+void Store_QtyPrompt(u16 itemId);
 
 #endif // GUARD_ONLINE_STORE_H

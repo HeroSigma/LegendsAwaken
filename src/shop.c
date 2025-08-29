@@ -1317,3 +1317,49 @@ void CreateDecorationShop2Menu(const u16 *itemsForSale)
     SetShopItemsForSale(itemsForSale);
     SetShopMenuCallback(ScriptContext_Enable);
 }
+
+//------------------------------------------------------------------------------
+// Quantity selection
+//------------------------------------------------------------------------------
+
+struct QuantitySelect
+{
+    u16 maxQuantity;
+    s16 quantity;
+    void (*onConfirm)(u16 quantity);
+    void (*onCancel)(void);
+};
+
+static EWRAM_DATA struct QuantitySelect sQuantitySelect = {0};
+
+static void Task_HandleQuantitySelect(u8 taskId)
+{
+    if (AdjustQuantityAccordingToDPadInput(&sQuantitySelect.quantity, sQuantitySelect.maxQuantity))
+        return;
+
+    if (JOY_NEW(A_BUTTON))
+    {
+        if (sQuantitySelect.onConfirm != NULL)
+            sQuantitySelect.onConfirm(sQuantitySelect.quantity);
+        DestroyTask(taskId);
+    }
+    else if (JOY_NEW(B_BUTTON))
+    {
+        if (sQuantitySelect.onCancel != NULL)
+            sQuantitySelect.onCancel();
+        DestroyTask(taskId);
+    }
+}
+
+// Starts a simple quantity selection loop. The quantity will start at 1 and is
+// bounded by maxQuantity. When the player confirms, onConfirm is called with the
+// selected quantity. If the player cancels, onCancel is called (if non-NULL).
+void Shop_DoQuantitySelect(u16 maxQuantity, void (*onConfirm)(u16), void (*onCancel)(void))
+{
+    sQuantitySelect.maxQuantity = maxQuantity;
+    sQuantitySelect.quantity = 1;
+    sQuantitySelect.onConfirm = onConfirm;
+    sQuantitySelect.onCancel = onCancel;
+
+    CreateTask(Task_HandleQuantitySelect, 8);
+}
