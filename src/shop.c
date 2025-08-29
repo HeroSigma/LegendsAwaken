@@ -38,6 +38,7 @@
 #include "constants/event_objects.h"
 #include "constants/items.h"
 #include "constants/metatile_behaviors.h"
+#include "config/online_store.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
