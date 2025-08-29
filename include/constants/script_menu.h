@@ -131,7 +131,6 @@
 #define MULTI_QOL_STATS                    118
 #define MULTI_QOL_BALLS                    119
 #define MULTI_QOL_NATURES                  120
-#define MULTI_QOL_HP_TYPES                 121
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

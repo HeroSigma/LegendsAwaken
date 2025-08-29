@@ -91,7 +91,13 @@ void Script_QoL_EVs_PresetByNature(void)
     struct Pokemon *mon = sQolMon();
     if (MonInvalidForEdit(mon)) { VarSet(VAR_RESULT, 0); return; }
     if (!QoL_TakeMoneyIfEnough(QOL_COST_PER_ACTION)) { VarSet(VAR_RESULT, 2); return; }
-    u8 nature = GetNature(mon);
+    // Use the hidden (minted) nature when determining which stat to boost.
+    // The visible nature is tied to the personality, but the stat changes
+    // come from MON_DATA_HIDDEN_NATURE.
+    // Clamp the hidden nature to the supported range since the encoded value
+    // may exceed NUM_NATURES if it was never initialised, which could crash
+    // when indexing gNaturesInfo.
+    u8 nature = GetMonData(mon, MON_DATA_HIDDEN_NATURE) % NUM_NATURES;
     u8 boosted = STAT_SPEED; // default second bucket
     for (u8 s = STAT_ATK; s <= STAT_SPDEF; s++)
         if (NatureDelta(nature, s) > 0) { boosted = s; break; }

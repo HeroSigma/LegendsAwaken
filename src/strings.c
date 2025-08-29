@@ -179,17 +179,17 @@ const u8 gText_QoLPickAStat[]    = _("Pick a stat.");
 const u8 gText_QoLPickBall[]     = _("Pick a POKé BALL.");
 const u8 gText_QoLPickHPType[]   = _("Pick a HIDDEN POWER type.");
 
-const u8 gText_QoLHello_Hoenn[]  = _("Hoenn hustle! Lab liaison.\nEach change costs $1000.");
-const u8 gText_QoLHello_Johto[]  = _("Johto craft meets science.\nEach change costs $1000.");
-const u8 gText_QoLHello_Kanto[]  = _("Straight to business.\nEach change costs $1000.");
-const u8 gText_QoLHello_Sevii[]  = _("Remote outpost, sharp tools.\nEach change costs $1000.");
-const u8 gText_QoLHello_Sinnoh[] = _("Sinnoh standards are high.\nEach change costs $1000.");
+const u8 gText_QoLHello_Hoenn[]  = _("Hoenn hustle! Lab liaison.\nEach change costs ¥1000.");
+const u8 gText_QoLHello_Johto[]  = _("Johto craft meets science.\nEach change costs ¥1000.");
+const u8 gText_QoLHello_Kanto[]  = _("Straight to business.\nEach change costs ¥1000.");
+const u8 gText_QoLHello_Sevii[]  = _("Remote outpost, sharp tools.\nEach change costs ¥1000.");
+const u8 gText_QoLHello_Sinnoh[] = _("Sinnoh standards are high.\nEach change costs ¥1000.");
 
-const u8 gText_QoL_NotEnoughMoney_Hoenn[]  = _("You need $1000 for this.\nYou don't have enough.");
-const u8 gText_QoL_NotEnoughMoney_Johto[]  = _("$1000 per change.\nYour funds fall short.");
-const u8 gText_QoL_NotEnoughMoney_Kanto[]  = _("Fee is $1000.\nYou're short on cash.");
-const u8 gText_QoL_NotEnoughMoney_Sevii[]  = _("Island rate: $1000.\nYou're a bit light.");
-const u8 gText_QoL_NotEnoughMoney_Sinnoh[] = _("$1000 required.\nYou lack the funds.");
+const u8 gText_QoL_NotEnoughMoney_Hoenn[]  = _("You need ¥1000 for this.\nYou don't have enough.");
+const u8 gText_QoL_NotEnoughMoney_Johto[]  = _("¥1000 per change.\nYour funds fall short.");
+const u8 gText_QoL_NotEnoughMoney_Kanto[]  = _("Fee is ¥1000.\nYou're short on cash.");
+const u8 gText_QoL_NotEnoughMoney_Sevii[]  = _("Island rate: ¥1000.\nYou're a bit light.");
+const u8 gText_QoL_NotEnoughMoney_Sinnoh[] = _("¥1000 required.\nYou lack the funds.");
 
 const u8 gText_QoL_IllegalBall_Hoenn[]  = _("That BALL can't be used\non this POKéMON.");
 const u8 gText_QoL_IllegalBall_Johto[]  = _("That BALL isn't allowed\nfor this POKéMON.");
@@ -197,11 +197,11 @@ const u8 gText_QoL_IllegalBall_Kanto[]  = _("Rules forbid that BALL\nhere.");
 const u8 gText_QoL_IllegalBall_Sevii[]  = _("Wrong BALL for this\nPOKéMON.");
 const u8 gText_QoL_IllegalBall_Sinnoh[] = _("That BALL is\nincompatible.");
 
-const u8 gText_QoL_Charged_Hoenn[]  = _("Done! $1000 deducted.");
-const u8 gText_QoL_Charged_Johto[]  = _("Adjustment complete.\n$1000 paid.");
-const u8 gText_QoL_Charged_Kanto[]  = _("All set. $1000 charged.");
-const u8 gText_QoL_Charged_Sevii[]  = _("Tweaked! $1000 fee\napplied.");
-const u8 gText_QoL_Charged_Sinnoh[] = _("Modification finished.\n$1000 collected.");
+const u8 gText_QoL_Charged_Hoenn[]  = _("Done! ¥1000 deducted.");
+const u8 gText_QoL_Charged_Johto[]  = _("Adjustment complete.\n¥1000 paid.");
+const u8 gText_QoL_Charged_Kanto[]  = _("All set. ¥1000 charged.");
+const u8 gText_QoL_Charged_Sevii[]  = _("Tweaked! ¥1000 fee\napplied.");
+const u8 gText_QoL_Charged_Sinnoh[] = _("Modification finished.\n¥1000 collected.");
 
 const u8 gText_QoL_Canceled_Hoenn[]  = _("Canceled - no charge.");
 const u8 gText_QoL_Canceled_Johto[]  = _("No changes made - no fee.");

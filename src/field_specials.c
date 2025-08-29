@@ -2641,11 +2641,21 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
-    case SCROLL_MULTI_QOL_HP_TYPES:
+    case SCROLL_MULTI_QOL_HP_TYPES_PAGE1:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 17;
-        task->tLeft = 0;
-        task->tTop = 0;
+        task->tNumItems = 9; // 8 types + Next
+        task->tLeft = 15;
+        task->tTop = 1;
+        task->tWidth = 14;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_QOL_HP_TYPES_PAGE2:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 9; // 8 types + Back
+        task->tLeft = 15;
+        task->tTop = 1;
         task->tWidth = 14;
         task->tHeight = 12;
         task->tKeepOpenAfterSelect = FALSE;
@@ -2998,7 +3008,6 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     {
         COMPOUND_STRING("Perfect 31"),
         COMPOUND_STRING("Trick Room: 0 Spe"),
-        COMPOUND_STRING("Set IV"),
         gText_Exit
     },
     [SCROLL_MULTI_QOL_STATS] =
@@ -3025,25 +3034,29 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("BEAST BALL"),
         gText_Exit
     },
-    [SCROLL_MULTI_QOL_HP_TYPES] =
+    [SCROLL_MULTI_QOL_HP_TYPES_PAGE1] =
     {
-        COMPOUND_STRING("FIGHTING"),
-        COMPOUND_STRING("FLYING"),
-        COMPOUND_STRING("POISON"),
-        COMPOUND_STRING("GROUND"),
-        COMPOUND_STRING("ROCK"),
-        COMPOUND_STRING("BUG"),
-        COMPOUND_STRING("GHOST"),
-        COMPOUND_STRING("STEEL"),
-        COMPOUND_STRING("FIRE"),
-        COMPOUND_STRING("WATER"),
-        COMPOUND_STRING("GRASS"),
-        COMPOUND_STRING("ELECTRIC"),
-        COMPOUND_STRING("PSYCHIC"),
-        COMPOUND_STRING("ICE"),
-        COMPOUND_STRING("DRAGON"),
-        COMPOUND_STRING("DARK"),
-        gText_Exit
+        COMPOUND_STRING("FIGHTING{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("FLYING{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("POISON{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("GROUND{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("ROCK{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("BUG{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("GHOST{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("STEEL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("NEXT"),
+    },
+    [SCROLL_MULTI_QOL_HP_TYPES_PAGE2] =
+    {
+        COMPOUND_STRING("FIRE{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("WATER{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("GRASS{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("ELECTRIC{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("PSYCHIC{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("ICE{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("DRAGON{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("DARK{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("BACK"),
     }
 };
 

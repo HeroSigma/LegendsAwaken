@@ -337,15 +337,28 @@ EventScript_QoLScientist::
     special ChoosePartyMon
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
-	msgbox gText_QoLPickHPType, MSGBOX_DEFAULT
-	multichoice 0, 0, MULTI_QOL_HP_TYPES, FALSE
-	compare VAR_RESULT, 16
-	goto_if_eq .MainLoop
-	setvar VAR_0x8000, TYPE_FIGHTING
-	addvar VAR_0x8000, VAR_RESULT
-	callnative Script_QoL_SetHiddenPowerType
-	call .ResultMsg
-	goto .MainLoop
+
+.HPSetFighting: setvar VAR_0x8000, TYPE_FIGHTING; goto .HPApply
+.HPSetFlying:   setvar VAR_0x8000, TYPE_FLYING;   goto .HPApply
+.HPSetPoison:   setvar VAR_0x8000, TYPE_POISON;   goto .HPApply
+.HPSetGround:   setvar VAR_0x8000, TYPE_GROUND;   goto .HPApply
+.HPSetRock:     setvar VAR_0x8000, TYPE_ROCK;     goto .HPApply
+.HPSetBug:      setvar VAR_0x8000, TYPE_BUG;      goto .HPApply
+.HPSetGhost:    setvar VAR_0x8000, TYPE_GHOST;    goto .HPApply
+.HPSetSteel:    setvar VAR_0x8000, TYPE_STEEL;    goto .HPApply
+.HPSetFire:     setvar VAR_0x8000, TYPE_FIRE;     goto .HPApply
+.HPSetWater:    setvar VAR_0x8000, TYPE_WATER;    goto .HPApply
+.HPSetGrass:    setvar VAR_0x8000, TYPE_GRASS;    goto .HPApply
+.HPSetElectric: setvar VAR_0x8000, TYPE_ELECTRIC; goto .HPApply
+.HPSetPsychic:  setvar VAR_0x8000, TYPE_PSYCHIC;  goto .HPApply
+.HPSetIce:      setvar VAR_0x8000, TYPE_ICE;      goto .HPApply
+.HPSetDragon:   setvar VAR_0x8000, TYPE_DRAGON;   goto .HPApply
+.HPSetDark:     setvar VAR_0x8000, TYPE_DARK;     goto .HPApply
+
+.HPApply:
+    callnative Script_QoL_SetHiddenPowerType
+    call .ResultMsg
+    goto .MainLoop
 
 .ResultMsg:
 	compare VAR_RESULT, 1
