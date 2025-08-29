@@ -49,6 +49,8 @@
 #include "dexnav.h"
 #include "wild_encounter.h"
 #include "quests.h"
+#include "online_store.h"
+#include "config/online_store.h"
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
@@ -64,6 +66,7 @@ enum
     MENU_ACTION_PLAYER,
     MENU_ACTION_SAVE,
     MENU_ACTION_OPTION,
+    MENU_ACTION_ONLINE_STORE,s
     MENU_ACTION_EXIT,
     MENU_ACTION_RETIRE_SAFARI,
     MENU_ACTION_PLAYER_LINK,
@@ -91,7 +94,7 @@ EWRAM_DATA static u8 sSafariBallsWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
-EWRAM_DATA static u8 sCurrentStartMenuActions[10] = {0};
+EWRAM_DATA static u8 sCurrentStartMenuActions[11] = {0};
 EWRAM_DATA static s8 sInitStartMenuData[2] = {0};
 
 EWRAM_DATA static u8 (*sSaveDialogCallback)(void) = NULL;
@@ -115,6 +118,7 @@ static bool8 StartMenuBattlePyramidBagCallback(void);
 static bool8 StartMenuDebugCallback(void);
 static bool8 StartMenuDexNavCallback(void);
 static bool8 QuestMenuCallback(void);
+static bool8 StartMenuCb_OnlineStore(void);
 
 // Menu callbacks
 static bool8 SaveStartCallback(void);
@@ -204,6 +208,7 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_PLAYER]          = {gText_MenuPlayer,  {.u8_void = StartMenuPlayerNameCallback}},
     [MENU_ACTION_SAVE]            = {gText_MenuSave,    {.u8_void = StartMenuSaveCallback}},
     [MENU_ACTION_OPTION]          = {gText_MenuOption,  {.u8_void = StartMenuOptionCallback}},
+    [MENU_ACTION_ONLINE_STORE]    = {gText_OnlineStore, {.u8_void = StartMenuCb_OnlineStore}},
     [MENU_ACTION_EXIT]            = {gText_MenuExit,    {.u8_void = StartMenuExitCallback}},
     [MENU_ACTION_RETIRE_SAFARI]   = {gText_MenuRetire,  {.u8_void = StartMenuSafariZoneRetireCallback}},
     [MENU_ACTION_PLAYER_LINK]     = {gText_MenuPlayer,  {.u8_void = StartMenuLinkModePlayerNameCallback}},
@@ -357,6 +362,7 @@ static void BuildNormalStartMenu(void)
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_ONLINE_STORE);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
@@ -385,6 +391,7 @@ static void BuildSafariZoneStartMenu(void)
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_ONLINE_STORE);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
@@ -401,6 +408,7 @@ static void BuildLinkModeStartMenu(void)
     AddStartMenuAction(MENU_ACTION_PLAYER_LINK);
     AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_ONLINE_STORE);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
@@ -417,6 +425,7 @@ static void BuildUnionRoomStartMenu(void)
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_ONLINE_STORE);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
@@ -427,6 +436,7 @@ static void BuildBattlePikeStartMenu(void)
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_ONLINE_STORE);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
@@ -439,6 +449,7 @@ static void BuildBattlePyramidStartMenu(void)
     AddStartMenuAction(MENU_ACTION_REST_FRONTIER);
     AddStartMenuAction(MENU_ACTION_RETIRE_FRONTIER);
     AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_ONLINE_STORE);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
@@ -448,6 +459,7 @@ static void BuildMultiPartnerRoomStartMenu(void)
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_QUEST_MENU);
     AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_ONLINE_STORE);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
@@ -1518,6 +1530,18 @@ static bool8 StartMenuDexNavCallback(void)
 static bool8 QuestMenuCallback(void)
 {
     CreateTask(Task_QuestMenu_OpenFromStartMenu, 0);
+    return TRUE;
+}
+
+static bool8 StartMenuCb_OnlineStore(void)
+{
+    if (OnlineStore_IsContextBlocked())
+        return FALSE;
+
+    RemoveExtraStartMenuWindows();
+    HideStartMenu();
+    OnlineStore_Open(NULL);
+
     return TRUE;
 }
 

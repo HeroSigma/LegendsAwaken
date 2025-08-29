@@ -29,6 +29,7 @@
 #include "match_call.h"
 #include "menu.h"
 #include "overworld.h"
+#include "online_store.h"
 #include "party_menu.h"
 #include "pokeblock.h"
 #include "pokedex.h"

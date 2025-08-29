@@ -48,6 +48,7 @@
 #include "script_movement.h"
 #include "script_pokemon_util.h"
 #include "shop.h"
+#include "config/online_store.h"
 #include "slot_machine.h"
 #include "sound.h"
 #include "string_util.h"
