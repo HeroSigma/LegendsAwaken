@@ -1,6 +1,3 @@
-#ifndef GUARD_ONLINE_STORE_H
-#define GUARD_ONLINE_STORE_H
-
 #include "global.h"
 #include "online_store.h"
 #include "event_data.h"
@@ -146,47 +143,86 @@ static void Task_OnlineStore(u8 taskId)
     DestroyTask(taskId);
 }
 
-bool8 OnlineStore_Open(const u16 *inventory)
+struct OnlineStoreItem
 {
-    if (!OnlineStore_IsContextBlocked())
+    u16 itemId;
+    u16 price;
+    u8 name[ITEM_NAME_LENGTH + 1];
+};
+
+static struct OnlineStoreItem *sStoreItems = NULL;
+static u16 sStoreItemCount = 0;
+static u8 sCurrentCategory = 0;
+
+static void FreeStoreItems(void)
+{
+    if (sStoreItems != NULL)
     {
-        OnlineStore_SetInventory(inventory);
-        return TRUE;
+        Free(sStoreItems);
+        sStoreItems = NULL;
     }
-    return FALSE;
+    sStoreItemCount = 0;
 }
 
-void OnlineStore_OpenCategory(u8 categoryId)
+static int CompareItemsByName(const void *a, const void *b)
 {
-    if (!OnlineStore_IsContextBlocked())
+    const struct OnlineStoreItem *itemA = a;
+    const struct OnlineStoreItem *itemB = b;
+    return StringCompare(itemA->name, itemB->name);
+}
+
+static void BuildItemList(void)
+{
+    u16 i;
+    const struct OnlineStoreCategory *category = &gOnlineStoreCategories[sCurrentCategory];
+
+    FreeStoreItems();
+    sStoreItems = Alloc(sizeof(*sStoreItems) * ITEMS_COUNT);
+    if (sStoreItems == NULL)
+        return;
+
+    for (i = 1; i < ITEMS_COUNT; i++)
     {
-        OnlineStore_SetCategory(categoryId);
+        if (category->filter == NULL || category->filter(i))
+        {
+            sStoreItems[sStoreItemCount].itemId = i;
+            sStoreItems[sStoreItemCount].price = gItemsInfo[i].price;
+            CopyItemName(i, sStoreItems[sStoreItemCount].name);
+            sStoreItemCount++;
+        }
     }
+
+    if (sStoreItemCount > 1)
+        qsort(sStoreItems, sStoreItemCount, sizeof(*sStoreItems), CompareItemsByName);
 }
 
-u16 OnlineStore_GetUnitPrice(u16 itemId)
+void OnlineStore_SetCategory(u8 category)
 {
-    if (!OnlineStore_IsContextBlocked())
-    {
-        return GetItemPrice(itemId);
-    }
-    return 0;
+    if (category >= gOnlineStoreCategoryCount)
+        category = 0;
+    sCurrentCategory = category;
+    BuildItemList();
 }
 
-bool8 OnlineStore_IsContextBlocked(void)
+//------------------------------------------------------------------------------
+// Task handling
+//------------------------------------------------------------------------------
+
+// Task for selecting a category. In a full implementation this would handle
+// input from the player. Here it simply rebuilds the item list for the
+// category stored in gTasks[taskId].data[0].
+void StoreTask_SelectCategory(u8 taskId)
 {
-    return FALSE;
+    u8 category = gTasks[taskId].data[0];
+    OnlineStore_SetCategory(category);
+    gTasks[taskId].func = StoreTask_BrowseCategory;
 }
 
-void OnlineStore_SetSurcharge(u16 yen)
+// Task for browsing items within a category. This is a stub for the purposes
+// of this repository; a full implementation would present the list to the
+// player and allow purchases. The task currently performs no additional work.
+void StoreTask_BrowseCategory(u8 taskId)
 {
-    OnlineStore_SetPriceSurcharge(yen);
+    // Placeholder implementation.
+    (void)taskId;
 }
-
-bool8 OnlineStore_Open(void);
-bool32 AddToCart(u16 itemId, u16 quantity);
-u32 CartGetTotalCost(void);
-bool32 CartWillFitInBag(void);
-void OnlineStore_StartCheckout(void);
-
-#endif // GUARD_ONLINE_STORE_H

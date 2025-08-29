@@ -2,8 +2,8 @@
 #define GUARD_CONFIG_ONLINE_STORE_H
 
 // Online Store global configuration
-#define ONLINE_STORE_ENABLED      __GCC_ATOMIC_TEST_AND_SET_TRUEVAL   // Master switch for the online store feature
-#define ONLINE_STORE_SURCHARGE    0.5       // Percentage surcharge applied to all prices
+#define ONLINE_STORE_ENABLED      TRUE   // Master switch for the online store feature
+#define ONLINE_STORE_SURCHARGE    0       // Percentage surcharge applied to all prices
 
 // Context availability
 #define ONLINE_STORE_LINK         FALSE    // Allow purchases while in link mode
