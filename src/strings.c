@@ -201,7 +201,7 @@ const u8 gText_QoL_Charged_Hoenn[]  = _("Done! ¥1000 deducted.");
 const u8 gText_QoL_Charged_Johto[]  = _("Adjustment complete.\n¥1000 paid.");
 const u8 gText_QoL_Charged_Kanto[]  = _("All set. ¥1000 charged.");
 const u8 gText_QoL_Charged_Sevii[]  = _("Tweaked! ¥1000 fee\napplied.");
-const u8 gText_QoL_Charged_Sinnoh[] = _("Modification finished.\n¥1000 collected.");
+const u8 gText_QoL_Charged_Sinnoh[] = _("Modification finished.\¥1000 collected.");
 
 const u8 gText_QoL_Canceled_Hoenn[]  = _("Canceled - no charge.");
 const u8 gText_QoL_Canceled_Johto[]  = _("No changes made - no fee.");
