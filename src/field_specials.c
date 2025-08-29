@@ -2641,6 +2641,16 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
+    case SCROLL_MULTI_QOL_HP_TYPES:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 17;
+        task->tLeft = 0;
+        task->tTop = 0;
+        task->tWidth = 14;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
     default:
         gSpecialVar_Result = MULTI_B_PRESSED;
         DestroyTask(taskId);
@@ -2996,9 +3006,9 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_HP4,
         gText_Attack3,
         gText_Defense3,
-        gText_Speed2,
         gText_SpAtk4,
         gText_SpDef4,
+        gText_Speed2,
         gText_Exit
     },
     [SCROLL_MULTI_QOL_BALLS] =
@@ -3013,6 +3023,26 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("QUICK BALL"),
         COMPOUND_STRING("CHERISH BALL"),
         COMPOUND_STRING("BEAST BALL"),
+        gText_Exit
+    },
+    [SCROLL_MULTI_QOL_HP_TYPES] =
+    {
+        COMPOUND_STRING("FIGHTING"),
+        COMPOUND_STRING("FLYING"),
+        COMPOUND_STRING("POISON"),
+        COMPOUND_STRING("GROUND"),
+        COMPOUND_STRING("ROCK"),
+        COMPOUND_STRING("BUG"),
+        COMPOUND_STRING("GHOST"),
+        COMPOUND_STRING("STEEL"),
+        COMPOUND_STRING("FIRE"),
+        COMPOUND_STRING("WATER"),
+        COMPOUND_STRING("GRASS"),
+        COMPOUND_STRING("ELECTRIC"),
+        COMPOUND_STRING("PSYCHIC"),
+        COMPOUND_STRING("ICE"),
+        COMPOUND_STRING("DRAGON"),
+        COMPOUND_STRING("DARK"),
         gText_Exit
     }
 };

@@ -23,6 +23,7 @@ bool8 QoL_BallIsLegalForMon(u16 item, struct Pokemon *mon);
 
 // Numeric input spinner: 0x8000=min, 0x8001=max, 0x8002=initial; returns VAR_RESULT
 void Script_QoL_PromptNumber(void);
+void Script_QoL_MapStatSelection(void); // Map VAR_RESULT index to STAT_* constant
 
 // Region-aware message fillers -> copy regional text into gStringVar4
 void Script_QoL_Msg_Hello(void);

@@ -59,9 +59,10 @@
 #define SCROLL_MULTI_QOL_IVS                              29
 #define SCROLL_MULTI_QOL_STATS                            30
 #define SCROLL_MULTI_QOL_BALLS                            31
+#define SCROLL_MULTI_QOL_HP_TYPES                         32
 
 #define MAX_SCROLL_MULTI_ON_SCREEN 6
-#define MAX_SCROLL_MULTI_LENGTH 16
+#define MAX_SCROLL_MULTI_LENGTH 17
 
 // Dept Store Floor Numbers
 #define DEPT_STORE_FLOORNUM_B4F       0

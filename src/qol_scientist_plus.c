@@ -18,6 +18,7 @@
 #include "constants/items.h"
 #include "constants/species.h"
 #include "constants/battle.h"
+#include "constants/pokemon.h"
 #include "regions.h"
 
 // ---------- Region detection ----------
@@ -209,4 +210,13 @@ void Script_QoL_PromptNumber(void)
     d[QT_MIN]   = min;
     d[QT_MAX]   = max;
     d[QT_CANCEL]= FALSE;
+}
+
+// Map a QoL stat menu selection in VAR_RESULT to the corresponding STAT_* constant.
+void Script_QoL_MapStatSelection(void)
+{
+    static const u8 sMap[6] = {STAT_HP, STAT_ATK, STAT_DEF, STAT_SPATK, STAT_SPDEF, STAT_SPEED};
+    u16 sel = VarGet(VAR_RESULT);
+    if (sel < ARRAY_COUNT(sMap))
+        VarSet(VAR_RESULT, sMap[sel]);
 }

@@ -7,6 +7,7 @@ EventScript_QoLScientist::
 	msgbox gStringVar4 MSGBOX_DEFAULT
 
 .MainLoop:
+    closemessage
     multichoice 15, 1, MULTI_QOL_MAIN, FALSE
 	switch VAR_RESULT
 		case 0, .DoNature
@@ -95,7 +96,8 @@ EventScript_QoLScientist::
     goto_if_eq .DoEVs
     compare VAR_RESULT, MULTI_B_PRESSED
     goto_if_eq .DoEVs
-    setvar VAR_0x8000, VAR_RESULT
+    callnative Script_QoL_MapStatSelection
+    copyvar VAR_0x8000, VAR_RESULT
         msgbox gText_QoLPickStat2, MSGBOX_DEFAULT
         setvar VAR_0x8004, SCROLL_MULTI_QOL_STATS
         special ShowScrollableMultichoice
@@ -104,7 +106,8 @@ EventScript_QoLScientist::
         goto_if_eq .DoEVs
         compare VAR_RESULT, MULTI_B_PRESSED
         goto_if_eq .DoEVs
-        setvar VAR_0x8001, VAR_RESULT
+        callnative Script_QoL_MapStatSelection
+        copyvar VAR_0x8001, VAR_RESULT
         callnative Script_QoL_EVs_QuickCustom
         call .ResultMsg
         goto .DoEVs
@@ -193,18 +196,19 @@ EventScript_QoLScientist::
     goto_if_eq .DoIVs
     compare VAR_RESULT, MULTI_B_PRESSED
     goto_if_eq .DoIVs
+    callnative Script_QoL_MapStatSelection
     setvar VAR_0x8000, VAR_RESULT        @ store chosen stat
     copyvar VAR_0x8003, VAR_0x8000       @ preserve stat across number prompt
+    msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
+    special ChoosePartyMon
+    waitstate
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoIVs
     setvar VAR_0x8000, 0                 @ min
     setvar VAR_0x8001, 31                @ max
     setvar VAR_0x8002, 31                @ initial
     callnative Script_QoL_PromptNumber
     copyvar VAR_0x8001, VAR_RESULT       @ iv value
     copyvar VAR_0x8000, VAR_0x8003       @ restore stat for callnative
-    msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
-    special ChoosePartyMon
-    waitstate
-    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoIVs
     callnative Script_QoL_IVs_SetStat
     call .ResultMsg
     goto .DoIVs
