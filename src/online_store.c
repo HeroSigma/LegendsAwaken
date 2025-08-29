@@ -5,6 +5,8 @@
 #include "money.h"
 #include "script.h"
 #include "task.h"
+#include "shop.h"
+#include "constants/items.h"
 
 #define CART_CAPACITY 20
 
@@ -225,4 +227,47 @@ void StoreTask_BrowseCategory(u8 taskId)
 {
     // Placeholder implementation.
     (void)taskId;
+}
+
+//------------------------------------------------------------------------------
+// Quantity prompt
+//------------------------------------------------------------------------------
+
+static u16 sQtyPromptItemId;
+
+static void StoreQtyPrompt_AddToCart(u16 quantity)
+{
+    AddToCart(sQtyPromptItemId, quantity);
+}
+
+static void StoreQtyPrompt_Cancel(void)
+{
+    // Currently no additional behaviour on cancel.
+}
+
+// Opens a quantity selection prompt for the chosen item. The player may select
+// up to the maximum number of that item that can fit in a single bag stack,
+// factoring in the quantity already held and remaining bag space.
+void Store_QtyPrompt(u16 itemId)
+{
+    u16 owned = CountTotalItemQuantityInBag(itemId);
+    u16 maxQuantity;
+
+    sQtyPromptItemId = itemId;
+
+    if (owned >= MAX_BAG_ITEM_CAPACITY)
+        maxQuantity = 0;
+    else
+        maxQuantity = MAX_BAG_ITEM_CAPACITY - owned;
+
+    while (maxQuantity > 0 && !CheckBagHasSpace(itemId, maxQuantity))
+        maxQuantity--;
+
+    if (maxQuantity == 0)
+    {
+        StoreQtyPrompt_Cancel();
+        return;
+    }
+
+    Shop_DoQuantitySelect(maxQuantity, StoreQtyPrompt_AddToCart, StoreQtyPrompt_Cancel);
 }
