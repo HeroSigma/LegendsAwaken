@@ -4,6 +4,7 @@
 #include "event_data.h"
 #include "money.h"
 #include "overworld.h"
+#include "main.h"
 #include "pokemon.h"
 #include "script.h"
 #include "task.h"
@@ -144,7 +145,7 @@ void Script_QoL_Msg_ConfirmNature(void)
 
 // ---------- Numeric Input UI ----------
 enum {
-    QT_WIN=0, QT_VAL, QT_MIN, QT_MAX, QT_CANCEL
+    QT_WIN=0, QT_VAL, QT_MIN, QT_MAX, QT_CANCEL, QT_WAIT_KEYS
 };
 
 static const struct WindowTemplate sNumWinTemplate = {
@@ -165,6 +166,13 @@ static void Task_QoL_NumberInput(u8 taskId)
 {
     s16 *d = gTasks[taskId].data;
     u8 win = d[QT_WIN];
+
+    if (!d[QT_WAIT_KEYS])
+    {
+        if (gMain.heldKeys == 0)
+            d[QT_WAIT_KEYS] = TRUE;
+        return;
+    }
 
     if (JOY_NEW(B_BUTTON)) {
         d[QT_CANCEL] = TRUE;
@@ -210,6 +218,7 @@ void Script_QoL_PromptNumber(void)
     d[QT_MIN]   = min;
     d[QT_MAX]   = max;
     d[QT_CANCEL]= FALSE;
+    d[QT_WAIT_KEYS] = FALSE;
 }
 
 // Map a QoL stat menu selection in VAR_RESULT to the corresponding STAT_* constant.
