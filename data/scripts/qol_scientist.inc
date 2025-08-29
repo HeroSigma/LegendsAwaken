@@ -23,6 +23,7 @@ EventScript_QoLScientist::
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
     special ChoosePartyMon
     waitstate
+    copyvar VAR_0x8004, VAR_RESULT
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
     msgbox gText_QoLChooseNature, MSGBOX_DEFAULT
     @ Build a scrollable 25-item menu using the debug nature strings (ordered 0..24)
@@ -78,6 +79,7 @@ EventScript_QoLScientist::
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
     special ChoosePartyMon
     waitstate
+    copyvar VAR_0x8004, VAR_RESULT
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoEVs
     callnative Script_QoL_EVs_PresetByNature
     call .ResultMsg
@@ -87,6 +89,7 @@ EventScript_QoLScientist::
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
     special ChoosePartyMon
     waitstate
+    copyvar VAR_0x8004, VAR_RESULT
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoEVs
     msgbox gText_QoLPickStat1, MSGBOX_DEFAULT
     setvar VAR_0x8004, SCROLL_MULTI_QOL_STATS
@@ -116,6 +119,7 @@ EventScript_QoLScientist::
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
     special ChoosePartyMon
     waitstate
+    copyvar VAR_0x8004, VAR_RESULT
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoEVs
 
 	setvar VAR_0x8000, 0
@@ -153,6 +157,7 @@ EventScript_QoLScientist::
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
     special ChoosePartyMon
     waitstate
+    copyvar VAR_0x8004, VAR_RESULT
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoEVs
     callnative Script_QoL_EVs_Clear
     call .ResultMsg
@@ -183,6 +188,7 @@ EventScript_QoLScientist::
     special ChoosePartyMon
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoIVs
+    copyvar VAR_0x8004, VAR_RESULT
     callnative Script_QoL_IVs_TrickRoom
     call .ResultMsg
     goto .DoIVs
@@ -203,6 +209,7 @@ EventScript_QoLScientist::
     special ChoosePartyMon
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoIVs
+    copyvar VAR_0x8004, VAR_RESULT
     setvar VAR_0x8000, 0                 @ min
     setvar VAR_0x8001, 31                @ max
     setvar VAR_0x8002, 31                @ initial
@@ -218,6 +225,7 @@ EventScript_QoLScientist::
     special ChoosePartyMon
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
+    copyvar VAR_0x8004, VAR_RESULT
         msgbox gText_QoLPickBall, MSGBOX_DEFAULT
         setvar VAR_0x8004, SCROLL_MULTI_QOL_BALLS
         special ShowScrollableMultichoice
@@ -256,6 +264,7 @@ EventScript_QoLScientist::
 	msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
 	special ChoosePartyMon
 	waitstate
+    copyvar VAR_0x8004, VAR_RESULT
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
 	copyvar VAR_0x8006, VAR_0x8004 @ store chosen slot for setteratype macro
 	@ Page 1 of Tera types
@@ -336,6 +345,7 @@ EventScript_QoLScientist::
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
     special ChoosePartyMon
     waitstate
+    copyvar VAR_0x8004, VAR_RESULT
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
 
 .HPSetFighting: setvar VAR_0x8000, TYPE_FIGHTING; goto .HPApply
