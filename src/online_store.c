@@ -5,6 +5,7 @@
 #include "money.h"
 #include "script.h"
 #include "task.h"
+#include "list_menu.h"
 #include "shop.h"
 #include "constants/items.h"
 
@@ -225,8 +226,42 @@ void StoreTask_SelectCategory(u8 taskId)
 // player and allow purchases. The task currently performs no additional work.
 void StoreTask_BrowseCategory(u8 taskId)
 {
-    // Placeholder implementation.
-    (void)taskId;
+    struct Task *task = &gTasks[taskId];
+    static struct ListMenuItem *sListItems = NULL;
+    u16 i;
+
+    switch (task->data[0])
+    {
+    case 0: // Initialize the list menu for the current category
+        sListItems = Alloc(sizeof(*sListItems) * sStoreItemCount);
+        if (sListItems == NULL)
+        {
+            DestroyTask(taskId);
+            return;
+        }
+
+        for (i = 0; i < sStoreItemCount; i++)
+        {
+            sListItems[i].name = sStoreItems[i].name;
+            sListItems[i].id = sStoreItems[i].itemId;
+        }
+
+        gMultiuseListMenuTemplate.items = sListItems;
+        gMultiuseListMenuTemplate.totalItems = sStoreItemCount;
+        gMultiuseListMenuTemplate.maxShowed = sStoreItemCount;
+        gMultiuseListMenuTemplate.windowId = 0;
+
+        task->data[1] = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
+        task->data[0] = 1;
+        break;
+
+    case 1: // Exit immediately in this placeholder implementation
+        DestroyListMenuTask(task->data[1], NULL, NULL);
+        Free(sListItems);
+        sListItems = NULL;
+        DestroyTask(taskId);
+        break;
+    }
 }
 
 //------------------------------------------------------------------------------
