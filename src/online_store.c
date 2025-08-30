@@ -23,6 +23,7 @@ struct CartItem
 
 static EWRAM_DATA struct CartItem sCart[CART_CAPACITY] = {0};
 static EWRAM_DATA u8 sCartCount = 0;
+static EWRAM_DATA void *sStore = NULL;
 
 static void CartClear(void);
 static bool32 HasEnoughMoneyForCart(void);
@@ -31,6 +32,7 @@ static bool32 IsItemEligible(u16 itemId);
 static void Task_OnlineStore(u8 taskId);
 static void StoreTask_Cart(u8 taskId);
 static void FreeItemList(void);
+static void DestroyStore(void);
 
 bool8 OnlineStore_Open(void)
 {
@@ -147,6 +149,7 @@ static void CartClear(void)
 static void Task_OnlineStore(u8 taskId)
 {
     OnlineStore_StartCheckout();
+    DestroyStore();
     ScriptContext_Enable();
     UnlockPlayerFieldControls();
     DestroyTask(taskId);
@@ -186,6 +189,17 @@ static void FreeItemList(void)
         Free(sListItems);
         sListItems = NULL;
     }
+}
+
+static void DestroyStore(void)
+{
+    FreeItemList();
+    if (sStore != NULL)
+    {
+        Free(sStore);
+        sStore = NULL;
+    }
+    CartClear();
 }
 
 static void PrintItemRow(u32 row)
