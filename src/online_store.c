@@ -7,6 +7,10 @@
 #include "task.h"
 #include "list_menu.h"
 #include "shop.h"
+#include "menu.h"
+#include "string_util.h"
+#include "strings.h"
+#include "text_window.h"
 #include "constants/items.h"
 
 #define CART_CAPACITY 20
@@ -162,6 +166,9 @@ static u8 sListTaskId;
 static u8 sWindowId;
 static struct ListMenuItem *sListItems = NULL;
 
+static void PrintItemRow(u32 row);
+static void StoreListMenu_ItemPrintFunc(u8 windowId, u32 row, u8 y);
+
 static void FreeStoreItems(void)
 {
     if (sStoreItems != NULL)
@@ -179,6 +186,22 @@ static void FreeItemList(void)
         Free(sListItems);
         sListItems = NULL;
     }
+}
+
+static void PrintItemRow(u32 row)
+{
+    u8 y = row * 16;
+    const struct OnlineStoreItem *item = &sStoreItems[row];
+
+    AddTextPrinterParameterized(sWindowId, FONT_NARROW, item->name, 0, y, TEXT_SKIP_DRAW, NULL);
+    ConvertIntToDecimalStringN(gStringVar1, item->price, STR_CONV_MODE_LEFT_ALIGN, 6);
+    StringExpandPlaceholders(gStringVar4, gText_PokedollarVar1);
+    AddTextPrinterParameterized(sWindowId, FONT_NARROW, gStringVar4, 100, y, TEXT_SKIP_DRAW, NULL);
+}
+
+static void StoreListMenu_ItemPrintFunc(u8 windowId, u32 row, u8 y)
+{
+    PrintItemRow(row);
 }
 
 static int CompareItemsByName(const void *a, const void *b)
@@ -256,13 +279,14 @@ void StoreTask_BrowseCategory(u8 taskId)
         for (i = 0; i < sStoreItemCount; i++)
         {
             sListItems[i].name = sStoreItems[i].name;
-            sListItems[i].id = sStoreItems[i].itemId;
+            sListItems[i].id = i;
         }
 
         gMultiuseListMenuTemplate.items = sListItems;
         gMultiuseListMenuTemplate.totalItems = sStoreItemCount;
         gMultiuseListMenuTemplate.maxShowed = sStoreItemCount;
         gMultiuseListMenuTemplate.windowId = 0;
+        gMultiuseListMenuTemplate.itemPrintFunc = StoreListMenu_ItemPrintFunc;
 
         sWindowId = gMultiuseListMenuTemplate.windowId;
         sListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
