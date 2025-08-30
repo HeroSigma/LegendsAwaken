@@ -66,7 +66,7 @@ enum
     MENU_ACTION_PLAYER,
     MENU_ACTION_SAVE,
     MENU_ACTION_OPTION,
-    MENU_ACTION_ONLINE_STORE,s
+    MENU_ACTION_ONLINE_STORE,
     MENU_ACTION_EXIT,
     MENU_ACTION_RETIRE_SAFARI,
     MENU_ACTION_PLAYER_LINK,
@@ -1540,7 +1540,7 @@ static bool8 StartMenuCb_OnlineStore(void)
 
     RemoveExtraStartMenuWindows();
     HideStartMenu();
-    OnlineStore_Open(NULL);
+    OnlineStore_Open();
 
     return TRUE;
 }
