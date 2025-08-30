@@ -30,6 +30,7 @@ struct CartItem
 
 static EWRAM_DATA struct CartItem sCart[CART_CAPACITY] = {0};
 static EWRAM_DATA u8 sCartCount = 0;
+static EWRAM_DATA u16 sSurcharge = ONLINE_STORE_SURCHARGE;
 
 static void CartClear(void);
 static bool32 HasEnoughMoneyForCart(void);
@@ -58,11 +59,32 @@ bool8 OnlineStore_Open(const u16 *inventory)
 
 bool8 OnlineStore_IsContextBlocked(void)
 {
+    if (OnlineStore_IsContextBlocked())
+        return FALSE;
+
+    LockPlayerFieldControls();
+    OnlineStore_SetCategory(0);
+    CreateTask(StoreTask_BrowseCategory, 8);
+    return TRUE;
+}
+
+bool8 OnlineStore_IsContextBlocked(void)
+{
 #if defined(CONFIG_ONLINE_STORE_BLOCK) && defined(FLAG_ONLINE_STORE_BLOCK)
     if (FlagGet(FLAG_ONLINE_STORE_BLOCK))
         return TRUE;
 #endif
     return FALSE;
+}
+
+u16 OnlineStore_GetUnitPrice(u16 itemId)
+{
+    return GetItemPrice(itemId) + sSurcharge;
+}
+
+void OnlineStore_SetSurcharge(u16 yen)
+{
+    sSurcharge = yen;
 }
 
 static bool32 IsItemEligible(u16 itemId)
@@ -104,7 +126,7 @@ static u32 CartGetTotalCost(void)
     u32 total = 0;
     u8 i;
     for (i = 0; i < sCartCount; i++)
-        total += GetItemPrice(sCart[i].itemId) * sCart[i].quantity;
+        total += OnlineStore_GetUnitPrice(sCart[i].itemId) * sCart[i].quantity;
     return total;
 }
 
@@ -246,7 +268,7 @@ static void BuildItemList(void)
         if (category->filter == NULL || category->filter(i))
         {
             sStoreItems[sStoreItemCount].itemId = i;
-            sStoreItems[sStoreItemCount].price = gItemsInfo[i].price;
+            sStoreItems[sStoreItemCount].price = OnlineStore_GetUnitPrice(i);
             CopyItemName(i, sStoreItems[sStoreItemCount].name);
             sStoreItemCount++;
         }
