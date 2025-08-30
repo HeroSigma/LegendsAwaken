@@ -14,6 +14,7 @@
 #include "main.h"
 #include "strings.h"
 #include "text_window.h"
+#include "script_menu.h"
 #include "config/online_store.h"
 #include "constants/items.h"
 #include <stddef.h>
@@ -21,6 +22,7 @@
 void qsort(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *));
 
 #define CART_CAPACITY 20
+#define STORE_MAX_SHOWED 8
 
 struct CartItem
 {
@@ -305,11 +307,15 @@ void StoreTask_BrowseCategory(u8 taskId)
 
         gMultiuseListMenuTemplate.items = sListItems;
         gMultiuseListMenuTemplate.totalItems = sStoreItemCount;
-        gMultiuseListMenuTemplate.maxShowed = sStoreItemCount;
-        gMultiuseListMenuTemplate.windowId = 0;
+        gMultiuseListMenuTemplate.maxShowed = (sStoreItemCount > STORE_MAX_SHOWED) ? STORE_MAX_SHOWED : sStoreItemCount;
         gMultiuseListMenuTemplate.itemPrintFunc = StoreListMenu_ItemPrintFunc;
 
-        sWindowId = gMultiuseListMenuTemplate.windowId;
+        LoadMessageBoxAndBorderGfx();
+        sWindowId = CreateWindowFromRect(0, 0, 19, gMultiuseListMenuTemplate.maxShowed * 2);
+        SetStandardWindowBorderStyle(sWindowId, FALSE);
+        CopyWindowToVram(sWindowId, COPYWIN_FULL);
+
+        gMultiuseListMenuTemplate.windowId = sWindowId;
         sListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
         task->data[0] = 1;
         break;
