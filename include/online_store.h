@@ -3,8 +3,9 @@
 
 #include "global.h"
 
-// Opens the online store interface.
-bool8 OnlineStore_Open(void);
+// Opens the online store interface. The optional `inventory` parameter is
+// currently unused and should be passed as NULL.
+bool8 OnlineStore_Open(const u16 *inventory);
 
 // Returns TRUE if the current game context blocks access to the store.
 bool8 OnlineStore_IsContextBlocked(void);

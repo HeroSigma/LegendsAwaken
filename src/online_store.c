@@ -59,17 +59,6 @@ bool8 OnlineStore_Open(const u16 *inventory)
 
 bool8 OnlineStore_IsContextBlocked(void)
 {
-    if (OnlineStore_IsContextBlocked())
-        return FALSE;
-
-    LockPlayerFieldControls();
-    OnlineStore_SetCategory(0);
-    CreateTask(StoreTask_BrowseCategory, 8);
-    return TRUE;
-}
-
-bool8 OnlineStore_IsContextBlocked(void)
-{
 #if defined(CONFIG_ONLINE_STORE_BLOCK) && defined(FLAG_ONLINE_STORE_BLOCK)
     if (FlagGet(FLAG_ONLINE_STORE_BLOCK))
         return TRUE;
@@ -412,21 +401,4 @@ void OnlineStore_OpenCategory(u8 categoryId)
 {
     if (!OnlineStore_IsContextBlocked())
         OnlineStore_SetCategory(categoryId);
-}
-
-u16 OnlineStore_GetUnitPrice(u16 itemId)
-{
-    if (!OnlineStore_IsContextBlocked())
-        return GetItemPrice(itemId) + sSurcharge;
-    return 0;
-}
-
-bool8 OnlineStore_IsContextBlocked(void)
-{
-    return FALSE;
-}
-
-void OnlineStore_SetSurcharge(u16 yen)
-{
-    sSurcharge = yen;
 }

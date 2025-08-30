@@ -1540,7 +1540,7 @@ static bool8 StartMenuCb_OnlineStore(void)
 
     RemoveExtraStartMenuWindows();
     HideStartMenu();
-    OnlineStore_Open();
+    OnlineStore_Open(NULL);
 
     return TRUE;
 }
