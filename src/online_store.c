@@ -307,23 +307,40 @@ void StoreTask_BrowseCategory(u8 taskId)
         task->data[0] = 1;
         break;
 
-    case 1: // Exit immediately in this placeholder implementation
-        if (JOY_NEW(SELECT_BUTTON))
+    case 1:
+    {
+        s32 input = ListMenu_ProcessInput(sListTaskId);
+
+        switch (input)
         {
+        case LIST_NOTHING_CHOSEN:
+            if (JOY_NEW(SELECT_BUTTON))
+            {
+                DestroyListMenuTask(sListTaskId, 0, 0);
+                RemoveWindow(sWindowId);
+                FreeItemList();
+                CreateTask(StoreTask_Cart, 0);
+                DestroyTask(taskId);
+            }
+            break;
+
+        case LIST_CANCEL:
             DestroyListMenuTask(sListTaskId, 0, 0);
             RemoveWindow(sWindowId);
             FreeItemList();
-            CreateTask(StoreTask_Cart, 0);
             DestroyTask(taskId);
-        }
-        else
-        {
+            break;
+
+        default:
             DestroyListMenuTask(sListTaskId, 0, 0);
             RemoveWindow(sWindowId);
             FreeItemList();
+            Store_QtyPrompt(sStoreItems[input].itemId);
             DestroyTask(taskId);
+            break;
         }
         break;
+    }
     }
 }
 
