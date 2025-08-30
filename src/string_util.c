@@ -174,6 +174,33 @@ s32 StringCompareN(const u8 *str1, const u8 *str2, u32 n)
     return *str1 - *str2;
 }
 
+bool8 StringContains(const u8 *haystack, const u8 *needle)
+{
+    const u8 *h, *n;
+
+    if (*needle == EOS)
+        return TRUE;
+
+    while (*haystack != EOS)
+    {
+        h = haystack;
+        n = needle;
+
+        while (*h != EOS && *n != EOS && *h == *n)
+        {
+            h++;
+            n++;
+        }
+
+        if (*n == EOS)
+            return TRUE;
+
+        haystack++;
+    }
+
+    return FALSE;
+}
+
 bool8 IsStringLengthAtLeast(const u8 *str, s32 n)
 {
     s32 i;
