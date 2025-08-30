@@ -201,7 +201,7 @@ const u8 gText_QoL_Charged_Hoenn[]  = _("Done! ¥1000 deducted.");
 const u8 gText_QoL_Charged_Johto[]  = _("Adjustment complete.\n¥1000 paid.");
 const u8 gText_QoL_Charged_Kanto[]  = _("All set. ¥1000 charged.");
 const u8 gText_QoL_Charged_Sevii[]  = _("Tweaked! ¥1000 fee\napplied.");
-const u8 gText_QoL_Charged_Sinnoh[] = _("Modification finished.\¥1000 collected.");
+const u8 gText_QoL_Charged_Sinnoh[] = _("Modification finished.\n¥1000 collected.");
 
 const u8 gText_QoL_Canceled_Hoenn[]  = _("Canceled - no charge.");
 const u8 gText_QoL_Canceled_Johto[]  = _("No changes made - no fee.");
@@ -1082,7 +1082,7 @@ const u8 gText_MenuExit[] = _("EXIT");
 const u8 gText_MenuRetire[] = _("RETIRE");
 const u8 gText_MenuRest[] = _("REST");
 const u8 gText_MenuDexNav[] = _("DEXNAV");
-const u8 gText_OnlineStore[] = _("ONLINE STORE");
+// const u8 gText_OnlineStore[] = _("ONLINE STORE");
 const u8 gText_SafariBallStock[] = _("SAFARI BALLS\nStock: {STR_VAR_1}");
 const u8 gText_BattlePyramidFloor[] = _("Battle Pyramid\n{STR_VAR_1}");
 const u8 gText_Floor1[] = _("Floor 1");
@@ -1552,7 +1552,7 @@ const u8 gText_SubQuest2_Desc19[] = _("Hatch a shiny Pokemon from an egg.");
 const u8 gText_SubQuest2_Desc20[] = _("Obtain all type-boosting held items.");
 
 // -------- Online Store strings --------
-const u8 gText_OnlineStore[]    = _("ONLINE STORE");
+const u8 gText_OnlineStore[]    = _("O.STORE");
 const u8 gText_Cart[]           = _("CART");
 const u8 gText_AddToCart[]      = _("Add to cart");
 const u8 gText_Checkout[]       = _("CHECKOUT");
