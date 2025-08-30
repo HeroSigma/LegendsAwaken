@@ -1,5 +1,6 @@
 #include "global.h"
 #include "online_store.h"
+#include "config/online_store.h"
 #include "event_data.h"
 #include "item.h"
 #include "money.h"
@@ -29,33 +30,39 @@ struct CartItem
 
 static EWRAM_DATA struct CartItem sCart[CART_CAPACITY] = {0};
 static EWRAM_DATA u8 sCartCount = 0;
-static EWRAM_DATA void *sStore = NULL;
-static EWRAM_DATA u16 sSurcharge = ONLINE_STORE_SURCHARGE;
 
 static void CartClear(void);
 static bool32 HasEnoughMoneyForCart(void);
 static void DeliverCartItems(void);
 static bool32 IsItemEligible(u16 itemId);
-static void Task_OnlineStore(u8 taskId);
-static void StoreTask_BrowseCategory(u8 taskId);
-static void StoreTask_Cart(u8 taskId);
 static void FreeItemList(void);
 static void DestroyStore(void);
+static void StoreTask_BrowseCategory(u8 taskId);
+static void OnlineStore_SetCategory(u8 category);
+static void Store_QtyPrompt(u16 itemId);
 
 bool8 OnlineStore_Open(const u16 *inventory)
 {
-#if defined(CONFIG_ONLINE_STORE_BLOCK) && defined(FLAG_ONLINE_STORE_BLOCK)
-    if (FlagGet(FLAG_ONLINE_STORE_BLOCK))
+    if (OnlineStore_IsContextBlocked())
         return FALSE;
-#endif
 
     // The inventory parameter is currently unused but allows
     // external callers to specify a custom inventory in the future.
     (void)inventory;
 
     LockPlayerFieldControls();
-    CreateTask(Task_OnlineStore, 8);
+    OnlineStore_SetCategory(0);
+    CreateTask(StoreTask_BrowseCategory, 8);
     return TRUE;
+}
+
+bool8 OnlineStore_IsContextBlocked(void)
+{
+#if defined(CONFIG_ONLINE_STORE_BLOCK) && defined(FLAG_ONLINE_STORE_BLOCK)
+    if (FlagGet(FLAG_ONLINE_STORE_BLOCK))
+        return TRUE;
+#endif
+    return FALSE;
 }
 
 static bool32 IsItemEligible(u16 itemId)
@@ -67,7 +74,7 @@ static bool32 IsItemEligible(u16 itemId)
     return TRUE;
 }
 
-bool32 AddToCart(u16 itemId, u16 quantity)
+static bool32 AddToCart(u16 itemId, u16 quantity)
 {
     u8 i;
 
@@ -92,7 +99,7 @@ bool32 AddToCart(u16 itemId, u16 quantity)
     return TRUE;
 }
 
-u32 CartGetTotalCost(void)
+static u32 CartGetTotalCost(void)
 {
     u32 total = 0;
     u8 i;
@@ -101,7 +108,7 @@ u32 CartGetTotalCost(void)
     return total;
 }
 
-bool32 CartWillFitInBag(void)
+static bool32 CartWillFitInBag(void)
 {
     u8 i, j;
     u16 total;
@@ -142,7 +149,7 @@ static void DeliverCartItems(void)
         AddBagItem(sCart[i].itemId, sCart[i].quantity);
 }
 
-void OnlineStore_StartCheckout(void)
+static void OnlineStore_StartCheckout(void)
 {
     if (CartWillFitInBag() && HasEnoughMoneyForCart())
     {
@@ -158,14 +165,6 @@ static void CartClear(void)
     memset(sCart, 0, sizeof(sCart));
 }
 
-static void Task_OnlineStore(u8 taskId)
-{
-    OnlineStore_StartCheckout();
-    DestroyStore();
-    ScriptContext_Enable();
-    UnlockPlayerFieldControls();
-    DestroyTask(taskId);
-}
 
 struct OnlineStoreItem
 {
@@ -206,11 +205,6 @@ static void FreeItemList(void)
 static void DestroyStore(void)
 {
     FreeItemList();
-    if (sStore != NULL)
-    {
-        Free(sStore);
-        sStore = NULL;
-    }
     CartClear();
 }
 
@@ -262,7 +256,7 @@ static void BuildItemList(void)
         qsort(sStoreItems, sStoreItemCount, sizeof(*sStoreItems), CompareItemsByName);
 }
 
-void OnlineStore_SetCategory(u8 category)
+static void OnlineStore_SetCategory(u8 category)
 {
     if (category >= gOnlineStoreCategoryCount)
         category = 0;
@@ -273,16 +267,6 @@ void OnlineStore_SetCategory(u8 category)
 //------------------------------------------------------------------------------
 // Task handling
 //------------------------------------------------------------------------------
-
-// Task for selecting a category. In a full implementation this would handle
-// input from the player. Here it simply rebuilds the item list for the
-// category stored in gTasks[taskId].data[0].
-void StoreTask_SelectCategory(u8 taskId)
-{
-    u8 category = gTasks[taskId].data[0];
-    OnlineStore_SetCategory(category);
-    gTasks[taskId].func = StoreTask_BrowseCategory;
-}
 
 // Task for browsing items within a category. This is a stub for the purposes
 // of this repository; a full implementation would present the list to the
@@ -326,20 +310,16 @@ void StoreTask_BrowseCategory(u8 taskId)
         switch (input)
         {
         case LIST_NOTHING_CHOSEN:
-            if (JOY_NEW(SELECT_BUTTON))
-            {
-                DestroyListMenuTask(sListTaskId, 0, 0);
-                RemoveWindow(sWindowId);
-                FreeItemList();
-                CreateTask(StoreTask_Cart, 0);
-                DestroyTask(taskId);
-            }
             break;
 
         case LIST_CANCEL:
             DestroyListMenuTask(sListTaskId, 0, 0);
             RemoveWindow(sWindowId);
             FreeItemList();
+            OnlineStore_StartCheckout();
+            DestroyStore();
+            ScriptContext_Enable();
+            UnlockPlayerFieldControls();
             DestroyTask(taskId);
             break;
 
@@ -356,12 +336,6 @@ void StoreTask_BrowseCategory(u8 taskId)
     }
 }
 
-void StoreTask_Cart(u8 taskId)
-{
-    // Placeholder implementation for viewing the cart.
-    DestroyTask(taskId);
-}
-
 //------------------------------------------------------------------------------
 // Quantity prompt
 //------------------------------------------------------------------------------
@@ -371,17 +345,24 @@ static u16 sQtyPromptItemId;
 static void StoreQtyPrompt_AddToCart(u16 quantity)
 {
     AddToCart(sQtyPromptItemId, quantity);
+    OnlineStore_StartCheckout();
+    DestroyStore();
+    ScriptContext_Enable();
+    UnlockPlayerFieldControls();
 }
 
 static void StoreQtyPrompt_Cancel(void)
 {
-    // Currently no additional behaviour on cancel.
+    OnlineStore_StartCheckout();
+    DestroyStore();
+    ScriptContext_Enable();
+    UnlockPlayerFieldControls();
 }
 
 // Opens a quantity selection prompt for the chosen item. The player may select
 // up to the maximum number of that item that can fit in a single bag stack,
 // factoring in the quantity already held and remaining bag space.
-void Store_QtyPrompt(u16 itemId)
+static void Store_QtyPrompt(u16 itemId)
 {
     u16 owned = CountTotalItemQuantityInBag(itemId);
     u16 maxQuantity;
