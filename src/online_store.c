@@ -6,12 +6,18 @@
 #include "script.h"
 #include "task.h"
 #include "list_menu.h"
+#include "malloc.h"
 #include "shop.h"
 #include "menu.h"
 #include "string_util.h"
+#include "main.h"
 #include "strings.h"
 #include "text_window.h"
+#include "config/online_store.h"
 #include "constants/items.h"
+#include <stddef.h>
+
+void qsort(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *));
 
 #define CART_CAPACITY 20
 
@@ -24,22 +30,28 @@ struct CartItem
 static EWRAM_DATA struct CartItem sCart[CART_CAPACITY] = {0};
 static EWRAM_DATA u8 sCartCount = 0;
 static EWRAM_DATA void *sStore = NULL;
+static EWRAM_DATA u16 sSurcharge = ONLINE_STORE_SURCHARGE;
 
 static void CartClear(void);
 static bool32 HasEnoughMoneyForCart(void);
 static void DeliverCartItems(void);
 static bool32 IsItemEligible(u16 itemId);
 static void Task_OnlineStore(u8 taskId);
+static void StoreTask_BrowseCategory(u8 taskId);
 static void StoreTask_Cart(u8 taskId);
 static void FreeItemList(void);
 static void DestroyStore(void);
 
-bool8 OnlineStore_Open(void)
+bool8 OnlineStore_Open(const u16 *inventory)
 {
 #if defined(CONFIG_ONLINE_STORE_BLOCK) && defined(FLAG_ONLINE_STORE_BLOCK)
     if (FlagGet(FLAG_ONLINE_STORE_BLOCK))
         return FALSE;
 #endif
+
+    // The inventory parameter is currently unused but allows
+    // external callers to specify a custom inventory in the future.
+    (void)inventory;
 
     LockPlayerFieldControls();
     CreateTask(Task_OnlineStore, 8);
@@ -391,4 +403,27 @@ void Store_QtyPrompt(u16 itemId)
     }
 
     Shop_DoQuantitySelect(maxQuantity, StoreQtyPrompt_AddToCart, StoreQtyPrompt_Cancel);
+}
+
+void OnlineStore_OpenCategory(u8 categoryId)
+{
+    if (!OnlineStore_IsContextBlocked())
+        OnlineStore_SetCategory(categoryId);
+}
+
+u16 OnlineStore_GetUnitPrice(u16 itemId)
+{
+    if (!OnlineStore_IsContextBlocked())
+        return GetItemPrice(itemId) + sSurcharge;
+    return 0;
+}
+
+bool8 OnlineStore_IsContextBlocked(void)
+{
+    return FALSE;
+}
+
+void OnlineStore_SetSurcharge(u16 yen)
+{
+    sSurcharge = yen;
 }
