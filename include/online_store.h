@@ -3,6 +3,7 @@
 
 #include "global.h"
 #include "online_store.h"
+#include "config/online_store.h"
 #include "event_data.h"
 #include "item.h"
 #include "money.h"
@@ -19,6 +20,7 @@ struct CartItem
 
 static EWRAM_DATA struct CartItem sCart[CART_CAPACITY] = {0};
 static EWRAM_DATA u8 sCartCount = 0;
+static EWRAM_DATA u16 sSurcharge = ONLINE_STORE_SURCHARGE;
 
 static void CartClear(void);
 static bool32 HasEnoughMoneyForCart(void);
@@ -168,7 +170,7 @@ u16 OnlineStore_GetUnitPrice(u16 itemId)
 {
     if (!OnlineStore_IsContextBlocked())
     {
-        return GetItemPrice(itemId);
+        return GetItemPrice(itemId) + sSurcharge;
     }
     return 0;
 }
@@ -180,7 +182,7 @@ bool8 OnlineStore_IsContextBlocked(void)
 
 void OnlineStore_SetSurcharge(u16 yen)
 {
-    OnlineStore_SetPriceSurcharge(yen);
+    sSurcharge = yen;
 }
 
 bool8 OnlineStore_Open(void);
