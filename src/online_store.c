@@ -25,6 +25,8 @@ static bool32 HasEnoughMoneyForCart(void);
 static void DeliverCartItems(void);
 static bool32 IsItemEligible(u16 itemId);
 static void Task_OnlineStore(u8 taskId);
+static void StoreTask_Cart(u8 taskId);
+static void FreeItemList(void);
 
 bool8 OnlineStore_Open(void)
 {
@@ -156,6 +158,9 @@ struct OnlineStoreItem
 static struct OnlineStoreItem *sStoreItems = NULL;
 static u16 sStoreItemCount = 0;
 static u8 sCurrentCategory = 0;
+static u8 sListTaskId;
+static u8 sWindowId;
+static struct ListMenuItem *sListItems = NULL;
 
 static void FreeStoreItems(void)
 {
@@ -165,6 +170,15 @@ static void FreeStoreItems(void)
         sStoreItems = NULL;
     }
     sStoreItemCount = 0;
+}
+
+static void FreeItemList(void)
+{
+    if (sListItems != NULL)
+    {
+        Free(sListItems);
+        sListItems = NULL;
+    }
 }
 
 static int CompareItemsByName(const void *a, const void *b)
@@ -227,7 +241,6 @@ void StoreTask_SelectCategory(u8 taskId)
 void StoreTask_BrowseCategory(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
-    static struct ListMenuItem *sListItems = NULL;
     u16 i;
 
     switch (task->data[0])
@@ -251,17 +264,35 @@ void StoreTask_BrowseCategory(u8 taskId)
         gMultiuseListMenuTemplate.maxShowed = sStoreItemCount;
         gMultiuseListMenuTemplate.windowId = 0;
 
-        task->data[1] = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
+        sWindowId = gMultiuseListMenuTemplate.windowId;
+        sListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
         task->data[0] = 1;
         break;
 
     case 1: // Exit immediately in this placeholder implementation
-        DestroyListMenuTask(task->data[1], NULL, NULL);
-        Free(sListItems);
-        sListItems = NULL;
-        DestroyTask(taskId);
+        if (JOY_NEW(SELECT_BUTTON))
+        {
+            DestroyListMenuTask(sListTaskId, 0, 0);
+            RemoveWindow(sWindowId);
+            FreeItemList();
+            CreateTask(StoreTask_Cart, 0);
+            DestroyTask(taskId);
+        }
+        else
+        {
+            DestroyListMenuTask(sListTaskId, 0, 0);
+            RemoveWindow(sWindowId);
+            FreeItemList();
+            DestroyTask(taskId);
+        }
         break;
     }
+}
+
+void StoreTask_Cart(u8 taskId)
+{
+    // Placeholder implementation for viewing the cart.
+    DestroyTask(taskId);
 }
 
 //------------------------------------------------------------------------------
