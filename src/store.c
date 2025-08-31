@@ -21,7 +21,7 @@ static struct MenuAction sStoreMenuActions[6] =
 
 static void Task_StoreMenu(u8 taskId);
 
-void CB2_OpenStoreMenu(void)
+void CB2_OpenStoreFromStartMenu(void)
 {
     // Populate menu texts from the pocket name table
     sStoreMenuActions[0].text = gPocketNamesStringsTable[POCKET_ITEMS];
@@ -42,11 +42,16 @@ static void Task_StoreMenu(u8 taskId)
     {
     case 0:
         SetStandardWindowBorderStyle(0, FALSE);
-        data[0];
+        data[0] = 1;
         break;
     case 1:
         SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);
         DestroyTask(taskId);
         break;
     }
+}
+
+void CB2_OpenStoreFromStartMenu(void)
+{
+    CB2_OpenStoreMenu();
 }
