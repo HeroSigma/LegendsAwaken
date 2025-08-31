@@ -15,12 +15,13 @@
 
 static struct Pokemon *sQolMon(void)
 {
-    // ChoosePartyMon stores the selected index in VAR_0x8004 and returns
-    // asynchronously. Scripts must `waitstate` before reading it.
-    // Read the chosen slot from VAR_0x8004 to avoid accidental reuse of
-    // VAR_RESULT from earlier commands.
-    u16 slot = VarGet(VAR_0x8004);
-    if (slot >= PARTY_SIZE) slot = 0;
+    // Prefer a dedicated variable (VAR_0x8006) to hold the chosen
+    // party slot, falling back to VAR_0x8004 for backward compatibility.
+    u16 slot = VarGet(VAR_0x8006);
+    if (slot >= PARTY_SIZE)
+        slot = VarGet(VAR_0x8004);
+    if (slot >= PARTY_SIZE)
+        slot = 0;
     return &gPlayerParty[slot];
 }
 
@@ -98,15 +99,24 @@ void Script_QoL_EVs_PresetByNature(void)
     // may exceed NUM_NATURES if it was never initialised, which could crash
     // when indexing gNaturesInfo.
     u8 nature = GetMonData(mon, MON_DATA_HIDDEN_NATURE) % NUM_NATURES;
-    u8 boosted = STAT_SPEED; // default second bucket
+    u8 boosted = STAT_SPEED; // default to speed if neutral
     for (u8 s = STAT_ATK; s <= STAT_SPDEF; s++)
         if (NatureDelta(nature, s) > 0) { boosted = s; break; }
 
     ZeroEVs(mon);
     if (boosted == STAT_SPEED) {
+        // If the nature lowers one offensive stat, invest in the other.
+        u8 second;
+        if (gNaturesInfo[nature].statDown == STAT_SPATK)
+            second = STAT_ATK;   // Jolly, Adamant-like preference -> physical
+        else if (gNaturesInfo[nature].statDown == STAT_ATK)
+            second = STAT_SPATK; // Timid/Modest-like preference -> special
+        else
+            second = STAT_ATK;   // neutral natures: default to physical
         PutEV(mon, STAT_SPEED, 252);
-        PutEV(mon, STAT_SPATK, 252);
+        PutEV(mon, second,     252);
     } else {
+        // If a non-Speed stat is boosted, pair it with Speed.
         PutEV(mon, boosted,    252);
         PutEV(mon, STAT_SPEED, 252);
     }

@@ -61,6 +61,9 @@ PlayersHouse_2F_Text_ClockIsStopped:
 	.string "The clock is stopped…\p"
 	.string "Better set it and start it!$"
 
+PlayersHouse_2F_Text_PlayerSafeEnough:
+	.string "I guess this is safe enough.$"
+
 PlayersHouse_2F_Text_Notebook:
 	.string "{PLAYER} flipped open the notebook.\p"
 	.string "ADVENTURE RULE NO. 1\n"
@@ -91,9 +94,9 @@ PlayersHouse_2F_Text_ItsAGameCube:
         .string "serve as the Controller.$"
 
 LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
-        .string "MOM: How do you like your room?\p"
-        .string "Everything's put away neatly.\n"
-        .string "They finished moving everything\n"
-        .string "in downstairs, too!\p"
-        .string "POKEMON movers are so convenient!$"
+        .string "MOM: All set? The room looks nice.\p"
+        .string "Good. He'll be glad you're safe.\p"
+        .string "He said to take it easy for now.\p"
+        .string "When things calm down, he'll catch up.\p"
+        .string "Come downstairs when you're ready.$"
         .equ PlayersHouse_2F_Text_HowDoYouLikeYourRoom, LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom

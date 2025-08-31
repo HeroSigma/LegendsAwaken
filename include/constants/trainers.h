@@ -108,7 +108,104 @@
 #define TRAINER_PIC_LEAF                  90
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
-#define TRAINER_PIC_COUNT                 93
+// Custom additions (non-replacing) for external assets
+#define TRAINER_PIC_SP_YOUNGSTER          93
+#define TRAINER_PIC_SP_FISHERMAN          94
+#define TRAINER_PIC_SP_GENTLEMAN          95
+#define TRAINER_PIC_SP_HIKER              96
+#define TRAINER_PIC_SP_BEAUTY             97
+#define TRAINER_PIC_SP_BLACK_BELT         98
+#define TRAINER_PIC_SP_BUG_CATCHER        99
+#define TRAINER_PIC_SP_CAMPER             100
+#define TRAINER_PIC_SP_PICNICKER          101
+#define TRAINER_PIC_SP_POKEFAN_F          102
+#define TRAINER_PIC_SP_POKEFAN_M          103
+#define TRAINER_PIC_SP_PSYCHIC_M          104
+#define TRAINER_PIC_SP_RICH_BOY           105
+#define TRAINER_PIC_SP_SAILOR             106
+#define TRAINER_PIC_SP_SWIMMER_F          107
+#define TRAINER_PIC_SP_SWIMMER_M          108
+// Author-specific trainer pics (examples)
+#define TRAINER_PIC_IAG_YOUNGSTER         109
+#define TRAINER_PIC_GALAXEEH_YOUNGSTER    110
+#define TRAINER_PIC_BF_YOUNGSTER          111
+#define TRAINER_PIC_HORO_YOUNGSTER        112
+#define TRAINER_PIC_IAG_BEAUTY            113
+#define TRAINER_PIC_GALAXEEH_BEAUTY       114
+#define TRAINER_PIC_BF_BEAUTY             115
+#define TRAINER_PIC_HORO_BEAUTY           116
+// Fisherman
+#define TRAINER_PIC_IAG_FISHERMAN         117
+#define TRAINER_PIC_GALAXEEH_FISHERMAN    118
+#define TRAINER_PIC_BF_FISHERMAN          119
+#define TRAINER_PIC_HORO_FISHERMAN        120
+// Gentleman
+#define TRAINER_PIC_IAG_GENTLEMAN         121
+#define TRAINER_PIC_GALAXEEH_GENTLEMAN    122
+#define TRAINER_PIC_BF_GENTLEMAN          123
+#define TRAINER_PIC_HORO_GENTLEMAN        124
+// Hiker
+#define TRAINER_PIC_IAG_HIKER             125
+#define TRAINER_PIC_GALAXEEH_HIKER        126
+#define TRAINER_PIC_BF_HIKER              127
+#define TRAINER_PIC_HORO_HIKER            128
+// Black Belt
+#define TRAINER_PIC_IAG_BLACK_BELT        129
+#define TRAINER_PIC_GALAXEEH_BLACK_BELT   130
+#define TRAINER_PIC_BF_BLACK_BELT         131
+#define TRAINER_PIC_HORO_BLACK_BELT       132
+// Bug Catcher
+#define TRAINER_PIC_IAG_BUG_CATCHER       133
+#define TRAINER_PIC_GALAXEEH_BUG_CATCHER  134
+#define TRAINER_PIC_BF_BUG_CATCHER        135
+#define TRAINER_PIC_HORO_BUG_CATCHER      136
+// Camper
+#define TRAINER_PIC_IAG_CAMPER            137
+#define TRAINER_PIC_GALAXEEH_CAMPER       138
+#define TRAINER_PIC_BF_CAMPER             139
+#define TRAINER_PIC_HORO_CAMPER           140
+// Picnicker
+#define TRAINER_PIC_IAG_PICNICKER         141
+#define TRAINER_PIC_GALAXEEH_PICNICKER    142
+#define TRAINER_PIC_BF_PICNICKER          143
+#define TRAINER_PIC_HORO_PICNICKER        144
+// Pokefan F
+#define TRAINER_PIC_IAG_POKEFAN_F         145
+#define TRAINER_PIC_GALAXEEH_POKEFAN_F    146
+#define TRAINER_PIC_BF_POKEFAN_F          147
+#define TRAINER_PIC_HORO_POKEFAN_F        148
+// Pokefan M
+#define TRAINER_PIC_IAG_POKEFAN_M         149
+#define TRAINER_PIC_GALAXEEH_POKEFAN_M    150
+#define TRAINER_PIC_BF_POKEFAN_M          151
+#define TRAINER_PIC_HORO_POKEFAN_M        152
+// Psychic M
+#define TRAINER_PIC_IAG_PSYCHIC_M         153
+#define TRAINER_PIC_GALAXEEH_PSYCHIC_M    154
+#define TRAINER_PIC_BF_PSYCHIC_M          155
+#define TRAINER_PIC_HORO_PSYCHIC_M        156
+// Rich Boy
+#define TRAINER_PIC_IAG_RICH_BOY          157
+#define TRAINER_PIC_GALAXEEH_RICH_BOY     158
+#define TRAINER_PIC_BF_RICH_BOY           159
+#define TRAINER_PIC_HORO_RICH_BOY         160
+// Sailor
+#define TRAINER_PIC_IAG_SAILOR            161
+#define TRAINER_PIC_GALAXEEH_SAILOR       162
+#define TRAINER_PIC_BF_SAILOR             163
+#define TRAINER_PIC_HORO_SAILOR           164
+// Swimmer F
+#define TRAINER_PIC_IAG_SWIMMER_F         165
+#define TRAINER_PIC_GALAXEEH_SWIMMER_F    166
+#define TRAINER_PIC_BF_SWIMMER_F          167
+#define TRAINER_PIC_HORO_SWIMMER_F        168
+// Swimmer M
+#define TRAINER_PIC_IAG_SWIMMER_M         169
+#define TRAINER_PIC_GALAXEEH_SWIMMER_M    170
+#define TRAINER_PIC_BF_SWIMMER_M          171
+#define TRAINER_PIC_HORO_SWIMMER_M        172
+
+#define TRAINER_PIC_COUNT                 173
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

@@ -288,6 +288,11 @@ $(TITLESCREENGFXDIR)/emerald_version.8bpp: %.8bpp: %.png
 graphics/pokemon_jump/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 63 -Wnum_tiles
 
+# Generic rule to convert any object-event palette .pal to .gbapal
+$(OBJEVENTGFXDIR)/palettes/%.gbapal: $(OBJEVENTGFXDIR)/palettes/%.pal
+	$(GFX) $< $@
+
+# Backward-compat specific rule (kept):
 $(OBJEVENTGFXDIR)/palettes/prof_elm.gbapal: %.gbapal: %.pal
 	$(GFX) $< $@
 

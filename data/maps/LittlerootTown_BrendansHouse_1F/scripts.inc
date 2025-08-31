@@ -95,7 +95,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_YoureNewNeighbor::
 	applymovement LOCALID_RIVALS_HOUSE_1F_MOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomApproach
 	waitmovement 0
 	special GetRivalSonDaughterString
-	msgbox RivalsHouse_1F_Text_OhYoureTheNewNeighbor, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_MomGreeting_BrendanUpstairs, MSGBOX_DEFAULT
 	setflag FLAG_MET_RIVAL_MOM
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 2
 	releaseall
@@ -284,18 +284,13 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2:
 	step_end
 
 PlayersHouse_1F_Text_IsntItNiceInHere:
-	.string "MOM: See, {PLAYER}?\n"
-	.string "Isn't it nice in here, too?$"
+	.string "MOM: This is our new house.$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock:
-	.string "The mover's POKéMON do all the work\n"
-	.string "of moving us in and cleaning up after.\l"
-	.string "This is so convenient!\p"
-	.string "{PLAYER}, your room is upstairs.\n"
-	.string "Go check it out, dear!\p"
-	.string "DAD bought you a new clock to mark\n"
-	.string "our move here.\l"
-	.string "Don't forget to set it!$"
+	.string "Your room is upstairs.\p"
+	.string "Please set the clock for me.\p"
+	.string "I'll finish with the boxes.\p"
+	.string "Come back down when you're done, okay?$"
 
 PlayersHouse_1F_Text_ArentYouInterestedInRoom:
 	.string "MOM: Well, {PLAYER}?\p"
@@ -311,20 +306,23 @@ PlayersHouse_1F_Text_OhComeQuickly:
 	.string "Quick! Come quickly!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "MOM: Look! It's PETALBURG GYM!\n"
-	.string "Maybe DAD will be on!$"
+	.string "We interrupt with a special report.$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
-	.string "MOM: Oh… It's over.\p"
-	.string "I think DAD was on, but we missed him.\n"
-	.string "Too bad.$"
+	.string "MOM: Colress…?\p"
+	.string "Colress?\p"
+	.string "MOM: …\p"
+	.string "…\p"
+	.string "MOM: Let's stay calm.\p"
+	.string "Yeah.$"
+
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
-	.string "Oh, yes.\n"
-	.string "One of DAD's friends lives in town.\p"
-	.string "PROF. BIRCH is his name.\p"
-	.string "He lives right next door, so you should\n"
-	.string "go over and introduce yourself.$"
+	.string "MOM: Professor Birch next door is\n"
+	.string "looking into the rifts.\p"
+	.string "He knows HIM.\p"
+	.string "Go see him, {PLAYER}. He may need\n"
+	.string "your help.$"
 
 PlayersHouse_1F_Text_SeeYouHoney:
 	.string "MOM: See you, honey!$"
@@ -368,8 +366,13 @@ PlayersHouse_1F_Text_Vigoroth2:
 	.string "Huggoh, uggo uggo…$"
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym:
-	.string "INTERVIEWER: …We brought you this\n"
-	.string "report from in front of PETALBURG GYM.$"
+	.string "TV: Rifts are appearing across HOENN.\p"
+	.string "Travel and safety alerts are in effect.\p"
+	.string "SILPH CO. of KANTO and DEVON CORP. of\n"
+	.string "HOENN are working together.\p"
+	.string "Leading the effort is COLRESS of UNOVA.\p"
+	.string "Authorities ask residents to remain calm.\p"
+	.string "Further updates will follow.$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
 	.string "There is a movie on TV.\p"
@@ -414,6 +417,19 @@ PlayersHouse_1F_Text_DadShouldStayLonger:
 
 PlayersHouse_1F_Text_IsThatABreakingStory:
 	.string "MOM: Is that a breaking news story?$"
+
+RivalsHouse_1F_Text_MomGreeting_BrendanUpstairs:
+	.string "MOM: {PLAYER}? After eight years!\p"
+	.string "PLAYER: Hi, Mrs. Birch!\p"
+	.string "MOM: You used to play with BRENDAN and\n"
+	.string "MAY.\p"
+	.string "MOM: Back when you lived here in\n"
+	.string "LITTLEROOT.\p"
+	.string "PLAYER: Yeah. I remember.\p"
+	.string "MOM: BRENDAN is upstairs in their room.\p"
+	.string "MOM: MAY stepped out a minute ago.\p"
+	.string "PLAYER: I'll say hello.\p"
+	.string "MOM: Go on up, dear.$"
 
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash:
 	.string "We bring you this emergency\n"

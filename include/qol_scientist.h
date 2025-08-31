@@ -34,7 +34,8 @@ void Script_QoL_Msg_Canceled(void);
 void Script_QoL_Msg_ConfirmNature(void);   // Uses VAR_0x8000 nature id -> gStringVar4
 
 // Service callnatives (set VAR_RESULT = 1 success, 2 not enough money, 3 illegal)
-// Uses chosen party mon (slot in VAR_RESULT from ChoosePartyMon)
+// Uses chosen party mon; scripts store the selected slot in VAR_0x8006
+// after calling ChoosePartyMon and waiting for completion.
 void Script_QoL_SetNature(void);             // VAR_0x8000 = nature 0..24
 void Script_QoL_EVs_PresetByNature(void);
 void Script_QoL_EVs_QuickCustom(void);       // VAR_0x8000=a stat (0..5), VAR_0x8001=b stat (0..5)

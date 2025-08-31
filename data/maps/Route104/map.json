@@ -564,8 +564,8 @@
     },
     {
       "type": "sign",
-      "x": 23,
-      "y": 5,
+      "x": 26,
+      "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route104_EventScript_RouteSignRustboro"
@@ -580,7 +580,7 @@
     },
     {
       "type": "sign",
-      "x": 17,
+      "x": 22,
       "y": 23,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
