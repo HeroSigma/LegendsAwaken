@@ -6,6 +6,7 @@
 #include "shop.h"
 #include "sound.h"
 #include "strings.h"
+#include "window.h"
 #include "constants/item.h"
 #include "constants/songs.h"
 
@@ -96,6 +97,24 @@ static const struct WindowTemplate sStoreWindowTemplate =
 };
 
 static void Task_StoreMenu(u8 taskId);
+static void CB2_StoreMenu(void);
+static void VBlankCB_StoreMenu(void);
+
+static void CB2_StoreMenu(void)
+{
+    RunTasks();
+    AnimateSprites();
+    BuildOamBuffer();
+    DoScheduledBgTilemapCopiesToVram();
+    UpdatePaletteFade();
+}
+
+static void VBlankCB_StoreMenu(void)
+{
+    LoadOam();
+    ProcessSpriteCopyRequests();
+    TransferPlttBuffer();
+}
 
 void CB2_OpenStoreFromStartMenu(void)
 {
@@ -107,6 +126,13 @@ void CB2_OpenStoreFromStartMenu(void)
     sStoreMenuActions[4].text = gPocketNamesStringsTable[POCKET_TM_HM];
     sStoreMenuActions[5].text = gPocketNamesStringsTable[POCKET_BERRIES];
 
+    // Initialize graphics system
+    LoadMessageBoxAndBorderGfx();
+    
+    // Set up graphics callbacks
+    SetVBlankCallback(VBlankCB_StoreMenu);
+    SetMainCallback2(CB2_StoreMenu);
+    
     CreateTask(Task_StoreMenu, 0);
 }
 
