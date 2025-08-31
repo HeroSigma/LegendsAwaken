@@ -74,6 +74,7 @@ enum {
     MART_TYPE_DECOR,
     MART_TYPE_DECOR2,
     MART_TYPE_STORE,
+    MART_TYPE_DIRECT_BUY, // New type specifically for direct buy stores
 };
 
 // shop view window NPC info enum
@@ -119,11 +120,14 @@ EWRAM_DATA struct ItemSlot gMartPurchaseHistory[SMARTSHOPPER_NUM_ITEMS] = {0};
 
 static void Task_ShopMenu(u8 taskId);
 static void Task_HandleShopMenuQuit(u8 taskId);
-static void CB2_InitBuyMenu(void);
 static void Task_GoToBuyOrSellMenu(u8 taskId);
 static void MapPostLoadHook_ReturnToShopMenu(void);
 static void Task_ReturnToShopMenu(u8 taskId);
+static void Task_ExitStoreAfterThankYou(u8 taskId);
+static void Task_ExitStoreWithFade(u8 taskId);
 static void ShowShopMenuAfterExitingBuyOrSellMenu(u8 taskId);
+static void Task_ExitDirectBuyMenu(u8 taskId);
+void CB2_InitBuyMenu(void);
 static void BuyMenuDrawGraphics(void);
 static void BuyMenuAddScrollIndicatorArrows(void);
 static void Task_BuyMenu(u8 taskId);
@@ -483,10 +487,42 @@ static void Task_ReturnToShopMenu(u8 taskId)
 {
     if (IsWeatherNotFadingIn() == TRUE)
     {
-        if (sMartInfo.martType == MART_TYPE_DECOR2)
+        // For stores that use CreateDirectBuyMenu, show thank you message and exit
+        if ((sMartInfo.martType == MART_TYPE_DECOR || sMartInfo.martType == MART_TYPE_DIRECT_BUY) && sMartInfo.callback == CB2_ReturnToFieldWithOpenMenu)
+        {
+            DisplayItemMessageOnField(taskId, gText_HereYouGoThankYou, Task_ExitStoreAfterThankYou);
+        }
+        else if (sMartInfo.martType == MART_TYPE_DECOR2)
             DisplayItemMessageOnField(taskId, gText_CanIHelpWithAnythingElse, ShowShopMenuAfterExitingBuyOrSellMenu);
         else
-            DisplayItemMessageOnField(taskId, gText_AnythingElseICanHelp, ShowShopMenuAfterExitingBuyOrSellMenu);
+        {
+            // Debug: Force exit for any store-related callback
+            if (sMartInfo.callback == CB2_ReturnToFieldWithOpenMenu)
+            {
+                DisplayItemMessageOnField(taskId, gText_HereYouGoThankYou, Task_ExitStoreAfterThankYou);
+            }
+            else
+            {
+                DisplayItemMessageOnField(taskId, gText_AnythingElseICanHelp, ShowShopMenuAfterExitingBuyOrSellMenu);
+            }
+        }
+    }
+}
+
+static void Task_ExitStoreAfterThankYou(u8 taskId)
+{
+    // Add fade transition before exiting to prevent flashing
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+    gTasks[taskId].func = Task_ExitStoreWithFade;
+}
+
+static void Task_ExitStoreWithFade(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        if (sMartInfo.callback)
+            sMartInfo.callback();
+        DestroyTask(taskId);
     }
 }
 
@@ -512,7 +548,7 @@ static void VBlankCB_BuyMenu(void)
     TransferPlttBuffer();
 }
 
-static void CB2_InitBuyMenu(void)
+void CB2_InitBuyMenu(void)
 {
     u8 taskId;
 
@@ -593,7 +629,7 @@ static void BuyMenuBuildListMenuTemplate(void)
 
 static void BuyMenuSetListEntry(struct ListMenuItem *menuItem, u16 item, u8 *name)
 {
-    if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE)
+    if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE || sMartInfo.martType == MART_TYPE_DIRECT_BUY)
         CopyItemName(item, name);
     else
         StringCopy(name, gDecorations[item].name);
@@ -617,7 +653,7 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
     sShopData->iconSlot ^= 1;
     if (item != LIST_CANCEL)
     {
-        if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE)
+        if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE || sMartInfo.martType == MART_TYPE_DIRECT_BUY)
             description = GetItemDescription(item);
         else
             description = gDecorations[item].description;
@@ -637,7 +673,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
 
     if (itemId != LIST_CANCEL)
     {
-        if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE)
+        if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE || sMartInfo.martType == MART_TYPE_DIRECT_BUY)
         {
             ConvertIntToDecimalStringN(
                 gStringVar1,
@@ -701,7 +737,7 @@ static void BuyMenuAddItemIcon(u16 item, u8 iconSlot)
     if (*spriteIdPtr != SPRITE_NONE)
         return;
 
-    if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE || item == ITEM_LIST_END)
+    if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE || sMartInfo.martType == MART_TYPE_DIRECT_BUY || item == ITEM_LIST_END)
     {
         spriteId = AddItemIconSprite(iconSlot + TAG_ITEM_ICON_BASE, iconSlot + TAG_ITEM_ICON_BASE, item);
         if (spriteId != MAX_SPRITES)
@@ -1011,7 +1047,7 @@ static void Task_BuyMenu(u8 taskId)
             BuyMenuRemoveScrollIndicatorArrows();
             BuyMenuPrintCursor(tListTaskId, COLORID_GRAY_CURSOR);
 
-            if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE)
+            if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE || sMartInfo.martType == MART_TYPE_DIRECT_BUY)
                 sShopData->totalCost = GetMartItemPrice(itemId);
             else
                 sShopData->totalCost = gDecorations[itemId].price;
@@ -1024,7 +1060,7 @@ static void Task_BuyMenu(u8 taskId)
             }
             else
             {
-                if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE)
+                if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE || sMartInfo.martType == MART_TYPE_DIRECT_BUY)
                 {
                     CopyItemName(itemId, gStringVar1);
                     if (GetItemImportance(itemId))
@@ -1140,7 +1176,7 @@ static void BuyMenuTryMakePurchase(u8 taskId)
 
     PutWindowTilemap(WIN_ITEM_LIST);
 
-    if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE)
+    if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE || sMartInfo.martType == MART_TYPE_DIRECT_BUY)
     {
         if (AddBagItem(tItemId, tItemCount) == TRUE)
         {
@@ -1176,7 +1212,7 @@ static void BuyMenuSubtractMoney(u8 taskId)
     PlaySE(SE_SHOP);
     PrintMoneyAmountInMoneyBox(WIN_MONEY, GetMoney(&gSaveBlock1Ptr->money), 0);
 
-    if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE)
+    if (sMartInfo.martType == MART_TYPE_NORMAL || sMartInfo.martType == MART_TYPE_STORE || sMartInfo.martType == MART_TYPE_DIRECT_BUY)
         gTasks[taskId].func = Task_ReturnToItemListAfterItemPurchase;
     else
         gTasks[taskId].func = Task_ReturnToItemListAfterDecorationPurchase;
@@ -1252,9 +1288,20 @@ static void BuyMenuPrintItemQuantityAndPrice(u8 taskId)
 
 static void ExitBuyMenu(u8 taskId)
 {
-    gFieldCallback = MapPostLoadHook_ReturnToShopMenu;
-    BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-    gTasks[taskId].func = Task_ExitBuyMenu;
+    // For store menus created with CreateDirectBuyMenu, skip the shop menu return
+    if ((sMartInfo.martType == MART_TYPE_DECOR || sMartInfo.martType == MART_TYPE_DIRECT_BUY) && sMartInfo.callback == CB2_ReturnToFieldWithOpenMenu)
+    {
+        // Direct exit for store - no shop menu return
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+        gTasks[taskId].func = Task_ExitDirectBuyMenu;
+    }
+    else
+    {
+        // Normal shop behavior
+        gFieldCallback = MapPostLoadHook_ReturnToShopMenu;
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+        gTasks[taskId].func = Task_ExitBuyMenu;
+    }
 }
 
 static void Task_ExitBuyMenu(u8 taskId)
@@ -1264,6 +1311,17 @@ static void Task_ExitBuyMenu(u8 taskId)
         RemoveMoneyLabelObject();
         BuyMenuFreeMemory();
         SetMainCallback2(CB2_ReturnToField);
+        DestroyTask(taskId);
+    }
+}
+
+static void Task_ExitDirectBuyMenu(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        RemoveMoneyLabelObject();
+        BuyMenuFreeMemory();
+        SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);
         DestroyTask(taskId);
     }
 }
@@ -1334,4 +1392,15 @@ void CreateStoreMenu(const u16 *itemsForSale)
     SetShopItemsForSale(itemsForSale);
     ClearItemPurchases();
     SetShopMenuCallback(CB2_ReturnToFieldWithOpenMenu);
+}
+
+void CreateDirectBuyMenu(const u16 *itemsForSale)
+{
+    LockPlayerFieldControls();
+    sMartInfo.martType = MART_TYPE_DIRECT_BUY; // Use special type for direct buy stores
+    SetShopItemsForSale(itemsForSale);
+    ClearItemPurchases();
+    SetShopMenuCallback(CB2_ReturnToFieldWithOpenMenu);
+    // Go directly to buy menu, bypassing any shop menu creation
+    SetMainCallback2(CB2_InitBuyMenu);
 }
