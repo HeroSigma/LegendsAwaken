@@ -3,8 +3,11 @@
 #include "menu.h"
 #include "task.h"
 #include "overworld.h"
+#include "shop.h"
+#include "sound.h"
 #include "strings.h"
 #include "constants/item.h"
+#include "constants/songs.h"
 
 // Menu actions for the store interface. The text pointers are assigned
 // at runtime using the pocket name string table to avoid non-constant
@@ -17,6 +20,79 @@ static struct MenuAction sStoreMenuActions[6] =
     {NULL, {.u8_void = NULL}},
     {NULL, {.u8_void = NULL}},
     {NULL, {.u8_void = NULL}},
+};
+
+// Simple item lists for each pocket category.
+static const u16 sStoreItems_Items[] =
+{
+    ITEM_REPEL,
+    ITEM_ESCAPE_ROPE,
+    ITEM_LIST_END
+};
+
+static const u16 sStoreItems_Medicine[] =
+{
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_LIST_END
+};
+
+static const u16 sStoreItems_Battle[] =
+{
+    ITEM_X_ATTACK,
+    ITEM_X_DEFENSE,
+    ITEM_LIST_END
+};
+
+static const u16 sStoreItems_Balls[] =
+{
+    ITEM_POKE_BALL,
+    ITEM_GREAT_BALL,
+    ITEM_ULTRA_BALL,
+    ITEM_LIST_END
+};
+
+static const u16 sStoreItems_TmHm[] =
+{
+    ITEM_TM01_FOCUS_PUNCH,
+    ITEM_TM02_DRAGON_CLAW,
+    ITEM_LIST_END
+};
+
+static const u16 sStoreItems_Berries[] =
+{
+    ITEM_ORAN_BERRY,
+    ITEM_SITRUS_BERRY,
+    ITEM_LIST_END
+};
+
+static const u16 *const sStoreItemLists[] =
+{
+    sStoreItems_Items,
+    sStoreItems_Medicine,
+    sStoreItems_Battle,
+    sStoreItems_Balls,
+    sStoreItems_TmHm,
+    sStoreItems_Berries,
+};
+
+enum {
+    STORE_STATE_INIT,
+    STORE_STATE_MAIN,
+};
+
+#define tState     data[0]
+#define tWindowId  data[1]
+
+static const struct WindowTemplate sStoreWindowTemplate =
+{
+    .bg = 0,
+    .tilemapLeft = 1,
+    .tilemapTop = 1,
+    .width = 13,
+    .height = 10,
+    .paletteNum = 15,
+    .baseBlock = 1,
 };
 
 static void Task_StoreMenu(u8 taskId);
@@ -38,15 +114,40 @@ static void Task_StoreMenu(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    switch (data[0])
+    switch (tState)
     {
-    case 0:
-        SetStandardWindowBorderStyle(0, FALSE);
-        data[0] = 1;
+    case STORE_STATE_INIT:
+        tWindowId = AddWindow(&sStoreWindowTemplate);
+        SetStandardWindowBorderStyle(tWindowId, FALSE);
+        PrintMenuTable(tWindowId, ARRAY_COUNT(sStoreMenuActions), sStoreMenuActions);
+        InitMenuInUpperLeftCornerNormal(tWindowId, ARRAY_COUNT(sStoreMenuActions), 0);
+        ScheduleBgCopyTilemapToVram(0);
+        tState = STORE_STATE_MAIN;
         break;
-    case 1:
-        SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);
-        DestroyTask(taskId);
+    case STORE_STATE_MAIN:
+    {
+        s8 input = Menu_ProcessInput();
+        if (input == MENU_NOTHING_CHOSEN)
+            break;
+
+        ClearStdWindowAndFrameToTransparent(tWindowId, FALSE);
+        ClearWindowTilemap(tWindowId);
+        RemoveWindow(tWindowId);
+
+        if (input == MENU_B_PRESSED)
+        {
+            PlaySE(SE_SELECT);
+            DestroyTask(taskId);
+            SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);
+        }
+        else
+        {
+            PlaySE(SE_SELECT);
+            CreateStoreMenu(sStoreItemLists[(u8)input]);
+            DestroyTask(taskId);
+        }
         break;
     }
+    }
 }
+
