@@ -50,8 +50,3 @@ static void Task_StoreMenu(u8 taskId)
         break;
     }
 }
-
-void CB2_OpenStoreFromStartMenu(void)
-{
-    CB2_OpenStoreMenu();
-}
