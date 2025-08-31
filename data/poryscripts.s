@@ -1,1 +1,0 @@
-.include "data/poryscripts.inc"
