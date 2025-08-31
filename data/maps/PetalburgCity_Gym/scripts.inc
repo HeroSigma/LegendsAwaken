@@ -1138,86 +1138,72 @@ PetalburgCity_Gym_EventScript_GymStatue::
 	end
 
 PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon:
-	.string "DAD: Hm?\p"
-	.string "Well, if it isn't {PLAYER}!\n"
-	.string "So you're all finished moving in?\p"
-	.string "I'm surprised that you managed to\n"
-	.string "get here by yourself.\p"
-	.string "Oh, I see.\n"
-	.string "You're with your POKéMON.\p"
-	.string "Hm… Then I guess you're going to\n"
-	.string "become a TRAINER like me, {PLAYER}.\p"
-	.string "That's great news!\n"
-	.string "I'll be looking forward to it!$"
+	.string "NORMAN: {PLAYER}? Welcome.\p"
+	.string "{PLAYER}: Hi, Leader NORMAN.\p"
+	.string "NORMAN: I've heard you're back in\n"
+	.string "HOENN.\p"
+	.string "NORMAN: Good to see you again.\p"
+	.string "{PLAYER}: Good to be back.\p"
+	.string "NORMAN: I can't battle you yet.\p"
+	.string "NORMAN: Earn a few BADGES first.\p"
+	.string "{PLAYER}: Got it.$"
 
 PetalburgCity_Gym_Text_WallyIdLikeAPokemon:
-	.string "Um… I…\n"
-	.string "I'd like to get a POKéMON, please…$"
+	.string "WALLY: Um… e-excuse me!$"
 
 PetalburgCity_Gym_Text_DadOhYoureWallyRight:
-	.string "DAD: Hm? You're… Uh… Oh, right.\n"
-	.string "You're WALLY, right?$"
+	.string "NORMAN: WALLY, right?$"
 
 PetalburgCity_Gym_Text_WallyIveNeverCaughtAPokemon:
-	.string "WALLY: I'm going to go stay with my\n"
-	.string "relatives in VERDANTURF TOWN.\p"
-	.string "I thought I would be lonely by myself,\n"
-	.string "so I wanted to take a POKéMON along.\p"
-	.string "But I've never caught a POKéMON before.\n"
-	.string "I don't know how…$"
+	.string "WALLY: Yes, sir. I want to catch a\n"
+	.string "POKéMON…\p"
+	.string "WALLY: But I've never done it before.$"
 
 PetalburgCity_Gym_Text_DadHmISee:
-	.string "DAD: Hm. I see.$"
+	.string "NORMAN: I understand.$"
 
 PetalburgCity_Gym_Text_DadPlayerGoWithWally:
-	.string "DAD: {PLAYER}, you heard that,\n"
-	.string "right?\p"
-	.string "Go with WALLY and make sure that he\n"
-	.string "safely catches a POKéMON.$"
+	.string "NORMAN: {PLAYER}, can you go with him?$"
 
 PetalburgCity_Gym_Text_IllLoanYouMyZigzagoon:
-	.string "WALLY, here, I'll loan you my POKéMON.\p"
-	.string "WALLY received a ZIGZAGOON!$"
+	.string "NORMAN: WALLY, borrow this POKéMON.$"
 
 PetalburgCity_Gym_Text_WallyThankYouAndDadGivesPokeBall:
-	.string "WALLY: Oh, wow!\n"
-	.string "A POKéMON!\p"
-	.string "DAD: Hm. I'll give you a POKé BALL, too.\n"
-	.string "Go for it!\p"
-	.string "WALLY received a POKé BALL!$"
+	.string "NORMAN: And take these POKé BALLS.\p"
+	.string "NORMAN: Head to ROUTE 102. Keep close\n"
+	.string "to {PLAYER}.$"
 
 PetalburgCity_Gym_Text_WallyOhWowThankYou:
-	.string "WALLY: Oh, wow!\n"
-	.string "Thank you!$"
+	.string "WALLY: Thank you! I'll do my best.$"
 
 PetalburgCity_Gym_Text_WouldYouReallyComeWithMe:
-	.string "{PLAYER}… Would you really come\n"
-	.string "with me?$"
+	.string "{PLAYER}: Let's go.$"
 
 PetalburgCity_Gym_Text_DadSoDidItWorkOut:
-	.string "DAD: So, did it work out?$"
+	.string "WALLY: I-I did it! I caught one!\p"
+	.string "{PLAYER}: Nice work, WALLY.\p"
+	.string "NORMAN: Well done.\p"
+	.string "NORMAN: Let me see your partner.\p"
+	.string "WALLY: Here!\p"
+	.string "NORMAN: Looks healthy. Take good\n"
+	.string "care of it.$"
 
 PetalburgCity_Gym_Text_WallyThankYouBye:
-	.string "WALLY: Thank you, yes, it did.\n"
-	.string "Here's your POKéMON back.\p"
-	.string "{PLAYER}, thank you for coming along\n"
-	.string "with me.\p"
-	.string "You two are why I was able to catch\n"
-	.string "my POKéMON.\p"
-	.string "I promise I'll take really good\n"
-	.string "care of it.\p"
-	.string "Oh! My mom's waiting for me,\n"
-	.string "so I have to go!\p"
-	.string "Bye, {PLAYER}!$"
+	.string "WALLY: Thank you, sir! Thank you,\n"
+	.string "{PLAYER}!\p"
+	.string "WALLY: I'll train hard!\p"
+	.string "{PLAYER}: You've got this.\p"
+	.string "WALLY: See you!$"
 
 PetalburgCity_Gym_Text_DadGoCollectBadges:
-	.string "DAD: Now…\p"
-	.string "{PLAYER}, if you want to become a\n"
-	.string "strong TRAINER, here's my advice.\p"
-	.string "Head for RUSTBORO CITY beyond this\n"
-	.string "town.\p"
-	.string "There, you should challenge\n"
-	.string "the GYM LEADER, ROXANNE.\p"
+	.string "NORMAN: About you, {PLAYER}…\p"
+	.string "NORMAN: You've grown strong.\p"
+	.string "{PLAYER}: Still learning.\p"
+	.string "NORMAN: Come back after you've earned\n"
+	.string "four BADGES.\p"
+	.string "NORMAN: I'll be ready for you then.\p"
+	.string "{PLAYER}: I will. Thanks, Leader NORMAN.\p"
+	.string "NORMAN: Travel safe.$"
 	.string "After her, go on to other POKéMON\n"
 	.string "GYMS and defeat their LEADERS.\p"
 	.string "Collect BADGES from them,\n"
@@ -1588,4 +1574,3 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons:
 	.string "capable of battle?\p"
 	.string "Sorry, but you'll have to come back\n"
 	.string "with at least two POKéMON.$"
-

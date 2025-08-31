@@ -37882,7 +37882,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 === TRAINER_BRENDAN_ROUTE_103_MUDKIP ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -37957,7 +37957,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -38032,7 +38032,7 @@ EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 === TRAINER_BRENDAN_ROUTE_119_MUDKIP ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -38107,7 +38107,7 @@ EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
 === TRAINER_BRENDAN_ROUTE_103_TREECKO ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -38182,7 +38182,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -38257,7 +38257,7 @@ EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 === TRAINER_BRENDAN_ROUTE_119_TREECKO ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -38332,7 +38332,7 @@ EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
 === TRAINER_BRENDAN_ROUTE_103_TORCHIC ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -38407,7 +38407,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 === TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -38482,7 +38482,7 @@ EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 === TRAINER_BRENDAN_ROUTE_119_TORCHIC ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -38557,7 +38557,7 @@ EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
 === TRAINER_MAY_ROUTE_103_MUDKIP ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -38632,7 +38632,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -38707,7 +38707,7 @@ EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 === TRAINER_MAY_ROUTE_119_MUDKIP ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -38782,7 +38782,7 @@ EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
 === TRAINER_MAY_ROUTE_103_TREECKO ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -38857,7 +38857,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 === TRAINER_MAY_ROUTE_110_TREECKO ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -38932,7 +38932,7 @@ EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 === TRAINER_MAY_ROUTE_119_TREECKO ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -39007,7 +39007,7 @@ EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
 === TRAINER_MAY_ROUTE_103_TORCHIC ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -39082,7 +39082,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 === TRAINER_MAY_ROUTE_110_TORCHIC ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -39157,7 +39157,7 @@ EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 === TRAINER_MAY_ROUTE_119_TORCHIC ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -41785,7 +41785,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BRENDAN_RUSTBORO_TREECKO ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -41802,7 +41802,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 === TRAINER_BRENDAN_RUSTBORO_MUDKIP ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -41909,7 +41909,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BRENDAN_RUSTBORO_TORCHIC ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -41926,7 +41926,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 === TRAINER_MAY_RUSTBORO_MUDKIP ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -43188,7 +43188,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 === TRAINER_BRENDAN_LILYCOVE_MUDKIP ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -43213,7 +43213,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 === TRAINER_BRENDAN_LILYCOVE_TREECKO ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -43238,7 +43238,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 === TRAINER_BRENDAN_LILYCOVE_TORCHIC ===
 Name: BRENDAN
 Class: Rival
-Pic: Brendan
+Pic: RS Brendan
 Gender: Male
 Music: Male
 Double Battle: No
@@ -43263,7 +43263,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 === TRAINER_MAY_LILYCOVE_MUDKIP ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -43288,7 +43288,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 === TRAINER_MAY_LILYCOVE_TREECKO ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -43313,7 +43313,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 0 SpA / 31 SpD / 31 Spe
 === TRAINER_MAY_LILYCOVE_TORCHIC ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -45062,7 +45062,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 === TRAINER_MAY_RUSTBORO_TREECKO ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No
@@ -45079,7 +45079,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 === TRAINER_MAY_RUSTBORO_TORCHIC ===
 Name: MAY
 Class: Rival
-Pic: May
+Pic: RS May
 Gender: Female
 Music: Female
 Double Battle: No

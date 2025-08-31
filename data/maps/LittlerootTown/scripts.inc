@@ -113,6 +113,8 @@ LittlerootTown_OnFrame:
 
 LittlerootTown_EventScript_StepOffTruckMale::
 	lockall
+	msgbox LittlerootTown_Text_PlayerEightYears, MSGBOX_DEFAULT
+	msgbox LittlerootTown_Text_PlayerWonderHow, MSGBOX_DEFAULT
 	setvar VAR_0x8004, 5
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
@@ -124,6 +126,8 @@ LittlerootTown_EventScript_StepOffTruckMale::
 
 LittlerootTown_EventScript_StepOffTruckFemale::
 	lockall
+	msgbox LittlerootTown_Text_PlayerEightYears, MSGBOX_DEFAULT
+	msgbox LittlerootTown_Text_PlayerWonderHow, MSGBOX_DEFAULT
 	setvar VAR_0x8004, 14
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
@@ -929,16 +933,17 @@ LittlerootTown_EventScript_GiveRunningShoes::
         return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "MOM: {PLAYER}, we're here, honey!\p"
-	.string "It must be tiring riding with our things\n"
-	.string "in the moving truck.\p"
-	.string "Well, this is LITTLEROOT TOWN.\p"
-	.string "How do you like it?\n"
-	.string "This is our new home!\p"
-	.string "It has a quaint feel, but it seems to be\n"
-	.string "an easy place to live, don't you think?\p"
-	.string "And, you get your own room, {PLAYER}!\n"
-	.string "Let's go inside.$"
+	.string "MOM: {PLAYER}! There you are.\p"
+	.string "We finally made it back to HOENN.\p"
+	.string "Long ride, huh?\p"
+	.string "Eight years is a long time, too.\p"
+	.string "Come on. Let's get you inside.$"
+
+LittlerootTown_Text_PlayerEightYears:
+	.string "Eight years, huh...$"
+
+LittlerootTown_Text_PlayerWonderHow:
+	.string "I wonder how...$"
 
 LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"
@@ -1043,4 +1048,3 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
-

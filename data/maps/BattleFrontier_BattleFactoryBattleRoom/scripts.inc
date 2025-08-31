@@ -37,11 +37,11 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_EndHideObjects::
 	end
 
 BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxMale::
-	setvar VAR_OBJ_GFX_ID_F, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
+	setvar VAR_OBJ_GFX_ID_F, OBJ_EVENT_GFX_LINK_RS_BRENDAN
 	return
 
 BattleFrontier_BattleFactoryBattleRoom_EventScript_SetPlayerGfxFemale::
-	setvar VAR_OBJ_GFX_ID_F, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
+	setvar VAR_OBJ_GFX_ID_F, OBJ_EVENT_GFX_LINK_RS_MAY
 	return
 
 BattleFrontier_BattleFactoryBattleRoom_OnFrame:
@@ -311,4 +311,3 @@ BattleFrontier_BattleFactoryBattleRoom_Text_LastTimeILoseToYou:
 	.string "That's absolutely the last time\n"
 	.string "I lose to you!\p"
 	.string "We have to do this again, hey?$"
-

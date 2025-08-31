@@ -254,7 +254,149 @@
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        246
+#define OBJ_EVENT_GFX_DP_CYNTHIA                 246
+#define OBJ_EVENT_GFX_DP_CYRUS                   247
+#define OBJ_EVENT_GFX_DP_JUPITER                 248
+#define OBJ_EVENT_GFX_DP_MARS                    249
+#define OBJ_EVENT_GFX_DP_SATURN                  250
+#define OBJ_EVENT_GFX_DP_GALACTIC_GRUNT_M        251
+#define OBJ_EVENT_GFX_DP_GALACTIC_GRUNT_F        252
+#define OBJ_EVENT_GFX_DP_LOOKER                  253
+#define OBJ_EVENT_GFX_DP_PROF_ROWAN              254
+#define OBJ_EVENT_GFX_DP_PALMER                  255
+#define OBJ_EVENT_GFX_DP_AARON                   256
+#define OBJ_EVENT_GFX_DP_BERTHA                  257
+#define OBJ_EVENT_GFX_DP_LUCIAN                  258
+#define OBJ_EVENT_GFX_DP_VOLKNER                 259
+#define OBJ_EVENT_GFX_DP_CRASHER_WAKE            260
+#define OBJ_EVENT_GFX_DP_FANTINA                 261
+#define OBJ_EVENT_GFX_DP_MAYLENE                 262
+#define OBJ_EVENT_GFX_DP_BYRON                   263
+#define OBJ_EVENT_GFX_DP_BARRY                   264
+#define OBJ_EVENT_GFX_DP_CHERYL                  265
+#define OBJ_EVENT_GFX_DP_MIRA                    266
+#define OBJ_EVENT_GFX_DP_MARLEY                  267
+#define OBJ_EVENT_GFX_DP_SOCIALITE               268
+#define OBJ_EVENT_GFX_DP_WORKER                  269
+#define OBJ_EVENT_GFX_DP_RANCHER                 270
+#define OBJ_EVENT_GFX_DP_COWGIRL                 271
+#define OBJ_EVENT_GFX_DP_PARASOL_LADY            272
+#define OBJ_EVENT_GFX_DP_WAITER                  273
+#define OBJ_EVENT_GFX_DP_WAITRESS                274
+#define OBJ_EVENT_GFX_DP_DRAGON_TAMER            275
+
+// Update total count
+#define OBJ_EVENT_GFX_SP_YOUNGSTER               276
+#define OBJ_EVENT_GFX_SP_FISHERMAN               277
+#define OBJ_EVENT_GFX_SP_GENTLEMAN               278
+#define OBJ_EVENT_GFX_SP_HIKER                   279
+#define OBJ_EVENT_GFX_SP_ARTIST                  280
+#define OBJ_EVENT_GFX_SP_BEAUTY                  281
+#define OBJ_EVENT_GFX_SP_BLACK_BELT              282
+#define OBJ_EVENT_GFX_SP_BUG_CATCHER             283
+#define OBJ_EVENT_GFX_SP_CAMPER                  284
+#define OBJ_EVENT_GFX_SP_PICNICKER               285
+#define OBJ_EVENT_GFX_SP_POKEFAN_F               286
+#define OBJ_EVENT_GFX_SP_POKEFAN_M               287
+#define OBJ_EVENT_GFX_SP_PSYCHIC_M               288
+#define OBJ_EVENT_GFX_SP_RICH_BOY                289
+#define OBJ_EVENT_GFX_SP_SAILOR                  290
+#define OBJ_EVENT_GFX_SP_SCIENTIST_1             291
+#define OBJ_EVENT_GFX_SP_SWIMMER_F               292
+#define OBJ_EVENT_GFX_SP_SWIMMER_M               293
+
+// Author-specific non-replacement slots (examples)
+#define OBJ_EVENT_GFX_IAG_YOUNGSTER              294
+#define OBJ_EVENT_GFX_GALAXEEH_YOUNGSTER         295
+#define OBJ_EVENT_GFX_BF_YOUNGSTER               296
+#define OBJ_EVENT_GFX_HORO_YOUNGSTER             297
+#define OBJ_EVENT_GFX_IAG_BEAUTY                 298
+#define OBJ_EVENT_GFX_GALAXEEH_BEAUTY            299
+#define OBJ_EVENT_GFX_BF_BEAUTY                  300
+#define OBJ_EVENT_GFX_HORO_BEAUTY                301
+// Fisherman
+#define OBJ_EVENT_GFX_IAG_FISHERMAN              302
+#define OBJ_EVENT_GFX_GALAXEEH_FISHERMAN         303
+#define OBJ_EVENT_GFX_BF_FISHERMAN               304
+#define OBJ_EVENT_GFX_HORO_FISHERMAN             305
+// Gentleman
+#define OBJ_EVENT_GFX_IAG_GENTLEMAN              306
+#define OBJ_EVENT_GFX_GALAXEEH_GENTLEMAN         307
+#define OBJ_EVENT_GFX_BF_GENTLEMAN               308
+#define OBJ_EVENT_GFX_HORO_GENTLEMAN             309
+// Hiker
+#define OBJ_EVENT_GFX_IAG_HIKER                  310
+#define OBJ_EVENT_GFX_GALAXEEH_HIKER             311
+#define OBJ_EVENT_GFX_BF_HIKER                   312
+#define OBJ_EVENT_GFX_HORO_HIKER                 313
+// Artist
+#define OBJ_EVENT_GFX_IAG_ARTIST                 314
+#define OBJ_EVENT_GFX_GALAXEEH_ARTIST            315
+#define OBJ_EVENT_GFX_BF_ARTIST                  316
+#define OBJ_EVENT_GFX_HORO_ARTIST                317
+// Black Belt
+#define OBJ_EVENT_GFX_IAG_BLACK_BELT             318
+#define OBJ_EVENT_GFX_GALAXEEH_BLACK_BELT        319
+#define OBJ_EVENT_GFX_BF_BLACK_BELT              320
+#define OBJ_EVENT_GFX_HORO_BLACK_BELT            321
+// Bug Catcher
+#define OBJ_EVENT_GFX_IAG_BUG_CATCHER            322
+#define OBJ_EVENT_GFX_GALAXEEH_BUG_CATCHER       323
+#define OBJ_EVENT_GFX_BF_BUG_CATCHER             324
+#define OBJ_EVENT_GFX_HORO_BUG_CATCHER           325
+// Camper
+#define OBJ_EVENT_GFX_IAG_CAMPER                 326
+#define OBJ_EVENT_GFX_GALAXEEH_CAMPER            327
+#define OBJ_EVENT_GFX_BF_CAMPER                  328
+#define OBJ_EVENT_GFX_HORO_CAMPER                329
+// Picnicker
+#define OBJ_EVENT_GFX_IAG_PICNICKER              330
+#define OBJ_EVENT_GFX_GALAXEEH_PICNICKER         331
+#define OBJ_EVENT_GFX_BF_PICNICKER               332
+#define OBJ_EVENT_GFX_HORO_PICNICKER             333
+// Pokefan F
+#define OBJ_EVENT_GFX_IAG_POKEFAN_F              334
+#define OBJ_EVENT_GFX_GALAXEEH_POKEFAN_F         335
+#define OBJ_EVENT_GFX_BF_POKEFAN_F               336
+#define OBJ_EVENT_GFX_HORO_POKEFAN_F             337
+// Pokefan M
+#define OBJ_EVENT_GFX_IAG_POKEFAN_M              338
+#define OBJ_EVENT_GFX_GALAXEEH_POKEFAN_M         339
+#define OBJ_EVENT_GFX_BF_POKEFAN_M               340
+#define OBJ_EVENT_GFX_HORO_POKEFAN_M             341
+// Psychic M
+#define OBJ_EVENT_GFX_IAG_PSYCHIC_M              342
+#define OBJ_EVENT_GFX_GALAXEEH_PSYCHIC_M         343
+#define OBJ_EVENT_GFX_BF_PSYCHIC_M               344
+#define OBJ_EVENT_GFX_HORO_PSYCHIC_M             345
+// Rich Boy
+#define OBJ_EVENT_GFX_IAG_RICH_BOY               346
+#define OBJ_EVENT_GFX_GALAXEEH_RICH_BOY          347
+#define OBJ_EVENT_GFX_BF_RICH_BOY                348
+#define OBJ_EVENT_GFX_HORO_RICH_BOY              349
+// Sailor
+#define OBJ_EVENT_GFX_IAG_SAILOR                 350
+#define OBJ_EVENT_GFX_GALAXEEH_SAILOR            351
+#define OBJ_EVENT_GFX_BF_SAILOR                  352
+#define OBJ_EVENT_GFX_HORO_SAILOR                353
+// Scientist 1
+#define OBJ_EVENT_GFX_IAG_SCIENTIST_1            354
+#define OBJ_EVENT_GFX_GALAXEEH_SCIENTIST_1       355
+#define OBJ_EVENT_GFX_BF_SCIENTIST_1             356
+#define OBJ_EVENT_GFX_HORO_SCIENTIST_1           357
+// Swimmer F
+#define OBJ_EVENT_GFX_IAG_SWIMMER_F              358
+#define OBJ_EVENT_GFX_GALAXEEH_SWIMMER_F         359
+#define OBJ_EVENT_GFX_BF_SWIMMER_F               360
+#define OBJ_EVENT_GFX_HORO_SWIMMER_F             361
+// Swimmer M
+#define OBJ_EVENT_GFX_IAG_SWIMMER_M              362
+#define OBJ_EVENT_GFX_GALAXEEH_SWIMMER_M         363
+#define OBJ_EVENT_GFX_BF_SWIMMER_M               364
+#define OBJ_EVENT_GFX_HORO_SWIMMER_M             365
+
+// Update total count
+#define NUM_OBJ_EVENT_GFX                        366
 
 
 // These are dynamic object gfx ids.
@@ -425,6 +567,56 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+
+// DP-specific palettes
+#define OBJ_EVENT_PAL_TAG_DP_CYNTHIA              0x1180
+#define OBJ_EVENT_PAL_TAG_DP_CYRUS                0x1181
+#define OBJ_EVENT_PAL_TAG_DP_JUPITER              0x1182
+#define OBJ_EVENT_PAL_TAG_DP_MARS                 0x1183
+#define OBJ_EVENT_PAL_TAG_DP_SATURN               0x1184
+#define OBJ_EVENT_PAL_TAG_DP_GALACTIC_GRUNT_F     0x1185
+#define OBJ_EVENT_PAL_TAG_DP_GALACTIC_GRUNT_M     0x1186
+#define OBJ_EVENT_PAL_TAG_DP_LOOKER               0x1187
+#define OBJ_EVENT_PAL_TAG_DP_PROF_ROWAN           0x1188
+#define OBJ_EVENT_PAL_TAG_DP_PALMER               0x1189
+#define OBJ_EVENT_PAL_TAG_DP_AARON                0x118A
+#define OBJ_EVENT_PAL_TAG_DP_BERTHA               0x118B
+#define OBJ_EVENT_PAL_TAG_DP_LUCIAN               0x118C
+#define OBJ_EVENT_PAL_TAG_DP_VOLKNER              0x118D
+#define OBJ_EVENT_PAL_TAG_DP_CRASHER_WAKE         0x118E
+#define OBJ_EVENT_PAL_TAG_DP_FANTINA              0x118F
+#define OBJ_EVENT_PAL_TAG_DP_MAYLENE              0x1190
+#define OBJ_EVENT_PAL_TAG_DP_BYRON                0x1191
+#define OBJ_EVENT_PAL_TAG_DP_BARRY                0x1192
+#define OBJ_EVENT_PAL_TAG_DP_CHERYL               0x1193
+#define OBJ_EVENT_PAL_TAG_DP_MIRA                 0x1194
+#define OBJ_EVENT_PAL_TAG_DP_MARLEY               0x1195
+#define OBJ_EVENT_PAL_TAG_DP_SOCIALITE            0x1196
+#define OBJ_EVENT_PAL_TAG_DP_WORKER               0x1197
+#define OBJ_EVENT_PAL_TAG_DP_RANCHER              0x1198
+#define OBJ_EVENT_PAL_TAG_DP_COWGIRL              0x1199
+#define OBJ_EVENT_PAL_TAG_DP_PARASOL_LADY         0x119A
+#define OBJ_EVENT_PAL_TAG_DP_WAITER               0x119B
+#define OBJ_EVENT_PAL_TAG_DP_WAITRESS             0x119C
+#define OBJ_EVENT_PAL_TAG_DP_DRAGON_TAMER         0x119D
+// Additional DP-style generic trainer palettes
+#define OBJ_EVENT_PAL_TAG_DP_YOUNGSTER            0x119E
+#define OBJ_EVENT_PAL_TAG_DP_FISHERMAN            0x119F
+#define OBJ_EVENT_PAL_TAG_DP_GENTLEMAN            0x11A0
+#define OBJ_EVENT_PAL_TAG_DP_HIKER                0x11A1
+#define OBJ_EVENT_PAL_TAG_DP_ARTIST               0x11A2
+#define OBJ_EVENT_PAL_TAG_DP_BEAUTY               0x11A3
+#define OBJ_EVENT_PAL_TAG_DP_BLACK_BELT           0x11A4
+#define OBJ_EVENT_PAL_TAG_DP_BUG_CATCHER          0x11A5
+#define OBJ_EVENT_PAL_TAG_DP_CAMPER_PICNICKER     0x11A6
+#define OBJ_EVENT_PAL_TAG_DP_POKEFAN_F            0x11A7
+#define OBJ_EVENT_PAL_TAG_DP_POKEFAN_M            0x11A8
+#define OBJ_EVENT_PAL_TAG_DP_PSYCHIC              0x11A9
+#define OBJ_EVENT_PAL_TAG_DP_RICH_BOY             0x11AA
+#define OBJ_EVENT_PAL_TAG_DP_SAILOR               0x11AB
+#define OBJ_EVENT_PAL_TAG_DP_SCIENTIST            0x11AC
+#define OBJ_EVENT_PAL_TAG_DP_SWIMMER_F            0x11AD
+#define OBJ_EVENT_PAL_TAG_DP_SWIMMER_M            0x11AE
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
