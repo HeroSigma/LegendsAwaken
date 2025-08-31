@@ -54,8 +54,8 @@ static const u16 sStoreItems_Balls[] =
 
 static const u16 sStoreItems_TmHm[] =
 {
-    ITEM_TM01_FOCUS_PUNCH,
-    ITEM_TM02_DRAGON_CLAW,
+    ITEM_TM01,
+    ITEM_TM02,
     ITEM_LIST_END
 };
 
