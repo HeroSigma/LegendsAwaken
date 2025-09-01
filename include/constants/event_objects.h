@@ -395,8 +395,10 @@
 #define OBJ_EVENT_GFX_BF_SWIMMER_M               364
 #define OBJ_EVENT_GFX_HORO_SWIMMER_M             365
 
+#define OBJ_EVENT_GFX_RGBY_RED                   366
+
 // Update total count
-#define NUM_OBJ_EVENT_GFX                        366
+#define NUM_OBJ_EVENT_GFX                        367
 
 
 // These are dynamic object gfx ids.
@@ -560,13 +562,14 @@
 #define OBJ_EVENT_PAL_TAG_SUBMARINE_SHADOW        0x111B
 #define OBJ_EVENT_PAL_TAG_POOCHYENA               0x111C
 #define OBJ_EVENT_PAL_TAG_RED_LEAF                0x111D
-#define OBJ_EVENT_PAL_TAG_DEOXYS                  0x111E
-#define OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE      0x111F
-#define OBJ_EVENT_PAL_TAG_HO_OH                   0x1120
-#define OBJ_EVENT_PAL_TAG_LUGIA                   0x1121
-#define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
-#define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
-#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+#define OBJ_EVENT_PAL_TAG_RGBY_RED                0x111E
+#define OBJ_EVENT_PAL_TAG_DEOXYS                  0x111F
+#define OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE      0x1120
+#define OBJ_EVENT_PAL_TAG_HO_OH                   0x1121
+#define OBJ_EVENT_PAL_TAG_LUGIA                   0x1122
+#define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1123
+#define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1124
+#define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1125
 
 // DP-specific palettes
 #define OBJ_EVENT_PAL_TAG_DP_CYNTHIA              0x1180

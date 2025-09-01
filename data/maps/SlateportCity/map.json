@@ -572,8 +572,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 40,
-      "y": 7,
+      "x": 29,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_HARBOR",
       "dest_warp_id": "2"

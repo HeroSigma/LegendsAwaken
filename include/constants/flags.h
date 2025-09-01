@@ -49,7 +49,7 @@
 #define B_FLAG_TERA_ORB_NO_COST    0x23 // No Tera Orb Cost
 #define B_FLAG_SLEEP_CLAUSE  0x24 // Sleep Clause
 #define B_FLAG_NO_WHITEOUT   0x25 // No Whiteout
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_HIDE_RUSTBORO_CITY_DEVON_CORP_3F_GREEN    0x26 // Repurposed from unused flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define I_EXP_SHARE_FLAG     0x2A // EXP Share

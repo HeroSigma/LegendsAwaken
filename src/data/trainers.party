@@ -20673,7 +20673,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
 Hippopotas @ Eviolite
-Level: 22
+Level: 18
 Ability: Sand Stream
 Nature: Relaxed
 Tera Type: Rock
@@ -20688,7 +20688,7 @@ EVs: 252 HP / 252 Def / 4 SpD
 - Rock Slide
 
 Lileep @ Eviolite
-Level: 22
+Level: 18
 Ability: Storm Drain
 Nature: Bold
 Tera Type: Rock
@@ -20703,7 +20703,7 @@ EVs: 252 HP / 252 Def / 4 SpD
 - Sludge Bomb
 
 Nosepass @ Sitrus Berry
-Level: 21
+Level: 17
 Ability: Sturdy
 Nature: Calm
 Tera Type: Electric
@@ -20718,7 +20718,7 @@ EVs: 252 HP / 36 SpA / 220 SpD
 - Rest
 
 Onix @ Smooth Rock
-Level: 21
+Level: 17
 Ability: Sturdy
 Nature: Impish
 Tera Type: Steel
@@ -20733,7 +20733,7 @@ EVs: 252 HP / 0 Atk / 252 Def / 4 Spe
 - Screech
 
 Sandshrew @ Leftovers
-Level: 20
+Level: 16
 Ability: Sand Rush
 Nature: Jolly
 Tera Type: Ground
@@ -20748,7 +20748,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Swords Dance
 
 Archen @ Focus Sash
-Level: 20
+Level: 16
 Ability: Defeatist
 Nature: Adamant
 Tera Type: Flying
@@ -20762,6 +20762,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Knock Off
 - U-turn
 
+
 === TRAINER_BRAWLY_1 ===
 Name: Brawly
 Class: Leader
@@ -20773,7 +20774,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
 Meditite (M) @ Light Clay
-Level: 27
+Level: 21
 Ability: Pure Power
 Nature: Jolly
 Tera Type: Psychic
@@ -20788,7 +20789,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Reflect
 
 Makuhita (M) @ Sitrus Berry
-Level: 27
+Level: 21
 Ability: Thick Fat
 Nature: Impish
 Tera Type: Steel
@@ -20803,7 +20804,7 @@ EVs: 252 HP / 252 Def / 4 Atk
 - Knock Off
 
 Scraggy (M) @ Leftovers
-Level: 28
+Level: 22
 Ability: Moxie
 Nature: Careful
 Tera Type: Dark
@@ -20818,7 +20819,7 @@ EVs: 252 HP / 252 SpD / 4 Atk
 - Fake Out
 
 Hawlucha (M) @ Focus Sash
-Level: 28
+Level: 22
 Ability: Unburden
 Nature: Jolly
 Tera Type: Flying
@@ -20833,7 +20834,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Rock Tomb
 
 Toxicroak (M) @ Black Sludge
-Level: 29
+Level: 22
 Ability: Dry Skin
 Nature: Adamant
 Tera Type: Poison
@@ -20848,7 +20849,7 @@ EVs: 252 Atk / 4 SpD / 252 Spe
 - Swords Dance
 
 Lucario (M) @ Lucarionite
-Level: 30
+Level: 22
 Ability: Inner Focus
 Nature: Jolly
 Tera Type: Fighting
@@ -20857,10 +20858,11 @@ Dynamax Level: 10
 Ball: Luxury Ball
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 4 SpD / 252 Spe
-- Close Combat
+- Brick Break
 - Bullet Punch
 - Ice Punch
 - Swords Dance
+
 
 === TRAINER_WATTSON_1 ===
 Name: Wattson
@@ -20873,7 +20875,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
 Jolteon @ Magnet
-Level: 32
+Level: 25
 Ability: Volt Absorb
 Nature: Timid
 Tera Type: Electric
@@ -20888,7 +20890,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Double Kick
 
 Magnezone @ Sitrus Berry
-Level: 32
+Level: 25
 Ability: Sturdy
 Nature: Modest
 Tera Type: Steel
@@ -20900,10 +20902,10 @@ EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 0 Spe
 - Thunderbolt
 - Flash Cannon
 - Volt Switch
-- Mirror Coat
+- Metal Sound
 
 Rotom-Wash @ Leftovers
-Level: 33
+Level: 26
 Ability: Levitate
 Nature: Timid
 Tera Type: Water
@@ -20918,7 +20920,7 @@ EVs: 252 HP / 4 SpA / 252 Spe
 - Volt Switch
 
 Eelektross @ Assault Vest
-Level: 33
+Level: 26
 Ability: Levitate
 Nature: Brave
 Tera Type: Electric
@@ -20933,7 +20935,7 @@ EVs: 252 HP / 252 Atk / 4 SpD
 - Knock Off
 
 Luxray @ Choice Band
-Level: 34
+Level: 26
 Ability: Intimidate
 Nature: Adamant
 Tera Type: Dark
@@ -20948,7 +20950,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Volt Switch
 
 Manectric (M) @ Manectite
-Level: 35
+Level: 26
 Ability: Lightning Rod
 Nature: Timid
 Tera Type: Electric
@@ -20962,6 +20964,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Volt Switch
 - Hidden Power
 
+
 === TRAINER_FLANNERY_1 ===
 Name: Flannery
 Class: Leader
@@ -20973,7 +20976,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
 Torkoal @ Heat Rock
-Level: 38
+Level: 31
 Ability: Drought
 Nature: Relaxed
 Tera Type: Fire
@@ -20988,7 +20991,7 @@ EVs: 252 HP / 252 Def / 4 SpA
 - Stealth Rock
 
 Arcanine @ Sitrus Berry
-Level: 38
+Level: 31
 Ability: Intimidate
 Nature: Adamant
 Tera Type: Fire
@@ -21002,8 +21005,8 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Extreme Speed
 - Will-O-Wisp
 
-Salazzle @ Focus Sash
-Level: 39
+Salandit @ Focus Sash
+Level: 32
 Ability: Corrosion
 Nature: Timid
 Tera Type: Poison
@@ -21017,9 +21020,9 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Nasty Plot
 - Dragon Pulse
 
-Camerupt @ Passho Berry
-Level: 39
-Ability: Solid Rock
+Numel @ Passho Berry
+Level: 32
+Ability: Own Tempo
 Nature: Quiet
 Tera Type: Ground
 Shiny: No
@@ -21032,23 +21035,23 @@ EVs: 252 HP / 4 Def / 252 SpA
 - Rock Slide
 - Yawn
 
-Charizard @ Heavy-Duty Boots
-Level: 40
+Charmeleon @ Eviolite
+Level: 31
 Ability: Solar Power
 Nature: Modest
-Tera Type: Flying
+Tera Type: Fire
 Shiny: No
 Dynamax Level: 10
 Ball: Repeat Ball
 IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Flamethrower
-- Air Slash
 - Dragon Pulse
-- Roost
+- Will-O-Wisp
+- Protect
 
 Houndoom (F) @ Houndoominite
-Level: 41
+Level: 32
 Ability: Flash Fire
 Nature: Timid
 Tera Type: Fire
@@ -21060,7 +21063,8 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Flamethrower
 - Dark Pulse
 - Nasty Plot
-- Solar Beam 
+- Solar Beam
+
 
 === TRAINER_NORMAN_1 ===
 Name: Norman
@@ -21073,7 +21077,7 @@ Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
 Slaking @ Leftovers
-Level: 54
+Level: 38
 Ability: Truant
 Nature: Adamant
 Tera Type: Ghost
@@ -21088,7 +21092,7 @@ EVs: 252 HP / 252 Atk / 4 Spe
 - Shadow Claw
 
 Obstagoon @ Flame Orb
-Level: 54
+Level: 38
 Ability: Guts
 Nature: Jolly
 Tera Type: Normal
@@ -21103,7 +21107,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Close Combat
 
 Farigiraf @ Assault Vest
-Level: 54
+Level: 37
 Ability: Armor Tail
 Nature: Bold
 Tera Type: Psychic
@@ -21118,7 +21122,7 @@ EVs: 252 HP / 252 Def / 4 SpA
 - Trick Room
 
 Maushold-Four @ Wide Lens
-Level: 54
+Level: 37
 Ability: Technician
 Nature: Jolly
 Tera Type: Normal
@@ -21133,7 +21137,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - U-turn
 
 Ursaluna @ Flame Orb
-Level: 54
+Level: 37
 Ability: Guts
 Nature: Adamant
 Tera Type: Ground
@@ -21148,7 +21152,7 @@ EVs: 252 HP / 252 Atk / 4 Def
 - Protect
 
 Kangaskhan (F) @ Kangaskhanite
-Level: 56
+Level: 38
 Ability: Scrappy
 Nature: Jolly
 Tera Type: Normal
@@ -21160,7 +21164,8 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Double-Edge
 - Drain Punch
 - Crunch
-- Fake Out  
+- Fake Out
+
 
 === TRAINER_WINONA_1 ===
 Name: Winona
@@ -21173,7 +21178,7 @@ Double Battle: Yes
 AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
 Landorus-Therian (M) @ Choice Scarf
-Level: 58
+Level: 44
 Ability: Intimidate
 Nature: Jolly
 Tera Type: Flying
@@ -21188,7 +21193,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Rock Slide
 
 Corviknight (F) @ Leftovers
-Level: 58
+Level: 43
 Ability: Mirror Armor
 Nature: Impish
 Tera Type: Steel
@@ -21203,7 +21208,7 @@ EVs: 252 HP / 252 Def / 4 SpD
 - U-turn
 
 Tornadus-Therian (M) @ Assault Vest
-Level: 58
+Level: 43
 Ability: Regenerator
 Nature: Timid
 Tera Type: Flying
@@ -21218,7 +21223,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - U-turn
 
 Hawlucha (F) @ Electric Seed
-Level: 58
+Level: 42
 Ability: Unburden
 Nature: Jolly
 Tera Type: Flying
@@ -21233,7 +21238,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Roost
 
 Oricorio-Sensu (F) @ Covert Cloak
-Level: 58
+Level: 42
 Ability: Dancer
 Nature: Timid
 Tera Type: Ghost
@@ -21248,7 +21253,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Roost
 
 Altaria (F) @ Altarianite
-Level: 60
+Level: 44
 Ability: Natural Cure
 Nature: Modest
 Tera Type: Fairy
@@ -21262,6 +21267,7 @@ EVs: 248 HP / 8 Def / 252 SpA
 - Dragon Pulse
 - Roost
 
+
 === TRAINER_TATE_AND_LIZA_1 ===
 Name: Tate&Liza
 Class: Leader
@@ -21273,7 +21279,7 @@ Double Battle: Yes
 AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
 Indeedee-F @ Psychic Seed
-Level: 64
+Level: 50
 Ability: Psychic Surge
 Nature: Calm
 Tera Type: Fairy
@@ -21288,7 +21294,7 @@ EVs: 252 HP / 0 Atk / 252 Def / 4 SpD
 - Protect
 
 Indeedee-M @ Safety Goggles
-Level: 64
+Level: 50
 Ability: Psychic Surge
 Nature: Bold
 Tera Type: Psychic
@@ -21303,7 +21309,7 @@ EVs: 252 HP / 252 Def / 4 SpD
 - Protect
 
 Weavile @ Life Orb
-Level: 65
+Level: 51
 Ability: Pressure
 Nature: Jolly
 Tera Type: Psychic
@@ -21318,7 +21324,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Taunt
 
 Sneasler @ Focus Sash
-Level: 65
+Level: 51
 Ability: Unburden
 Nature: Adamant
 Tera Type: Psychic
@@ -21333,7 +21339,7 @@ EVs: 0 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 252 Spe
 - Psychic Fangs
 
 Gardevoir (F) @ Gardevoirite
-Level: 66
+Level: 52
 Ability: Trace
 Nature: Modest
 Tera Type: Fairy
@@ -21348,7 +21354,7 @@ EVs: 252 SpA / 4 SpD / 252 Spe
 - Protect
 
 Gallade (M) @ Galladite
-Level: 66
+Level: 52
 Ability: Steadfast
 Nature: Adamant
 Tera Type: Psychic
@@ -21362,6 +21368,7 @@ EVs: 252 Atk / 4 Def / 252 Spe
 - Knock Off
 - Protect
 
+
 === TRAINER_JUAN_1 ===
 Name: JUAN
 Class: Leader
@@ -21373,7 +21380,7 @@ Double Battle: Yes
 AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
 Politoed @ Damp Rock
-Level: 78
+Level: 58
 Ability: Drizzle
 Nature: Calm
 Tera Type: Water
@@ -21388,7 +21395,7 @@ EVs: 252 HP / 252 Def / 4 SpA
 - Protect
 
 Ludicolo @ Life Orb
-Level: 78
+Level: 58
 Ability: Swift Swim
 Nature: Modest
 Tera Type: Grass
@@ -21403,7 +21410,7 @@ EVs: 4 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 252 Spe
 - Fake Out
 
 Pelipper @ Focus Sash
-Level: 79
+Level: 59
 Ability: Drizzle
 Nature: Timid
 Tera Type: Flying
@@ -21418,7 +21425,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Wide Guard
 
 Kingdra @ Scope Lens
-Level: 80
+Level: 60
 Ability: Swift Swim
 Nature: Modest
 Tera Type: Dragon
@@ -21433,7 +21440,7 @@ EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
 - Protect
 
 Swampert @ Swampertite
-Level: 80
+Level: 60
 Ability: Swift Swim
 Nature: Adamant
 Tera Type: Ground
@@ -21448,7 +21455,7 @@ EVs: 252 HP / 252 Atk / 4 SpD
 - Protect
 
 Barraskewda @ Mystic Water
-Level: 79
+Level: 59
 Ability: Swift Swim
 Nature: Jolly
 Tera Type: Water
