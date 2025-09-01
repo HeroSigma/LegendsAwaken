@@ -32,7 +32,7 @@ TimelessWood_EventScript_RedEncounter::
     msgbox TimelessWood_Text_RedLine2, MSGBOX_DEFAULT
     applymovement LOCALID_TIMELESS_RED, TimelessWood_Movement_RedRight6
     waitmovement 0
-    setobjectxy LOCALID_TIMELESS_RED, 60, 60
+    removeobject LOCALID_TIMELESS_RED
     setflag FLAG_UNUSED_0x027
     applymovement LOCALID_CAMERA, TimelessWood_Movement_CameraPanToPlayer
     waitmovement 0
