@@ -76,14 +76,14 @@
 #define PYRAMID_BAG_ITEMS_COUNT 10
 #define ROAMER_COUNT 16 // Number of maximum concurrent active roamers
 
-// Bag constants
-#define BAG_ITEMS_COUNT 30
-#define BAG_MEDICINE_COUNT 30
-#define BAG_BATTLE_COUNT 50
-#define BAG_KEYITEMS_COUNT 30
-#define BAG_POKEBALLS_COUNT 16
-#define BAG_TMHM_COUNT 64
-#define BAG_BERRIES_COUNT 46
+// Bag constants - Expanded with PC storage space redistributed
+#define BAG_ITEMS_COUNT 50          // Increased from 30 (+20 from PC)
+#define BAG_MEDICINE_COUNT 40       // Increased from 30 (+10 from PC) 
+#define BAG_BATTLE_COUNT 60         // Increased from 50 (+10 from PC)
+#define BAG_KEYITEMS_COUNT 30       // Unchanged (sufficient)
+#define BAG_POKEBALLS_COUNT 26      // Increased from 16 (+10 from PC)
+#define BAG_TMHM_COUNT 64           // Unchanged (sufficient)
+#define BAG_BERRIES_COUNT 46        // Unchanged (sufficient)
 
 // Number of facilities for Ranking Hall.
 // 7 facilities for single mode + tower double mode + tower multi mode.

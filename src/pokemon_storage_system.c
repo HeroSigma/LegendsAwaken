@@ -1978,7 +1978,7 @@ void EnterPokeStorage(u8 boxOption)
 {
     ResetTasks();
     sCurrentBoxOption = boxOption;
-    sStorage = Alloc(sizeof(*sStorage));
+    sStorage = AllocZeroed(sizeof(*sStorage));
     if (sStorage == NULL)
     {
         SetMainCallback2(CB2_ExitPokeStorage);
@@ -1998,7 +1998,7 @@ void EnterPokeStorage(u8 boxOption)
 static void CB2_ReturnToPokeStorage(void)
 {
     ResetTasks();
-    sStorage = Alloc(sizeof(*sStorage));
+    sStorage = AllocZeroed(sizeof(*sStorage));
     if (sStorage == NULL)
     {
         SetMainCallback2(CB2_ExitPokeStorage);
@@ -8173,7 +8173,7 @@ EWRAM_DATA static struct
 
 static bool8 MultiMove_Init(void)
 {
-    sMultiMove = Alloc(sizeof(*sMultiMove));
+    sMultiMove = AllocZeroed(sizeof(*sMultiMove));
     if (sMultiMove != NULL)
     {
         sStorage->multiMoveWindowId = AddWindow8Bit(&sWindowTemplate_MultiMove);
@@ -8181,6 +8181,12 @@ static bool8 MultiMove_Init(void)
         {
             FillWindowPixelBuffer(sStorage->multiMoveWindowId, PIXEL_FILL(0));
             return TRUE;
+        }
+        else
+        {
+            // Window creation failed, clean up
+            Free(sMultiMove);
+            sMultiMove = NULL;
         }
     }
 
@@ -8190,18 +8196,27 @@ static bool8 MultiMove_Init(void)
 static void MultiMove_Free(void)
 {
     if (sMultiMove != NULL)
+    {
         Free(sMultiMove);
+        sMultiMove = NULL;
+    }
 }
 
 static void MultiMove_SetFunction(u8 id)
 {
-    sMultiMove->funcId = id;
-    sMultiMove->state = 0;
+    if (sMultiMove != NULL)
+    {
+        sMultiMove->funcId = id;
+        sMultiMove->state = 0;
+    }
 }
 
 // Returns TRUE if the called function has more to do, FALSE otherwise
 static bool8 MultiMove_RunFunction(void)
 {
+    if (sMultiMove == NULL)
+        return FALSE;
+        
     switch (sMultiMove->funcId)
     {
     case MULTIMOVE_START:

@@ -99,7 +99,7 @@ struct ItemStorageMenu
 
 static void InitPlayerPCMenu(u8);
 static void PlayerPCProcessMenuInput(u8);
-static void InitItemStorageMenu(u8, u8);
+// static void InitItemStorageMenu(u8, u8);  // REMOVED - Storage moved to bag
 
 static u8 GetMailboxMailCount(void);
 static void Mailbox_CompactMailList(void);
@@ -110,7 +110,7 @@ static void Mailbox_ReturnToPlayerPC(u8);
 static void Mailbox_PrintMailOptions(u8);
 static void Mailbox_MailOptionsProcessInput(u8);
 
-static void PlayerPC_ItemStorage(u8);
+// static void PlayerPC_ItemStorage(u8);  // REMOVED - Storage moved to bag
 static void PlayerPC_Mailbox(u8);
 static void PlayerPC_Decoration(u8);
 static void PlayerPC_TurnOff(u8);
@@ -133,27 +133,28 @@ static void Mailbox_ReshowAfterMail(void);
 static void Mailbox_HandleReturnToProcessInput(u8);
 static void Mailbox_UpdateMailListAfterDeposit(void);
 
-static void ItemStorage_Withdraw(u8);
+// REMOVED: PC Item Storage function declarations - Storage moved to bag
+// static void ItemStorage_Withdraw(u8);
 static void ItemStorage_Deposit(u8);
-static void ItemStorage_Toss(u8);
+// static void ItemStorage_Toss(u8);
 static void ItemStorage_Exit(u8);
 static void ItemStorage_TossItemYes(u8);
 static void ItemStorage_TossItemNo(u8);
 
-static void ItemStorageMenuPrint(const u8 *);
-static void ItemStorageMenuProcessInput(u8);
+// static void ItemStorageMenuPrint(const u8 *);  // REMOVED - Storage moved to bag
+// static void ItemStorageMenuProcessInput(u8);  // REMOVED - Storage moved to bag
 static void SetPlayerPCListCount(u8);
-static void ItemStorage_HandleReturnToProcessInput(u8);
+// static void ItemStorage_HandleReturnToProcessInput(u8);  // REMOVED - Storage moved to bag
 
 static void ItemStorage_Enter(u8, bool8);
 static void ItemStorage_CreateListMenu(u8);
 static void ItemStorage_ProcessInput(u8);
 static void Task_ItemStorage_Deposit(u8);
-static void ItemStorage_ReshowAfterBagMenu(void);
+// static void ItemStorage_ReshowAfterBagMenu(void);  // REMOVED - Storage moved to bag
 static void ItemStorage_DoItemWithdraw(u8);
 static void ItemStorage_DoItemToss(u8);
 static void ItemStorage_HandleQuantityRolling(u8);
-static void ItemStorage_ExitItemList(u8);
+// static void ItemStorage_ExitItemList(u8);  // REMOVED - Storage moved to bag
 static void ItemStorage_StartItemSwap(u8);
 static void ItemStorage_DoItemAction(u8);
 static void ItemStorage_FinishItemSwap(u8, bool8);
@@ -201,7 +202,7 @@ static const u8 *const sItemStorage_OptionDescriptions[] =
 
 static const struct MenuAction sPlayerPCMenuActions[] =
 {
-    [MENU_ITEMSTORAGE] = { COMPOUND_STRING("ITEM STORAGE"), {PlayerPC_ItemStorage} },
+    // [MENU_ITEMSTORAGE] = { COMPOUND_STRING("ITEM STORAGE"), {PlayerPC_ItemStorage} }, // REMOVED - Storage moved to bag
     [MENU_MAILBOX]     = { sText_Mailbox,                   {PlayerPC_Mailbox} },
     [MENU_DECORATION]  = { COMPOUND_STRING("DECORATION"),   {PlayerPC_Decoration} },
     [MENU_TURNOFF]     = { COMPOUND_STRING("TURN OFF"),     {PlayerPC_TurnOff} }
@@ -209,7 +210,7 @@ static const struct MenuAction sPlayerPCMenuActions[] =
 
 static const u8 sBedroomPC_OptionOrder[] =
 {
-    MENU_ITEMSTORAGE,
+    // MENU_ITEMSTORAGE,  // REMOVED - Storage moved to bag
     MENU_MAILBOX,
     MENU_DECORATION,
     MENU_TURNOFF
@@ -218,12 +219,14 @@ static const u8 sBedroomPC_OptionOrder[] =
 
 static const u8 sPlayerPC_OptionOrder[] =
 {
-    MENU_ITEMSTORAGE,
+    // MENU_ITEMSTORAGE,  // REMOVED - Storage moved to bag
     MENU_MAILBOX,
     MENU_TURNOFF
 };
 #define NUM_PLAYER_PC_OPTIONS ARRAY_COUNT(sPlayerPC_OptionOrder)
 
+// REMOVED: Item storage menu actions - PC storage eliminated
+/*
 static const struct MenuAction sItemStorage_MenuActions[] =
 {
     [MENU_WITHDRAW] = { sText_WithdrawItem, {ItemStorage_Withdraw} },
@@ -231,6 +234,7 @@ static const struct MenuAction sItemStorage_MenuActions[] =
     [MENU_TOSS]     = { sText_TossItem,     {ItemStorage_Toss} },
     [MENU_EXIT]     = { gText_Cancel,       {ItemStorage_Exit} }
 };
+*/
 
 static const u16 sNewGamePCItems[][2] =
 {
@@ -316,7 +320,7 @@ static const struct WindowTemplate sWindowTemplates_ItemStorage[ITEMPC_WIN_COUNT
         .width = 13,
         .height = 18,
         .paletteNum = 15,
-        .baseBlock = 0x0001
+        .baseBlock = 0x0200
     },
     [ITEMPC_WIN_MESSAGE] = {
         .bg = 0,
@@ -325,7 +329,7 @@ static const struct WindowTemplate sWindowTemplates_ItemStorage[ITEMPC_WIN_COUNT
         .width = 13,
         .height = 6,
         .paletteNum = 15,
-        .baseBlock = 0x00EB
+        .baseBlock = 0x02EA
     },
     [ITEMPC_WIN_ICON] = {
         .bg = 0,
@@ -334,7 +338,7 @@ static const struct WindowTemplate sWindowTemplates_ItemStorage[ITEMPC_WIN_COUNT
         .width = 3,
         .height = 3,
         .paletteNum = 15,
-        .baseBlock = 0x0153
+        .baseBlock = 0x0352
     },
     [ITEMPC_WIN_TITLE] = {
         .bg = 0,
@@ -343,7 +347,7 @@ static const struct WindowTemplate sWindowTemplates_ItemStorage[ITEMPC_WIN_COUNT
         .width = 13,
         .height = 2,
         .paletteNum = 15,
-        .baseBlock = 0x0139
+        .baseBlock = 0x0338
     },
     [ITEMPC_WIN_QUANTITY] = {
         .bg = 0,
@@ -352,7 +356,7 @@ static const struct WindowTemplate sWindowTemplates_ItemStorage[ITEMPC_WIN_COUNT
         .width = 6,
         .height = 2,
         .paletteNum = 15,
-        .baseBlock = 0x015C
+        .baseBlock = 0x035B
     },
     [ITEMPC_WIN_YESNO] = {
         .bg = 0,
@@ -361,7 +365,7 @@ static const struct WindowTemplate sWindowTemplates_ItemStorage[ITEMPC_WIN_COUNT
         .width = 5,
         .height = 4,
         .paletteNum = 15,
-        .baseBlock = 0x0168
+        .baseBlock = 0x0367
     }
 };
 
@@ -369,17 +373,11 @@ static const u8 sSwapArrowTextColors[] = {TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRA
 
 void NewGameInitPCItems(void)
 {
-    u8 i = 0;
+    // PC Item Storage has been removed - extra storage space moved to bag
+    // Just clear the PC items array for compatibility
     CpuFastFill(0, gSaveBlock1Ptr->pcItems, sizeof(gSaveBlock1Ptr->pcItems));
-
-    while (TRUE)
-    {
-        if (sNewGamePCItems[i][0] == ITEM_NONE || sNewGamePCItems[i][1] == 0)
-            break;
-        if (AddPCItem(sNewGamePCItems[i][0], sNewGamePCItems[i][1]) != TRUE)
-            break;
-        i++;
-    }
+    
+    // No longer initialize PC with starting items - all items go to bag instead
 }
 
 void BedroomPC(void)
@@ -460,11 +458,14 @@ void ReshowPlayerPC(u8 var)
     DisplayItemMessageOnField(var, gText_WhatWouldYouLike, InitPlayerPCMenu);
 }
 
+// REMOVED: PlayerPC_ItemStorage function - Storage moved to expanded bag
+/*
 static void PlayerPC_ItemStorage(u8 taskId)
 {
     InitItemStorageMenu(taskId, MENU_WITHDRAW);
     gTasks[taskId].func = ItemStorageMenuProcessInput;
 }
+*/
 
 static void PlayerPC_Mailbox(u8 taskId)
 {
@@ -517,6 +518,8 @@ static void PlayerPC_TurnOff(u8 taskId)
     DestroyTask(taskId);
 }
 
+// REMOVED: InitItemStorageMenu function - PC storage eliminated
+/*
 static void InitItemStorageMenu(u8 taskId, u8 var)
 {
     s16 *data;
@@ -532,6 +535,7 @@ static void InitItemStorageMenu(u8 taskId, u8 var)
     ScheduleBgCopyTilemapToVram(0);
     ItemStorageMenuPrint(sItemStorage_OptionDescriptions[var]);
 }
+*/
 
 static void ItemStorageMenuPrint(const u8 *textPtr)
 {
@@ -539,6 +543,8 @@ static void ItemStorageMenuPrint(const u8 *textPtr)
     AddTextPrinterParameterized(0, FONT_NORMAL, textPtr, 0, 1, 0, 0);
 }
 
+// REMOVED: ItemStorageMenuProcessInput function - PC storage eliminated  
+/*
 static void ItemStorageMenuProcessInput(u8 taskId)
 {
     s8 oldPos, newPos;
@@ -563,6 +569,7 @@ static void ItemStorageMenuProcessInput(u8 taskId)
         break;
     }
 }
+*/
 
 static void ItemStorage_Deposit(u8 taskId)
 {
@@ -582,10 +589,12 @@ static void Task_ItemStorage_Deposit(u8 taskId)
 
 void CB2_PlayerPCExitBagMenu(void)
 {
-    gFieldCallback = ItemStorage_ReshowAfterBagMenu;
+    // MODIFIED: Since PC item storage was removed, just return to field
     SetMainCallback2(CB2_ReturnToField);
 }
 
+// REMOVED: ItemStorage_ReshowAfterBagMenu function - PC storage eliminated
+/*
 static void ItemStorage_ReshowAfterBagMenu(void)
 {
     LoadMessageBoxAndBorderGfx();
@@ -593,13 +602,19 @@ static void ItemStorage_ReshowAfterBagMenu(void)
     InitItemStorageMenu(CreateTask(ItemStorage_HandleReturnToProcessInput, 0), 1);
     FadeInFromBlack();
 }
+*/
 
+// REMOVED: ItemStorage_HandleReturnToProcessInput function - PC storage eliminated
+/*
 static void ItemStorage_HandleReturnToProcessInput(u8 taskId)
 {
     if (IsWeatherNotFadingIn() == TRUE)
         gTasks[taskId].func = ItemStorageMenuProcessInput;
 }
+*/
 
+// REMOVED: ItemStorage_Withdraw function - PC storage eliminated, capacity moved to bag
+/*
 static void ItemStorage_Withdraw(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -617,7 +632,10 @@ static void ItemStorage_Withdraw(u8 taskId)
     }
 
 }
+*/
 
+// REMOVED: ItemStorage_Toss function - PC storage eliminated, capacity moved to bag
+/*
 static void ItemStorage_Toss(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -634,6 +652,7 @@ static void ItemStorage_Toss(u8 taskId)
         DisplayItemMessageOnField(taskId, gText_NoItems, PlayerPC_ItemStorage);
     }
 }
+*/
 
 static void ItemStorage_Enter(u8 taskId, bool8 toss)
 {
@@ -956,6 +975,8 @@ static void Mailbox_Cancel(u8 taskId)
 static void ItemStorage_Init(void)
 {
     sItemStorageMenu = AllocZeroed(sizeof(*sItemStorageMenu));
+    if (sItemStorageMenu == NULL)
+        return;
     memset(sItemStorageMenu->windowIds, WINDOW_NONE, ITEMPC_WIN_COUNT);
     sItemStorageMenu->toSwapPos = NOT_SWAPPING;
     sItemStorageMenu->spriteId = SPRITE_NONE;
@@ -964,14 +985,22 @@ static void ItemStorage_Init(void)
 static void ItemStorage_Free(void)
 {
     u32 i;
+    if (sItemStorageMenu == NULL)
+        return;
     for (i = 0; i < ITEMPC_WIN_COUNT; i++)
         ItemStorage_RemoveWindow(i);
     Free(sItemStorageMenu);
+    sItemStorageMenu = NULL;
 }
 
 static u8 ItemStorage_AddWindow(u8 i)
 {
-    u8 *windowIdLoc = &sItemStorageMenu->windowIds[i];
+    u8 *windowIdLoc;
+    
+    if (sItemStorageMenu == NULL)
+        return WINDOW_NONE;
+        
+    windowIdLoc = &sItemStorageMenu->windowIds[i];
     if (*windowIdLoc == WINDOW_NONE)
     {
         *windowIdLoc = AddWindow(&sWindowTemplates_ItemStorage[i]);
@@ -983,7 +1012,12 @@ static u8 ItemStorage_AddWindow(u8 i)
 
 static void ItemStorage_RemoveWindow(u8 i)
 {
-    u8 *windowIdLoc = &sItemStorageMenu->windowIds[i];
+    u8 *windowIdLoc;
+    
+    if (sItemStorageMenu == NULL)
+        return;
+        
+    windowIdLoc = &sItemStorageMenu->windowIds[i];
     if (*windowIdLoc != WINDOW_NONE)
     {
         ClearStdWindowAndFrameToTransparent(*windowIdLoc, FALSE);
@@ -997,6 +1031,10 @@ static void ItemStorage_RemoveWindow(u8 i)
 void ItemStorage_RefreshListMenu(void)
 {
     u16 i;
+
+    // Safety check - if ItemStorage_Init failed, don't proceed
+    if (sItemStorageMenu == NULL)
+        return;
 
     // Copy item names for all entries but the last (which is Cancel)
     for(i = 0; i < gPlayerPCItemPageInfo.count - 1; i++)
@@ -1154,6 +1192,14 @@ static void ItemStorage_CreateListMenu(u8 taskId)
     u32 i, x;
     const u8 *text;
 
+    // Safety check - if ItemStorage_Init failed, don't proceed
+    if (sItemStorageMenu == NULL)
+    {
+        // Return to previous screen safely
+        ItemStorage_Exit(taskId);
+        return;
+    }
+
     data = gTasks[taskId].data;
     for (i = 0; i <= ITEMPC_WIN_LIST_END; i++)
         ItemStorage_AddWindow(i);
@@ -1245,7 +1291,8 @@ static void ItemStorage_ProcessInput(u8 taskId)
             break;
         case LIST_CANCEL:
             PlaySE(SE_SELECT);
-            ItemStorage_ExitItemList(taskId);
+            // ItemStorage_ExitItemList(taskId);  // REMOVED - PC storage eliminated
+            PlayerPC_TurnOff(taskId);  // Return to main PC instead
             break;
         default:
             PlaySE(SE_SELECT);
@@ -1255,6 +1302,8 @@ static void ItemStorage_ProcessInput(u8 taskId)
     }
 }
 
+// REMOVED: ItemStorage_ReturnToMenuSelect function - PC storage eliminated
+/*
 static void ItemStorage_ReturnToMenuSelect(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -1270,7 +1319,10 @@ static void ItemStorage_ReturnToMenuSelect(u8 taskId)
         gTasks[taskId].func = ItemStorageMenuProcessInput;
     }
 }
+*/
 
+// REMOVED: ItemStorage_ExitItemList function - PC storage eliminated
+/*
 static void ItemStorage_ExitItemList(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -1281,6 +1333,7 @@ static void ItemStorage_ExitItemList(u8 taskId)
     ItemStorage_Free();
     gTasks[taskId].func = ItemStorage_ReturnToMenuSelect;
 }
+*/
 
 static void ItemStorage_StartItemSwap(u8 taskId)
 {
