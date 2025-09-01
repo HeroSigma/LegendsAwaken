@@ -366,4 +366,8 @@
 #define B_POOL_RULE_ITEM_CLAUSE             FALSE    // Only allow each item to be picked once
 #define B_POOL_RULES_USE_ITEM_EXCLUSIONS    FALSE    // Exclude items listed in poolItemClauseExclusions
 
+// Global Preset Team Settings
+#define B_GLOBAL_PRESET_TEAMS               TRUE     // Enable competitive preset team builder
+#define B_COMPETITIVE_BUILDER               TRUE     // Enable competitive builder features
+
 #endif // GUARD_CONFIG_BATTLE_H

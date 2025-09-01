@@ -28,6 +28,7 @@
 #include "field_weather.h"
 #include "follower_npc.h"
 #include "graphics.h"
+#include "global_preset_party.h"
 #include "gpu_regs.h"
 #include "international_string_util.h"
 #include "item.h"
@@ -1904,7 +1905,24 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
         }
 
         u32 monIndices[monsCount];
+
+#if B_GLOBAL_PRESET_TEAMS
+        // Force preset generator for every trainer
+        // Create temporary preset party
+        static struct TrainerMon sPresetParty[6];
+        GeneratePresetTeam(trainer->trainerClass, sPresetParty, monsCount);
+        
+        // Copy preset party to trainer's party (temporarily modify the const pointer)
+        struct Trainer *mutableTrainer = (struct Trainer *)trainer;
+        mutableTrainer->party = sPresetParty;
+        
+        // Fill monIndices with sequential values since we're using the party directly
+        for (i = 0; i < monsCount; i++) {
+            monIndices[i] = i;
+        }
+#else
         DoTrainerPartyPool(trainer, monIndices, monsCount, battleTypeFlags);
+#endif
 
         for (i = 0; i < monsCount; i++)
         {
