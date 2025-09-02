@@ -6,7 +6,10 @@
 #include "constants/moves.h"
 #include "constants/species.h"
 #include "constants/flags.h"
+#include "constants/vars.h"
 #include "data.h"
+#include "event_data.h"
+#include "overworld.h"
 #include "global_preset_party.h"
 #include "species_presets.h"
 #include "class_constraints.h"
@@ -17,6 +20,23 @@
 #include "overworld.h"
 
 #if B_GLOBAL_PRESET_TEAMS
+
+// Team generation RNG - isolated from global RNG for deterministic results
+static u32 sPickSeed;
+
+static inline void SeedTeamRNG(u16 trainerId)
+{
+    // deterministic per attempt; changes only when VAR_REMATCH_NONCE increments
+    const u32 nonce = VarGet(VAR_REMATCH_NONCE);
+    sPickSeed = 0x6C078965u ^ ((u32)trainerId << 16) ^ (nonce * 0x9E3779B9u + 0x85EBCA6Bu);
+}
+
+static inline u16 RandPick16(void)
+{
+    // simple LCG; isolated from the global RNG
+    sPickSeed = 1664525u * sPickSeed + 1013904223u;
+    return (u16)(sPickSeed >> 16);
+}
 
 #define ROLEBIT(r) (1u << (r))
 #define TAGBIT(t)  (1u << (t))
@@ -83,12 +103,34 @@ static const u16 sSinnohBadgeFlags[8] = {
     FLAG_BADGE05_GET, FLAG_BADGE06_GET, FLAG_BADGE07_GET, FLAG_BADGE08_GET,
 };
 
-// --- Cap tables per region (badge index 0..8). Tune to your balance.
-// These top‑out at your regional caps: Hoenn 65 / Johto 72 / Kanto 82 / Sinnoh 100.
-static const u8 sCapsHoenn[9] =  {12, 18, 22, 28, 34, 42, 55, 60, 65};
-static const u8 sCapsJohto[9] =  {20, 26, 32, 38, 44, 52, 60, 68, 72};
-static const u8 sCapsKanto[9] =  {54, 60, 66, 72, 76, 79, 81, 82, 82};
-static const u8 sCapsSinnoh[9] = {92, 94, 96, 97, 98, 99,100,100,100};
+// --- Cap tables per region (badge index 0..8). Updated with exact values.
+// Hoenn (pre-badge caps → 60; League soft cap 65)
+static const u8 sCapsHoenn[9] =  { 18, 22, 26, 32, 38, 44, 52, 60, 65 };
+
+// Johto (post-Hoenn, up to 72)
+// Falkner 66, Bugsy 67, Whitney 68, Morty 69, Chuck 70, Jasmine 71, Pryce 71, Clair 72
+static const u8 sCapsJohto[9] =  { 66, 67, 68, 69, 70, 71, 71, 72, 72 };
+
+// Kanto (post-Johto, up to 82)
+// Brock 73, Misty 74, Lt. Surge 75, Erika 76, Sabrina 78, Janine 79, Blaine 80, Blue 82
+static const u8 sCapsKanto[9] =  { 73, 74, 75, 76, 78, 79, 80, 82, 82 };
+
+// Sinnoh (post-Sevii, up to 100)
+// Roark 93, Gardenia 94, Maylene 95, Crasher Wake 96, Fantina 97, Byron 98, Candice 99, Volkner 100
+static const u8 sCapsSinnoh[9] = { 93, 94, 95, 96, 97, 98, 99, 100, 100 };
+
+// Sevii — not badge-based. Implement milestone caps: 86 → 89 → 92 before Sinnoh.
+// We'll use a simple 3-step progression keyed by story flags (defined below).
+static const u8 sCapsSeviiMilestones[4] = { 86, 89, 92, 92 }; // idx: 0,1,2,(3+)
+
+// Add helper to compute Sevii milestone index
+static u8 GetSeviiMilestoneIndex(void) {
+    // index 0 → first Sevii arc start; 1 → mid; 2 → complete; 3+ → stay at 92 until Sinnoh
+    u8 idx = 0;
+    if (FlagGet(FLAG_SEVII_MILESTONE1)) idx = 1;
+    if (FlagGet(FLAG_SEVII_MILESTONE2)) idx = 2;
+    return idx;
+}
 
 static u8 CountBadges(const u16 flags[8]) {
     u8 c=0; for (u8 i=0;i<8;i++) if (FlagGet(flags[i])) c++; return c;
@@ -101,6 +143,11 @@ static enum Region GetCurrentRegion(void) {
 }
 
 static u8 CapForRegion(enum Region r, u8 badges) {
+    // Handle Sevii separately - not badge-based
+    if (r == REGION_NONE) { // Using REGION_NONE as Sevii placeholder since no REGION_SEVII exists
+        return sCapsSeviiMilestones[GetSeviiMilestoneIndex()];
+    }
+    
     const u8 i = (badges > 8) ? 8 : badges; // 0..8
     switch (r) {
     case REGION_HOENN: return sCapsHoenn[i];
@@ -114,6 +161,12 @@ static u8 CapForRegion(enum Region r, u8 badges) {
 static u8 GetBattleLevelCap(u16 trainerId) {
     (void)trainerId;
     enum Region r = GetCurrentRegion();
+    
+    // Handle Sevii separately since it's milestone-based, not badge-based
+    if (r == REGION_NONE) { // Using REGION_NONE as Sevii placeholder
+        return sCapsSeviiMilestones[GetSeviiMilestoneIndex()];
+    }
+    
     u8 badges = 0;
     switch (r) {
     case REGION_HOENN: badges = CountBadges(sHoennBadgeFlags); break;
@@ -129,6 +182,34 @@ static u8 GetBattleLevelCap(u16 trainerId) {
 static bool8 TrainerForcesDoubles(u16 trainerId) {
     const struct Trainer *trainer = GetTrainerStructFromId(trainerId);
     return trainer->battleType == TRAINER_BATTLE_TYPE_DOUBLES;
+}
+
+// Item-clause enforcement with smart downgrades
+static u16 FallbackItem(u16 item) {
+    switch (item) {
+    case ITEM_LEFTOVERS:        return ITEM_ROCKY_HELMET;
+    case ITEM_HEAVY_DUTY_BOOTS: return ITEM_PROTECTIVE_PADS;
+    case ITEM_LIFE_ORB:         return ITEM_EXPERT_BELT;
+    case ITEM_CHOICE_BAND:      return ITEM_MUSCLE_BAND;
+    case ITEM_CHOICE_SPECS:     return ITEM_WISE_GLASSES;
+    case ITEM_CHOICE_SCARF:     return ITEM_WIDE_LENS;
+    case ITEM_BOOSTER_ENERGY:   return ITEM_EXPERT_BELT;
+    case ITEM_ASSAULT_VEST:     return ITEM_CHESTO_BERRY; // generic safe fallback
+    default:                    return ITEM_SITRUS_BERRY;
+    }
+}
+
+static void EnforceItemClauseDowngrade(struct TrainerMon *party, u8 count, const struct ClassConstraint *cc) {
+    if (!cc->itemClause) return;
+    for (u8 i=0;i<count;i++) {
+        for (u8 j=0;j<i;j++) {
+            if (party[i].heldItem != ITEM_NONE && party[i].heldItem == party[j].heldItem) {
+                party[i].heldItem = FallbackItem(party[i].heldItem);
+                // restart inner scan in case fallback duplicates again
+                j = 0xFF; // will wrap to 0 on next loop
+            }
+        }
+    }
 }
 
 static bool8 PassesClassConstraints(const struct PresetSet *p, const struct ClassConstraint *cc, u8 level) {
@@ -226,16 +307,44 @@ static bool8 ViolatesClauses(const struct PresetSet *p, const struct ClassConstr
     return FALSE;
 }
 
-static const struct PresetSet *PickForRole(u8 role, const struct PresetSet **pool, u16 poolCount, const struct ClassConstraint *cc, const struct TrainerMon *current, u8 currentCount) {
+static bool8 ViolatesClausesEx(const struct PresetSet *p, const struct ClassConstraint *cc, const struct TrainerMon *cur, u8 n, bool8 ignoreItems) {
+    if (cc->speciesClause) {
+        for (u8 i=0;i<n;i++) if (cur[i].species == p->species) return TRUE;
+    }
+    if (!ignoreItems && cc->itemClause) {
+        for (u8 i=0;i<n;i++) if (cur[i].heldItem == p->item && p->item != ITEM_SITRUS_BERRY && p->item != ITEM_ORAN_BERRY) return TRUE;
+    }
+    return FALSE;
+}
+
+static u16 CollectCandidates(u8 role, const struct PresetSet **pool, u16 poolCount, const struct ClassConstraint *cc, const struct TrainerMon *cur, u8 curCount, const struct PresetSet **out) {
+    u16 n=0;
     for (u16 i=0;i<poolCount;i++) {
         const struct PresetSet *p = pool[i];
-        if (!(p->roleMask & ROLEBIT(role))) 
-            continue;
-        if (ViolatesClauses(p, cc, current, currentCount)) 
-            continue;
-        return p;
+        if (!(p->roleMask & (1u<<role))) continue;
+        if (ViolatesClausesEx(p, cc, cur, curCount, FALSE)) continue;
+        out[n++] = p;
     }
-    return NULL;
+    return n;
+}
+
+static const struct PresetSet *PickAny(const struct PresetSet **pool, u16 poolCount, const struct ClassConstraint *cc, const struct TrainerMon *cur, u8 curCount, bool8 ignoreItems) {
+    // gather all that fit constraints (optionally ignoring item clause)
+    const struct PresetSet *cand[1024]; u16 n=0;
+    for (u16 i=0;i<poolCount;i++) {
+        const struct PresetSet *p = pool[i];
+        if (ViolatesClausesEx(p, cc, cur, curCount, ignoreItems)) continue;
+        cand[n++] = p;
+    }
+    if (!n) return NULL;
+    return cand[RandPick16() % n];
+}
+
+static const struct PresetSet *PickForRoleRandom(u8 role, const struct PresetSet **pool, u16 poolCount, const struct ClassConstraint *cc, const struct TrainerMon *current, u8 currentCount) {
+    const struct PresetSet *cand[1024];
+    u16 n = CollectCandidates(role, pool, poolCount, cc, current, currentCount, cand);
+    if (!n) return NULL;
+    return cand[RandPick16() % n];
 }
 
 bool8 UsePresetBuilderForTrainer(u8 trainerClass) {
@@ -246,6 +355,9 @@ bool8 UsePresetBuilderForTrainer(u8 trainerClass) {
 }
 
 void GeneratePresetTeam(u16 trainerClassOrId, struct TrainerMon *outParty, u8 outCount) {
+    // Seed the team RNG for deterministic but varied results
+    SeedTeamRNG(trainerClassOrId);
+    
     const u8 cls = trainerClassOrId; // Treat the parameter as trainer class for simplicity
     const struct ClassConstraint *cc = GetClassConstraint(cls);
     const struct ClassProfile *pf = GetClassProfile(cls);
@@ -253,7 +365,6 @@ void GeneratePresetTeam(u16 trainerClassOrId, struct TrainerMon *outParty, u8 ou
 
     // Handle doubles battles - if trainer forces doubles, treat teamSize = 4 and prefer doubles‑friendly presets
     bool8 forcesDoubles = TrainerForcesDoubles(trainerClassOrId);
-    u8 effectiveTeamSize = forcesDoubles ? 4 : cc->teamSize;
 
     const u16 N = gSpeciesPresetsCount; // filter global library
     const struct PresetSet *filtered[1024]; 
@@ -262,15 +373,22 @@ void GeneratePresetTeam(u16 trainerClassOrId, struct TrainerMon *outParty, u8 ou
         if (PassesClassConstraints(&gSpeciesPresets[i], cc, cap)) 
             filtered[f++] = &gSpeciesPresets[i];
 
-    const u8 need = (cc->doubles || forcesDoubles) ? min(outCount, 4) : min(outCount, effectiveTeamSize);
+    // Always fill to desired size: 6 (or 4 in doubles), ignore legacy partyCount
+    const u8 desired = (cc->doubles || forcesDoubles) ? 4 : cc->teamSize; // class decides size
+    const u8 need    = desired; // ignore outCount from trainers.party
+    
     u8 built=0; 
     for (; built<need; built++) {
         u8 role = pf->roles[built];
-        const struct PresetSet *pick = PickForRole(role, filtered, f, cc, outParty, built);
-        if (!pick) 
-            break;
+        const struct PresetSet *pick = PickForRoleRandom(role, filtered, f, cc, outParty, built);
+        if (!pick) pick = PickAny(filtered, f, cc, outParty, built, FALSE); // try any with clauses
+        if (!pick) pick = PickAny(filtered, f, cc, outParty, built, TRUE);  // last resort: ignore item clause
+        if (!pick) break; // truly nothing left
         BuildMonFromPreset(&outParty[built], pick, cap);
     }
+    
+    // Enforce item clause with smart downgrades
+    EnforceItemClauseDowngrade(outParty, built, cc);
 
     // Mechanics (Mega/Z/Dyna) per class
     const struct ClassMechanicRule *mr = (cls == TRAINER_CLASS_LEADER) ? &gClassMechanics[cls] : NULL;
