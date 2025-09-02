@@ -1219,6 +1219,37 @@ EVs: 88 HP / 252 Atk / 168 Spe
 - Ice Fang
 - Earthquake
 
+=== TRAINER_GRUNT_RUSTURF_TUNNEL ===
+Name: Grunt
+Class: Team Magma
+Pic: Magma Grunt M
+Gender: Male
+Music: Magma
+Double Battle: No
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
+
+Zubat (M) @ Focus Sash
+Level: 16
+Ability: Inner Focus
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Wing Attack
+- Bite
+- Supersonic
+- Confuse Ray
+
+Stunky (M) @ Lum Berry
+Level: 17
+Ability: Stench
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 HP / 252 Spe
+- Poison Jab
+- Bite
+- Smokescreen
+- Scratch
+
 === TRAINER_GRUNT_WEATHER_INST_1 ===
 Name: Grunt
 Class: Team Aqua
