@@ -510,7 +510,7 @@ static void DrawItemList(void)
     }
     
     // Calculate display parameters
-    displayCount = 10; // Show 10 items at once (12 lines available, leaving space for borders)
+    displayCount = 9; // Show 9 items at once with improved spacing (was 10)
     startIndex = sOnlineStoreData->scrollOffset;
     
     // Ensure we don't scroll past the end
@@ -524,18 +524,24 @@ static void DrawItemList(void)
     {
         itemId = categoryItems[startIndex + i];
         itemName = GetItemName(itemId);
-        y = (i * 12) + 4; // 12 pixels per line, 4 pixel top margin
+        y = (i * 14) + 6; // 14 pixels per line for better spacing, 6 pixel top margin
         
         // Highlight selected item
         if ((startIndex + i) == sOnlineStoreData->selectedItemIndex)
         {
-            // Draw selection background
-            FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 2, y - 2, 220, 12);
-            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 6, y, 0, 0, color, TEXT_SKIP_DRAW, itemName);
+            // Draw selection background with proper padding and centering (lowered by 2 pixels)
+            FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 1, y - 1, 218, 13);
+            // Add a subtle border effect
+            FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(15), 2, y, 216, 11);
+            FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 3, y + 1, 214, 9);
+            
+            // Draw text with white color for contrast on dark background
+            const u8 highlightColor[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY};
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, y, 0, 0, highlightColor, TEXT_SKIP_DRAW, itemName);
         }
         else
         {
-            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 4, y, 0, 0, color, TEXT_SKIP_DRAW, itemName);
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, y, 0, 0, color, TEXT_SKIP_DRAW, itemName);
         }
     }
     
@@ -543,13 +549,13 @@ static void DrawItemList(void)
     if (startIndex > 0)
     {
         // Up arrow indicator
-        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 210, 4, 0, 0, color, TEXT_SKIP_DRAW, (const u8*)"↑");
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 210, 6, 0, 0, color, TEXT_SKIP_DRAW, (const u8*)"↑");
     }
     
     if (startIndex + displayCount < itemCount)
     {
         // Down arrow indicator  
-        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 210, 108, 0, 0, color, TEXT_SKIP_DRAW, (const u8*)"↓");
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 210, 120, 0, 0, color, TEXT_SKIP_DRAW, (const u8*)"↓");
     }
     
     CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
@@ -588,8 +594,26 @@ static void HandleStoreInput(u8 taskId)
     }
     else if (JOY_NEW(A_BUTTON))
     {
-        PlaySE(SE_SELECT);
-        // Handle item selection here later
+        // Handle item purchase/add to cart
+        const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
+        u16 itemCount = GetStoreCategoryItemCount(sOnlineStoreData->currentCategory);
+        
+        if (categoryItems != NULL && itemCount > 0 && sOnlineStoreData->selectedItemIndex < itemCount)
+        {
+            u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
+            
+            if (AddItemToCart(selectedItemId, 1)) // Add 1 quantity
+            {
+                PlaySE(SE_SELECT);
+                // Set flag to refresh display on next frame instead of immediate refresh
+                sOnlineStoreData->needsRefresh = TRUE;
+            }
+            else
+            {
+                PlaySE(SE_FAILURE); // Cart full or other error
+                // Show error feedback - cart full message later
+            }
+        }
     }
     else if (JOY_NEW(DPAD_UP))
     {
@@ -607,9 +631,9 @@ static void HandleStoreInput(u8 taskId)
             {
                 sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex;
             }
-            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 10)
+            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 9)
             {
-                sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex - 9;
+                sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex - 8;
             }
             
             DrawItemList();
@@ -631,9 +655,9 @@ static void HandleStoreInput(u8 taskId)
             {
                 sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex;
             }
-            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 10)
+            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 9)
             {
-                sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex - 9;
+                sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex - 8;
             }
             
             DrawItemList();
