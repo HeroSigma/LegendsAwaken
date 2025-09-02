@@ -301,7 +301,7 @@ RusturfTunnel_EventScript_Grunt::
 	faceplayer
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
 	msgbox RusturfTunnel_Text_GruntIntro, MSGBOX_DEFAULT
-	trainerbattle_double TRAINER_GRUNT_RUSTURF_TUNNEL, TRAINER_GRUNT_GALACTIC_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat, RusturfTunnel_Text_GalacticGruntDefeat, RusturfTunnel_Text_BothGruntsDefeat
+	trainerbattle_no_intro TRAINER_GRUNT_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
 	msgbox RusturfTunnel_Text_GruntTakePackage, MSGBOX_DEFAULT
 	giveitem ITEM_DEVON_PARTS
 	closemessage
@@ -441,26 +441,20 @@ RusturfTunnel_Text_Peeko:
 
 RusturfTunnel_Text_GruntIntro:
 	.string "AQUA GRUNT: Quick! Take this package!\p"
-	.string "GALACTIC GRUNT: Wait, someone's here!\p"
+	.string "GALACTIC GRUNT: The handoff was\n"
+	.string "supposed to be secret!\p"
 	.string "AQUA GRUNT: Grah, keelhaul it all!\n"
-	.string "We've been spotted!\p"
-	.string "This collaboration was supposed to\n"
-	.string "be a secret!\p"
+	.string "We've been spotted by some kid!\p"
+	.string "Our teams' collaboration must remain\n"
+	.string "hidden! You didn't see anything!\p"
 	.string "Hey! You!\n"
-	.string "You didn't see anything!$"
+	.string "Beat it, or face my POKéMON!$"
 
 RusturfTunnel_Text_GruntDefeat:
 	.string "AQUA GRUNT: Urrrggh!\n"
-	.string "My career in crime comes to a dead end!$"
-
-RusturfTunnel_Text_GalacticGruntDefeat:
+	.string "My career in crime comes to a dead end!\p"
 	.string "GALACTIC GRUNT: This interference\n"
-	.string "was not anticipated!$"
-
-RusturfTunnel_Text_BothGruntsDefeat:
-	.string "AQUA GRUNT: The plan's ruined!\p"
-	.string "GALACTIC GRUNT: Our teams will not\n"
-	.string "be pleased with this failure.$"
+	.string "was not calculated... Retreating!$"
 
 RusturfTunnel_Text_GruntTakePackage:
 	.string "AQUA GRUNT: This is plain not right…\p"
@@ -468,8 +462,8 @@ RusturfTunnel_Text_GruntTakePackage:
 	.string "slick-and-easy job to pull.\p"
 	.string "All I had to do was steal some package\n"
 	.string "from DEVON and hand it over.\p"
-	.string "GALACTIC GRUNT: Our collaboration\n"
-	.string "ends here. This was a mistake.\p"
+	.string "GALACTIC GRUNT: Our alliance ends here.\n"
+	.string "This operation has been compromised.\p"
 	.string "AQUA GRUNT: Tch!\n"
 	.string "You want it back that badly, take it!$"
 
