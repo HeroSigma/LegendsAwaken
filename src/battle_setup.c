@@ -800,6 +800,9 @@ u8 GetTrainerBattleTransition(void)
         || trainerClass == TRAINER_CLASS_AQUA_ADMIN)
         return B_TRANSITION_AQUA;
 
+    if (trainerClass == TRAINER_CLASS_TEAM_GALACTIC)
+        return B_TRANSITION_MAGMA; // Use Magma transition for now
+
     switch (GetTrainerBattleType(trainerId))
     {
     case TRAINER_BATTLE_TYPE_SINGLES:

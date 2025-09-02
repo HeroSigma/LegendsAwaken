@@ -301,14 +301,16 @@ RusturfTunnel_EventScript_Grunt::
 	faceplayer
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
 	msgbox RusturfTunnel_Text_GruntIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GRUNT_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
+	trainerbattle_double TRAINER_GRUNT_RUSTURF_TUNNEL, TRAINER_GRUNT_GALACTIC_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat, RusturfTunnel_Text_GalacticGruntDefeat, RusturfTunnel_Text_BothGruntsDefeat
 	msgbox RusturfTunnel_Text_GruntTakePackage, MSGBOX_DEFAULT
 	giveitem ITEM_DEVON_PARTS
 	closemessage
 	applymovement LOCALID_PLAYER, RusturfTunnel_Movement_PushPlayerAsideForGrunt
 	applymovement LOCALID_RUSTURF_TUNNEL_GRUNT, RusturfTunnel_Movement_GruntEscape
+	applymovement LOCALID_RUSTURF_TUNNEL_GALACTIC_GRUNT, RusturfTunnel_Movement_GalacticGruntEscape
 	waitmovement 0
 	removeobject LOCALID_RUSTURF_TUNNEL_GRUNT
+	removeobject LOCALID_RUSTURF_TUNNEL_GALACTIC_GRUNT
 	delay 50
 	addobject LOCALID_RUSTURF_TUNNEL_BRINEY
 	applymovement LOCALID_RUSTURF_TUNNEL_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko1
@@ -413,6 +415,18 @@ RusturfTunnel_Movement_PeekoExit:
 	walk_left
 	step_end
 
+RusturfTunnel_Movement_GalacticGruntEscape:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
 RusturfTunnel_EventScript_Mike::
 	trainerbattle_single TRAINER_MIKE_2, RusturfTunnel_Text_MikeIntro, RusturfTunnel_Text_MikeDefeat
 	msgbox RusturfTunnel_Text_MikePostBattle, MSGBOX_AUTOCLOSE
@@ -426,25 +440,37 @@ RusturfTunnel_Text_Peeko:
 	.string "PEEKO: Pii pihyoh!$"
 
 RusturfTunnel_Text_GruntIntro:
-	.string "Grah, keelhaul it all!\p"
-	.string "That hostage POKéMON turned out to\n"
-	.string "be worthless!\p"
-	.string "And to think I made a getaway…\n"
-	.string "In this tunnel to nowhere!\p"
+	.string "AQUA GRUNT: Quick! Take this package!\p"
+	.string "GALACTIC GRUNT: Wait, someone's here!\p"
+	.string "AQUA GRUNT: Grah, keelhaul it all!\n"
+	.string "We've been spotted!\p"
+	.string "This collaboration was supposed to\n"
+	.string "be a secret!\p"
 	.string "Hey! You!\n"
-	.string "So you want to battle me?$"
+	.string "You didn't see anything!$"
 
 RusturfTunnel_Text_GruntDefeat:
-	.string "Urrrggh! My career in crime comes to\n"
-	.string "a dead end!$"
+	.string "AQUA GRUNT: Urrrggh!\n"
+	.string "My career in crime comes to a dead end!$"
+
+RusturfTunnel_Text_GalacticGruntDefeat:
+	.string "GALACTIC GRUNT: This interference\n"
+	.string "was not anticipated!$"
+
+RusturfTunnel_Text_BothGruntsDefeat:
+	.string "AQUA GRUNT: The plan's ruined!\p"
+	.string "GALACTIC GRUNT: Our teams will not\n"
+	.string "be pleased with this failure.$"
 
 RusturfTunnel_Text_GruntTakePackage:
-	.string "This is plain not right…\p"
+	.string "AQUA GRUNT: This is plain not right…\p"
 	.string "The BOSS told me this would be a\n"
 	.string "slick-and-easy job to pull.\p"
 	.string "All I had to do was steal some package\n"
-	.string "from DEVON.\p"
-	.string "Tch!\n"
+	.string "from DEVON and hand it over.\p"
+	.string "GALACTIC GRUNT: Our collaboration\n"
+	.string "ends here. This was a mistake.\p"
+	.string "AQUA GRUNT: Tch!\n"
 	.string "You want it back that badly, take it!$"
 
 RusturfTunnel_Text_PeekoGladToSeeYouSafe:

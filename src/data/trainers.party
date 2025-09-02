@@ -1221,10 +1221,10 @@ EVs: 88 HP / 252 Atk / 168 Spe
 
 === TRAINER_GRUNT_RUSTURF_TUNNEL ===
 Name: Grunt
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Aqua
+Pic: Aqua Grunt M
 Gender: Male
-Music: Magma
+Music: Aqua
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
 
@@ -1249,6 +1249,37 @@ EVs: 252 Atk / 4 HP / 252 Spe
 - Bite
 - Smokescreen
 - Scratch
+
+=== TRAINER_GRUNT_GALACTIC_RUSTURF_TUNNEL ===
+Name: Grunt
+Class: Team Galactic
+Pic: Galactic Grunt M
+Gender: Male
+Music: Galactic
+Double Battle: No
+AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
+
+Glameow (M) @ Silk Scarf
+Level: 16
+Ability: Limber
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 Def / 252 Spe
+- Fake Out
+- Scratch
+- Growl
+- Hypnosis
+
+Bronzor @ Leftovers
+Level: 17
+Ability: Levitate
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Confusion
+- Hypnosis
+- Imprison
+- Confuse Ray
 
 === TRAINER_GRUNT_WEATHER_INST_1 ===
 Name: Grunt
