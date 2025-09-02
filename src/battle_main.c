@@ -1910,17 +1910,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
         // Force preset generator for every trainer
         // Create temporary preset party
         static struct TrainerMon sPresetParty[6];
-        
-        // Use the actual trainer ID instead of trainer class
-        u16 trainerId = TRAINER_BATTLE_PARAM.opponentA;
-        GeneratePresetTeam(trainerId, sPresetParty, monsCount);
-        
-        // Update monsCount to reflect the actual team generated (always 6, or 4 for doubles)
-        if (battleTypeFlags & (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TWO_OPPONENTS)) {
-            monsCount = 4;
-        } else {
-            monsCount = 6;
-        }
+        GeneratePresetTeam(trainer->trainerClass, sPresetParty, monsCount);
         
         // Copy preset party to trainer's party (temporarily modify the const pointer)
         struct Trainer *mutableTrainer = (struct Trainer *)trainer;

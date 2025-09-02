@@ -1654,10 +1654,6 @@
 #define SPECIAL_FLAGS_END                       (SPECIAL_FLAGS_START + 0x7F)
 #define NUM_SPECIAL_FLAGS                       (SPECIAL_FLAGS_END - SPECIAL_FLAGS_START + 1)
 
-// Sevii milestone flags for level cap progression
-#define FLAG_SEVII_MILESTONE1                   (SPECIAL_FLAGS_START + 0x40) // reached mid-Sevii progression
-#define FLAG_SEVII_MILESTONE2                   (SPECIAL_FLAGS_START + 0x41) // completed Sevii arc
-
 // Additional flags for expanded content
 #define FLAG_STOPPED_SEAFOAM_B3F_CURRENT      0x6000
 #define FLAG_STOPPED_SEAFOAM_B4F_CURRENT      0x6001

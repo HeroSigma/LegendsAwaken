@@ -9,7 +9,6 @@
 #include "safari_zone.h"
 #include "script.h"
 #include "event_data.h"
-#include "constants/vars.h"
 #include "metatile_behavior.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
@@ -60,16 +59,6 @@ enum {
     TRANSITION_TYPE_FLASH,
     TRANSITION_TYPE_WATER,
 };
-
-#if B_GLOBAL_PRESET_TEAMS
-static void TryIncrementRematchNonceOnLoss(void)
-{
-    if ((gBattleTypeFlags & BATTLE_TYPE_TRAINER) && gBattleOutcome == B_OUTCOME_LOST) {
-        u16 v = VarGet(VAR_REMATCH_NONCE);
-        VarSet(VAR_REMATCH_NONCE, v + 1);
-    }
-}
-#endif
 
 // this file's functions
 static void DoBattlePikeWildBattle(void);
@@ -1307,10 +1296,6 @@ static void CB2_EndTrainerBattle(void)
 {
     HandleBattleVariantEndParty();
 
-#if B_GLOBAL_PRESET_TEAMS
-    TryIncrementRematchNonceOnLoss();
-#endif
-
     if (FollowerNPCIsBattlePartner())
     {
         RestorePartyAfterFollowerNPCBattle();
@@ -1350,10 +1335,6 @@ static void CB2_EndTrainerBattle(void)
 
 static void CB2_EndRematchBattle(void)
 {
-#if B_GLOBAL_PRESET_TEAMS
-    TryIncrementRematchNonceOnLoss();
-#endif
-
     if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SECRET_BASE)
     {
         DowngradeBadPoison();
