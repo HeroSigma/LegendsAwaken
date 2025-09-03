@@ -57,15 +57,8 @@
 
 // The buffer for the bag item list needs to be large enough to hold the maximum
 // number of item slots that could fit in a single pocket, + 1 for Cancel.
-// This constant picks the max of the existing pocket sizes.
-// By default, the largest pocket is BAG_TMHM_COUNT at 64.
-#define MAX_POCKET_ITEMS  (max(BAG_TMHM_COUNT,               \
-                            max(BAG_BERRIES_COUNT,           \
-                            max(BAG_ITEMS_COUNT,             \
-                            max(BAG_MEDICINE_COUNT,          \
-                            max(BAG_BATTLE_COUNT,            \
-                            max(BAG_KEYITEMS_COUNT,          \
-                                BAG_POKEBALLS_COUNT)))))) + 1)
+// The largest pocket is BAG_TMHM_COUNT at 64, so we use 65 (64 + 1 for Cancel).
+#define MAX_POCKET_ITEMS 65
 
 // Up to 8 item slots can be visible at a time
 #define MAX_ITEMS_SHOWN 8
@@ -115,7 +108,7 @@ struct ListBuffer1 {
 };
 
 struct ListBuffer2 {
-    u8 name[MAX_POCKET_ITEMS][max(ITEM_NAME_LENGTH, MOVE_NAME_LENGTH) + 15];
+    u8 name[MAX_POCKET_ITEMS][35]; // ITEM_NAME_LENGTH (20) + 15 = 35
 };
 
 struct TempWallyBag {
@@ -2756,6 +2749,11 @@ static void AddBagSortSubMenu(void)
         memcpy(&gBagMenu->contextMenuItemsBuffer, &sBagMenuSortBerriesTMsHMs, NELEMS(sBagMenuSortBerriesTMsHMs));
         gBagMenu->contextMenuNumItems = NELEMS(sBagMenuSortBerriesTMsHMs);
         break;
+    case POCKET_ITEMS:
+    case POCKET_MEDICINE:
+    case POCKET_BATTLE_ITEMS:
+    case POCKET_TRAINING_ITEMS:
+    case POCKET_FORM_CHANGING_ITEMS:
     default:
         gBagMenu->contextMenuItemsPtr = sBagMenuSortItems;
         memcpy(&gBagMenu->contextMenuItemsBuffer, &sBagMenuSortItems, NELEMS(sBagMenuSortItems));

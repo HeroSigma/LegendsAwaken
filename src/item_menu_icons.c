@@ -94,16 +94,30 @@ static const union AnimCmd sSpriteAnim_Bag_Berries[] =
     ANIMCMD_END
 };
 
+static const union AnimCmd sSpriteAnim_Bag_Training[] =
+{
+    ANIMCMD_FRAME(384, 4),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sSpriteAnim_Bag_FormChanging[] =
+{
+    ANIMCMD_FRAME(448, 4),
+    ANIMCMD_END
+};
+
 static const union AnimCmd *const sBagSpriteAnimTable[] =
 {
-    [POCKET_ITEMS]      = sSpriteAnim_Bag_Items,
-    [POCKET_MEDICINE]   = sSpriteAnim_Bag_Items,
-    [POCKET_BATTLE_ITEMS] = sSpriteAnim_Bag_Items,
-    [POCKET_POKE_BALLS] = sSpriteAnim_Bag_Pokeballs,
-    [POCKET_TM_HM]      = sSpriteAnim_Bag_TMsHMs,
-    [POCKET_BERRIES]    = sSpriteAnim_Bag_Berries,
-    [POCKET_KEY_ITEMS]  = sSpriteAnim_Bag_KeyItems,
-    [POCKET_DUMMY]       = sSpriteAnim_Bag_Closed,
+    [POCKET_ITEMS]              = sSpriteAnim_Bag_Items,
+    [POCKET_MEDICINE]           = sSpriteAnim_Bag_Items,
+    [POCKET_POKE_BALLS]         = sSpriteAnim_Bag_Pokeballs,
+    [POCKET_BATTLE_ITEMS]       = sSpriteAnim_Bag_Items,
+    [POCKET_TRAINING_ITEMS]     = sSpriteAnim_Bag_Training,
+    [POCKET_FORM_CHANGING_ITEMS] = sSpriteAnim_Bag_FormChanging,
+    [POCKET_TM_HM]              = sSpriteAnim_Bag_TMsHMs,
+    [POCKET_BERRIES]            = sSpriteAnim_Bag_Berries,
+    [POCKET_KEY_ITEMS]          = sSpriteAnim_Bag_KeyItems,
+    [POCKET_DUMMY]              = sSpriteAnim_Bag_Closed,
 };
 
 static const union AffineAnimCmd sSpriteAffineAnim_BagNormal[] =
