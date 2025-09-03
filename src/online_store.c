@@ -74,6 +74,14 @@ static const u8 sText_StoreCartEmpty[] = _("Your cart is empty!");
 static const u8 sText_StoreCartFull[] = _("Your cart is full!");
 static const u8 sText_StoreNotEnoughMoney[] = _("Not enough money!");
 static const u8 sText_StorePurchaseComplete[] = _("Thank you for your purchase!");
+static const u8 sText_StoreCartHeader[] = _("SHOPPING CART");
+static const u8 sText_StoreCartTotal[] = _("Cart Total: ¥{STR_VAR_1}");
+static const u8 sText_StoreCartInstructions[] = _("Up/Down: Navigate  A: Remove  B: Back  START: Checkout");
+static const u8 sText_StoreRemoveItem[] = _("Remove from cart?");
+static const u8 sText_StoreItemRemoved[] = _("Item removed from cart!");
+static const u8 sText_StoreCartItems[] = _("Items: {STR_VAR_1}");
+static const u8 sText_StoreCartItemFormat[] = _("x{STR_VAR_1} = ¥{STR_VAR_2}");
+static const u8 sText_StoreCartControls[] = _("A: Remove  B: Back  START: Checkout");
 
 // Item categories arrays
 static const u16 sStoreItemsCategory[] = 
@@ -674,6 +682,95 @@ static void DrawQuantitySelection(void)
     CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
 }
 
+void ShowCartContents(void)
+{
+    const u8 color[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
+    const u8 highlightColor[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY};
+    
+    FillWindowPixelBuffer(WIN_ITEM_LIST, PIXEL_FILL(0));
+    
+    if (sOnlineStoreData->cartSize == 0)
+    {
+        // Show empty cart message
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 40, 0, 0, color, TEXT_SKIP_DRAW, sText_StoreCartEmpty);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 8, 60, 0, 0, color, TEXT_SKIP_DRAW, sText_StoreCancel);
+    }
+    else
+    {
+        u32 cartTotal = 0;
+        u8 displayCount = 0;
+        u8 maxDisplayItems = 5;  // Show up to 5 items in cart view (reduced due to increased spacing)
+        u8 startIndex = 0;
+        
+        // Calculate scroll offset if needed
+        if (sOnlineStoreData->selectedItemIndex >= maxDisplayItems)
+        {
+            startIndex = sOnlineStoreData->selectedItemIndex - maxDisplayItems + 1;
+        }
+        
+        // Display cart items
+        for (u8 i = startIndex; i < sOnlineStoreData->cartSize && displayCount < maxDisplayItems; i++)
+        {
+            u16 itemId = sOnlineStoreData->cart[i].itemId;
+            u16 quantity = sOnlineStoreData->cart[i].quantity;
+            u32 itemPrice = GetStoreItemPrice(itemId);
+            u32 itemTotal = itemPrice * quantity;
+            cartTotal += itemTotal;
+            
+            const u8 *itemName = GetItemName(itemId);
+            u8 y = (displayCount * 24) + 8;  // Increased spacing from 16 to 24 pixels
+            
+            // Highlight selected item
+            if (i == sOnlineStoreData->selectedItemIndex)
+            {
+                // Item name (highlighted)
+                AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, y, 0, 0, highlightColor, TEXT_SKIP_DRAW, itemName);
+                
+                // Quantity and total (highlighted)
+                ConvertIntToDecimalStringN(gStringVar1, quantity, STR_CONV_MODE_LEFT_ALIGN, 3);
+                ConvertIntToDecimalStringN(gStringVar2, itemTotal, STR_CONV_MODE_LEFT_ALIGN, 8);
+                StringExpandPlaceholders(gStringVar3, sText_StoreCartItemFormat);
+                AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 16, y + 12, 0, 0, highlightColor, TEXT_SKIP_DRAW, gStringVar3);
+            }
+            else
+            {
+                // Item name (normal)
+                AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, y, 0, 0, color, TEXT_SKIP_DRAW, itemName);
+                
+                // Quantity and total (normal)
+                ConvertIntToDecimalStringN(gStringVar1, quantity, STR_CONV_MODE_LEFT_ALIGN, 3);
+                ConvertIntToDecimalStringN(gStringVar2, itemTotal, STR_CONV_MODE_LEFT_ALIGN, 8);
+                StringExpandPlaceholders(gStringVar3, sText_StoreCartItemFormat);
+                AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 16, y + 12, 0, 0, color, TEXT_SKIP_DRAW, gStringVar3);
+            }
+            
+            displayCount++;
+        }
+        
+        // Show cart total at bottom
+        ConvertIntToDecimalStringN(gStringVar1, cartTotal, STR_CONV_MODE_LEFT_ALIGN, 8);
+        StringExpandPlaceholders(gStringVar2, sText_StoreCartTotal);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 130, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
+        
+        // Show current money
+        ConvertIntToDecimalStringN(gStringVar1, GetMoney(&gSaveBlock1Ptr->money), STR_CONV_MODE_LEFT_ALIGN, 8);
+        StringExpandPlaceholders(gStringVar2, sText_StoreMoney);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 144, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
+        
+        // Show instructions
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 8, 158, 0, 0, color, TEXT_SKIP_DRAW, sText_StoreCartControls);
+        
+        // Show affordability
+        if (cartTotal > GetMoney(&gSaveBlock1Ptr->money))
+        {
+            const u8 errorColor[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_GRAY};
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 8, 172, 0, 0, errorColor, TEXT_SKIP_DRAW, sText_StoreNotEnoughMoney);
+        }
+    }
+    
+    CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
+}
+
 static void Task_OnlineStoreMain(u8 taskId)
 {
     if (!gPaletteFade.active)
@@ -863,6 +960,7 @@ static void HandleItemActionMenuInput(u8 taskId)
                 PlaySE(SE_SELECT);
                 sOnlineStoreData->state = STORE_STATE_CART_VIEW;
                 sOnlineStoreData->isViewingCart = TRUE;
+                sOnlineStoreData->selectedItemIndex = 0;  // Start at first cart item
                 sOnlineStoreData->needsRefresh = TRUE;
                 break;
                 
@@ -994,12 +1092,120 @@ static void HandleQuantitySelectInput(u8 taskId)
 // Handle cart view input
 static void HandleCartViewInput(u8 taskId)
 {
-    if (JOY_NEW(A_BUTTON) || JOY_NEW(B_BUTTON))
+    if (sOnlineStoreData->cartSize == 0)
+    {
+        // Empty cart - only allow exit
+        if (JOY_NEW(A_BUTTON) || JOY_NEW(B_BUTTON))
+        {
+            sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+            sOnlineStoreData->isViewingCart = FALSE;
+            sOnlineStoreData->needsRefresh = TRUE;
+            PlaySE(SE_EXIT);
+        }
+        return;
+    }
+    
+    // Navigate cart items
+    if (JOY_NEW(DPAD_UP))
+    {
+        if (sOnlineStoreData->selectedItemIndex > 0)
+        {
+            sOnlineStoreData->selectedItemIndex--;
+            sOnlineStoreData->needsRefresh = TRUE;
+            PlaySE(SE_SELECT);
+        }
+    }
+    else if (JOY_NEW(DPAD_DOWN))
+    {
+        if (sOnlineStoreData->selectedItemIndex < sOnlineStoreData->cartSize - 1)
+        {
+            sOnlineStoreData->selectedItemIndex++;
+            sOnlineStoreData->needsRefresh = TRUE;
+            PlaySE(SE_SELECT);
+        }
+    }
+    
+    // Remove item from cart
+    if (JOY_NEW(A_BUTTON))
+    {
+        if (sOnlineStoreData->selectedItemIndex < sOnlineStoreData->cartSize)
+        {
+            // Remove the selected item
+            u8 removeIndex = sOnlineStoreData->selectedItemIndex;
+            
+            // Shift remaining items down
+            for (u8 i = removeIndex; i < sOnlineStoreData->cartSize - 1; i++)
+            {
+                sOnlineStoreData->cart[i] = sOnlineStoreData->cart[i + 1];
+            }
+            
+            sOnlineStoreData->cartSize--;
+            
+            // Adjust selection if needed
+            if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->cartSize && sOnlineStoreData->cartSize > 0)
+            {
+                sOnlineStoreData->selectedItemIndex = sOnlineStoreData->cartSize - 1;
+            }
+            
+            sOnlineStoreData->needsRefresh = TRUE;
+            PlaySE(SE_SELECT);
+        }
+    }
+    
+    // Exit cart view
+    if (JOY_NEW(B_BUTTON))
     {
         sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
         sOnlineStoreData->isViewingCart = FALSE;
+        sOnlineStoreData->selectedItemIndex = 0;  // Reset selection
         sOnlineStoreData->needsRefresh = TRUE;
         PlaySE(SE_EXIT);
+    }
+    
+    // Checkout (START button)
+    if (JOY_NEW(START_BUTTON))
+    {
+        if (sOnlineStoreData->cartSize > 0)
+        {
+            // Calculate total cost
+            u32 totalCost = 0;
+            for (u8 i = 0; i < sOnlineStoreData->cartSize; i++)
+            {
+                u16 itemId = sOnlineStoreData->cart[i].itemId;
+                u16 quantity = sOnlineStoreData->cart[i].quantity;
+                totalCost += GetStoreItemPrice(itemId) * quantity;
+            }
+            
+            // Check if player can afford it
+            if (totalCost <= GetMoney(&gSaveBlock1Ptr->money))
+            {
+                // Process checkout
+                for (u8 i = 0; i < sOnlineStoreData->cartSize; i++)
+                {
+                    u16 itemId = sOnlineStoreData->cart[i].itemId;
+                    u16 quantity = sOnlineStoreData->cart[i].quantity;
+                    AddBagItem(itemId, quantity);
+                }
+                
+                // Deduct money
+                RemoveMoney(&gSaveBlock1Ptr->money, totalCost);
+                
+                // Clear cart
+                sOnlineStoreData->cartSize = 0;
+                
+                // Show success message and return to item list
+                sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+                sOnlineStoreData->isViewingCart = FALSE;
+                sOnlineStoreData->selectedItemIndex = 0;
+                sOnlineStoreData->needsRefresh = TRUE;
+                PlaySE(SE_SHOP);
+            }
+            else
+            {
+                // Not enough money
+                PlaySE(SE_FAILURE);
+            }
+        }
     }
 }
 
@@ -1047,15 +1253,6 @@ void DrawStoreInterface(void)
 {
     // Basic store interface drawing
     // This would need proper window and text rendering
-}
-
-void ShowCartContents(void)
-{
-    if (sOnlineStoreData != NULL)
-    {
-        sOnlineStoreData->isViewingCart = TRUE;
-        sOnlineStoreData->needsRefresh = TRUE;
-    }
 }
 
 bool8 AddItemToCart(u16 itemId, u16 quantity)
