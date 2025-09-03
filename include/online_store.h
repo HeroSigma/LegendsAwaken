@@ -45,6 +45,14 @@ enum
     STORE_ACTION_CANCEL
 };
 
+// Confirmation Types
+enum
+{
+    CONFIRM_TYPE_PURCHASE,
+    CONFIRM_TYPE_ADD_TO_CART,
+    CONFIRM_TYPE_CHECKOUT
+};
+
 struct StoreCartItem
 {
     u16 itemId;
@@ -62,6 +70,8 @@ struct OnlineStoreData
     u16 selectedQuantity;
     bool8 isViewingCart;
     bool8 needsRefresh;
+    u8 confirmationType;  // 0=purchase, 1=add_to_cart, 2=checkout
+    u8 confirmationChoice; // 0=YES, 1=NO
     struct StoreCartItem cart[MAX_CART_ITEMS];
 };
 

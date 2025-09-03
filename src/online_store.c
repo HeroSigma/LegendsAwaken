@@ -74,6 +74,8 @@ static const u8 sText_StoreCartEmpty[] = _("Your cart is empty!");
 static const u8 sText_StoreCartFull[] = _("Your cart is full!");
 static const u8 sText_StoreNotEnoughMoney[] = _("Not enough money!");
 static const u8 sText_StorePurchaseComplete[] = _("Thank you for your purchase!");
+static const u8 sText_StoreAddedToCart[] = _("Added to cart!");
+static const u8 sText_StoreCheckoutComplete[] = _("Checkout completed!");
 static const u8 sText_StoreCartHeader[] = _("SHOPPING CART");
 static const u8 sText_StoreCartTotal[] = _("Cart Total: ¥{STR_VAR_1}");
 static const u8 sText_StoreCartInstructions[] = _("Up/Down: Navigate  A: Remove  B: Back  START: Checkout");
@@ -82,6 +84,13 @@ static const u8 sText_StoreItemRemoved[] = _("Item removed from cart!");
 static const u8 sText_StoreCartItems[] = _("Items: {STR_VAR_1}");
 static const u8 sText_StoreCartItemFormat[] = _("x{STR_VAR_1} = ¥{STR_VAR_2}");
 static const u8 sText_StoreCartControls[] = _("A: Remove  B: Back  START: Checkout");
+static const u8 sText_StorePurchaseConfirm[] = _("Purchase {STR_VAR_1} {STR_VAR_2} for ¥{STR_VAR_3}?");
+static const u8 sText_StoreAddToCartConfirm[] = _("Add {STR_VAR_1} {STR_VAR_2} to cart?");
+static const u8 sText_StoreCheckoutConfirm[] = _("Purchase cart for ¥{STR_VAR_1}?");
+static const u8 sText_StoreConfirmYes[] = _("YES");
+static const u8 sText_StoreConfirmNo[] = _("NO");
+static const u8 sText_StoreItemAdded[] = _("Added to cart!");
+static const u8 sText_StoreConfirmInstructions[] = _("A: Confirm  B: Cancel");
 
 // Item categories arrays
 static const u16 sStoreItemsCategory[] = 
@@ -373,6 +382,110 @@ static void DrawCurrentCategory(void);
 static void DrawItemList(void);
 static void DrawItemActionMenu(void);
 static void DrawQuantitySelection(void);
+static void HandlePurchaseConfirmationInput(u8 taskId)
+{
+    if (JOY_NEW(DPAD_UP) || JOY_NEW(DPAD_DOWN))
+    {
+        sOnlineStoreData->confirmationChoice = !sOnlineStoreData->confirmationChoice;
+        sOnlineStoreData->needsRefresh = TRUE;
+        PlaySE(SE_SELECT);
+    }
+    else if (JOY_NEW(A_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+        
+        if (sOnlineStoreData->confirmationChoice == 0) // YES selected
+        {
+            // Execute the confirmed action
+            switch (sOnlineStoreData->confirmationType)
+            {
+                case CONFIRM_TYPE_PURCHASE:
+                    // Complete the purchase
+                    {
+                        const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
+                        u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
+                        u32 totalCost = GetStoreItemPrice(selectedItemId) * sOnlineStoreData->selectedQuantity;
+                        
+                        if (GetMoney(&gSaveBlock1Ptr->money) >= totalCost)
+                        {
+                            RemoveMoney(&gSaveBlock1Ptr->money, totalCost);
+                            AddBagItem(selectedItemId, sOnlineStoreData->selectedQuantity);
+                            PlaySE(SE_SHOP);
+                            // Show temporary message by setting a basic string in gStringVar4
+                            StringCopy(gStringVar4, sText_StorePurchaseComplete);
+                        }
+                        else
+                        {
+                            PlaySE(SE_FAILURE);
+                            StringCopy(gStringVar4, sText_StoreNotEnoughMoney);
+                        }
+                    }
+                    break;
+                case CONFIRM_TYPE_ADD_TO_CART:
+                    // Add to cart
+                    {
+                        const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
+                        u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
+                        if (AddItemToCart(selectedItemId, sOnlineStoreData->selectedQuantity))
+                        {
+                            PlaySE(SE_SHOP);
+                            StringCopy(gStringVar4, sText_StoreAddedToCart);
+                        }
+                        else
+                        {
+                            PlaySE(SE_FAILURE);
+                            StringCopy(gStringVar4, sText_StoreCartFull);
+                        }
+                    }
+                    break;
+                case CONFIRM_TYPE_CHECKOUT:
+                    // Process cart checkout
+                    {
+                        u32 totalCost = GetCartTotalCost();
+                        if (GetMoney(&gSaveBlock1Ptr->money) >= totalCost)
+                        {
+                            RemoveMoney(&gSaveBlock1Ptr->money, totalCost);
+                            // Add all cart items to bag
+                            for (int i = 0; i < sOnlineStoreData->cartSize; i++)
+                            {
+                                AddBagItem(sOnlineStoreData->cart[i].itemId, sOnlineStoreData->cart[i].quantity);
+                            }
+                            // Clear cart
+                            sOnlineStoreData->cartSize = 0;
+                            PlaySE(SE_SHOP);
+                            StringCopy(gStringVar4, sText_StoreCheckoutComplete);
+                        }
+                        else
+                        {
+                            PlaySE(SE_FAILURE);
+                            StringCopy(gStringVar4, sText_StoreNotEnoughMoney);
+                        }
+                    }
+                    break;
+            }
+            
+            // Return to quantity selection state
+            sOnlineStoreData->state = STORE_STATE_QUANTITY_SELECT;
+            sOnlineStoreData->needsRefresh = TRUE;
+        }
+        else // NO selected
+        {
+            // Cancel the action, return to quantity selection
+            sOnlineStoreData->state = STORE_STATE_QUANTITY_SELECT;
+            sOnlineStoreData->needsRefresh = TRUE;
+        }
+    }
+    else if (JOY_NEW(B_BUTTON))
+    {
+        PlaySE(SE_EXIT);
+        // Cancel the action, return to quantity selection
+        sOnlineStoreData->state = STORE_STATE_QUANTITY_SELECT;
+        sOnlineStoreData->needsRefresh = TRUE;
+    }
+}
+
+static void DrawPurchaseConfirmation(void);
+static void HandlePurchaseConfirmationInput(u8 taskId);
 
 // Window IDs storage - no longer needed, using direct indices
 // static u8 sStoreWindowIds[WIN_COUNT];
@@ -771,6 +884,86 @@ void ShowCartContents(void)
     CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
 }
 
+void DrawPurchaseConfirmation(void)
+{
+    const u8 color[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
+    const u8 highlightColor[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY};
+    
+    FillWindowPixelBuffer(WIN_ITEM_LIST, PIXEL_FILL(0));
+    
+    // Get current item info for confirmation message
+    const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
+    u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
+    const u8 *itemName = GetItemName(selectedItemId);
+    u32 itemPrice = GetStoreItemPrice(selectedItemId);
+    u16 quantity = sOnlineStoreData->selectedQuantity;
+    u32 totalCost;
+    
+    // Display confirmation message based on type
+    switch (sOnlineStoreData->confirmationType)
+    {
+        case CONFIRM_TYPE_PURCHASE:
+            totalCost = itemPrice * quantity;
+            ConvertIntToDecimalStringN(gStringVar1, quantity, STR_CONV_MODE_LEFT_ALIGN, 3);
+            StringCopy(gStringVar2, itemName);
+            ConvertIntToDecimalStringN(gStringVar3, totalCost, STR_CONV_MODE_LEFT_ALIGN, 8);
+            StringExpandPlaceholders(gStringVar4, sText_StorePurchaseConfirm);
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 20, 0, 0, color, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+            
+        case CONFIRM_TYPE_ADD_TO_CART:
+            ConvertIntToDecimalStringN(gStringVar1, quantity, STR_CONV_MODE_LEFT_ALIGN, 3);
+            StringCopy(gStringVar2, itemName);
+            StringExpandPlaceholders(gStringVar4, sText_StoreAddToCartConfirm);
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 20, 0, 0, color, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+            
+        case CONFIRM_TYPE_CHECKOUT:
+            // Calculate cart total
+            totalCost = 0;
+            for (u8 i = 0; i < sOnlineStoreData->cartSize; i++)
+            {
+                u16 cartItemId = sOnlineStoreData->cart[i].itemId;
+                u16 cartQuantity = sOnlineStoreData->cart[i].quantity;
+                totalCost += GetStoreItemPrice(cartItemId) * cartQuantity;
+            }
+            ConvertIntToDecimalStringN(gStringVar1, totalCost, STR_CONV_MODE_LEFT_ALIGN, 8);
+            StringExpandPlaceholders(gStringVar4, sText_StoreCheckoutConfirm);
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 20, 0, 0, color, TEXT_SKIP_DRAW, gStringVar4);
+            break;
+    }
+    
+    // Draw YES/NO options with background highlighting
+    u8 yesY = 50;
+    u8 noY = 70;
+    
+    if (sOnlineStoreData->confirmationChoice == 0) // YES selected
+    {
+        // Highlight YES with background
+        FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 15, yesY - 1, 50, 13);
+        FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(15), 16, yesY, 48, 11);
+        FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 17, yesY + 1, 46, 9);
+        
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 20, yesY, 0, 0, highlightColor, TEXT_SKIP_DRAW, sText_StoreConfirmYes);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 20, noY, 0, 0, color, TEXT_SKIP_DRAW, sText_StoreConfirmNo);
+    }
+    else // NO selected
+    {
+        // Highlight NO with background
+        FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 15, noY - 1, 50, 13);
+        FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(15), 16, noY, 48, 11);
+        FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 17, noY + 1, 46, 9);
+        
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 20, yesY, 0, 0, color, TEXT_SKIP_DRAW, sText_StoreConfirmYes);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 20, noY, 0, 0, highlightColor, TEXT_SKIP_DRAW, sText_StoreConfirmNo);
+    }
+    
+    // Show instructions
+    AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 8, 100, 0, 0, color, TEXT_SKIP_DRAW, sText_StoreConfirmInstructions);
+    
+    CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
+}
+
 static void Task_OnlineStoreMain(u8 taskId)
 {
     if (!gPaletteFade.active)
@@ -798,6 +991,10 @@ static void Task_OnlineStoreMain(u8 taskId)
             {
                 ShowCartContents();
             }
+            else if (sOnlineStoreData->state == STORE_STATE_PURCHASE_CONFIRM)
+            {
+                DrawPurchaseConfirmation();
+            }
             else
             {
                 DrawItemList();
@@ -824,6 +1021,9 @@ static void HandleStoreInput(u8 taskId)
             break;
         case STORE_STATE_CART_VIEW:
             HandleCartViewInput(taskId);
+            break;
+        case STORE_STATE_PURCHASE_CONFIRM:
+            HandlePurchaseConfirmationInput(taskId);
             break;
         default:
             HandleItemListInput(taskId);
@@ -965,19 +1165,11 @@ static void HandleItemActionMenuInput(u8 taskId)
                 break;
                 
             case STORE_ACTION_CHECKOUT:
-                if (PurchaseCartItems())
-                {
-                    PlaySE(SE_SHOP);
-                    ClearCart();
-                    // Show purchase complete message
-                }
-                else
-                {
-                    PlaySE(SE_FAILURE);
-                    // Show not enough money message
-                }
-                sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+                sOnlineStoreData->confirmationType = CONFIRM_TYPE_CHECKOUT;
+                sOnlineStoreData->confirmationChoice = 0; // Default to YES
+                sOnlineStoreData->state = STORE_STATE_PURCHASE_CONFIRM;
                 sOnlineStoreData->needsRefresh = TRUE;
+                PlaySE(SE_SELECT);
                 break;
         }
     }
@@ -1052,34 +1244,20 @@ static void HandleQuantitySelectInput(u8 taskId)
     }
     else if (JOY_NEW(A_BUTTON))
     {
-        // Process the purchase based on the action that brought us here
+        // Set up confirmation dialog based on the action that brought us here
         if (sOnlineStoreData->selectedActionIndex == STORE_ACTION_BUY_SINGLE)
         {
-            if (PurchaseSingleItem(selectedItemId, sOnlineStoreData->selectedQuantity))
-            {
-                PlaySE(SE_SHOP);
-                // Show purchase complete message
-            }
-            else
-            {
-                PlaySE(SE_FAILURE);
-                // Show error message
-            }
+            sOnlineStoreData->confirmationType = CONFIRM_TYPE_PURCHASE;
         }
         else if (sOnlineStoreData->selectedActionIndex == STORE_ACTION_ADD_TO_CART)
         {
-            if (AddItemToCart(selectedItemId, sOnlineStoreData->selectedQuantity))
-            {
-                PlaySE(SE_SELECT);
-            }
-            else
-            {
-                PlaySE(SE_FAILURE);
-                // Show cart full message
-            }
+            sOnlineStoreData->confirmationType = CONFIRM_TYPE_ADD_TO_CART;
         }
-        sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+        
+        sOnlineStoreData->confirmationChoice = 0; // Default to YES
+        sOnlineStoreData->state = STORE_STATE_PURCHASE_CONFIRM;
         sOnlineStoreData->needsRefresh = TRUE;
+        PlaySE(SE_SELECT);
     }
     else if (JOY_NEW(B_BUTTON))
     {
