@@ -1,9 +1,9 @@
 #ifndef GUARD_ONLINE_STORE_H
 #define GUARD_ONLINE_STORE_H
 
+#include "global.h"
 #include "constants/items.h"
 
-#define STORE_ITEM_PRICE 10500
 #define MAX_CART_ITEMS 20
 #define MAX_ITEM_QUANTITY 999
 #define STORE_NUM_CATEGORIES 7
@@ -82,5 +82,6 @@ u16 GetStoreCategoryItemCount(u8 category);
 const u8 *GetStoreCategoryName(u8 category);
 bool8 PurchaseCartItems(void);
 bool8 PurchaseSingleItem(u16 itemId, u16 quantity);
+u32 GetStoreItemPrice(u16 itemId);
 
 #endif // GUARD_ONLINE_STORE_H

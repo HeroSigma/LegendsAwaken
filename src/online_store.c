@@ -587,7 +587,7 @@ static void DrawItemActionMenu(void)
         AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 6, 0, 0, color, TEXT_SKIP_DRAW, itemName);
         
         // Show item price
-        ConvertIntToDecimalStringN(gStringVar1, STORE_ITEM_PRICE, STR_CONV_MODE_LEFT_ALIGN, 6);
+        ConvertIntToDecimalStringN(gStringVar1, GetStoreItemPrice(selectedItemId), STR_CONV_MODE_LEFT_ALIGN, 6);
         StringExpandPlaceholders(gStringVar2, sText_StorePrice);
         AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 22, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
     }
@@ -972,7 +972,7 @@ u32 GetCartTotalCost(void)
     u32 total = 0;
     for (u8 i = 0; i < sOnlineStoreData->cartSize; i++)
     {
-        total += STORE_ITEM_PRICE * sOnlineStoreData->cart[i].quantity;
+        total += GetStoreItemPrice(sOnlineStoreData->cart[i].itemId) * sOnlineStoreData->cart[i].quantity;
     }
     return total;
 }
@@ -1031,7 +1031,7 @@ bool8 PurchaseCartItems(void)
 
 bool8 PurchaseSingleItem(u16 itemId, u16 quantity)
 {
-    u32 cost = STORE_ITEM_PRICE * quantity;
+    u32 cost = GetStoreItemPrice(itemId) * quantity;
     if (GetMoney(&gSaveBlock1Ptr->money) < cost)
         return FALSE;
     
@@ -1041,6 +1041,499 @@ bool8 PurchaseSingleItem(u16 itemId, u16 quantity)
     AddBagItem(itemId, quantity);
     RemoveMoney(&gSaveBlock1Ptr->money, cost);
     return TRUE;
+}
+
+// Get dynamic pricing for store items
+u32 GetStoreItemPrice(u16 itemId)
+{
+    switch (itemId)
+    {
+        // Items Category
+        case ITEM_POTION: return 300;
+        case ITEM_ANTIDOTE: return 100;
+        case ITEM_BURN_HEAL: return 250;
+        case ITEM_ICE_HEAL: return 250;
+        case ITEM_AWAKENING: return 250;
+        case ITEM_PARALYZE_HEAL: return 200;
+        case ITEM_FULL_RESTORE: return 3000;
+        case ITEM_MAX_POTION: return 2500;
+        case ITEM_HYPER_POTION: return 1200;
+        case ITEM_SUPER_POTION: return 700;
+        case ITEM_FULL_HEAL: return 600;
+        case ITEM_REVIVE: return 1500;
+        case ITEM_MAX_REVIVE: return 4000;
+        case ITEM_FRESH_WATER: return 200;
+        case ITEM_SODA_POP: return 300;
+        case ITEM_LEMONADE: return 350;
+        case ITEM_MOOMOO_MILK: return 500;
+        case ITEM_ENERGY_POWDER: return 500;
+        case ITEM_ENERGY_ROOT: return 800;
+        case ITEM_HEAL_POWDER: return 450;
+        case ITEM_REVIVAL_HERB: return 2800;
+        case ITEM_ETHER: return 1200;
+        case ITEM_MAX_ETHER: return 2000;
+        case ITEM_ELIXIR: return 3000;
+        case ITEM_MAX_ELIXIR: return 4500;
+        case ITEM_LAVA_COOKIE: return 200;
+        case ITEM_BLUE_FLUTE: return 100;
+        case ITEM_YELLOW_FLUTE: return 200;
+        case ITEM_RED_FLUTE: return 100;
+        case ITEM_BLACK_FLUTE: return 400;
+        case ITEM_WHITE_FLUTE: return 500;
+        case ITEM_BERRY_JUICE: return 100;
+        case ITEM_SACRED_ASH: return 20000;
+        case ITEM_POKE_DOLL: return 1000;
+        case ITEM_FLUFFY_TAIL: return 1000;
+        case ITEM_POKE_TOY: return 800;
+        case ITEM_ESCAPE_ROPE: return 550;
+        case ITEM_REPEL: return 350;
+        case ITEM_SUPER_REPEL: return 500;
+        case ITEM_MAX_REPEL: return 700;
+        case ITEM_LURE: return 400;
+        case ITEM_SUPER_LURE: return 550;
+        case ITEM_MAX_LURE: return 750;
+        case ITEM_SUN_STONE: return 2100;
+        case ITEM_MOON_STONE: return 2100;
+        case ITEM_FIRE_STONE: return 2100;
+        case ITEM_THUNDER_STONE: return 2100;
+        case ITEM_WATER_STONE: return 2100;
+        case ITEM_LEAF_STONE: return 2100;
+        case ITEM_SHINY_STONE: return 2100;
+        case ITEM_DUSK_STONE: return 2100;
+        case ITEM_DAWN_STONE: return 2100;
+        case ITEM_ICE_STONE: return 2100;
+        case ITEM_OVAL_STONE: return 2100;
+        case ITEM_TINY_MUSHROOM: return 500;
+        case ITEM_BIG_MUSHROOM: return 5000;
+        case ITEM_PEARL: return 1400;
+        case ITEM_BIG_PEARL: return 7500;
+        case ITEM_STARDUST: return 2000;
+        case ITEM_STAR_PIECE: return 9800;
+        case ITEM_NUGGET: return 10000;
+        case ITEM_HEART_SCALE: return 100;
+        
+        // Medicine Category (already included above)
+        
+        // Pokeballs Category
+        case ITEM_POKE_BALL: return 200;
+        case ITEM_GREAT_BALL: return 600;
+        case ITEM_ULTRA_BALL: return 1200;
+        case ITEM_MASTER_BALL: return 250000;
+        case ITEM_PREMIER_BALL: return 200;
+        case ITEM_HEAL_BALL: return 300;
+        case ITEM_NET_BALL: return 1000;
+        case ITEM_NEST_BALL: return 1000;
+        case ITEM_DIVE_BALL: return 1000;
+        case ITEM_DUSK_BALL: return 1000;
+        case ITEM_TIMER_BALL: return 1000;
+        case ITEM_QUICK_BALL: return 1000;
+        case ITEM_REPEAT_BALL: return 1000;
+        case ITEM_LUXURY_BALL: return 1000;
+        case ITEM_LEVEL_BALL: return 300;
+        case ITEM_LURE_BALL: return 300;
+        case ITEM_MOON_BALL: return 300;
+        case ITEM_FRIEND_BALL: return 300;
+        case ITEM_LOVE_BALL: return 300;
+        case ITEM_HEAVY_BALL: return 300;
+        case ITEM_FAST_BALL: return 300;
+        case ITEM_SPORT_BALL: return 300;
+        case ITEM_PARK_BALL: return 0;
+        case ITEM_CHERISH_BALL: return 1000;
+        case ITEM_SAFARI_BALL: return 0;
+        
+        // Battle Items Category
+        case ITEM_X_ATTACK: return 500;
+        case ITEM_X_DEFEND: return 550;
+        case ITEM_X_SPEED: return 350;
+        case ITEM_X_ACCURACY: return 950;
+        case ITEM_X_SPECIAL: return 350;
+        case ITEM_X_SP_DEF: return 350;
+        case ITEM_DIRE_HIT: return 650;
+        case ITEM_GUARD_SPEC: return 700;
+        case ITEM_POKE_FLUTE: return 20000;
+        case ITEM_ABILITY_CAPSULE: return 10000;
+        case ITEM_BOTTLE_CAP: return 5000;
+        case ITEM_GOLD_BOTTLE_CAP: return 20000;
+        case ITEM_DYNAMAX_CANDY: return 40000;
+        case ITEM_MAX_HONEY: return 8000;
+        
+        // Held Items & Battle Items
+        case ITEM_CHOICE_BAND: return 15000;
+        case ITEM_CHOICE_SPECS: return 15000;
+        case ITEM_CHOICE_SCARF: return 15000;
+        case ITEM_FLAME_ORB: return 8000;
+        case ITEM_TOXIC_ORB: return 8000;
+        case ITEM_LIFE_ORB: return 12000;
+        case ITEM_FOCUS_SASH: return 6000;
+        case ITEM_ASSAULT_VEST: return 10000;
+        case ITEM_SAFETY_GOGGLES: return 5000;
+        case ITEM_ROCKY_HELMET: return 8000;
+        case ITEM_LEFTOVERS: return 15000;
+        case ITEM_BLACK_SLUDGE: return 8000;
+        case ITEM_EVIOLITE: return 12000;
+        case ITEM_AIR_BALLOON: return 5000;
+        case ITEM_WEAKNESS_POLICY: return 8000;
+        case ITEM_RED_CARD: return 3000;
+        case ITEM_EJECT_BUTTON: return 4000;
+        
+        // Type-boosting items
+        case ITEM_SILK_SCARF: return 2000;
+        case ITEM_CHARCOAL: return 2000;
+        case ITEM_MYSTIC_WATER: return 2000;
+        case ITEM_MAGNET: return 2000;
+        case ITEM_MIRACLE_SEED: return 2000;
+        case ITEM_NEVER_MELT_ICE: return 2000;
+        case ITEM_BLACK_BELT: return 2000;
+        case ITEM_POISON_BARB: return 2000;
+        case ITEM_SOFT_SAND: return 2000;
+        case ITEM_SHARP_BEAK: return 2000;
+        case ITEM_TWISTED_SPOON: return 2000;
+        case ITEM_SILVER_POWDER: return 2000;
+        case ITEM_HARD_STONE: return 2000;
+        case ITEM_SPELL_TAG: return 2000;
+        case ITEM_DRAGON_FANG: return 2000;
+        case ITEM_BLACK_GLASSES: return 2000;
+        case ITEM_METAL_COAT: return 2000;
+        
+        // Weather items
+        case ITEM_DAMP_ROCK: return 3000;
+        case ITEM_HEAT_ROCK: return 3000;
+        case ITEM_SMOOTH_ROCK: return 3000;
+        case ITEM_ICY_ROCK: return 3000;
+        
+        // Z-Crystals
+        case ITEM_NORMALIUM_Z: return 20000;
+        case ITEM_FIRIUM_Z: return 20000;
+        case ITEM_WATERIUM_Z: return 20000;
+        case ITEM_ELECTRIUM_Z: return 20000;
+        case ITEM_GRASSIUM_Z: return 20000;
+        case ITEM_ICIUM_Z: return 20000;
+        case ITEM_FIGHTINIUM_Z: return 20000;
+        case ITEM_POISONIUM_Z: return 20000;
+        case ITEM_GROUNDIUM_Z: return 20000;
+        case ITEM_FLYINIUM_Z: return 20000;
+        case ITEM_PSYCHIUM_Z: return 20000;
+        case ITEM_BUGINIUM_Z: return 20000;
+        case ITEM_ROCKIUM_Z: return 20000;
+        case ITEM_GHOSTIUM_Z: return 20000;
+        case ITEM_DRAGONIUM_Z: return 20000;
+        case ITEM_DARKINIUM_Z: return 20000;
+        case ITEM_STEELIUM_Z: return 20000;
+        case ITEM_FAIRIUM_Z: return 20000;
+        
+        // Gems
+        case ITEM_NORMAL_GEM: return 5000;
+        case ITEM_FIRE_GEM: return 5000;
+        case ITEM_WATER_GEM: return 5000;
+        case ITEM_ELECTRIC_GEM: return 5000;
+        case ITEM_GRASS_GEM: return 5000;
+        case ITEM_ICE_GEM: return 5000;
+        case ITEM_FIGHTING_GEM: return 5000;
+        case ITEM_POISON_GEM: return 5000;
+        case ITEM_GROUND_GEM: return 5000;
+        case ITEM_FLYING_GEM: return 5000;
+        case ITEM_PSYCHIC_GEM: return 5000;
+        case ITEM_BUG_GEM: return 5000;
+        case ITEM_ROCK_GEM: return 5000;
+        case ITEM_GHOST_GEM: return 5000;
+        case ITEM_DRAGON_GEM: return 5000;
+        case ITEM_DARK_GEM: return 5000;
+        case ITEM_STEEL_GEM: return 5000;
+        case ITEM_FAIRY_GEM: return 5000;
+        
+        // Training - EV Feathers
+        case ITEM_HEALTH_FEATHER: return 1500;
+        case ITEM_MUSCLE_FEATHER: return 1500;
+        case ITEM_RESIST_FEATHER: return 1500;
+        case ITEM_GENIUS_FEATHER: return 1500;
+        case ITEM_CLEVER_FEATHER: return 1500;
+        case ITEM_SWIFT_FEATHER: return 1500;
+        
+        // Ability modifiers
+        case ITEM_ABILITY_PATCH: return 25000;
+        
+        // Nature Mints
+        case ITEM_LONELY_MINT: return 12000;
+        case ITEM_ADAMANT_MINT: return 12000;
+        case ITEM_NAUGHTY_MINT: return 12000;
+        case ITEM_BRAVE_MINT: return 12000;
+        case ITEM_BOLD_MINT: return 12000;
+        case ITEM_IMPISH_MINT: return 12000;
+        case ITEM_LAX_MINT: return 12000;
+        case ITEM_RELAXED_MINT: return 12000;
+        case ITEM_MODEST_MINT: return 12000;
+        case ITEM_MILD_MINT: return 12000;
+        case ITEM_RASH_MINT: return 12000;
+        case ITEM_QUIET_MINT: return 12000;
+        case ITEM_CALM_MINT: return 12000;
+        case ITEM_GENTLE_MINT: return 12000;
+        case ITEM_CAREFUL_MINT: return 12000;
+        case ITEM_SASSY_MINT: return 12000;
+        case ITEM_TIMID_MINT: return 12000;
+        case ITEM_HASTY_MINT: return 12000;
+        case ITEM_JOLLY_MINT: return 12000;
+        case ITEM_NAIVE_MINT: return 12000;
+        case ITEM_SERIOUS_MINT: return 12000;
+        
+        // Terrain seeds
+        case ITEM_ELECTRIC_SEED: return 3000;
+        case ITEM_PSYCHIC_SEED: return 3000;
+        case ITEM_MISTY_SEED: return 3000;
+        case ITEM_GRASSY_SEED: return 3000;
+        
+        // Gen IX items
+        case ITEM_ABILITY_SHIELD: return 8000;
+        case ITEM_CLEAR_AMULET: return 6000;
+        case ITEM_PUNCHING_GLOVE: return 7000;
+        case ITEM_COVERT_CLOAK: return 9000;
+        case ITEM_LOADED_DICE: return 5000;
+        case ITEM_BOOSTER_ENERGY: return 15000;
+        case ITEM_MIRROR_HERB: return 10000;
+        
+        // Training Category
+        case ITEM_HP_UP: return 9800;
+        case ITEM_PROTEIN: return 9800;
+        case ITEM_IRON: return 9800;
+        case ITEM_CARBOS: return 9800;
+        case ITEM_CALCIUM: return 9800;
+        case ITEM_RARE_CANDY: return 4800;
+        case ITEM_PP_UP: return 9800;
+        case ITEM_ZINC: return 9800;
+        case ITEM_PP_MAX: return 9800;
+        case ITEM_EXP_SHARE: return 3000;
+        case ITEM_MACHO_BRACE: return 3000;
+        case ITEM_POWER_WEIGHT: return 3000;
+        case ITEM_POWER_BRACER: return 3000;
+        case ITEM_POWER_BELT: return 3000;
+        case ITEM_POWER_LENS: return 3000;
+        case ITEM_POWER_BAND: return 3000;
+        case ITEM_POWER_ANKLET: return 3000;
+        
+        // Form Items Category
+        case ITEM_BLUE_ORB: return 50000;
+        case ITEM_RED_ORB: return 50000;
+        case ITEM_PRISON_BOTTLE: return 100000;
+        case ITEM_DNA_SPLICERS: return 100000;
+        case ITEM_REVEAL_GLASS: return 75000;
+        case ITEM_GRACIDEA: return 25000;
+        case ITEM_METEORITE: return 30000;
+        case ITEM_N_LUNARIZER: return 100000;
+        case ITEM_N_SOLARIZER: return 100000;
+        case ITEM_RUSTED_SWORD: return 150000;
+        case ITEM_RUSTED_SHIELD: return 150000;
+        case ITEM_REINS_OF_UNITY: return 200000;
+        
+        // Mega Stones
+        case ITEM_VENUSAURITE: return 75000;
+        case ITEM_CHARIZARDITE_X: return 75000;
+        case ITEM_CHARIZARDITE_Y: return 75000;
+        case ITEM_BLASTOISINITE: return 75000;
+        case ITEM_BEEDRILLITE: return 65000;
+        case ITEM_PIDGEOTITE: return 65000;
+        case ITEM_ALAKAZITE: return 75000;
+        case ITEM_SLOWBRONITE: return 70000;
+        case ITEM_GENGARITE: return 75000;
+        case ITEM_KANGASKHANITE: return 80000;
+        case ITEM_PINSIRITE: return 65000;
+        case ITEM_GYARADOSITE: return 75000;
+        case ITEM_AERODACTYLITE: return 70000;
+        case ITEM_MEWTWONITE_X: return 100000;
+        case ITEM_MEWTWONITE_Y: return 100000;
+        case ITEM_AMPHAROSITE: return 70000;
+        case ITEM_STEELIXITE: return 70000;
+        case ITEM_SCIZORITE: return 80000;
+        case ITEM_HERACRONITE: return 75000;
+        case ITEM_HOUNDOOMINITE: return 70000;
+        case ITEM_TYRANITARITE: return 80000;
+        case ITEM_SCEPTILITE: return 75000;
+        case ITEM_BLAZIKENITE: return 80000;
+        case ITEM_SWAMPERTITE: return 75000;
+        case ITEM_GARDEVOIRITE: return 75000;
+        case ITEM_SABLENITE: return 70000;
+        case ITEM_MAWILITE: return 70000;
+        case ITEM_AGGRONITE: return 70000;
+        case ITEM_MEDICHAMITE: return 70000;
+        case ITEM_MANECTITE: return 70000;
+        case ITEM_SHARPEDONITE: return 70000;
+        case ITEM_CAMERUPTITE: return 70000;
+        case ITEM_ALTARIANITE: return 70000;
+        case ITEM_BANETTITE: return 70000;
+        case ITEM_ABSOLITE: return 75000;
+        case ITEM_GLALITITE: return 70000;
+        case ITEM_SALAMENCITE: return 80000;
+        case ITEM_METAGROSSITE: return 80000;
+        case ITEM_LATIASITE: return 85000;
+        case ITEM_LATIOSITE: return 85000;
+        case ITEM_LOPUNNITE: return 70000;
+        case ITEM_GARCHOMPITE: return 80000;
+        case ITEM_LUCARIONITE: return 75000;
+        
+        // Arceus Plates
+        case ITEM_FLAME_PLATE: return 35000;
+        case ITEM_SPLASH_PLATE: return 35000;
+        case ITEM_ZAP_PLATE: return 35000;
+        case ITEM_MEADOW_PLATE: return 35000;
+        case ITEM_ICICLE_PLATE: return 35000;
+        case ITEM_FIST_PLATE: return 35000;
+        case ITEM_TOXIC_PLATE: return 35000;
+        case ITEM_EARTH_PLATE: return 35000;
+        case ITEM_SKY_PLATE: return 35000;
+        case ITEM_MIND_PLATE: return 35000;
+        case ITEM_INSECT_PLATE: return 35000;
+        case ITEM_STONE_PLATE: return 35000;
+        case ITEM_SPOOKY_PLATE: return 35000;
+        case ITEM_DRACO_PLATE: return 35000;
+        case ITEM_DREAD_PLATE: return 35000;
+        case ITEM_IRON_PLATE: return 35000;
+        case ITEM_PIXIE_PLATE: return 35000;
+        
+        // Genesect Drives
+        case ITEM_DOUSE_DRIVE: return 45000;
+        case ITEM_SHOCK_DRIVE: return 45000;
+        case ITEM_BURN_DRIVE: return 45000;
+        case ITEM_CHILL_DRIVE: return 45000;
+        
+        // Silvally Memories
+        case ITEM_FIRE_MEMORY: return 40000;
+        case ITEM_WATER_MEMORY: return 40000;
+        case ITEM_ELECTRIC_MEMORY: return 40000;
+        case ITEM_GRASS_MEMORY: return 40000;
+        case ITEM_ICE_MEMORY: return 40000;
+        case ITEM_FIGHTING_MEMORY: return 40000;
+        case ITEM_POISON_MEMORY: return 40000;
+        case ITEM_GROUND_MEMORY: return 40000;
+        case ITEM_FLYING_MEMORY: return 40000;
+        case ITEM_PSYCHIC_MEMORY: return 40000;
+        case ITEM_BUG_MEMORY: return 40000;
+        case ITEM_ROCK_MEMORY: return 40000;
+        case ITEM_GHOST_MEMORY: return 40000;
+        case ITEM_DRAGON_MEMORY: return 40000;
+        case ITEM_DARK_MEMORY: return 40000;
+        case ITEM_STEEL_MEMORY: return 40000;
+        case ITEM_FAIRY_MEMORY: return 40000;
+        
+        // Legendary Orbs
+        case ITEM_ADAMANT_ORB: return 85000;
+        case ITEM_LUSTROUS_ORB: return 85000;
+        case ITEM_GRISEOUS_ORB: return 85000;
+        
+        // Other Form Items
+        case ITEM_SOUL_DEW: return 60000;
+        case ITEM_RED_NECTAR: return 5000;
+        case ITEM_YELLOW_NECTAR: return 5000;
+        case ITEM_PINK_NECTAR: return 5000;
+        case ITEM_PURPLE_NECTAR: return 5000;
+        
+        // Enhanced Legendary Orbs
+        case ITEM_ADAMANT_CRYSTAL: return 120000;
+        case ITEM_GRISEOUS_CORE: return 120000;
+        case ITEM_LUSTROUS_GLOBE: return 120000;
+        
+        // Ogerpon Masks
+        case ITEM_CORNERSTONE_MASK: return 90000;
+        case ITEM_WELLSPRING_MASK: return 90000;
+        case ITEM_HEARTHFLAME_MASK: return 90000;
+        
+        // TMs Category (TM01-TM100)
+        case ITEM_TM01: return 3000;
+        case ITEM_TM02: return 3000;
+        case ITEM_TM03: return 3000;
+        case ITEM_TM04: return 1500;
+        case ITEM_TM05: return 2000;
+        case ITEM_TM06: return 3000;
+        case ITEM_TM07: return 2000;
+        case ITEM_TM08: return 1500;
+        case ITEM_TM09: return 2000;
+        case ITEM_TM10: return 2000;
+        case ITEM_TM11: return 2000;
+        case ITEM_TM12: return 3000;
+        case ITEM_TM13: return 3000;
+        case ITEM_TM14: return 5500;
+        case ITEM_TM15: return 7500;
+        case ITEM_TM16: return 2000;
+        case ITEM_TM17: return 2000;
+        case ITEM_TM18: return 2000;
+        case ITEM_TM19: return 3000;
+        case ITEM_TM20: return 2000;
+        case ITEM_TM21: return 3000;
+        case ITEM_TM22: return 3000;
+        case ITEM_TM23: return 3000;
+        case ITEM_TM24: return 3000;
+        case ITEM_TM25: return 5500;
+        case ITEM_TM26: return 5500;
+        case ITEM_TM27: return 3000;
+        case ITEM_TM28: return 2000;
+        case ITEM_TM29: return 3000;
+        case ITEM_TM30: return 3000;
+        case ITEM_TM31: return 3000;
+        case ITEM_TM32: return 1500;
+        case ITEM_TM33: return 2000;
+        case ITEM_TM34: return 3000;
+        case ITEM_TM35: return 3000;
+        case ITEM_TM36: return 3000;
+        case ITEM_TM37: return 2000;
+        case ITEM_TM38: return 5500;
+        case ITEM_TM39: return 2000;
+        case ITEM_TM40: return 2000;
+        case ITEM_TM41: return 1500;
+        case ITEM_TM42: return 3000;
+        case ITEM_TM43: return 2000;
+        case ITEM_TM44: return 3000;
+        case ITEM_TM45: return 3000;
+        case ITEM_TM46: return 2000;
+        case ITEM_TM47: return 3000;
+        case ITEM_TM48: return 3000;
+        case ITEM_TM49: return 3000;
+        case ITEM_TM50: return 5500;
+        
+        // Berries Category
+        case ITEM_CHERI_BERRY: return 500;
+        case ITEM_CHESTO_BERRY: return 500;
+        case ITEM_PECHA_BERRY: return 500;
+        case ITEM_RAWST_BERRY: return 500;
+        case ITEM_ASPEAR_BERRY: return 500;
+        case ITEM_LEPPA_BERRY: return 1000;
+        case ITEM_ORAN_BERRY: return 800;
+        case ITEM_PERSIM_BERRY: return 700;
+        case ITEM_LUM_BERRY: return 2000;
+        case ITEM_SITRUS_BERRY: return 1500;
+        case ITEM_FIGY_BERRY: return 1200;
+        case ITEM_WIKI_BERRY: return 1200;
+        case ITEM_MAGO_BERRY: return 1200;
+        case ITEM_AGUAV_BERRY: return 1200;
+        case ITEM_IAPAPA_BERRY: return 1200;
+        case ITEM_RAZZ_BERRY: return 800;
+        case ITEM_BLUK_BERRY: return 800;
+        case ITEM_NANAB_BERRY: return 800;
+        case ITEM_WEPEAR_BERRY: return 800;
+        case ITEM_PINAP_BERRY: return 800;
+        case ITEM_POMEG_BERRY: return 1500;
+        case ITEM_KELPSY_BERRY: return 1500;
+        case ITEM_QUALOT_BERRY: return 1500;
+        case ITEM_HONDEW_BERRY: return 1500;
+        case ITEM_GREPA_BERRY: return 1500;
+        case ITEM_TAMATO_BERRY: return 1500;
+        case ITEM_CORNN_BERRY: return 1000;
+        case ITEM_MAGOST_BERRY: return 1000;
+        case ITEM_RABUTA_BERRY: return 1000;
+        case ITEM_NOMEL_BERRY: return 1000;
+        case ITEM_SPELON_BERRY: return 1000;
+        case ITEM_PAMTRE_BERRY: return 1000;
+        case ITEM_WATMEL_BERRY: return 1000;
+        case ITEM_DURIN_BERRY: return 1000;
+        case ITEM_BELUE_BERRY: return 1000;
+        case ITEM_LIECHI_BERRY: return 3000;
+        case ITEM_GANLON_BERRY: return 3000;
+        case ITEM_SALAC_BERRY: return 3000;
+        case ITEM_PETAYA_BERRY: return 3000;
+        case ITEM_APICOT_BERRY: return 3000;
+        case ITEM_LANSAT_BERRY: return 5000;
+        case ITEM_STARF_BERRY: return 5000;
+        case ITEM_ENIGMA_BERRY: return 4000;
+        
+        // Default price for items not in the list
+        default: return 1000;
+    }
 }
 
 // Start menu callback implementation
