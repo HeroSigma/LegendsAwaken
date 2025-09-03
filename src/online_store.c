@@ -645,12 +645,25 @@ static void DrawItemList(void)
     }
     
     // Calculate display parameters
-    displayCount = 9; // Show 9 items at once with improved spacing (was 10)
+    displayCount = 5; // Show 5 items at once to match actual display
+    startIndex = sOnlineStoreData->scrollOffset;
+    
+    // Ensure scroll offset is within bounds
+    if (sOnlineStoreData->scrollOffset >= itemCount)
+        sOnlineStoreData->scrollOffset = (itemCount > 0) ? itemCount - 1 : 0;
+    
+    // Ensure selected index is within bounds
+    if (sOnlineStoreData->selectedItemIndex >= itemCount)
+        sOnlineStoreData->selectedItemIndex = (itemCount > 0) ? itemCount - 1 : 0;
+    
     startIndex = sOnlineStoreData->scrollOffset;
     
     // Ensure we don't scroll past the end
     if (startIndex + displayCount > itemCount)
         startIndex = (itemCount > displayCount) ? itemCount - displayCount : 0;
+    
+    // Update the actual scroll offset to match the calculated start index
+    sOnlineStoreData->scrollOffset = startIndex;
     
     FillWindowPixelBuffer(WIN_ITEM_LIST, PIXEL_FILL(1));
     
@@ -661,18 +674,27 @@ static void DrawItemList(void)
         itemName = GetItemName(itemId);
         y = (i * 14) + 6; // 14 pixels per line for better spacing, 6 pixel top margin
         
-        // Highlight selected item
+        // Only highlight if this is the selected item AND it's visible in current scroll window
         if ((startIndex + i) == sOnlineStoreData->selectedItemIndex)
         {
-            // Draw selection background with proper padding and centering (lowered by 2 pixels)
-            FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 1, y - 1, 218, 13);
-            // Add a subtle border effect
-            FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(15), 2, y, 216, 11);
-            FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 3, y + 1, 214, 9);
-            
-            // Draw text with white color for contrast on dark background
-            const u8 highlightColor[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY};
-            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, y, 0, 0, highlightColor, TEXT_SKIP_DRAW, itemName);
+            // Ensure the highlight is within window bounds (5 items * 14 pixels + margin)
+            if (y >= 6 && y + 13 <= 76) // Window height check for 5 items display
+            {
+                // Draw selection background with proper padding and centering
+                FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 1, y - 1, 218, 13);
+                // Add a subtle border effect
+                FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(15), 2, y, 216, 11);
+                FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 3, y + 1, 214, 9);
+                
+                // Draw text with white color for contrast on dark background
+                const u8 highlightColor[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY};
+                AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, y, 0, 0, highlightColor, TEXT_SKIP_DRAW, itemName);
+            }
+            else
+            {
+                // If selected item is out of bounds, just draw normal text
+                AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, y, 0, 0, color, TEXT_SKIP_DRAW, itemName);
+            }
         }
         else
         {
@@ -761,25 +783,26 @@ static void DrawQuantitySelection(void)
         // Show current item name
         AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 6, 0, 0, color, TEXT_SKIP_DRAW, itemName);
         
-        // Show unit price
+        // Show unit price - use separate string variables
         ConvertIntToDecimalStringN(gStringVar1, itemPrice, STR_CONV_MODE_LEFT_ALIGN, 6);
-        StringExpandPlaceholders(gStringVar2, sText_StorePrice);
-        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 22, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
+        StringExpandPlaceholders(gStringVar4, sText_StorePrice); // Use gStringVar4 for price
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 22, 0, 0, color, TEXT_SKIP_DRAW, gStringVar4);
         
-        // Show quantity selection (highlighted)
-        ConvertIntToDecimalStringN(gStringVar1, sOnlineStoreData->selectedQuantity, STR_CONV_MODE_LEFT_ALIGN, 3);
-        StringExpandPlaceholders(gStringVar2, sText_StoreQuantity);
-        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 38, 0, 0, highlightColor, TEXT_SKIP_DRAW, gStringVar2);
+        // Show quantity selection (highlighted) - use different string variable
+        ConvertIntToDecimalStringN(gStringVar2, sOnlineStoreData->selectedQuantity, STR_CONV_MODE_LEFT_ALIGN, 3);
+        StringCopy(gStringVar1, gStringVar2); // Copy to gStringVar1 for placeholder
+        StringExpandPlaceholders(gStringVar3, sText_StoreQuantity); // Use gStringVar3 for quantity
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 38, 0, 0, highlightColor, TEXT_SKIP_DRAW, gStringVar3);
         
-        // Show total cost
+        // Show total cost - use another string variable
         ConvertIntToDecimalStringN(gStringVar1, totalCost, STR_CONV_MODE_LEFT_ALIGN, 8);
-        StringExpandPlaceholders(gStringVar2, sText_StoreTotalCost);
+        StringExpandPlaceholders(gStringVar2, sText_StoreTotalCost); // Use gStringVar2 for total
         AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 54, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
         
         // Show current money
         ConvertIntToDecimalStringN(gStringVar1, GetMoney(&gSaveBlock1Ptr->money), STR_CONV_MODE_LEFT_ALIGN, 8);
-        StringExpandPlaceholders(gStringVar2, sText_StoreMoney);
-        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 70, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
+        StringExpandPlaceholders(gStringVar4, sText_StoreMoney); // Use gStringVar4 for money display
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 70, 0, 0, color, TEXT_SKIP_DRAW, gStringVar4);
         
         // Show instructions
         AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 8, 90, 0, 0, color, TEXT_SKIP_DRAW, sText_StoreQuantityInstructions);
@@ -1064,14 +1087,19 @@ static void HandleItemListInput(u8 taskId)
             else
                 sOnlineStoreData->selectedItemIndex = itemCount - 1;
             
-            // Update scroll position if needed
+            // Update scroll position if needed - keep selected item visible
             if (sOnlineStoreData->selectedItemIndex < sOnlineStoreData->scrollOffset)
             {
+                // Selected item is above visible area, scroll up
                 sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex;
             }
-            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 5)
+            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 5) // 5 items displayed
             {
+                // Selected item is below visible area, scroll down to keep it in view
                 sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex - 4;
+                // Ensure we don't scroll past the beginning
+                if (sOnlineStoreData->scrollOffset < 0)
+                    sOnlineStoreData->scrollOffset = 0;
             }
             
             DrawItemList();
@@ -1088,14 +1116,19 @@ static void HandleItemListInput(u8 taskId)
             else
                 sOnlineStoreData->selectedItemIndex = 0;
             
-            // Update scroll position if needed
+            // Update scroll position if needed - keep selected item visible
             if (sOnlineStoreData->selectedItemIndex < sOnlineStoreData->scrollOffset)
             {
+                // Selected item is above visible area, scroll up
                 sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex;
             }
-            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 5)
+            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 5) // 5 items displayed
             {
+                // Selected item is below visible area, scroll down
                 sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex - 4;
+                // Ensure we don't scroll past the beginning
+                if (sOnlineStoreData->scrollOffset < 0)
+                    sOnlineStoreData->scrollOffset = 0;
             }
             
             DrawItemList();
