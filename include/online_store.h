@@ -27,6 +27,7 @@ enum
     STORE_STATE_INIT,
     STORE_STATE_CATEGORY_SELECT,
     STORE_STATE_ITEM_LIST,
+    STORE_STATE_ITEM_ACTION_MENU,
     STORE_STATE_QUANTITY_SELECT,
     STORE_STATE_CART_VIEW,
     STORE_STATE_PURCHASE_CONFIRM,
@@ -52,8 +53,10 @@ struct StoreCartItem
 
 struct OnlineStoreData
 {
+    u8 state;
     u8 currentCategory;
     u8 selectedItemIndex;
+    u8 selectedActionIndex;
     u8 scrollOffset;
     u8 cartSize;
     bool8 isViewingCart;
@@ -63,8 +66,6 @@ struct OnlineStoreData
 
 // Function declarations
 void CB2_OnlineStore(void);
-// Start menu integration
-extern bool8 StartMenuStoreCallback(void);
 void InitOnlineStore(void);
 void UpdateStoreDisplay(void);
 void DrawStoreInterface(void);

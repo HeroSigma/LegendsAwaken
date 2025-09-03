@@ -349,10 +349,13 @@ static void OnlineStoreVBlankCallback(void);
 static void OnlineStoreMainCB2(void);
 static void Task_OnlineStoreMain(u8 taskId);
 static void HandleStoreInput(u8 taskId);
+static void HandleItemListInput(u8 taskId);
+static void HandleItemActionMenuInput(u8 taskId);
 static void ExitOnlineStore(void);
 static void DrawStoreHeader(void);
 static void DrawCurrentCategory(void);
 static void DrawItemList(void);
+static void DrawItemActionMenu(void);
 
 // Window IDs storage - no longer needed, using direct indices
 // static u8 sStoreWindowIds[WIN_COUNT];
@@ -404,8 +407,10 @@ void CB2_OnlineStore(void)
         if (sOnlineStoreData == NULL)
         {
             sOnlineStoreData = AllocZeroed(sizeof(struct OnlineStoreData));
+            sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
             sOnlineStoreData->currentCategory = STORE_CATEGORY_ITEMS;
             sOnlineStoreData->selectedItemIndex = 0;
+            sOnlineStoreData->selectedActionIndex = 0;
             sOnlineStoreData->scrollOffset = 0;
             sOnlineStoreData->cartSize = 0;
             sOnlineStoreData->isViewingCart = FALSE;
@@ -561,6 +566,52 @@ static void DrawItemList(void)
     CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
 }
 
+static void DrawItemActionMenu(void)
+{
+    const u8 color[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
+    const u8 *actionTexts[] = {
+        sText_StoreBuySingle,
+        sText_StoreAddToCart,
+        sText_StoreViewCart,
+        sText_StoreCheckout
+    };
+    
+    FillWindowPixelBuffer(WIN_ITEM_LIST, PIXEL_FILL(0));
+    
+    // Show current item name at top
+    const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
+    if (categoryItems != NULL)
+    {
+        u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
+        const u8 *itemName = GetItemName(selectedItemId);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 6, 0, 0, color, TEXT_SKIP_DRAW, itemName);
+        
+        // Show item price
+        ConvertIntToDecimalStringN(gStringVar1, STORE_ITEM_PRICE, STR_CONV_MODE_LEFT_ALIGN, 6);
+        StringExpandPlaceholders(gStringVar2, sText_StorePrice);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 22, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
+    }
+    
+    // Draw action menu
+    for (u8 i = 0; i < 4; i++)
+    {
+        u8 y = (i * 14) + 40; // 4 options with good spacing
+        
+        // Highlight selected action
+        if (i == sOnlineStoreData->selectedActionIndex)
+        {
+            const u8 highlightColor[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY};
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 12, y, 0, 0, highlightColor, TEXT_SKIP_DRAW, actionTexts[i]);
+        }
+        else
+        {
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 12, y, 0, 0, color, TEXT_SKIP_DRAW, actionTexts[i]);
+        }
+    }
+    
+    CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
+}
+
 static void Task_OnlineStoreMain(u8 taskId)
 {
     if (!gPaletteFade.active)
@@ -576,7 +627,14 @@ static void Task_OnlineStoreMain(u8 taskId)
         if (sOnlineStoreData->needsRefresh)
         {
             DrawCurrentCategory();
-            DrawItemList();
+            if (sOnlineStoreData->state == STORE_STATE_ITEM_ACTION_MENU)
+            {
+                DrawItemActionMenu();
+            }
+            else
+            {
+                DrawItemList();
+            }
             sOnlineStoreData->needsRefresh = FALSE;
         }
         
@@ -586,6 +644,22 @@ static void Task_OnlineStoreMain(u8 taskId)
 
 static void HandleStoreInput(u8 taskId)
 {
+    switch (sOnlineStoreData->state)
+    {
+        case STORE_STATE_ITEM_LIST:
+            HandleItemListInput(taskId);
+            break;
+        case STORE_STATE_ITEM_ACTION_MENU:
+            HandleItemActionMenuInput(taskId);
+            break;
+        default:
+            HandleItemListInput(taskId);
+            break;
+    }
+}
+
+static void HandleItemListInput(u8 taskId)
+{
     if (JOY_NEW(B_BUTTON))
     {
         PlaySE(SE_EXIT);
@@ -594,25 +668,16 @@ static void HandleStoreInput(u8 taskId)
     }
     else if (JOY_NEW(A_BUTTON))
     {
-        // Handle item purchase/add to cart
+        // Handle item selection - show action menu
         const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
         u16 itemCount = GetStoreCategoryItemCount(sOnlineStoreData->currentCategory);
         
         if (categoryItems != NULL && itemCount > 0 && sOnlineStoreData->selectedItemIndex < itemCount)
         {
-            u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
-            
-            if (AddItemToCart(selectedItemId, 1)) // Add 1 quantity
-            {
-                PlaySE(SE_SELECT);
-                // Set flag to refresh display on next frame instead of immediate refresh
-                sOnlineStoreData->needsRefresh = TRUE;
-            }
-            else
-            {
-                PlaySE(SE_FAILURE); // Cart full or other error
-                // Show error feedback - cart full message later
-            }
+            PlaySE(SE_SELECT);
+            sOnlineStoreData->state = STORE_STATE_ITEM_ACTION_MENU;
+            sOnlineStoreData->selectedActionIndex = 0;
+            sOnlineStoreData->needsRefresh = TRUE;
         }
     }
     else if (JOY_NEW(DPAD_UP))
@@ -631,9 +696,9 @@ static void HandleStoreInput(u8 taskId)
             {
                 sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex;
             }
-            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 9)
+            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 5)
             {
-                sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex - 8;
+                sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex - 4;
             }
             
             DrawItemList();
@@ -655,9 +720,9 @@ static void HandleStoreInput(u8 taskId)
             {
                 sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex;
             }
-            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 9)
+            else if (sOnlineStoreData->selectedItemIndex >= sOnlineStoreData->scrollOffset + 5)
             {
-                sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex - 8;
+                sOnlineStoreData->scrollOffset = sOnlineStoreData->selectedItemIndex - 4;
             }
             
             DrawItemList();
@@ -689,6 +754,95 @@ static void HandleStoreInput(u8 taskId)
         // Reset item selection when changing categories
         sOnlineStoreData->selectedItemIndex = 0;
         sOnlineStoreData->scrollOffset = 0;
+        sOnlineStoreData->needsRefresh = TRUE;
+    }
+}
+
+static void HandleItemActionMenuInput(u8 taskId)
+{
+    if (JOY_NEW(B_BUTTON))
+    {
+        PlaySE(SE_EXIT);
+        sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+        sOnlineStoreData->needsRefresh = TRUE;
+    }
+    else if (JOY_NEW(A_BUTTON))
+    {
+        // Handle action selection
+        const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
+        u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
+        
+        switch (sOnlineStoreData->selectedActionIndex)
+        {
+            case STORE_ACTION_BUY_SINGLE:
+                if (PurchaseSingleItem(selectedItemId, 1))
+                {
+                    PlaySE(SE_SHOP);
+                    // Show purchase complete message
+                }
+                else
+                {
+                    PlaySE(SE_FAILURE);
+                    // Show not enough money message
+                }
+                sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+                sOnlineStoreData->needsRefresh = TRUE;
+                break;
+                
+            case STORE_ACTION_ADD_TO_CART:
+                if (AddItemToCart(selectedItemId, 1))
+                {
+                    PlaySE(SE_SELECT);
+                }
+                else
+                {
+                    PlaySE(SE_FAILURE);
+                    // Show cart full message
+                }
+                sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+                sOnlineStoreData->needsRefresh = TRUE;
+                break;
+                
+            case STORE_ACTION_VIEW_CART:
+                PlaySE(SE_SELECT);
+                sOnlineStoreData->state = STORE_STATE_CART_VIEW;
+                sOnlineStoreData->isViewingCart = TRUE;
+                sOnlineStoreData->needsRefresh = TRUE;
+                break;
+                
+            case STORE_ACTION_CHECKOUT:
+                if (PurchaseCartItems())
+                {
+                    PlaySE(SE_SHOP);
+                    ClearCart();
+                    // Show purchase complete message
+                }
+                else
+                {
+                    PlaySE(SE_FAILURE);
+                    // Show not enough money message
+                }
+                sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+                sOnlineStoreData->needsRefresh = TRUE;
+                break;
+        }
+    }
+    else if (JOY_NEW(DPAD_UP))
+    {
+        PlaySE(SE_SELECT);
+        if (sOnlineStoreData->selectedActionIndex > 0)
+            sOnlineStoreData->selectedActionIndex--;
+        else
+            sOnlineStoreData->selectedActionIndex = STORE_ACTION_CHECKOUT;
+        sOnlineStoreData->needsRefresh = TRUE;
+    }
+    else if (JOY_NEW(DPAD_DOWN))
+    {
+        PlaySE(SE_SELECT);
+        if (sOnlineStoreData->selectedActionIndex < STORE_ACTION_CHECKOUT)
+            sOnlineStoreData->selectedActionIndex++;
+        else
+            sOnlineStoreData->selectedActionIndex = 0;
         sOnlineStoreData->needsRefresh = TRUE;
     }
 }
