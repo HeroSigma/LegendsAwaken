@@ -12,6 +12,7 @@
 #include "gpu_regs.h"
 #include "malloc.h"
 #include "sound.h"
+#include "task.h"
 #include "constants/songs.h"
 #include "constants/rgb.h"
 #include "item.h"
@@ -26,6 +27,10 @@
 // Function prototypes for missing functions
 void PlayRainStoppingSoundEffect(void);
 void CleanupOverworldWindowsAndTilemaps(void);
+
+// Store function prototypes  
+static void HandleQuantitySelectInput(u8 taskId);
+static void HandleCartViewInput(u8 taskId);
 
 // Store state data
 static struct OnlineStoreData *sOnlineStoreData = NULL;
@@ -61,7 +66,10 @@ static const u8 sText_StoreAddToCart[] = _("ADD TO CART");
 static const u8 sText_StoreViewCart[] = _("VIEW CART");
 static const u8 sText_StoreCheckout[] = _("CHECKOUT");
 static const u8 sText_StoreCancel[] = _("CANCEL");
-static const u8 sText_StoreQuantity[] = _("How many?");
+static const u8 sText_StoreQuantity[] = _("Qty: {STR_VAR_1}");
+static const u8 sText_StoreTotalCost[] = _("Total: ¥{STR_VAR_1}");
+static const u8 sText_StoreMoney[] = _("Money: ¥{STR_VAR_1}");
+static const u8 sText_StoreQuantityInstructions[] = _("Use up/down for +/-1, left/right for +/-10");
 static const u8 sText_StoreCartEmpty[] = _("Your cart is empty!");
 static const u8 sText_StoreCartFull[] = _("Your cart is full!");
 static const u8 sText_StoreNotEnoughMoney[] = _("Not enough money!");
@@ -356,6 +364,7 @@ static void DrawStoreHeader(void);
 static void DrawCurrentCategory(void);
 static void DrawItemList(void);
 static void DrawItemActionMenu(void);
+static void DrawQuantitySelection(void);
 
 // Window IDs storage - no longer needed, using direct indices
 // static u8 sStoreWindowIds[WIN_COUNT];
@@ -612,6 +621,59 @@ static void DrawItemActionMenu(void)
     CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
 }
 
+static void DrawQuantitySelection(void)
+{
+    const u8 color[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
+    const u8 highlightColor[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY};
+    
+    FillWindowPixelBuffer(WIN_ITEM_LIST, PIXEL_FILL(0));
+    
+    // Get current item info
+    const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
+    if (categoryItems != NULL)
+    {
+        u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
+        const u8 *itemName = GetItemName(selectedItemId);
+        u32 itemPrice = GetStoreItemPrice(selectedItemId);
+        u32 totalCost = itemPrice * sOnlineStoreData->selectedQuantity;
+        
+        // Show current item name
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 6, 0, 0, color, TEXT_SKIP_DRAW, itemName);
+        
+        // Show unit price
+        ConvertIntToDecimalStringN(gStringVar1, itemPrice, STR_CONV_MODE_LEFT_ALIGN, 6);
+        StringExpandPlaceholders(gStringVar2, sText_StorePrice);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 22, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
+        
+        // Show quantity selection (highlighted)
+        ConvertIntToDecimalStringN(gStringVar1, sOnlineStoreData->selectedQuantity, STR_CONV_MODE_LEFT_ALIGN, 3);
+        StringExpandPlaceholders(gStringVar2, sText_StoreQuantity);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 38, 0, 0, highlightColor, TEXT_SKIP_DRAW, gStringVar2);
+        
+        // Show total cost
+        ConvertIntToDecimalStringN(gStringVar1, totalCost, STR_CONV_MODE_LEFT_ALIGN, 8);
+        StringExpandPlaceholders(gStringVar2, sText_StoreTotalCost);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 54, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
+        
+        // Show current money
+        ConvertIntToDecimalStringN(gStringVar1, GetMoney(&gSaveBlock1Ptr->money), STR_CONV_MODE_LEFT_ALIGN, 8);
+        StringExpandPlaceholders(gStringVar2, sText_StoreMoney);
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 70, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
+        
+        // Show instructions
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 8, 90, 0, 0, color, TEXT_SKIP_DRAW, sText_StoreQuantityInstructions);
+        
+        // Show if affordable
+        if (totalCost > GetMoney(&gSaveBlock1Ptr->money))
+        {
+            const u8 errorColor[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_GRAY};
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 8, 106, 0, 0, errorColor, TEXT_SKIP_DRAW, sText_StoreNotEnoughMoney);
+        }
+    }
+    
+    CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
+}
+
 static void Task_OnlineStoreMain(u8 taskId)
 {
     if (!gPaletteFade.active)
@@ -630,6 +692,14 @@ static void Task_OnlineStoreMain(u8 taskId)
             if (sOnlineStoreData->state == STORE_STATE_ITEM_ACTION_MENU)
             {
                 DrawItemActionMenu();
+            }
+            else if (sOnlineStoreData->state == STORE_STATE_QUANTITY_SELECT)
+            {
+                DrawQuantitySelection();
+            }
+            else if (sOnlineStoreData->state == STORE_STATE_CART_VIEW)
+            {
+                ShowCartContents();
             }
             else
             {
@@ -651,6 +721,12 @@ static void HandleStoreInput(u8 taskId)
             break;
         case STORE_STATE_ITEM_ACTION_MENU:
             HandleItemActionMenuInput(taskId);
+            break;
+        case STORE_STATE_QUANTITY_SELECT:
+            HandleQuantitySelectInput(taskId);
+            break;
+        case STORE_STATE_CART_VIEW:
+            HandleCartViewInput(taskId);
             break;
         default:
             HandleItemListInput(taskId);
@@ -769,37 +845,17 @@ static void HandleItemActionMenuInput(u8 taskId)
     else if (JOY_NEW(A_BUTTON))
     {
         // Handle action selection
-        const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
-        u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
-        
         switch (sOnlineStoreData->selectedActionIndex)
         {
             case STORE_ACTION_BUY_SINGLE:
-                if (PurchaseSingleItem(selectedItemId, 1))
-                {
-                    PlaySE(SE_SHOP);
-                    // Show purchase complete message
-                }
-                else
-                {
-                    PlaySE(SE_FAILURE);
-                    // Show not enough money message
-                }
-                sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+                sOnlineStoreData->state = STORE_STATE_QUANTITY_SELECT;
+                sOnlineStoreData->selectedQuantity = 1;
                 sOnlineStoreData->needsRefresh = TRUE;
                 break;
                 
             case STORE_ACTION_ADD_TO_CART:
-                if (AddItemToCart(selectedItemId, 1))
-                {
-                    PlaySE(SE_SELECT);
-                }
-                else
-                {
-                    PlaySE(SE_FAILURE);
-                    // Show cart full message
-                }
-                sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+                sOnlineStoreData->state = STORE_STATE_QUANTITY_SELECT;
+                sOnlineStoreData->selectedQuantity = 1;
                 sOnlineStoreData->needsRefresh = TRUE;
                 break;
                 
@@ -844,6 +900,106 @@ static void HandleItemActionMenuInput(u8 taskId)
         else
             sOnlineStoreData->selectedActionIndex = 0;
         sOnlineStoreData->needsRefresh = TRUE;
+    }
+}
+
+// Handle quantity selection input
+static void HandleQuantitySelectInput(u8 taskId)
+{
+    const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
+    u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
+    u32 itemPrice = GetStoreItemPrice(selectedItemId);
+    u32 totalCost = itemPrice * sOnlineStoreData->selectedQuantity;
+    u32 playerMoney = GetMoney(&gSaveBlock1Ptr->money);
+    
+    if (JOY_NEW(DPAD_UP))
+    {
+        if (sOnlineStoreData->selectedQuantity < MAX_ITEM_QUANTITY && totalCost + itemPrice <= playerMoney)
+        {
+            sOnlineStoreData->selectedQuantity++;
+            sOnlineStoreData->needsRefresh = TRUE;
+            PlaySE(SE_SELECT);
+        }
+    }
+    else if (JOY_NEW(DPAD_DOWN))
+    {
+        if (sOnlineStoreData->selectedQuantity > 1)
+        {
+            sOnlineStoreData->selectedQuantity--;
+            sOnlineStoreData->needsRefresh = TRUE;
+            PlaySE(SE_SELECT);
+        }
+    }
+    else if (JOY_NEW(DPAD_LEFT))
+    {
+        if (sOnlineStoreData->selectedQuantity > 10)
+            sOnlineStoreData->selectedQuantity -= 10;
+        else
+            sOnlineStoreData->selectedQuantity = 1;
+        sOnlineStoreData->needsRefresh = TRUE;
+        PlaySE(SE_SELECT);
+    }
+    else if (JOY_NEW(DPAD_RIGHT))
+    {
+        u16 maxAffordable = playerMoney / itemPrice;
+        u16 newQuantity = sOnlineStoreData->selectedQuantity + 10;
+        if (newQuantity <= maxAffordable && newQuantity <= MAX_ITEM_QUANTITY)
+            sOnlineStoreData->selectedQuantity = newQuantity;
+        else if (maxAffordable <= MAX_ITEM_QUANTITY)
+            sOnlineStoreData->selectedQuantity = maxAffordable;
+        else
+            sOnlineStoreData->selectedQuantity = MAX_ITEM_QUANTITY;
+        sOnlineStoreData->needsRefresh = TRUE;
+        PlaySE(SE_SELECT);
+    }
+    else if (JOY_NEW(A_BUTTON))
+    {
+        // Process the purchase based on the action that brought us here
+        if (sOnlineStoreData->selectedActionIndex == STORE_ACTION_BUY_SINGLE)
+        {
+            if (PurchaseSingleItem(selectedItemId, sOnlineStoreData->selectedQuantity))
+            {
+                PlaySE(SE_SHOP);
+                // Show purchase complete message
+            }
+            else
+            {
+                PlaySE(SE_FAILURE);
+                // Show error message
+            }
+        }
+        else if (sOnlineStoreData->selectedActionIndex == STORE_ACTION_ADD_TO_CART)
+        {
+            if (AddItemToCart(selectedItemId, sOnlineStoreData->selectedQuantity))
+            {
+                PlaySE(SE_SELECT);
+            }
+            else
+            {
+                PlaySE(SE_FAILURE);
+                // Show cart full message
+            }
+        }
+        sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+        sOnlineStoreData->needsRefresh = TRUE;
+    }
+    else if (JOY_NEW(B_BUTTON))
+    {
+        sOnlineStoreData->state = STORE_STATE_ITEM_ACTION_MENU;
+        sOnlineStoreData->needsRefresh = TRUE;
+        PlaySE(SE_EXIT);
+    }
+}
+
+// Handle cart view input
+static void HandleCartViewInput(u8 taskId)
+{
+    if (JOY_NEW(A_BUTTON) || JOY_NEW(B_BUTTON))
+    {
+        sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+        sOnlineStoreData->isViewingCart = FALSE;
+        sOnlineStoreData->needsRefresh = TRUE;
+        PlaySE(SE_EXIT);
     }
 }
 

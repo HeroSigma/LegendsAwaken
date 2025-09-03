@@ -59,6 +59,7 @@ struct OnlineStoreData
     u8 selectedActionIndex;
     u8 scrollOffset;
     u8 cartSize;
+    u16 selectedQuantity;
     bool8 isViewingCart;
     bool8 needsRefresh;
     struct StoreCartItem cart[MAX_CART_ITEMS];
@@ -83,5 +84,9 @@ const u8 *GetStoreCategoryName(u8 category);
 bool8 PurchaseCartItems(void);
 bool8 PurchaseSingleItem(u16 itemId, u16 quantity);
 u32 GetStoreItemPrice(u16 itemId);
+
+// Main store callbacks
+void CB2_OnlineStore(void);
+void Task_OnlineStore(u8 taskId);
 
 #endif // GUARD_ONLINE_STORE_H
