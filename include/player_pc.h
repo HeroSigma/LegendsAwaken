@@ -14,12 +14,14 @@ struct PlayerPCItemPageStruct
 
 extern struct PlayerPCItemPageStruct gPlayerPCItemPageInfo;
 
-extern const struct MenuAction gMailboxMailOptions[];
+// DISABLED: Mailbox functionality removed
+// extern const struct MenuAction gMailboxMailOptions[];
 
 void ReshowPlayerPC(u8 var);
-void CB2_PlayerPCExitBagMenu(void);
-void Mailbox_ReturnToMailListAfterDeposit(void);
-void NewGameInitPCItems(void);
+// DISABLED: Item Storage functionality removed
+// void CB2_PlayerPCExitBagMenu(void);
+// void Mailbox_ReturnToMailListAfterDeposit(void);
+// void NewGameInitPCItems(void);
 
 
 #endif //GUARD_PLAYER_PC_H

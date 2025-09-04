@@ -28,10 +28,13 @@
 #include "constants/battle_move_effects.h"
 #include "gba/io_reg.h"
 
+// DISABLED: Mailbox functionality removed
+/*
 EWRAM_DATA static u8 sMailboxWindowIds[MAILBOXWIN_COUNT] = {0};
 EWRAM_DATA static struct ListMenuItem *sMailboxList = NULL;
+*/
 
-static void MailboxMenu_MoveCursorFunc(s32, bool8, struct ListMenu *);
+// DISABLED: static void MailboxMenu_MoveCursorFunc(s32, bool8, struct ListMenu *);
 static void ConditionGraph_CalcRightHalf(struct ConditionGraph *);
 static void ConditionGraph_CalcLeftHalf(struct ConditionGraph *);
 static void MoveRelearnerCursorCallback(s32, bool8, struct ListMenu *);
@@ -40,6 +43,7 @@ static void SetNextConditionSparkle(struct Sprite *);
 static void SpriteCB_ConditionSparkle(struct Sprite *);
 static void ShowAllConditionSparkles(struct Sprite *);
 
+/* DISABLED: Mailbox functionality removed
 static const struct WindowTemplate sWindowTemplates_MailboxMenu[MAILBOXWIN_COUNT] =
 {
     [MAILBOXWIN_TITLE] = {
@@ -70,6 +74,7 @@ static const struct WindowTemplate sWindowTemplates_MailboxMenu[MAILBOXWIN_COUNT
         .baseBlock = 0x18
     }
 };
+*/
 
 static const u8 sPlayerNameTextColors[] =
 {
@@ -195,6 +200,8 @@ static const struct ListMenuTemplate sMoveRelearnerMovesListTemplate =
 // Mailbox menu
 //--------------
 
+// DISABLED: All Mailbox functionality removed
+/*
 bool8 MailboxMenu_Alloc(u8 count)
 {
     u8 i;
@@ -306,6 +313,7 @@ void MailboxMenu_Free(void)
 {
     Free(sMailboxList);
 }
+*/
 
 //---------------------------------------
 // Condition graph
