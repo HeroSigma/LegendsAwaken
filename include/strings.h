@@ -2554,6 +2554,7 @@ extern const u8 gText_SubQuest1_Name7[];
 extern const u8 gText_SubQuest1_Name8[];
 extern const u8 gText_SubQuest1_Name9[];
 extern const u8 gText_SubQuest1_Name10[];
+extern const u8 gText_SubQuest1_Name11[];
 
 extern const u8 gText_SubQuest2_Name1[];
 extern const u8 gText_SubQuest2_Name2[];
@@ -2586,6 +2587,7 @@ extern const u8 gText_SubQuest1_Desc7[];
 extern const u8 gText_SubQuest1_Desc8[];
 extern const u8 gText_SubQuest1_Desc9[];
 extern const u8 gText_SubQuest1_Desc10[];
+extern const u8 gText_SubQuest1_Desc11[];
 
 extern const u8 gText_SubQuest2_Desc1[];
 extern const u8 gText_SubQuest2_Desc2[];

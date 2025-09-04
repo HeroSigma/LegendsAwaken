@@ -1364,13 +1364,13 @@ const u8 gText_QuestAnnounce[] = _("The quest '{STR_VAR_1}'\nis now {STR_VAR_2}.
 const u8 gText_QuestComplete[] =_("complete");
 const u8 gText_QuestActive[] =_("active");
 
-//names
-const u8 gText_SideQuestName_1[] = _("Champion of Champions");
-const u8 gText_SideQuestName_2[] = _("Rings of Dimension");
-const u8 gText_SideQuestName_3[] = _("Rival's Journey");
-const u8 gText_SideQuestName_4[] = _("Wally's Path");
-const u8 gText_SideQuestName_5[] = _("Paradox Master");
-const u8 gText_SideQuestName_6[] = _("Ultra Beast Unleashed");
+//names - Season 1 Legends Missions
+const u8 gText_SideQuestName_1[] = _("Rifts Wake");
+const u8 gText_SideQuestName_2[] = _("Champion of Hoenn");
+const u8 gText_SideQuestName_3[] = _("Operation: Tide of Data");
+const u8 gText_SideQuestName_4[] = _("Operation: Ash & Ember");
+const u8 gText_SideQuestName_5[] = _("Operation: Signal Chain");
+const u8 gText_SideQuestName_6[] = _("Hoenn Circuit");
 const u8 gText_SideQuestName_7[] = _("Mythical Mythos");
 const u8 gText_SideQuestName_8[] = _("Time Paradox");
 const u8 gText_SideQuestName_9[] = _("Weather Wizard");
@@ -1396,13 +1396,13 @@ const u8 gText_SideQuestName_28[] = _("Form Finder");
 const u8 gText_SideQuestName_29[] = _("Altering Cave Conqueror");
 const u8 gText_SideQuestName_30[] = _("Champion's Rematch");
 
-//descriptions
-const u8 gText_SideQuestDesc_1[] = _("Defeat every major challenger.");
-const u8 gText_SideQuestDesc_2[] = _("Capture all legendary Pokémon.");
-const u8 gText_SideQuestDesc_3[] = _("Defeat your Rival in every key battle.");
-const u8 gText_SideQuestDesc_4[] = _("Help Wally fulfill his dream, defeating him in major battles.");
-const u8 gText_SideQuestDesc_5[] = _("Catch every Paradox Pokemon in the game.");
-const u8 gText_SideQuestDesc_6[] = _("Catch every Ultra Beast.");
+//descriptions - Season 1 Legends Missions
+const u8 gText_SideQuestDesc_1[] = _("Follow the unfolding story of the Hoenn region's mysterious rifts and legendary awakenings.");
+const u8 gText_SideQuestDesc_2[] = _("Challenge and defeat all 8 Gym Leaders and the Elite Four to become Hoenn's Champion.");
+const u8 gText_SideQuestDesc_3[] = _("Assist Devon researchers and Captain Stern against Team Aqua's data theft operations.");
+const u8 gText_SideQuestDesc_4[] = _("Investigate Team Magma's activities at the meteor crash site and hear their true motives.");
+const u8 gText_SideQuestDesc_5[] = _("Stop Team Plasma's weather data collection and confront Colress at Mossdeep Lab.");
+const u8 gText_SideQuestDesc_6[] = _("Battle your rivals throughout Hoenn and prove your superiority in key encounters.");
 const u8 gText_SideQuestDesc_7[] = _("Catch every Mythical Pokemon available.");
 const u8 gText_SideQuestDesc_8[] = _("Use a full team of Paradox Pokemon and win.");
 const u8 gText_SideQuestDesc_9[] = _("Win battles under every weather condition.");
@@ -1428,13 +1428,13 @@ const u8 gText_SideQuestDesc_28[] = _("Obtain every Pokemon form available.");
 const u8 gText_SideQuestDesc_29[] = _("Catch a Pokemon from every form in Altering Cave.");
 const u8 gText_SideQuestDesc_30[] = _("Rematch Steven in the postgame and win.");
 
-//completed quest description
-const u8 gText_SideQuestDoneDesc_1[] = _("You earned every battle prize.");
-const u8 gText_SideQuestDoneDesc_2[] = _("Legends from all realms obey.");
-const u8 gText_SideQuestDoneDesc_3[] = _("Your rival accepts defeat.");
-const u8 gText_SideQuestDoneDesc_4[] = _("Wally achieved his dream.");
-const u8 gText_SideQuestDoneDesc_5[] = _("All Paradox Pokémon caught.");
-const u8 gText_SideQuestDoneDesc_6[] = _("Every Ultra Beast secured.");
+//completed quest description - Season 1 Legends Missions
+const u8 gText_SideQuestDoneDesc_1[] = _("The truth about Hoenn's legendary rifts has been revealed.");
+const u8 gText_SideQuestDoneDesc_2[] = _("You are now the Champion of the Hoenn League!");
+const u8 gText_SideQuestDoneDesc_3[] = _("Team Aqua's data theft operation has been stopped. Devon's research is secure.");
+const u8 gText_SideQuestDoneDesc_4[] = _("Team Magma's true agenda at the meteor site has been uncovered.");
+const u8 gText_SideQuestDoneDesc_5[] = _("Team Plasma's weather monitoring network has been dismantled.");
+const u8 gText_SideQuestDoneDesc_6[] = _("Your rivals acknowledge your superior skill as a trainer.");
 const u8 gText_SideQuestDoneDesc_7[] = _("All Mythicals captured.");
 const u8 gText_SideQuestDoneDesc_8[] = _("Paradox team triumphed.");
 const u8 gText_SideQuestDoneDesc_9[] = _("You mastered every weather.");
@@ -1492,30 +1492,34 @@ const u8 gText_SideQuestMap28[] = _("Navel Rock");
 const u8 gText_SideQuestMap29[] = _("Navel Rock");
 const u8 gText_SideQuestMap30[] = _("Victory Road B2F");
 
-//subquests
-const u8 gText_SubQuest1_Name1[] = _("Defeat Roxanne");
-const u8 gText_SubQuest1_Name2[] = _("Defeat Brawly");
-const u8 gText_SubQuest1_Name3[] = _("Defeat Wattson");
-const u8 gText_SubQuest1_Name4[] = _("Defeat Flannery");
-const u8 gText_SubQuest1_Name5[] = _("Defeat Norman");
-const u8 gText_SubQuest1_Name6[] = _("Defeat Winona");
-const u8 gText_SubQuest1_Name7[] = _("Defeat Tate & Liza");
-const u8 gText_SubQuest1_Name8[] = _("Defeat Juan");
-const u8 gText_SubQuest1_Name9[] = _("Defeat Elite Four");
-const u8 gText_SubQuest1_Name10[] = _("Defeat Steven");
+//subquests - Season 1 Legends Missions
+// S1-01 Main Story: Rifts Wake
+const u8 gText_SubQuest1_Name1[] = _("Talk to Prof. Birch");
+const u8 gText_SubQuest1_Name2[] = _("Watch TV Report");
+const u8 gText_SubQuest1_Name3[] = _("Check Devon Researcher");
+const u8 gText_SubQuest1_Name4[] = _("Report to Devon HQ");
+const u8 gText_SubQuest1_Name5[] = _("Meet Captain Stern");
+const u8 gText_SubQuest1_Name6[] = _("Visit Meteor Site");
+const u8 gText_SubQuest1_Name7[] = _("Stop Weather Intrusion");
+const u8 gText_SubQuest1_Name8[] = _("Meet Colress");
+const u8 gText_SubQuest1_Name9[] = _("Deliver Birch's Letter");
+const u8 gText_SubQuest1_Name10[] = _("Challenge Hoenn League");
+const u8 gText_SubQuest1_Name11[] = _("Speak to Elm");
 
-const u8 gText_SubQuest2_Name1[] = _("Kanto Legends");
-const u8 gText_SubQuest2_Name2[] = _("Johto Legends");
-const u8 gText_SubQuest2_Name3[] = _("Hoenn Legends");
-const u8 gText_SubQuest2_Name4[] = _("Sinnoh Legends");
-const u8 gText_SubQuest2_Name5[] = _("Unova Legends");
-const u8 gText_SubQuest2_Name6[] = _("Kalos Legends");
-const u8 gText_SubQuest2_Name7[] = _("Alolan Legends");
-const u8 gText_SubQuest2_Name8[] = _("Galarian Legends");
-const u8 gText_SubQuest2_Name9[] = _("Paldean Legends");
-const u8 gText_SubQuest2_Name11[] = _("Mask Collector");
-const u8 gText_SubQuest2_Name12[] = _("Gallade/Gardevoir Champion");
-const u8 gText_SubQuest2_Name13[] = _("Hisuian Heritage");
+// S1-02 League: Champion of Hoenn sub-quests
+const u8 gText_SubQuest2_Name1[] = _("Defeat Roxanne");
+const u8 gText_SubQuest2_Name2[] = _("Defeat Brawly");
+const u8 gText_SubQuest2_Name3[] = _("Defeat Wattson");
+const u8 gText_SubQuest2_Name4[] = _("Defeat Flannery");
+const u8 gText_SubQuest2_Name5[] = _("Defeat Norman");
+const u8 gText_SubQuest2_Name6[] = _("Defeat Winona");
+const u8 gText_SubQuest2_Name7[] = _("Defeat Tate & Liza");
+const u8 gText_SubQuest2_Name8[] = _("Defeat Juan");
+const u8 gText_SubQuest2_Name9[] = _("Defeat E4 Sidney");
+const u8 gText_SubQuest2_Name10[] = _("Defeat E4 Phoebe");
+const u8 gText_SubQuest2_Name11[] = _("Defeat E4 Glacia");
+const u8 gText_SubQuest2_Name12[] = _("Defeat E4 Drake");
+const u8 gText_SubQuest2_Name13[] = _("Defeat Champion");
 const u8 gText_SubQuest2_Name14[] = _("Beast Tamer");
 const u8 gText_SubQuest2_Name15[] = _("Ancient Lore");
 const u8 gText_SubQuest2_Name16[] = _("Timeline Guardian");
@@ -1524,29 +1528,33 @@ const u8 gText_SubQuest2_Name18[] = _("Eevee Lineage");
 const u8 gText_SubQuest2_Name19[] = _("Lucky Streak");
 const u8 gText_SubQuest2_Name20[] = _("Collector's Spirit");
 
-const u8 gText_SubQuest1_Desc1[] = _("Earn the Mega Ring.");
-const u8 gText_SubQuest1_Desc2[] = _("Receive the Tera Orb.");
-const u8 gText_SubQuest1_Desc3[] = _("Obtain the Dynamax Band.");
-const u8 gText_SubQuest1_Desc4[] = _("Get the Z-Power Ring.");
-const u8 gText_SubQuest1_Desc5[] = _("Gain the Shiny Charm.");
-const u8 gText_SubQuest1_Desc6[] = _("Obtain the Oval Charm.");
-const u8 gText_SubQuest1_Desc7[] = _("Receive the Exp Charm.");
-const u8 gText_SubQuest1_Desc8[] = _("Earn a Shiny Poipole.");
-const u8 gText_SubQuest1_Desc9[] = _("Claim rare Hoenn tickets.");
-const u8 gText_SubQuest1_Desc10[] = _("Get a Shiny Metagross.");
+// S1-01 Main Story descriptions
+const u8 gText_SubQuest1_Desc1[] = _("Go to Littleroot Lab and speak with Birch.");
+const u8 gText_SubQuest1_Desc2[] = _("Return home and watch the world report on TV.");
+const u8 gText_SubQuest1_Desc3[] = _("Check on the Devon Researcher in Petalburg Woods.");
+const u8 gText_SubQuest1_Desc4[] = _("Report to Devon HQ in Rustboro City.");
+const u8 gText_SubQuest1_Desc5[] = _("Meet Captain Stern at the Slateport Museum.");
+const u8 gText_SubQuest1_Desc6[] = _("Visit the meteor site and hear the Magma briefing.");
+const u8 gText_SubQuest1_Desc7[] = _("Go to the Weather Institute and stop the intrusion.");
+const u8 gText_SubQuest1_Desc8[] = _("Meet Colress at the Mossdeep Lab.");
+const u8 gText_SubQuest1_Desc9[] = _("Deliver Birch's Letter to Steven at Granite Cave.");
+const u8 gText_SubQuest1_Desc10[] = _("Challenge the Hoenn League and become Champion.");
+const u8 gText_SubQuest1_Desc11[] = _("After becoming Champion, speak to Professor Elm.");
 
-const u8 gText_SubQuest2_Desc1[] = _("Reward: Mewtwonite Y");
-const u8 gText_SubQuest2_Desc2[] = _("Reward: Four Z-Crystals");
-const u8 gText_SubQuest2_Desc3[] = _("Reward: Hoenn stones");
-const u8 gText_SubQuest2_Desc4[] = _("Reward: Orbs and Plates");
-const u8 gText_SubQuest2_Desc5[] = _("Reward: Splicers & Glass");
-const u8 gText_SubQuest2_Desc6[] = _("Reward: Diancite & Catalog");
-const u8 gText_SubQuest2_Desc7[] = _("Reward: Memories & Z-Crystal");
-const u8 gText_SubQuest2_Desc8[] = _("Reward: Rusted relics & Reins");
-const u8 gText_SubQuest2_Desc9[] = _("Reward: Paldean treasure");
-const u8 gText_SubQuest2_Desc11[] = _("Obtain all three Ogerpon Masks.");
-const u8 gText_SubQuest2_Desc12[] = _("Win five battles each using Gallade and Gardevoir.");
-const u8 gText_SubQuest2_Desc13[] = _("Catch all Hisuian Pokemon.");
+// S1-02 League descriptions
+const u8 gText_SubQuest2_Desc1[] = _("Defeat Roxanne and receive the Mega Ring.");
+const u8 gText_SubQuest2_Desc2[] = _("Defeat Brawly and receive the Z-Power Bracelet.");
+const u8 gText_SubQuest2_Desc3[] = _("Defeat Wattson and receive the Tera Orb.");
+const u8 gText_SubQuest2_Desc4[] = _("Defeat Flannery and receive the Dynamax Band.");
+const u8 gText_SubQuest2_Desc5[] = _("Defeat Norman and receive Normal Gem x3.");
+const u8 gText_SubQuest2_Desc6[] = _("Defeat Winona and receive Flying Gem x3.");
+const u8 gText_SubQuest2_Desc7[] = _("Defeat Tate & Liza and receive Psychic Gem x3.");
+const u8 gText_SubQuest2_Desc8[] = _("Defeat Juan and receive Water Gem x3.");
+const u8 gText_SubQuest2_Desc9[] = _("Defeat Elite Four Sidney and receive Eon Ticket.");
+const u8 gText_SubQuest2_Desc10[] = _("Defeat Elite Four Phoebe and receive Mystic Ticket.");
+const u8 gText_SubQuest2_Desc11[] = _("Defeat Elite Four Glacia and receive Aurora Ticket.");
+const u8 gText_SubQuest2_Desc12[] = _("Defeat Elite Four Drake and receive Old Sea Map.");
+const u8 gText_SubQuest2_Desc13[] = _("Defeat the Champion and trigger the next story step.");
 const u8 gText_SubQuest2_Desc14[] = _("Win battles with three Ultra Beasts on your team.");
 const u8 gText_SubQuest2_Desc15[] = _("Catch all legend-inspired Pokemon.");
 const u8 gText_SubQuest2_Desc16[] = _("Catch both Dialga and Palkia.");

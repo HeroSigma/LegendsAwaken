@@ -245,14 +245,16 @@ static const u8 sText_AZ[] = _(" A-Z");
 
 //Declaration of subquest structures. Edits to subquests are made here.
 #define sub_quest(i, n, d, m, s, st, t) {.id = i, .name = n, .desc = d, .map = m, .sprite = s, .spritetype = st, .type = t}
-static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
+
+// S1-01 Main Story: Rifts Wake sub-quests
+static const struct SubQuest sSubQuests1[QUEST_S1_01_SUB_COUNT] =
 {
 	sub_quest(
 	      0,
 	      gText_SubQuest1_Name1,
 	      gText_SubQuest1_Desc1,
 	      gText_SideQuestMap1,
-              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJ_EVENT_GFX_PROF_BIRCH,
               OBJECT,
 	      sText_Found
 	),
@@ -262,7 +264,7 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name2,
 	      gText_SubQuest1_Desc2,
 	      gText_SideQuestMap2,
-              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJ_EVENT_GFX_MOM,
               OBJECT,
 	      sText_Found
 	),
@@ -272,7 +274,7 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name3,
 	      gText_SubQuest1_Desc3,
 	      gText_SideQuestMap3,
-              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJ_EVENT_GFX_DEVON_EMPLOYEE,
               OBJECT,
 	      sText_Found
 	),
@@ -282,7 +284,7 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name4,
 	      gText_SubQuest1_Desc4,
 	      gText_SideQuestMap4,
-              OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+              OBJ_EVENT_GFX_DEVON_EMPLOYEE,
               OBJECT,
 	      sText_Found
 	),
@@ -292,8 +294,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name5,
 	      gText_SubQuest1_Desc5,
 	      gText_SideQuestMap5,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              OBJ_EVENT_GFX_SAILOR,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -302,8 +304,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name6,
 	      gText_SubQuest1_Desc6,
 	      gText_SideQuestMap6,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              OBJ_EVENT_GFX_MAGMA_MEMBER_M,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -312,8 +314,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name7,
 	      gText_SubQuest1_Desc7,
 	      gText_SideQuestMap7,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              OBJ_EVENT_GFX_AQUA_MEMBER_M,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -322,8 +324,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name8,
 	      gText_SubQuest1_Desc8,
 	      gText_SideQuestMap8,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              OBJ_EVENT_GFX_SCIENTIST_1,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -332,8 +334,8 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name9,
 	      gText_SubQuest1_Desc9,
 	      gText_SideQuestMap9,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              OBJ_EVENT_GFX_STEVEN,
+              OBJECT,
 	      sText_Found
 	),
 
@@ -342,183 +344,229 @@ static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 	      gText_SubQuest1_Name10,
 	      gText_SubQuest1_Desc10,
 	      gText_SideQuestMap10,
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
+              OBJ_EVENT_GFX_WALLACE,
+              OBJECT,
 	      sText_Found
 	),
+
+	sub_quest(
+	      10,
+	      gText_SubQuest1_Name11,
+	      gText_SubQuest1_Desc11,
+	      gText_SideQuestMap11,
+              OBJ_EVENT_GFX_PROF_ELM,
+              OBJECT,
+	      sText_Found
+	)
 };
 
-static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
+// S1-02 League: Champion of Hoenn sub-quests
+static const struct SubQuest sSubQuests2[QUEST_S1_02_SUB_COUNT] =
 {
-
         sub_quest(
-              10,
+              11,
+              gText_SubQuest2_Name1,
+              gText_SubQuest2_Desc1,
+              gText_SideQuestMap1,
+              OBJ_EVENT_GFX_ROXANNE,
+              OBJECT,
+              sText_Found
+        ),
+        
+        sub_quest(
+              12,
+              gText_SubQuest2_Name2,
+              gText_SubQuest2_Desc2,
+              gText_SideQuestMap2,
+              OBJ_EVENT_GFX_BRAWLY,
+              OBJECT,
+              sText_Found
+        ),
+        
+        sub_quest(
+              13,
+              gText_SubQuest2_Name3,
+              gText_SubQuest2_Desc3,
+              gText_SideQuestMap3,
+              OBJ_EVENT_GFX_WATTSON,
+              OBJECT,
+              sText_Found
+        ),
+        
+        sub_quest(
+              14,
+              gText_SubQuest2_Name4,
+              gText_SubQuest2_Desc4,
+              gText_SideQuestMap4,
+              OBJ_EVENT_GFX_FLANNERY,
+              OBJECT,
+              sText_Found
+        ),
+        
+        sub_quest(
+              15,
+              gText_SubQuest2_Name5,
+              gText_SubQuest2_Desc5,
+              gText_SideQuestMap5,
+              OBJ_EVENT_GFX_NORMAN,
+              OBJECT,
+              sText_Found
+        ),
+        
+        sub_quest(
+              16,
+              gText_SubQuest2_Name6,
+              gText_SubQuest2_Desc6,
+              gText_SideQuestMap6,
+              OBJ_EVENT_GFX_WINONA,
+              OBJECT,
+              sText_Found
+        ),
+        
+        sub_quest(
+              17,
+              gText_SubQuest2_Name7,
+              gText_SubQuest2_Desc7,
+              gText_SideQuestMap7,
+              OBJ_EVENT_GFX_TATE,
+              OBJECT,
+              sText_Found
+        ),
+        
+        sub_quest(
+              18,
+              gText_SubQuest2_Name8,
+              gText_SubQuest2_Desc8,
+              gText_SideQuestMap8,
+              OBJ_EVENT_GFX_JUAN,
+              OBJECT,
+              sText_Found
+        ),
+        
+        sub_quest(
+              19,
+              gText_SubQuest2_Name9,
+              gText_SubQuest2_Desc9,
+              gText_SideQuestMap9,
+              OBJ_EVENT_GFX_SIDNEY,
+              OBJECT,
+              sText_Found
+        ),
+        
+        sub_quest(
+              20,
+              gText_SubQuest2_Name10,
+              gText_SubQuest2_Desc10,
+              gText_SideQuestMap10,
+              OBJ_EVENT_GFX_PHOEBE,
+              OBJECT,
+              sText_Found
+        ),
+        
+        sub_quest(
+              21,
               gText_SubQuest2_Name11,
               gText_SubQuest2_Desc11,
               gText_SideQuestMap11,
-              OBJ_EVENT_GFX_WALLY,
+              OBJ_EVENT_GFX_GLACIA,
               OBJECT,
               sText_Found
         ),
-
+        
         sub_quest(
-              11,
+              22,
               gText_SubQuest2_Name12,
               gText_SubQuest2_Desc12,
               gText_SideQuestMap12,
-              OBJ_EVENT_GFX_WALLY,
+              OBJ_EVENT_GFX_DRAKE,
               OBJECT,
               sText_Found
         ),
-
+        
         sub_quest(
-              12,
+              23,
               gText_SubQuest2_Name13,
               gText_SubQuest2_Desc13,
               gText_SideQuestMap13,
-              OBJ_EVENT_GFX_WALLY,
+              OBJ_EVENT_GFX_STEVEN,
               OBJECT,
               sText_Found
-        ),
-
-        sub_quest(
-              13,
-              gText_SubQuest2_Name14,
-              gText_SubQuest2_Desc14,
-              gText_SideQuestMap14,
-              OBJ_EVENT_GFX_WALLY,
-              OBJECT,
-              sText_Found
-        ),
-
-        sub_quest(
-              14,
-              gText_SubQuest2_Name15,
-              gText_SubQuest2_Desc15,
-              gText_SideQuestMap15,
-              OBJ_EVENT_GFX_WALLY,
-              OBJECT,
-              sText_Found
-        ),
-
-        sub_quest(
-              15,
-              gText_SubQuest2_Name16,
-              gText_SubQuest2_Desc16,
-              gText_SideQuestMap16,
-              OBJ_EVENT_GFX_WALLY,
-              OBJECT,
-              sText_Found
-        ),
-
-        sub_quest(
-              16,
-              gText_SubQuest2_Name17,
-              gText_SubQuest2_Desc17,
-              gText_SideQuestMap17,
-              OBJ_EVENT_GFX_WALLY,
-              OBJECT,
-              sText_Found
-        ),
-
-        sub_quest(
-              17,
-              gText_SubQuest2_Name18,
-              gText_SubQuest2_Desc18,
-              gText_SideQuestMap18,
-              OBJ_EVENT_GFX_WALLY,
-              OBJECT,
-              sText_Found
-        ),
-
-        sub_quest(
-              18,
-              gText_SubQuest2_Name19,
-              gText_SubQuest2_Desc19,
-              gText_SideQuestMap19,
-              OBJ_EVENT_GFX_WALLY,
-              OBJECT,
-              sText_Found
-        ),
-
-        sub_quest(
-              19,
-              gText_SubQuest2_Name20,
-              gText_SubQuest2_Desc20,
-              gText_SideQuestMap20,
-              OBJ_EVENT_GFX_WALLY,
-              OBJECT,
-              sText_Found
-        ),
+        )
 };
 
-////////////////////////END SUBQUEST CUSTOMIZATION/////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
+//////////////////////BEGIN QUEST CUSTOMIZATION////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////
-////////////////////////BEGIN QUEST CUSTOMIZATION//////////////////////////////
+//////////////////////BEGIN QUEST CUSTOMIZATION////////////////////////////////
 
 //Declaration of side quest structures. Edits to quests are made here.
 #define side_quest(n, d, dd, m, s, st, sq, ns) {.name = n, .desc = d, .donedesc = dd, .map = m, .sprite = s, .spritetype = st, .subquests = sq, .numSubquests = ns}
 static const struct SideQuest sSideQuests[QUEST_COUNT] =
 {
+        // S1–01 — Main Story: Hoenn • "Rifts Wake"
         side_quest(
               gText_SideQuestName_1,
               gText_SideQuestDesc_1,
               gText_SideQuestDoneDesc_1,
               gText_SideQuestMap1,
-              OBJ_EVENT_GFX_STEVEN,
+              OBJ_EVENT_GFX_PROF_BIRCH,
               OBJECT,
               sSubQuests1,
-              QUEST_1_SUB_COUNT
+              QUEST_S1_01_SUB_COUNT
         ),
+        // S1–02 — League: "Champion of Hoenn"
 	side_quest(
 	      gText_SideQuestName_2,
 	      gText_SideQuestDesc_2,
 	      gText_SideQuestDoneDesc_2,
 	      gText_SideQuestMap2,
-              SPECIES_HOOPA,
-              PKMN,
+              OBJ_EVENT_GFX_WALLACE,
+              OBJECT,
               sSubQuests2,
-              QUEST_2_SUB_COUNT
+              QUEST_S1_02_SUB_COUNT
 	),
+        // S1–03 — Faction (Aqua): "Operation: Tide of Data"
 	side_quest(
 	      gText_SideQuestName_3,
 	      gText_SideQuestDesc_3,
 	      gText_SideQuestDoneDesc_3,
 	      gText_SideQuestMap3,
-          OBJ_EVENT_GFX_RIVAL_MAY_NORMAL,
+          OBJ_EVENT_GFX_AQUA_MEMBER_M,
               OBJECT,
               NULL,
               0
 	),
+        // S1–04 — Faction (Magma): "Operation: Ash & Ember"
 	side_quest(
 	      gText_SideQuestName_4,
 	      gText_SideQuestDesc_4,
 	      gText_SideQuestDoneDesc_4,
 	      gText_SideQuestMap4,
-	      OBJ_EVENT_GFX_WALLY,
+	      OBJ_EVENT_GFX_MAGMA_MEMBER_M,
 	      OBJECT,
 	      NULL,
 	      0
 	),
+        // S1–05 — Faction (Plasma/Colress): "Operation: Signal Chain"
 	side_quest(
 	      gText_SideQuestName_5,
 	      gText_SideQuestDesc_5,
 	      gText_SideQuestDoneDesc_5,
 	      gText_SideQuestMap5,
-	      SPECIES_CELEBI,
-	      PKMN,
+	      OBJ_EVENT_GFX_SCIENTIST_1,
+	      OBJECT,
 	      NULL,
 	      0
 	),
+        // S1–06 — Rivals: "Hoenn Circuit"
 	side_quest(
 	      gText_SideQuestName_6,
 	      gText_SideQuestDesc_6,
 	      gText_SideQuestDoneDesc_6,
 	      gText_SideQuestMap6,
-	      SPECIES_SOLGALEO,
-	      PKMN,
+	      OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL,
+	      OBJECT,
 	      NULL,
 	      0
 	),

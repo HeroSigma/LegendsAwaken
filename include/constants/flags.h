@@ -1508,12 +1508,15 @@
 #define FLAG_RECEIVED_POKEDEX                       FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 
 #define FLAG_SYS_QUEST_MENU_GET                     (SYSTEM_FLAGS + 0x85) // QUEST MENU
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
-#define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
-#define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
-#define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
+
+// Season 1 Legends Missions Flags
+#define FLAG_MISS_S1_LEAGUE                         (SYSTEM_FLAGS + 0x86) // S1-02 League Mission started
+#define FLAG_S1_01_BIRCH_LETTER_RECEIVED            (SYSTEM_FLAGS + 0x87) // Received Birch's letter for Steven
+#define FLAG_S1_03_AQUA_MUSEUM_COMPLETE             (SYSTEM_FLAGS + 0x88) // Completed Aqua Museum encounter
+#define FLAG_S1_04_MAGMA_BRIEFING_HEARD             (SYSTEM_FLAGS + 0x89) // Heard Maxie's briefing at meteor site
+#define FLAG_S1_05_WEATHER_INSTITUTE_SIGNAL         (SYSTEM_FLAGS + 0x8A) // Signal Chain mission at Weather Institute
+#define FLAG_S1_06_ROUTE_103_RIVALS_BATTLED         (SYSTEM_FLAGS + 0x8B) // Battled both rivals on Route 103
+
 #define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
 #define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag
 #define FLAG_UNUSED_0x8EE                           (SYSTEM_FLAGS + 0x8E) // Unused Flag
