@@ -93,14 +93,17 @@ struct ItemSlot NONNULL BagPocket_GetSlotData(struct BagPocket *pocket, u32 pock
     switch (pocket->id)
     {
     case POCKET_ITEMS:
-    case POCKET_MEDICINE:
+    case POCKET_KEY_ITEMS:
     case POCKET_POKE_BALLS:
-    case POCKET_BATTLE_ITEMS:
-    case POCKET_TRAINING_ITEMS:
-    case POCKET_FORM_CHANGING_ITEMS:
     case POCKET_TM_HM:
     case POCKET_BERRIES:
-    case POCKET_KEY_ITEMS:
+    case POCKET_MEDICINE:
+    case POCKET_BATTLE_ITEMS:
+    case POCKET_TRAINING_ITEMS:
+    case POCKET_EVOLUTIONARY_ITEMS:
+    case POCKET_FORM_CHANGING_ITEMS:
+    case POCKET_MEGASTONES:
+    case POCKET_Z_CRYSTALS:
     return BagPocket_GetSlotDataGeneric(pocket, pocketPos);
     case POCKET_DUMMY:
         return BagPocket_GetSlotDataPC(pocket, pocketPos);
@@ -120,14 +123,17 @@ void NONNULL BagPocket_SetSlotData(struct BagPocket *pocket, u32 pocketPos, stru
     switch (pocket->id)
     {
     case POCKET_ITEMS:
-    case POCKET_MEDICINE:
+    case POCKET_KEY_ITEMS:
     case POCKET_POKE_BALLS:
-    case POCKET_BATTLE_ITEMS:
-    case POCKET_TRAINING_ITEMS:
-    case POCKET_FORM_CHANGING_ITEMS:
     case POCKET_TM_HM:
     case POCKET_BERRIES:
-    case POCKET_KEY_ITEMS:
+    case POCKET_MEDICINE:
+    case POCKET_BATTLE_ITEMS:
+    case POCKET_TRAINING_ITEMS:
+    case POCKET_EVOLUTIONARY_ITEMS:
+    case POCKET_FORM_CHANGING_ITEMS:
+    case POCKET_MEGASTONES:
+    case POCKET_Z_CRYSTALS:
     BagPocket_SetSlotDataGeneric(pocket, pocketPos, newSlot);
         break;
     case POCKET_DUMMY:
@@ -157,21 +163,17 @@ void SetBagItemsPointers(void)
     gBagPockets[POCKET_MEDICINE].capacity = BAG_MEDICINE_COUNT;
     gBagPockets[POCKET_MEDICINE].id = POCKET_MEDICINE;
 
-    gBagPockets[POCKET_POKE_BALLS].itemSlots = gSaveBlock1Ptr->bag.pokeBalls;
-    gBagPockets[POCKET_POKE_BALLS].capacity = BAG_POKEBALLS_COUNT;
-    gBagPockets[POCKET_POKE_BALLS].id = POCKET_POKE_BALLS;
-
     gBagPockets[POCKET_BATTLE_ITEMS].itemSlots = gSaveBlock1Ptr->bag.battleItems;
     gBagPockets[POCKET_BATTLE_ITEMS].capacity = BAG_BATTLE_COUNT;
     gBagPockets[POCKET_BATTLE_ITEMS].id = POCKET_BATTLE_ITEMS;
 
-    gBagPockets[POCKET_TRAINING_ITEMS].itemSlots = gSaveBlock1Ptr->bag.trainingItems;
-    gBagPockets[POCKET_TRAINING_ITEMS].capacity = BAG_TRAINING_COUNT;
-    gBagPockets[POCKET_TRAINING_ITEMS].id = POCKET_TRAINING_ITEMS;
+    gBagPockets[POCKET_KEY_ITEMS].itemSlots = gSaveBlock1Ptr->bag.keyItems;
+    gBagPockets[POCKET_KEY_ITEMS].capacity = BAG_KEYITEMS_COUNT;
+    gBagPockets[POCKET_KEY_ITEMS].id = POCKET_KEY_ITEMS;
 
-    gBagPockets[POCKET_FORM_CHANGING_ITEMS].itemSlots = gSaveBlock1Ptr->bag.formChangingItems;
-    gBagPockets[POCKET_FORM_CHANGING_ITEMS].capacity = BAG_FORM_CHANGING_COUNT;
-    gBagPockets[POCKET_FORM_CHANGING_ITEMS].id = POCKET_FORM_CHANGING_ITEMS;
+    gBagPockets[POCKET_POKE_BALLS].itemSlots = gSaveBlock1Ptr->bag.pokeBalls;
+    gBagPockets[POCKET_POKE_BALLS].capacity = BAG_POKEBALLS_COUNT;
+    gBagPockets[POCKET_POKE_BALLS].id = POCKET_POKE_BALLS;
 
     gBagPockets[POCKET_TM_HM].itemSlots = gSaveBlock1Ptr->bag.TMsHMs;
     gBagPockets[POCKET_TM_HM].capacity = BAG_TMHM_COUNT;
@@ -181,9 +183,25 @@ void SetBagItemsPointers(void)
     gBagPockets[POCKET_BERRIES].capacity = BAG_BERRIES_COUNT;
     gBagPockets[POCKET_BERRIES].id = POCKET_BERRIES;
 
-    gBagPockets[POCKET_KEY_ITEMS].itemSlots = gSaveBlock1Ptr->bag.keyItems;
-    gBagPockets[POCKET_KEY_ITEMS].capacity = BAG_KEYITEMS_COUNT;
-    gBagPockets[POCKET_KEY_ITEMS].id = POCKET_KEY_ITEMS;
+    gBagPockets[POCKET_TRAINING_ITEMS].itemSlots = gSaveBlock1Ptr->bag.trainingItems;
+    gBagPockets[POCKET_TRAINING_ITEMS].capacity = BAG_TRAINING_COUNT;
+    gBagPockets[POCKET_TRAINING_ITEMS].id = POCKET_TRAINING_ITEMS;
+
+    gBagPockets[POCKET_EVOLUTIONARY_ITEMS].itemSlots = gSaveBlock1Ptr->bag.evolutionaryItems;
+    gBagPockets[POCKET_EVOLUTIONARY_ITEMS].capacity = BAG_EVOLUTIONARY_COUNT;
+    gBagPockets[POCKET_EVOLUTIONARY_ITEMS].id = POCKET_EVOLUTIONARY_ITEMS;
+
+    gBagPockets[POCKET_FORM_CHANGING_ITEMS].itemSlots = gSaveBlock1Ptr->bag.formChangingItems;
+    gBagPockets[POCKET_FORM_CHANGING_ITEMS].capacity = BAG_FORM_CHANGING_COUNT;
+    gBagPockets[POCKET_FORM_CHANGING_ITEMS].id = POCKET_FORM_CHANGING_ITEMS;
+
+    gBagPockets[POCKET_MEGASTONES].itemSlots = gSaveBlock1Ptr->bag.megaStones;
+    gBagPockets[POCKET_MEGASTONES].capacity = BAG_MEGASTONES_COUNT;
+    gBagPockets[POCKET_MEGASTONES].id = POCKET_MEGASTONES;
+
+    gBagPockets[POCKET_Z_CRYSTALS].itemSlots = gSaveBlock1Ptr->bag.zCrystals;
+    gBagPockets[POCKET_Z_CRYSTALS].capacity = BAG_Z_CRYSTALS_COUNT;
+    gBagPockets[POCKET_Z_CRYSTALS].id = POCKET_Z_CRYSTALS;
 }
 
 u8 *CopyItemName(u16 itemId, u8 *dst)
