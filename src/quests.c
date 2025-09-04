@@ -570,246 +570,31 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 	      NULL,
 	      0
 	),
-	side_quest(
-	      gText_SideQuestName_7,
-	      gText_SideQuestDesc_7,
-	      gText_SideQuestDoneDesc_7,
-	      gText_SideQuestMap7,
-	      SPECIES_VICTINI,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_8,
-	      gText_SideQuestDesc_8,
-	      gText_SideQuestDoneDesc_8,
-	      gText_SideQuestMap8,
-	      SPECIES_TERAPAGOS,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_9,
-	      gText_SideQuestDesc_9,
-	      gText_SideQuestDoneDesc_9,
-	      gText_SideQuestMap9,
-	      SPECIES_RAYQUAZA,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_10,
-	      gText_SideQuestDesc_10,
-	      gText_SideQuestDoneDesc_10,
-	      gText_SideQuestMap10,
-	      SPECIES_EEVEE,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_11,
-	      gText_SideQuestDesc_11,
-	      gText_SideQuestDoneDesc_11,
-	      gText_SideQuestMap11,
-	      OBJ_EVENT_GFX_NORMAN,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_12,
-	      gText_SideQuestDesc_12,
-	      gText_SideQuestDoneDesc_12,
-	      gText_SideQuestMap12,
-	      SPECIES_MEOWTH,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_13,
-	      gText_SideQuestDesc_13,
-	      gText_SideQuestDoneDesc_13,
-	      gText_SideQuestMap13,
-	      OBJ_EVENT_GFX_MOM,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_14,
-	      gText_SideQuestDesc_14,
-	      gText_SideQuestDoneDesc_14,
-	      gText_SideQuestMap14,
-	      SPECIES_GREEDENT,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_15,
-	      gText_SideQuestDesc_15,
-	      gText_SideQuestDoneDesc_15,
-	      gText_SideQuestMap15,
-	      SPECIES_AERODACTYL,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_16,
-	      gText_SideQuestDesc_16,
-	      gText_SideQuestDoneDesc_16,
-	      gText_SideQuestMap16,
-	      SPECIES_LANDORUS,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_17,
-	      gText_SideQuestDesc_17,
-	      gText_SideQuestDoneDesc_17,
-	      gText_SideQuestMap17,
-	      SPECIES_ENAMORUS,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_18,
-	      gText_SideQuestDesc_18,
-	      gText_SideQuestDoneDesc_18,
-	      gText_SideQuestMap18,
-	      SPECIES_XERNEAS,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_19,
-	      gText_SideQuestDesc_19,
-	      gText_SideQuestDoneDesc_19,
-	      gText_SideQuestMap19,
-	      SPECIES_YVELTAL,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_20,
-	      gText_SideQuestDesc_20,
-	      gText_SideQuestDoneDesc_20,
-	      gText_SideQuestMap20,
-	      SPECIES_ZYGARDE,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_21,
-	      gText_SideQuestDesc_21,
-	      gText_SideQuestDoneDesc_21,
-	      gText_SideQuestMap21,
-	      SPECIES_NECROZMA,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_22,
-	      gText_SideQuestDesc_22,
-	      gText_SideQuestDoneDesc_22,
-	      gText_SideQuestMap22,
-	      SPECIES_ETERNATUS,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_23,
-	      gText_SideQuestDesc_23,
-	      gText_SideQuestDoneDesc_23,
-	      gText_SideQuestMap23,
-	      SPECIES_TYPE_NULL,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_24,
-	      gText_SideQuestDesc_24,
-	      gText_SideQuestDoneDesc_24,
-	      gText_SideQuestMap24,
-	      SPECIES_TERAPAGOS,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_25,
-	      gText_SideQuestDesc_25,
-	      gText_SideQuestDoneDesc_25,
-	      gText_SideQuestMap25,
-	      SPECIES_ARTICUNO,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_26,
-	      gText_SideQuestDesc_26,
-	      gText_SideQuestDoneDesc_26,
-	      gText_SideQuestMap26,
-	      SPECIES_ZAPDOS,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_27,
-	      gText_SideQuestDesc_27,
-	      gText_SideQuestDoneDesc_27,
-	      gText_SideQuestMap27,
-	      SPECIES_MOLTRES,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_28,
-	      gText_SideQuestDesc_28,
-	      gText_SideQuestDoneDesc_28,
-	      gText_SideQuestMap28,
-	      SPECIES_LUGIA,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_29,
-	      gText_SideQuestDesc_29,
-	      gText_SideQuestDoneDesc_29,
-	      gText_SideQuestMap29,
-	      SPECIES_HO_OH,
-	      PKMN,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      gText_SideQuestName_30,
-	      gText_SideQuestDesc_30,
-	      gText_SideQuestDoneDesc_30,
-	      gText_SideQuestMap30,
-	      SPECIES_COBALION,
-	      PKMN,
-	      NULL,
-	      0
-	),
+        // Quest 7-30: Not yet implemented
+        side_quest(gText_SideQuestName_7, gText_SideQuestDesc_7, gText_SideQuestDoneDesc_7, gText_SideQuestMap7, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_8, gText_SideQuestDesc_8, gText_SideQuestDoneDesc_8, gText_SideQuestMap8, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_9, gText_SideQuestDesc_9, gText_SideQuestDoneDesc_9, gText_SideQuestMap9, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_10, gText_SideQuestDesc_10, gText_SideQuestDoneDesc_10, gText_SideQuestMap10, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_11, gText_SideQuestDesc_11, gText_SideQuestDoneDesc_11, gText_SideQuestMap11, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_12, gText_SideQuestDesc_12, gText_SideQuestDoneDesc_12, gText_SideQuestMap12, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_13, gText_SideQuestDesc_13, gText_SideQuestDoneDesc_13, gText_SideQuestMap13, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_14, gText_SideQuestDesc_14, gText_SideQuestDoneDesc_14, gText_SideQuestMap14, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_15, gText_SideQuestDesc_15, gText_SideQuestDoneDesc_15, gText_SideQuestMap15, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_16, gText_SideQuestDesc_16, gText_SideQuestDoneDesc_16, gText_SideQuestMap16, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_17, gText_SideQuestDesc_17, gText_SideQuestDoneDesc_17, gText_SideQuestMap17, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_18, gText_SideQuestDesc_18, gText_SideQuestDoneDesc_18, gText_SideQuestMap18, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_19, gText_SideQuestDesc_19, gText_SideQuestDoneDesc_19, gText_SideQuestMap19, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_20, gText_SideQuestDesc_20, gText_SideQuestDoneDesc_20, gText_SideQuestMap20, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_21, gText_SideQuestDesc_21, gText_SideQuestDoneDesc_21, gText_SideQuestMap21, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_22, gText_SideQuestDesc_22, gText_SideQuestDoneDesc_22, gText_SideQuestMap22, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_23, gText_SideQuestDesc_23, gText_SideQuestDoneDesc_23, gText_SideQuestMap23, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_24, gText_SideQuestDesc_24, gText_SideQuestDoneDesc_24, gText_SideQuestMap24, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_25, gText_SideQuestDesc_25, gText_SideQuestDoneDesc_25, gText_SideQuestMap25, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_26, gText_SideQuestDesc_26, gText_SideQuestDoneDesc_26, gText_SideQuestMap26, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_27, gText_SideQuestDesc_27, gText_SideQuestDoneDesc_27, gText_SideQuestMap27, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_28, gText_SideQuestDesc_28, gText_SideQuestDoneDesc_28, gText_SideQuestMap28, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_29, gText_SideQuestDesc_29, gText_SideQuestDoneDesc_29, gText_SideQuestMap29, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0),
+        side_quest(gText_SideQuestName_30, gText_SideQuestDesc_30, gText_SideQuestDoneDesc_30, gText_SideQuestMap30, OBJ_EVENT_GFX_YOUNGSTER, OBJECT, NULL, 0)
 };
 ////////////////////////END QUEST CUSTOMIZATION////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -833,6 +618,7 @@ static const struct BgTemplate sQuestMenuBgTemplates[2] =
 	}
 };
 
+//Window definitions
 //Window definitions
 static const struct WindowTemplate sQuestMenuHeaderWindowTemplates[] =
 {

@@ -22,6 +22,42 @@
 #define QUEST_S1_05_FACTION_PLASMA   4  // S1–05 — Faction (Plasma/Colress): "Operation: Signal Chain"
 #define QUEST_S1_06_RIVALS           5  // S1–06 — Rivals: "Hoenn Circuit"
 
+// Future quest constants (7-30) - Not yet implemented
+#define QUEST_7                      6  // ???? / Not yet implemented
+#define QUEST_8                      7  // ???? / Not yet implemented
+#define QUEST_9                      8  // ???? / Not yet implemented
+#define QUEST_10                     9  // ???? / Not yet implemented
+#define QUEST_11                     10 // ???? / Not yet implemented
+#define QUEST_12                     11 // ???? / Not yet implemented
+#define QUEST_13                     12 // ???? / Not yet implemented
+#define QUEST_14                     13 // ???? / Not yet implemented
+#define QUEST_15                     14 // ???? / Not yet implemented
+#define QUEST_16                     15 // ???? / Not yet implemented
+#define QUEST_17                     16 // ???? / Not yet implemented
+#define QUEST_18                     17 // ???? / Not yet implemented
+#define QUEST_19                     18 // ???? / Not yet implemented
+#define QUEST_20                     19 // ???? / Not yet implemented
+#define QUEST_21                     20 // ???? / Not yet implemented
+#define QUEST_22                     21 // ???? / Not yet implemented
+#define QUEST_23                     22 // ???? / Not yet implemented
+#define QUEST_24                     23 // ???? / Not yet implemented
+#define QUEST_25                     24 // ???? / Not yet implemented
+#define QUEST_26                     25 // ???? / Not yet implemented
+#define QUEST_27                     26 // ???? / Not yet implemented
+#define QUEST_28                     27 // ???? / Not yet implemented
+#define QUEST_29                     28 // ???? / Not yet implemented
+#define QUEST_30                     29 // ???? / Not yet implemented
+
+// Legacy compatibility mappings
+#define QUEST_1          QUEST_S1_01_MAIN_STORY
+#define QUEST_2          QUEST_S1_02_LEAGUE
+#define QUEST_3          QUEST_S1_03_FACTION_AQUA
+#define QUEST_4          QUEST_S1_04_FACTION_MAGMA
+#define QUEST_5          QUEST_S1_05_FACTION_PLASMA
+#define QUEST_6          QUEST_S1_06_RIVALS
+
+#define QUEST_COUNT     30
+
 // Legacy quest aliases for backwards compatibility
 #define QUEST_1          QUEST_S1_01_MAIN_STORY
 #define QUEST_2          QUEST_S1_02_LEAGUE
@@ -53,7 +89,6 @@
 #define QUEST_28        27
 #define QUEST_29        28
 #define QUEST_30        29
-#define QUEST_COUNT     (QUEST_30 + 1)
 
 #define SUB_QUEST_S1_01_1        0  // 1.1 Go to Littleroot Lab and speak with Birch
 #define SUB_QUEST_S1_01_2        1  // 1.2 Return home and watch the world report on TV
