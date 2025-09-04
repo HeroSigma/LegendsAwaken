@@ -1462,7 +1462,7 @@ const u8 gText_SideQuestDoneDesc_30[] = _("Champion defeated again.");
 
 //map
 const u8 gText_SideQuestMap1[] = _("Littleroot Lab");
-const u8 gText_SideQuestMap2[] = _("Ever Grande City");
+const u8 gText_SideQuestMap2[] = _("Pokemon League");
 const u8 gText_SideQuestMap3[] = _("Team Aqua Hideout");
 const u8 gText_SideQuestMap4[] = _("Jagged Pass");
 const u8 gText_SideQuestMap5[] = _("Mossdeep Lab");
