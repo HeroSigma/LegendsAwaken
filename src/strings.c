@@ -1461,12 +1461,12 @@ const u8 gText_SideQuestDoneDesc_29[] = _("Altering Cave mastered.");
 const u8 gText_SideQuestDoneDesc_30[] = _("Champion defeated again.");
 
 //map
-const u8 gText_SideQuestMap1[] = _("Rustboro Gym");
-const u8 gText_SideQuestMap2[] = _("Dewford Gym");
-const u8 gText_SideQuestMap3[] = _("Mauville Gym");
-const u8 gText_SideQuestMap4[] = _("Lavaridge Gym");
-const u8 gText_SideQuestMap5[] = _("Petalburg Gym");
-const u8 gText_SideQuestMap6[] = _("Fortree Gym");
+const u8 gText_SideQuestMap1[] = _("Littleroot Lab");
+const u8 gText_SideQuestMap2[] = _("Ever Grande City");
+const u8 gText_SideQuestMap3[] = _("Team Aqua Hideout");
+const u8 gText_SideQuestMap4[] = _("Jagged Pass");
+const u8 gText_SideQuestMap5[] = _("Mossdeep Lab");
+const u8 gText_SideQuestMap6[] = _("Hoenn Region");
 const u8 gText_SideQuestMap7[] = _("Mossdeep Gym");
 const u8 gText_SideQuestMap8[] = _("Sootopolis Gym");
 const u8 gText_SideQuestMap9[] = _("Ever Grande");
