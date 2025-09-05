@@ -1,3 +1,4 @@
+.include "build/modern/data/scripts/legends_awaken_intro.pory.inc"
 .include "build/modern/data/maps/EternaForestA/scripts.pory.inc"
 .include "build/modern/data/maps/LakeAcuityCave/scripts.pory.inc"
 .include "build/modern/data/maps/OreburghCityA/scripts.pory.inc"

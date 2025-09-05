@@ -189,11 +189,6 @@ static void HighlightSelectedMainMenuItem(u8, u8, s16);
 static void Task_HandleMainMenuInput(u8);
 static void Task_HandleMainMenuAPressed(u8);
 static void Task_HandleMainMenuBPressed(u8);
-static void Task_NewGameCreatorIntro_Init(u8);
-static void Task_NewGameCreatorIntro_Greeting(u8);
-static void Task_NewGameCreatorIntro_Journey(u8);
-static void Task_NewGameCreatorIntro_Truth(u8);
-static void Task_NewGameCreatorIntro_Choices(u8);
 static void Task_NewGameBirchSpeech_Init(u8);
 static void Task_DisplayMainMenuInvalidActionError(u8);
 static void AddBirchSpeechObjects(u8);
@@ -1085,7 +1080,7 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
             default:
                 gPlttBufferUnfaded[0] = RGB_BLACK;
                 gPlttBufferFaded[0] = RGB_BLACK;
-                gTasks[taskId].func = Task_NewGameCreatorIntro_Init;
+                gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
                 break;
             case ACTION_CONTINUE:
                 gPlttBufferUnfaded[0] = RGB_BLACK;

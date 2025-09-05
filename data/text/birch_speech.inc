@@ -1,10 +1,5 @@
-gText_Creator_Welcome::gTgText_Birch_Pokemon::
-	.string "This little one is a POKéMON—\n"
-	.string "partner, helper, friend.\p"
-	.string "$"Birch_Pokemon::
-	.string "This little one is a POKéMON—\n"
-	.string "partner, helper, friend.\p"
-	.string "$"tring "Greetings, traveler. I am HERO SIGMA—\n"
+gText_Creator_Welcome::
+	.string "$(FC 0x04)Greetings, traveler. I am HERO SIGMA-\n"
 	.string "the one who shaped this world.\p"
 	.string "This is no ordinary journey.\n"
 	.string "Legends stir across time and space…\l"
@@ -16,45 +11,45 @@ gText_Creator_Welcome::gTgText_Birch_Pokemon::
 	.string "But remember… your choices will echo\n"
 	.string "across regions. Your bonds with\l"
 	.string "POKéMON will shape the fate of all\l"
-	.string "creation.\p"
+	.string "creation.$(FC 0x01)\p"
 	.string "$"
 
 gText_Birch_Welcome::
-	.string "Hi there! Welcome to the world\n"
+	.string "$(FC 0x06)Hi there! Welcome to the world\n"
 	.string "of POKéMON.\p"
-	.string "I'm Professor BIRCH—field research,\n"
-	.string "boots on the ground.\p"
+	.string "I'm Professor BIRCH-field research,\n"
+	.string "boots on the ground.$(FC 0x01)\p"
 	.string "$"
 
 gText_Birch_Pokemon::
-	.string "This is what we call a “POKéMON.”\p"
-	.string "\n"
+	.string "$(FC 0x06)This little one is a POKéMON-\n"
+	.string "partner, helper, friend.$(FC 0x01)\p"
 	.string "$"
 
 gText_Birch_MainSpeech::
-	.string "HOENN's been acting strange lately.\p"
+	.string "$(FC 0x06)HOENN's been acting strange lately.\p"
 	.string "Currents shift, skies shimmer…\n"
 	.string "people whisper about 'rifts'.\p"
 	.string "We observe, we protect, and when\n"
-	.string "we must, we battle—together.\p"
+	.string "we must, we battle-together.\p"
 	.string "But before we get ahead of\n"
-	.string "ourselves…\p"
+	.string "ourselves…$(FC 0x01)\p"
 	.string "$"
 
 gText_Birch_AndYouAre::
-	.string "And you are?$"
+	.string "$(FC 0x06)And you are?$(FC 0x01)$"
 
 gText_Birch_BoyOrGirl::
-	.string "Are you a boy, or a girl?$"
+	.string "$(FC 0x06)Are you a boy, or a girl?$(FC 0x01)$"
 
 gText_Birch_WhatsYourName::
-	.string "All right—what's your name?$"
+	.string "$(FC 0x06)All right-what's your name?$(FC 0x01)$"
 
 gText_Birch_SoItsPlayer::
-	.string "So it's {PLAYER}{KUN}?$"
+	.string "$(FC 0x06)So it's {PLAYER}{KUN}?$(FC 0x01)$"
 
 gText_Birch_YourePlayer::
-	.string "All set… hold on.\p"
+	.string "$(FC 0x06)All set… hold on.\p"
 	.string "It really is you, isn't it?\p"
 	.string "Been about eight years since\n"
 	.string "LITTLEROOT.\p"
@@ -62,10 +57,10 @@ gText_Birch_YourePlayer::
 	.string "We'll talk when you arrive.\p"
 	.string "Your mom said you just reached town.\p"
 	.string "Come by the lab, {PLAYER}.\n"
-	.string "I'll be waiting.\p"
+	.string "I'll be waiting.$(FC 0x01)\p"
 	.string "$"
 
 gText_Birch_AreYouReady::
-	.string "All right! Your journey starts now,\n"
-	.string "{PLAYER}{KUN}!\p"
+	.string "$(FC 0x06)All right! Your journey starts now,\n"
+	.string "{PLAYER}{KUN}!$(FC 0x01)\p"
 	.string "$"
