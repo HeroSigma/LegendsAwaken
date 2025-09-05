@@ -1,9 +1,29 @@
+gText_Creator_Welcome::gTgText_Birch_Pokemon::
+	.string "This little one is a POKéMON—\n"
+	.string "partner, helper, friend.\p"
+	.string "$"Birch_Pokemon::
+	.string "This little one is a POKéMON—\n"
+	.string "partner, helper, friend.\p"
+	.string "$"tring "Greetings, traveler. I am HERO SIGMA—\n"
+	.string "the one who shaped this world.\p"
+	.string "This is no ordinary journey.\n"
+	.string "Legends stir across time and space…\l"
+	.string "awakened by the Rift that tore our\l"
+	.string "worlds apart.\p"
+	.string "Here, you will walk among them,\n"
+	.string "battle them, and uncover truths\l"
+	.string "long buried.\p"
+	.string "But remember… your choices will echo\n"
+	.string "across regions. Your bonds with\l"
+	.string "POKéMON will shape the fate of all\l"
+	.string "creation.\p"
+	.string "$"
+
 gText_Birch_Welcome::
-	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is BIRCH.\p"
-	.string "But everyone calls me the POKéMON\n"
-	.string "PROFESSOR.\p"
+	.string "Hi there! Welcome to the world\n"
+	.string "of POKéMON.\p"
+	.string "I'm Professor BIRCH—field research,\n"
+	.string "boots on the ground.\p"
 	.string "$"
 
 gText_Birch_Pokemon::
@@ -12,50 +32,40 @@ gText_Birch_Pokemon::
 	.string "$"
 
 gText_Birch_MainSpeech::
-	.string "This world is widely inhabited by\n"
-	.string "creatures known as POKéMON.\p"
-	.string "We humans live alongside POKéMON,\n"
-	.string "at times as friendly playmates, and\l"
-	.string "at times as cooperative workmates.\p"
-	.string "And sometimes, we band together\n"
-	.string "and battle others like us.\p"
-	.string "But despite our closeness, we don't\n"
-	.string "know everything about POKéMON.\p"
-	.string "In fact, there are many, many\n"
-	.string "secrets surrounding POKéMON.\p"
-	.string "To unravel POKéMON mysteries,\n"
-	.string "I've been undertaking research.\l"
-	.string "That's what I do.\p"
+	.string "HOENN's been acting strange lately.\p"
+	.string "Currents shift, skies shimmer…\n"
+	.string "people whisper about 'rifts'.\p"
+	.string "We observe, we protect, and when\n"
+	.string "we must, we battle—together.\p"
+	.string "But before we get ahead of\n"
+	.string "ourselves…\p"
 	.string "$"
 
 gText_Birch_AndYouAre::
 	.string "And you are?$"
 
 gText_Birch_BoyOrGirl::
-	.string "Are you a boy?\n"
-	.string "Or are you a girl?$"
+	.string "Are you a boy, or a girl?$"
 
 gText_Birch_WhatsYourName::
-	.string "All right.\n"
-	.string "What's your name?$"
+	.string "All right—what's your name?$"
 
 gText_Birch_SoItsPlayer::
 	.string "So it's {PLAYER}{KUN}?$"
 
 gText_Birch_YourePlayer::
-	.string "Ah, okay!\p"
-	.string "You're {PLAYER}{KUN} who's moving to my\n"
-	.string "hometown of LITTLEROOT.\l"
-	.string "I get it now!\p"
+	.string "All set… hold on.\p"
+	.string "It really is you, isn't it?\p"
+	.string "Been about eight years since\n"
+	.string "LITTLEROOT.\p"
+	.string "HOENN's unusual right now.\n"
+	.string "We'll talk when you arrive.\p"
+	.string "Your mom said you just reached town.\p"
+	.string "Come by the lab, {PLAYER}.\n"
+	.string "I'll be waiting.\p"
 	.string "$"
 
 gText_Birch_AreYouReady::
-	.string "...{PLAYER}{KUN}? {PLAYER}{KUN}, is that you?\p"
-	.string "Birch leans in, eyes wide.\p"
-	.string "Wow... you've grown.\p"
-	.string "It's been eight years, hasn't it?\p"
-	.string "Heard you were out on those islands.\p"
-	.string "Welcome home.\p"
 	.string "All right! Your journey starts now,\n"
 	.string "{PLAYER}{KUN}!\p"
 	.string "$"

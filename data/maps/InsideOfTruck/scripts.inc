@@ -51,6 +51,22 @@ InsideOfTruck_EventScript_MovingBox::
 	msgbox InsideOfTruck_Text_BoxPrintedWithMonLogo, MSGBOX_SIGN
 	end
 
+
+// Always set the dynamic warp at the truck exit tile before leaving
+InsideOfTruck_EventScript_TruckExitSetDynamicWarp::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, InsideOfTruck_EventScript_TruckExitSetDynamicWarpMale
+	goto_if_eq VAR_RESULT, FEMALE, InsideOfTruck_EventScript_TruckExitSetDynamicWarpFemale
+	end
+
+InsideOfTruck_EventScript_TruckExitSetDynamicWarpMale::
+	setdynamicwarp MAP_LITTLEROOT_TOWN, 3, 10
+	end
+
+InsideOfTruck_EventScript_TruckExitSetDynamicWarpFemale::
+	setdynamicwarp MAP_LITTLEROOT_TOWN, 12, 10
+	end
+
 InsideOfTruck_Text_BoxPrintedWithMonLogo:
 	.string "The box is printed with a POKéMON logo.\p"
 	.string "It's a POKéMON brand moving and\n"
