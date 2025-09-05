@@ -294,6 +294,7 @@ extern const u8 gText_Truck_Intro[];
 extern const u8 gText_Truck_MysteriousBox[];
 extern const u8 gText_Truck_DevenCorpBox[];
 extern const u8 gText_Truck_MemoryBox[];
+extern const u8 gText_Truck_PlayerReflection[];
 extern const u8 gText_Truck_ReadyToExit[];
 extern const u8 gText_Birch_AreYouReady[];
 

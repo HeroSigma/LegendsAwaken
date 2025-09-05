@@ -4,12 +4,10 @@ InsideOfTruck_MapScripts::
 	.byte 0
 
 InsideOfTruck_OnLoad:
-	setmetatile 4, 1, METATILE_InsideOfTruck_ExitLight_Top, FALSE
-	setmetatile 4, 2, METATILE_InsideOfTruck_ExitLight_Mid, FALSE
-	setmetatile 4, 3, METATILE_InsideOfTruck_ExitLight_Bottom, FALSE
-	compare VAR_LITTLEROOT_INTRO_STATE, 0
-	call_if_eq InsideOfTruck_EventScript_IntroText
-	end
+    setmetatile 4, 1, METATILE_InsideOfTruck_ExitLight_Top, FALSE
+    setmetatile 4, 2, METATILE_InsideOfTruck_ExitLight_Mid, FALSE
+    setmetatile 4, 3, METATILE_InsideOfTruck_ExitLight_Bottom, FALSE
+    end
 
 InsideOfTruck_OnResume:
 	setstepcallback STEP_CB_TRUCK
@@ -58,7 +56,17 @@ InsideOfTruck_EventScript_MysteriousBox::
 	end
 
 InsideOfTruck_EventScript_DevonBox::
-	msgbox gText_Truck_DevenCorpBox, MSGBOX_SIGN
+	lockall
+	checkitem ITEM_MEGA_RING, 1
+	goto_if_eq VAR_RESULT, TRUE, InsideOfTruck_EventScript_DevonBoxEmpty
+	msgbox gText_Truck_DevenCorpBox, MSGBOX_DEFAULT
+	giveitem ITEM_MEGA_RING, 1
+	releaseall
+	end
+
+InsideOfTruck_EventScript_DevonBoxEmpty::
+	msgbox InsideOfTruck_Text_DevonBoxEmpty, MSGBOX_DEFAULT
+	releaseall
 	end
 
 InsideOfTruck_EventScript_MemoryBox::
@@ -107,3 +115,7 @@ InsideOfTruck_Text_BoxPrintedWithMonLogo:
 	.string "It's a POKéMON brand moving and\n"
 	.string "delivery service.$"
 
+InsideOfTruck_Text_DevonBoxEmpty:
+	.string "The DEVON CORP container is now empty.\p"
+	.string "The strange bracelet you found here\n"
+	.string "feels warm against your wrist.$"

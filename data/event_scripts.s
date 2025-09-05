@@ -1661,6 +1661,7 @@ Common_EventScript_PlayerHandedOverTheItem::
 	.include "data/text/pkmn_center_nurse.inc"
 	.include "data/text/mart_clerk.inc"
 	.include "data/text/obtain_item.inc"
+	.include "data/text/truck_scene.inc"
 
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign::
