@@ -933,17 +933,17 @@ LittlerootTown_EventScript_GiveRunningShoes::
         return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "MOM: {PLAYER}! There you are.\p"
-	.string "We finally made it back to HOENN.\p"
-	.string "Long ride, huh?\p"
-	.string "Eight years is a long time, too.\p"
-	.string "Come on. Let's get you inside.$"
+	.string "{COLOR LIGHT_RED}MOM: {COLOR DARK_GRAY}There you are, {PLAYER}!\p"
+	.string "Welcome to our new home!\p"
+	.string "Come inside, let's take a look together!$"
 
 LittlerootTown_Text_PlayerEightYears:
-	.string "Eight years, huh...$"
+	.string "{COLOR GREEN}(A new home… but will things really\n"
+	.string "be different?){COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_PlayerWonderHow:
-	.string "I wonder how...$"
+	.string "{COLOR GREEN}(Something tells me this time is\n"
+	.string "different…){COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"

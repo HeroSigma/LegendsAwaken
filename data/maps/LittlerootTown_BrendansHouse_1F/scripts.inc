@@ -298,8 +298,7 @@ PlayersHouse_1F_Text_ArentYouInterestedInRoom:
 	.string "very own room?$"
 
 PlayersHouse_1F_Text_GoSetTheClock:
-	.string "MOM: {PLAYER}.\p"
-	.string "Go set the clock in your room, honey.$"
+	.string "{COLOR LIGHT_RED}MOM: {COLOR DARK_GRAY}Don't forget to set your clock, {PLAYER}!$"
 
 PlayersHouse_1F_Text_OhComeQuickly:
 	.string "MOM: Oh! {PLAYER}, {PLAYER}!\n"

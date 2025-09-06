@@ -19,6 +19,9 @@
 #include "constants/songs.h"
 #include "constants/metatile_labels.h"
 
+// Script labels referenced from C
+extern const u8 InsideOfTruck_EventScript_AutoTriggerScene[];
+
 // Most of the boxes in the moving truck are map tiles, with the
 // exception of three boxes that are map events that jostle around
 // while the truck is driving. In addition, their sprite's placement
@@ -242,6 +245,22 @@ static void Task_HandleTruckSequence(u8 taskId)
         }
         break;
     case 5:
+        // Trigger the inside-truck scene before the door opens.
+        if (tTimer == 0)
+        {
+            if (VarGet(VAR_LITTLEROOT_INTRO_STATE) == 0 && !ScriptContext_IsEnabled())
+            {
+                ScriptContext_SetupScript(InsideOfTruck_EventScript_AutoTriggerScene);
+                // Mark as queued so we don't re-queue when the script ends.
+                tTimer = 1;
+                return;
+            }
+        }
+
+        // While a script is active, hold here until it completes.
+        if (ScriptContext_IsEnabled())
+            return;
+
         tTimer++;
         if (tTimer == 120)
         {

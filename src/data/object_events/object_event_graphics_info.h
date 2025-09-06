@@ -112,6 +112,109 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_QuintyPlump = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+// Player-style: helper macro similar to DP_NPC_INFO but with PALSLOT_NPC_SPECIAL
+#define ALT_PLAYER_INFO(name, palTag, imgTable) \
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##name = { \
+    .tileTag = TAG_NONE, \
+    .paletteTag = palTag, \
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE, \
+    .size = 256, \
+    .width = 16, \
+    .height = 32, \
+    .paletteSlot = PALSLOT_NPC_SPECIAL, \
+    .shadowSize = SHADOW_SIZE_M, \
+    .inanimate = FALSE, \
+    .compressed = FALSE, \
+    .tracks = TRACKS_FOOT, \
+    .oam = &gObjectEventBaseOam_16x32, \
+    .subspriteTables = sOamTables_16x32, \
+    .anims = sAnimTable_Standard, \
+    .images = imgTable, \
+    .affineAnims = gDummySpriteAffineAnimTable, \
+};
+
+// Dawn
+ALT_PLAYER_INFO(DawnNormal,    OBJ_EVENT_PAL_TAG_DAWN, sPicTable_DawnNormal)
+ALT_PLAYER_INFO(DawnMachBike,  OBJ_EVENT_PAL_TAG_DAWN, sPicTable_DawnMachBike)
+ALT_PLAYER_INFO(DawnSurfing,   OBJ_EVENT_PAL_TAG_DAWN, sPicTable_DawnSurfing)
+ALT_PLAYER_INFO(DawnFieldMove, OBJ_EVENT_PAL_TAG_DAWN, sPicTable_DawnFieldMove)
+ALT_PLAYER_INFO(DawnFishing,   OBJ_EVENT_PAL_TAG_DAWN, sPicTable_DawnFishing)
+ALT_PLAYER_INFO(DawnWatering,  OBJ_EVENT_PAL_TAG_DAWN, sPicTable_DawnWatering)
+ALT_PLAYER_INFO(DawnDecorating,OBJ_EVENT_PAL_TAG_DAWN, sPicTable_DawnDecorating)
+
+// Lucas
+ALT_PLAYER_INFO(LucasNormal,   OBJ_EVENT_PAL_TAG_LUCAS, sPicTable_LucasNormal)
+ALT_PLAYER_INFO(LucasMachBike, OBJ_EVENT_PAL_TAG_LUCAS, sPicTable_LucasMachBike)
+ALT_PLAYER_INFO(LucasSurfing,  OBJ_EVENT_PAL_TAG_LUCAS, sPicTable_LucasSurfing)
+ALT_PLAYER_INFO(LucasFishing,  OBJ_EVENT_PAL_TAG_LUCAS, sPicTable_LucasFishing)
+
+// Lyra
+ALT_PLAYER_INFO(LyraNormal,    OBJ_EVENT_PAL_TAG_LYRA, sPicTable_LyraNormal)
+ALT_PLAYER_INFO(LyraMachBike,  OBJ_EVENT_PAL_TAG_LYRA, sPicTable_LyraMachBike)
+ALT_PLAYER_INFO(LyraAcroBike,  OBJ_EVENT_PAL_TAG_LYRA, sPicTable_LyraAcroBike)
+ALT_PLAYER_INFO(LyraSurfing,   OBJ_EVENT_PAL_TAG_LYRA, sPicTable_LyraSurfing)
+ALT_PLAYER_INFO(LyraFieldMove, OBJ_EVENT_PAL_TAG_LYRA, sPicTable_LyraFieldMove)
+ALT_PLAYER_INFO(LyraFishing,   OBJ_EVENT_PAL_TAG_LYRA, sPicTable_LyraFishing)
+ALT_PLAYER_INFO(LyraWatering,  OBJ_EVENT_PAL_TAG_LYRA, sPicTable_LyraWatering)
+ALT_PLAYER_INFO(LyraDecorating,OBJ_EVENT_PAL_TAG_LYRA, sPicTable_LyraDecorating)
+ALT_PLAYER_INFO(LyraUnderwater,OBJ_EVENT_PAL_TAG_LYRA, sPicTable_LyraUnderwater)
+
+// Gold
+ALT_PLAYER_INFO(GoldNormal,    OBJ_EVENT_PAL_TAG_GOLD, sPicTable_GoldNormal)
+ALT_PLAYER_INFO(GoldMachBike,  OBJ_EVENT_PAL_TAG_GOLD, sPicTable_GoldMachBike)
+ALT_PLAYER_INFO(GoldAcroBike,  OBJ_EVENT_PAL_TAG_GOLD, sPicTable_GoldAcroBike)
+ALT_PLAYER_INFO(GoldSurfing,   OBJ_EVENT_PAL_TAG_GOLD, sPicTable_GoldSurfing)
+ALT_PLAYER_INFO(GoldFieldMove, OBJ_EVENT_PAL_TAG_GOLD, sPicTable_GoldFieldMove)
+ALT_PLAYER_INFO(GoldFishing,   OBJ_EVENT_PAL_TAG_GOLD, sPicTable_GoldFishing)
+ALT_PLAYER_INFO(GoldWatering,  OBJ_EVENT_PAL_TAG_GOLD, sPicTable_GoldWatering)
+ALT_PLAYER_INFO(GoldDecorating,OBJ_EVENT_PAL_TAG_GOLD, sPicTable_GoldDecorating)
+ALT_PLAYER_INFO(GoldUnderwater,OBJ_EVENT_PAL_TAG_GOLD, sPicTable_GoldUnderwater)
+
+#undef ALT_PLAYER_INFO
+
+// Kanto/Johto leaders (standard 16x32, palette slot NPC_1)
+#define LEADER_INFO(name, palTag, imgTable) \
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##name = { \
+    .tileTag = TAG_NONE, \
+    .paletteTag = palTag, \
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE, \
+    .size = 256, \
+    .width = 16, \
+    .height = 32, \
+    .paletteSlot = PALSLOT_NPC_1, \
+    .shadowSize = SHADOW_SIZE_M, \
+    .inanimate = FALSE, \
+    .compressed = FALSE, \
+    .tracks = TRACKS_FOOT, \
+    .oam = &gObjectEventBaseOam_16x32, \
+    .subspriteTables = sOamTables_16x32, \
+    .anims = sAnimTable_Standard, \
+    .images = imgTable, \
+    .affineAnims = gDummySpriteAffineAnimTable, \
+};
+
+LEADER_INFO(Giovanni, OBJ_EVENT_PAL_TAG_GIOVANNI, sPicTable_Giovanni)
+LEADER_INFO(Falkner,  OBJ_EVENT_PAL_TAG_FALKNER,  sPicTable_Falkner)
+LEADER_INFO(Bugsy,    OBJ_EVENT_PAL_TAG_BUGSY,    sPicTable_Bugsy)
+LEADER_INFO(Whitney,  OBJ_EVENT_PAL_TAG_WHITNEY,  sPicTable_Whitney)
+LEADER_INFO(Morty,    OBJ_EVENT_PAL_TAG_MORTY,    sPicTable_Morty)
+LEADER_INFO(Chuck,    OBJ_EVENT_PAL_TAG_CHUCK,    sPicTable_Chuck)
+LEADER_INFO(Jasmine,  OBJ_EVENT_PAL_TAG_JASMINE,  sPicTable_Jasmine)
+LEADER_INFO(Pryce,    OBJ_EVENT_PAL_TAG_PRYCE,    sPicTable_Pryce)
+LEADER_INFO(Clair,    OBJ_EVENT_PAL_TAG_CLAIR,    sPicTable_Clair)
+LEADER_INFO(Will,     OBJ_EVENT_PAL_TAG_WILL,     sPicTable_Will)
+LEADER_INFO(Karen,    OBJ_EVENT_PAL_TAG_KAREN,    sPicTable_Karen)
+LEADER_INFO(Janine,   OBJ_EVENT_PAL_TAG_JANINE,   sPicTable_Janine)
+LEADER_INFO(Blaine,   OBJ_EVENT_PAL_TAG_BLAINE,   sPicTable_Blaine)
+LEADER_INFO(Blue,     OBJ_EVENT_PAL_TAG_BLUE,     sPicTable_Blue)
+LEADER_INFO(Brock,    OBJ_EVENT_PAL_TAG_BROCK,    sPicTable_Brock)
+LEADER_INFO(Misty,    OBJ_EVENT_PAL_TAG_MISTY,    sPicTable_Misty)
+LEADER_INFO(Erika,    OBJ_EVENT_PAL_TAG_ERIKA,    sPicTable_Erika)
+LEADER_INFO(Koga,     OBJ_EVENT_PAL_TAG_KOGA,     sPicTable_Koga)
+LEADER_INFO(Sabrina,  OBJ_EVENT_PAL_TAG_SABRINA,  sPicTable_Sabrina)
+
+#undef LEADER_INFO
+
 // DP trainer graphics infos (standard 16x32)
 #define DP_NPC_INFO(name, palTag, imgTable) \
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##name = { \
@@ -163,6 +266,26 @@ DP_NPC_INFO(DP_ParasolLady,    OBJ_EVENT_PAL_TAG_DP_PARASOL_LADY,   sPicTable_DP
 DP_NPC_INFO(DP_Waiter,         OBJ_EVENT_PAL_TAG_DP_WAITER,         sPicTable_DP_Waiter)
 DP_NPC_INFO(DP_Waitress,       OBJ_EVENT_PAL_TAG_DP_WAITRESS,       sPicTable_DP_Waitress)
 DP_NPC_INFO(DP_DragonTamer,    OBJ_EVENT_PAL_TAG_DP_DRAGON_TAMER,   sPicTable_DP_DragonTamer)
+
+// Additional DP-style generic people (standard 16x32)
+DP_NPC_INFO(DP_Youngster,      OBJ_EVENT_PAL_TAG_DP_YOUNGSTER,          sPicTable_DP_Youngster)
+DP_NPC_INFO(DP_Camper,         OBJ_EVENT_PAL_TAG_DP_CAMPER_PICNICKER,   sPicTable_DP_Camper)
+DP_NPC_INFO(DP_Picnicker,      OBJ_EVENT_PAL_TAG_DP_CAMPER_PICNICKER,   sPicTable_DP_Picnicker)
+DP_NPC_INFO(DP_Fisherman,      OBJ_EVENT_PAL_TAG_DP_FISHERMAN,          sPicTable_DP_Fisherman)
+DP_NPC_INFO(DP_Gentleman,      OBJ_EVENT_PAL_TAG_DP_GENTLEMAN,          sPicTable_DP_Gentleman)
+DP_NPC_INFO(DP_Hiker,          OBJ_EVENT_PAL_TAG_DP_HIKER,              sPicTable_DP_Hiker)
+DP_NPC_INFO(DP_Artist,         OBJ_EVENT_PAL_TAG_DP_ARTIST,             sPicTable_DP_Artist)
+DP_NPC_INFO(DP_Beauty,         OBJ_EVENT_PAL_TAG_DP_BEAUTY,             sPicTable_DP_Beauty)
+DP_NPC_INFO(DP_BlackBelt,      OBJ_EVENT_PAL_TAG_DP_BLACK_BELT,         sPicTable_DP_BlackBelt)
+DP_NPC_INFO(DP_BugCatcher,     OBJ_EVENT_PAL_TAG_DP_BUG_CATCHER,        sPicTable_DP_BugCatcher)
+DP_NPC_INFO(DP_PokefanF,       OBJ_EVENT_PAL_TAG_DP_POKEFAN_F,          sPicTable_DP_PokefanF)
+DP_NPC_INFO(DP_PokefanM,       OBJ_EVENT_PAL_TAG_DP_POKEFAN_M,          sPicTable_DP_PokefanM)
+DP_NPC_INFO(DP_PsychicM,       OBJ_EVENT_PAL_TAG_DP_PSYCHIC,            sPicTable_DP_PsychicM)
+DP_NPC_INFO(DP_RichBoy,        OBJ_EVENT_PAL_TAG_DP_RICH_BOY,           sPicTable_DP_RichBoy)
+DP_NPC_INFO(DP_Sailor,         OBJ_EVENT_PAL_TAG_DP_SAILOR,             sPicTable_DP_Sailor)
+DP_NPC_INFO(DP_Scientist,      OBJ_EVENT_PAL_TAG_DP_SCIENTIST,          sPicTable_DP_Scientist)
+DP_NPC_INFO(DP_SwimmerF,       OBJ_EVENT_PAL_TAG_DP_SWIMMER_F,          sPicTable_DP_SwimmerF)
+DP_NPC_INFO(DP_SwimmerM,       OBJ_EVENT_PAL_TAG_DP_SWIMMER_M,          sPicTable_DP_SwimmerM)
 
 #undef DP_NPC_INFO
 

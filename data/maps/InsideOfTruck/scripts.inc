@@ -47,6 +47,10 @@ InsideOfTruck_EventScript_SetIntroFlagsFemale::
 	releaseall
 	end
 
+@ Note: AutoTriggerScene is defined later and queued from C when the
+@ truck sequence completes. Do not trigger it here on load, to avoid
+@ racing the field callback.
+
 InsideOfTruck_EventScript_MovingBox::
 	msgbox InsideOfTruck_Text_BoxPrintedWithMonLogo, MSGBOX_SIGN
 	end
@@ -90,14 +94,24 @@ InsideOfTruck_EventScript_TruckExitSetDynamicWarpFemale::
 	end
 
 InsideOfTruck_EventScript_IntroText::
-	lockall
-	msgbox gText_Truck_Intro, MSGBOX_DEFAULT
-	applymovement OBJ_EVENT_ID_PLAYER, InsideOfTruck_Movement_PlayerLookAround
-	waitmovement 0
-	msgbox gText_Truck_ReadyToExit, MSGBOX_DEFAULT
-	setvar VAR_LITTLEROOT_INTRO_STATE, 1
-	releaseall
-	end
+    lockall
+    msgbox gText_Truck_Intro, MSGBOX_DEFAULT
+    applymovement OBJ_EVENT_ID_PLAYER, InsideOfTruck_Movement_PlayerLookAround
+    waitmovement 0
+    msgbox gText_Truck_ReadyToExit, MSGBOX_DEFAULT
+    releaseall
+    end
+
+// Auto-triggered after the truck sequence completes.
+// Does not alter intro state; gender-specific intro flags are
+// set later by InsideOfTruck_EventScript_SetIntroFlags*.
+InsideOfTruck_EventScript_AutoTriggerScene::
+    lockall
+    msgbox gText_Truck_Intro, MSGBOX_DEFAULT
+    msgbox gText_Truck_PlayerReflection, MSGBOX_DEFAULT
+    msgbox gText_Truck_ReadyToExit, MSGBOX_DEFAULT
+    releaseall
+    end
 
 InsideOfTruck_Movement_PlayerLookAround:
 	delay_16
