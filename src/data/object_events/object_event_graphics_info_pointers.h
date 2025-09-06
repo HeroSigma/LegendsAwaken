@@ -310,6 +310,75 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_ParasolL
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Waiter;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Waitress;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_DragonTamer;
+// Alt players externs
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnDecorating;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucasFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraDecorating;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LyraUnderwater;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldNormal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldMachBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldAcroBike;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldFieldMove;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldFishing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldWatering;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldDecorating;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GoldUnderwater;
+// Leaders externs
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Giovanni;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Falkner;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bugsy;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Whitney;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Morty;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chuck;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jasmine;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pryce;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clair;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Will;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Karen;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Janine;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blaine;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blue;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brock;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Misty;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Erika;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Koga;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sabrina;
+// Additional DP generic externs
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Youngster;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Camper;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Picnicker;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Fisherman;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Gentleman;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Hiker;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Artist;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Beauty;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_BlackBelt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_BugCatcher;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_PokefanF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_PokefanM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_PsychicM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_RichBoy;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Sailor;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Scientist;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_SwimmerF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_SwimmerM;
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
@@ -589,6 +658,75 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DP_WAITER] =                &gObjectEventGraphicsInfo_DP_Waiter,
     [OBJ_EVENT_GFX_DP_WAITRESS] =              &gObjectEventGraphicsInfo_DP_Waitress,
     [OBJ_EVENT_GFX_DP_DRAGON_TAMER] =          &gObjectEventGraphicsInfo_DP_DragonTamer,
+    // Additional DP generics
+    [OBJ_EVENT_GFX_DP_YOUNGSTER] =             &gObjectEventGraphicsInfo_DP_Youngster,
+    [OBJ_EVENT_GFX_DP_CAMPER] =                &gObjectEventGraphicsInfo_DP_Camper,
+    [OBJ_EVENT_GFX_DP_PICNICKER] =             &gObjectEventGraphicsInfo_DP_Picnicker,
+    [OBJ_EVENT_GFX_DP_FISHERMAN] =             &gObjectEventGraphicsInfo_DP_Fisherman,
+    [OBJ_EVENT_GFX_DP_GENTLEMAN] =             &gObjectEventGraphicsInfo_DP_Gentleman,
+    [OBJ_EVENT_GFX_DP_HIKER] =                 &gObjectEventGraphicsInfo_DP_Hiker,
+    [OBJ_EVENT_GFX_DP_ARTIST] =                &gObjectEventGraphicsInfo_DP_Artist,
+    [OBJ_EVENT_GFX_DP_BEAUTY] =                &gObjectEventGraphicsInfo_DP_Beauty,
+    [OBJ_EVENT_GFX_DP_BLACK_BELT] =            &gObjectEventGraphicsInfo_DP_BlackBelt,
+    [OBJ_EVENT_GFX_DP_BUG_CATCHER] =           &gObjectEventGraphicsInfo_DP_BugCatcher,
+    [OBJ_EVENT_GFX_DP_POKEFAN_F] =             &gObjectEventGraphicsInfo_DP_PokefanF,
+    [OBJ_EVENT_GFX_DP_POKEFAN_M] =             &gObjectEventGraphicsInfo_DP_PokefanM,
+    [OBJ_EVENT_GFX_DP_PSYCHIC_M] =             &gObjectEventGraphicsInfo_DP_PsychicM,
+    [OBJ_EVENT_GFX_DP_RICH_BOY] =              &gObjectEventGraphicsInfo_DP_RichBoy,
+    [OBJ_EVENT_GFX_DP_SAILOR] =                &gObjectEventGraphicsInfo_DP_Sailor,
+    [OBJ_EVENT_GFX_DP_SCIENTIST] =             &gObjectEventGraphicsInfo_DP_Scientist,
+    [OBJ_EVENT_GFX_DP_SWIMMER_F] =             &gObjectEventGraphicsInfo_DP_SwimmerF,
+    [OBJ_EVENT_GFX_DP_SWIMMER_M] =             &gObjectEventGraphicsInfo_DP_SwimmerM,
+    // Alt players
+    [OBJ_EVENT_GFX_DAWN_NORMAL] =              &gObjectEventGraphicsInfo_DawnNormal,
+    [OBJ_EVENT_GFX_DAWN_MACH_BIKE] =           &gObjectEventGraphicsInfo_DawnMachBike,
+    [OBJ_EVENT_GFX_DAWN_SURFING] =             &gObjectEventGraphicsInfo_DawnSurfing,
+    [OBJ_EVENT_GFX_DAWN_FIELD_MOVE] =          &gObjectEventGraphicsInfo_DawnFieldMove,
+    [OBJ_EVENT_GFX_DAWN_FISHING] =             &gObjectEventGraphicsInfo_DawnFishing,
+    [OBJ_EVENT_GFX_DAWN_WATERING] =            &gObjectEventGraphicsInfo_DawnWatering,
+    [OBJ_EVENT_GFX_DAWN_DECORATING] =          &gObjectEventGraphicsInfo_DawnDecorating,
+    [OBJ_EVENT_GFX_LUCAS_NORMAL] =             &gObjectEventGraphicsInfo_LucasNormal,
+    [OBJ_EVENT_GFX_LUCAS_MACH_BIKE] =          &gObjectEventGraphicsInfo_LucasMachBike,
+    [OBJ_EVENT_GFX_LUCAS_SURFING] =            &gObjectEventGraphicsInfo_LucasSurfing,
+    [OBJ_EVENT_GFX_LUCAS_FISHING] =            &gObjectEventGraphicsInfo_LucasFishing,
+    [OBJ_EVENT_GFX_LYRA_NORMAL] =              &gObjectEventGraphicsInfo_LyraNormal,
+    [OBJ_EVENT_GFX_LYRA_MACH_BIKE] =           &gObjectEventGraphicsInfo_LyraMachBike,
+    [OBJ_EVENT_GFX_LYRA_ACRO_BIKE] =           &gObjectEventGraphicsInfo_LyraAcroBike,
+    [OBJ_EVENT_GFX_LYRA_SURFING] =             &gObjectEventGraphicsInfo_LyraSurfing,
+    [OBJ_EVENT_GFX_LYRA_FIELD_MOVE] =          &gObjectEventGraphicsInfo_LyraFieldMove,
+    [OBJ_EVENT_GFX_LYRA_FISHING] =             &gObjectEventGraphicsInfo_LyraFishing,
+    [OBJ_EVENT_GFX_LYRA_WATERING] =            &gObjectEventGraphicsInfo_LyraWatering,
+    [OBJ_EVENT_GFX_LYRA_DECORATING] =          &gObjectEventGraphicsInfo_LyraDecorating,
+    [OBJ_EVENT_GFX_LYRA_UNDERWATER] =          &gObjectEventGraphicsInfo_LyraUnderwater,
+    [OBJ_EVENT_GFX_GOLD_NORMAL] =              &gObjectEventGraphicsInfo_GoldNormal,
+    [OBJ_EVENT_GFX_GOLD_MACH_BIKE] =           &gObjectEventGraphicsInfo_GoldMachBike,
+    [OBJ_EVENT_GFX_GOLD_ACRO_BIKE] =           &gObjectEventGraphicsInfo_GoldAcroBike,
+    [OBJ_EVENT_GFX_GOLD_SURFING] =             &gObjectEventGraphicsInfo_GoldSurfing,
+    [OBJ_EVENT_GFX_GOLD_FIELD_MOVE] =          &gObjectEventGraphicsInfo_GoldFieldMove,
+    [OBJ_EVENT_GFX_GOLD_FISHING] =             &gObjectEventGraphicsInfo_GoldFishing,
+    [OBJ_EVENT_GFX_GOLD_WATERING] =            &gObjectEventGraphicsInfo_GoldWatering,
+    [OBJ_EVENT_GFX_GOLD_DECORATING] =          &gObjectEventGraphicsInfo_GoldDecorating,
+    [OBJ_EVENT_GFX_GOLD_UNDERWATER] =          &gObjectEventGraphicsInfo_GoldUnderwater,
+    // Leaders
+    [OBJ_EVENT_GFX_GIOVANNI] =                 &gObjectEventGraphicsInfo_Giovanni,
+    [OBJ_EVENT_GFX_FALKNER] =                  &gObjectEventGraphicsInfo_Falkner,
+    [OBJ_EVENT_GFX_BUGSY] =                    &gObjectEventGraphicsInfo_Bugsy,
+    [OBJ_EVENT_GFX_WHITNEY] =                  &gObjectEventGraphicsInfo_Whitney,
+    [OBJ_EVENT_GFX_MORTY] =                    &gObjectEventGraphicsInfo_Morty,
+    [OBJ_EVENT_GFX_CHUCK] =                    &gObjectEventGraphicsInfo_Chuck,
+    [OBJ_EVENT_GFX_JASMINE] =                  &gObjectEventGraphicsInfo_Jasmine,
+    [OBJ_EVENT_GFX_PRYCE] =                    &gObjectEventGraphicsInfo_Pryce,
+    [OBJ_EVENT_GFX_CLAIR] =                    &gObjectEventGraphicsInfo_Clair,
+    [OBJ_EVENT_GFX_WILL] =                     &gObjectEventGraphicsInfo_Will,
+    [OBJ_EVENT_GFX_KAREN] =                    &gObjectEventGraphicsInfo_Karen,
+    [OBJ_EVENT_GFX_JANINE] =                   &gObjectEventGraphicsInfo_Janine,
+    [OBJ_EVENT_GFX_BLAINE] =                   &gObjectEventGraphicsInfo_Blaine,
+    [OBJ_EVENT_GFX_BLUE] =                     &gObjectEventGraphicsInfo_Blue,
+    [OBJ_EVENT_GFX_BROCK] =                    &gObjectEventGraphicsInfo_Brock,
+    [OBJ_EVENT_GFX_MISTY] =                    &gObjectEventGraphicsInfo_Misty,
+    [OBJ_EVENT_GFX_ERIKA] =                    &gObjectEventGraphicsInfo_Erika,
+    [OBJ_EVENT_GFX_KOGA] =                     &gObjectEventGraphicsInfo_Koga,
+    [OBJ_EVENT_GFX_SABRINA] =                  &gObjectEventGraphicsInfo_Sabrina,
     [OBJ_EVENT_GFX_SP_YOUNGSTER] =             &gObjectEventGraphicsInfo_SP_Youngster,
     [OBJ_EVENT_GFX_SP_FISHERMAN] =             &gObjectEventGraphicsInfo_SP_Fisherman,
     [OBJ_EVENT_GFX_SP_GENTLEMAN] =             &gObjectEventGraphicsInfo_SP_Gentleman,

@@ -292,6 +292,22 @@ graphics/pokemon_jump/bg.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/palettes/%.gbapal: $(OBJEVENTGFXDIR)/palettes/%.pal
 	$(GFX) $< $@
 
+# Object-event palettes derivable directly from PNGs (no .pal provided)
+$(OBJEVENTGFXDIR)/palettes/brock.gbapal: $(OBJEVENTGFXDIR)/pics/people/brock.png
+	$(GFX) $< $@
+$(OBJEVENTGFXDIR)/palettes/misty.gbapal: $(OBJEVENTGFXDIR)/pics/people/misty.png
+	$(GFX) $< $@
+$(OBJEVENTGFXDIR)/palettes/koga.gbapal: $(OBJEVENTGFXDIR)/pics/people/koga.png
+	$(GFX) $< $@
+$(OBJEVENTGFXDIR)/palettes/blaine.gbapal: $(OBJEVENTGFXDIR)/pics/people/Blaine.png
+	$(GFX) $< $@
+$(OBJEVENTGFXDIR)/palettes/blue.gbapal: $(OBJEVENTGFXDIR)/pics/people/Blue.png
+	$(GFX) $< $@
+$(OBJEVENTGFXDIR)/palettes/erika.gbapal: $(OBJEVENTGFXDIR)/pics/people/Erika.png
+	$(GFX) $< $@
+$(OBJEVENTGFXDIR)/palettes/sabrina.gbapal: $(OBJEVENTGFXDIR)/pics/people/Sabrina.png
+	$(GFX) $< $@
+
 # Backward-compat specific rule (kept):
 $(OBJEVENTGFXDIR)/palettes/prof_elm.gbapal: %.gbapal: %.pal
 	$(GFX) $< $@

@@ -397,8 +397,91 @@
 
 #define OBJ_EVENT_GFX_RGBY_RED                   366
 
-// Update total count
-#define NUM_OBJ_EVENT_GFX                        367
+// Additional DP-style generic people (non-conflicting new IDs)
+#define OBJ_EVENT_GFX_DP_YOUNGSTER               367
+#define OBJ_EVENT_GFX_DP_CAMPER                  368
+#define OBJ_EVENT_GFX_DP_PICNICKER               369
+#define OBJ_EVENT_GFX_DP_FISHERMAN               370
+#define OBJ_EVENT_GFX_DP_GENTLEMAN               371
+#define OBJ_EVENT_GFX_DP_HIKER                   372
+#define OBJ_EVENT_GFX_DP_ARTIST                  373
+#define OBJ_EVENT_GFX_DP_BEAUTY                  374
+#define OBJ_EVENT_GFX_DP_BLACK_BELT              375
+#define OBJ_EVENT_GFX_DP_BUG_CATCHER             376
+#define OBJ_EVENT_GFX_DP_POKEFAN_F               377
+#define OBJ_EVENT_GFX_DP_POKEFAN_M               378
+#define OBJ_EVENT_GFX_DP_PSYCHIC_M               379
+#define OBJ_EVENT_GFX_DP_RICH_BOY                380
+#define OBJ_EVENT_GFX_DP_SAILOR                  381
+#define OBJ_EVENT_GFX_DP_SCIENTIST               382
+#define OBJ_EVENT_GFX_DP_SWIMMER_F               383
+#define OBJ_EVENT_GFX_DP_SWIMMER_M               384
+
+// Update total count (intermediate, overridden by final count below)
+// #define NUM_OBJ_EVENT_GFX                      385
+
+// Player-style alternates (normal + states present)
+#define OBJ_EVENT_GFX_DAWN_NORMAL                385
+#define OBJ_EVENT_GFX_DAWN_MACH_BIKE             386
+#define OBJ_EVENT_GFX_DAWN_SURFING               387
+#define OBJ_EVENT_GFX_DAWN_FIELD_MOVE            388
+#define OBJ_EVENT_GFX_DAWN_FISHING               389
+#define OBJ_EVENT_GFX_DAWN_WATERING              390
+#define OBJ_EVENT_GFX_DAWN_DECORATING            391
+
+#define OBJ_EVENT_GFX_LUCAS_NORMAL               392
+#define OBJ_EVENT_GFX_LUCAS_MACH_BIKE            393
+#define OBJ_EVENT_GFX_LUCAS_SURFING              394
+#define OBJ_EVENT_GFX_LUCAS_FISHING              395
+
+#define OBJ_EVENT_GFX_LYRA_NORMAL                396
+#define OBJ_EVENT_GFX_LYRA_MACH_BIKE             397
+#define OBJ_EVENT_GFX_LYRA_ACRO_BIKE             398
+#define OBJ_EVENT_GFX_LYRA_SURFING               399
+#define OBJ_EVENT_GFX_LYRA_FIELD_MOVE            400
+#define OBJ_EVENT_GFX_LYRA_FISHING               401
+#define OBJ_EVENT_GFX_LYRA_WATERING              402
+#define OBJ_EVENT_GFX_LYRA_DECORATING            403
+#define OBJ_EVENT_GFX_LYRA_UNDERWATER            404
+
+#define OBJ_EVENT_GFX_GOLD_NORMAL                405
+#define OBJ_EVENT_GFX_GOLD_MACH_BIKE             406
+#define OBJ_EVENT_GFX_GOLD_ACRO_BIKE             407
+#define OBJ_EVENT_GFX_GOLD_SURFING               408
+#define OBJ_EVENT_GFX_GOLD_FIELD_MOVE            409
+#define OBJ_EVENT_GFX_GOLD_FISHING               410
+#define OBJ_EVENT_GFX_GOLD_WATERING              411
+#define OBJ_EVENT_GFX_GOLD_DECORATING            412
+#define OBJ_EVENT_GFX_GOLD_UNDERWATER            413
+
+// Kanto/Johto leaders (only those with palettes available)
+#define OBJ_EVENT_GFX_GIOVANNI                   414
+#define OBJ_EVENT_GFX_FALKNER                    415
+#define OBJ_EVENT_GFX_BUGSY                      416
+#define OBJ_EVENT_GFX_WHITNEY                    417
+#define OBJ_EVENT_GFX_MORTY                      418
+#define OBJ_EVENT_GFX_CHUCK                      419
+#define OBJ_EVENT_GFX_JASMINE                    420
+#define OBJ_EVENT_GFX_PRYCE                      421
+#define OBJ_EVENT_GFX_CLAIR                      422
+#define OBJ_EVENT_GFX_WILL                       423
+#define OBJ_EVENT_GFX_KAREN                      424
+#define OBJ_EVENT_GFX_JANINE                     425
+
+// Update total count (intermediate, overridden by final count below)
+// #define NUM_OBJ_EVENT_GFX                      426
+
+// Kanto leaders continued
+#define OBJ_EVENT_GFX_BLAINE                     426
+#define OBJ_EVENT_GFX_BLUE                       427
+#define OBJ_EVENT_GFX_BROCK                      428
+#define OBJ_EVENT_GFX_MISTY                      429
+#define OBJ_EVENT_GFX_ERIKA                      430
+#define OBJ_EVENT_GFX_KOGA                       431
+#define OBJ_EVENT_GFX_SABRINA                    432
+
+// Final total count
+#define NUM_OBJ_EVENT_GFX                        433
 
 
 // These are dynamic object gfx ids.
@@ -620,6 +703,32 @@
 #define OBJ_EVENT_PAL_TAG_DP_SCIENTIST            0x11AC
 #define OBJ_EVENT_PAL_TAG_DP_SWIMMER_F            0x11AD
 #define OBJ_EVENT_PAL_TAG_DP_SWIMMER_M            0x11AE
+
+// Additional character-specific palettes
+#define OBJ_EVENT_PAL_TAG_DAWN                    0x11C0
+#define OBJ_EVENT_PAL_TAG_LUCAS                   0x11C1
+#define OBJ_EVENT_PAL_TAG_LYRA                    0x11C2
+#define OBJ_EVENT_PAL_TAG_GOLD                    0x11C3
+#define OBJ_EVENT_PAL_TAG_GIOVANNI                0x11C4
+#define OBJ_EVENT_PAL_TAG_FALKNER                 0x11C5
+#define OBJ_EVENT_PAL_TAG_BUGSY                   0x11C6
+#define OBJ_EVENT_PAL_TAG_WHITNEY                 0x11C7
+#define OBJ_EVENT_PAL_TAG_MORTY                   0x11C8
+#define OBJ_EVENT_PAL_TAG_CHUCK                   0x11C9
+#define OBJ_EVENT_PAL_TAG_JASMINE                 0x11CA
+#define OBJ_EVENT_PAL_TAG_PRYCE                   0x11CB
+#define OBJ_EVENT_PAL_TAG_CLAIR                   0x11CC
+#define OBJ_EVENT_PAL_TAG_WILL                    0x11CD
+#define OBJ_EVENT_PAL_TAG_KAREN                   0x11CE
+#define OBJ_EVENT_PAL_TAG_JANINE                  0x11CF
+// Kanto leaders palettes
+#define OBJ_EVENT_PAL_TAG_BLAINE                  0x11D0
+#define OBJ_EVENT_PAL_TAG_BLUE                    0x11D1
+#define OBJ_EVENT_PAL_TAG_BROCK                   0x11D2
+#define OBJ_EVENT_PAL_TAG_MISTY                   0x11D3
+#define OBJ_EVENT_PAL_TAG_ERIKA                   0x11D4
+#define OBJ_EVENT_PAL_TAG_KOGA                    0x11D5
+#define OBJ_EVENT_PAL_TAG_SABRINA                 0x11D6
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

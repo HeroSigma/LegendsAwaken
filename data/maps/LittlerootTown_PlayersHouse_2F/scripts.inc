@@ -6,7 +6,7 @@ LittlerootTown_PlayersHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_PlayersHouse_2F_OnTransition:
-	call_if_eq VAR_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
+	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
@@ -57,6 +57,35 @@ PlayersHouse_2F_EventScript_GameCube::
 	msgbox PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN
 	end
 
+// Brief flicker when arriving upstairs to hint at the Poké Ball
+PlayersHouse_2F_EventScript_IntroFlicker::
+	lockall
+	msgbox PlayersHouse_2F_Text_FlickerThought, MSGBOX_DEFAULT
+	releaseall
+	return
+
+// Poké Ball interaction: grant Z-Power Ring with flavor dialogue
+PlayersHouse_2F_EventScript_ZRingBall::
+    lockall
+    checkitem ITEM_Z_POWER_RING, 1
+    goto_if_eq VAR_RESULT, TRUE, PlayersHouse_2F_EventScript_ZRingBall_Empty
+    msgbox PlayersHouse_2F_Text_PlayerBallSpot, MSGBOX_DEFAULT
+    msgbox PlayersHouse_2F_Text_PlayerCallMom, MSGBOX_DEFAULT
+    msgbox PlayersHouse_2F_Text_MomReply, MSGBOX_DEFAULT
+    setvar VAR_0x8000, ITEM_Z_POWER_RING
+    setvar VAR_0x8001, 1
+    callstd STD_OBTAIN_ITEM
+    setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_2F_ZRING_BALL
+    removeobject VAR_LAST_TALKED
+    msgbox PlayersHouse_2F_Text_DistantVoice, MSGBOX_DEFAULT
+    releaseall
+    end
+
+PlayersHouse_2F_EventScript_ZRingBall_Empty::
+    msgbox PlayersHouse_2F_Text_EmptyBall, MSGBOX_SIGN
+    releaseall
+    end
+
 PlayersHouse_2F_Text_ClockIsStopped:
 	.string "The clock is stopped…\p"
 	.string "Better set it and start it!$"
@@ -92,6 +121,27 @@ PlayersHouse_2F_Text_ItsAGameCube:
         .string "It's a Nintendo GameCube.\p"
         .string "A Game Boy Advance is connected to\n"
         .string "serve as the Controller.$"
+
+PlayersHouse_2F_Text_FlickerThought:
+	.string "{COLOR GREEN}(Did the light just flicker?\n"
+	.string "Weird…){COLOR DARK_GRAY}$"
+
+PlayersHouse_2F_Text_PlayerBallSpot:
+	.string "{COLOR GREEN}{PLAYER}: Huh? There's a Poké Ball here…{COLOR DARK_GRAY}$"
+
+PlayersHouse_2F_Text_PlayerCallMom:
+	.string "{COLOR GREEN}{PLAYER}: Mom, did you put a Poké Ball\n"
+	.string "in my room?{COLOR DARK_GRAY}$"
+
+PlayersHouse_2F_Text_MomReply:
+	.string "MOM: No, dear! Maybe the movers left it?\p"
+	.string "Or maybe it's a welcome gift!$"
+
+PlayersHouse_2F_Text_DistantVoice:
+    	.string "A distant voice: Your destiny awaits…$"
+
+PlayersHouse_2F_Text_EmptyBall:
+	.string "The Poké Ball is empty.$"
 
 LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
         .string "MOM: All set? The room looks nice.\p"

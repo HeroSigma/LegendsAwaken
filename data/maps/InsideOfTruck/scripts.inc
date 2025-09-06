@@ -4,10 +4,10 @@ InsideOfTruck_MapScripts::
 	.byte 0
 
 InsideOfTruck_OnLoad:
-	setmetatile 4, 1, METATILE_InsideOfTruck_ExitLight_Top, FALSE
-	setmetatile 4, 2, METATILE_InsideOfTruck_ExitLight_Mid, FALSE
-	setmetatile 4, 3, METATILE_InsideOfTruck_ExitLight_Bottom, FALSE
-	end
+    setmetatile 4, 1, METATILE_InsideOfTruck_ExitLight_Top, FALSE
+    setmetatile 4, 2, METATILE_InsideOfTruck_ExitLight_Mid, FALSE
+    setmetatile 4, 3, METATILE_InsideOfTruck_ExitLight_Bottom, FALSE
+    end
 
 InsideOfTruck_OnResume:
 	setstepcallback STEP_CB_TRUCK
@@ -47,12 +47,89 @@ InsideOfTruck_EventScript_SetIntroFlagsFemale::
 	releaseall
 	end
 
+@ Note: AutoTriggerScene is defined later and queued from C when the
+@ truck sequence completes. Do not trigger it here on load, to avoid
+@ racing the field callback.
+
 InsideOfTruck_EventScript_MovingBox::
 	msgbox InsideOfTruck_Text_BoxPrintedWithMonLogo, MSGBOX_SIGN
 	end
+
+InsideOfTruck_EventScript_MysteriousBox::
+	msgbox gText_Truck_MysteriousBox, MSGBOX_SIGN
+	end
+
+InsideOfTruck_EventScript_DevonBox::
+	lockall
+	checkitem ITEM_MEGA_RING, 1
+	goto_if_eq VAR_RESULT, TRUE, InsideOfTruck_EventScript_DevonBoxEmpty
+	msgbox gText_Truck_DevenCorpBox, MSGBOX_DEFAULT
+	giveitem ITEM_MEGA_RING, 1
+	releaseall
+	end
+
+InsideOfTruck_EventScript_DevonBoxEmpty::
+	msgbox InsideOfTruck_Text_DevonBoxEmpty, MSGBOX_DEFAULT
+	releaseall
+	end
+
+InsideOfTruck_EventScript_MemoryBox::
+	msgbox gText_Truck_MemoryBox, MSGBOX_SIGN
+	end
+
+
+// Always set the dynamic warp at the truck exit tile before leaving
+InsideOfTruck_EventScript_TruckExitSetDynamicWarp::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, InsideOfTruck_EventScript_TruckExitSetDynamicWarpMale
+	goto_if_eq VAR_RESULT, FEMALE, InsideOfTruck_EventScript_TruckExitSetDynamicWarpFemale
+	end
+
+InsideOfTruck_EventScript_TruckExitSetDynamicWarpMale::
+	setdynamicwarp MAP_LITTLEROOT_TOWN, 3, 10
+	end
+
+InsideOfTruck_EventScript_TruckExitSetDynamicWarpFemale::
+	setdynamicwarp MAP_LITTLEROOT_TOWN, 12, 10
+	end
+
+InsideOfTruck_EventScript_IntroText::
+    lockall
+    msgbox gText_Truck_Intro, MSGBOX_DEFAULT
+    applymovement OBJ_EVENT_ID_PLAYER, InsideOfTruck_Movement_PlayerLookAround
+    waitmovement 0
+    msgbox gText_Truck_ReadyToExit, MSGBOX_DEFAULT
+    releaseall
+    end
+
+// Auto-triggered after the truck sequence completes.
+// Does not alter intro state; gender-specific intro flags are
+// set later by InsideOfTruck_EventScript_SetIntroFlags*.
+InsideOfTruck_EventScript_AutoTriggerScene::
+    lockall
+    msgbox gText_Truck_Intro, MSGBOX_DEFAULT
+    msgbox gText_Truck_PlayerReflection, MSGBOX_DEFAULT
+    msgbox gText_Truck_ReadyToExit, MSGBOX_DEFAULT
+    releaseall
+    end
+
+InsideOfTruck_Movement_PlayerLookAround:
+	delay_16
+	face_left
+	delay_8
+	face_right
+	delay_8
+	face_up
+	delay_8
+	face_down
+	step_end
 
 InsideOfTruck_Text_BoxPrintedWithMonLogo:
 	.string "The box is printed with a POKéMON logo.\p"
 	.string "It's a POKéMON brand moving and\n"
 	.string "delivery service.$"
 
+InsideOfTruck_Text_DevonBoxEmpty:
+	.string "The DEVON CORP container is now empty.\p"
+	.string "The strange bracelet you found here\n"
+	.string "feels warm against your wrist.$"

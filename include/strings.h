@@ -279,14 +279,23 @@ extern const u8 gText_SelectorArrow3[];
 extern const u8 gText_YesNo[];
 
 // main menu/birch speech text
+extern const u8 gText_Creator_Welcome[];
 extern const u8 gText_Birch_Welcome[];
-extern const u8 gText_ThisIsAPokemon[];
+extern const u8 gText_Birch_Pokemon[];
 extern const u8 gText_Birch_MainSpeech[];
 extern const u8 gText_Birch_AndYouAre[];
 extern const u8 gText_Birch_BoyOrGirl[];
 extern const u8 gText_Birch_WhatsYourName[];
 extern const u8 gText_Birch_SoItsPlayer[];
 extern const u8 gText_Birch_YourePlayer[];
+
+// truck scene text
+extern const u8 gText_Truck_Intro[];
+extern const u8 gText_Truck_MysteriousBox[];
+extern const u8 gText_Truck_DevenCorpBox[];
+extern const u8 gText_Truck_MemoryBox[];
+extern const u8 gText_Truck_PlayerReflection[];
+extern const u8 gText_Truck_ReadyToExit[];
 extern const u8 gText_Birch_AreYouReady[];
 
 extern const u8 gText_BirchInTrouble[];

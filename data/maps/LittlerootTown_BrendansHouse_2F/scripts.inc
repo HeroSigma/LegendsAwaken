@@ -1,7 +1,26 @@
+
+
 LittlerootTown_BrendansHouse_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_BrendansHouse_2F_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LittlerootTown_BrendansHouse_2F_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_BrendansHouse_2F_OnFrame
 	.byte 0
+
+LittlerootTown_BrendansHouse_2F_OnFrame:
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_BrendansHouse_2F_EventScript_ShowZRingBall
+	.2byte 0
+
+LittlerootTown_BrendansHouse_2F_EventScript_ShowZRingBall::
+	checkitem ITEM_Z_POWER_RING, 1
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_BrendansHouse_2F_EventScript_ShowZRingBallRet
+	goto_if_set FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_ZRING_BALL, LittlerootTown_BrendansHouse_2F_EventScript_SpawnZRingBall
+LittlerootTown_BrendansHouse_2F_EventScript_ShowZRingBallRet:
+	return
+
+LittlerootTown_BrendansHouse_2F_EventScript_SpawnZRingBall::
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_ZRING_BALL
+	addobject LOCALID_ZRING_BALL
+	return
 
 LittlerootTown_BrendansHouse_2F_OnTransition:
 	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
@@ -10,6 +29,56 @@ LittlerootTown_BrendansHouse_2F_OnTransition:
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
+
+// Brief flicker when arriving upstairs to hint at the Poke Ball
+LittlerootTown_BrendansHouse_2F_EventScript_IntroFlicker::
+	lockall
+	msgbox LittlerootTown_BrendansHouse_2F_Text_FlickerThought, MSGBOX_DEFAULT
+	releaseall
+	return
+
+// Extra Poke Ball: grant Z-Power Ring with flavor dialogue
+LittlerootTown_BrendansHouse_2F_EventScript_ZRingBall::
+	lockall
+	checkitem ITEM_Z_POWER_RING, 1
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_BrendansHouse_2F_EventScript_ZRingBall_Empty
+	msgbox LittlerootTown_BrendansHouse_2F_Text_PlayerBallSpot, MSGBOX_DEFAULT
+	msgbox LittlerootTown_BrendansHouse_2F_Text_PlayerCallMom, MSGBOX_DEFAULT
+	msgbox LittlerootTown_BrendansHouse_2F_Text_MomReply, MSGBOX_DEFAULT
+	setvar VAR_0x8000, ITEM_Z_POWER_RING
+	setvar VAR_0x8001, 1
+	callstd STD_OBTAIN_ITEM
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_ZRING_BALL
+	removeobject VAR_LAST_TALKED
+	msgbox LittlerootTown_BrendansHouse_2F_Text_DistantVoice, MSGBOX_DEFAULT
+	releaseall
+	end
+
+LittlerootTown_BrendansHouse_2F_EventScript_ZRingBall_Empty::
+	msgbox LittlerootTown_BrendansHouse_2F_Text_EmptyBall, MSGBOX_SIGN
+	releaseall
+	end
+
+LittlerootTown_BrendansHouse_2F_Text_FlickerThought:
+	.string "{COLOR GREEN}(Did the light just flicker?\n"
+	.string "Weird...){COLOR DARK_GRAY}$"
+
+LittlerootTown_BrendansHouse_2F_Text_PlayerBallSpot:
+	.string "{COLOR GREEN}{PLAYER}: Huh? There's a Poke Ball here...{COLOR DARK_GRAY}$"
+
+LittlerootTown_BrendansHouse_2F_Text_PlayerCallMom:
+	.string "{COLOR GREEN}{PLAYER}: Mom, did you put a Poke Ball\n"
+	.string "in my room?{COLOR DARK_GRAY}$"
+
+LittlerootTown_BrendansHouse_2F_Text_MomReply:
+	.string "MOM: No, dear! Maybe the movers left it?\p"
+	.string "Or maybe it's a welcome gift!$"
+
+LittlerootTown_BrendansHouse_2F_Text_DistantVoice:
+	.string "A distant voice: Your destiny awaits...$"
+
+LittlerootTown_BrendansHouse_2F_Text_EmptyBall:
+	.string "The Poke Ball is empty.$"
 
 LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos::
 	goto_if_set FLAG_MET_RIVAL_LILYCOVE, LittlerootTown_BrendansHouse_2F_EventScript_TryUpdateBrendanPos
