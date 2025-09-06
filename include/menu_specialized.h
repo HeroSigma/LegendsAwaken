@@ -7,6 +7,8 @@
 #include "pokemon.h"
 #include "constants/berry.h"
 
+// DISABLED: Mailbox functionality removed
+/*
 // Window IDs for the Player PC Mailbox
 enum {
     MAILBOXWIN_TITLE,
@@ -14,6 +16,7 @@ enum {
     MAILBOXWIN_OPTIONS,
     MAILBOXWIN_COUNT
 };
+*/
 
 // Window IDs for the move relearner
 enum {
@@ -87,6 +90,8 @@ struct ConditionGraph
     /*0x355*/ u8 scanlineResetState;
 };
 
+// DISABLED: Mailbox functionality removed
+/*
 // Mailbox menu
 bool8 MailboxMenu_Alloc(u8 count);
 u8 MailboxMenu_AddWindow(u8 windowIdx);
@@ -94,6 +99,7 @@ u8 MailboxMenu_CreateList(struct PlayerPCItemPageStruct *page);
 void MailboxMenu_AddScrollArrows(struct PlayerPCItemPageStruct *page);
 void MailboxMenu_Free(void);
 void MailboxMenu_RemoveWindow(u8 windowIdx);
+*/
 
 // Condition graph
 void ConditionGraph_Init(struct ConditionGraph *graph);

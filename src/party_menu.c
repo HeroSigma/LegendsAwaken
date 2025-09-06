@@ -7136,10 +7136,13 @@ static bool8 ReturnGiveItemToBagOrPC(u16 item)
         return AddPCItem(item, 1);
 }
 
+// DISABLED: Mailbox functionality removed
+/*
 void ChooseMonToGiveMailFromMailbox(void)
 {
     InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_GIVE_MAILBOX_MAIL, FALSE, PARTY_MSG_GIVE_TO_WHICH_MON, Task_HandleChooseMonInput, Mailbox_ReturnToMailListAfterDeposit);
 }
+*/
 
 static void TryGiveMailToSelectedMon(u8 taskId)
 {

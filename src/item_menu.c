@@ -626,10 +626,13 @@ void CB2_GoToSellMenu(void)
     GoToBagMenu(ITEMMENULOCATION_SHOP, POCKETS_COUNT, CB2_ExitSellMenu);
 }
 
+// DISABLED: Item Storage functionality removed
+/*
 void CB2_GoToItemDepositMenu(void)
 {
     GoToBagMenu(ITEMMENULOCATION_ITEMPC, POCKETS_COUNT, CB2_PlayerPCExitBagMenu);
 }
+*/
 
 void ApprenticeOpenBagMenu(void)
 {
