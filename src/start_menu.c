@@ -110,7 +110,6 @@ static bool8 StartMenuStoreCallback(void);
 static bool8 StartMenuPokeNavCallback(void);
 static bool8 StartMenuPlayerNameCallback(void);
 static bool8 StartMenuSaveCallback(void);
-static bool8 StartMenuStoreCallback(void);
 static bool8 StartMenuOptionCallback(void);
 static bool8 StartMenuExitCallback(void);
 static bool8 StartMenuSafariZoneRetireCallback(void);
@@ -751,7 +750,7 @@ static bool8 StartMenuStoreCallback(void)
         PlayRainStoppingSoundEffect();
         RemoveExtraStartMenuWindows();
         CleanupOverworldWindowsAndTilemaps();
-        SetMainCallback2(CB2_OpenStoreFromStartMenu);
+        SetMainCallback2(CB2_OnlineStore); // Display store
         return TRUE;
     }
     return FALSE;
@@ -802,20 +801,6 @@ static bool8 StartMenuSaveCallback(void)
     return FALSE;
 }
 
-static bool8 StartMenuStoreCallback(void)
-{
-    if (!gPaletteFade.active)
-    {
-        PlayRainStoppingSoundEffect();
-        RemoveExtraStartMenuWindows();
-        CleanupOverworldWindowsAndTilemaps();
-        SetMainCallback2(CB2_OnlineStore); // Display store
-
-        return TRUE;
-    }
-
-    return FALSE;
-}
 
 static bool8 StartMenuOptionCallback(void)
 {
