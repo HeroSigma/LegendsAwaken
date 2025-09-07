@@ -16,3 +16,13 @@
 	.include "data/maps/headers.inc"
 	.include "data/maps/groups.inc"
 	.include "data/maps/connections.inc"
+
+	@ Include all map scripts.inc files so map script symbols are defined
+	.include "data/maps/EternaForestA/scripts.inc"
+	.include "data/maps/JubilifeCity/scripts.inc"
+	.include "data/maps/OreburghGate2F/scripts.inc"
+	.include "data/maps/OreburghCityA/scripts.inc"
+	.include "data/maps/SendOffSpring/scripts.inc"
+	.include "data/maps/LakeVerityCave/scripts.inc"
+	.include "data/maps/LakeValorCave/scripts.inc"
+	.include "data/maps/LakeAcuityCave/scripts.inc"
