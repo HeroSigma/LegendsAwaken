@@ -16,11 +16,15 @@
 #include "item.h"
 #include "pokeball.h"
 #include "party_menu.h"
+#include "pokemon.h"
 #include "constants/items.h"
 #include "constants/species.h"
+#include "constants/abilities.h"
 #include "constants/battle.h"
 #include "constants/pokemon.h"
+#include "constants/party_menu.h"
 #include "regions.h"
+#include "data.h" // struct TypeInfo, gTypesInfo
 
 // ---------- Region detection ----------
 u8 QoL_GetCurrentRegionId(void)
@@ -141,6 +145,192 @@ void Script_QoL_Msg_ConfirmNature(void)
     p = StringCopy(p, sMsg_ChangeNatureCost);
     *p = EOS;
     StringCopy(gStringVar4, sBuf);
+}
+
+// Show current ability and the standard cost
+void Script_QoL_Msg_AbilityInfo(void)
+{
+    u16 slot = VarGet(VAR_0x8006);
+    if (slot >= PARTY_SIZE)
+        slot = 0;
+    struct Pokemon *mon = &gPlayerParty[slot];
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    u8 abilityNum = GetMonData(mon, MON_DATA_ABILITY_NUM, NULL);
+    u16 abilityId = GetSpeciesAbility(species, abilityNum);
+    static const u8 sPrefix[] = _("Current ability: ");
+    static const u8 sSuffix[] = _("\nCost: ¥1000.");
+    static u8 sBuf[64];
+    u8 *p = sBuf;
+    p = StringCopy(p, sPrefix);
+    if (abilityId < ABILITIES_COUNT)
+        p = StringCopy(p, gAbilitiesInfo[abilityId].name);
+    p = StringCopy(p, sSuffix);
+    *p = EOS;
+    StringCopy(gStringVar4, sBuf);
+}
+
+static u16 sQol_GetSlot(void)
+{
+    u16 slot = VarGet(VAR_0x8006);
+    if (slot >= PARTY_SIZE)
+        slot = VarGet(VAR_0x8004);
+    if (slot >= PARTY_SIZE)
+        slot = 0;
+    return slot;
+}
+
+// Current minted (hidden) nature info
+extern const struct NatureInfo gNaturesInfo[];
+void Script_QoL_Msg_NatureInfo(void)
+{
+    u16 slot = sQol_GetSlot();
+    struct Pokemon *mon = &gPlayerParty[slot];
+    u8 minted = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
+    if (minted >= NUM_NATURES)
+        minted = 0;
+    u8 visible = GetNature(mon);
+    StringCopy(gStringVar1, gNaturesInfo[minted].name);
+    StringCopy(gStringVar2, gNaturesInfo[visible].name);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Minted nature: {STR_VAR_1} (visible: {STR_VAR_2})\nCost: ¥1000."));
+}
+
+void Script_QoL_Msg_EVsInfo(void)
+{
+    u16 slot = sQol_GetSlot();
+    struct Pokemon *mon = &gPlayerParty[slot];
+    u8 ev[6];
+    ev[0] = GetMonData(mon, MON_DATA_HP_EV);
+    ev[1] = GetMonData(mon, MON_DATA_ATK_EV);
+    ev[2] = GetMonData(mon, MON_DATA_DEF_EV);
+    ev[3] = GetMonData(mon, MON_DATA_SPEED_EV);
+    ev[4] = GetMonData(mon, MON_DATA_SPATK_EV);
+    ev[5] = GetMonData(mon, MON_DATA_SPDEF_EV);
+    ConvertIntToDecimalStringN(gStringVar1, ev[0], STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar2, ev[1], STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar3, ev[2], STR_CONV_MODE_LEFT_ALIGN, 3);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("EVs HP/Atk/Def: {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}"));
+    // reuse gStringVar1..3 for Spe/SpA/SpD in a second line
+    ConvertIntToDecimalStringN(gStringVar1, ev[3], STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar2, ev[4], STR_CONV_MODE_LEFT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar3, ev[5], STR_CONV_MODE_LEFT_ALIGN, 3);
+    StringExpandPlaceholders(gStringVar3, COMPOUND_STRING("\nSpe/SpA/SpD: {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}\nCost: ¥1000."));
+    StringAppend(gStringVar4, gStringVar3);
+}
+
+void Script_QoL_Msg_IVsInfo(void)
+{
+    u16 slot = sQol_GetSlot();
+    struct Pokemon *mon = &gPlayerParty[slot];
+    u8 iv[6];
+    iv[0] = GetMonData(mon, MON_DATA_HP_IV);
+    iv[1] = GetMonData(mon, MON_DATA_ATK_IV);
+    iv[2] = GetMonData(mon, MON_DATA_DEF_IV);
+    iv[3] = GetMonData(mon, MON_DATA_SPEED_IV);
+    iv[4] = GetMonData(mon, MON_DATA_SPATK_IV);
+    iv[5] = GetMonData(mon, MON_DATA_SPDEF_IV);
+    ConvertIntToDecimalStringN(gStringVar1, iv[0], STR_CONV_MODE_LEFT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar2, iv[1], STR_CONV_MODE_LEFT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar3, iv[2], STR_CONV_MODE_LEFT_ALIGN, 2);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("IVs HP/Atk/Def: {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}"));
+    ConvertIntToDecimalStringN(gStringVar1, iv[3], STR_CONV_MODE_LEFT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar2, iv[4], STR_CONV_MODE_LEFT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar3, iv[5], STR_CONV_MODE_LEFT_ALIGN, 2);
+    StringExpandPlaceholders(gStringVar3, COMPOUND_STRING("\nSpe/SpA/SpD: {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}\nCost: ¥1000."));
+    StringAppend(gStringVar4, gStringVar3);
+}
+
+static const u8 sBallName_Poke[]    = _("POKé BALL");
+static const u8 sBallName_Great[]   = _("GREAT BALL");
+static const u8 sBallName_Ultra[]   = _("ULTRA BALL");
+static const u8 sBallName_Premier[] = _("PREMIER BALL");
+static const u8 sBallName_Dive[]    = _("DIVE BALL");
+static const u8 sBallName_Dusk[]    = _("DUSK BALL");
+static const u8 sBallName_Timer[]   = _("TIMER BALL");
+static const u8 sBallName_Quick[]   = _("QUICK BALL");
+static const u8 sBallName_Cherish[] = _("CHERISH BALL");
+static const u8 sBallName_Beast[]   = _("BEAST BALL");
+static const u8 sBallName_Unknown[] = _("UNKNOWN BALL");
+
+static u16 FindItemIdByBallId(u8 ballId)
+{
+    // Find an item whose secondaryId matches the ballId
+    for (u16 item = ITEM_POKE_BALL; item < ITEMS_COUNT; item++)
+    {
+        if (GetItemSecondaryId(item) == ballId)
+            return item;
+    }
+    return ITEM_NONE;
+}
+
+void Script_QoL_Msg_BallInfo(void)
+{
+    u16 slot = sQol_GetSlot();
+    struct Pokemon *mon = &gPlayerParty[slot];
+    u8 ballId = GetMonData(mon, MON_DATA_POKEBALL);
+    u16 itemId = FindItemIdByBallId(ballId);
+    if (itemId != ITEM_NONE)
+        CopyItemName(itemId, gStringVar1);
+    else
+        StringCopy(gStringVar1, sBallName_Unknown);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Ball: {STR_VAR_1}\nCost: ¥1000."));
+}
+
+extern const struct TypeInfo gTypesInfo[];
+void Script_QoL_Msg_TeraInfo(void)
+{
+    u16 slot = sQol_GetSlot();
+    struct Pokemon *mon = &gPlayerParty[slot];
+    u8 type = GetMonData(mon, MON_DATA_TERA_TYPE);
+    if (type >= NUMBER_OF_MON_TYPES)
+        type = TYPE_NORMAL;
+    StringCopy(gStringVar1, gTypesInfo[type].name);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Tera Type: {STR_VAR_1}\nCost: ¥1000."));
+}
+
+// Hidden Power info: derive current type from IV parity (Gen 3 formula)
+void Script_QoL_Msg_HPInfo(void)
+{
+    static const u8 sHpTypeOrder[16] = {
+        TYPE_FIGHTING, TYPE_FLYING, TYPE_POISON, TYPE_GROUND,
+        TYPE_ROCK, TYPE_BUG, TYPE_GHOST, TYPE_STEEL,
+        TYPE_FIRE, TYPE_WATER, TYPE_GRASS, TYPE_ELECTRIC,
+        TYPE_PSYCHIC, TYPE_ICE, TYPE_DRAGON, TYPE_DARK
+    };
+    u16 slot = sQol_GetSlot();
+    struct Pokemon *mon = &gPlayerParty[slot];
+    u8 hp = GetMonData(mon, MON_DATA_HP_IV);
+    u8 at = GetMonData(mon, MON_DATA_ATK_IV);
+    u8 df = GetMonData(mon, MON_DATA_DEF_IV);
+    u8 sp = GetMonData(mon, MON_DATA_SPEED_IV);
+    u8 sa = GetMonData(mon, MON_DATA_SPATK_IV);
+    u8 sd = GetMonData(mon, MON_DATA_SPDEF_IV);
+    u8 S = (hp & 1) + 2 * (at & 1) + 4 * (df & 1) + 8 * (sp & 1) + 16 * (sa & 1) + 32 * (sd & 1);
+    u8 idx = (S * 15) / 63; // 0..15
+    u8 type = sHpTypeOrder[idx];
+    if (type >= NUMBER_OF_MON_TYPES)
+        type = TYPE_NORMAL;
+    StringCopy(gStringVar1, gTypesInfo[type].name);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Hidden Power: {STR_VAR_1}\nCost: ¥1000."));
+}
+
+// Generic confirmation message that shows the current cost in VAR_0x800A
+void Script_QoL_Msg_ConfirmPrice(void)
+{
+    u32 cost = VarGet(VAR_0x800A);
+    ConvertIntToDecimalStringN(gStringVar1, cost, STR_CONV_MODE_LEFT_ALIGN, 7);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Proceed? Cost: ¥{STR_VAR_1}."));
+}
+
+void Script_QoL_LoadCurrentEVs(void)
+{
+    u16 slot = sQol_GetSlot();
+    struct Pokemon *mon = &gPlayerParty[slot];
+    VarSet(VAR_0x8000, GetMonData(mon, MON_DATA_HP_EV));
+    VarSet(VAR_0x8001, GetMonData(mon, MON_DATA_ATK_EV));
+    VarSet(VAR_0x8002, GetMonData(mon, MON_DATA_DEF_EV));
+    VarSet(VAR_0x8003, GetMonData(mon, MON_DATA_SPEED_EV));
+    VarSet(VAR_0x8004, GetMonData(mon, MON_DATA_SPATK_EV));
+    VarSet(VAR_0x8005, GetMonData(mon, MON_DATA_SPDEF_EV));
 }
 
 // ---------- Numeric Input UI ----------

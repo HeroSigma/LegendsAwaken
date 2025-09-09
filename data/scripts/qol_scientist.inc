@@ -9,15 +9,16 @@ EventScript_QoLScientist::
 .MainLoop:
     closemessage
     multichoice 15, 1, MULTI_QOL_MAIN, FALSE
-	switch VAR_RESULT
-		case 0, .DoNature
-		case 1, .DoEVs
-		case 2, .DoIVs
-		case 3, .DoBall
-		case 4, .DoHidden
-		case 5, .DoTera
-		case 6, .End
-	goto .MainLoop
+    switch VAR_RESULT
+        case 0, .DoNature
+        case 1, .DoEVs
+        case 2, .DoIVs
+        case 3, .DoAbility
+        case 4, .DoBall
+        case 5, .DoHidden
+        case 6, .DoTera
+        case 7, .End
+        goto .MainLoop
 
 .DoNature:
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
@@ -25,6 +26,8 @@ EventScript_QoLScientist::
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
     copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_Msg_NatureInfo
+    msgbox gStringVar4, MSGBOX_DEFAULT
     msgbox gText_QoLChooseNature, MSGBOX_DEFAULT
     @ Build a scrollable 25-item menu using the debug nature strings (ordered 0..24)
     dynmultipush Debug_EventScript_ChangeNature_Text_Hardy,   0
@@ -81,6 +84,8 @@ EventScript_QoLScientist::
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoEVs
     copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_Msg_EVsInfo
+    msgbox gStringVar4, MSGBOX_DEFAULT
     callnative Script_QoL_EVs_PresetByNature
     call .ResultMsg
     goto .DoEVs
@@ -91,6 +96,8 @@ EventScript_QoLScientist::
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoEVs
     copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_Msg_EVsInfo
+    msgbox gStringVar4, MSGBOX_DEFAULT
     msgbox gText_QoLPickStat1, MSGBOX_DEFAULT
     setvar VAR_0x8004, SCROLL_MULTI_QOL_STATS
     special ShowScrollableMultichoice
@@ -121,33 +128,52 @@ EventScript_QoLScientist::
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoEVs
     copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_Msg_EVsInfo
+    msgbox gStringVar4, MSGBOX_DEFAULT
+    @ Seed spinners with current EVs
+    callnative Script_QoL_LoadCurrentEVs
 
-	setvar VAR_0x8000, 0
-	setvar VAR_0x8001, 252
+    @ Prompt HP
+    copyvar VAR_0x8002, VAR_0x8000   @ initial = current HP
+    setvar VAR_0x8000, 0             @ min
+    setvar VAR_0x8001, 252           @ max
+    callnative Script_QoL_PromptNumber
+    copyvar VAR_0x8000, VAR_RESULT   @ store new HP
 
-	setvar VAR_0x8002, 0
-	callnative Script_QoL_PromptNumber
-	copyvar VAR_0x8000, VAR_RESULT
+    @ Prompt ATK
+    copyvar VAR_0x8002, VAR_0x8001   @ initial = current ATK
+    setvar VAR_0x8000, 0
+    setvar VAR_0x8001, 252
+    callnative Script_QoL_PromptNumber
+    copyvar VAR_0x8001, VAR_RESULT   @ store new ATK
 
-	setvar VAR_0x8002, 0
-	callnative Script_QoL_PromptNumber
-	copyvar VAR_0x8001, VAR_RESULT
+    @ Prompt DEF
+    copyvar VAR_0x8002, VAR_0x8002   @ initial = current DEF
+    setvar VAR_0x8000, 0
+    setvar VAR_0x8001, 252
+    callnative Script_QoL_PromptNumber
+    copyvar VAR_0x8002, VAR_RESULT   @ store new DEF
 
-	setvar VAR_0x8002, 0
-	callnative Script_QoL_PromptNumber
-	copyvar VAR_0x8002, VAR_RESULT
+    @ Prompt SPE (Speed)
+    copyvar VAR_0x8002, VAR_0x8003   @ initial = current SPE
+    setvar VAR_0x8000, 0
+    setvar VAR_0x8001, 252
+    callnative Script_QoL_PromptNumber
+    copyvar VAR_0x8003, VAR_RESULT   @ store new SPE
 
-	setvar VAR_0x8002, 0
-	callnative Script_QoL_PromptNumber
-	copyvar VAR_0x8003, VAR_RESULT
+    @ Prompt SPA
+    copyvar VAR_0x8002, VAR_0x8004   @ initial = current SPA
+    setvar VAR_0x8000, 0
+    setvar VAR_0x8001, 252
+    callnative Script_QoL_PromptNumber
+    copyvar VAR_0x8004, VAR_RESULT   @ store new SPA
 
-	setvar VAR_0x8002, 0
-	callnative Script_QoL_PromptNumber
-	copyvar VAR_0x8004, VAR_RESULT
-
-	setvar VAR_0x8002, 0
-	callnative Script_QoL_PromptNumber
-	copyvar VAR_0x8005, VAR_RESULT
+    @ Prompt SPD
+    copyvar VAR_0x8002, VAR_0x8005   @ initial = current SPD
+    setvar VAR_0x8000, 0
+    setvar VAR_0x8001, 252
+    callnative Script_QoL_PromptNumber
+    copyvar VAR_0x8005, VAR_RESULT   @ store new SPD
 
 	callnative Script_QoL_EVs_CustomFull
 	call .ResultMsg
@@ -180,6 +206,8 @@ EventScript_QoLScientist::
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoIVs
     copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_Msg_IVsInfo
+    msgbox gStringVar4, MSGBOX_DEFAULT
     callnative Script_QoL_IVs_Perfect31
     call .ResultMsg
     goto .DoIVs
@@ -190,6 +218,8 @@ EventScript_QoLScientist::
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoIVs
     copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_Msg_IVsInfo
+    msgbox gStringVar4, MSGBOX_DEFAULT
     callnative Script_QoL_IVs_TrickRoom
     call .ResultMsg
     goto .DoIVs
@@ -204,13 +234,15 @@ EventScript_QoLScientist::
     compare VAR_RESULT, MULTI_B_PRESSED
     goto_if_eq .DoIVs
     callnative Script_QoL_MapStatSelection
-    setvar VAR_0x8000, VAR_RESULT        @ store chosen stat
+    copyvar VAR_0x8000, VAR_RESULT        @ store chosen stat
     copyvar VAR_0x8003, VAR_0x8000       @ preserve stat across number prompt
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
     special ChoosePartyMon
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .DoIVs
     copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_Msg_IVsInfo
+    msgbox gStringVar4, MSGBOX_DEFAULT
     setvar VAR_0x8000, 0                 @ min
     setvar VAR_0x8001, 31                @ max
     setvar VAR_0x8002, 31                @ initial
@@ -227,6 +259,8 @@ EventScript_QoLScientist::
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
     copyvar VAR_0x8006, VAR_0x8004
+        callnative Script_QoL_Msg_BallInfo
+        msgbox gStringVar4, MSGBOX_DEFAULT
         msgbox gText_QoLPickBall, MSGBOX_DEFAULT
         setvar VAR_0x8004, SCROLL_MULTI_QOL_BALLS
         special ShowScrollableMultichoice
@@ -256,19 +290,28 @@ EventScript_QoLScientist::
 .B7: setvar VAR_0x8000, ITEM_QUICK_BALL;   goto .BApply
 .B8: setvar VAR_0x8000, ITEM_CHERISH_BALL; goto .BApply
 .B9: setvar VAR_0x8000, ITEM_BEAST_BALL;   goto .BApply
+.BConfirm:
+    setvar VAR_0x800A, 1000
+    callnative Script_QoL_Msg_ConfirmPrice
+    msgbox gStringVar4, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, NO, .DoBall
+    return
 .BApply:
+	call .BConfirm
 	callnative Script_QoL_SetBall
 	call .ResultMsg
 	goto .MainLoop
 
 .DoTera:
-	msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
-	special ChoosePartyMon
-	waitstate
+    msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
+    special ChoosePartyMon
+    waitstate
     copyvar VAR_0x8004, VAR_RESULT
-	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
-	copyvar VAR_0x8006, VAR_0x8004 @ store chosen slot for setteratype macro
-	@ Page 1 of Tera types
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
+    copyvar VAR_0x8006, VAR_0x8004 @ store chosen slot for setteratype macro
+    callnative Script_QoL_Msg_TeraInfo
+    msgbox gStringVar4, MSGBOX_DEFAULT
+    @ Page 1 of Tera types
 .TeraPage1:
 	setvar VAR_0x8004, SCROLL_MULTI_TERA_TYPES_PAGE1
 	special ShowScrollableMultichoice
@@ -284,6 +327,7 @@ EventScript_QoLScientist::
 		case 7, .TeraSetGhost
 		case 8, .TeraSetSteel
 		case 9, .TeraPage2
+		case 10, .MainLoop
 		case MULTI_B_PRESSED, .MainLoop
 	end
 
@@ -303,6 +347,7 @@ EventScript_QoLScientist::
 		case 8, .TeraSetFairy
 		case 9, .TeraSetStellar
 		case 10, .TeraPage1
+		case 11, .MainLoop
 		case MULTI_B_PRESSED, .MainLoop
 	end
 
@@ -322,25 +367,131 @@ EventScript_QoLScientist::
 	hidemoneybox
 	goto .MainLoop
 
-.TeraSetNormal:   setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_NORMAL,   VAR_0x8006; goto .MainLoop
-.TeraSetFighting: setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_FIGHTING, VAR_0x8006; goto .MainLoop
-.TeraSetFlying:   setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_FLYING,   VAR_0x8006; goto .MainLoop
-.TeraSetPoison:   setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_POISON,   VAR_0x8006; goto .MainLoop
-.TeraSetGround:   setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_GROUND,   VAR_0x8006; goto .MainLoop
-.TeraSetRock:     setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_ROCK,     VAR_0x8006; goto .MainLoop
-.TeraSetBug:      setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_BUG,      VAR_0x8006; goto .MainLoop
-.TeraSetGhost:    setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_GHOST,    VAR_0x8006; goto .MainLoop
-.TeraSetSteel:    setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_STEEL,    VAR_0x8006; goto .MainLoop
-.TeraSetFire:     setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_FIRE,     VAR_0x8006; goto .MainLoop
-.TeraSetWater:    setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_WATER,    VAR_0x8006; goto .MainLoop
-.TeraSetGrass:    setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_GRASS,    VAR_0x8006; goto .MainLoop
-.TeraSetElectric: setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_ELECTRIC, VAR_0x8006; goto .MainLoop
-.TeraSetPsychic:  setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_PSYCHIC,  VAR_0x8006; goto .MainLoop
-.TeraSetIce:      setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_ICE,      VAR_0x8006; goto .MainLoop
-.TeraSetDragon:   setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_DRAGON,   VAR_0x8006; goto .MainLoop
-.TeraSetDark:     setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_DARK,     VAR_0x8006; goto .MainLoop
-.TeraSetFairy:    setvar VAR_0x800A, 1000; call .TeraPay; setteratype TYPE_FAIRY,    VAR_0x8006; goto .MainLoop
-.TeraSetStellar:  setvar VAR_0x800A, 5000; call .TeraPay; setteratype TYPE_STELLAR,  VAR_0x8006; goto .MainLoop
+.TeraConfirmFrom1:
+    callnative Script_QoL_Msg_ConfirmPrice
+    msgbox gStringVar4, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, NO, .TeraPage1
+    return
+.TeraConfirmFrom2:
+    callnative Script_QoL_Msg_ConfirmPrice
+    msgbox gStringVar4, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, NO, .TeraPage2
+    return
+
+.TeraSetNormal:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom1
+    call .TeraPay
+    setteratype TYPE_NORMAL,   VAR_0x8006
+    goto .MainLoop
+.TeraSetFighting:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom1
+    call .TeraPay
+    setteratype TYPE_FIGHTING, VAR_0x8006
+    goto .MainLoop
+.TeraSetFlying:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom1
+    call .TeraPay
+    setteratype TYPE_FLYING,   VAR_0x8006
+    goto .MainLoop
+.TeraSetPoison:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom1
+    call .TeraPay
+    setteratype TYPE_POISON,   VAR_0x8006
+    goto .MainLoop
+.TeraSetGround:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom1
+    call .TeraPay
+    setteratype TYPE_GROUND,   VAR_0x8006
+    goto .MainLoop
+.TeraSetRock:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom1
+    call .TeraPay
+    setteratype TYPE_ROCK,     VAR_0x8006
+    goto .MainLoop
+.TeraSetBug:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom1
+    call .TeraPay
+    setteratype TYPE_BUG,      VAR_0x8006
+    goto .MainLoop
+.TeraSetGhost:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom1
+    call .TeraPay
+    setteratype TYPE_GHOST,    VAR_0x8006
+    goto .MainLoop
+.TeraSetSteel:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom1
+    call .TeraPay
+    setteratype TYPE_STEEL,    VAR_0x8006
+    goto .MainLoop
+.TeraSetFire:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom2
+    call .TeraPay
+    setteratype TYPE_FIRE,     VAR_0x8006
+    goto .MainLoop
+.TeraSetWater:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom2
+    call .TeraPay
+    setteratype TYPE_WATER,    VAR_0x8006
+    goto .MainLoop
+.TeraSetGrass:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom2
+    call .TeraPay
+    setteratype TYPE_GRASS,    VAR_0x8006
+    goto .MainLoop
+.TeraSetElectric:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom2
+    call .TeraPay
+    setteratype TYPE_ELECTRIC, VAR_0x8006
+    goto .MainLoop
+.TeraSetPsychic:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom2
+    call .TeraPay
+    setteratype TYPE_PSYCHIC,  VAR_0x8006
+    goto .MainLoop
+.TeraSetIce:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom2
+    call .TeraPay
+    setteratype TYPE_ICE,      VAR_0x8006
+    goto .MainLoop
+.TeraSetDragon:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom2
+    call .TeraPay
+    setteratype TYPE_DRAGON,   VAR_0x8006
+    goto .MainLoop
+.TeraSetDark:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom2
+    call .TeraPay
+    setteratype TYPE_DARK,     VAR_0x8006
+    goto .MainLoop
+.TeraSetFairy:
+    setvar VAR_0x800A, 1000
+    call .TeraConfirmFrom2
+    call .TeraPay
+    setteratype TYPE_FAIRY,    VAR_0x8006
+    goto .MainLoop
+.TeraSetStellar:
+    setvar VAR_0x800A, 5000
+    call .TeraConfirmFrom2
+    call .TeraPay
+    setteratype TYPE_STELLAR,  VAR_0x8006
+    goto .MainLoop
 
 .DoHidden:
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
@@ -348,23 +499,76 @@ EventScript_QoLScientist::
     waitstate
     goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
     copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_Msg_HPInfo
+    msgbox gStringVar4, MSGBOX_DEFAULT
+    msgbox gText_QoLPickHPType, MSGBOX_DEFAULT
 
-.HPSetFighting: setvar VAR_0x8000, TYPE_FIGHTING; goto .HPApply
-.HPSetFlying:   setvar VAR_0x8000, TYPE_FLYING;   goto .HPApply
-.HPSetPoison:   setvar VAR_0x8000, TYPE_POISON;   goto .HPApply
-.HPSetGround:   setvar VAR_0x8000, TYPE_GROUND;   goto .HPApply
-.HPSetRock:     setvar VAR_0x8000, TYPE_ROCK;     goto .HPApply
-.HPSetBug:      setvar VAR_0x8000, TYPE_BUG;      goto .HPApply
-.HPSetGhost:    setvar VAR_0x8000, TYPE_GHOST;    goto .HPApply
-.HPSetSteel:    setvar VAR_0x8000, TYPE_STEEL;    goto .HPApply
-.HPSetFire:     setvar VAR_0x8000, TYPE_FIRE;     goto .HPApply
-.HPSetWater:    setvar VAR_0x8000, TYPE_WATER;    goto .HPApply
-.HPSetGrass:    setvar VAR_0x8000, TYPE_GRASS;    goto .HPApply
-.HPSetElectric: setvar VAR_0x8000, TYPE_ELECTRIC; goto .HPApply
-.HPSetPsychic:  setvar VAR_0x8000, TYPE_PSYCHIC;  goto .HPApply
-.HPSetIce:      setvar VAR_0x8000, TYPE_ICE;      goto .HPApply
-.HPSetDragon:   setvar VAR_0x8000, TYPE_DRAGON;   goto .HPApply
-.HPSetDark:     setvar VAR_0x8000, TYPE_DARK;     goto .HPApply
+.HPPage1:
+    setvar VAR_0x8004, SCROLL_MULTI_QOL_HP_TYPES_PAGE1
+    special ShowScrollableMultichoice
+    waitstate
+    switch VAR_RESULT
+        case 0, .HPSetFighting
+        case 1, .HPSetFlying
+        case 2, .HPSetPoison
+        case 3, .HPSetGround
+        case 4, .HPSetRock
+        case 5, .HPSetBug
+        case 6, .HPSetGhost
+        case 7, .HPSetSteel
+        case 8, .HPPage2     @ Next
+        case 9, .MainLoop
+        case MULTI_B_PRESSED, .MainLoop
+    end
+
+.HPPage2:
+    setvar VAR_0x8004, SCROLL_MULTI_QOL_HP_TYPES_PAGE2
+    special ShowScrollableMultichoice
+    waitstate
+    switch VAR_RESULT
+        case 0, .HPSetFire
+        case 1, .HPSetWater
+        case 2, .HPSetGrass
+        case 3, .HPSetElectric
+        case 4, .HPSetPsychic
+        case 5, .HPSetIce
+        case 6, .HPSetDragon
+        case 7, .HPSetDark
+        case 8, .HPPage1     @ Back
+        case 9, .MainLoop
+        case MULTI_B_PRESSED, .MainLoop
+    end
+
+.HPConfirmFrom1:
+    setvar VAR_0x800A, 1000
+    callnative Script_QoL_Msg_ConfirmPrice
+    msgbox gStringVar4, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, NO, .HPPage1
+    return
+
+.HPConfirmFrom2:
+    setvar VAR_0x800A, 1000
+    callnative Script_QoL_Msg_ConfirmPrice
+    msgbox gStringVar4, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, NO, .HPPage2
+    return
+
+.HPSetFighting: setvar VAR_0x8000, TYPE_FIGHTING; call .HPConfirmFrom1; goto .HPApply
+.HPSetFlying:   setvar VAR_0x8000, TYPE_FLYING;   call .HPConfirmFrom1; goto .HPApply
+.HPSetPoison:   setvar VAR_0x8000, TYPE_POISON;   call .HPConfirmFrom1; goto .HPApply
+.HPSetGround:   setvar VAR_0x8000, TYPE_GROUND;   call .HPConfirmFrom1; goto .HPApply
+.HPSetRock:     setvar VAR_0x8000, TYPE_ROCK;     call .HPConfirmFrom1; goto .HPApply
+.HPSetBug:      setvar VAR_0x8000, TYPE_BUG;      call .HPConfirmFrom1; goto .HPApply
+.HPSetGhost:    setvar VAR_0x8000, TYPE_GHOST;    call .HPConfirmFrom1; goto .HPApply
+.HPSetSteel:    setvar VAR_0x8000, TYPE_STEEL;    call .HPConfirmFrom1; goto .HPApply
+.HPSetFire:     setvar VAR_0x8000, TYPE_FIRE;     call .HPConfirmFrom2; goto .HPApply
+.HPSetWater:    setvar VAR_0x8000, TYPE_WATER;    call .HPConfirmFrom2; goto .HPApply
+.HPSetGrass:    setvar VAR_0x8000, TYPE_GRASS;    call .HPConfirmFrom2; goto .HPApply
+.HPSetElectric: setvar VAR_0x8000, TYPE_ELECTRIC; call .HPConfirmFrom2; goto .HPApply
+.HPSetPsychic:  setvar VAR_0x8000, TYPE_PSYCHIC;  call .HPConfirmFrom2; goto .HPApply
+.HPSetIce:      setvar VAR_0x8000, TYPE_ICE;      call .HPConfirmFrom2; goto .HPApply
+.HPSetDragon:   setvar VAR_0x8000, TYPE_DRAGON;   call .HPConfirmFrom2; goto .HPApply
+.HPSetDark:     setvar VAR_0x8000, TYPE_DARK;     call .HPConfirmFrom2; goto .HPApply
 
 .HPApply:
     callnative Script_QoL_SetHiddenPowerType
@@ -400,3 +604,51 @@ EventScript_QoLScientist::
 .End:
 	release
 	end
+.DoAbility:
+    msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
+    special ChoosePartyMon
+    waitstate
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
+    copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_Msg_AbilityInfo
+    msgbox gStringVar4, MSGBOX_DEFAULT
+    setvar VAR_0x8004, SCROLL_MULTI_QOL_ABILITIES
+    special ShowScrollableMultichoice
+    waitstate
+    switch VAR_RESULT
+        case 0, .AB_Toggle
+        case 1, .AB_SetNorm1
+        case 2, .AB_SetNorm2
+        case 3, .AB_SetHidden
+        case 4, .MainLoop
+        case MULTI_B_PRESSED, .MainLoop
+    end
+.AB_Toggle:
+    call .ABConfirm
+    callnative Script_QoL_Ability_Toggle
+    call .ResultMsg
+    goto .MainLoop
+.AB_SetNorm1:
+    setvar VAR_0x8000, 0
+    call .ABConfirm
+    callnative Script_QoL_Ability_SetNormal
+    call .ResultMsg
+    goto .MainLoop
+.AB_SetNorm2:
+    setvar VAR_0x8000, 1
+    call .ABConfirm
+    callnative Script_QoL_Ability_SetNormal
+    call .ResultMsg
+    goto .MainLoop
+.AB_SetHidden:
+    call .ABConfirm
+    callnative Script_QoL_Ability_SetHidden
+    call .ResultMsg
+    goto .MainLoop
+
+.ABConfirm:
+    setvar VAR_0x800A, 1000
+    callnative Script_QoL_Msg_ConfirmPrice
+    msgbox gStringVar4, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, NO, .DoAbility
+    return

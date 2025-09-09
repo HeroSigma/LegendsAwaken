@@ -32,6 +32,17 @@ void Script_QoL_Msg_IllegalBall(void);
 void Script_QoL_Msg_Charged(void);
 void Script_QoL_Msg_Canceled(void);
 void Script_QoL_Msg_ConfirmNature(void);   // Uses VAR_0x8000 nature id -> gStringVar4
+void Script_QoL_Msg_AbilityInfo(void);     // Uses VAR_0x8006 party slot -> gStringVar4
+void Script_QoL_Msg_NatureInfo(void);      // Uses VAR_0x8006 party slot -> gStringVar4
+void Script_QoL_Msg_EVsInfo(void);         // Uses VAR_0x8006 party slot -> gStringVar4
+void Script_QoL_Msg_IVsInfo(void);         // Uses VAR_0x8006 party slot -> gStringVar4
+void Script_QoL_Msg_BallInfo(void);        // Uses VAR_0x8006 party slot -> gStringVar4
+void Script_QoL_Msg_TeraInfo(void);        // Uses VAR_0x8006 party slot -> gStringVar4
+void Script_QoL_Msg_HPInfo(void);          // Uses VAR_0x8006 party slot -> gStringVar4
+void Script_QoL_Msg_ConfirmPrice(void);    // Uses VAR_0x800A cost -> gStringVar4
+
+// Populate VAR_0x8000..VAR_0x8005 with current EVs of selected mon
+void Script_QoL_LoadCurrentEVs(void);
 
 // Service callnatives (set VAR_RESULT = 1 success, 2 not enough money, 3 illegal)
 // Uses chosen party mon; scripts store the selected slot in VAR_0x8006
@@ -48,3 +59,8 @@ void Script_QoL_IVs_SetStat(void);           // VAR_0x8000 = stat (0..5), VAR_0x
 
 void Script_QoL_SetBall(void);               // VAR_0x8000 = itemId (ITEM_* Ball)
 void Script_QoL_SetHiddenPowerType(void);    // VAR_0x8000 = TYPE_FIGHTING..TYPE_DARK indexable HP type
+
+// Ability services
+void Script_QoL_Ability_SetNormal(void);     // VAR_0x8000 = 0 or 1
+void Script_QoL_Ability_SetHidden(void);
+void Script_QoL_Ability_Toggle(void);

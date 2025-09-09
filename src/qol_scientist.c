@@ -294,3 +294,49 @@ void Script_QoL_SetHiddenPowerType(void)
     CalculateMonStats(mon);
     VarSet(VAR_RESULT, 1);
 }
+
+/* ==================== Ability changer ==================== */
+
+static bool8 SpeciesHasAbilitySlot(u16 species, u8 slot)
+{
+    return GetSpeciesAbility(species, slot) != 0;
+}
+
+void Script_QoL_Ability_Toggle(void)
+{
+    struct Pokemon *mon = sQolMon();
+    if (MonInvalidForEdit(mon)) { VarSet(VAR_RESULT, 0); return; }
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    u8 cur = GetMonData(mon, MON_DATA_ABILITY_NUM, NULL);
+    // Only toggle between normal slots 0 and 1 if both exist and current is normal.
+    if (!SpeciesHasAbilitySlot(species, 0) || !SpeciesHasAbilitySlot(species, 1) || cur > 1)
+    { VarSet(VAR_RESULT, 0); return; }
+    if (!QoL_TakeMoneyIfEnough(QOL_COST_PER_ACTION)) { VarSet(VAR_RESULT, 2); return; }
+    u8 newNum = cur ^ 1;
+    SetMonData(mon, MON_DATA_ABILITY_NUM, &newNum);
+    VarSet(VAR_RESULT, 1);
+}
+
+void Script_QoL_Ability_SetNormal(void)
+{
+    struct Pokemon *mon = sQolMon();
+    if (MonInvalidForEdit(mon)) { VarSet(VAR_RESULT, 0); return; }
+    u8 slot = VarGet(VAR_0x8000) & 1; // 0 or 1
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    if (!SpeciesHasAbilitySlot(species, slot)) { VarSet(VAR_RESULT, 0); return; }
+    if (!QoL_TakeMoneyIfEnough(QOL_COST_PER_ACTION)) { VarSet(VAR_RESULT, 2); return; }
+    SetMonData(mon, MON_DATA_ABILITY_NUM, &slot);
+    VarSet(VAR_RESULT, 1);
+}
+
+void Script_QoL_Ability_SetHidden(void)
+{
+    struct Pokemon *mon = sQolMon();
+    if (MonInvalidForEdit(mon)) { VarSet(VAR_RESULT, 0); return; }
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    if (!SpeciesHasAbilitySlot(species, 2)) { VarSet(VAR_RESULT, 0); return; }
+    if (!QoL_TakeMoneyIfEnough(QOL_COST_PER_ACTION)) { VarSet(VAR_RESULT, 2); return; }
+    u8 num = 2;
+    SetMonData(mon, MON_DATA_ABILITY_NUM, &num);
+    VarSet(VAR_RESULT, 1);
+}

@@ -2488,7 +2488,7 @@ void ShowScrollableMultichoice(void)
         break;
         case SCROLL_MULTI_TERA_TYPES_PAGE1:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 10; // 9 types + Next
+        task->tNumItems = 11; // 9 types + Next + Exit
         task->tLeft = 15;
         task->tTop = 1;
         task->tWidth = 14;
@@ -2498,7 +2498,7 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_TERA_TYPES_PAGE2:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 11; // 10 types + Back
+        task->tNumItems = 12; // 10 types + Back + Exit
         task->tLeft = 15;
         task->tTop = 1;
         task->tWidth = 14;
@@ -2644,7 +2644,7 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_QOL_HP_TYPES_PAGE1:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 9; // 8 types + Next
+        task->tNumItems = 10; // 8 types + Next + Exit
         task->tLeft = 15;
         task->tTop = 1;
         task->tWidth = 14;
@@ -2654,7 +2654,17 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_QOL_HP_TYPES_PAGE2:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 9; // 8 types + Back
+        task->tNumItems = 10; // 8 types + Back + Exit
+        task->tLeft = 15;
+        task->tTop = 1;
+        task->tWidth = 14;
+        task->tHeight = 12;
+        task->tKeepOpenAfterSelect = FALSE;
+        task->tTaskId = taskId;
+        break;
+    case SCROLL_MULTI_QOL_ABILITIES:
+        task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
+        task->tNumItems = 5; // Toggle, Normal 1, Normal 2, Hidden, Exit
         task->tLeft = 15;
         task->tTop = 1;
         task->tWidth = 14;
@@ -2981,7 +2991,8 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("BUG{CLEAR_TO 0x48}¥1000"),
         COMPOUND_STRING("GHOST{CLEAR_TO 0x48}¥1000"),
         COMPOUND_STRING("STEEL{CLEAR_TO 0x48}¥1000"),
-        COMPOUND_STRING("NEXT")
+        COMPOUND_STRING("NEXT"),
+        gText_Exit
     },
     [SCROLL_MULTI_TERA_TYPES_PAGE2] =
     {
@@ -2995,21 +3006,22 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("DARK{CLEAR_TO 0x48}¥1000"),
         COMPOUND_STRING("FAIRY{CLEAR_TO 0x48}¥1000"),
         COMPOUND_STRING("STELLAR{CLEAR_TO 0x48}¥5000"),
-        COMPOUND_STRING("BACK")
+        COMPOUND_STRING("BACK"),
+        gText_Exit
     },
     [SCROLL_MULTI_QOL_EVS] =
     {
-        COMPOUND_STRING("Preset by nature"),
-        COMPOUND_STRING("Quick: 252/252/6"),
-        COMPOUND_STRING("Full custom"),
-        COMPOUND_STRING("Clear EVs"),
+        COMPOUND_STRING("Preset by nature{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("Quick: 252/252/6{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("Full custom{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("Clear EVs{CLEAR_TO 0x48}¥1000"),
         gText_Exit
     },
     [SCROLL_MULTI_QOL_IVS] =
     {
-        COMPOUND_STRING("Perfect 31"),
-        COMPOUND_STRING("Trick Room: 0 Spe"),
-        COMPOUND_STRING("Set stat"),
+        COMPOUND_STRING("Perfect 31{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("Trick Room: 0 Spe{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("Set stat{CLEAR_TO 0x48}¥1000"),
         gText_Exit
     },
     [SCROLL_MULTI_QOL_STATS] =
@@ -3024,16 +3036,16 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_QOL_BALLS] =
     {
-        COMPOUND_STRING("POKé BALL"),
-        COMPOUND_STRING("GREAT BALL"),
-        COMPOUND_STRING("ULTRA BALL"),
-        COMPOUND_STRING("PREMIER BALL"),
-        COMPOUND_STRING("DIVE BALL"),
-        COMPOUND_STRING("DUSK BALL"),
-        COMPOUND_STRING("TIMER BALL"),
-        COMPOUND_STRING("QUICK BALL"),
-        COMPOUND_STRING("CHERISH BALL"),
-        COMPOUND_STRING("BEAST BALL"),
+        COMPOUND_STRING("POKé BALL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("GREAT BALL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("ULTRA BALL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("PREMIER BALL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("DIVE BALL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("DUSK BALL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("TIMER BALL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("QUICK BALL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("CHERISH BALL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("BEAST BALL{CLEAR_TO 0x48}¥1000"),
         gText_Exit
     },
     [SCROLL_MULTI_QOL_HP_TYPES_PAGE1] =
@@ -3047,6 +3059,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("GHOST{CLEAR_TO 0x48}¥1000"),
         COMPOUND_STRING("STEEL{CLEAR_TO 0x48}¥1000"),
         COMPOUND_STRING("NEXT"),
+        gText_Exit,
     },
     [SCROLL_MULTI_QOL_HP_TYPES_PAGE2] =
     {
@@ -3059,6 +3072,15 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("DRAGON{CLEAR_TO 0x48}¥1000"),
         COMPOUND_STRING("DARK{CLEAR_TO 0x48}¥1000"),
         COMPOUND_STRING("BACK"),
+        gText_Exit,
+    },
+    [SCROLL_MULTI_QOL_ABILITIES] =
+    {
+        COMPOUND_STRING("TOGGLE NORMAL{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("SET NORMAL 1{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("SET NORMAL 2{CLEAR_TO 0x48}¥1000"),
+        COMPOUND_STRING("SET HIDDEN{CLEAR_TO 0x48}¥1000"),
+        gText_Exit,
     }
 };
 

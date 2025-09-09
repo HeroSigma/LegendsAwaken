@@ -61,6 +61,7 @@
 #define SCROLL_MULTI_QOL_BALLS                            31
 #define SCROLL_MULTI_QOL_HP_TYPES_PAGE1                   32
 #define SCROLL_MULTI_QOL_HP_TYPES_PAGE2                   33
+#define SCROLL_MULTI_QOL_ABILITIES                        34
 
 #define MAX_SCROLL_MULTI_ON_SCREEN 6
 #define MAX_SCROLL_MULTI_LENGTH 17

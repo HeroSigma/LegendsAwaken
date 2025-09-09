@@ -604,6 +604,7 @@ static const struct MenuAction MultichoiceList_QoL_Main[] =
     { COMPOUND_STRING("NATURE") },
     { COMPOUND_STRING("EVs") },
     { COMPOUND_STRING("IVs") },
+    { COMPOUND_STRING("ABILITY") },
     { COMPOUND_STRING("POKé BALL") },
     { COMPOUND_STRING("HIDDEN POWER") },
     { COMPOUND_STRING("TERA TYPE") },
