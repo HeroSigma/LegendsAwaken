@@ -19,6 +19,11 @@
 #include "money.h"
 #include "string_util.h"
 #include "item_menu.h"
+#include "move.h"
+#include "party_menu.h"   // ItemIdToBattleMoveId
+#include "battle_main.h"  // gTypesInfo extern
+#include "strings.h"      // gText_ThreeDashes
+#include "rtc.h"          // gLocalTime
 #include "start_menu.h"
 #include "constants/items.h"
 #include "field_weather.h"
@@ -91,6 +96,82 @@ static const u8 sText_StoreConfirmYes[] = _("YES");
 static const u8 sText_StoreConfirmNo[] = _("NO");
 static const u8 sText_StoreItemAdded[] = _("Added to cart!");
 static const u8 sText_StoreConfirmInstructions[] = _("A: Confirm  B: Cancel");
+// Small UI helpers
+static const u8 sText_StoreListHelp[] = _("A: Select  B: Back  L/R: Category  START: Cart");
+static const u8 sText_StoreOwnedCount[] = _("x{STR_VAR_1}");
+static const u8 sText_StoreSale[] = _("SALE");
+static const u8 sText_StoreTodaysSale[] = _("Today: {STR_VAR_1} -10%");
+// Schedule UI strings
+static const u8 sText_ScheduleTitle[] = _("SALE SCHEDULE (-10%)");
+static const u8 sText_ScheduleCloseHint[] = _("B/SELECT: Close");
+static const u8 sText_DayMon[] = _("Mon");
+static const u8 sText_DayTue[] = _("Tue");
+static const u8 sText_DayWed[] = _("Wed");
+static const u8 sText_DayThu[] = _("Thu");
+static const u8 sText_DayFri[] = _("Fri");
+static const u8 sText_DaySat[] = _("Sat");
+static const u8 sText_DaySun[] = _("Sun");
+
+// Internal helpers
+// Forward declare category item table for early helper usage
+static const u16 *const sStoreCategoryItems[STORE_NUM_CATEGORIES];
+// Find the store category for an item; returns 0xFF if not present in any.
+static u8 Store_GetCategoryForItem(u16 itemId)
+{
+    for (u8 cat = 0; cat < STORE_NUM_CATEGORIES; cat++)
+    {
+        const u16 *items = sStoreCategoryItems[cat];
+        for (u16 i = 0; items && items[i] != ITEMS_COUNT; i++)
+        {
+            if (items[i] == itemId)
+                return cat;
+        }
+    }
+    return 0xFF;
+}
+
+// Derive today's sale category from the day counter
+// Monday..Sunday schedule mapping (customize as desired)
+static const u8 sDailySaleSchedule[7] = {
+    STORE_CATEGORY_ITEMS,               // Mon
+    STORE_CATEGORY_MEDICINE,            // Tue
+    STORE_CATEGORY_BALLS,               // Wed
+    STORE_CATEGORY_BATTLE_ITEMS,        // Thu
+    STORE_CATEGORY_TRAINING_ITEMS,      // Fri
+    STORE_CATEGORY_FORM_CHANGING_ITEMS, // Sat
+    STORE_CATEGORY_TMS,                 // Sun
+};
+
+static u8 Store_GetTodaysSaleCategory(void)
+{
+    if (STORE_NUM_CATEGORIES == 0)
+        return 0;
+    u8 dayIndex = gLocalTime.days % 7; // 0..6
+    return sDailySaleSchedule[dayIndex];
+}
+
+static u8 Store_GetDiscountPercentForItem(u16 itemId)
+{
+    u8 percent = 0;
+    u8 cat = Store_GetCategoryForItem(itemId);
+    if (cat != 0xFF && cat == Store_GetTodaysSaleCategory())
+        percent = 10; // daily per-category sale
+    if (sOnlineStoreData && sOnlineStoreData->saleActive && sOnlineStoreData->salePercent <= 100)
+        percent = max(percent, sOnlineStoreData->salePercent);
+    return percent;
+}
+
+static inline u32 StoreGetPrice(u16 itemId)
+{
+    u32 base = GetStoreItemPrice(itemId);
+    u8 discount = Store_GetDiscountPercentForItem(itemId);
+    if (discount > 0)
+        return (base * (100 - discount) + 50) / 100; // rounded
+    return base;
+}
+
+static void SaveCategoryState(void);
+static void LoadCategoryState(void);
 
 // Item categories arrays
 static const u16 sStoreItemsCategory[] = 
@@ -348,9 +429,18 @@ static const struct WindowTemplate sWindowTemplates[] =
         .tilemapLeft = 1,
         .tilemapTop = 7,
         .width = 28,
-        .height = 12,
+        .height = 8, // Reduce to make room for description pane
         .paletteNum = 15,
         .baseBlock = 113,
+    },
+    [WIN_DESCRIPTION] = {
+        .bg = 0,
+        .tilemapLeft = 1,
+        .tilemapTop = 15,
+        .width = 28,
+        .height = 4,
+        .paletteNum = 15,
+        .baseBlock = 337,
     },
     DUMMY_WIN_TEMPLATE
 };
@@ -382,6 +472,8 @@ static void DrawCurrentCategory(void);
 static void DrawItemList(void);
 static void DrawItemActionMenu(void);
 static void DrawQuantitySelection(void);
+static void SaveCategoryState(void);
+static void LoadCategoryState(void);
 static void HandlePurchaseConfirmationInput(u8 taskId)
 {
     if (JOY_NEW(DPAD_UP) || JOY_NEW(DPAD_DOWN))
@@ -404,7 +496,7 @@ static void HandlePurchaseConfirmationInput(u8 taskId)
                     {
                         const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
                         u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
-                        u32 totalCost = GetStoreItemPrice(selectedItemId) * sOnlineStoreData->selectedQuantity;
+                        u32 totalCost = StoreGetPrice(selectedItemId) * sOnlineStoreData->selectedQuantity;
                         
                         if (GetMoney(&gSaveBlock1Ptr->money) >= totalCost)
                         {
@@ -486,6 +578,66 @@ static void HandlePurchaseConfirmationInput(u8 taskId)
 
 static void DrawPurchaseConfirmation(void);
 static void HandlePurchaseConfirmationInput(u8 taskId);
+static void SaveCategoryState(void)
+{
+    if (!sOnlineStoreData)
+        return;
+    u8 cat = sOnlineStoreData->currentCategory;
+    if (cat < STORE_NUM_CATEGORIES)
+    {
+        sOnlineStoreData->selectedIndexByCat[cat] = sOnlineStoreData->selectedItemIndex;
+        sOnlineStoreData->scrollOffsetByCat[cat] = sOnlineStoreData->scrollOffset;
+    }
+}
+
+static void LoadCategoryState(void)
+{
+    if (!sOnlineStoreData)
+        return;
+    u8 cat = sOnlineStoreData->currentCategory;
+    if (cat < STORE_NUM_CATEGORIES)
+    {
+        sOnlineStoreData->selectedItemIndex = sOnlineStoreData->selectedIndexByCat[cat];
+        sOnlineStoreData->scrollOffset = sOnlineStoreData->scrollOffsetByCat[cat];
+    }
+}
+
+static void DrawSaleSchedule(void)
+{
+    const u8 color[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
+    const u8 hl[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY};
+
+    FillWindowPixelBuffer(WIN_ITEM_LIST, PIXEL_FILL(0));
+    AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 6, 0, 0, color, TEXT_SKIP_DRAW, sText_ScheduleTitle);
+
+    const u8 *dayNames[7] = {sText_DayMon, sText_DayTue, sText_DayWed, sText_DayThu, sText_DayFri, sText_DaySat, sText_DaySun};
+    u8 today = gLocalTime.days % 7;
+    for (u8 i = 0; i < 7; i++)
+    {
+        u8 y = 22 + i * 16;
+        const u8 *catName = GetStoreCategoryName(sDailySaleSchedule[i]);
+        const u8 *c = (i == today) ? hl : color;
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, y, 0, 0, c, TEXT_SKIP_DRAW, dayNames[i]);
+        // Separator and category
+        AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 40, y, 0, 0, c, TEXT_SKIP_DRAW, (const u8*)": ");
+        if (catName)
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 56, y, 0, 0, c, TEXT_SKIP_DRAW, catName);
+    }
+
+    // Close hint
+    AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 8, 140, 0, 0, color, TEXT_SKIP_DRAW, sText_ScheduleCloseHint);
+    CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
+}
+
+static void HandleScheduleViewInput(u8 taskId)
+{
+    if (JOY_NEW(B_BUTTON) || JOY_NEW(SELECT_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+        sOnlineStoreData->state = STORE_STATE_ITEM_LIST;
+        sOnlineStoreData->needsRefresh = TRUE;
+    }
+}
 
 // Window IDs storage - no longer needed, using direct indices
 // static u8 sStoreWindowIds[WIN_COUNT];
@@ -560,6 +712,7 @@ void CB2_OnlineStore(void)
         break;
     case 7:
         PutWindowTilemap(WIN_ITEM_LIST);
+        PutWindowTilemap(WIN_DESCRIPTION);
         DrawItemList();
         gMain.state++;
         break;
@@ -595,7 +748,16 @@ static void DrawStoreHeader(void)
     const u8 color[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
     
     FillWindowPixelBuffer(WIN_HEADER, PIXEL_FILL(1));
+    // Title
     AddTextPrinterParameterized4(WIN_HEADER, FONT_NORMAL, 4, 1, 0, 0, color, TEXT_SKIP_DRAW, gText_OnlineStore);
+    // Current money on the right
+    ConvertIntToDecimalStringN(gStringVar1, GetMoney(&gSaveBlock1Ptr->money), STR_CONV_MODE_LEFT_ALIGN, 8);
+    StringExpandPlaceholders(gStringVar4, sText_StoreMoney);
+    {
+        // Right align within ~220px window width
+        u8 x = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 220);
+        AddTextPrinterParameterized4(WIN_HEADER, FONT_NORMAL, x, 1, 0, 0, color, TEXT_SKIP_DRAW, gStringVar4);
+    }
     CopyWindowToVram(WIN_HEADER, COPYWIN_FULL);
 }
 
@@ -614,13 +776,28 @@ static void DrawCurrentCategory(void)
     
     FillWindowPixelBuffer(WIN_CATEGORY, PIXEL_FILL(1));
     AddTextPrinterParameterized4(WIN_CATEGORY, FONT_NORMAL, 4, 1, 0, 0, color, TEXT_SKIP_DRAW, categoryName);
-    AddTextPrinterParameterized4(WIN_CATEGORY, FONT_SMALL, 4, 17, 0, 0, color, TEXT_SKIP_DRAW, sText_StorePrice);
+
+    // Today's sale banner on right
+    {
+        u8 saleCat = Store_GetTodaysSaleCategory();
+        const u8 *saleName = GetStoreCategoryName(saleCat);
+        if (saleName != NULL)
+        {
+            StringCopy(gStringVar1, saleName);
+            StringExpandPlaceholders(gStringVar4, sText_StoreTodaysSale);
+            // Right-align banner in category window width ~220px
+            u8 x = GetStringRightAlignXOffset(FONT_SMALL, gStringVar4, 220);
+            AddTextPrinterParameterized4(WIN_CATEGORY, FONT_SMALL, x, 17, 0, 0, color, TEXT_SKIP_DRAW, gStringVar4);
+        }
+    }
     CopyWindowToVram(WIN_CATEGORY, COPYWIN_FULL);
 }
 
 static void DrawItemList(void)
 {
     const u8 color[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
+    const u8 green[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_GREEN, TEXT_COLOR_LIGHT_GRAY};
+    const u8 red[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_GRAY};
     const u16 *categoryItems;
     u16 itemCount;
     u8 displayCount;
@@ -666,6 +843,7 @@ static void DrawItemList(void)
     sOnlineStoreData->scrollOffset = startIndex;
     
     FillWindowPixelBuffer(WIN_ITEM_LIST, PIXEL_FILL(1));
+    FillWindowPixelBuffer(WIN_DESCRIPTION, PIXEL_FILL(1));
     
     // Draw items
     for (i = 0; i < displayCount && (startIndex + i) < itemCount; i++)
@@ -700,6 +878,62 @@ static void DrawItemList(void)
         {
             AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, y, 0, 0, color, TEXT_SKIP_DRAW, itemName);
         }
+
+        // Owned count (small), right side left of price
+        {
+            u16 owned = CountTotalItemQuantityInBag(itemId);
+            ConvertIntToDecimalStringN(gStringVar1, owned, STR_CONV_MODE_LEFT_ALIGN, 3);
+            StringExpandPlaceholders(gStringVar3, sText_StoreOwnedCount);
+            {
+                u8 xOwned = 160; // fixed column for owned count
+                const u8 *ownedText = gStringVar3;
+                const u8 *ownedColor = ((startIndex + i) == sOnlineStoreData->selectedItemIndex)
+                    ? (const u8[]){TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY}
+                    : (const u8[]){TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
+                AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, xOwned, y + 2, 0, 0, ownedColor, TEXT_SKIP_DRAW, ownedText);
+            }
+        }
+
+        // Price, right aligned (show base + discounted; dim if unaffordable)
+        {
+            u32 basePrice = GetStoreItemPrice(itemId);
+            u32 discPrice = StoreGetPrice(itemId);
+            ConvertIntToDecimalStringN(gStringVar1, discPrice, STR_CONV_MODE_LEFT_ALIGN, 8);
+            StringExpandPlaceholders(gStringVar4, sText_StorePrice);
+            u8 xPrice = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 220);
+            bool8 discounted = (discPrice < basePrice);
+            bool8 unaffordable = (discPrice > GetMoney(&gSaveBlock1Ptr->money));
+            const u8 *priceColor = unaffordable
+                ? red
+                : (((startIndex + i) == sOnlineStoreData->selectedItemIndex) ? (const u8[]){TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY} : color);
+            // Main discounted price
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, xPrice, y, 0, 0, discounted ? green : priceColor, TEXT_SKIP_DRAW, gStringVar4);
+            if (discounted)
+            {
+                // Base price, small and gray to the left of discounted price
+                ConvertIntToDecimalStringN(gStringVar1, basePrice, STR_CONV_MODE_LEFT_ALIGN, 8);
+                StringExpandPlaceholders(gStringVar3, sText_StorePrice);
+                u8 xBase = (xPrice > 40) ? (u8)(xPrice - 42) : 0; // simple padding
+                AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, xBase, y + 2, 0, 0, color, TEXT_SKIP_DRAW, gStringVar3);
+            }
+        }
+
+        // TM move name (small, secondary column)
+        if (GetItemPocket(itemId) == POCKET_TM_HM)
+        {
+            const u8 *moveName = GetMoveName(ItemIdToBattleMoveId(itemId));
+            const u8 *col = ((startIndex + i) == sOnlineStoreData->selectedItemIndex)
+                ? (const u8[]){TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY}
+                : (const u8[]){TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 88, y + 2, 0, 0, col, TEXT_SKIP_DRAW, moveName);
+        }
+
+        // SALE marker
+        if (Store_GetDiscountPercentForItem(itemId) > 0)
+        {
+            const u8 saleCol[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_GRAY};
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 136, y + 2, 0, 0, saleCol, TEXT_SKIP_DRAW, sText_StoreSale);
+        }
     }
     
     // Draw scroll indicators if needed
@@ -715,6 +949,59 @@ static void DrawItemList(void)
         AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 210, 120, 0, 0, color, TEXT_SKIP_DRAW, (const u8*)"↓");
     }
     
+    // Controls hint at bottom
+    AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 8, 82, 0, 0, color, TEXT_SKIP_DRAW, sText_StoreListHelp);
+
+    // Description pane for selected item
+    if (itemCount > 0 && sOnlineStoreData->selectedItemIndex < itemCount)
+    {
+        u16 selItem = categoryItems[sOnlineStoreData->selectedItemIndex];
+        const u8 *desc = GetItemDescription(selItem);
+        // Print description (wrap handled by text engine across window)
+        AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_SMALL, 4, 2, 0, 0, color, TEXT_SKIP_DRAW, desc);
+
+        // If TM/HM, add move info row
+        u16 move = ItemIdToBattleMoveId(selItem);
+        if (move != MOVE_NONE)
+        {
+            u8 yInfo = 26;
+            u32 type = GetMoveType(move);
+            const u8 *typeName = gTypesInfo[type].name;
+            u16 power = gMovesInfo[move].power;
+            u16 acc = gMovesInfo[move].accuracy;
+            u16 pp = gMovesInfo[move].pp;
+
+            // Type
+            AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_SMALL, 4, yInfo, 0, 0, color, TEXT_SKIP_DRAW, typeName);
+            // Pow
+            StringCopy(gStringVar1, (const u8*)"  Pow:");
+            AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_SMALL, 56, yInfo, 0, 0, color, TEXT_SKIP_DRAW, gStringVar1);
+            if (power == 0)
+                AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_SMALL, 92, yInfo, 0, 0, color, TEXT_SKIP_DRAW, gText_ThreeDashes);
+            else
+            {
+                ConvertIntToDecimalStringN(gStringVar1, power, STR_CONV_MODE_LEFT_ALIGN, 3);
+                AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_SMALL, 92, yInfo, 0, 0, color, TEXT_SKIP_DRAW, gStringVar1);
+            }
+            // Acc
+            StringCopy(gStringVar1, (const u8*)"  Acc:");
+            AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_SMALL, 120, yInfo, 0, 0, color, TEXT_SKIP_DRAW, gStringVar1);
+            if (acc == 0)
+                AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_SMALL, 156, yInfo, 0, 0, color, TEXT_SKIP_DRAW, gText_ThreeDashes);
+            else
+            {
+                ConvertIntToDecimalStringN(gStringVar1, acc, STR_CONV_MODE_LEFT_ALIGN, 3);
+                AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_SMALL, 156, yInfo, 0, 0, color, TEXT_SKIP_DRAW, gStringVar1);
+            }
+            // PP
+            StringCopy(gStringVar1, (const u8*)"  PP:");
+            AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_SMALL, 178, yInfo, 0, 0, color, TEXT_SKIP_DRAW, gStringVar1);
+            ConvertIntToDecimalStringN(gStringVar1, pp, STR_CONV_MODE_LEFT_ALIGN, 3);
+            AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_SMALL, 202, yInfo, 0, 0, color, TEXT_SKIP_DRAW, gStringVar1);
+        }
+        CopyWindowToVram(WIN_DESCRIPTION, COPYWIN_FULL);
+    }
+
     CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
 }
 
@@ -739,7 +1026,7 @@ static void DrawItemActionMenu(void)
         AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 6, 0, 0, color, TEXT_SKIP_DRAW, itemName);
         
         // Show item price
-        ConvertIntToDecimalStringN(gStringVar1, GetStoreItemPrice(selectedItemId), STR_CONV_MODE_LEFT_ALIGN, 6);
+        ConvertIntToDecimalStringN(gStringVar1, StoreGetPrice(selectedItemId), STR_CONV_MODE_LEFT_ALIGN, 6);
         StringExpandPlaceholders(gStringVar2, sText_StorePrice);
         AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_NORMAL, 8, 22, 0, 0, color, TEXT_SKIP_DRAW, gStringVar2);
     }
@@ -777,7 +1064,7 @@ static void DrawQuantitySelection(void)
     {
         u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
         const u8 *itemName = GetItemName(selectedItemId);
-        u32 itemPrice = GetStoreItemPrice(selectedItemId);
+        u32 itemPrice = StoreGetPrice(selectedItemId);
         u32 totalCost = itemPrice * sOnlineStoreData->selectedQuantity;
         
         // Show current item name
@@ -849,7 +1136,7 @@ void ShowCartContents(void)
         {
             u16 itemId = sOnlineStoreData->cart[i].itemId;
             u16 quantity = sOnlineStoreData->cart[i].quantity;
-            u32 itemPrice = GetStoreItemPrice(itemId);
+            u32 itemPrice = StoreGetPrice(itemId);
             u32 itemTotal = itemPrice * quantity;
             cartTotal += itemTotal;
             
@@ -918,7 +1205,7 @@ void DrawPurchaseConfirmation(void)
     const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
     u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
     const u8 *itemName = GetItemName(selectedItemId);
-    u32 itemPrice = GetStoreItemPrice(selectedItemId);
+    u32 itemPrice = StoreGetPrice(selectedItemId);
     u16 quantity = sOnlineStoreData->selectedQuantity;
     u32 totalCost;
     
@@ -948,7 +1235,7 @@ void DrawPurchaseConfirmation(void)
             {
                 u16 cartItemId = sOnlineStoreData->cart[i].itemId;
                 u16 cartQuantity = sOnlineStoreData->cart[i].quantity;
-                totalCost += GetStoreItemPrice(cartItemId) * cartQuantity;
+                totalCost += StoreGetPrice(cartItemId) * cartQuantity;
             }
             ConvertIntToDecimalStringN(gStringVar1, totalCost, STR_CONV_MODE_LEFT_ALIGN, 8);
             StringExpandPlaceholders(gStringVar4, sText_StoreCheckoutConfirm);
@@ -1018,6 +1305,10 @@ static void Task_OnlineStoreMain(u8 taskId)
             {
                 DrawPurchaseConfirmation();
             }
+            else if (sOnlineStoreData->state == STORE_STATE_SCHEDULE_VIEW)
+            {
+                DrawSaleSchedule();
+            }
             else
             {
                 DrawItemList();
@@ -1047,6 +1338,9 @@ static void HandleStoreInput(u8 taskId)
             break;
         case STORE_STATE_PURCHASE_CONFIRM:
             HandlePurchaseConfirmationInput(taskId);
+            break;
+        case STORE_STATE_SCHEDULE_VIEW:
+            HandleScheduleViewInput(taskId);
             break;
         default:
             HandleItemListInput(taskId);
@@ -1137,29 +1431,40 @@ static void HandleItemListInput(u8 taskId)
     else if (JOY_NEW(L_BUTTON))
     {
         PlaySE(SE_SELECT);
-        // Cycle categories left
+        // Cycle categories left, preserving per-category state
+        SaveCategoryState();
         if (sOnlineStoreData->currentCategory > 0)
             sOnlineStoreData->currentCategory--;
         else
             sOnlineStoreData->currentCategory = STORE_NUM_CATEGORIES - 1;
-        
-        // Reset item selection when changing categories
-        sOnlineStoreData->selectedItemIndex = 0;
-        sOnlineStoreData->scrollOffset = 0;
+        LoadCategoryState();
         sOnlineStoreData->needsRefresh = TRUE;
     }
     else if (JOY_NEW(R_BUTTON))
     {
         PlaySE(SE_SELECT);
-        // Cycle categories right
+        // Cycle categories right, preserving per-category state
+        SaveCategoryState();
         if (sOnlineStoreData->currentCategory < STORE_NUM_CATEGORIES - 1)
             sOnlineStoreData->currentCategory++;
         else
             sOnlineStoreData->currentCategory = 0;
-        
-        // Reset item selection when changing categories
+        LoadCategoryState();
+        sOnlineStoreData->needsRefresh = TRUE;
+    }
+    else if (JOY_NEW(START_BUTTON))
+    {
+        // Quick open cart
+        PlaySE(SE_SELECT);
+        sOnlineStoreData->state = STORE_STATE_CART_VIEW;
+        sOnlineStoreData->isViewingCart = TRUE;
         sOnlineStoreData->selectedItemIndex = 0;
-        sOnlineStoreData->scrollOffset = 0;
+        sOnlineStoreData->needsRefresh = TRUE;
+    }
+    else if (JOY_NEW(SELECT_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+        sOnlineStoreData->state = STORE_STATE_SCHEDULE_VIEW;
         sOnlineStoreData->needsRefresh = TRUE;
     }
 }
@@ -1231,7 +1536,7 @@ static void HandleQuantitySelectInput(u8 taskId)
 {
     const u16 *categoryItems = GetStoreCategoryItems(sOnlineStoreData->currentCategory);
     u16 selectedItemId = categoryItems[sOnlineStoreData->selectedItemIndex];
-    u32 itemPrice = GetStoreItemPrice(selectedItemId);
+    u32 itemPrice = StoreGetPrice(selectedItemId);
     u32 totalCost = itemPrice * sOnlineStoreData->selectedQuantity;
     u32 playerMoney = GetMoney(&gSaveBlock1Ptr->money);
     
@@ -1384,7 +1689,7 @@ static void HandleCartViewInput(u8 taskId)
             {
                 u16 itemId = sOnlineStoreData->cart[i].itemId;
                 u16 quantity = sOnlineStoreData->cart[i].quantity;
-                totalCost += GetStoreItemPrice(itemId) * quantity;
+                totalCost += StoreGetPrice(itemId) * quantity;
             }
             
             // Check if player can afford it
@@ -1536,7 +1841,7 @@ u32 GetCartTotalCost(void)
     u32 total = 0;
     for (u8 i = 0; i < sOnlineStoreData->cartSize; i++)
     {
-        total += GetStoreItemPrice(sOnlineStoreData->cart[i].itemId) * sOnlineStoreData->cart[i].quantity;
+        total += StoreGetPrice(sOnlineStoreData->cart[i].itemId) * sOnlineStoreData->cart[i].quantity;
     }
     return total;
 }
@@ -1544,6 +1849,21 @@ u32 GetCartTotalCost(void)
 bool8 IsCartEmpty(void)
 {
     return (sOnlineStoreData == NULL || sOnlineStoreData->cartSize == 0);
+}
+
+// Sale controls
+void OnlineStore_SetSale(bool8 active, u8 percent)
+{
+    if (!sOnlineStoreData)
+        return;
+    sOnlineStoreData->saleActive = active;
+    sOnlineStoreData->salePercent = percent > 100 ? 100 : percent;
+    sOnlineStoreData->needsRefresh = TRUE;
+}
+
+bool8 OnlineStore_IsSaleActive(void)
+{
+    return sOnlineStoreData && sOnlineStoreData->saleActive;
 }
 
 const u16 *GetStoreCategoryItems(u8 category)
@@ -1595,7 +1915,7 @@ bool8 PurchaseCartItems(void)
 
 bool8 PurchaseSingleItem(u16 itemId, u16 quantity)
 {
-    u32 cost = GetStoreItemPrice(itemId) * quantity;
+    u32 cost = StoreGetPrice(itemId) * quantity;
     if (GetMoney(&gSaveBlock1Ptr->money) < cost)
         return FALSE;
     

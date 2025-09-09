@@ -32,6 +32,7 @@ enum
     STORE_STATE_CART_VIEW,
     STORE_STATE_PURCHASE_CONFIRM,
     STORE_STATE_PURCHASE_COMPLETE,
+    STORE_STATE_SCHEDULE_VIEW,
     STORE_STATE_EXIT
 };
 
@@ -66,12 +67,18 @@ struct OnlineStoreData
     u8 selectedItemIndex;
     u8 selectedActionIndex;
     u8 scrollOffset;
+    // Per-category state for better UX
+    u8 selectedIndexByCat[STORE_NUM_CATEGORIES];
+    u8 scrollOffsetByCat[STORE_NUM_CATEGORIES];
     u8 cartSize;
     u16 selectedQuantity;
     bool8 isViewingCart;
     bool8 needsRefresh;
     u8 confirmationType;  // 0=purchase, 1=add_to_cart, 2=checkout
     u8 confirmationChoice; // 0=YES, 1=NO
+    // Optional sale state
+    bool8 saleActive;
+    u8 salePercent; // 0-100
     struct StoreCartItem cart[MAX_CART_ITEMS];
 };
 
@@ -94,6 +101,10 @@ const u8 *GetStoreCategoryName(u8 category);
 bool8 PurchaseCartItems(void);
 bool8 PurchaseSingleItem(u16 itemId, u16 quantity);
 u32 GetStoreItemPrice(u16 itemId);
+
+// Sale controls
+void OnlineStore_SetSale(bool8 active, u8 percent);
+bool8 OnlineStore_IsSaleActive(void);
 
 // Main store callbacks
 void CB2_OnlineStore(void);
