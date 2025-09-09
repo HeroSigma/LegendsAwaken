@@ -5,10 +5,66 @@ OldaleTown_MapScripts::
 OldaleTown_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	setflag FLAG_VISITED_OLDALE_TOWN
+	@ Cameo scene: after Route 103 battle, show once on first return
+	call_if_eq VAR_BIRCH_LAB_STATE, 4, OldaleTown_EventScript_TryCameoScene
 	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
 	call_if_unset FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_MoveMartEmployee
 	call_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_SetOldaleState
 	end
+
+OldaleTown_EventScript_TryCameoScene::
+	goto_if_set FLAG_TEMP_A, OldaleTown_EventScript_TryCameoScene_Ret
+	call OldaleTown_EventScript_CameoScene
+	setflag FLAG_TEMP_A
+OldaleTown_EventScript_TryCameoScene_Ret:
+	return
+
+OldaleTown_EventScript_CameoScene::
+	lockall
+	clearflag FLAG_TEMP_8
+	clearflag FLAG_TEMP_9
+	addobject LOCALID_OLDALE_CAMEO_CYRUS
+	addobject LOCALID_OLDALE_CAMEO_GIOVANNI
+	setobjectxy LOCALID_OLDALE_CAMEO_CYRUS, 10, 12
+	setobjectxy LOCALID_OLDALE_CAMEO_GIOVANNI, 11, 12
+	turnobject LOCALID_OLDALE_CAMEO_CYRUS, DIR_SOUTH
+	turnobject LOCALID_OLDALE_CAMEO_GIOVANNI, DIR_SOUTH
+	msgbox OldaleTown_Text_Cameo_BlackCrimson, MSGBOX_DEFAULT
+	msgbox OldaleTown_Text_Cameo_SilverBlue, MSGBOX_DEFAULT
+	msgbox OldaleTown_Text_Cameo_BlackCrimson_Move, MSGBOX_DEFAULT
+	applymovement LOCALID_OLDALE_CAMEO_CYRUS, OldaleTown_Movement_Cameo_WalkNorthWest
+	applymovement LOCALID_OLDALE_CAMEO_GIOVANNI, OldaleTown_Movement_Cameo_WalkNorthWest
+	waitmovement 0
+	removeobject LOCALID_OLDALE_CAMEO_CYRUS
+	removeobject LOCALID_OLDALE_CAMEO_GIOVANNI
+	msgbox OldaleTown_Text_PlayerLingeringThought, MSGBOX_DEFAULT
+	releaseall
+	return
+
+OldaleTown_Movement_Cameo_WalkNorthWest:
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	step_end
+
+OldaleTown_Text_Cameo_BlackCrimson:
+	.string "???: This place… HOENN feels unsettled.\p"
+	.string "Almost as though something is leaking through.$"
+
+OldaleTown_Text_Cameo_SilverBlue:
+	.string "???: Indeed. The patterns are off, the air is wrong.\p"
+	.string "This region hides a fracture we must study.$"
+
+OldaleTown_Text_Cameo_BlackCrimson_Move:
+	.string "???: Keep walking. No need to draw eyes here.$"
+
+OldaleTown_Text_PlayerLingeringThought:
+	.string "{COLOR GREEN}{PLAYER}: (Those men… I've seen their faces before.\p"
+	.string "But from where…? The thought lingers, but…\n"
+	.string "I can't place it yet.){COLOR DARK_GRAY}$"
 
 @ This script seems pointless because nothing uses VAR_OLDALE_TOWN_STATE
 OldaleTown_EventScript_SetOldaleState::
@@ -392,8 +448,9 @@ OldaleTown_Text_BrendanLetsGoBack:
 	.string "{PLAYER}, you should hustle back, too.$"
 
 OldaleTown_Text_TownSign:
-        .string "OLDALE TOWN\n"
-        .string "“Where things start off scarce.”$"
+	.string "OLDALE TOWN\n"
+	.string "Where things start\n"
+	.string "off scarce.$"
 
 OldaleTown_EventScript_TeraChanger::
         lock
@@ -581,4 +638,3 @@ OldaleTown_Text_TeraNoMoney:
 
 OldaleTown_Text_TeraComeAgain:
         .string "Come again if you change your mind.$"
-

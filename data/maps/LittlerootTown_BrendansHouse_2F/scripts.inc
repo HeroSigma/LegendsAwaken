@@ -59,19 +59,29 @@ LittlerootTown_BrendansHouse_2F_EventScript_ZRingBall_Empty::
 	end
 
 LittlerootTown_BrendansHouse_2F_Text_FlickerThought:
-	.string "{COLOR GREEN}(Did the light just flicker?\n"
-	.string "Weird...){COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}(Did the light\n"
+	.string "just flicker?\n"
+	.string "Weird...)\n"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_BrendansHouse_2F_Text_PlayerBallSpot:
-	.string "{COLOR GREEN}{PLAYER}: Huh? There's a Poke Ball here...{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Huh?\n"
+	.string "There's a Poke Ball\n"
+	.string "here...\n"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_BrendansHouse_2F_Text_PlayerCallMom:
-	.string "{COLOR GREEN}{PLAYER}: Mom, did you put a Poke Ball\n"
-	.string "in my room?{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Mom,\n"
+	.string "did you put a\n"
+	.string "Poke Ball in my\n"
+	.string "room?\n"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_BrendansHouse_2F_Text_MomReply:
-	.string "MOM: No, dear! Maybe the movers left it?\p"
-	.string "Or maybe it's a welcome gift!$"
+	.string "MOM: No, dear! Maybe\n"
+	.string "the movers left it?\p"
+	.string "Or maybe it's a\n"
+	.string "welcome gift!$"
 
 LittlerootTown_BrendansHouse_2F_Text_DistantVoice:
 	.string "A distant voice: Your destiny awaits...$"

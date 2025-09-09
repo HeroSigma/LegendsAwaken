@@ -952,58 +952,85 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "MOM: Let's go inside.$"
 
 LittlerootTown_Text_PlayerEightYears:
-    .string "{COLOR GREEN}(A new home… but will things really\n"
-    .string "be different?){COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}(A new home…\n"
+	.string "but will things\n"
+	.string "really be\n"
+	.string "different?)\n"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_PlayerWonderHow:
-    .string "{COLOR GREEN}(Something tells me this time is\n"
-    .string "different…){COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}(Something\n"
+	.string "tells me this time\n"
+	.string "is different…)\n"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_MomWereFinallyHere_Male:
     .string "MOM: We’re finally here, {PLAYER}!$"
 
 LittlerootTown_Text_MomSmallerThanBefore_Male:
-    .string "MOM: Littleroot Town… smaller than what\n"
-    .string "you remember, right?$"
+	.string "MOM: Littleroot Town…\n"
+	.string "smaller than what\n"
+	.string "you remember,\n"
+	.string "right?$"
 
 LittlerootTown_Text_PlayerFeelsDifferent_Male:
-    .string "{COLOR GREEN}{PLAYER}: …It feels different. Quieter than\n"
-    .string "the Archipelago.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: …It\n"
+	.string "feels different.\n"
+	.string "Quieter than the\n"
+	.string "Archipelago.\n"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_PlayerHardToBelieve_Male:
-    .string "{COLOR GREEN}{PLAYER}: Hard to believe eight years have\n"
-    .string "passed.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Hard\n"
+	.string "to believe eight\n"
+	.string "years have passed.\n"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_MomFreshStart_Male:
-    .string "MOM: Eight years away, and now a fresh\n"
-    .string "start. That’s what we need.$"
+	.string "MOM: Eight years away,\n"
+	.string "and now a fresh\n"
+	.string "start. That’s what\n"
+	.string "we need.$"
 
 LittlerootTown_Text_MomComeInsideVigoroth_Male:
-    .string "MOM: Come inside- Vigoroth have already\n"
-    .string "finished the heavy lifting.$"
+	.string "MOM: Come inside-\n"
+	.string "Vigoroth have\n"
+	.string "already finished\n"
+	.string "the heavy lifting.$"
 
 LittlerootTown_Text_MomWereFinallyHere_Female:
     .string "MOM: We’re finally here, {PLAYER}!$"
 
 LittlerootTown_Text_MomSmallerThanBefore_Female:
-    .string "MOM: Littleroot Town… smaller than what you\n"
-    .string "remember, right?$"
+	.string "MOM: Littleroot Town…\n"
+	.string "smaller than what\n"
+	.string "you remember,\n"
+	.string "right?$"
 
 LittlerootTown_Text_PlayerFeelsDifferent_Female:
-    .string "{COLOR GREEN}{PLAYER}: …It feels different. Quieter than the\n"
-    .string "Archipelago.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: …It\n"
+	.string "feels different.\n"
+	.string "Quieter than the\n"
+	.string "Archipelago.\n"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_PlayerHardToBelieve_Female:
-    .string "{COLOR GREEN}{PLAYER}: Hard to believe eight years have\n"
-    .string "passed.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Hard\n"
+	.string "to believe eight\n"
+	.string "years have passed.\n"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_MomFreshStart_Female:
-    .string "MOM: Eight years away, and now a fresh start.\n"
-    .string "That’s what we need.$"
+	.string "MOM: Eight years away,\n"
+	.string "and now a fresh\n"
+	.string "start. That’s what\n"
+	.string "we need.$"
 
 LittlerootTown_Text_MomComeInsideVigoroth_Female:
-    .string "MOM: Come inside- Vigoroth have already finished\n"
-    .string "the heavy lifting.$"
+	.string "MOM: Come inside-\n"
+	.string "Vigoroth have\n"
+	.string "already finished\n"
+	.string "the heavy lifting.$"
 
 LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"

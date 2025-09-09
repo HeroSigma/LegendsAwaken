@@ -669,6 +669,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_RivalGiveBalls, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_BALL, 5
+	giveitem ITEM_EXP_SHARE, 1
 	giveitem ITEM_TERA_ORB, 1
 	giveitem ITEM_MEGA_RING, 1
 	giveitem ITEM_Z_POWER_RING, 1
@@ -801,16 +802,23 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall::
 
 LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork:
 	.string "Hunh? PROF. BIRCH?\p"
-	.string "The PROF's away on fieldwork.\n"
-	.string "Ergo, he isn't here.\p"
-	.string "Oh, let me explain what fieldwork is.\p"
-	.string "It is to study things in the natural\n"
-	.string "environment, like fields and mountains,\l"
-	.string "instead of a laboratory.\p"
-	.string "The PROF isn't one for doing desk work.\n"
-	.string "He's the type of person who would\l"
-	.string "rather go outside and experience\l"
-	.string "things than read about them here.$"
+	.string "The PROF's away on\n"
+	.string "fieldwork. Ergo, he\n"
+	.string "isn't here.\p"
+	.string "Let me explain what\n"
+	.string "fieldwork is.\p"
+	.string "It's to study things\n"
+	.string "in the natural\n"
+	.string "environment, like\n"
+	.string "fields and mountains,\n"
+	.string "instead of a lab.\p"
+	.string "The PROF isn't one\n"
+	.string "for desk work. He's\n"
+	.string "the type who'd rather\n"
+	.string "go outside and\n"
+	.string "experience things\n"
+	.string "than read about them\n"
+	.string "here.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BirchIsntOneForDeskWork:
 	.string "The PROF isn't one for doing desk work.\n"
@@ -871,11 +879,23 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchRivalGoneHome:
 	.string "you should get some rest at home.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_Post103Intro:
-	.string "PROF. BIRCH: {PLAYER}, nice work on ROUTE 103.\p"
-	.string "PLAYER: Thanks, Professor.\p"
-	.string "{RIVAL}: We logged the statics you asked for.\p"
-	.string "PLAYER: Any spikes?\p"
-	.string "{RIVAL}: None. Readings were clean.\p"
+	.string "BIRCH: Good, you're all here. Tell me-\n"
+	.string "how did the battles go?\p"
+	.string "BRENDAN: {PLAYER} is sharper than I expected.\n"
+	.string "Whatever happened out there, they're not holding back.\p"
+	.string "MAY: Yeah. Even with us fighting one after the other,\n"
+	.string "they pushed through.\p"
+	.string "BIRCH: Impressive. That bond with your partners\n"
+	.string "will be essential.\p"
+	.string "{PLAYER}: There were two men in OLDALE… talking about\n"
+	.string "HOENN being off, like something was wrong.\n"
+	.string "I couldn't shake it-they felt familiar.\p"
+	.string "BIRCH: (Those descriptions… they sound like…\n"
+	.string "no, it can't be… GIOVANNI and CYRUS?)\p"
+	.string "BIRCH: (If true, this is dangerous. I need to alert\n"
+	.string "the ARCANUM.)\p"
+	.string "BIRCH: For now, don't dwell on it. But know this-\n"
+	.string "if figures like that are in HOENN, we face a grave threat.$"
 
 // New debrief scene text (post Route 101)
 LittlerootTown_ProfessorBirchsLab_Text_ZoroarkUnseen:

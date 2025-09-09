@@ -367,6 +367,7 @@ Route101_EventScript_UnwinnableEncounter::
     special HealPlayerParty
     clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
     setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+    setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
     setvar VAR_BIRCH_LAB_STATE, 2
     clearflag FLAG_HIDE_MAP_NAME_POPUP
     checkplayergender
@@ -490,12 +491,15 @@ Route101_Movement_ZoroarkSpin:
     step_end
 
 Route101_Text_HelpMe:
-    .string "BIRCH: H-Help! Somebody- please!\p"
+    .string "BIRCH: H-Help!\n"
+    .string "Somebody- please!\p"
     .string "$"
 
 Route101_Text_BirchUseOneQuick:
-    .string "BIRCH: {PLAYER}! Quick- there’s no time!\p"
-    .string "Use one of my POKéMON!$"
+    .string "BIRCH: {PLAYER}! Quick-\n"
+    .string "there’s no time!\p"
+    .string "Use one of my\n"
+    .string "POKéMON!$"
 
 Route101_Text_PlayerOverwhelmed:
     .string "{COLOR GREEN}{PLAYER}: (This power… I can’t stop it…!){COLOR DARK_GRAY}$"
@@ -511,29 +515,45 @@ Route101_Text_PlayerUneasyFeeling:
     .string "or something else entirely?){COLOR DARK_GRAY}$"
 
 Route101_Text_BirchWhatWasThat:
-    .string "BIRCH: What was that just now? That creature-\n"
-    .string "I've never seen anything like it in HOENN.\p"
-    .string "BIRCH: And that voice… Who was it speaking to?\n"
-    .string "Who… are you, {PLAYER}?$"
+    .string "BIRCH: What was that\n"
+    .string "just now? That\n"
+    .string "creature-\p"
+    .string "I've never seen\n"
+    .string "anything like it in\n"
+    .string "HOENN.\p"
+    .string "BIRCH: And that\n"
+    .string "voice… Who was it\n"
+    .string "speaking to?\n"
+    .string "Who… are you,\n"
+    .string "{PLAYER}?$"
 
 Route101_Text_BirchNoMatterToLab:
-    .string "BIRCH: No matter. Quick- let’s get to my lab\n"
-    .string "before anything else happens!$"
+    .string "BIRCH: No matter.\n"
+    .string "Quick- let’s get\n"
+    .string "to my lab before\n"
+    .string "anything else\n"
+    .string "happens!$"
 
 Route101_Text_BirchStarterHint:
     .string "BIRCH: Steady now. Keep your partner close.$"
 
 Route101_Text_ChooseTreecko:
-    .string "BIRCH: TREECKO will stand with you.\n"
-    .string "Will you take TREECKO?$"
+    .string "BIRCH: TREECKO will\n"
+    .string "stand with you.\n"
+    .string "Will you take\n"
+    .string "TREECKO?$"
 
 Route101_Text_ChooseTorchic:
-    .string "BIRCH: TORCHIC burns bright with courage.\n"
-    .string "Will you take TORCHIC?$"
+    .string "BIRCH: TORCHIC burns\n"
+    .string "bright with courage.\n"
+    .string "Will you take\n"
+    .string "TORCHIC?$"
 
 Route101_Text_ChooseMudkip:
-    .string "BIRCH: MUDKIP is steady and strong.\n"
-    .string "Will you take MUDKIP?$"
+    .string "BIRCH: MUDKIP is\n"
+    .string "steady and strong.\n"
+    .string "Will you take\n"
+    .string "MUDKIP?$"
 
 Route101_Text_PlayerReceivedStarter:
     .string "{PLAYER} received {STR_VAR_1}!$"
@@ -585,8 +605,8 @@ Route101_Text_WildPokemonInTallGrass:
 	.string "to go into the tall grass and search.$"
 
 Route101_Text_RouteSign:
-	.string "ROUTE 101\n"
-	.string "{UP_ARROW} OLDALE TOWN$"
+    .string "ROUTE 101\n"
+    .string "{UP_ARROW} OLDALE TOWN$"
 
 Route101_Text_BirchsBagEmpty:
     .string "The bag is empty.$"
