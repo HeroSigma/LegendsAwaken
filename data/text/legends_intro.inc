@@ -4,7 +4,7 @@
 @ =============================================================================
 
 gText_Creator_Greeting::
-	.string "Greetings, traveler. I am HERO SIGMA—\n"
+	.string "Greetings, traveler. I am HERO SIGMA-\n"
 	.string "the one who shaped this world.$"
 
 gText_Creator_Journey::
@@ -30,30 +30,36 @@ gText_Creator_Choices::
 
 gText_Birch_LegendsWelcome::
 	.string "Hi there! Welcome to the world of\n"
-	.string "POKéMON.$"
+	.string "POKéMON.
 
+	.string "\p"
+	.string "$"
 gText_Birch_Identity::
-	.string "I'm Professor BIRCH—field research,\n"
-	.string "boots on the ground.$"
+	.string "I'm Professor BIRCH- field research,\n"
+	.string "boots on the ground.
 
+	.string "\p"
+	.string "$"
 gText_Birch_Pokemon_Legends::
-	.string "This little one is a POKéMON—\n"
-	.string "partner, helper, friend.$"
+	.string "This little one is a POKéMON-\n"
+	.string "partner, helper, friend.
 
+	.string "\p"
+	.string "$"
 gText_Birch_StrangeTimes::
-	.string "HOENN's been acting strange lately.$"
+	.string "HOENN's been acting strange lately.\p$"
 
 gText_Birch_Rifts::
 	.string "Currents shift, skies shimmer…\n"
-	.string "people whisper about 'rifts'.$"
+	.string "people whisper about 'rifts'.\p$"
 
 gText_Birch_Mission::
 	.string "We observe, we protect, and when\n"
-	.string "we must, we battle—together.$"
+	.string "we must, we battle- together.\p$"
 
 gText_Birch_BeforeWeStart::
 	.string "But before we get ahead of\n"
-	.string "ourselves…$"
+	.string "ourselves…\p$"
 
 gText_Birch_AndYouAre_Legends::
 	.string "And you are?$"
@@ -62,7 +68,7 @@ gText_Birch_BoyOrGirl_Legends::
 	.string "Are you a boy, or a girl?$"
 
 gText_Birch_WhatsYourName_Legends::
-	.string "All right—what's your name?$"
+	.string "All right- what's your name?$"
 
 gText_Birch_SoItsPlayer_Legends::
 	.string "So it's {PLAYER}{KUN}?$"
@@ -75,16 +81,16 @@ gText_Birch_ReallyYou::
 
 gText_Birch_EightYears::
 	.string "Been about eight years since\n"
-	.string "LITTLEROOT.$"
+	.string "LITTLEROOT.\p$"
 
 gText_Birch_UnusualTimes::
 	.string "HOENN's unusual right now.\n"
-	.string "We'll talk when you arrive.$"
+	.string "We'll talk when you arrive.\p$"
 
 gText_Birch_MomSaid::
 	.string "Your mom said you just reached\n"
-	.string "town.$"
+	.string "town.\p$"
 
 gText_Birch_ComeToLab::
 	.string "Come by the lab, {PLAYER}.\n"
-	.string "I'll be waiting.$"
+	.string "I'll be waiting.\p$"

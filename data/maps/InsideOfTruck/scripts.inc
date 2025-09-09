@@ -94,12 +94,7 @@ InsideOfTruck_EventScript_TruckExitSetDynamicWarpFemale::
 	end
 
 InsideOfTruck_EventScript_IntroText::
-    lockall
-    msgbox gText_Truck_Intro, MSGBOX_DEFAULT
-    applymovement OBJ_EVENT_ID_PLAYER, InsideOfTruck_Movement_PlayerLookAround
-    waitmovement 0
-    msgbox gText_Truck_ReadyToExit, MSGBOX_DEFAULT
-    releaseall
+    @ Stubbed to avoid duplicate dialog when auto scene runs
     end
 
 // Auto-triggered after the truck sequence completes.
@@ -107,8 +102,52 @@ InsideOfTruck_EventScript_IntroText::
 // set later by InsideOfTruck_EventScript_SetIntroFlags*.
 InsideOfTruck_EventScript_AutoTriggerScene::
     lockall
+    checkplayergender
+    goto_if_eq VAR_RESULT, MALE, InsideOfTruck_EventScript_AutoTriggerScene_Male
+    goto InsideOfTruck_EventScript_AutoTriggerScene_Female
+
+InsideOfTruck_EventScript_AutoTriggerScene_Male::
     msgbox gText_Truck_Intro, MSGBOX_DEFAULT
+    applymovement OBJ_EVENT_ID_PLAYER, InsideOfTruck_Movement_PlayerLookAround
+    waitmovement 0
     msgbox gText_Truck_PlayerReflection, MSGBOX_DEFAULT
+    checkitem ITEM_MEGA_RING, 1
+    goto_if_eq VAR_RESULT, TRUE, InsideOfTruck_EventScript_AutoScene_MegaRingAlready_Male
+    msgbox gText_Truck_DevenCorpBox, MSGBOX_DEFAULT
+    giveitem ITEM_MEGA_RING, 1
+    goto InsideOfTruck_EventScript_AutoScene_Continue_Male
+
+InsideOfTruck_EventScript_AutoScene_MegaRingAlready_Male::
+    msgbox InsideOfTruck_Text_DevonBoxEmpty, MSGBOX_DEFAULT
+
+InsideOfTruck_EventScript_AutoScene_Continue_Male::
+    msgbox gText_Truck_ReadyToExit, MSGBOX_DEFAULT
+    releaseall
+    end
+
+InsideOfTruck_EventScript_AutoTriggerScene_Female::
+    msgbox gText_Truck_Intro, MSGBOX_DEFAULT
+    applymovement OBJ_EVENT_ID_PLAYER, InsideOfTruck_Movement_PlayerLookAround
+    waitmovement 0
+    msgbox gText_Truck_PlayerReflection, MSGBOX_DEFAULT
+    checkitem ITEM_MEGA_RING, 1
+    goto_if_eq VAR_RESULT, TRUE, InsideOfTruck_EventScript_AutoScene_MegaRingAlready_Female
+    msgbox gText_Truck_DevenCorpBox, MSGBOX_DEFAULT
+    giveitem ITEM_MEGA_RING, 1
+    goto InsideOfTruck_EventScript_AutoScene_Continue_Female
+
+InsideOfTruck_EventScript_AutoScene_MegaRingAlready_Female::
+    msgbox InsideOfTruck_Text_DevonBoxEmpty, MSGBOX_DEFAULT
+
+InsideOfTruck_EventScript_AutoScene_Continue_Female::
+    msgbox gText_Truck_ReadyToExit, MSGBOX_DEFAULT
+    releaseall
+    end
+
+InsideOfTruck_EventScript_AutoScene_MegaRingAlready::
+    msgbox InsideOfTruck_Text_DevonBoxEmpty, MSGBOX_DEFAULT
+
+InsideOfTruck_EventScript_AutoScene_Continue::
     msgbox gText_Truck_ReadyToExit, MSGBOX_DEFAULT
     releaseall
     end

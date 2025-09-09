@@ -113,8 +113,6 @@ LittlerootTown_OnFrame:
 
 LittlerootTown_EventScript_StepOffTruckMale::
 	lockall
-	msgbox LittlerootTown_Text_PlayerEightYears, MSGBOX_DEFAULT
-	msgbox LittlerootTown_Text_PlayerWonderHow, MSGBOX_DEFAULT
 	setvar VAR_0x8004, 5
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
@@ -126,8 +124,6 @@ LittlerootTown_EventScript_StepOffTruckMale::
 
 LittlerootTown_EventScript_StepOffTruckFemale::
 	lockall
-	msgbox LittlerootTown_Text_PlayerEightYears, MSGBOX_DEFAULT
-	msgbox LittlerootTown_Text_PlayerWonderHow, MSGBOX_DEFAULT
 	setvar VAR_0x8004, 14
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
@@ -150,10 +146,12 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
 	delay 10
-	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayerAtTruck
-	waitmovement 0
-	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_DEFAULT
-	closemessage
+    applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayerAtTruck
+    waitmovement 0
+    checkplayergender
+    call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_GreetingOutsideMale
+    call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_GreetingOutsideFemale
+    closemessage
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachDoor
 	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerApproachDoor
 	waitmovement 0
@@ -168,8 +166,26 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
-	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	return
+    clearflag FLAG_HIDE_MAP_NAME_POPUP
+    return
+
+LittlerootTown_EventScript_GreetingOutsideMale:
+    msgbox LittlerootTown_Text_MomWereFinallyHere_Male, MSGBOX_DEFAULT
+    msgbox LittlerootTown_Text_MomSmallerThanBefore_Male, MSGBOX_DEFAULT
+    msgbox LittlerootTown_Text_PlayerFeelsDifferent_Male, MSGBOX_DEFAULT
+    msgbox LittlerootTown_Text_PlayerHardToBelieve_Male, MSGBOX_DEFAULT
+    msgbox LittlerootTown_Text_MomFreshStart_Male, MSGBOX_DEFAULT
+    msgbox LittlerootTown_Text_MomComeInsideVigoroth_Male, MSGBOX_DEFAULT
+    return
+
+LittlerootTown_EventScript_GreetingOutsideFemale:
+    msgbox LittlerootTown_Text_MomWereFinallyHere_Female, MSGBOX_DEFAULT
+    msgbox LittlerootTown_Text_MomSmallerThanBefore_Female, MSGBOX_DEFAULT
+    msgbox LittlerootTown_Text_PlayerFeelsDifferent_Female, MSGBOX_DEFAULT
+    msgbox LittlerootTown_Text_PlayerHardToBelieve_Female, MSGBOX_DEFAULT
+    msgbox LittlerootTown_Text_MomFreshStart_Female, MSGBOX_DEFAULT
+    msgbox LittlerootTown_Text_MomComeInsideVigoroth_Female, MSGBOX_DEFAULT
+    return
 
 LittlerootTown_Movement_MomExitHouse:
 	walk_down
@@ -933,17 +949,61 @@ LittlerootTown_EventScript_GiveRunningShoes::
         return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "{COLOR LIGHT_RED}MOM: {COLOR DARK_GRAY}There you are, {PLAYER}!\p"
-	.string "Welcome to our new home!\p"
-	.string "Come inside, let's take a look together!$"
+	.string "MOM: Let's go inside.$"
 
 LittlerootTown_Text_PlayerEightYears:
-	.string "{COLOR GREEN}(A new home… but will things really\n"
-	.string "be different?){COLOR DARK_GRAY}$"
+    .string "{COLOR GREEN}(A new home… but will things really\n"
+    .string "be different?){COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_PlayerWonderHow:
-	.string "{COLOR GREEN}(Something tells me this time is\n"
-	.string "different…){COLOR DARK_GRAY}$"
+    .string "{COLOR GREEN}(Something tells me this time is\n"
+    .string "different…){COLOR DARK_GRAY}$"
+
+LittlerootTown_Text_MomWereFinallyHere_Male:
+    .string "MOM: We’re finally here, {PLAYER}!$"
+
+LittlerootTown_Text_MomSmallerThanBefore_Male:
+    .string "MOM: Littleroot Town… smaller than what\n"
+    .string "you remember, right?$"
+
+LittlerootTown_Text_PlayerFeelsDifferent_Male:
+    .string "{COLOR GREEN}{PLAYER}: …It feels different. Quieter than\n"
+    .string "the Archipelago.{COLOR DARK_GRAY}$"
+
+LittlerootTown_Text_PlayerHardToBelieve_Male:
+    .string "{COLOR GREEN}{PLAYER}: Hard to believe eight years have\n"
+    .string "passed.{COLOR DARK_GRAY}$"
+
+LittlerootTown_Text_MomFreshStart_Male:
+    .string "MOM: Eight years away, and now a fresh\n"
+    .string "start. That’s what we need.$"
+
+LittlerootTown_Text_MomComeInsideVigoroth_Male:
+    .string "MOM: Come inside- Vigoroth have already\n"
+    .string "finished the heavy lifting.$"
+
+LittlerootTown_Text_MomWereFinallyHere_Female:
+    .string "MOM: We’re finally here, {PLAYER}!$"
+
+LittlerootTown_Text_MomSmallerThanBefore_Female:
+    .string "MOM: Littleroot Town… smaller than what you\n"
+    .string "remember, right?$"
+
+LittlerootTown_Text_PlayerFeelsDifferent_Female:
+    .string "{COLOR GREEN}{PLAYER}: …It feels different. Quieter than the\n"
+    .string "Archipelago.{COLOR DARK_GRAY}$"
+
+LittlerootTown_Text_PlayerHardToBelieve_Female:
+    .string "{COLOR GREEN}{PLAYER}: Hard to believe eight years have\n"
+    .string "passed.{COLOR DARK_GRAY}$"
+
+LittlerootTown_Text_MomFreshStart_Female:
+    .string "MOM: Eight years away, and now a fresh start.\n"
+    .string "That’s what we need.$"
+
+LittlerootTown_Text_MomComeInsideVigoroth_Female:
+    .string "MOM: Come inside- Vigoroth have already finished\n"
+    .string "the heavy lifting.$"
 
 LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"

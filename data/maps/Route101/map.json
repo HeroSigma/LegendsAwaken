@@ -67,7 +67,7 @@
     },
     {
       "local_id": "LOCALID_ROUTE101_ZIGZAGOON",
-      "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_1",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES_ZOROARK_HISUI",
       "x": 5,
       "y": 14,
       "elevation": 0,
@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
+      "script": "Route101_EventScript_ZoroarkTrigger",
       "flag": "FLAG_HIDE_ROUTE_101_ZIGZAGOON"
     },
     {

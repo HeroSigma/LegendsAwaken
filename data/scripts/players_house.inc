@@ -73,27 +73,53 @@ PlayersHouse_2F_EventScript_WallClock::
 PlayersHouse_2F_EventScript_MomComesUpstairsMale::
 	setvar VAR_0x8008, LOCALID_PLAYERS_HOUSE_2F_MOM
 	addobject VAR_0x8008
-	applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomEntersMale
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	msgbox PlayersHouse_2F_Text_HowDoYouLikeYourRoom, MSGBOX_DEFAULT
-	closemessage
-	applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomExitsMale
-	waitmovement 0
-	return
+    applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomEntersMale
+    waitmovement 0
+    applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+    waitmovement 0
+    msgbox PlayersHouse_2F_Text_MomDidYouSetClock, MSGBOX_DEFAULT
+    msgbox PlayersHouse_2F_Text_MomMakeSureSchedule, MSGBOX_DEFAULT
+    msgbox PlayersHouse_2F_Text_PlayerClockLine_Male, MSGBOX_DEFAULT
+    msgbox PlayersHouse_2F_Text_HowDoYouLikeYourRoom, MSGBOX_DEFAULT
+    closemessage
+    applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomExitsMale
+    waitmovement 0
+    return
 
 PlayersHouse_2F_EventScript_MomComesUpstairsFemale::
 	setvar VAR_0x8008, LOCALID_PLAYERS_HOUSE_2F_MOM
 	addobject VAR_0x8008
-	applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomEntersFemale
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	msgbox PlayersHouse_2F_Text_HowDoYouLikeYourRoom, MSGBOX_DEFAULT
-	closemessage
-	applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomExitsFemale
-	waitmovement 0
+    applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomEntersFemale
+    waitmovement 0
+    applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+    waitmovement 0
+    msgbox PlayersHouse_2F_Text_MomDidYouSetClock, MSGBOX_DEFAULT
+    msgbox PlayersHouse_2F_Text_MomMakeSureSchedule, MSGBOX_DEFAULT
+    msgbox PlayersHouse_2F_Text_PlayerClockLine_Female, MSGBOX_DEFAULT
+    msgbox PlayersHouse_2F_Text_HowDoYouLikeYourRoom, MSGBOX_DEFAULT
+    closemessage
+    applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomExitsFemale
+    waitmovement 0
+    return
+
+PlayersHouse_2F_EventScript_UpstairsIntro::
+	lockall
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, PlayersHouse_2F_EventScript_UpstairsIntro_Male
+	call_if_eq VAR_RESULT, FEMALE, PlayersHouse_2F_EventScript_UpstairsIntro_Female
+	releaseall
+	return
+
+PlayersHouse_2F_EventScript_UpstairsIntro_Male:
+	msgbox PlayersHouse_2F_Text_UpstairsIntro_Male_1, MSGBOX_DEFAULT
+	msgbox PlayersHouse_2F_Text_UpstairsIntro_Male_2, MSGBOX_DEFAULT
+	msgbox PlayersHouse_2F_Text_UpstairsIntro_Male_3, MSGBOX_DEFAULT
+	return
+
+PlayersHouse_2F_EventScript_UpstairsIntro_Female:
+	msgbox PlayersHouse_2F_Text_UpstairsIntro_Female_1, MSGBOX_DEFAULT
+	msgbox PlayersHouse_2F_Text_UpstairsIntro_Female_2, MSGBOX_DEFAULT
+	msgbox PlayersHouse_2F_Text_UpstairsIntro_Female_3, MSGBOX_DEFAULT
 	return
 
 PlayersHouse_2F_EventScript_CheckWallClock::

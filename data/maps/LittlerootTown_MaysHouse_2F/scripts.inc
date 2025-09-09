@@ -7,7 +7,6 @@ LittlerootTown_MaysHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_MaysHouse_2F_OnFrame:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_MaysHouse_2F_EventScript_ShowZRingBall
 	.2byte 0
 
 LittlerootTown_MaysHouse_2F_EventScript_ShowZRingBall::
@@ -19,7 +18,7 @@ LittlerootTown_MaysHouse_2F_EventScript_ShowZRingBallRet:
 
 LittlerootTown_MaysHouse_2F_EventScript_SpawnZRingBall::
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_ZRING_BALL
-	addobject LOCALID_ZRING_BALL
+	addobject LOCALID_MAYS_HOUSE_2F_ZRING_BALL
 	return
 
 LittlerootTown_MaysHouse_2F_OnTransition:
@@ -378,32 +377,29 @@ LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC::
 	end
 
 RivalsHouse_2F_Text_MayWhoAreYou:
-	.string "MAY: {PLAYER}! You're back!\p"
-	.string "PLAYER: Looks like it.\p"
-	.string "MAY: Eight years since LITTLEROOT, huh?\p"
-	.string "PLAYER: We used to meet by ROUTE 101.\p"
-	.string "MAY: Yeah. Good times.\p"
-	.string "MAY: BRENDAN went out already.\p"
-	.string "PLAYER: They're going to flip when they\n"
-	.string "see me.\p"
-	.string "MAY: Totally. Let's catch up outside later.\p"
-	.string "PLAYER: See you outside.$"
+	.string "{COLOR BLUE}MAY: {PLAYER}…? No way- it’s been forever!\p"
+	.string "{COLOR BLUE}MAY: You didn’t even call ahead before moving in?\n"
+	.string "Typical.\p"
+    .string "{COLOR BLUE}MAY: BRENDAN’s somewhere\n"
+    .string "around outside, but you found\n"
+    .string "me first.\p"
+	.string "{COLOR GREEN}{PLAYER}: …It really has been a long time.\n"
+	.string "(Seeing them again… it feels like the start of\l"
+	.string "something big.){COLOR DARK_GRAY}$"
 
 RivalsHouse_2F_Text_MayGettingReady:
 	.string "POKéMON fully restored!\n"
 	.string "Items ready, and…$"
 
 RivalsHouse_2F_Text_BrendanWhoAreYou:
-	.string "BRENDAN: {PLAYER}! You're back!\p"
-	.string "PLAYER: Looks like it.\p"
-	.string "BRENDAN: Eight years since LITTLEROOT, huh?\p"
-	.string "PLAYER: We used to meet by ROUTE 101.\p"
-	.string "BRENDAN: Yeah. Good times.\p"
-	.string "BRENDAN: MAY went out already.\p"
-	.string "PLAYER: They're going to flip when they\n"
-	.string "see me.\p"
-	.string "BRENDAN: Totally. Let's catch up outside later.\p"
-	.string "PLAYER: See you outside.$"
+	.string "{COLOR RED}BRENDAN: {PLAYER}? Hah, I almost didn’t recognize you!\p"
+	.string "{COLOR RED}BRENDAN: Couldn’t even call ahead before moving in?\n"
+	.string "Figures.\p"
+    .string "{COLOR RED}BRENDAN: MAY’s out wandering,\n"
+    .string "but you tracked me down first.\p"
+	.string "{COLOR GREEN}{PLAYER}: …It really has been a long time.\n"
+	.string "(Seeing them again… it feels like the start of\l"
+	.string "something big.){COLOR DARK_GRAY}$"
 
 RivalsHouse_2F_Text_BrendanGettingReady:
 	.string "POKéMON fully restored…\n"

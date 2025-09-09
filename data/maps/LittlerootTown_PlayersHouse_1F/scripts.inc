@@ -96,12 +96,13 @@ LittlerootTown_PlayersHouse_1F_EventScript_PetalburgGymReport::
 	closemessage
 	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomMakeRoomToSeeTV
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerMoveToTV
-	waitmovement 0
-	call PlayersHouse_1F_EventScript_WatchGymBroadcast
+    applymovement OBJ_EVENT_ID_PLAYER, PlayersHouse_1F_Movement_PlayerMoveToTV
+    waitmovement 0
+    call LittlerootTown_PlayersHouse_1F_EventScript_WatchBroadcastWithFlicker
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
+	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
         msgbox LittlerootTown_PlayersHouse_1F_Text_ThingsMovedOut, MSGBOX_DEFAULT
         msgbox LittlerootTown_PlayersHouse_1F_Text_StartYourAdventure, MSGBOX_DEFAULT
 	givemon SPECIES_PICHU, 3
@@ -149,7 +150,7 @@ LittlerootTown_PlayersHouse_1F_EventScript_MomLeaving::
 	setflag FLAG_HIDE_PLAYERS_HOUSE_MOM
 	setvar VAR_TEMP_1, 1
 	setflag FLAG_SYS_B_DASH
-	end
+end
 
 LittlerootTown_PlayersHouse_1F_Movement_PlayerApproachTVForGym:
 	walk_down
@@ -210,3 +211,26 @@ LittlerootTown_PlayersHouse_1F_Text_TakeCareOfHouse:
         .string "MOM: Take care of the house while\n"
         .string "I'm away, okay?\p"
         .string "I'll be thinking of you!$"
+// Hoenn-only: Watch broadcast with a mid-scene screen flicker
+LittlerootTown_PlayersHouse_1F_EventScript_WatchBroadcastWithFlicker::
+    applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+    waitmovement 0
+    msgbox PlayersHouse_1F_Text_TVHoennCollab_Intro, MSGBOX_DEFAULT
+    closemessage
+    special TurnOffTVScreen
+    // Static hit + brief camera shake during flicker
+    playse SE_THUNDER
+    setvar VAR_0x8004, 1   @ vertical pan on
+    setvar VAR_0x8005, 1   @ horizontal pan on
+    setvar VAR_0x8006, 6   @ num shakes (brief)
+    setvar VAR_0x8007, 3   @ shake delay (snappy)
+    special ShakeCamera
+    waitstate
+    delay 20
+    special TurnOnTVScreen
+    msgbox PlayersHouse_1F_Text_TVHoennCollab_Distortion, MSGBOX_DEFAULT
+    fadedefaultbgm
+    special TurnOffTVScreen
+    setflag FLAG_SYS_TV_HOME
+    delay 35
+    return

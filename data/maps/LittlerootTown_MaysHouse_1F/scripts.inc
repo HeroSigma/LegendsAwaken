@@ -93,12 +93,33 @@ LittlerootTown_MaysHouse_1F_EventScript_YoureNewNeighbor::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	applymovement LOCALID_RIVALS_HOUSE_1F_MOM, LittlerootTown_MaysHouse_1F_Movement_RivalMomApproach
 	waitmovement 0
-	special GetRivalSonDaughterString
-	msgbox RivalsHouse_1F_Text_MomGreeting_MayUpstairs, MSGBOX_DEFAULT
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LittlerootTown_MaysHouse_1F_EventScript_MrsBirchGreeting_ToMeetMay
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_MaysHouse_1F_EventScript_MrsBirchGreeting_ToMeetBrendan
 	setflag FLAG_MET_RIVAL_MOM
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2
 	releaseall
 	end
+
+LittlerootTown_MaysHouse_1F_EventScript_MrsBirchGreeting_ToMeetMay::
+	msgbox RivalsHouse_1F_Text_MrsBirchEightYears, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_MrsBirchHowHaveYouBeen, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_PlayerArchipelagoIncident, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_MrsBirchAskSelene, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_PlayerSeleneDoingHerBest, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_MrsBirchYouveGrown, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_MrsBirchMayUpstairs, MSGBOX_DEFAULT
+	return
+
+LittlerootTown_MaysHouse_1F_EventScript_MrsBirchGreeting_ToMeetBrendan::
+	msgbox RivalsHouse_1F_Text_MrsBirchEightYears, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_MrsBirchHowHaveYouBeen, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_PlayerArchipelagoIncident, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_MrsBirchAskSelene, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_PlayerSeleneDoingHerBest, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_MrsBirchYouveGrown, MSGBOX_DEFAULT
+	msgbox RivalsHouse_1F_Text_MrsBirchBrendanUpstairs, MSGBOX_DEFAULT
+	return
 
 LittlerootTown_MaysHouse_1F_Movement_RivalMomApproach:
 	walk_down
@@ -384,15 +405,36 @@ RivalsHouse_1F_Text_DoYouHavePokemon:
 	.string "Do you already have your\n"
 	.string "own POKéMON?$"
 
-RivalsHouse_1F_Text_MomGreeting_MayUpstairs:
-	.string "MOM: {PLAYER}? After eight years!\p"
-	.string "PLAYER: Hi, Mrs. Birch!\p"
-	.string "MOM: You used to play with BRENDAN and\n"
-	.string "MAY.\p"
-	.string "MOM: Back when you lived here in\n"
-	.string "LITTLEROOT.\p"
-	.string "PLAYER: Yeah. I remember.\p"
-	.string "MOM: MAY is upstairs in their room.\p"
-	.string "MOM: BRENDAN stepped out a minute ago.\p"
-	.string "PLAYER: I'll say hello.\p"
-	.string "MOM: Go on up, dear.$"
+RivalsHouse_1F_Text_MrsBirchEightYears:
+	.string "MRS. BIRCH: {PLAYER}! Goodness, it’s been eight years\n"
+	.string "since I last saw you.$"
+
+RivalsHouse_1F_Text_MrsBirchHowHaveYouBeen:
+	.string "MRS. BIRCH: How have you been? And how is your\n"
+	.string "father?$"
+
+RivalsHouse_1F_Text_PlayerArchipelagoIncident:
+	.string "{COLOR GREEN}{PLAYER}: …Father’s research kept us away on the\n"
+	.string "Archipelago.\p"
+	.string "Things… changed after the incident, but we\n"
+	.string "managed.{COLOR DARK_GRAY}$"
+
+RivalsHouse_1F_Text_MrsBirchAskSelene:
+	.string "MRS. BIRCH: I see… and what about SELENE?\n"
+	.string "Is your mother well?$"
+
+RivalsHouse_1F_Text_PlayerSeleneDoingHerBest:
+	.string "{COLOR GREEN}{PLAYER}: She’s doing her best. Always looking out\n"
+	.string "for me, no matter what.{COLOR DARK_GRAY}$"
+
+RivalsHouse_1F_Text_MrsBirchYouveGrown:
+	.string "MRS. BIRCH: That sounds like her. You’ve grown\n"
+	.string "so much.$"
+
+RivalsHouse_1F_Text_MrsBirchMayUpstairs:
+	.string "MRS. BIRCH: MAY should be upstairs. Go on and\n"
+	.string "say hello.$"
+
+RivalsHouse_1F_Text_MrsBirchBrendanUpstairs:
+	.string "MRS. BIRCH: BRENDAN should be upstairs. Go on and\n"
+	.string "say hello.$"

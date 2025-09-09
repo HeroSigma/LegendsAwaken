@@ -60,7 +60,62 @@ LittlerootTown_ProfessorBirchsLab_OnWarp:
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetPlayerPosForReceiveStarter::
 	turnobject LOCALID_PLAYER, DIR_NORTH
-	end
+	addobject LOCALID_BIRCHS_LAB_BIRCH
+	addobject LOCALID_BIRCHS_LAB_SELENE
+	addobject LOCALID_BIRCHS_LAB_MRS_BIRCH
+	@ Place Birch at his desk and position Selene and Mrs. Birch beside him, all facing down
+	setobjectxy LOCALID_BIRCHS_LAB_BIRCH, 6, 4
+	setobjectxy LOCALID_BIRCHS_LAB_SELENE, 5, 4
+	setobjectxy LOCALID_BIRCHS_LAB_MRS_BIRCH, 7, 4
+	turnobject LOCALID_BIRCHS_LAB_BIRCH, DIR_SOUTH
+	turnobject LOCALID_BIRCHS_LAB_SELENE, DIR_SOUTH
+	turnobject LOCALID_BIRCHS_LAB_MRS_BIRCH, DIR_SOUTH
+	@ Do not autoplay the debrief; let the player talk to Birch to begin
+	return
+
+// Post-rescue lab debrief with Selene and Mrs. Birch present
+LittlerootTown_ProfessorBirchsLab_EventScript_PostRescueDebrief::
+    lockall
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_ZoroarkUnseen, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_SeleneIntervene, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_MrsBirchTroubling, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_FieldworkStart, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_BondUnderFire, MSGBOX_DEFAULT
+    // Offer nickname for the rescued starter
+    msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_NicknameRescueStarter
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_HeadTo103, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_SeleneCare, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_MrsBirchDinner, MSGBOX_DEFAULT
+	// Selene and Mrs. Birch leave
+	playse SE_EXIT
+	removeobject LOCALID_BIRCHS_LAB_SELENE
+	removeobject LOCALID_BIRCHS_LAB_MRS_BIRCH
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_PlayerResolve, MSGBOX_DEFAULT
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RightThen103, MSGBOX_DEFAULT
+	// Send player to meet rival at Route 103
+    setvar VAR_BIRCH_LAB_STATE, 3
+    releaseall
+    return
+
+// Nickname flow for the rescued starter (same as party nicknaming)
+LittlerootTown_ProfessorBirchsLab_EventScript_NicknameRescueStarter::
+    setvar VAR_0x8004, 0
+    call Common_EventScript_NameReceivedPartyMon
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_HeadTo103, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_SeleneCare, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_MrsBirchDinner, MSGBOX_DEFAULT
+    // Selene and Mrs. Birch leave
+    playse SE_EXIT
+    removeobject LOCALID_BIRCHS_LAB_SELENE
+    removeobject LOCALID_BIRCHS_LAB_MRS_BIRCH
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_PlayerResolve, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_RightThen103, MSGBOX_DEFAULT
+    setvar VAR_BIRCH_LAB_STATE, 3
+    releaseall
+    return
+
+
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForDexUpgrade::
 	turnobject LOCALID_PLAYER, DIR_NORTH
@@ -96,7 +151,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters::
 	end
 
 LittlerootTown_ProfessorBirchsLab_OnFrame:
-	map_script_2 VAR_BIRCH_LAB_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent
 	map_script_2 VAR_BIRCH_LAB_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedexEvent
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_ProfessorBirchsLab_EventScript_UpgradeToNationalDex
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_ChooseJohtoStarter
@@ -111,10 +165,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival
-	end
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter
+    goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival
+    end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter::
 	setvar VAR_0x8004, 0
@@ -465,9 +519,16 @@ LittlerootTown_ProfessorBirchsLab_EventScript_Birch::
 	faceplayer
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_CanHaveAnyOneOfRarePokemon
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_GrassyPatchWaiting
+	goto_if_eq VAR_BIRCH_LAB_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_PostRescueDebrief
+	goto_if_eq VAR_BIRCH_LAB_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_RemindRoute103
 	goto_if_unset FLAG_HAS_MATCH_CALL, LittlerootTown_ProfessorBirchsLab_EventScript_TryRatePokedexOrRegister
 	goto_if_unset FLAG_ENABLE_PROF_BIRCH_MATCH_CALL, EventScript_RegisterProfBirch
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_TryRatePokedexOrRegister
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RemindRoute103::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RightThen103, MSGBOX_DEFAULT
+	release
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_CanHaveAnyOneOfRarePokemon::
@@ -745,9 +806,58 @@ LittlerootTown_ProfessorBirchsLab_Text_Post103Intro:
 	.string "{RIVAL}: We logged the statics you asked for.\p"
 	.string "PLAYER: Any spikes?\p"
 	.string "{RIVAL}: None. Readings were clean.\p"
-	.string "{RIVAL}: My partner already went ahead to scout.\p"
-	.string "PLAYER: Figures. They move fast.\p"
-	.string "PROF. BIRCH: Good. Thank you both.$"
+
+// New debrief scene text (post Route 101)
+LittlerootTown_ProfessorBirchsLab_Text_ZoroarkUnseen:
+	.string "BIRCH: That POKéMON we saw… it looked like a\n"
+	.string "ZOROARK, but at the same time, it didn’t.\p"
+	.string "BIRCH: ZOROARK isn’t even found in HOENN, and\n"
+	.string "I’ve never seen a form like that in any record.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_SeleneIntervene:
+	.string "SELENE: Whatever it was, it nearly overwhelmed\n"
+	.string "you. If not for… whatever intervened, we\l"
+	.string "wouldn’t be standing here.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_MrsBirchTroubling:
+	.string "MRS. BIRCH: I’ve lived here my whole life, and\n"
+	.string "I’ve never seen anything like it either.\p"
+	.string "This is troubling, Professor.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_FieldworkStart:
+    .string "BIRCH: Troubling, yes- but also important.\n"
+	.string "We need to understand what’s happening.\p"
+	.string "BIRCH: For that, {PLAYER}, I want you to begin\n"
+	.string "fieldwork right away.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_BondUnderFire:
+	.string "BIRCH: You already chose a partner out there,\n"
+	.string "under fire. That bond is yours now.\p"
+    .string "But theory won’t help us- we need practice.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_HeadTo103:
+	.string "BIRCH: Head north to ROUTE 103. {RIVAL} should\n"
+	.string "be waiting there.\p"
+	.string "Battle them, explain what happened, and then\n"
+	.string "come straight back here.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_SeleneCare:
+    .string "SELENE: Be careful, {PLAYER}. Remember- you don’t\n"
+	.string "have to shoulder this alone.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_MrsBirchDinner:
+	.string "MRS. BIRCH: And tell {RIVAL} I’ll have dinner\n"
+	.string "ready if they’re late home again.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_PlayerResolve:
+	.string "{COLOR GREEN}{PLAYER}: (That Zoroark… or whatever it was…\n"
+	.string "I can still feel its presence.\p"
+	.string "Maybe battling {RIVAL} will help me steady\n"
+	.string "myself.){COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RightThen103:
+	.string "BIRCH: Right then. ROUTE 103. Don’t delay,\n"
+	.string "{PLAYER}.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedPokedex:
 	.string "{PLAYER} received the POKéDEX!$"

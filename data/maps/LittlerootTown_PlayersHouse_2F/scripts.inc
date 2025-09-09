@@ -6,13 +6,13 @@ LittlerootTown_PlayersHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_PlayersHouse_2F_OnTransition:
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
 
 LittlerootTown_PlayersHouse_2F_OnWarp:
 	map_script_2 VAR_SECRET_BASE_INITIALIZED, 0, LittlerootTown_PlayersHouse_2F_EventScript_CheckInitDecor
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 4, LittlerootTown_PlayersHouse_2F_EventScript_ShowTruckArrival
 	.2byte 0
 
 LittlerootTown_PlayersHouse_2F_EventScript_CheckInitDecor::
@@ -61,6 +61,16 @@ PlayersHouse_2F_EventScript_GameCube::
 PlayersHouse_2F_EventScript_IntroFlicker::
 	lockall
 	msgbox PlayersHouse_2F_Text_FlickerThought, MSGBOX_DEFAULT
+	releaseall
+	return
+
+// Wrapper to show the truck arrival scene after warp completes
+LittlerootTown_PlayersHouse_2F_EventScript_ShowTruckArrival::
+	lockall
+	msgbox gText_Truck_Intro, MSGBOX_DEFAULT
+	msgbox gText_Truck_PlayerReflection, MSGBOX_DEFAULT
+	msgbox gText_Truck_ReadyToExit, MSGBOX_DEFAULT
+	setvar VAR_LITTLEROOT_INTRO_STATE, 5
 	releaseall
 	return
 
@@ -144,9 +154,52 @@ PlayersHouse_2F_Text_EmptyBall:
 	.string "The Poké Ball is empty.$"
 
 LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
-        .string "MOM: All set? The room looks nice.\p"
-        .string "Good. He'll be glad you're safe.\p"
-        .string "He said to take it easy for now.\p"
-        .string "When things calm down, he'll catch up.\p"
-        .string "Come downstairs when you're ready.$"
+	.string "MOM: All set? The room looks nice.\p"
+	.string "Good. Caelum will be glad you're safe.\p"
+	.string "He said to take it easy for now.\p"
+	.string "When things calm down, he'll catch up.\p"
+	.string "Come downstairs when you're ready.\p"
+	.string "$"
         .equ PlayersHouse_2F_Text_HowDoYouLikeYourRoom, LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom
+// Upstairs intro monologue (gender-specific)
+PlayersHouse_2F_Text_UpstairsIntro_Male_1:
+	.string "{COLOR GREEN}{PLAYER}: So this is my room again…\p"
+	.string "feels smaller than the one back home.{COLOR DARK_GRAY}$"
+
+PlayersHouse_2F_Text_UpstairsIntro_Male_2:
+	.string "{COLOR GREEN}{PLAYER}: Still, it’s mine.\p"
+	.string "A fresh start in HOENN.{COLOR DARK_GRAY}$"
+
+PlayersHouse_2F_Text_UpstairsIntro_Male_3:
+	.string "{COLOR GREEN}{PLAYER}: …Back at the Archipelago, Father’s\p"
+	.string "study was always full of notes and machines.\p"
+	.string "This room feels… quiet in comparison.{COLOR DARK_GRAY}$"
+
+PlayersHouse_2F_Text_UpstairsIntro_Female_1:
+	.string "{COLOR GREEN}{PLAYER}: So this is my room again…\p"
+	.string "it’s cozier than what I remember.{COLOR DARK_GRAY}$"
+
+PlayersHouse_2F_Text_UpstairsIntro_Female_2:
+	.string "{COLOR GREEN}{PLAYER}: Guess I’ll have to make it mine\p"
+	.string "all over again.{COLOR DARK_GRAY}$"
+
+PlayersHouse_2F_Text_UpstairsIntro_Female_3:
+	.string "{COLOR GREEN}{PLAYER}: …At the Archipelago, Father’s study\p"
+	.string "always echoed with machines and scribbled notes.\p"
+	.string "This room feels… still.{COLOR DARK_GRAY}$"
+
+// Mom enters after setting the clock
+PlayersHouse_2F_Text_MomDidYouSetClock:
+	.string "MOM: {PLAYER}! Did you set the clock yet?$"
+
+PlayersHouse_2F_Text_MomMakeSureSchedule:
+	.string "MOM: Make sure it’s right- we’ll need to\n"
+	.string " keep a proper schedule here in LITTLEROOT.$"
+
+PlayersHouse_2F_Text_PlayerClockLine_Male:
+	.string "{COLOR GREEN}{PLAYER}: Yeah, I’ll set it. Something about\n"
+	.string "seeing the hands move… feels grounding.{COLOR DARK_GRAY}$"
+
+PlayersHouse_2F_Text_PlayerClockLine_Female:
+	.string "{COLOR GREEN}{PLAYER}: Mm. I’ll set it. Something about the\n"
+	.string "ticking… feels steady.{COLOR DARK_GRAY}$"

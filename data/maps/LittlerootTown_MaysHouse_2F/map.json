@@ -225,11 +225,11 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL"
     },
     {
-      "local_id": "LOCALID_ZRING_BALL",
+      "local_id": "LOCALID_MAYS_HOUSE_2F_ZRING_BALL",
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 6,
       "y": 4,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,

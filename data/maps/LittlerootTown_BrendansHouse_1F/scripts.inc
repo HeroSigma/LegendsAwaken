@@ -284,44 +284,92 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2:
 	step_end
 
 PlayersHouse_1F_Text_IsntItNiceInHere:
-	.string "MOM: This is our new house.$"
+	.string "MOM: See, {PLAYER}? Everything’s all set.$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock:
-	.string "Your room is upstairs.\p"
-	.string "Please set the clock for me.\p"
-	.string "I'll finish with the boxes.\p"
-	.string "Come back down when you're done, okay?$"
+	.string "Your room is upstairs- clock, PC,\n"
+	.string "even the bed’s made.\p"
+	.string "Go on and check it out,\p"
+	.string "make it yours again.\p"
+	.string "{COLOR GREEN}{PLAYER}: …Feels strange,\n"
+	.string "starting over.\p"
+	.string "Back home, Father always said\l"
+	.string "there was work left undone.{COLOR DARK_GRAY}\p"
+	.string "MOM: You always bring him up when\n"
+	.string "we move, don’t you?\p"
+	.string "MOM: Caelum would be glad to know\n"
+	.string "you still think of him.\p"
+	.string "MOM: Now, no more brooding. Go\n"
+	.string "upstairs and settle in.\p"
+	.string "{COLOR GREEN}{PLAYER}: Right. My room, my\n"
+	.string "space… my beginning.{COLOR DARK_GRAY}$"
 
 PlayersHouse_1F_Text_ArentYouInterestedInRoom:
 	.string "MOM: Well, {PLAYER}?\p"
-	.string "Aren't you interested in seeing your\n"
-	.string "very own room?$"
+	.string "Aren't you interested in seeing\l"
+	.string "your very own room?\p"
+	.string "$"
 
 PlayersHouse_1F_Text_GoSetTheClock:
-	.string "{COLOR LIGHT_RED}MOM: {COLOR DARK_GRAY}Don't forget to set your clock, {PLAYER}!$"
+	.string "MOM: Your clock’s upstairs- set it\n"
+	.string "when you’re ready, {PLAYER}.\l"
+	.string "Make the room yours.$"
 
 PlayersHouse_1F_Text_OhComeQuickly:
 	.string "MOM: Oh! {PLAYER}, {PLAYER}!\n"
 	.string "Quick! Come quickly!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "We interrupt with a special report.$"
+	.string "We interrupt with a special report.\p"
+	.string "$"
+
+// Hoenn-only split broadcast text
+PlayersHouse_1F_Text_TVHoennCollab_Intro:
+	.string "TV ANNOUNCER:\n"
+	.string "Today’s headline: A joint project\n"
+	.string "between HOENN’s DEVON\l"
+	.string "CORPORATION and KANTO’s\l"
+	.string "SILPH COMPANY.\p"
+	.string "TV ANNOUNCER:\n"
+	.string "The two giants announce a\l"
+	.string "historic collaboration, building\l"
+	.string "a new link between the regions.\p"
+	.string "TV ANNOUNCER:\n"
+	.string "Their goal: a connected future\l"
+	.string "for research, trade, and-\p"
+	.string "$"
+
+PlayersHouse_1F_Text_TVHoennCollab_Distortion:
+	.string "TV ANNOUNCER:\n"
+	.string "-wait, this isn’t- we’re\l"
+	.string "seeing sudden distortions\l"
+	.string "on site!\p"
+	.string "TV ANNOUNCER:\n"
+	.string "Portals- tearing open-\l"
+	.string "POKéMON are pouring through!\l"
+	.string "Security- everyone evacu-!\p"
+	.string "The TV bursts into static.$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
-	.string "MOM: Colress…?\p"
-	.string "Colress?\p"
-	.string "MOM: …\p"
-	.string "…\p"
-	.string "MOM: Let's stay calm.\p"
-	.string "Yeah.$"
+	.string "{COLOR GREEN}{PLAYER}: That can’t be…{COLOR DARK_GRAY}\p"
+	.string "{COLOR GREEN}({COLOR DARK_GRAY}Is this the uneasy\l"
+	.string "feeling I’ve been carrying…\p"
+	.string "or something even worse?{COLOR DARK_GRAY})$"
 
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
-	.string "MOM: Professor Birch next door is\n"
-	.string "looking into the rifts.\p"
-	.string "He knows HIM.\p"
-	.string "Go see him, {PLAYER}. He may need\n"
-	.string "your help.$"
+	.string "MOM: No… it couldn’t be, could it?\p"
+	.string "MOM: Caelum always warned his\l"
+	.string "associates something like this\l"
+	.string "might happen.\p"
+	.string "MOM: Speaking of which- his\l"
+	.string "colleague lives right next door\l"
+	.string "here in LITTLEROOT.\p"
+	.string "MOM: Professor Birch. You two\l"
+	.string "spoke on the phone while we were\l"
+	.string "in the truck, remember?\p"
+	.string "MOM: Go on, {PLAYER}. Meet him\l"
+	.string "at his lab. He’ll be waiting.$"
 
 PlayersHouse_1F_Text_SeeYouHoney:
 	.string "MOM: See you, honey!$"
@@ -365,13 +413,27 @@ PlayersHouse_1F_Text_Vigoroth2:
 	.string "Huggoh, uggo uggo…$"
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym:
-	.string "TV: Rifts are appearing across HOENN.\p"
-	.string "Travel and safety alerts are in effect.\p"
-	.string "SILPH CO. of KANTO and DEVON CORP. of\n"
-	.string "HOENN are working together.\p"
-	.string "Leading the effort is COLRESS of UNOVA.\p"
-	.string "Authorities ask residents to remain calm.\p"
-	.string "Further updates will follow.$"
+	.string "TV ANNOUNCER:\n"
+	.string "Today’s headline: A joint project\n"
+	.string "between HOENN’s DEVON CORPORATION\n"
+	.string "and KANTO’s SILPH COMPANY.\p"
+	.string "TV ANNOUNCER:\n"
+	.string "The two giants announce a historic\n"
+	.string "collaboration, building a new link\n"
+	.string "between the regions.\p"
+	.string "TV ANNOUNCER:\n"
+	.string "Their goal: a connected future\n"
+	.string "for research, trade, and-\p"
+	.string "The screen flickers.\p"
+	.string "Strange purple static washes over the TV feed.\p"
+	.string "TV ANNOUNCER:\n"
+	.string "-wait, this isn’t- we’re seeing\p"
+	.string "sudden distortions on site!\p"
+	.string "TV ANNOUNCER:\n"
+	.string "Portals- tearing open- POKéMON\p"
+	.string "are pouring through! Security-\p"
+	.string "everyone evacu-!\p"
+	.string "The TV bursts into static.$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
 	.string "There is a movie on TV.\p"

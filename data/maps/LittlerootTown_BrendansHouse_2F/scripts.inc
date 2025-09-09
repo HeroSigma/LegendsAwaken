@@ -7,7 +7,6 @@ LittlerootTown_BrendansHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_BrendansHouse_2F_OnFrame:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_BrendansHouse_2F_EventScript_ShowZRingBall
 	.2byte 0
 
 LittlerootTown_BrendansHouse_2F_EventScript_ShowZRingBall::
@@ -19,7 +18,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_ShowZRingBallRet:
 
 LittlerootTown_BrendansHouse_2F_EventScript_SpawnZRingBall::
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_ZRING_BALL
-	addobject LOCALID_ZRING_BALL
+	addobject LOCALID_BRENDANS_HOUSE_2F_ZRING_BALL
 	return
 
 LittlerootTown_BrendansHouse_2F_OnTransition:
