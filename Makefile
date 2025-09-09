@@ -186,43 +186,57 @@ else
 endif
 
 # --- Poryscript integration ---
+# Set USE_PORYSCRIPT=1 to enable compiling .pory scripts.
+USE_PORYSCRIPT ?= 0
 PORYSCRIPT := tools/poryscript/poryscript
 
-# Find all .pory under data/
-PORYSCRIPTS := $(shell find data -name '*.pory')
+DATA_PORY_INC := $(DATA_ASM_SUBDIR)/poryscripts.inc
+DATA_PORY_S   := $(DATA_ASM_SUBDIR)/poryscripts.s
 
-# Where the compiled .inc files go (in the build dir, mirroring source paths)
-PORYINC := $(patsubst %.pory,$(OBJ_DIR)/%.pory.inc,$(PORYSCRIPTS))
+ifeq ($(USE_PORYSCRIPT),1)
+  # Find all .pory under data/
+  PORYSCRIPTS := $(shell find data -name '*.pory')
 
-# Ensure the tool is built when needed
-$(PORYSCRIPT):
+  # Where the compiled .inc files go (in the build dir, mirroring source paths)
+  PORYINC := $(patsubst %.pory,$(OBJ_DIR)/%.pory.inc,$(PORYSCRIPTS))
+
+  # Ensure the tool is built when needed
+  $(PORYSCRIPT):
 	$(MAKE) -C tools/poryscript
 
-# Compile .pory -> .pory.inc
-$(OBJ_DIR)/%.pory.inc: %.pory | $(PORYSCRIPT)
+  # Compile .pory -> .pory.inc
+  $(OBJ_DIR)/%.pory.inc: %.pory | $(PORYSCRIPT)
 	@mkdir -p $(dir $@)
 	$(PORYSCRIPT) \
 	  -cc tools/poryscript/command_config.json \
 	  -fc tools/poryscript/font_config.json \
 	  -i $< -o $@
 
-
-# Aggregate all compiled .pory.inc into a single include list the assembler can consume
-DATA_PORY_INC := $(DATA_ASM_SUBDIR)/poryscripts.inc
-DATA_PORY_S   := $(DATA_ASM_SUBDIR)/poryscripts.s
-
-# Generate poryscripts.inc after all .pory.inc are built
-$(DATA_PORY_INC): $(PORYINC)
+  # Generate poryscripts.inc after all .pory.inc are built
+  $(DATA_PORY_INC): $(PORYINC)
 	@{ \
 	  for f in $(PORYINC); do echo ".include \"$$f\""; done; \
 	} > $@
 
-# Thin wrapper .s that the normal data build will pick up
-$(DATA_PORY_S): $(DATA_PORY_INC)
+  # Thin wrapper .s that the normal data build will pick up
+  $(DATA_PORY_S): $(DATA_PORY_INC)
 	@printf ".include \"data/poryscripts.inc\"\n" > $@
 
-# Make 'generated' also build our poryscript includes
-AUTO_GEN_TARGETS += $(DATA_PORY_INC) $(DATA_PORY_S)
+  # Make 'generated' also build our poryscript includes
+  AUTO_GEN_TARGETS += $(DATA_PORY_INC) $(DATA_PORY_S)
+else
+  .PHONY: FORCE_PORY
+  # Poryscript disabled: generate an empty include list so data/poryscripts.s assembles fine
+  $(DATA_PORY_INC): FORCE_PORY
+	@mkdir -p $(dir $@)
+	@printf "" > $@
+
+  # Ensure the thin wrapper exists as well
+  $(DATA_PORY_S): $(DATA_PORY_INC) FORCE_PORY
+	@printf ".include \"data/poryscripts.inc\"\n" > $@
+
+  AUTO_GEN_TARGETS += $(DATA_PORY_INC) $(DATA_PORY_S)
+endif
 # --- end Poryscript integration ---
 
 # Learnset helper is a Python script

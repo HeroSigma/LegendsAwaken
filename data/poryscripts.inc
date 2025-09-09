@@ -1,8 +1,0 @@
-.include "build/modern/data/maps/EternaForestA/scripts.pory.inc"
-.include "build/modern/data/maps/LakeAcuityCave/scripts.pory.inc"
-.include "build/modern/data/maps/OreburghCityA/scripts.pory.inc"
-.include "build/modern/data/maps/OreburghGate2F/scripts.pory.inc"
-.include "build/modern/data/maps/SendOffSpring/scripts.pory.inc"
-.include "build/modern/data/maps/LakeVerityCave/scripts.pory.inc"
-.include "build/modern/data/maps/LakeValorCave/scripts.pory.inc"
-.include "build/modern/data/maps/JubilifeCity/scripts.pory.inc"

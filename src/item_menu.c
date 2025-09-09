@@ -1291,9 +1291,8 @@ static void Task_BagMenu_HandleInput(u8 taskId)
             {
                 if ((gBagMenu->numItemStacks[gBagPosition.pocket] - 1) <= 1) //can't sort with 0 or 1 item in bag
                 {
-                    static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
                     PlaySE(SE_FAILURE);
-                    DisplayItemMessage(taskId, 1, sText_NothingToSort, HandleErrorMessage);
+                    DisplayItemMessage(taskId, FONT_NORMAL, sText_NothingToSort, HandleErrorMessage);
                     break;
                 }
                 else
@@ -1310,7 +1309,7 @@ static void Task_BagMenu_HandleInput(u8 taskId)
                     PlaySE(SE_SELECT);
                     BagDestroyPocketScrollArrowPair();
                     BagMenu_PrintCursor(tListTaskId, COLORID_GRAY_CURSOR);
-                    ListMenuGetScrollAndRow(data[0], scrollPos, cursorPos);
+                    ListMenuGetScrollAndRow(tListTaskId, scrollPos, cursorPos);
                     gTasks[taskId].func = Task_LoadBagSortOptions;
                     return;
                 }
@@ -1693,6 +1692,18 @@ static void OpenContextMenu(u8 taskId)
                 memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_ItemsPocket, sizeof(sContextMenuItems_ItemsPocket));
                 if (ItemIsMail(gSpecialVar_ItemId) == TRUE)
                     gBagMenu->contextMenuItemsBuffer[0] = ACTION_CHECK;
+                break;
+            case POCKET_MEDICINE:
+            case POCKET_BATTLE_ITEMS:
+            case POCKET_TRAINING_ITEMS:
+            case POCKET_EVOLUTIONARY_ITEMS:
+            case POCKET_FORM_CHANGING_ITEMS:
+            case POCKET_MEGASTONES:
+            case POCKET_Z_CRYSTALS:
+                // Default to the generic Items pocket actions (Use/Give/Toss/Cancel)
+                gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
+                gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_ItemsPocket);
+                memcpy(&gBagMenu->contextMenuItemsBuffer, &sContextMenuItems_ItemsPocket, sizeof(sContextMenuItems_ItemsPocket));
                 break;
             case POCKET_KEY_ITEMS:
                 gBagMenu->contextMenuItemsPtr = gBagMenu->contextMenuItemsBuffer;
@@ -2765,8 +2776,13 @@ static void AddBagSortSubMenu(void)
     }
 
     StringExpandPlaceholders(gStringVar4, sText_SortItemsHow);
-    FillWindowPixelBuffer(1, PIXEL_FILL(0));
-    BagMenu_Print(1, 1, gStringVar4, 3, 1, 0, 0, 0, 0);
+    {
+        // Use the standard message window for the prompt instead of the description box
+        u8 winId = AddItemMessageWindow(ITEMWIN_MESSAGE);
+        FillWindowPixelBuffer(winId, PIXEL_FILL(1));
+        BagMenu_Print(winId, FONT_NORMAL, gStringVar4, 3, 1, 0, 0, 0, COLORID_NORMAL);
+        ScheduleBgCopyTilemapToVram(1);
+    }
 
     if (gBagMenu->contextMenuNumItems == 2)
         PrintContextMenuItems(BagMenu_AddWindow(ITEMWIN_1x2));
@@ -2831,7 +2847,7 @@ static void SortBagItems(u8 taskId)
 
     StringCopy(gStringVar1, sSortTypeStrings[tSortType]);
     StringExpandPlaceholders(gStringVar4, sText_ItemsSorted);
-    DisplayItemMessage(taskId, 1, gStringVar4, Task_SortFinish);
+    DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, Task_SortFinish);
 }
 
 #undef tSortType
@@ -2840,7 +2856,7 @@ static void Task_SortFinish(u8 taskId)
 {
     if (gMain.newKeys & (A_BUTTON | B_BUTTON))
     {
-        RemoveItemMessageWindow(4);
+        RemoveItemMessageWindow(ITEMWIN_MESSAGE);
         ReturnToItemList(taskId);
     }
 }
