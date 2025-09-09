@@ -101,6 +101,7 @@ static const u8 sText_StoreListHelp[] = _("A: Select  B: Back  L/R: Category  ST
 static const u8 sText_StoreOwnedCount[] = _("x{STR_VAR_1}");
 static const u8 sText_StoreSale[] = _("SALE");
 static const u8 sText_StoreTodaysSale[] = _("Today: {STR_VAR_1} -10%");
+static const u8 sText_SoldOutShort[] = _("SOLD OUT");
 // Schedule UI strings
 static const u8 sText_ScheduleTitle[] = _("SALE SCHEDULE (-10%)");
 static const u8 sText_ScheduleCloseHint[] = _("B/SELECT: Close");
@@ -429,19 +430,19 @@ static const struct WindowTemplate sWindowTemplates[] =
         .tilemapLeft = 1,
         .tilemapTop = 7,
         .width = 28,
-        .height = 8, // Reduce to make room for description pane
+        .height = 13, // Expanded to fill space of former description pane
         .paletteNum = 15,
         .baseBlock = 113,
     },
-    [WIN_DESCRIPTION] = {
+    /* [WIN_DESCRIPTION] = {
         .bg = 0,
         .tilemapLeft = 1,
         .tilemapTop = 15,
         .width = 28,
-        .height = 4,
+        .height = 5,
         .paletteNum = 15,
         .baseBlock = 337,
-    },
+    }, */
     DUMMY_WIN_TEMPLATE
 };
 
@@ -711,9 +712,9 @@ void CB2_OnlineStore(void)
         gMain.state++;
         break;
     case 7:
-        PutWindowTilemap(WIN_ITEM_LIST);
-        PutWindowTilemap(WIN_DESCRIPTION);
-        DrawItemList();
+    PutWindowTilemap(WIN_ITEM_LIST);
+    // PutWindowTilemap(WIN_DESCRIPTION); // Do not show description window by default
+    DrawItemList();
         gMain.state++;
         break;
     case 8:
@@ -843,6 +844,7 @@ static void DrawItemList(void)
     sOnlineStoreData->scrollOffset = startIndex;
     
     FillWindowPixelBuffer(WIN_ITEM_LIST, PIXEL_FILL(1));
+    PutWindowTilemap(WIN_DESCRIPTION);
     FillWindowPixelBuffer(WIN_DESCRIPTION, PIXEL_FILL(1));
     
     // Draw items
@@ -885,7 +887,7 @@ static void DrawItemList(void)
             ConvertIntToDecimalStringN(gStringVar1, owned, STR_CONV_MODE_LEFT_ALIGN, 3);
             StringExpandPlaceholders(gStringVar3, sText_StoreOwnedCount);
             {
-                u8 xOwned = 160; // fixed column for owned count
+                u8 xOwned = 84; // shift owned quantity left to balance with price column
                 const u8 *ownedText = gStringVar3;
                 const u8 *ownedColor = ((startIndex + i) == sOnlineStoreData->selectedItemIndex)
                     ? (const u8[]){TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY}
@@ -926,13 +928,23 @@ static void DrawItemList(void)
                 ? (const u8[]){TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY}
                 : (const u8[]){TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
             AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 88, y + 2, 0, 0, col, TEXT_SKIP_DRAW, moveName);
+            // If player already owns this TM/HM, mark it as SOLD OUT and strike through the item name
+            if (CheckBagHasItem(itemId, 1))
+            {
+                const u8 soldCol[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_GRAY};
+                // Place SOLD OUT slightly left of the price column
+                AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 112, y + 2, 0, 0, soldCol, TEXT_SKIP_DRAW, sText_SoldOutShort);
+                // Strikethrough the item name area for a visual cue
+                FillWindowPixelRect(WIN_ITEM_LIST, PIXEL_FILL(0), 8, y + 6, 110, 1);
+            }
         }
 
         // SALE marker
         if (Store_GetDiscountPercentForItem(itemId) > 0)
         {
             const u8 saleCol[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_GRAY};
-            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 136, y + 2, 0, 0, saleCol, TEXT_SKIP_DRAW, sText_StoreSale);
+            // Shift SALE label further left so it sits more centrally
+            AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 112, y + 2, 0, 0, saleCol, TEXT_SKIP_DRAW, sText_StoreSale);
         }
     }
     
@@ -952,7 +964,8 @@ static void DrawItemList(void)
     // Controls hint at bottom
     AddTextPrinterParameterized4(WIN_ITEM_LIST, FONT_SMALL, 8, 82, 0, 0, color, TEXT_SKIP_DRAW, sText_StoreListHelp);
 
-    // Description pane for selected item
+    // Description pane for selected item (commented out)
+    /*
     if (itemCount > 0 && sOnlineStoreData->selectedItemIndex < itemCount)
     {
         u16 selItem = categoryItems[sOnlineStoreData->selectedItemIndex];
@@ -1001,12 +1014,15 @@ static void DrawItemList(void)
         }
         CopyWindowToVram(WIN_DESCRIPTION, COPYWIN_FULL);
     }
+    */
 
     CopyWindowToVram(WIN_ITEM_LIST, COPYWIN_FULL);
 }
 
 static void DrawItemActionMenu(void)
 {
+    // Remove the description window entirely when in action menu
+    RemoveWindow(WIN_DESCRIPTION);
     const u8 color[3] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
     const u8 *actionTexts[] = {
         sText_StoreBuySingle,
@@ -1364,10 +1380,23 @@ static void HandleItemListInput(u8 taskId)
         
         if (categoryItems != NULL && itemCount > 0 && sOnlineStoreData->selectedItemIndex < itemCount)
         {
-            PlaySE(SE_SELECT);
-            sOnlineStoreData->state = STORE_STATE_ITEM_ACTION_MENU;
-            sOnlineStoreData->selectedActionIndex = 0;
-            sOnlineStoreData->needsRefresh = TRUE;
+            u16 itemId = categoryItems[sOnlineStoreData->selectedItemIndex];
+            // Prevent purchase selection for TMs already owned (reusable TMs)
+            if (GetItemPocket(itemId) == POCKET_TM_HM && CheckBagHasItem(itemId, 1))
+            {
+                // Briefly show SOLD OUT in the description pane and block selection
+                PlaySE(SE_FAILURE);
+                FillWindowPixelBuffer(WIN_DESCRIPTION, PIXEL_FILL(1));
+                AddTextPrinterParameterized4(WIN_DESCRIPTION, FONT_NORMAL, 4, 2, 0, 0, (const u8[]){TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_GRAY}, TEXT_SKIP_DRAW, sText_SoldOutShort);
+                CopyWindowToVram(WIN_DESCRIPTION, COPYWIN_FULL);
+            }
+            else
+            {
+                PlaySE(SE_SELECT);
+                sOnlineStoreData->state = STORE_STATE_ITEM_ACTION_MENU;
+                sOnlineStoreData->selectedActionIndex = 0;
+                sOnlineStoreData->needsRefresh = TRUE;
+            }
         }
     }
     else if (JOY_NEW(DPAD_UP))

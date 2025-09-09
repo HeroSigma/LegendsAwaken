@@ -5,6 +5,8 @@ OldaleTown_MapScripts::
 OldaleTown_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	setflag FLAG_VISITED_OLDALE_TOWN
+	setflag FLAG_TEMP_8
+	setflag FLAG_TEMP_9
 	@ Cameo scene: after Route 103 battle, show once on first return
 	call_if_eq VAR_BIRCH_LAB_STATE, 4, OldaleTown_EventScript_TryCameoScene
 	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
