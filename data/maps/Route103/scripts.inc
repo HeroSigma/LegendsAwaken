@@ -410,13 +410,20 @@ Route103_Text_BothIntro_NE_May:
 	.string "PROF. BIRCH.$"
 
 Route103_Text_BothIntro_PlayerGreetBoth:
-	.string "{PLAYER}: Good to see you both.$"
+	.string "{PLAYER}: Good to see you both.\p"
+	.string "{PLAYER}: Surprised?\n"
+	.string "PROF. BIRCH gave me all three\n"
+	.string "starters after that attack.$"
 
 Route103_Text_BothIntro_SE_TestPartner_MAY:
-	.string "MAY: Let's test your partner.$"
+	.string "MAY: All three? Wow... Birch never\n"
+	.string "does that. He must've trusted you.\p"
+	.string "Let's see how you handle them.$"
 
 Route103_Text_BothIntro_SE_TestPartner_BRENDAN:
-	.string "BRENDAN: Let's test your partner.$"
+	.string "BRENDAN: All three? That's crazy!\n"
+	.string "Birch must've been really shaken.\p"
+	.string "Let's see how you handle them.$"
 
 Route103_Text_BothIntro_NE_WatchFirst_MAY:
 	.string "MAY: I'll watch first. I'm still\n"
@@ -442,12 +449,12 @@ Route103_Text_PlayerThanks:
 	.string "{PLAYER}: Thanks.$"
 
 Route103_Text_NE_HealUp_MAY:
-	.string "MAY: Here - heal up before\n"
-	.string "round two.$"
+	.string "MAY: Here, heal up before round two.\n"
+	.string "Birch said your safety comes first.$"
 
 Route103_Text_NE_HealUp_BRENDAN:
-	.string "BRENDAN: Here - heal up before\n"
-	.string "round two.$"
+	.string "BRENDAN: Heal up first.\n"
+	.string "Birch was right - you'll need it.$"
 
 Route103_Text_NE_MyTurn_BRENDAN:
     .string "BRENDAN: My turn.$"
@@ -456,24 +463,27 @@ Route103_Text_NE_MyTurn_MAY:
     .string "MAY: My turn.$"
 
 Route103_Text_NE_WhoaSharp_MAY:
-	.string "MAY: Whoa. You're sharp as ever.$"
+	.string "MAY: Whoa...\n"
+	.string "You handled all of us with ease.$"
 
 Route103_Text_NE_WhoaSharp_BRENDAN:
 	.string "BRENDAN: Whoa. You're sharp as ever.$"
 
 Route103_Text_PlayerYouPushedMe:
-	.string "{PLAYER}: You two pushed me.$"
+	.string "{PLAYER}: You two pushed me... but I\n"
+	.string "needed that.$"
 
 Route103_Text_SE_HeadOutSearch_MAY:
 	.string "MAY: We'll head out and search\n"
 	.string "all over HOENN.$"
 
 Route103_Text_SE_HeadOutSearch_BRENDAN:
-	.string "BRENDAN: We'll head out and search\n"
-	.string "all over HOENN.$"
+	.string "BRENDAN: Whatever that thing was\n"
+	.string "on Route 101 - it wasn't normal.$"
 
 Route103_Text_NE_MeetAgain_MAY:
-	.string "MAY: We'll meet again - count on it.$"
+	.string "MAY: Right. We should tell Birch\n"
+	.string "exactly what happened.$"
 
 Route103_Text_NE_MeetAgain_BRENDAN:
 	.string "BRENDAN: We'll meet again - count on it.$"
@@ -482,7 +492,8 @@ Route103_Text_SE_SomeThingsNeverChange_MAY:
 	.string "MAY: Some things never change.$"
 
 Route103_Text_SE_SomeThingsNeverChange_BRENDAN:
-	.string "BRENDAN: Some things never change.$"
+	.string "BRENDAN: Some things never change.\n"
+	.string "Let's regroup at the lab.$"
 
 Route103_Text_NE_ReportBackLab_MAY:
 	.string "MAY: Let's report back to the LAB.$"

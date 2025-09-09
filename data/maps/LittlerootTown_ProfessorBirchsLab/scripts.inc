@@ -87,16 +87,61 @@ LittlerootTown_ProfessorBirchsLab_EventScript_PostRescueDebrief::
     msgbox LittlerootTown_ProfessorBirchsLab_Text_HeadTo103, MSGBOX_DEFAULT
     msgbox LittlerootTown_ProfessorBirchsLab_Text_SeleneCare, MSGBOX_DEFAULT
     msgbox LittlerootTown_ProfessorBirchsLab_Text_MrsBirchDinner, MSGBOX_DEFAULT
-	// Selene and Mrs. Birch leave
+	// Selene and Mrs. Birch walk off and leave (to the south door)
+	applymovement LOCALID_BIRCHS_LAB_SELENE, LittlerootTown_ProfessorBirchsLab_Movement_SeleneLeave
+	applymovement LOCALID_BIRCHS_LAB_MRS_BIRCH, LittlerootTown_ProfessorBirchsLab_Movement_MrsBirchLeave
+	waitmovement 0
 	playse SE_EXIT
 	removeobject LOCALID_BIRCHS_LAB_SELENE
 	removeobject LOCALID_BIRCHS_LAB_MRS_BIRCH
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_PlayerResolve, MSGBOX_DEFAULT
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_RightThen103, MSGBOX_DEFAULT
-	// Send player to meet rival at Route 103
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_RightThen103, MSGBOX_DEFAULT
+    // Send player to meet rival at Route 103
     setvar VAR_BIRCH_LAB_STATE, 3
     releaseall
     return
+
+// Small talk text
+LittlerootTown_ProfessorBirchsLab_Text_SeleneAreYouOk:
+    .string "SELENE: We heard what happened out there.\p"
+    .string "Are you alright?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_MrsBirchHeard:
+    .string "MRS. BIRCH: Dear, we heard about the incident.\p"
+    .string "Are you holding up okay?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_PlayerImFine:
+    .string "{COLOR GREEN}{PLAYER}: I’m fine. Just a bit shaken,\n"
+    .string "but I’ll manage.{COLOR DARK_GRAY}$"
+
+// Optional small-talk handlers if spoken to before Birch
+LittlerootTown_ProfessorBirchsLab_EventScript_SeleneSmallTalk::
+    lock
+    faceplayer
+    goto_if_eq VAR_BIRCH_LAB_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_SeleneSmallTalk_Ok
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_SeleneCare, MSGBOX_DEFAULT
+    release
+    end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_SeleneSmallTalk_Ok:
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_SeleneAreYouOk, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_PlayerImFine, MSGBOX_DEFAULT
+    release
+    end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MrsBirchSmallTalk::
+    lock
+    faceplayer
+    goto_if_eq VAR_BIRCH_LAB_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_MrsBirchSmallTalk_Ok
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_MrsBirchDinner, MSGBOX_DEFAULT
+    release
+    end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MrsBirchSmallTalk_Ok:
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_MrsBirchHeard, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_PlayerImFine, MSGBOX_DEFAULT
+    release
+    end
 
 // Nickname flow for the rescued starter (same as party nicknaming)
 LittlerootTown_ProfessorBirchsLab_EventScript_NicknameRescueStarter::
@@ -105,7 +150,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_NicknameRescueStarter::
     msgbox LittlerootTown_ProfessorBirchsLab_Text_HeadTo103, MSGBOX_DEFAULT
     msgbox LittlerootTown_ProfessorBirchsLab_Text_SeleneCare, MSGBOX_DEFAULT
     msgbox LittlerootTown_ProfessorBirchsLab_Text_MrsBirchDinner, MSGBOX_DEFAULT
-    // Selene and Mrs. Birch leave
+    // Selene and Mrs. Birch walk off and leave (to the south door)
+    applymovement LOCALID_BIRCHS_LAB_SELENE, LittlerootTown_ProfessorBirchsLab_Movement_SeleneLeave
+    applymovement LOCALID_BIRCHS_LAB_MRS_BIRCH, LittlerootTown_ProfessorBirchsLab_Movement_MrsBirchLeave
+    waitmovement 0
     playse SE_EXIT
     removeobject LOCALID_BIRCHS_LAB_SELENE
     removeobject LOCALID_BIRCHS_LAB_MRS_BIRCH
@@ -114,7 +162,29 @@ LittlerootTown_ProfessorBirchsLab_EventScript_NicknameRescueStarter::
     setvar VAR_BIRCH_LAB_STATE, 3
     releaseall
     return
+@ Exit movements toward the actual south door tiles (6,12) and (7,12)
+LittlerootTown_ProfessorBirchsLab_Movement_SeleneLeave:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	set_invisible
+	step_end
 
+LittlerootTown_ProfessorBirchsLab_Movement_MrsBirchLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	set_invisible
+	step_end
 
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForDexUpgrade::
