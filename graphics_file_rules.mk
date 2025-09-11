@@ -308,6 +308,8 @@ $(OBJEVENTGFXDIR)/palettes/erika.gbapal: $(OBJEVENTGFXDIR)/pics/people/Erika.png
 $(OBJEVENTGFXDIR)/palettes/sabrina.gbapal: $(OBJEVENTGFXDIR)/pics/people/Sabrina.png
 	$(GFX) $< $@
 
+	$(GFX) $< $@
+$(OBJEVENTGFXDIR)/palettes/giovanni.gbapal: $(OBJEVENTGFXDIR)/pics/people/giovanni.png
 # Backward-compat specific rule (kept):
 $(OBJEVENTGFXDIR)/palettes/prof_elm.gbapal: %.gbapal: %.pal
 	$(GFX) $< $@

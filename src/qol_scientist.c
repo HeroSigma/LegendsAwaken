@@ -25,7 +25,7 @@ static struct Pokemon *sQolMon(void)
     return &gPlayerParty[slot];
 }
 
-static bool8 MonInvalidForEdit(struct Pokemon *mon)
+bool8 MonInvalidForEdit(struct Pokemon *mon)
 {
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
     if (species == SPECIES_NONE)
@@ -97,8 +97,11 @@ void Script_QoL_EVs_PresetByNature(void)
     // come from MON_DATA_HIDDEN_NATURE.
     // Clamp the hidden nature to the supported range since the encoded value
     // may exceed NUM_NATURES if it was never initialised, which could crash
-    // when indexing gNaturesInfo.
-    u8 nature = GetMonData(mon, MON_DATA_HIDDEN_NATURE) % NUM_NATURES;
+    // when indexing gNaturesInfo. If the stored value is invalid, fall back to
+    // the mon's visible nature instead of wrapping it.
+    u8 nature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
+    if (nature >= NUM_NATURES)
+        nature = GetNature(mon);
     u8 boosted = STAT_SPEED; // default to speed if neutral
     for (u8 s = STAT_ATK; s <= STAT_SPDEF; s++)
         if (NatureDelta(nature, s) > 0) { boosted = s; break; }

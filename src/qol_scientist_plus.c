@@ -187,7 +187,7 @@ void Script_QoL_Msg_NatureInfo(void)
     struct Pokemon *mon = &gPlayerParty[slot];
     u8 minted = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
     if (minted >= NUM_NATURES)
-        minted = 0;
+        minted = GetNature(mon);
     u8 visible = GetNature(mon);
     StringCopy(gStringVar1, gNaturesInfo[minted].name);
     StringCopy(gStringVar2, gNaturesInfo[visible].name);
@@ -198,6 +198,10 @@ void Script_QoL_Msg_EVsInfo(void)
 {
     u16 slot = sQol_GetSlot();
     struct Pokemon *mon = &gPlayerParty[slot];
+    if (MonInvalidForEdit(mon)) {
+        StringCopy(gStringVar4, COMPOUND_STRING("No valid Pokémon selected."));
+        return;
+    }
     u8 ev[6];
     ev[0] = GetMonData(mon, MON_DATA_HP_EV);
     ev[1] = GetMonData(mon, MON_DATA_ATK_EV);
@@ -221,6 +225,10 @@ void Script_QoL_Msg_IVsInfo(void)
 {
     u16 slot = sQol_GetSlot();
     struct Pokemon *mon = &gPlayerParty[slot];
+    if (MonInvalidForEdit(mon)) {
+        StringCopy(gStringVar4, COMPOUND_STRING("No valid Pokémon selected."));
+        return;
+    }
     u8 iv[6];
     iv[0] = GetMonData(mon, MON_DATA_HP_IV);
     iv[1] = GetMonData(mon, MON_DATA_ATK_IV);

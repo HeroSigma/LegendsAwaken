@@ -60,6 +60,14 @@ void Script_QoL_IVs_SetStat(void);           // VAR_0x8000 = stat (0..5), VAR_0x
 void Script_QoL_SetBall(void);               // VAR_0x8000 = itemId (ITEM_* Ball)
 void Script_QoL_SetHiddenPowerType(void);    // VAR_0x8000 = TYPE_FIGHTING..TYPE_DARK indexable HP type
 
+// Expose MonInvalidForEdit for use in other modules
+#ifdef __cplusplus
+extern "C" {
+#endif
+bool8 MonInvalidForEdit(struct Pokemon *mon);
+#ifdef __cplusplus
+}
+#endif
 // Ability services
 void Script_QoL_Ability_SetNormal(void);     // VAR_0x8000 = 0 or 1
 void Script_QoL_Ability_SetHidden(void);

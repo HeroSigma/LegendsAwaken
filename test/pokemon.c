@@ -2,6 +2,7 @@
 #include "battle.h"
 #include "event_data.h"
 #include "pokemon.h"
+#include "qol_scientist.h"
 #include "test/overworld_script.h"
 #include "test/test.h"
 #include "constants/characters.h"
@@ -21,6 +22,41 @@ TEST("Nature independent from Hidden Nature")
     SetMonData(&mon, MON_DATA_HIDDEN_NATURE, &hiddenNature);
     EXPECT_EQ(GetNature(&mon), nature);
     EXPECT_EQ(GetMonData(&mon, MON_DATA_HIDDEN_NATURE), hiddenNature);
+}
+
+TEST("QoL EV preset uses visible nature when hidden nature invalid")
+{
+    u8 hidden = 0xFF; // invalid value
+    u32 money = 5000;
+
+    CreateMon(&gPlayerParty[0], SPECIES_WOBBUFFET, 50, 0, FALSE, 0, OT_ID_PRESET, 0);
+    gSaveBlock1Ptr->money = money;
+    SetMonData(&gPlayerParty[0], MON_DATA_HIDDEN_NATURE, &hidden);
+    VarSet(VAR_0x8006, 0);
+
+    Script_QoL_EVs_PresetByNature();
+
+    EXPECT_EQ(VarGet(VAR_RESULT), 1);
+    EXPECT_EQ(GetMonData(&gPlayerParty[0], MON_DATA_HP_EV), 6);
+}
+
+TEST("QoL Perfect 31 IV sets all IVs")
+{
+    u32 money = 5000;
+
+    CreateMon(&gPlayerParty[0], SPECIES_WOBBUFFET, 50, 0, FALSE, 0, OT_ID_PRESET, 0);
+    gSaveBlock1Ptr->money = money;
+    VarSet(VAR_0x8006, 0);
+
+    Script_QoL_IVs_Perfect31();
+
+    EXPECT_EQ(VarGet(VAR_RESULT), 1);
+    EXPECT_EQ(GetMonData(&gPlayerParty[0], MON_DATA_HP_IV), 31);
+    EXPECT_EQ(GetMonData(&gPlayerParty[0], MON_DATA_ATK_IV), 31);
+    EXPECT_EQ(GetMonData(&gPlayerParty[0], MON_DATA_DEF_IV), 31);
+    EXPECT_EQ(GetMonData(&gPlayerParty[0], MON_DATA_SPEED_IV), 31);
+    EXPECT_EQ(GetMonData(&gPlayerParty[0], MON_DATA_SPATK_IV), 31);
+    EXPECT_EQ(GetMonData(&gPlayerParty[0], MON_DATA_SPDEF_IV), 31);
 }
 
 TEST("Terastallization type defaults to primary or secondary type")
