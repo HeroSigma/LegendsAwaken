@@ -26,6 +26,9 @@
 #include "regions.h"
 #include "data.h" // struct TypeInfo, gTypesInfo
 
+// Forward declarations for static helpers used before definition
+static u16 sQol_GetSlot(void);
+
 // ---------- Region detection ----------
 u8 QoL_GetCurrentRegionId(void)
 {
@@ -130,43 +133,27 @@ void Script_QoL_Msg_Canceled(void) {
 
 // ---------- Confirmation helpers ----------
 extern const struct NatureInfo gNaturesInfo[];
-static const u8 sMsg_ChangeNaturePrefix[] = _("Change nature to ");
-static const u8 sMsg_ChangeNatureCost[]   = _("?\nCost: ¥1000.");
 void Script_QoL_Msg_ConfirmNature(void)
 {
     u16 nat = VarGet(VAR_0x8000);
-    static u8 sBuf[64];
-    u8 *p = sBuf;
-    p = StringCopy(p, sMsg_ChangeNaturePrefix);
-    if (nat < NUM_NATURES)
-        p = StringCopy(p, gNaturesInfo[nat].name);
-    else
-        ;
-    p = StringCopy(p, sMsg_ChangeNatureCost);
-    *p = EOS;
-    StringCopy(gStringVar4, sBuf);
+    if (nat >= NUM_NATURES)
+        nat = 0;
+    StringCopy(gStringVar1, gNaturesInfo[nat].name);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Change nature to {STR_VAR_1}?\nCost: ¥1000."));
 }
 
 // Show current ability and the standard cost
 void Script_QoL_Msg_AbilityInfo(void)
 {
-    u16 slot = VarGet(VAR_0x8006);
-    if (slot >= PARTY_SIZE)
-        slot = 0;
+    u16 slot = sQol_GetSlot();
     struct Pokemon *mon = &gPlayerParty[slot];
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
     u8 abilityNum = GetMonData(mon, MON_DATA_ABILITY_NUM, NULL);
     u16 abilityId = GetSpeciesAbility(species, abilityNum);
-    static const u8 sPrefix[] = _("Current ability: ");
-    static const u8 sSuffix[] = _("\nCost: ¥1000.");
-    static u8 sBuf[64];
-    u8 *p = sBuf;
-    p = StringCopy(p, sPrefix);
-    if (abilityId < ABILITIES_COUNT)
-        p = StringCopy(p, gAbilitiesInfo[abilityId].name);
-    p = StringCopy(p, sSuffix);
-    *p = EOS;
-    StringCopy(gStringVar4, sBuf);
+    if (abilityId >= ABILITIES_COUNT)
+        abilityId = 0;
+    StringCopy(gStringVar1, gAbilitiesInfo[abilityId].name);
+    StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("Current ability: {STR_VAR_1}\nCost: ¥1000."));
 }
 
 static u16 sQol_GetSlot(void)
@@ -205,16 +192,23 @@ void Script_QoL_Msg_EVsInfo(void)
     ev[3] = GetMonData(mon, MON_DATA_SPEED_EV);
     ev[4] = GetMonData(mon, MON_DATA_SPATK_EV);
     ev[5] = GetMonData(mon, MON_DATA_SPDEF_EV);
+    // Line 1
     ConvertIntToDecimalStringN(gStringVar1, ev[0], STR_CONV_MODE_LEFT_ALIGN, 3);
     ConvertIntToDecimalStringN(gStringVar2, ev[1], STR_CONV_MODE_LEFT_ALIGN, 3);
     ConvertIntToDecimalStringN(gStringVar3, ev[2], STR_CONV_MODE_LEFT_ALIGN, 3);
     StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("EVs HP/Atk/Def: {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}"));
-    // reuse gStringVar1..3 for Spe/SpA/SpD in a second line
+    // Line 2 (avoid overflowing small temp buffers)
+    StringAppend(gStringVar4, COMPOUND_STRING("\nSpe/SpA/SpD: "));
     ConvertIntToDecimalStringN(gStringVar1, ev[3], STR_CONV_MODE_LEFT_ALIGN, 3);
-    ConvertIntToDecimalStringN(gStringVar2, ev[4], STR_CONV_MODE_LEFT_ALIGN, 3);
-    ConvertIntToDecimalStringN(gStringVar3, ev[5], STR_CONV_MODE_LEFT_ALIGN, 3);
-    StringExpandPlaceholders(gStringVar3, COMPOUND_STRING("\nSpe/SpA/SpD: {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}\nCost: ¥1000."));
-    StringAppend(gStringVar4, gStringVar3);
+    StringAppend(gStringVar4, gStringVar1);
+    StringAppend(gStringVar4, COMPOUND_STRING("/"));
+    ConvertIntToDecimalStringN(gStringVar1, ev[4], STR_CONV_MODE_LEFT_ALIGN, 3);
+    StringAppend(gStringVar4, gStringVar1);
+    StringAppend(gStringVar4, COMPOUND_STRING("/"));
+    ConvertIntToDecimalStringN(gStringVar1, ev[5], STR_CONV_MODE_LEFT_ALIGN, 3);
+    StringAppend(gStringVar4, gStringVar1);
+    // Cost
+    StringAppend(gStringVar4, COMPOUND_STRING("\nCost: ¥1000."));
 }
 
 void Script_QoL_Msg_IVsInfo(void)
@@ -228,15 +222,23 @@ void Script_QoL_Msg_IVsInfo(void)
     iv[3] = GetMonData(mon, MON_DATA_SPEED_IV);
     iv[4] = GetMonData(mon, MON_DATA_SPATK_IV);
     iv[5] = GetMonData(mon, MON_DATA_SPDEF_IV);
+    // Line 1
     ConvertIntToDecimalStringN(gStringVar1, iv[0], STR_CONV_MODE_LEFT_ALIGN, 2);
     ConvertIntToDecimalStringN(gStringVar2, iv[1], STR_CONV_MODE_LEFT_ALIGN, 2);
     ConvertIntToDecimalStringN(gStringVar3, iv[2], STR_CONV_MODE_LEFT_ALIGN, 2);
     StringExpandPlaceholders(gStringVar4, COMPOUND_STRING("IVs HP/Atk/Def: {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}"));
+    // Line 2
+    StringAppend(gStringVar4, COMPOUND_STRING("\nSpe/SpA/SpD: "));
     ConvertIntToDecimalStringN(gStringVar1, iv[3], STR_CONV_MODE_LEFT_ALIGN, 2);
-    ConvertIntToDecimalStringN(gStringVar2, iv[4], STR_CONV_MODE_LEFT_ALIGN, 2);
-    ConvertIntToDecimalStringN(gStringVar3, iv[5], STR_CONV_MODE_LEFT_ALIGN, 2);
-    StringExpandPlaceholders(gStringVar3, COMPOUND_STRING("\nSpe/SpA/SpD: {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}\nCost: ¥1000."));
-    StringAppend(gStringVar4, gStringVar3);
+    StringAppend(gStringVar4, gStringVar1);
+    StringAppend(gStringVar4, COMPOUND_STRING("/"));
+    ConvertIntToDecimalStringN(gStringVar1, iv[4], STR_CONV_MODE_LEFT_ALIGN, 2);
+    StringAppend(gStringVar4, gStringVar1);
+    StringAppend(gStringVar4, COMPOUND_STRING("/"));
+    ConvertIntToDecimalStringN(gStringVar1, iv[5], STR_CONV_MODE_LEFT_ALIGN, 2);
+    StringAppend(gStringVar4, gStringVar1);
+    // Cost
+    StringAppend(gStringVar4, COMPOUND_STRING("\nCost: ¥1000."));
 }
 
 static const u8 sBallName_Poke[]    = _("POKé BALL");
