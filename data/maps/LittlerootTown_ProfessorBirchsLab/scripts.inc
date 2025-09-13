@@ -30,9 +30,20 @@ LittlerootTown_ProfessorBirchsLab_OnTransition:
 LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForJohtoStarter::
 	specialvar VAR_RESULT, HasAllHoennMons
 	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_SetReadyForJohtoStarter
-	setobjectmovementtype LOCALID_BIRCHS_LAB_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
-	setobjectxyperm LOCALID_BIRCHS_LAB_RIVAL, 5, 10
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_SetRivalJohtoLayout_May
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_SetRivalJohtoLayout_Brendan
 	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_SetRivalJohtoLayout_May::
+	setobjectmovementtype LOCALID_BIRCHS_LAB_MAY, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
+	setobjectxyperm LOCALID_BIRCHS_LAB_MAY, 5, 10
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_SetRivalJohtoLayout_Brendan::
+	setobjectmovementtype LOCALID_BIRCHS_LAB_BRENDAN, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
+	setobjectxyperm LOCALID_BIRCHS_LAB_BRENDAN, 5, 10
+	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetReadyForJohtoStarter::
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4
@@ -44,19 +55,38 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetJohtoStarterLayout::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterJohtoStarterLayout::
 	setmaplayoutindex LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB_WITH_TABLE
-	setobjectmovementtype LOCALID_BIRCHS_LAB_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
-	setobjectxyperm LOCALID_BIRCHS_LAB_RIVAL, 5, 10
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_SetRivalJohtoLayout_May
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_SetRivalJohtoLayout_Brendan
 	end
 
 LittlerootTown_ProfessorBirchsLab_OnWarp:
 	map_script_2 VAR_BIRCH_LAB_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_SetPlayerPosForReceiveStarter
+	@ After Route 103 rival battle, prepare Pokedex scene layout
+	map_script_2 VAR_BIRCH_LAB_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectsForPost103
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForDexUpgrade
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForDexUpgrade
-	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject
-	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject
+	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3, LittlerootTown_ProfessorBirchsLab_EventScript_AddGenderedRivalObject
+	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, LittlerootTown_ProfessorBirchsLab_EventScript_AddGenderedRivalObject
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters
 	.2byte 0
+
+@ Ensure Birch and the rival are placed for the Pokedex-giving scene
+LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectsForPost103::
+    turnobject LOCALID_PLAYER, DIR_NORTH
+    addobject LOCALID_BIRCHS_LAB_BIRCH
+    addobject LOCALID_BIRCHS_LAB_BRENDAN
+    addobject LOCALID_BIRCHS_LAB_MAY
+    @ Birch at desk, facing player
+    setobjectxy LOCALID_BIRCHS_LAB_BIRCH, 6, 4
+    turnobject LOCALID_BIRCHS_LAB_BIRCH, DIR_SOUTH
+    @ Brendan to Birch's left; May to Birch's right
+    setobjectxy LOCALID_BIRCHS_LAB_BRENDAN, 5, 4
+    turnobject LOCALID_BIRCHS_LAB_BRENDAN, DIR_SOUTH
+    setobjectxy LOCALID_BIRCHS_LAB_MAY, 7, 4
+    turnobject LOCALID_BIRCHS_LAB_MAY, DIR_SOUTH
+    return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetPlayerPosForReceiveStarter::
 	turnobject LOCALID_PLAYER, DIR_NORTH
@@ -190,24 +220,48 @@ LittlerootTown_ProfessorBirchsLab_Movement_MrsBirchLeave:
 LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForDexUpgrade::
 	turnobject LOCALID_PLAYER, DIR_NORTH
 	addobject LOCALID_BIRCHS_LAB_BIRCH
-	addobject LOCALID_BIRCHS_LAB_RIVAL
-	turnobject LOCALID_BIRCHS_LAB_RIVAL, DIR_NORTH
-	setobjectxy LOCALID_BIRCHS_LAB_RIVAL, 5, 5
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_AddMayAtFiveFiveFacingNorth
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_AddBrendanAtFiveFiveFacingNorth
 	turnobject LOCALID_BIRCHS_LAB_BIRCH, DIR_SOUTH
 	setobjectxy LOCALID_BIRCHS_LAB_BIRCH, 6, 4
 	turnobject LOCALID_BIRCHS_LAB_AIDE, DIR_EAST
 	setobjectxy LOCALID_BIRCHS_LAB_AIDE, 10, 10
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject::
-	addobject LOCALID_BIRCHS_LAB_RIVAL
+LittlerootTown_ProfessorBirchsLab_EventScript_AddMayAtFiveFiveFacingNorth::
+	addobject LOCALID_BIRCHS_LAB_MAY
+	turnobject LOCALID_BIRCHS_LAB_MAY, DIR_NORTH
+	setobjectxy LOCALID_BIRCHS_LAB_MAY, 5, 5
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_AddBrendanAtFiveFiveFacingNorth::
+	addobject LOCALID_BIRCHS_LAB_BRENDAN
+	turnobject LOCALID_BIRCHS_LAB_BRENDAN, DIR_NORTH
+	setobjectxy LOCALID_BIRCHS_LAB_BRENDAN, 5, 5
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_AddGenderedRivalObject::
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_AddMay
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_AddBrendan
 	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_AddMay::
+	addobject LOCALID_BIRCHS_LAB_MAY
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_AddBrendan::
+	addobject LOCALID_BIRCHS_LAB_BRENDAN
+	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters::
 	addobject LOCALID_BIRCHS_LAB_CYNDAQUIL_BALL
 	addobject LOCALID_BIRCHS_LAB_TOTODILE_BALL
 	addobject LOCALID_BIRCHS_LAB_CHIKORITA_BALL
-	addobject LOCALID_BIRCHS_LAB_RIVAL
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_AddMayAtFiveFiveFacingEast
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_AddBrendanAtFiveFiveFacingEast
 	turnobject LOCALID_BIRCHS_LAB_CYNDAQUIL_BALL, DIR_SOUTH
 	setobjectxy LOCALID_BIRCHS_LAB_CYNDAQUIL_BALL, 8, 4
 	turnobject LOCALID_BIRCHS_LAB_TOTODILE_BALL, DIR_SOUTH
@@ -216,9 +270,19 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters::
 	setobjectxy LOCALID_BIRCHS_LAB_CHIKORITA_BALL, 10, 4
 	turnobject LOCALID_BIRCHS_LAB_BIRCH, DIR_SOUTH
 	setobjectxy LOCALID_BIRCHS_LAB_BIRCH, 6, 4
-	turnobject LOCALID_BIRCHS_LAB_RIVAL, DIR_EAST
-	setobjectxy LOCALID_BIRCHS_LAB_RIVAL, 5, 5
 	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_AddMayAtFiveFiveFacingEast::
+	addobject LOCALID_BIRCHS_LAB_MAY
+	turnobject LOCALID_BIRCHS_LAB_MAY, DIR_EAST
+	setobjectxy LOCALID_BIRCHS_LAB_MAY, 5, 5
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_AddBrendanAtFiveFiveFacingEast::
+	addobject LOCALID_BIRCHS_LAB_BRENDAN
+	turnobject LOCALID_BIRCHS_LAB_BRENDAN, DIR_EAST
+	setobjectxy LOCALID_BIRCHS_LAB_BRENDAN, 5, 5
+	return
 
 LittlerootTown_ProfessorBirchsLab_OnFrame:
 	map_script_2 VAR_BIRCH_LAB_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedexEvent
@@ -266,11 +330,11 @@ LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival::
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedexEvent::
-	lockall
-	applymovement LOCALID_PLAYER, LittlerootTown_ProfessorBirchsLab_Movement_PlayerEnterLabForPokedex
-	waitmovement 0
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex
-	end
+    lockall
+    applymovement LOCALID_PLAYER, LittlerootTown_ProfessorBirchsLab_Movement_PlayerEnterLabForPokedex
+    waitmovement 0
+    goto LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex
+    end
 
 LittlerootTown_ProfessorBirchsLab_Movement_PlayerEnterLabForPokedex:
 	walk_up
@@ -298,7 +362,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_UpgradeToNationalDex::
 	delay 10
 	playse SE_CLICK
 	delay 20
-	applymovement LOCALID_BIRCHS_LAB_RIVAL, Common_Movement_WalkInPlaceFasterRight
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_MayShiftRight
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanShiftRight
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	checkplayergender
@@ -309,7 +375,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_UpgradeToNationalDex::
 	delay 20
 	applymovement LOCALID_BIRCHS_LAB_BIRCH, LittlerootTown_ProfessorBirchsLab_Movement_BirchReturnPokedex
 	waitmovement 0
-	applymovement LOCALID_BIRCHS_LAB_RIVAL, Common_Movement_WalkInPlaceFasterUp
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_MayShiftUp
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanShiftUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_OkayAllDone, MSGBOX_DEFAULT
@@ -337,6 +405,23 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayUpgradeComment::
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanUpgradeComment::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BrendanYouCanThankMe, MSGBOX_DEFAULT
 	closemessage
+	return
+
+@ Small helpers to move the correct rival during National Dex upgrade
+LittlerootTown_ProfessorBirchsLab_EventScript_MayShiftRight::
+	applymovement LOCALID_BIRCHS_LAB_MAY, Common_Movement_WalkInPlaceFasterRight
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BrendanShiftRight::
+	applymovement LOCALID_BIRCHS_LAB_BRENDAN, Common_Movement_WalkInPlaceFasterRight
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_MayShiftUp::
+	applymovement LOCALID_BIRCHS_LAB_MAY, Common_Movement_WalkInPlaceFasterUp
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_BrendanShiftUp::
+	applymovement LOCALID_BIRCHS_LAB_BRENDAN, Common_Movement_WalkInPlaceFasterUp
 	return
 
 LittlerootTown_ProfessorBirchsLab_Movement_BirchRetrievePokedexes:
@@ -635,32 +720,51 @@ EventScript_RegisterProfBirch::
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_Post103Intro, MSGBOX_DEFAULT
-	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_BIRCHS_LAB_RIVAL, LittlerootTown_ProfessorBirchsLab_Movement_RivalApproachPlayer
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_Route102Briefing, MSGBOX_DEFAULT
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_RivalLeave, MSGBOX_DEFAULT
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_NextSteps, MSGBOX_DEFAULT
-	setvar VAR_BIRCH_LAB_STATE, 5
-	setflag FLAG_ADVENTURE_STARTED
-	setvar VAR_OLDALE_TOWN_STATE, 1
-	setvar VAR_LITTLEROOT_RIVAL_STATE, 4
-	setvar VAR_LITTLEROOT_TOWN_STATE, 3
-	releaseall
-	end
+    @ New post-Route 103 scene: Birch, Brendan, and May together
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Post103_AllHere, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Brendan_Sharper, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_May_PushedThrough, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Birch_ImpressiveBond, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Player_OldaleTwoMen, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Birch_Thoughts1, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Birch_Thoughts2, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Birch_Threat, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Birch_NatDex, MSGBOX_DEFAULT
+    call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex
+    closemessage
+    @ May gives Poke Balls
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_May_GiveBalls, MSGBOX_DEFAULT
+    giveitem ITEM_POKE_BALL, 5
+    call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_MayNoRoomForPokeBalls
+    @ Brendan gives EXP Share
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Brendan_GiveExpShare, MSGBOX_DEFAULT
+    giveitem ITEM_EXP_SHARE, 1
+    call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls
+    @ Rivals parting words and exit
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Rivals_TryToKeepUp, MSGBOX_DEFAULT
+    applymovement LOCALID_BIRCHS_LAB_MAY, LittlerootTown_ProfessorBirchsLab_Movement_MayLeave
+    applymovement LOCALID_BIRCHS_LAB_BRENDAN, LittlerootTown_ProfessorBirchsLab_Movement_BrendanLeave
+    waitmovement 0
+    removeobject LOCALID_BIRCHS_LAB_MAY
+    removeobject LOCALID_BIRCHS_LAB_BRENDAN
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Birch_StaySharp, MSGBOX_DEFAULT
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_Player_IntroMonologue, MSGBOX_DEFAULT
+    setvar VAR_BIRCH_LAB_STATE, 5
+    setflag FLAG_ADVENTURE_STARTED
+    setvar VAR_OLDALE_TOWN_STATE, 1
+    @ Ensure the Oldale rival disappears after this scene
+    setvar VAR_OLDALE_RIVAL_STATE, 2
+    setflag FLAG_HIDE_OLDALE_TOWN_RIVAL
+    setvar VAR_LITTLEROOT_RIVAL_STATE, 4
+    setvar VAR_LITTLEROOT_TOWN_STATE, 3
+    @ Hide Brendan/May by flag so they won't auto-spawn
+    setflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
+    releaseall
+    end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_RivalGiveBalls, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_BALL, 5
-	giveitem ITEM_POKEMON_BOX_LINK, 1
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_MayNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_PlayerThanksForBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 0
@@ -669,12 +773,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_RivalGiveBalls, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_BALL, 5
-	giveitem ITEM_EXP_SHARE, 1
-	giveitem ITEM_TERA_ORB, 1
-	giveitem ITEM_MEGA_RING, 1
-	giveitem ITEM_Z_POWER_RING, 1
-	giveitem ITEM_DYNAMAX_BAND, 1
-	giveitem ITEM_POKEMON_BOX_LINK, 1
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_PlayerThanksForBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 1
@@ -703,13 +801,106 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayNoRoomForPokeBalls::
 	return
 
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls::
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull, MSGBOX_DEFAULT
-	return
+    msgbox LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull, MSGBOX_DEFAULT
+    return
 
 LittlerootTown_ProfessorBirchsLab_Movement_RivalApproachPlayer:
-	walk_down
-	walk_in_place_faster_left
-	step_end
+    walk_down
+    walk_in_place_faster_right
+    step_end
+
+@ Rivals exit movements (toward south door, then disappear)
+LittlerootTown_ProfessorBirchsLab_Movement_MayLeave:
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    set_invisible
+    step_end
+
+LittlerootTown_ProfessorBirchsLab_Movement_BrendanLeave:
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    set_invisible
+    step_end
+
+@ New dialogue for the post-103 group scene
+LittlerootTown_ProfessorBirchsLab_Text_Post103_AllHere:
+	.string "{COLOR BLUE}PROF. BIRCH: Good, you're all here.\n"
+	.string "How did your battles go?{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Brendan_Sharper:
+	.string "{COLOR LIGHT_RED}BRENDAN: {PLAYER} is sharper than\n"
+	.string "I expected.\p"
+	.string "Whatever happened out there,\n"
+	.string "they're not holding back.{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_May_PushedThrough:
+	.string "{COLOR LIGHT_RED}MAY: Yeah. Even with us both\n"
+	.string "battling, they pushed through.{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Birch_ImpressiveBond:
+	.string "{COLOR BLUE}PROF. BIRCH: Impressive. That bond\n"
+	.string "with your partners is essential.{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Player_OldaleTwoMen:
+	.string "{COLOR GREEN}{PLAYER}: There were two men…\n"
+	.string "They talked about HOENN being off.\p"
+	.string "It felt like something was wrong.\n"
+	.string "They seemed familiar.{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Birch_Thoughts1:
+	.string "{COLOR BLUE}PROF. BIRCH: (Those descriptions…\n"
+	.string "they sound like…){COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Birch_Thoughts2:
+	.string "{COLOR BLUE}PROF. BIRCH: (No, it can't be…\n"
+	.string "GIOVANNI and CYRUS?){COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Birch_Threat:
+	.string "{COLOR BLUE}PROF. BIRCH: For now, don't dwell on it.\p"
+	.string "But if people like that are in\n"
+	.string "HOENN, we face a grave threat.{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Birch_NatDex:
+	.string "{COLOR BLUE}PROF. BIRCH: Here. The POKéDEX--now\n"
+	.string "covers all regions.\p"
+	.string "You three will need it.\n"
+	.string "Consider it the NATIONAL DEX.{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_May_GiveBalls:
+	.string "{COLOR LIGHT_RED}MAY: Here, {PLAYER}.\n"
+	.string "Take these too.{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Brendan_GiveExpShare:
+	.string "{COLOR LIGHT_RED}BRENDAN: And this is from me.\p"
+	.string "It'll help your team stay balanced.{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Rivals_TryToKeepUp:
+	.string "{COLOR LIGHT_RED}MAY & BRENDAN: Try to keep up\n"
+	.string "this time, will you?{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Birch_StaySharp:
+	.string "{COLOR BLUE}PROF. BIRCH: Excellent. You're ready\n"
+	.string "for the road ahead.\p"
+	.string "But we still don't understand\n"
+	.string "that ZOROARK, or those men in OLDALE.\p"
+	.string "Stay sharp.{COLOR DARK_GRAY}$"
+
+LittlerootTown_ProfessorBirchsLab_Text_Player_IntroMonologue:
+	.string "{COLOR GREEN}{PLAYER}: (All three starters, both\n"
+	.string "rivals by my side, and threats\n"
+	.string "already stirring in HOENN…\p"
+	.string "This journey is only just beginning.){COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_EventScript_Machine::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine, MSGBOX_SIGN
@@ -899,45 +1090,45 @@ LittlerootTown_ProfessorBirchsLab_Text_Post103Intro:
 
 // New debrief scene text (post Route 101)
 LittlerootTown_ProfessorBirchsLab_Text_ZoroarkUnseen:
-	.string "BIRCH: That POKéMON we saw… it looked like a\n"
+	.string "{COLOR BLUE}BIRCH: That POKéMON we saw… it looked like a\n"
 	.string "ZOROARK, but at the same time, it didn’t.\p"
 	.string "BIRCH: ZOROARK isn’t even found in HOENN, and\n"
-	.string "I’ve never seen a form like that in any record.$"
+	.string "I’ve never seen a form like that in any record.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_SeleneIntervene:
-	.string "SELENE: Whatever it was, it nearly overwhelmed\n"
+	.string "{COLOR BLUE}SELENE: Whatever it was, it nearly overwhelmed\n"
 	.string "you. If not for… whatever intervened, we\l"
-	.string "wouldn’t be standing here.$"
+	.string "wouldn’t be standing here.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MrsBirchTroubling:
-	.string "MRS. BIRCH: I’ve lived here my whole life, and\n"
+	.string "{COLOR BLUE}MRS. BIRCH: I’ve lived here my whole life, and\n"
 	.string "I’ve never seen anything like it either.\p"
-	.string "This is troubling, Professor.$"
+	.string "This is troubling, Professor.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_FieldworkStart:
-    .string "BIRCH: Troubling, yes- but also important.\n"
+	.string "{COLOR BLUE}BIRCH: Troubling, yes- but also important.\n"
 	.string "We need to understand what’s happening.\p"
 	.string "BIRCH: For that, {PLAYER}, I want you to begin\n"
-	.string "fieldwork right away.$"
+	.string "fieldwork right away.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BondUnderFire:
-	.string "BIRCH: You already chose a partner out there,\n"
+	.string "{COLOR BLUE}BIRCH: You already chose a partner out there,\n"
 	.string "under fire. That bond is yours now.\p"
-    .string "But theory won’t help us- we need practice.$"
+    .string "But theory won’t help us- we need practice.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_HeadTo103:
-	.string "BIRCH: Head north to ROUTE 103. {RIVAL} should\n"
+	.string "{COLOR BLUE}BIRCH: Head north to ROUTE 103. {RIVAL} should\n"
 	.string "be waiting there.\p"
 	.string "Battle them, explain what happened, and then\n"
-	.string "come straight back here.$"
+	.string "come straight back here.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_SeleneCare:
-    .string "SELENE: Be careful, {PLAYER}. Remember- you don’t\n"
-	.string "have to shoulder this alone.$"
+    .string "{COLOR BLUE}SELENE: Be careful, {PLAYER}. Remember- you don’t\n"
+ 	.string "have to shoulder this alone.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MrsBirchDinner:
-	.string "MRS. BIRCH: And tell {RIVAL} I’ll have dinner\n"
-	.string "ready if they’re late home again.$"
+	.string "{COLOR BLUE}MRS. BIRCH: And tell {RIVAL} I’ll have dinner\n"
+	.string "ready if they’re late home again.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_PlayerResolve:
 	.string "{COLOR GREEN}{PLAYER}: (That Zoroark… or whatever it was…\n"
@@ -946,36 +1137,36 @@ LittlerootTown_ProfessorBirchsLab_Text_PlayerResolve:
 	.string "myself.){COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_RightThen103:
-	.string "BIRCH: Right then. ROUTE 103. Don’t delay,\n"
-	.string "{PLAYER}.$"
+	.string "{COLOR BLUE}BIRCH: Right then. ROUTE 103. Don’t delay,\n"
+	.string "{PLAYER}.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedPokedex:
 	.string "{PLAYER} received the POKéDEX!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
-	.string "PROF. BIRCH: This is the POKéDEX.\p"
-	.string "It records data on POKéMON you meet.\p"
-	.string "PLAYER: I'll make good use of it.$"
+	.string "{COLOR BLUE}PROF. BIRCH: This is the POKéDEX.\p"
+	.string "It records data on POKéMON you meet.{COLOR DARK_GRAY}\p"
+	.string "{COLOR GREEN}PLAYER: I'll make good use of it.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
-	.string "PROF. BIRCH: Countless POKéMON\n"
+	.string "{COLOR BLUE}PROF. BIRCH: Countless POKéMON\n"
 	.string "await you!\p"
 	.string "Argh, I'm getting the itch to get out\n"
-	.string "and do fieldwork again!$"
+	.string "and do fieldwork again!{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_RivalGiveBalls:
-	.string "{RIVAL}: Here - take these POKé BALLS.\p"
-	.string "{RIVAL}: They said to pass them along.$"
+	.string "{COLOR LIGHT_RED}{RIVAL}: Here - take these POKé BALLS.\p"
+	.string "{RIVAL}: They said to pass them along.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_PlayerThanksForBalls:
-	.string "PLAYER: Thanks. I'll put them to work.$"
+	.string "{COLOR GREEN}PLAYER: Thanks. I'll put them to work.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_OhYourBagsFull:
 	.string "Oh? Your BAG's full.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayWhereShouldIGoNext:
-	.string "MAY: I wonder where I should go look\n"
-	.string "for POKéMON next?$"
+	.string "{COLOR LIGHT_RED}MAY: I wonder where I should go look\n"
+	.string "for POKéMON next?{COLOR DARK_GRAY}$"
 
 @ (unused - replaced by LittlerootTown_ProfessorBirchsLab_Text_RivalGiveBalls)
 LittlerootTown_ProfessorBirchsLab_Text_BrendanGotPokedexTooTakeThese:
@@ -1008,20 +1199,20 @@ LittlerootTown_ProfessorBirchsLab_Text_RivalLeave:
 	.string "PLAYER: See you out there.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_NextSteps:
-	.string "PROF. BIRCH: Next, check ROUTE 102.\p"
-	.string "PROF. BIRCH: Push past OLDALE when\n"
-	.string "you're ready.\p"
-	.string "PROF. BIRCH: Tell your mother before\n"
-	.string "you go.\p"
-	.string "PLAYER: I will. Thanks, Professor.\p"
-	.string "PROF. BIRCH: Be careful out there.$"
+	.string "{COLOR BLUE}PROF. BIRCH: Next, check ROUTE 102.{COLOR DARK_GRAY}\p"
+	.string "{COLOR BLUE}PROF. BIRCH: Push past OLDALE when\n"
+	.string "you're ready.{COLOR DARK_GRAY}\p"
+	.string "{COLOR BLUE}PROF. BIRCH: Tell your mother before\n"
+	.string "you go.{COLOR DARK_GRAY}\p"
+	.string "{COLOR GREEN}PLAYER: I will. Thanks, Professor.{COLOR DARK_GRAY}\p"
+	.string "{COLOR BLUE}PROF. BIRCH: Be careful out there.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull:
 	.string "Hey, your BAG's full.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BrendanWhereShouldIGoNext:
-	.string "BRENDAN: Where should I look for\n"
-	.string "POKéMON next…$"
+	.string "{COLOR LIGHT_RED}BRENDAN: Where should I look for\n"
+	.string "POKéMON next…{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine:
 	.string "It's a serious-looking machine.\n"

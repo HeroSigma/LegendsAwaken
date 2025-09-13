@@ -310,6 +310,11 @@ $(OBJEVENTGFXDIR)/palettes/sabrina.gbapal: $(OBJEVENTGFXDIR)/pics/people/Sabrina
 
 	$(GFX) $< $@
 $(OBJEVENTGFXDIR)/palettes/giovanni.gbapal: $(OBJEVENTGFXDIR)/pics/people/giovanni.png
+	$(GFX) $< $@
+
+# Provide 4bpp build for Giovanni sprite where source PNG is lowercase
+$(OBJEVENTGFXDIR)/pics/people/Giovanni.4bpp: $(OBJEVENTGFXDIR)/pics/people/giovanni.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 # Backward-compat specific rule (kept):
 $(OBJEVENTGFXDIR)/palettes/prof_elm.gbapal: %.gbapal: %.pal
 	$(GFX) $< $@

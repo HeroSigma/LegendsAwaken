@@ -7,8 +7,7 @@ OldaleTown_OnTransition:
 	setflag FLAG_VISITED_OLDALE_TOWN
 	setflag FLAG_TEMP_8
 	setflag FLAG_TEMP_9
-	@ Cameo scene: after Route 103 battle, show once on first return
-	call_if_eq VAR_BIRCH_LAB_STATE, 4, OldaleTown_EventScript_TryCameoScene
+    @ Cameo scene now triggers via coord event at (10,6)
 	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
 	call_if_unset FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_MoveMartEmployee
 	call_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_SetOldaleState
@@ -22,50 +21,95 @@ OldaleTown_EventScript_TryCameoScene_Ret:
 	return
 
 OldaleTown_EventScript_CameoScene::
-	lockall
-	clearflag FLAG_TEMP_8
-	clearflag FLAG_TEMP_9
-	addobject LOCALID_OLDALE_CAMEO_CYRUS
-	addobject LOCALID_OLDALE_CAMEO_GIOVANNI
-	setobjectxy LOCALID_OLDALE_CAMEO_CYRUS, 10, 12
-	setobjectxy LOCALID_OLDALE_CAMEO_GIOVANNI, 11, 12
-	turnobject LOCALID_OLDALE_CAMEO_CYRUS, DIR_SOUTH
-	turnobject LOCALID_OLDALE_CAMEO_GIOVANNI, DIR_SOUTH
-	msgbox OldaleTown_Text_Cameo_BlackCrimson, MSGBOX_DEFAULT
+    lockall
+    clearflag FLAG_TEMP_8
+    clearflag FLAG_TEMP_9
+    @ Ensure the cameo NPCs are actually spawned before using them.
+    @ These objects are hidden by flags in the map data, so clearing
+    @ the flags after the map has loaded is not enough to instantiate
+    @ them. Without explicitly adding them here, subsequent commands
+    @ like setobjectxy/turnobject can target nonexistent objects and
+    @ softlock on map entry. Adding the objects prevents that freeze.
+    addobject LOCALID_OLDALE_CAMEO_CYRUS
+    addobject LOCALID_OLDALE_CAMEO_GIOVANNI
+    setobjectxy LOCALID_OLDALE_CAMEO_CYRUS, 10, 12
+    setobjectxy LOCALID_OLDALE_CAMEO_GIOVANNI, 11, 12
+    turnobject LOCALID_OLDALE_CAMEO_CYRUS, DIR_SOUTH
+    turnobject LOCALID_OLDALE_CAMEO_GIOVANNI, DIR_SOUTH
+    @ Pan camera down to the cameo before dialogue
+    special SpawnCameraObject
+    applymovement LOCALID_CAMERA, OldaleTown_Movement_CameraPanDownToCameo
+    waitmovement 0
+    msgbox OldaleTown_Text_Cameo_BlackCrimson, MSGBOX_DEFAULT
 	msgbox OldaleTown_Text_Cameo_SilverBlue, MSGBOX_DEFAULT
-	msgbox OldaleTown_Text_Cameo_BlackCrimson_Move, MSGBOX_DEFAULT
-	applymovement LOCALID_OLDALE_CAMEO_CYRUS, OldaleTown_Movement_Cameo_WalkNorthWest
-	applymovement LOCALID_OLDALE_CAMEO_GIOVANNI, OldaleTown_Movement_Cameo_WalkNorthWest
-	waitmovement 0
-	removeobject LOCALID_OLDALE_CAMEO_CYRUS
-	removeobject LOCALID_OLDALE_CAMEO_GIOVANNI
+    msgbox OldaleTown_Text_Cameo_BlackCrimson_Move, MSGBOX_DEFAULT
+    @ Let them leave the scene, then pan back
+    applymovement LOCALID_OLDALE_CAMEO_CYRUS, OldaleTown_Movement_Cameo_WalkNorthWest
+    applymovement LOCALID_OLDALE_CAMEO_GIOVANNI, OldaleTown_Movement_Cameo_WalkNorthWest
+    waitmovement 0
+    removeobject LOCALID_OLDALE_CAMEO_CYRUS
+    removeobject LOCALID_OLDALE_CAMEO_GIOVANNI
+    applymovement LOCALID_CAMERA, OldaleTown_Movement_CameraPanBackUp
+    waitmovement 0
+    special RemoveCameraObject
 	msgbox OldaleTown_Text_PlayerLingeringThought, MSGBOX_DEFAULT
 	releaseall
 	return
 
 OldaleTown_Movement_Cameo_WalkNorthWest:
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_up
-	walk_left
-	step_end
+    @ Updated path: 3 left, then 3 up, then 7 left
+    walk_left
+    walk_left
+    walk_left
+    walk_up
+    walk_up
+    walk_up
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    step_end
+
+OldaleTown_Movement_CameraPanDownToCameo:
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    step_end
+
+OldaleTown_Movement_CameraPanBackUp:
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    step_end
 
 OldaleTown_Text_Cameo_BlackCrimson:
-	.string "???: This place… HOENN feels unsettled.\p"
-	.string "Almost as though something is leaking through.$"
+	.string "???: This place... HOENN feels\n"
+	.string "unsettled.\pAlmost as though something\n"
+	.string "is leaking through.$"
 
 OldaleTown_Text_Cameo_SilverBlue:
-	.string "???: Indeed. The patterns are off, the air is wrong.\p"
-	.string "This region hides a fracture we must study.$"
+	.string "???: Indeed. The patterns are off,\n"
+	.string "the air is wrong.\pThis region hides\n"
+	.string "a fracture we must study.$"
 
 OldaleTown_Text_Cameo_BlackCrimson_Move:
-	.string "???: Keep walking. No need to draw eyes here.$"
+	.string "???: Keep walking. No need to\n"
+	.string "draw eyes here.$"
 
 OldaleTown_Text_PlayerLingeringThought:
-	.string "{COLOR GREEN}{PLAYER}: (Those men… I've seen their faces before.\p"
-	.string "But from where…? The thought lingers, but…\n"
+	.string "{COLOR GREEN}{PLAYER}: (Those men... I've\n"
+	.string "seen their faces before.\pBut from\n"
+	.string "where...? The thought lingers, but...\n"
 	.string "I can't place it yet.){COLOR DARK_GRAY}$"
 
 @ This script seems pointless because nothing uses VAR_OLDALE_TOWN_STATE

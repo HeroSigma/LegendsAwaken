@@ -28,38 +28,39 @@ gText_Creator_Choices::
 @ PROFESSOR BIRCH - LEGENDS AWAKENING VERSION
 @ =============================================================================
 
-gText_Birch_LegendsWelcome::
-	.string "Hi there! Welcome to the world of\n"
-	.string "POKéMON.
 
 	.string "\p"
+gText_Birch_LegendsWelcome::
+	.string "Hi there! Welcome to the world\n"
+	.string "of POKéMON.\p"
 	.string "$"
+
+	.string "\p"
 gText_Birch_Identity::
 	.string "I'm Professor BIRCH- field research,\n"
-	.string "boots on the ground.
+	.string "boots on the ground.\p"
+	.string "$"
 
 	.string "\p"
-	.string "$"
 gText_Birch_Pokemon_Legends::
 	.string "This little one is a POKéMON-\n"
-	.string "partner, helper, friend.
-
-	.string "\p"
+	.string "partner, helper, friend.\p"
 	.string "$"
 gText_Birch_StrangeTimes::
-	.string "HOENN's been acting strange lately.\p$"
+	.string "HOENN's been acting strange\n"
+	.string "lately.\p$"
 
 gText_Birch_Rifts::
-	.string "Currents shift, skies shimmer…\n"
-	.string "people whisper about 'rifts'.\p$"
+	.string "Currents shift, skies shimmer...\n"
+	.string "People whisper about 'rifts'.\p$"
 
 gText_Birch_Mission::
 	.string "We observe, we protect, and when\n"
-	.string "we must, we battle- together.\p$"
+	.string "we must, we battle—together.\p$"
 
 gText_Birch_BeforeWeStart::
 	.string "But before we get ahead of\n"
-	.string "ourselves…\p$"
+	.string "ourselves...\p$"
 
 gText_Birch_AndYouAre_Legends::
 	.string "And you are?$"

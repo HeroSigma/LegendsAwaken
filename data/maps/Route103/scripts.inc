@@ -65,6 +65,13 @@ Route103_EventScript_PostSecondBattle_Male::
     msgbox Route103_Text_SE_SomeThingsNeverChange_BRENDAN, MSGBOX_DEFAULT
     msgbox Route103_Text_NE_ReportBackLab_MAY, MSGBOX_DEFAULT
 	msgbox Route103_Text_PlayerSeeYouThere, MSGBOX_DEFAULT
+    @ Let both rivals walk down; first move player aside to avoid collision
+    applymovement LOCALID_PLAYER, Common_Movement_WalkRight
+    waitmovement 0
+    applymovement LOCALID_ROUTE103_RIVAL_MAY, Route103_Movement_RivalExit2    @ upper rival goes first
+    waitmovement 0
+    applymovement LOCALID_ROUTE103_RIVAL_BRENDAN, Route103_Movement_RivalExit1 @ then lower rival follows
+    waitmovement 0
 	removeobject LOCALID_ROUTE103_RIVAL_BRENDAN
 	removeobject LOCALID_ROUTE103_RIVAL_MAY
 	goto Route103_EventScript_RivalEnd
@@ -111,6 +118,13 @@ Route103_EventScript_PostSecondBattle_Female::
     msgbox Route103_Text_SE_SomeThingsNeverChange_BRENDAN, MSGBOX_DEFAULT
     msgbox Route103_Text_NE_ReportBackLab_MAY, MSGBOX_DEFAULT
 	msgbox Route103_Text_PlayerSeeYouThere, MSGBOX_DEFAULT
+    @ Let both rivals walk down; first move player aside to avoid collision
+    applymovement LOCALID_PLAYER, Common_Movement_WalkRight
+    waitmovement 0
+    applymovement LOCALID_ROUTE103_RIVAL_MAY, Route103_Movement_RivalExit2    @ upper rival goes first
+    waitmovement 0
+    applymovement LOCALID_ROUTE103_RIVAL_BRENDAN, Route103_Movement_RivalExit1 @ then lower rival follows
+    waitmovement 0
 	removeobject LOCALID_ROUTE103_RIVAL_MAY
 	removeobject LOCALID_ROUTE103_RIVAL_BRENDAN
 	goto Route103_EventScript_RivalEnd
@@ -188,7 +202,8 @@ Route103_EventScript_RivalExit::
 
 Route103_EventScript_RivalEnd::
 	setvar VAR_BIRCH_LAB_STATE, 4
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
+	@ Keep Birch's Lab generic rival hidden; lab scene adds May/Brendan explicitly
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
 	setflag FLAG_DEFEATED_RIVAL_ROUTE103
 	setvar VAR_OLDALE_RIVAL_STATE, 1
 	clearflag FLAG_HIDE_OLDALE_TOWN_RIVAL
@@ -220,12 +235,21 @@ Route103_Movement_WatchRivalExitFacingNorth:
 	step_end
 
 Route103_Movement_RivalExit1:
+	@ Lower rival: walk down several steps
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	step_end
 
 Route103_Movement_RivalExit2:
+	@ Upper rival: jump past partner, then walk down
 	jump_2_down
 	delay_16
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_down
