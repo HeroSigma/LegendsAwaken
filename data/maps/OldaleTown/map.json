@@ -147,6 +147,15 @@
   "coord_events": [
     {
       "type": "trigger",
+      "x": 10,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_BIRCH_LAB_STATE",
+      "var_value": "4",
+      "script": "OldaleTown_EventScript_TryCameoScene"
+    },
+    {
+      "type": "trigger",
       "x": 0,
       "y": 10,
       "elevation": 3,
@@ -180,6 +189,60 @@
       "var": "VAR_OLDALE_RIVAL_STATE",
       "var_value": "1",
       "script": "OldaleTown_EventScript_RivalTrigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_BIRCH_LAB_STATE",
+      "var_value": "4",
+      "script": "OldaleTown_EventScript_TryCameoScene"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_BIRCH_LAB_STATE",
+      "var_value": "4",
+      "script": "OldaleTown_EventScript_TryCameoScene"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_BIRCH_LAB_STATE",
+      "var_value": "4",
+      "script": "OldaleTown_EventScript_TryCameoScene"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_BIRCH_LAB_STATE",
+      "var_value": "4",
+      "script": "OldaleTown_EventScript_TryCameoScene"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_BIRCH_LAB_STATE",
+      "var_value": "4",
+      "script": "OldaleTown_EventScript_TryCameoScene"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_BIRCH_LAB_STATE",
+      "var_value": "4",
+      "script": "OldaleTown_EventScript_TryCameoScene"
     }
   ],
   "bg_events": [
@@ -209,7 +272,7 @@
     },
     {
       "type": "sign",
-      "x": 4,
+      "x": 5,
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",

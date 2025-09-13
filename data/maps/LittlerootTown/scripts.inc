@@ -937,13 +937,35 @@ LittlerootTown_EventScript_SetReceivedRunningShoes::
 	end
 
 LittlerootTown_EventScript_GiveRunningShoes::
-        msgbox LittlerootTown_Text_WearTheseRunningShoes, MSGBOX_DEFAULT
+        @ Selene approaches and speaks
+        msgbox LittlerootTown_Text_Selene_Opening1, MSGBOX_DEFAULT
+        msgbox LittlerootTown_Text_Selene_Opening2, MSGBOX_DEFAULT
+        @ She offers the Running Shoes
+        msgbox LittlerootTown_Text_Selene_GiveShoes, MSGBOX_DEFAULT
         playfanfare MUS_OBTAIN_ITEM
         message LittlerootTown_Text_SwitchShoesWithRunningShoes
         waitfanfare
         setflag FLAG_RECEIVED_RUNNING_SHOES
-        msgbox LittlerootTown_Text_ExplainRunningShoes, MSGBOX_DEFAULT
-        msgbox LittlerootTown_Text_ComeHomeIfAnythingHappens, MSGBOX_DEFAULT
+        @ Player thanks her
+        msgbox LittlerootTown_Text_Player_ThanksForShoes, MSGBOX_DEFAULT
+        @ She offers the Dynamax Band
+        msgbox LittlerootTown_Text_Selene_GiveBand1, MSGBOX_DEFAULT
+        msgbox LittlerootTown_Text_Selene_GiveBand2, MSGBOX_DEFAULT
+        giveitem ITEM_DYNAMAX_BAND, 1
+        playfanfare MUS_OBTAIN_ITEM
+        message LittlerootTown_Text_ReceivedDynamaxBand
+        waitfanfare
+        @ Player reflects about Father
+        msgbox LittlerootTown_Text_Player_FatherAside1, MSGBOX_DEFAULT
+        msgbox LittlerootTown_Text_Player_FatherAside2, MSGBOX_DEFAULT
+        @ Selene reassures and hints
+        msgbox LittlerootTown_Text_Selene_HeartSteady, MSGBOX_DEFAULT
+        msgbox LittlerootTown_Text_Selene_HeIsWaiting, MSGBOX_DEFAULT
+        @ Player resolves to see Birch
+        msgbox LittlerootTown_Text_Player_HeWho, MSGBOX_DEFAULT
+        msgbox LittlerootTown_Text_Player_MaybeBirch, MSGBOX_DEFAULT
+        @ Closing line
+        msgbox LittlerootTown_Text_Selene_JourneyBegins, MSGBOX_DEFAULT
         closemessage
         delay 30
         return
@@ -952,121 +974,119 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "MOM: Let's go inside.$"
 
 LittlerootTown_Text_PlayerEightYears:
-	.string "{COLOR GREEN}(A new home…\n"
-	.string "but will things\n"
-	.string "really be\n"
-	.string "different?)\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}(A new home... but will things\n"
+	.string "really be different?)\p{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_PlayerWonderHow:
-	.string "{COLOR GREEN}(Something\n"
-	.string "tells me this time\n"
-	.string "is different…)\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}(Something tells me this time\n"
+	.string "is different...)\p{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_MomWereFinallyHere_Male:
     .string "MOM: We’re finally here, {PLAYER}!$"
 
 LittlerootTown_Text_MomSmallerThanBefore_Male:
-	.string "MOM: Littleroot Town…\n"
-	.string "smaller than what\n"
-	.string "you remember,\n"
-	.string "right?$"
+	.string "MOM: Littleroot Town... smaller than\n"
+	.string "what you remember, right?$"
 
 LittlerootTown_Text_PlayerFeelsDifferent_Male:
-	.string "{COLOR GREEN}{PLAYER}: …It\n"
-	.string "feels different.\n"
-	.string "Quieter than the\n"
-	.string "Archipelago.\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: ...It feels different.\n"
+	.string "Quieter than the Archipelago.\p{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_PlayerHardToBelieve_Male:
-	.string "{COLOR GREEN}{PLAYER}: Hard\n"
-	.string "to believe eight\n"
-	.string "years have passed.\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Hard to believe eight\n"
+	.string "years have passed.\p{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_MomFreshStart_Male:
-	.string "MOM: Eight years away,\n"
-	.string "and now a fresh\n"
-	.string "start. That’s what\n"
-	.string "we need.$"
+	.string "MOM: Eight years away, and now a fresh\n"
+	.string "start. That's what we need.$"
 
 LittlerootTown_Text_MomComeInsideVigoroth_Male:
-	.string "MOM: Come inside-\n"
-	.string "Vigoroth have\n"
-	.string "already finished\n"
-	.string "the heavy lifting.$"
+	.string "MOM: Come inside--Vigoroth have already\n"
+	.string "finished the heavy lifting.$"
 
 LittlerootTown_Text_MomWereFinallyHere_Female:
     .string "MOM: We’re finally here, {PLAYER}!$"
 
 LittlerootTown_Text_MomSmallerThanBefore_Female:
-	.string "MOM: Littleroot Town…\n"
-	.string "smaller than what\n"
-	.string "you remember,\n"
-	.string "right?$"
+	.string "MOM: Littleroot Town... smaller than\n"
+	.string "what you remember, right?$"
 
 LittlerootTown_Text_PlayerFeelsDifferent_Female:
-	.string "{COLOR GREEN}{PLAYER}: …It\n"
-	.string "feels different.\n"
-	.string "Quieter than the\n"
-	.string "Archipelago.\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: ...It feels different.\n"
+	.string "Quieter than the Archipelago.\p{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_PlayerHardToBelieve_Female:
-	.string "{COLOR GREEN}{PLAYER}: Hard\n"
-	.string "to believe eight\n"
-	.string "years have passed.\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Hard to believe eight\n"
+	.string "years have passed.\p{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_MomFreshStart_Female:
-	.string "MOM: Eight years away,\n"
-	.string "and now a fresh\n"
-	.string "start. That’s what\n"
-	.string "we need.$"
+	.string "MOM: Eight years away, and now a fresh\n"
+	.string "start. That's what we need.$"
 
 LittlerootTown_Text_MomComeInsideVigoroth_Female:
-	.string "MOM: Come inside-\n"
-	.string "Vigoroth have\n"
-	.string "already finished\n"
-	.string "the heavy lifting.$"
+	.string "MOM: Come inside--Vigoroth have already\n"
+	.string "finished the heavy lifting.$"
 
 LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"
 
-LittlerootTown_Text_WearTheseRunningShoes:
-	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
-	.string "introduce yourself to PROF. BIRCH?\p"
-	.string "Oh! What an adorable POKéMON!\n"
-	.string "You got it from PROF. BIRCH. How nice!\p"
-	.string "You're your father's child, all right.\n"
-	.string "You look good together with POKéMON!\p"
-	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these RUNNING SHOES.\p"
-	.string "They'll put a zip in your step!$"
+LittlerootTown_Text_Selene_Opening1:
+	.string "SELENE: You’ve already been through so much…\n"
+	.string "saving BIRCH, standing against that strange POKéMON.$"
+
+LittlerootTown_Text_Selene_Opening2:
+	.string "SELENE: I’m proud of you. But as your mother,\n"
+	.string "I can’t help but worry. The world feels…\n"
+	.string "unsettled lately.$"
+
+LittlerootTown_Text_Selene_GiveShoes:
+	.string "SELENE: Here- RUNNING SHOES. They’ll help you move\n"
+	.string "swiftly, wherever your path leads.$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
 	.string "{PLAYER} switched shoes with the\n"
 	.string "RUNNING SHOES.$"
 
-LittlerootTown_Text_ExplainRunningShoes:
-	.string "MOM: {PLAYER}, those shoes came with\n"
-	.string "instructions.\p"
-	.string "“Press the B Button while wearing these\n"
-	.string "RUNNING SHOES to run extra-fast!\p"
-	.string "“Slip on these RUNNING SHOES and race\n"
-	.string "in the great outdoors!”$"
+LittlerootTown_Text_Player_ThanksForShoes:
+	.string "{COLOR GREEN}{PLAYER}: Thank you, Mother.\n"
+	.string "I’ll make good use of them.{COLOR DARK_GRAY}$"
 
-LittlerootTown_Text_ComeHomeIfAnythingHappens:
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
-	.string "To think that you have your very own\n"
-	.string "POKéMON now…\l"
-	.string "Your father will be overjoyed.\p"
-	.string "…But please be careful.\n"
-	.string "If anything happens, you can come home.\p"
-	.string "Go on, go get them, honey!$"
+LittlerootTown_Text_Selene_GiveBand1:
+	.string "SELENE: And this…\n"
+	.string "Caelum would want you to have it.$"
+
+LittlerootTown_Text_Selene_GiveBand2:
+	.string "SELENE: He believed this band wasn’t just about strength-\n"
+	.string "it was about trust. About being ready for what lies ahead.$"
+
+LittlerootTown_Text_ReceivedDynamaxBand:
+	.string "{PLAYER} received the DYNAMAX BAND!$"
+
+LittlerootTown_Text_Player_FatherAside1:
+	.string "{COLOR GREEN}{PLAYER}: (Father… is this what you left\n"
+	.string "behind for me?){COLOR DARK_GRAY}$"
+
+LittlerootTown_Text_Player_FatherAside2:
+	.string "{COLOR GREEN}{PLAYER}: I’ll carry it carefully.\n"
+	.string "I promise.{COLOR DARK_GRAY}$"
+
+LittlerootTown_Text_Selene_HeartSteady:
+	.string "SELENE: That’s all I could ask. Keep your heart steady,\n"
+	.string "{PLAYER}. No matter how strange things get,\n"
+	.string "you’re not alone.$"
+
+LittlerootTown_Text_Selene_HeIsWaiting:
+	.string "SELENE: He is waiting.$"
+
+LittlerootTown_Text_Player_HeWho:
+	.string "{COLOR GREEN}{PLAYER}: …He? Who…?{COLOR DARK_GRAY}$"
+
+LittlerootTown_Text_Player_MaybeBirch:
+	.string "{COLOR GREEN}{PLAYER}: (…Maybe she means BIRCH.\n"
+	.string "I shouldn’t keep him waiting.){COLOR DARK_GRAY}$"
+
+LittlerootTown_Text_Selene_JourneyBegins:
+	.string "SELENE: Go on now. Your journey begins today.$"
 
 LittlerootTown_Text_CanUsePCToStoreItems:
 	.string "If you use a PC, you can store items\n"
