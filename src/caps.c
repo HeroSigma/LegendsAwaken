@@ -9,15 +9,24 @@ u32 GetCurrentLevelCap(void)
 {
     static const u32 sLevelCapFlagMap[][2] =
     {
-        {FLAG_BADGE01_GET, 20},
-        {FLAG_BADGE02_GET, 30},
-        {FLAG_BADGE03_GET, 34},
-        {FLAG_BADGE04_GET, 39},
-        {FLAG_BADGE05_GET, 54},
-        {FLAG_BADGE06_GET, 60},
-        {FLAG_BADGE07_GET, 76},
-        {FLAG_BADGE08_GET, 80},
-        {FLAG_IS_CHAMPION, 100},
+        // Gym badges (pre-gym caps)
+        {FLAG_BADGE01_GET, 16}, // Roxanne (Rustboro)
+        {FLAG_BADGE02_GET, 20}, // Brawly (Dewford)
+        {FLAG_BADGE03_GET, 24}, // Wattson (Mauville)
+        {FLAG_BADGE04_GET, 29}, // Flannery (Lavaridge)
+        {FLAG_BADGE05_GET, 33}, // Norman (Petalburg)
+        {FLAG_BADGE06_GET, 36}, // Winona (Fortree)
+        {FLAG_BADGE07_GET, 42}, // Tate & Liza (Mossdeep)
+        {FLAG_BADGE08_GET, 46}, // Wallace/Juan (Sootopolis)
+        // Elite Four (pre-member caps)
+        {FLAG_DEFEATED_ELITE_4_SIDNEY, 48},
+        {FLAG_DEFEATED_ELITE_4_PHOEBE, 49},
+        {FLAG_DEFEATED_ELITE_4_GLACIA, 50},
+        {FLAG_DEFEATED_ELITE_4_DRAKE,  52},
+        // Champion (pre-champion cap)
+        {FLAG_IS_CHAMPION, 55}, // Wallace (Champion)
+        // Post-game cap (always-unset placeholder flag)
+        {FLAG_UNUSED_0x29F, 65}, // After defeating Wallace
     };
 
     u32 i;
