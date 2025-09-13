@@ -339,34 +339,33 @@ LittlerootTown_MaysHouse_1F_Movement_MayGoUpstairs2:
 
 RivalsHouse_1F_Text_OhYoureTheNewNeighbor:
 	.string "Oh, hello. And you are?\p"
-	.string "… … … … … … … … …\n"
-	.string "… … … … … … … … …\p"
-	.string "Oh, you're {PLAYER}{KUN}, our new next-door\n"
-	.string "neighbor! Hi!\p"
-	.string "We have a {STR_VAR_1} about the same\n"
-	.string "age as you.\p"
-	.string "Our {STR_VAR_1} was excited about making\n"
-	.string "a new friend.\p"
-	.string "Our {STR_VAR_1} is upstairs, I think.$"
+	.string "... ... ... ... ... ... ... ... ...\n"
+	.string "... ... ... ... ... ... ... ... ...\p"
+	.string "Oh, you're {PLAYER}{KUN}, our new\n"
+	.string "next-door neighbor! Hi!\pWe have a\n"
+	.string "{STR_VAR_1} about the same age as\n"
+	.string "you.\pOur {STR_VAR_1} was excited\n"
+	.string "about making a new friend.\pOur\n"
+	.string "{STR_VAR_1} is upstairs, I think.$"
 
 RivalsHouse_1F_Text_LikeChildLikeFather:
-	.string "Like child, like father.\p"
-	.string "My husband is as wild about POKéMON\n"
-	.string "as our child.\p"
-	.string "If he's not at his LAB, he's likely\n"
-	.string "scrabbling about in grassy places.$"
+	.string "Like child, like father.\pMy husband\n"
+	.string "is as wild about POKéMON as our\n"
+	.string "child.\pIf he's not at his LAB,\n"
+	.string "he's likely scrabbling about in\n"
+	.string "grassy places.$"
 
 RivalsHouse_1F_Text_TooBusyToNoticeVisit:
-	.string "That {RIVAL}!\p"
-	.string "I guess our child is too busy with\n"
-	.string "POKéMON to notice that you came\l"
-	.string "to visit, {PLAYER}{KUN}.$"
+	.string "That {RIVAL}!\pI guess our child is\n"
+	.string "too busy with POKéMON to notice\n"
+	.string "that you came to visit,\n"
+	.string "{PLAYER}{KUN}.$"
 
 RivalsHouse_1F_Text_WentOutToRoute103:
 	.string "Oh, {RIVAL} went out to ROUTE 103\n"
-	.string "just a little while ago.\p"
-	.string "Like father, like child.\n"
-	.string "{RIVAL} can't stay quietly at home.$"
+	.string "just a little while ago.\pLike\n"
+	.string "father, like child. {RIVAL} can't\n"
+	.string "stay quietly at home.$"
 
 RivalsHouse_1F_Text_ShouldGoHomeEverySoOften:
 	.string "I think it's wonderful for people to\n"

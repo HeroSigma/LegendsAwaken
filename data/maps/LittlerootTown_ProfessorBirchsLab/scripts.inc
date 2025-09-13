@@ -137,8 +137,9 @@ LittlerootTown_ProfessorBirchsLab_Text_SeleneAreYouOk:
     .string "Are you alright?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MrsBirchHeard:
-    .string "MRS. BIRCH: Dear, we heard about the incident.\p"
-    .string "Are you holding up okay?$"
+	.string "MRS. BIRCH: Dear, we heard about\n"
+	.string "the incident.\p"
+	.string "Are you holding up okay?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_PlayerImFine:
     .string "{COLOR GREEN}{PLAYER}: I’m fine. Just a bit shaken,\n"
@@ -1101,8 +1102,9 @@ LittlerootTown_ProfessorBirchsLab_Text_SeleneIntervene:
 	.string "wouldn’t be standing here.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MrsBirchTroubling:
-	.string "{COLOR BLUE}MRS. BIRCH: I’ve lived here my whole life, and\n"
-	.string "I’ve never seen anything like it either.\p"
+	.string "{COLOR BLUE}MRS. BIRCH: I've lived here my\n"
+	.string "whole life, and I've never seen\p"
+	.string "anything like that before.\n"
 	.string "This is troubling, Professor.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_FieldworkStart:
@@ -1127,8 +1129,9 @@ LittlerootTown_ProfessorBirchsLab_Text_SeleneCare:
  	.string "have to shoulder this alone.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MrsBirchDinner:
-	.string "{COLOR BLUE}MRS. BIRCH: And tell {RIVAL} I’ll have dinner\n"
-	.string "ready if they’re late home again.{COLOR DARK_GRAY}$"
+	.string "{COLOR BLUE}MRS. BIRCH: And tell {RIVAL} I'll\n"
+	.string "have dinner ready if they're late\n"
+	.string "home again.{COLOR DARK_GRAY}$"
 
 LittlerootTown_ProfessorBirchsLab_Text_PlayerResolve:
 	.string "{COLOR GREEN}{PLAYER}: (That Zoroark… or whatever it was…\n"

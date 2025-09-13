@@ -831,8 +831,8 @@ static void QueueAnimTiles_KantoGeneral_Kantoflower(u16 timer)
 
 static void QueueAnimTiles_KantoGeneral_Kantowater(u16 timer)
 {
-    u16 i = timer % ARRAY_COUNT(gTilesetAnims_KantoGeneral_Kantowater);
-    AppendTilesetAnimToBuffer(gTilesetAnims_KantoGeneral_Kantowater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 48 * TILE_SIZE_4BPP);
+    // Animation disabled for Kanto water
+    return;
 }
 
 static void QueueAnimTiles_KantoGeneral_Kantosandy(u16 timer)
@@ -849,8 +849,8 @@ static void QueueAnimTiles_JohtoGeneral_Johtoflower(u16 timer)
 
 static void QueueAnimTiles_JohtoGeneral_Johtowater(u16 timer)
 {
-    u16 i = timer % ARRAY_COUNT(gTilesetAnims_JohtoGeneral_Johtowater);
-    AppendTilesetAnimToBuffer(gTilesetAnims_JohtoGeneral_Johtowater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 48 * TILE_SIZE_4BPP);
+    // Animation disabled for Johto water
+    return;
 }
 
 static void QueueAnimTiles_JohtoGeneral_Johtosandy(u16 timer)
@@ -861,20 +861,21 @@ static void QueueAnimTiles_JohtoGeneral_Johtosandy(u16 timer)
 
 static void QueueAnimTiles_General_Water(u16 timer)
 {
-    u8 i = timer % ARRAY_COUNT(gTilesetAnims_General_Water);
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(432)), 30 * TILE_SIZE_4BPP);
+    // Animation disabled for Ocean water
+    return;
 }
 
 static void QueueAnimTiles_General_SandWaterEdge(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_SandWaterEdge);
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_SandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(464)), 10 * TILE_SIZE_4BPP);
+    // Animation disabled for Sand/Water Edge
+    return;
 }
 
 static void QueueAnimTiles_General_Waterfall(u16 timer)
 {
-    u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_Waterfall);
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 6 * TILE_SIZE_4BPP);
+    // Animation disabled for General Waterfall
+    return;
 }
 
 void InitTilesetAnim_Petalburg(void)
@@ -1040,129 +1041,81 @@ void InitTilesetAnim_BattleDome(void)
 
 static void TilesetAnim_Rustboro(u16 timer)
 {
-    if (timer % 8 == 0)
-    {
-        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 0);
-        QueueAnimTiles_Rustboro_Fountain(timer / 8);
-    }
-    if (timer % 8 == 1)
-        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 1);
-    if (timer % 8 == 2)
-        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 2);
-    if (timer % 8 == 3)
-        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 3);
-    if (timer % 8 == 4)
-        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 4);
-    if (timer % 8 == 5)
-        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 5);
-    if (timer % 8 == 6)
-        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 6);
-    if (timer % 8 == 7)
-        QueueAnimTiles_Rustboro_WindyWater(timer / 8, 7);
+    // All Rustboro animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_Dewford(u16 timer)
 {
-    if (timer % 8 == 0)
-        QueueAnimTiles_Dewford_Flag(timer / 8);
+    // All Dewford animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_Slateport(u16 timer)
 {
-    if (timer % 16 == 0)
-        QueueAnimTiles_Slateport_Balloons(timer / 16);
+    // All Slateport animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_Mauville(u16 timer)
 {
-    if (timer % 8 == 0)
-        QueueAnimTiles_Mauville_Flowers(timer / 8, 0);
-    if (timer % 8 == 1)
-        QueueAnimTiles_Mauville_Flowers(timer / 8, 1);
-    if (timer % 8 == 2)
-        QueueAnimTiles_Mauville_Flowers(timer / 8, 2);
-    if (timer % 8 == 3)
-        QueueAnimTiles_Mauville_Flowers(timer / 8, 3);
-    if (timer % 8 == 4)
-        QueueAnimTiles_Mauville_Flowers(timer / 8, 4);
-    if (timer % 8 == 5)
-        QueueAnimTiles_Mauville_Flowers(timer / 8, 5);
-    if (timer % 8 == 6)
-        QueueAnimTiles_Mauville_Flowers(timer / 8, 6);
-    if (timer % 8 == 7)
-        QueueAnimTiles_Mauville_Flowers(timer / 8, 7);
+    // All Mauville animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_Lavaridge(u16 timer)
 {
-    if (timer % 16 == 0)
-        QueueAnimTiles_Lavaridge_Steam(timer / 16);
-    if (timer % 16 == 1)
-        QueueAnimTiles_Lavaridge_Lava(timer / 16);
+    // All Lavaridge animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_EverGrande(u16 timer)
 {
-    if (timer % 8 == 0)
-        QueueAnimTiles_EverGrande_Flowers(timer / 8, 0);
-    if (timer % 8 == 1)
-        QueueAnimTiles_EverGrande_Flowers(timer / 8, 1);
-    if (timer % 8 == 2)
-        QueueAnimTiles_EverGrande_Flowers(timer / 8, 2);
-    if (timer % 8 == 3)
-        QueueAnimTiles_EverGrande_Flowers(timer / 8, 3);
-    if (timer % 8 == 4)
-        QueueAnimTiles_EverGrande_Flowers(timer / 8, 4);
-    if (timer % 8 == 5)
-        QueueAnimTiles_EverGrande_Flowers(timer / 8, 5);
-    if (timer % 8 == 6)
-        QueueAnimTiles_EverGrande_Flowers(timer / 8, 6);
-    if (timer % 8 == 7)
-        QueueAnimTiles_EverGrande_Flowers(timer / 8, 7);
+    // All EverGrande animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_Pacifidlog(u16 timer)
 {
-    if (timer % 16 == 0)
-        QueueAnimTiles_Pacifidlog_LogBridges(timer / 16);
-    if (timer % 16 == 1)
-        QueueAnimTiles_Pacifidlog_WaterCurrents(timer / 16);
+    // All Pacifidlog animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_Sootopolis(u16 timer)
 {
-    if (timer % 16 == 0)
-        QueueAnimTiles_Sootopolis_StormyWater(timer / 16);
+    // All Sootopolis animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_Underwater(u16 timer)
 {
-    if (timer % 16 == 0)
-        QueueAnimTiles_Underwater_Seaweed(timer / 16);
+    // All Underwater animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_Cave(u16 timer)
 {
-    if (timer % 16 == 1)
-        QueueAnimTiles_Cave_Lava(timer / 16);
+    // All Cave animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_BattleFrontierOutsideWest(u16 timer)
 {
-    if (timer % 8 == 0)
-        QueueAnimTiles_BattleFrontierOutsideWest_Flag(timer / 8);
+    // All BattleFrontierOutsideWest animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_BattleFrontierOutsideEast(u16 timer)
 {
-    if (timer % 8 == 0)
-        QueueAnimTiles_BattleFrontierOutsideEast_Flag(timer / 8);
+    // All BattleFrontierOutsideEast animation disabled except doors (none here)
+    return;
 }
 
 static void QueueAnimTiles_General_LandWaterEdge(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_LandWaterEdge);
-    AppendTilesetAnimToBuffer(gTilesetAnims_General_LandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(480)), 10 * TILE_SIZE_4BPP);
+    // Animation disabled for Land/Water Edge
+    return;
 }
 
 static void QueueAnimTiles_Lavaridge_Steam(u8 timer)
@@ -1188,8 +1141,8 @@ static void QueueAnimTiles_Underwater_Seaweed(u8 timer)
 
 static void QueueAnimTiles_Pacifidlog_WaterCurrents(u8 timer)
 {
-    u8 i = timer % ARRAY_COUNT(gTilesetAnims_Pacifidlog_WaterCurrents);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Pacifidlog_WaterCurrents[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 496)), 8 * TILE_SIZE_4BPP);
+    // Animation disabled for Pacifidlog Water Currents
+    return;
 }
 
 static void QueueAnimTiles_Mauville_Flowers(u16 timer_div, u8 timer_mod)
@@ -1211,10 +1164,8 @@ static void QueueAnimTiles_Mauville_Flowers(u16 timer_div, u8 timer_mod)
 
 static void QueueAnimTiles_Rustboro_WindyWater(u16 timer_div, u8 timer_mod)
 {
-    timer_div -= timer_mod;
-    timer_div %= ARRAY_COUNT(gTilesetAnims_Rustboro_WindyWater);
-    if (gTilesetAnims_Rustboro_WindyWater[timer_div])
-        AppendTilesetAnimToBuffer(gTilesetAnims_Rustboro_WindyWater[timer_div], gTilesetAnims_Rustboro_WindyWater_VDests[timer_mod], 4 * TILE_SIZE_4BPP);
+    // Animation disabled for Rustboro WindyWater
+    return;
 }
 
 static void QueueAnimTiles_Rustboro_Fountain(u16 timer)
@@ -1269,37 +1220,32 @@ static void QueueAnimTiles_Slateport_Balloons(u16 timer)
 
 static void TilesetAnim_MauvilleGym(u16 timer)
 {
-    if (timer % 2 == 0)
-        QueueAnimTiles_MauvilleGym_ElectricGates(timer / 2);
+    // All MauvilleGym animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_SootopolisGym(u16 timer)
 {
-    if (timer % 8 == 0)
-        QueueAnimTiles_SootopolisGym_Waterfalls(timer / 8);
+    // All SootopolisGym animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_EliteFour(u16 timer)
 {
-    if (timer % 64 == 1)
-        QueueAnimTiles_EliteFour_GroundLights(timer / 64);
-    if (timer % 8 == 1)
-        QueueAnimTiles_EliteFour_WallLights(timer / 8);
+    // All EliteFour animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_BikeShop(u16 timer)
 {
-    if (timer % 4 == 0)
-        QueueAnimTiles_BikeShop_BlinkingLights(timer / 4);
+    // All BikeShop animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_BattlePyramid(u16 timer)
 {
-    if (timer % 8 == 0)
-    {
-        QueueAnimTiles_BattlePyramid_Torch(timer / 8);
-        QueueAnimTiles_BattlePyramid_StatueShadow(timer / 8);
-    }
+    // All BattlePyramid animation disabled except doors (none here)
+    return;
 }
 
 static void TilesetAnim_BattleDome(u16 timer)
@@ -1322,9 +1268,8 @@ static void QueueAnimTiles_Building_TVTurnedOn(u16 timer)
 
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16 timer)
 {
-    u16 i = timer % min(ARRAY_COUNT(gTilesetAnims_SootopolisGym_SideWaterfall), ARRAY_COUNT(gTilesetAnims_SootopolisGym_FrontWaterfall));
-    AppendTilesetAnimToBuffer(gTilesetAnims_SootopolisGym_SideWaterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 496)), 12 * TILE_SIZE_4BPP);
-    AppendTilesetAnimToBuffer(gTilesetAnims_SootopolisGym_FrontWaterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 464)), 20 * TILE_SIZE_4BPP);
+    // Animation disabled for Sootopolis Gym Waterfalls
+    return;
 }
 
 static void QueueAnimTiles_EliteFour_WallLights(u16 timer)
@@ -1353,8 +1298,8 @@ static void QueueAnimTiles_BikeShop_BlinkingLights(u16 timer)
 
 static void QueueAnimTiles_Sootopolis_StormyWater(u16 timer)
 {
-    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Sootopolis_StormyWater);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Sootopolis_StormyWater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 240)), 96 * TILE_SIZE_4BPP);
+    // Animation disabled for Sootopolis Stormy Water
+    return;
 }
 
 static void QueueAnimTiles_BattlePyramid_Torch(u16 timer)

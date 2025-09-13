@@ -7,6 +7,10 @@ MISCGFXDIR := graphics/misc
 $(OBJEVENTGFXDIR)/people/DP_%.4bpp: $(OBJEVENTGFXDIR)/people/DP_%.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+# RGBY Red (overworld framesheet uses 2x4 layout)
+$(OBJEVENTGFXDIR)/people/rgby_red/walking.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 
 $(OBJEVENTGFXDIR)/people/brendan/walking.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4

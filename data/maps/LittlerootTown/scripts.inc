@@ -974,12 +974,14 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "MOM: Let's go inside.$"
 
 LittlerootTown_Text_PlayerEightYears:
-	.string "{COLOR GREEN}(A new home... but will things\n"
-	.string "really be different?)\p{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}(A new home...\n"
+	.string "Will things really be different?)\p"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_PlayerWonderHow:
-	.string "{COLOR GREEN}(Something tells me this time\n"
-	.string "is different...)\p{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}(Something tells me\n"
+	.string "this time is different...)\p"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_MomWereFinallyHere_Male:
     .string "MOM: We’re finally here, {PLAYER}!$"
@@ -990,11 +992,13 @@ LittlerootTown_Text_MomSmallerThanBefore_Male:
 
 LittlerootTown_Text_PlayerFeelsDifferent_Male:
 	.string "{COLOR GREEN}{PLAYER}: ...It feels different.\n"
-	.string "Quieter than the Archipelago.\p{COLOR DARK_GRAY}$"
+	.string "Quieter than the Archipelago.\p"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_PlayerHardToBelieve_Male:
-	.string "{COLOR GREEN}{PLAYER}: Hard to believe eight\n"
-	.string "years have passed.\p{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Hard to believe\n"
+	.string "eight years have passed.\p"
+	.string "{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_MomFreshStart_Male:
 	.string "MOM: Eight years away, and now a fresh\n"
@@ -1031,17 +1035,19 @@ LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"
 
 LittlerootTown_Text_Selene_Opening1:
-	.string "SELENE: You’ve already been through so much…\n"
-	.string "saving BIRCH, standing against that strange POKéMON.$"
+	.string "SELENE: You've already been through\n"
+	.string "so much... saving BIRCH, standing\n"
+	.string "against that strange POKEMON.$"
 
 LittlerootTown_Text_Selene_Opening2:
-	.string "SELENE: I’m proud of you. But as your mother,\n"
-	.string "I can’t help but worry. The world feels…\n"
-	.string "unsettled lately.$"
+	.string "SELENE: I'm proud of you. But as\n"
+	.string "your mother, I can't help but worry.\n"
+	.string "The world feels unsettled lately.$"
 
 LittlerootTown_Text_Selene_GiveShoes:
-	.string "SELENE: Here- RUNNING SHOES. They’ll help you move\n"
-	.string "swiftly, wherever your path leads.$"
+	.string "SELENE: Here--RUNNING SHOES. They'll\n"
+	.string "help you move swiftly, wherever\n"
+	.string "your path leads.$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
 	.string "{PLAYER} switched shoes with the\n"
@@ -1049,7 +1055,7 @@ LittlerootTown_Text_SwitchShoesWithRunningShoes:
 
 LittlerootTown_Text_Player_ThanksForShoes:
 	.string "{COLOR GREEN}{PLAYER}: Thank you, Mother.\n"
-	.string "I’ll make good use of them.{COLOR DARK_GRAY}$"
+	.string "I'll make good use of them.{COLOR DARK_GRAY}$"
 
 LittlerootTown_Text_Selene_GiveBand1:
 	.string "SELENE: And this…\n"

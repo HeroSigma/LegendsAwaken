@@ -300,8 +300,21 @@ RusturfTunnel_EventScript_Grunt::
 	lock
 	faceplayer
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
-	msgbox RusturfTunnel_Text_GruntIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GRUNT_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
+	@ Pre-battle scene: Aqua Grunt arguing with a shadowy figure
+	msgbox RusturfTunnel_Text_AquaTriad_GruntPackage, MSGBOX_DEFAULT
+	msgbox RusturfTunnel_Text_AquaTriad_TriadOrders, MSGBOX_DEFAULT
+	msgbox RusturfTunnel_Text_AquaTriad_PlayerInterject, MSGBOX_DEFAULT
+	msgbox RusturfTunnel_Text_AquaTriad_GruntChallenge, MSGBOX_DEFAULT
+	msgbox RusturfTunnel_Text_AquaTriad_TriadTest, MSGBOX_DEFAULT
+    @ Battles: First Shadow Triad, then Aqua Grunt (both singles)
+    trainerbattle_single TRAINER_SHADOW_TRIAD_RUSTURF, RusturfTunnel_Text_TriadBattleIntro, RusturfTunnel_Text_TriadDefeat
+    msgbox RusturfTunnel_Text_AquaTriad_TriadAfter, MSGBOX_DEFAULT
+    @ Shadowy figure "vanishes" (described in text)
+    msgbox RusturfTunnel_Text_AquaTriad_TriadVanish, MSGBOX_AUTOCLOSE
+    trainerbattle_single TRAINER_GRUNT_AQUA_RUSTURF, RusturfTunnel_Text_GruntBattleIntro, RusturfTunnel_Text_AquaTriad_GruntDefeat
+    @ After battles
+    msgbox RusturfTunnel_Text_AquaTriad_GruntAfter, MSGBOX_DEFAULT
+	@ Grunt flees; proceed with existing sequence (give goods and Mr. Briney + Peeko)
 	msgbox RusturfTunnel_Text_GruntTakePackage, MSGBOX_DEFAULT
 	giveitem ITEM_DEVON_PARTS
 	closemessage
@@ -337,6 +350,10 @@ RusturfTunnel_EventScript_Grunt::
 	setvar VAR_RUSTBORO_CITY_STATE, 4
 	setvar VAR_BRINEY_HOUSE_STATE, 1
 	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY
+	@ Player's introspective lines
+	msgbox RusturfTunnel_Text_AquaTriad_PlayerThoughts1, MSGBOX_DEFAULT
+	msgbox RusturfTunnel_Text_AquaTriad_PlayerThoughts2, MSGBOX_DEFAULT
+	msgbox RusturfTunnel_Text_AquaTriad_PlayerThoughts3, MSGBOX_DEFAULT
 	release
 	end
 
@@ -419,24 +436,87 @@ RusturfTunnel_EventScript_Mike::
 	end
 
 RusturfTunnel_Text_ComeAndGetSome:
-	.string "What, are you coming?\n"
-	.string "Come and get some, then!$"
+	.string "What, are you coming? Come and\n"
+	.string "get some, then!$"
 
 RusturfTunnel_Text_Peeko:
 	.string "PEEKO: Pii pihyoh!$"
 
 RusturfTunnel_Text_GruntIntro:
-	.string "Grah, keelhaul it all!\p"
-	.string "That hostage POKéMON turned out to\n"
-	.string "be worthless!\p"
-	.string "And to think I made a getaway…\n"
-	.string "In this tunnel to nowhere!\p"
-	.string "Hey! You!\n"
+	.string "Grah, keelhaul it all!\pThat hostage\n"
+	.string "POKéMON turned out to be worthless!\p"
+	.string "And to think I made a getaway... in\n"
+	.string "this tunnel to nowhere!\pHey! You!\n"
 	.string "So you want to battle me?$"
 
 RusturfTunnel_Text_GruntDefeat:
-	.string "Urrrggh! My career in crime comes to\n"
-	.string "a dead end!$"
+	.string "Urrrggh! My career in crime comes\n"
+	.string "to a dead end!$"
+
+// New Aqua + Shadow Triad scene texts
+
+RusturfTunnel_Text_AquaTriad_GruntPackage:
+	.string "AQUA GRUNT: I-I got the package from\n"
+	.string "DEVON, just like you asked!\pBut why\n"
+	.string "are you even here in HOENN...? Boss\n"
+	.string "said nothing about outsiders!$"
+
+RusturfTunnel_Text_AquaTriad_TriadOrders:
+	.string "SHADOW TRIAD: Orders flow from higher\n"
+	.string "than your boss.\pDo not question.\n"
+	.string "Deliver the goods, and vanish.$"
+
+RusturfTunnel_Text_AquaTriad_PlayerInterject:
+	.string "{PLAYER}: Hey! Hand those back--DEVON's\n"
+	.string "property isn't yours to steal!$"
+
+RusturfTunnel_Text_AquaTriad_GruntChallenge:
+	.string "AQUA GRUNT: Tch--why'd you have to show\n"
+	.string "up?\pFine, we'll crush you!$"
+
+RusturfTunnel_Text_AquaTriad_TriadTest:
+	.string "SHADOW TRIAD: Stand aside.\pI'll test\n"
+	.string "their resolve myself.$"
+
+RusturfTunnel_Text_TriadBattleIntro:
+    .string "SHADOW TRIAD challenged you to a battle!$"
+
+RusturfTunnel_Text_TriadDefeat:
+    .string "…!$"
+
+RusturfTunnel_Text_GruntBattleIntro:
+    .string "AQUA GRUNT challenged you to a battle!$"
+
+RusturfTunnel_Text_AquaTriad_GruntDefeat:
+    .string "No way…!$"
+
+RusturfTunnel_Text_AquaTriad_GruntAfter:
+	.string "AQUA GRUNT: No way… Beaten again!\n"
+	.string "The boss isn't gonna like this…$"
+
+RusturfTunnel_Text_AquaTriad_TriadAfter:
+	.string "SHADOW TRIAD: Hmph. Your strength is… unusual.\p"
+	.string "But this is not the time. Not yet.$"
+
+RusturfTunnel_Text_AquaTriad_TriadVanish:
+	.string "The figure slips into the shadows\n"
+	.string "and vanishes.$"
+
+RusturfTunnel_Text_AquaTriad_PlayerThoughts1:
+	.string "{PLAYER}: (Shadow Triad... What were\n"
+	.string "they doing here? And why would AQUA\n"
+	.string "be working with them?)$"
+
+RusturfTunnel_Text_AquaTriad_PlayerThoughts2:
+	.string "{PLAYER}: (...Wait.)\p(Why do I even\n"
+	.string "know what a Shadow Triad is?) (I've\n"
+	.string "never seen them before... have I?)$"
+
+RusturfTunnel_Text_AquaTriad_PlayerThoughts3:
+	.string "{PLAYER}: (These thoughts... they don't\n"
+	.string "feel like mine. Or maybe... I just\n"
+	.string "forgot?)\p(No... now's not the time.\n"
+	.string "I need to return the goods first...)$"
 
 RusturfTunnel_Text_GruntTakePackage:
 	.string "This is plain not right…\p"
@@ -468,16 +548,13 @@ RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
 	.string "PEEKO: Pihyoh!$"
 
 RusturfTunnel_Text_WhyCantTheyKeepDigging:
-	.string "… …\p"
-	.string "Why can't they keep digging?\n"
-	.string "Is the bedrock too hard?\p"
-	.string "My beloved awaits me in VERDANTURF\n"
-	.string "TOWN just beyond here…\p"
-	.string "If RUSTBORO and VERDANTURF were\n"
-	.string "joined by this tunnel, I could visit\l"
-	.string "her every day…\p"
-	.string "But this…\n"
-	.string "What am I to do?$"
+	.string "...\pWhy can't they keep digging? Is\n"
+	.string "the bedrock too hard?\pMy beloved\n"
+	.string "awaits me in VERDANTURF TOWN just\n"
+	.string "beyond here...\pIf RUSTBORO and\n"
+	.string "VERDANTURF were joined by this tunnel,\n"
+	.string "I could visit her every day...\pBut\n"
+	.string "this... What am I to do?$"
 
 RusturfTunnel_Text_ToGetToVerdanturf:
 	.string "To get from RUSTBORO to VERDANTURF,\n"
@@ -503,11 +580,10 @@ RusturfTunnel_Text_WandaReunion:
 	.string "Please, take some rest at my home.$"
 
 RusturfTunnel_Text_BoyfriendOnOtherSideOfRock:
-	.string "On the other side of this rock…\n"
-	.string "My boyfriend is there.\p"
-	.string "He… He's not just digging the tunnel\n"
-	.string "to come see me.\p"
-	.string "He works his hands raw and rough\n"
+	.string "On the other side of this rock... my\n"
+	.string "boyfriend is there.\pHe... He's not\n"
+	.string "just digging the tunnel to come see\n"
+	.string "me. He works his hands raw and rough\n"
 	.string "for the benefit of everyone.$"
 
 RusturfTunnel_Text_MikeIntro:
@@ -524,4 +600,3 @@ RusturfTunnel_Text_MikePostBattle:
 	.string "They halted development here to\n"
 	.string "protect POKéMON, right?\l"
 	.string "There's a feel-good story!$"
-

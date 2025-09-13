@@ -205,7 +205,10 @@
 #define TRAINER_PIC_BF_SWIMMER_M          171
 #define TRAINER_PIC_HORO_SWIMMER_M        172
 
-#define TRAINER_PIC_COUNT                 173
+// Custom: Shadow Triad front pic
+#define TRAINER_PIC_SHADOW_TRIAD          173
+
+#define TRAINER_PIC_COUNT                 174
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

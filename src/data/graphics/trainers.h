@@ -4,6 +4,10 @@
 const u32 gTrainerFrontPic_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker.4bpp.smol");
 const u16 gTrainerPalette_Hiker[] = INCBIN_U16("graphics/trainers/front_pics/hiker.gbapal");
 
+// Shadow Triad custom front pic
+const u32 gTrainerFrontPic_ShadowTriad[] = INCBIN_U32("graphics/trainers/front_pics/shadow_triad.4bpp.smol");
+const u16 gTrainerPalette_ShadowTriad[] = INCBIN_U16("graphics/trainers/front_pics/shadow_triad.gbapal");
+
 const u32 gTrainerFrontPic_AquaGruntM[] = INCBIN_U32("graphics/trainers/front_pics/aqua_grunt_m.4bpp.smol");
 const u16 gTrainerPalette_AquaGruntM[] = INCBIN_U16("graphics/trainers/front_pics/aqua_grunt_m.gbapal");
 
@@ -401,6 +405,8 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_LEAF, gTrainerFrontPic_Leaf, gTrainerPalette_Leaf),
     TRAINER_SPRITE(TRAINER_PIC_RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, gTrainerPalette_RubySapphireBrendan),
     TRAINER_SPRITE(TRAINER_PIC_RS_MAY, gTrainerFrontPic_RubySapphireMay, gTrainerPalette_RubySapphireMay),
+    // Custom
+    TRAINER_SPRITE(TRAINER_PIC_SHADOW_TRIAD, gTrainerFrontPic_ShadowTriad, gTrainerPalette_ShadowTriad),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

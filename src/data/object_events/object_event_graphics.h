@@ -506,6 +506,13 @@ const u32 gObjectEventPic_MovingBox[] = INCBIN_U32("graphics/object_events/pics/
 const u16 gObjectEventPal_MovingBox[] = INCBIN_U16("graphics/object_events/palettes/moving_box.gbapal");
 const u16 gObjectEventPal_RedLeaf[] = INCBIN_U16("graphics/object_events/palettes/red_leaf.gbapal");
 const u32 gObjectEventPic_Red[] = INCBIN_U32("graphics/object_events/pics/people/red.4bpp");
+// RGBY-era Red overworld (walking sheet)
+const u32 gObjectEventPic_RgbyRed[] = INCBIN_U32("graphics/object_events/pics/people/rgby_red/walking.4bpp");
+const u16 gObjectEventPal_RgbyRed[] = INCBIN_U16("graphics/object_events/pics/people/rgby_red/walking.gbapal");
+// Alola-style Red overworld sprite
+const u32 gObjectEventPic_RedAlola[] = INCBIN_U32("graphics/object_events/pics/people/red_alola.4bpp");
+// Palette for Alola Red derived directly from the PNG
+const u16 gObjectEventPal_RedAlola[] = INCBIN_U16("graphics/object_events/pics/people/red_alola.gbapal");
 const u32 gObjectEventPic_Leaf[] = INCBIN_U32("graphics/object_events/pics/people/leaf.4bpp");
 const u16 gObjectEventPal_BirthIslandStone[] = INCBIN_U16("graphics/object_events/palettes/birth_island_stone.gbapal");
 const u32 gObjectEventPic_BirthIslandStone[] = INCBIN_U32("graphics/object_events/pics/misc/birth_island_stone.4bpp");
