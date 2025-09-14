@@ -12,6 +12,11 @@
 #include "constants/moves.h"
 #include "constants/battle.h"
 #include "constants/pokemon.h"
+#include "constants/flags.h"
+
+extern const struct SpeciesInfo gSpeciesInfo[];
+extern u16 SanitizeSpeciesId(u16 species);
+u32 GetGMaxTargetSpecies(u32 species);
 
 static struct Pokemon *sQolMon(void)
 {
@@ -338,5 +343,39 @@ void Script_QoL_Ability_SetHidden(void)
     if (!QoL_TakeMoneyIfEnough(QOL_COST_PER_ACTION)) { VarSet(VAR_RESULT, 2); return; }
     u8 num = 2;
     SetMonData(mon, MON_DATA_ABILITY_NUM, &num);
+    VarSet(VAR_RESULT, 1);
+}
+
+/* ==================== Dynamax / Gigantamax ==================== */
+
+void Script_QoL_SetDynamaxLevelMax(void)
+{
+    struct Pokemon *mon = sQolMon();
+    if (MonInvalidForEdit(mon)) { VarSet(VAR_RESULT, 0); return; }
+    u8 cur = GetMonData(mon, MON_DATA_DYNAMAX_LEVEL, NULL);
+    if (cur >= MAX_DYNAMAX_LEVEL) { VarSet(VAR_RESULT, 0); return; }
+    if (!QoL_TakeMoneyIfEnough(QOL_COST_PER_ACTION)) { VarSet(VAR_RESULT, 2); return; }
+    u8 lvl = MAX_DYNAMAX_LEVEL;
+    SetMonData(mon, MON_DATA_DYNAMAX_LEVEL, &lvl);
+    VarSet(VAR_RESULT, 1);
+}
+
+void Script_QoL_EnableGigantamaxFactor(void)
+{
+    struct Pokemon *mon = sQolMon();
+    if (MonInvalidForEdit(mon)) { VarSet(VAR_RESULT, 0); return; }
+
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    // Vanilla behavior blocks Mythical mons (e.g., Melmetal).
+    if (gSpeciesInfo[SanitizeSpeciesId(species)].isMythical) { VarSet(VAR_RESULT, 0); return; }
+
+    // Only charge/apply if it actually changes something and the mon can G-Max.
+    if (GetGMaxTargetSpecies(species) == species) { VarSet(VAR_RESULT, 0); return; }
+
+    bool32 has = GetMonData(mon, MON_DATA_GIGANTAMAX_FACTOR, NULL);
+    if (has) { VarSet(VAR_RESULT, 0); return; }
+    if (!QoL_TakeMoneyIfEnough(QOL_COST_PER_ACTION)) { VarSet(VAR_RESULT, 2); return; }
+    has = TRUE;
+    SetMonData(mon, MON_DATA_GIGANTAMAX_FACTOR, &has);
     VarSet(VAR_RESULT, 1);
 }

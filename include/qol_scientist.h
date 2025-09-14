@@ -64,3 +64,7 @@ void Script_QoL_SetHiddenPowerType(void);    // VAR_0x8000 = TYPE_FIGHTING..TYPE
 void Script_QoL_Ability_SetNormal(void);     // VAR_0x8000 = 0 or 1
 void Script_QoL_Ability_SetHidden(void);
 void Script_QoL_Ability_Toggle(void);
+
+// Dynamax / Gigantamax services
+void Script_QoL_SetDynamaxLevelMax(void);    // Set selected mon's Dynamax Level to MAX_DYNAMAX_LEVEL
+void Script_QoL_EnableGigantamaxFactor(void); // Enable G-Max Factor if applicable

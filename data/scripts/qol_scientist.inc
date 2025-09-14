@@ -8,7 +8,7 @@ EventScript_QoLScientist::
 
 .MainLoop:
     closemessage
-    multichoice 15, 1, MULTI_QOL_MAIN, FALSE
+    multichoice 15, 1, MULTI_QOL_MAIN_PG1, FALSE
     switch VAR_RESULT
         case 0, .DoNature
         case 1, .DoEVs
@@ -17,7 +17,20 @@ EventScript_QoLScientist::
         case 4, .DoBall
         case 5, .DoHidden
         case 6, .DoTera
-        case 7, .End
+        case 7, .MainLoop2   @ NEXT >
+        case 8, .End         @ Exit
+        case MULTI_B_PRESSED, .MainLoop
+        goto .MainLoop
+
+.MainLoop2:
+    closemessage
+    multichoice 15, 1, MULTI_QOL_MAIN_PG2, FALSE
+    switch VAR_RESULT
+        case 0, .DoDmax
+        case 1, .DoGmax
+        case 2, .MainLoop    @ < BACK
+        case 3, .End         @ Exit
+        case MULTI_B_PRESSED, .MainLoop
         goto .MainLoop
 
 .DoNature:
@@ -604,6 +617,25 @@ EventScript_QoLScientist::
 .End:
 	release
 	end
+.DoDmax:
+    msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
+    special ChoosePartyMon
+    waitstate
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
+    copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_SetDynamaxLevelMax
+    call .ResultMsg
+    goto .MainLoop
+
+.DoGmax:
+    msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
+    special ChoosePartyMon
+    waitstate
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, .MainLoop
+    copyvar VAR_0x8006, VAR_0x8004
+    callnative Script_QoL_EnableGigantamaxFactor
+    call .ResultMsg
+    goto .MainLoop
 .DoAbility:
     msgbox gText_QoLChooseMon, MSGBOX_DEFAULT
     special ChoosePartyMon
