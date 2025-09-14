@@ -131,6 +131,9 @@
 #define MULTI_QOL_STATS                    118
 #define MULTI_QOL_BALLS                    119
 #define MULTI_QOL_NATURES                  120
+// QoL Scientist main split pages
+#define MULTI_QOL_MAIN_PG1                 121
+#define MULTI_QOL_MAIN_PG2                 122
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

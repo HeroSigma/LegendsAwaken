@@ -611,6 +611,28 @@ static const struct MenuAction MultichoiceList_QoL_Main[] =
     { gText_Exit },
 };
 
+// Split QoL main into 2 pages to reduce clutter
+static const struct MenuAction MultichoiceList_QoL_Main_Pg1[] =
+{
+    { COMPOUND_STRING("NATURE") },
+    { COMPOUND_STRING("EVs") },
+    { COMPOUND_STRING("IVs") },
+    { COMPOUND_STRING("ABILITY") },
+    { COMPOUND_STRING("POKé BALL") },
+    { COMPOUND_STRING("HIDDEN POWER") },
+    { COMPOUND_STRING("TERA TYPE") },
+    { COMPOUND_STRING("NEXT >") },
+    { gText_Exit },
+};
+
+static const struct MenuAction MultichoiceList_QoL_Main_Pg2[] =
+{
+    { COMPOUND_STRING("DYNAMAX LV. 10") },
+    { COMPOUND_STRING("ENABLE G-MAX FACTOR") },
+    { COMPOUND_STRING("< BACK") },
+    { gText_Exit },
+};
+
 static const struct MenuAction MultichoiceList_QoL_EVs[] =
 {
     { COMPOUND_STRING("Preset by nature") },
@@ -977,6 +999,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_QOL_STATS]                  = MULTICHOICE(MultichoiceList_QoL_Stats),
     [MULTI_QOL_BALLS]                  = MULTICHOICE(MultichoiceList_QoL_Balls),
     [MULTI_QOL_NATURES]                = MULTICHOICE(MultichoiceList_QoL_Natures),
+    [MULTI_QOL_MAIN_PG1]               = MULTICHOICE(MultichoiceList_QoL_Main_Pg1),
+    [MULTI_QOL_MAIN_PG2]               = MULTICHOICE(MultichoiceList_QoL_Main_Pg2),
 };
 
 const u8 *const gStdStrings[] =

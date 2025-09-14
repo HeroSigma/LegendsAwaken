@@ -93,8 +93,14 @@ COMMON_DATA bool8 (*gMenuCallback)(void) = NULL;
 EWRAM_DATA static u8 sSafariBallsWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
-EWRAM_DATA static u8 sNumStartMenuActions = 0;
+EWRAM_DATA static u8 sNumStartMenuActions = 0;          // total actions across all pages
 EWRAM_DATA static u8 sCurrentStartMenuActions[11] = {0};
+// Pagination state
+EWRAM_DATA static u8 sStartMenuPage = 0;                 // current page index
+EWRAM_DATA static u8 sStartMenuActionsPerPage = 0;       // max actions visible per page (set at runtime)
+EWRAM_DATA static u8 sStartMenuPageCount = 0;            // total number of pages (computed)
+EWRAM_DATA static u8 sStartMenuFirstIndex = 0;           // starting index in list for current page
+EWRAM_DATA static u8 sStartMenuActionsOnPage = 0;        // number of actions on current page
 EWRAM_DATA static s8 sInitStartMenuData[2] = {0};
 
 EWRAM_DATA static u8 (*sSaveDialogCallback)(void) = NULL;
@@ -334,6 +340,22 @@ static void BuildStartMenuActions(void)
         else
             BuildNormalStartMenu();
     }
+
+    // Compute pagination after building the full list
+    if (sStartMenuActionsPerPage == 0)
+        sStartMenuActionsPerPage = 7;
+
+    sStartMenuPageCount = (sNumStartMenuActions + sStartMenuActionsPerPage - 1) / sStartMenuActionsPerPage;
+    if (sStartMenuPage >= sStartMenuPageCount)
+        sStartMenuPage = 0;
+
+    sStartMenuFirstIndex = sStartMenuPage * sStartMenuActionsPerPage;
+    if (sStartMenuFirstIndex > sNumStartMenuActions)
+        sStartMenuFirstIndex = 0;
+
+    sStartMenuActionsOnPage = sNumStartMenuActions - sStartMenuFirstIndex;
+    if (sStartMenuActionsOnPage > sStartMenuActionsPerPage)
+        sStartMenuActionsOnPage = sStartMenuActionsPerPage;
 }
 
 static void AddStartMenuAction(u8 action)
@@ -362,7 +384,6 @@ static void BuildNormalStartMenu(void)
     AddStartMenuAction(MENU_ACTION_STORE);
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_QUEST_MENU);
-    AddStartMenuAction(MENU_ACTION_STORE);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
 }
@@ -464,7 +485,8 @@ static void BuildMultiPartnerRoomStartMenu(void)
 
 static void ShowSafariBallsWindow(void)
 {
-    sSafariBallsWindowId = AddWindow(&sWindowTemplate_SafariBalls);
+    if (sSafariBallsWindowId == WINDOW_NONE)
+        sSafariBallsWindowId = AddWindow(&sWindowTemplate_SafariBalls);
     PutWindowTilemap(sSafariBallsWindowId);
     DrawStdWindowFrame(sSafariBallsWindowId, FALSE);
     ConvertIntToDecimalStringN(gStringVar1, gNumSafariBalls, STR_CONV_MODE_RIGHT_ALIGN, 2);
@@ -475,10 +497,13 @@ static void ShowSafariBallsWindow(void)
 
 static void ShowPyramidFloorWindow(void)
 {
-    if (gSaveBlock2Ptr->frontier.curChallengeBattleNum == FRONTIER_STAGES_PER_CHALLENGE)
-        sBattlePyramidFloorWindowId = AddWindow(&sWindowTemplate_PyramidPeak);
-    else
-        sBattlePyramidFloorWindowId = AddWindow(&sWindowTemplate_PyramidFloor);
+    if (sBattlePyramidFloorWindowId == WINDOW_NONE)
+    {
+        if (gSaveBlock2Ptr->frontier.curChallengeBattleNum == FRONTIER_STAGES_PER_CHALLENGE)
+            sBattlePyramidFloorWindowId = AddWindow(&sWindowTemplate_PyramidPeak);
+        else
+            sBattlePyramidFloorWindowId = AddWindow(&sWindowTemplate_PyramidFloor);
+    }
 
     PutWindowTilemap(sBattlePyramidFloorWindowId);
     DrawStdWindowFrame(sBattlePyramidFloorWindowId, FALSE);
@@ -495,32 +520,38 @@ static void RemoveExtraStartMenuWindows(void)
         ClearStdWindowAndFrameToTransparent(sSafariBallsWindowId, FALSE);
         CopyWindowToVram(sSafariBallsWindowId, COPYWIN_GFX);
         RemoveWindow(sSafariBallsWindowId);
+        sSafariBallsWindowId = WINDOW_NONE;
     }
     if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
     {
         ClearStdWindowAndFrameToTransparent(sBattlePyramidFloorWindowId, FALSE);
         RemoveWindow(sBattlePyramidFloorWindowId);
+        sBattlePyramidFloorWindowId = WINDOW_NONE;
     }
 }
 
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
 {
-    s8 index = *pIndex;
+    // Prints actions for the current page only
+    s8 index = *pIndex;                  // index within page [0..sStartMenuActionsOnPage)
 
     do
     {
-        if (sStartMenuItems[sCurrentStartMenuActions[index]].func.u8_void == StartMenuPlayerNameCallback)
+        u8 globalIndex = sStartMenuFirstIndex + index;
+        u8 actionId = sCurrentStartMenuActions[globalIndex];
+
+        if (sStartMenuItems[actionId].func.u8_void == StartMenuPlayerNameCallback)
         {
-            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[index]].text, 8, (index << 4) + 9);
+            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[actionId].text, 8, (index << 4) + 9);
         }
         else
         {
-            StringExpandPlaceholders(gStringVar4, sStartMenuItems[sCurrentStartMenuActions[index]].text);
+            StringExpandPlaceholders(gStringVar4, sStartMenuItems[actionId].text);
             AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, (index << 4) + 9, TEXT_SKIP_DRAW, NULL);
         }
 
         index++;
-        if (index >= sNumStartMenuActions)
+        if (index >= sStartMenuActionsOnPage)
         {
             *pIndex = index;
             return TRUE;
@@ -549,8 +580,8 @@ static bool32 InitStartMenuStep(void)
         break;
     case 2:
         LoadMessageBoxAndBorderGfx();
-        DrawStdWindowFrame(AddStartMenuWindow(sNumStartMenuActions), FALSE);
-        sInitStartMenuData[1] = 0;
+        DrawStdWindowFrame(AddStartMenuWindow(sStartMenuActionsOnPage), FALSE);
+        sInitStartMenuData[1] = 0; // index within current page
         sInitStartMenuData[0]++;
         break;
     case 3:
@@ -565,7 +596,9 @@ static bool32 InitStartMenuStep(void)
             sInitStartMenuData[0]++;
         break;
     case 5:
-        sStartMenuCursorPos = InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, sNumStartMenuActions, sStartMenuCursorPos);
+        if (sStartMenuCursorPos >= sStartMenuActionsOnPage)
+            sStartMenuCursorPos = sStartMenuActionsOnPage ? (sStartMenuActionsOnPage - 1) : 0;
+        sStartMenuCursorPos = InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, sStartMenuActionsOnPage, sStartMenuCursorPos);
         CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
         return TRUE;
     }
@@ -622,6 +655,8 @@ void Task_ShowStartMenu(u8 taskId)
     switch(task->data[0])
     {
     case 0:
+        // Initialize per-open state
+        sStartMenuPage = 0;
         if (InUnionRoom() == TRUE)
             SetUsingUnionRoomStartMenu();
 
@@ -643,6 +678,10 @@ void ShowStartMenu(void)
         PlayerFreeze();
         StopPlayerAvatar();
     }
+    // Reset to first page and clear aux window ids each time the menu is opened
+    sStartMenuPage = 0;
+    sSafariBallsWindowId = WINDOW_NONE;
+    sBattlePyramidFloorWindowId = WINDOW_NONE;
     CreateStartMenuTask(Task_ShowStartMenu);
     LockPlayerFieldControls();
 }
@@ -664,16 +703,17 @@ static bool8 HandleStartMenuInput(void)
     if (JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_SELECT);
-        if (sStartMenuItems[sCurrentStartMenuActions[sStartMenuCursorPos]].func.u8_void == StartMenuPokedexCallback)
+        u8 globalIndex = sStartMenuFirstIndex + sStartMenuCursorPos;
+        if (sStartMenuItems[sCurrentStartMenuActions[globalIndex]].func.u8_void == StartMenuPokedexCallback)
         {
             if (GetNationalPokedexCount(FLAG_GET_SEEN) == 0)
                 return FALSE;
         }
-        if (sCurrentStartMenuActions[sStartMenuCursorPos] == MENU_ACTION_DEXNAV
+        if (sCurrentStartMenuActions[globalIndex] == MENU_ACTION_DEXNAV
           && MapHasNoEncounterData())
             return FALSE;
 
-        gMenuCallback = sStartMenuItems[sCurrentStartMenuActions[sStartMenuCursorPos]].func.u8_void;
+        gMenuCallback = sStartMenuItems[sCurrentStartMenuActions[globalIndex]].func.u8_void;
 
         if (gMenuCallback != StartMenuSaveCallback
             && gMenuCallback != StartMenuExitCallback
@@ -684,6 +724,33 @@ static bool8 HandleStartMenuInput(void)
            FadeScreen(FADE_TO_BLACK, 0);
         }
 
+        return FALSE;
+    }
+
+    // Page navigation with L/R
+    if (JOY_NEW(R_BUTTON))
+    {
+        if (sStartMenuPage + 1 < sStartMenuPageCount)
+        {
+            PlaySE(SE_SELECT);
+            sStartMenuPage++;
+            sStartMenuCursorPos = 0;
+            InitStartMenu();
+            gMenuCallback = HandleStartMenuInput;
+        }
+        return FALSE;
+    }
+
+    if (JOY_NEW(L_BUTTON))
+    {
+        if (sStartMenuPage > 0)
+        {
+            PlaySE(SE_SELECT);
+            sStartMenuPage--;
+            sStartMenuCursorPos = 0;
+            InitStartMenu();
+            gMenuCallback = HandleStartMenuInput;
+        }
         return FALSE;
     }
 
