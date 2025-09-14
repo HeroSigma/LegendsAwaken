@@ -10044,6 +10044,8 @@ bool32 CanMegaEvolve(u32 battler)
     if (HasTrainerUsedGimmick(battler, GIMMICK_MEGA))
         return FALSE;
 
+    // Z-Moves are blocked while Mega is active via active gimmick check elsewhere.
+
     // Check if battler has another gimmick active.
     if (GetActiveGimmick(battler) != GIMMICK_NONE)
         return FALSE;

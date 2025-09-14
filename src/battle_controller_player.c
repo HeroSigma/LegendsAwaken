@@ -779,6 +779,66 @@ void HandleInputChooseMove(u32 battler)
             TryToHideMoveInfoWindow();
         }
     }
+    // While holding START, use DPAD to cycle between available gimmicks
+    else if ((JOY_HELD(START_BUTTON)) && (JOY_NEW(DPAD_LEFT) || JOY_NEW(DPAD_RIGHT) || JOY_NEW(DPAD_UP) || JOY_NEW(DPAD_DOWN)))
+    {
+        s8 dir = (JOY_NEW(DPAD_LEFT) || JOY_NEW(DPAD_UP)) ? -1 : 1;
+        // Helper: try cycle to next/prev usable gimmick
+        // Candidates are cycled in a fixed order; we skip ones that cannot currently be activated.
+        enum Gimmick order[] = { GIMMICK_MEGA, GIMMICK_Z_MOVE, GIMMICK_DYNAMAX, GIMMICK_TERA, GIMMICK_ULTRA_BURST };
+        const u32 orderLen = ARRAY_COUNT(order);
+        u32 i;
+        // Find current position in order; default to first if none
+        u32 cur = 0;
+        for (i = 0; i < orderLen; i++)
+        {
+            if (order[i] == gBattleStruct->gimmick.usableGimmick[battler])
+            {
+                cur = i;
+                break;
+            }
+        }
+
+        // Walk through list to find next activatable gimmick
+        for (i = 0; i < orderLen; i++)
+        {
+            s32 next = (s32)cur + (dir > 0 ? (s32)(i + 1) : -((s32)(i + 1)));
+            while (next < 0)
+                next += orderLen;
+            next %= orderLen;
+            enum Gimmick cand = order[next];
+
+            if (cand == GIMMICK_NONE)
+                continue;
+            if (!CanActivateGimmick(battler, cand))
+                continue;
+
+            // If cycling to Z-Move, ensure current move can be Z-ed
+            if (cand == GIMMICK_Z_MOVE)
+            {
+                u16 move = moveInfo->moves[gMoveSelectionCursor[battler]];
+                if (GetUsableZMove(battler, move) == MOVE_NONE)
+                    continue;
+            }
+
+            // Found a valid candidate: apply it
+            gBattleStruct->gimmick.usableGimmick[battler] = cand;
+            gBattleStruct->gimmick.playerSelect = TRUE; // Select the gimmick while cycling
+            // Recreate trigger sprite to swap art for new gimmick
+            DestroyGimmickTriggerSprite();
+            CreateGimmickTriggerSprite(battler);
+            ChangeGimmickTriggerSprite(gBattleStruct->gimmick.triggerSpriteId, TRUE);
+            // Update Z-UI if needed
+            if (cand == GIMMICK_Z_MOVE)
+                TryChangeZTrigger(battler, gMoveSelectionCursor[battler]);
+            else
+                gBattleStruct->zmove.viewing = FALSE;
+
+            ReloadMoveNames(battler);
+            PlaySE(SE_SELECT);
+            break;
+        }
+    }
     else if (JOY_NEW(DPAD_LEFT) && !gBattleStruct->zmove.viewing)
     {
         if (gMoveSelectionCursor[battler] & 1)
