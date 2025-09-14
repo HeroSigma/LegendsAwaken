@@ -362,6 +362,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Misty;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Erika;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Koga;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sabrina;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ShadowTriad;
 // Additional DP generic externs
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Youngster;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DP_Camper;
@@ -731,6 +732,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ERIKA] =                    &gObjectEventGraphicsInfo_Erika,
     [OBJ_EVENT_GFX_KOGA] =                     &gObjectEventGraphicsInfo_Koga,
     [OBJ_EVENT_GFX_SABRINA] =                  &gObjectEventGraphicsInfo_Sabrina,
+    [OBJ_EVENT_GFX_SHADOW_TRIAD] =             &gObjectEventGraphicsInfo_ShadowTriad,
     [OBJ_EVENT_GFX_SP_YOUNGSTER] =             &gObjectEventGraphicsInfo_SP_Youngster,
     [OBJ_EVENT_GFX_SP_FISHERMAN] =             &gObjectEventGraphicsInfo_SP_Fisherman,
     [OBJ_EVENT_GFX_SP_GENTLEMAN] =             &gObjectEventGraphicsInfo_SP_Gentleman,

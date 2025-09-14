@@ -9,8 +9,9 @@ RusturfTunnel_OnFrame:
 	.2byte 0
 
 RusturfTunnel_OnTransition:
-	call_if_eq VAR_RUSTURF_TUNNEL_STATE, 2, RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos
-	end
+    call_if_eq VAR_RUSTURF_TUNNEL_STATE, 2, RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos
+    removeobject LOCALID_RUSTURF_TUNNEL_TRIAD
+    end
 
 RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos::
 	setobjectxyperm LOCALID_RUSTURF_TUNNEL_PEEKO, 13, 4
@@ -297,21 +298,23 @@ RusturfTunnel_EventScript_Peeko::
 	end
 
 RusturfTunnel_EventScript_Grunt::
-	lock
-	faceplayer
-	playbgm MUS_ENCOUNTER_AQUA, FALSE
-	@ Pre-battle scene: Aqua Grunt arguing with a shadowy figure
-	msgbox RusturfTunnel_Text_AquaTriad_GruntPackage, MSGBOX_DEFAULT
+    lock
+    faceplayer
+    playbgm MUS_ENCOUNTER_AQUA, FALSE
+    @ Ensure the shadowy figure is present for the scene
+    addobject LOCALID_RUSTURF_TUNNEL_TRIAD
+    @ Pre-battle scene: Aqua Grunt arguing with a shadowy figure
+    msgbox RusturfTunnel_Text_AquaTriad_GruntPackage, MSGBOX_DEFAULT
 	msgbox RusturfTunnel_Text_AquaTriad_TriadOrders, MSGBOX_DEFAULT
 	msgbox RusturfTunnel_Text_AquaTriad_PlayerInterject, MSGBOX_DEFAULT
 	msgbox RusturfTunnel_Text_AquaTriad_GruntChallenge, MSGBOX_DEFAULT
 	msgbox RusturfTunnel_Text_AquaTriad_TriadTest, MSGBOX_DEFAULT
-    @ Battles: First Shadow Triad, then Aqua Grunt (both singles)
-    trainerbattle_single TRAINER_SHADOW_TRIAD_RUSTURF, RusturfTunnel_Text_TriadBattleIntro, RusturfTunnel_Text_TriadDefeat
+    @ Battle only Aqua Grunt while Shadow Triad watches
+    trainerbattle_single TRAINER_GRUNT_AQUA_RUSTURF, RusturfTunnel_Text_GruntBattleIntro, RusturfTunnel_Text_AquaTriad_GruntDefeat
     msgbox RusturfTunnel_Text_AquaTriad_TriadAfter, MSGBOX_DEFAULT
     @ Shadowy figure "vanishes" (described in text)
     msgbox RusturfTunnel_Text_AquaTriad_TriadVanish, MSGBOX_AUTOCLOSE
-    trainerbattle_single TRAINER_GRUNT_AQUA_RUSTURF, RusturfTunnel_Text_GruntBattleIntro, RusturfTunnel_Text_AquaTriad_GruntDefeat
+    removeobject LOCALID_RUSTURF_TUNNEL_TRIAD
     @ After battles
     msgbox RusturfTunnel_Text_AquaTriad_GruntAfter, MSGBOX_DEFAULT
 	@ Grunt flees; proceed with existing sequence (give goods and Mr. Briney + Peeko)
@@ -475,14 +478,14 @@ RusturfTunnel_Text_AquaTriad_GruntChallenge:
 	.string "up?\pFine, we'll crush you!$"
 
 RusturfTunnel_Text_AquaTriad_TriadTest:
-	.string "SHADOW TRIAD: Stand aside.\pI'll test\n"
-	.string "their resolve myself.$"
+	.string "SHADOW TRIAD: Stand aside.\pWe will\n"
+	.string "observe. You, Grunt--test them.$"
 
 RusturfTunnel_Text_TriadBattleIntro:
-    .string "SHADOW TRIAD challenged you to a battle!$"
+    .string "SHADOW TRIAD watches silently from the shadows.$"
 
 RusturfTunnel_Text_TriadDefeat:
-    .string "…!$"
+    .string "(unused)$"
 
 RusturfTunnel_Text_GruntBattleIntro:
     .string "AQUA GRUNT challenged you to a battle!$"
@@ -496,11 +499,11 @@ RusturfTunnel_Text_AquaTriad_GruntAfter:
 
 RusturfTunnel_Text_AquaTriad_TriadAfter:
 	.string "SHADOW TRIAD: Hmph. Your strength is… unusual.\p"
-	.string "But this is not the time. Not yet.$"
+	.string "We have seen enough. Not yet…$"
 
 RusturfTunnel_Text_AquaTriad_TriadVanish:
-	.string "The figure slips into the shadows\n"
-	.string "and vanishes.$"
+	.string "The shadowy figure slips back into the\n"
+	.string "darkness and vanishes.$"
 
 RusturfTunnel_Text_AquaTriad_PlayerThoughts1:
 	.string "{PLAYER}: (Shadow Triad... What were\n"

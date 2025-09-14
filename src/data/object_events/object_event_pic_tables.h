@@ -671,6 +671,11 @@ static const struct SpriteFrameImage sPicTable_Erika[]    = { overworld_ascendin
 static const struct SpriteFrameImage sPicTable_Koga[]     = { overworld_ascending_frames(gObjectEventPic_Koga, 2, 4), };
 static const struct SpriteFrameImage sPicTable_Sabrina[]  = { overworld_ascending_frames(gObjectEventPic_Sabrina, 2, 4), };
 
+// Shadow Triad (standard 2x4 people sprite)
+static const struct SpriteFrameImage sPicTable_ShadowTriad[] = {
+    overworld_ascending_frames(gObjectEventPic_ShadowTriad, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_MayUnderwater[] = {
     overworld_frame(gObjectEventPic_MayUnderwater, 4, 4, 0),
     overworld_frame(gObjectEventPic_MayUnderwater, 4, 4, 1),

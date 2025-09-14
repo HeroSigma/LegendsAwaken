@@ -479,11 +479,12 @@
 #define OBJ_EVENT_GFX_ERIKA                      430
 #define OBJ_EVENT_GFX_KOGA                       431
 #define OBJ_EVENT_GFX_SABRINA                    432
+#define OBJ_EVENT_GFX_SHADOW_TRIAD               434
 
 // Final total count
 #define OBJ_EVENT_GFX_RED_ALOLA                  433
 
-#define NUM_OBJ_EVENT_GFX                        434
+#define NUM_OBJ_EVENT_GFX                        435
 
 
 // These are dynamic object gfx ids.
@@ -734,6 +735,8 @@
 #define OBJ_EVENT_PAL_TAG_ERIKA                   0x11D4
 #define OBJ_EVENT_PAL_TAG_KOGA                    0x11D5
 #define OBJ_EVENT_PAL_TAG_SABRINA                 0x11D6
+// Custom: Shadow Triad palette
+#define OBJ_EVENT_PAL_TAG_SHADOW_TRIAD            0x11D7
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

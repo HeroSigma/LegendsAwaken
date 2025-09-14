@@ -62,6 +62,8 @@
 #include "wild_encounter.h"
 #include "window.h"
 #include "constants/abilities.h"
+// Level cap utilities
+#include "caps.h"
 #include "constants/battle_ai.h"
 #include "constants/battle_move_effects.h"
 #include "constants/battle_string_ids.h"
@@ -1936,7 +1938,17 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 otIdType = OT_ID_PRESET;
                 fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
             }
-            CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            {
+                u8 level = partyData[monIndex].lvl;
+#if B_TRAINER_LEVEL_OVERRIDE
+                {
+                    u8 cap = GetCurrentLevelCap();
+                    if (level < cap)
+                        level = cap; // Raise under-cap mons to cap; leave higher levels unchanged
+                }
+#endif
+                CreateMon(&party[i], partyData[monIndex].species, level, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            }
             SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[monIndex].heldItem);
 
             CustomTrainerPartyAssignMoves(&party[i], &partyData[monIndex]);

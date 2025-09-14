@@ -30,4 +30,17 @@
 
 #define B_EV_ITEMS_CAP                  FALSE // If set to true, EV-boosting items can't be used to go over the EV cap
 
+// Trainer Level Cap
+// If TRUE, trainer Pokémon below the current level cap (GetCurrentLevelCap)
+// are raised up to the cap. Pokémon already at/above the cap keep their level.
+// This affects regular (non-facility) trainer battles and ignores the level set
+// in `trainers.party` only when it is below the cap.
+#define B_TRAINER_LEVEL_OVERRIDE        TRUE
+
+// Wild Level Cap
+// If TRUE, wild Pokémon levels from standard encounter tables (land/water/rock/fishing)
+// are overridden to the current level cap returned by GetCurrentLevelCap(). This ignores
+// levels declared in `src/data/wild_encounters.json`.
+#define B_WILD_LEVEL_OVERRIDE           TRUE
+
 #endif /* GUARD_CONFIG_CAPS_H */

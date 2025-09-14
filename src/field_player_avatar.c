@@ -862,7 +862,8 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     gPlayerAvatar.creeping = FALSE;
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
     {
-        if (FlagGet(FLAG_DEXNAV_SEARCHING) && (heldKeys & A_BUTTON))
+        // During a DexNav search, always creep (no A button required)
+        if (FlagGet(FLAG_DEXNAV_SEARCHING))
         {
             gPlayerAvatar.creeping = TRUE;
             PlayerWalkSlow(direction);
@@ -880,7 +881,8 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
      && FlagGet(FLAG_SYS_B_DASH)
      && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0 
      && !FollowerNPCComingThroughDoor() 
-     && (I_ORAS_DOWSING_FLAG == 0 || (I_ORAS_DOWSING_FLAG != 0 && !FlagGet(I_ORAS_DOWSING_FLAG))))
+     && (I_ORAS_DOWSING_FLAG == 0 || (I_ORAS_DOWSING_FLAG != 0 && !FlagGet(I_ORAS_DOWSING_FLAG)))
+     && !FlagGet(FLAG_DEXNAV_SEARCHING)) // Disable running while DexNav searching
     {
         if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
             PlayerRunSlow(direction);
@@ -890,7 +892,7 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
         return;
     }
-    else if (FlagGet(FLAG_DEXNAV_SEARCHING) && (heldKeys & A_BUTTON))
+    else if (FlagGet(FLAG_DEXNAV_SEARCHING))
     {
         gPlayerAvatar.creeping = TRUE;
         PlayerWalkSlow(direction);

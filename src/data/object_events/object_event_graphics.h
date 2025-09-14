@@ -686,3 +686,7 @@ const u32 gObjectEventPic_DP_Sailor[]         = INCBIN_U32("graphics/object_even
 const u32 gObjectEventPic_DP_Scientist[]      = INCBIN_U32("graphics/object_events/pics/people/DP_scientist.4bpp");
 const u32 gObjectEventPic_DP_SwimmerF[]       = INCBIN_U32("graphics/object_events/pics/people/DP_swimmer_f.4bpp");
 const u32 gObjectEventPic_DP_SwimmerM[]       = INCBIN_U32("graphics/object_events/pics/people/DP_swimmer_m.4bpp");
+
+// Shadow Triad (custom OW)
+const u32 gObjectEventPic_ShadowTriad[]       = INCBIN_U32("graphics/object_events/pics/people/shadow_triad.4bpp");
+const u16 gObjectEventPal_ShadowTriad[]       = INCBIN_U16("graphics/object_events/palettes/shadow_triad.gbapal");

@@ -6,7 +6,8 @@ const u16 gTrainerPalette_Hiker[] = INCBIN_U16("graphics/trainers/front_pics/hik
 
 // Shadow Triad custom front pic
 const u32 gTrainerFrontPic_ShadowTriad[] = INCBIN_U32("graphics/trainers/front_pics/shadow_triad.4bpp.smol");
-const u16 gTrainerPalette_ShadowTriad[] = INCBIN_U16("graphics/trainers/front_pics/shadow_triad.gbapal");
+// Use Ninja Boy palette for now (proper 16-color). Replace when a 16c palette is provided.
+const u16 gTrainerPalette_ShadowTriad[] = INCBIN_U16("graphics/trainers/front_pics/ninja_boy.gbapal");
 
 const u32 gTrainerFrontPic_AquaGruntM[] = INCBIN_U32("graphics/trainers/front_pics/aqua_grunt_m.4bpp.smol");
 const u16 gTrainerPalette_AquaGruntM[] = INCBIN_U16("graphics/trainers/front_pics/aqua_grunt_m.gbapal");
