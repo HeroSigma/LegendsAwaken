@@ -15,23 +15,17 @@ GraniteCave_StevensRoom_OnResume:
 GraniteCave_StevensRoom_EventScript_Steven::
 	lock
 	faceplayer
-	msgbox GraniteCave_StevensRoom_Text_ImStevenLetterForMe, MSGBOX_DEFAULT
+	msgbox GraniteCave_StevensRoom_Text_StevenCarvingsGreeting, MSGBOX_DEFAULT
+	msgbox GraniteCave_StevensRoom_Text_PlayerDeliverLine, MSGBOX_DEFAULT
 	setvar VAR_0x8004, ITEM_LETTER
 	call Common_EventScript_PlayerHandedOverTheItem
 	setflag FLAG_DELIVERED_STEVEN_LETTER
-	msgbox GraniteCave_StevensRoom_Text_ThankYouTakeThis, MSGBOX_DEFAULT
+	msgbox GraniteCave_StevensRoom_Text_StevenDevonSilphRifts, MSGBOX_DEFAULT
 	giveitem ITEM_TM_STEEL_WING
 	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
-	msgbox GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister, MSGBOX_DEFAULT
-	closemessage
-	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox GraniteCave_StevensRoom_Text_RegisteredSteven, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
+	msgbox GraniteCave_StevensRoom_Text_SteelWingGift, MSGBOX_DEFAULT
 	setflag FLAG_REGISTERED_STEVEN_POKENAV
-	msgbox GraniteCave_StevensRoom_Text_IveGotToHurryAlong, MSGBOX_DEFAULT
+	msgbox GraniteCave_StevensRoom_Text_StevenJourneyForeshadow, MSGBOX_DEFAULT
 	closemessage
 	call_if_eq VAR_FACING, DIR_NORTH, GraniteCave_StevensRoom_EventScript_StevenExitNorth
 	call_if_eq VAR_FACING, DIR_SOUTH, GraniteCave_StevensRoom_EventScript_StevenExitSouth
@@ -39,6 +33,7 @@ GraniteCave_StevensRoom_EventScript_Steven::
 	call_if_eq VAR_FACING, DIR_EAST, GraniteCave_StevensRoom_EventScript_StevenExitWestEast
 	playse SE_EXIT
 	removeobject LOCALID_GRANITE_CAVE_STEVEN
+	msgbox GraniteCave_StevensRoom_Text_PlayerThoughtFather, MSGBOX_DEFAULT
 	release
 	end
 
@@ -135,41 +130,53 @@ GraniteCave_StevensRoom_Movement_StevenExitSouth:
 	delay_8
 	step_end
 
-GraniteCave_StevensRoom_Text_ImStevenLetterForMe:
-	.string "My name is STEVEN.\p"
-	.string "I'm interested in rare stones,\n"
-	.string "so I travel here and there.\p"
-	.string "Oh?\n"
-	.string "A LETTER for me?$"
+GraniteCave_StevensRoom_Text_StevenCarvingsGreeting:
+	.string "{COLOR BLUE}STEVEN:\n"
+	.string "Remarkable... These carvings predate\n"
+	.string "even Hoenn's first records.\p"
+	.string "They speak of distortions--tears in\n"
+	.string "the fabric of reality itself.\p"
+	.string "Ah. You must be {PLAYER}.\p"
+	.string "BIRCH mentioned you, but I didn't\n"
+	.string "expect you so soon.$"
 
-GraniteCave_StevensRoom_Text_ThankYouTakeThis:
-	.string "STEVEN: Okay, thank you.\p"
-	.string "You went through all this trouble to\n"
-	.string "deliver that. I need to thank you.\p"
-	.string "Let me see…\n"
-	.string "I'll give you this TM.\p"
-	.string "It contains my favorite move,\n"
-	.string "STEEL WING.$"
+GraniteCave_StevensRoom_Text_PlayerDeliverLine:
+	.string "{COLOR GREEN}{PLAYER}:\n"
+	.string "Mr. STONE asked me to deliver this\n"
+	.string "to you.$"
 
-GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
-	.string "STEVEN: Your POKéMON appear quite\n"
-	.string "capable.\p"
-	.string "If you keep training, you could even\n"
-	.string "become the CHAMPION of the POKéMON\l"
-	.string "LEAGUE one day. That's what I think.\p"
-	.string "I know, since we've gotten to know each\n"
-	.string "other, let's register one another in\l"
-	.string "our POKéNAVS.\p"
-	.string "… … … … … …$"
+GraniteCave_StevensRoom_Text_StevenDevonSilphRifts:
+	.string "{COLOR BLUE}STEVEN:\n"
+	.string "So DEVON suspects as well...\n"
+	.string "SILPH's research agrees.\p"
+	.string "The balance of this region is\n"
+	.string "shifting.\p"
+	.string "Look closely--figures lost to rifts,\n"
+	.string "POKEMON twisted into new forms.\p"
+	.string "This is no myth. The ZOROARK you saw\n"
+	.string "near LITTLEROOT was proof.$"
 
-GraniteCave_StevensRoom_Text_RegisteredSteven:
-	.string "Registered STEVEN\n"
-	.string "in the POKéNAV.$"
+GraniteCave_StevensRoom_Text_SteelWingGift:
+	.string "{COLOR BLUE}STEVEN:\n"
+	.string "Take this. Steel endures.\p"
+	.string "May it serve you when all else feels\n"
+	.string "uncertain.\p"
+	.string "{COLOR DARK_GRAY}You received TM47 (STEEL WING)!$"
 
-GraniteCave_StevensRoom_Text_IveGotToHurryAlong:
-	.string "Now, I've got to hurry along.$"
+GraniteCave_StevensRoom_Text_StevenJourneyForeshadow:
+	.string "{COLOR BLUE}STEVEN:\n"
+	.string "Your journey is crossing paths with\n"
+	.string "powers greater than you know.\p"
+	.string "Others are watching too... silent\n"
+	.string "for now.\p"
+	.string "When the time comes, we will meet\n"
+	.string "again--and perhaps then, the truth\n"
+	.string "will no longer hide itself.$"
 
 GraniteCave_StevensRoom_Text_OhBagIsFull:
-	.string "Oh, your BAG is full…\n"
+	.string "{COLOR DARK_GRAY}Oh, your BAG is full...\n"
 	.string "That's too bad, then.$"
 
+GraniteCave_StevensRoom_Text_PlayerThoughtFather:
+	.string "{PLAYER}: (Vanished…? Could he be talking\n"
+	.string "about Father?)$"

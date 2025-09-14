@@ -258,6 +258,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Red;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RgbyRed;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedAlola;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Leaf;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Green;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Deoxys;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BirthIslandStone;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brandon;
@@ -751,6 +752,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SP_SCIENTIST_1] =           &gObjectEventGraphicsInfo_SP_Scientist1,
     [OBJ_EVENT_GFX_SP_SWIMMER_F] =             &gObjectEventGraphicsInfo_SP_SwimmerF,
     [OBJ_EVENT_GFX_SP_SWIMMER_M] =             &gObjectEventGraphicsInfo_SP_SwimmerM,
+    [OBJ_EVENT_GFX_GREEN] =                    &gObjectEventGraphicsInfo_Green,
     // Author-specific variants (examples)
     [OBJ_EVENT_GFX_IAG_YOUNGSTER] =            &gObjectEventGraphicsInfo_IAG_Youngster,
     [OBJ_EVENT_GFX_GALAXEEH_YOUNGSTER] =       &gObjectEventGraphicsInfo_GALAXEEH_Youngster,

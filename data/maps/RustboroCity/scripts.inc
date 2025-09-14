@@ -672,7 +672,8 @@ RustboroCity_EventScript_EmployeeFacePlayerRight::
 
 RustboroCity_EventScript_Rival::
 	lockall
-	call_if_unset FLAG_MET_RIVAL_RUSTBORO, RustboroCity_EventScript_PlayRivalMusic
+	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+	call_if_unset FLAG_MET_RIVAL_RUSTBORO, RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_FacePlayer
 	waitmovement 0
 	goto RustboroCity_EventScript_RivalEncounter
@@ -691,9 +692,14 @@ RustboroCity_EventScript_PlayBrendanMusic::
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
 	return
 
+RustboroCity_EventScript_PlayGreenMusic::
+	playbgm MUS_ENCOUNTER_MAY, TRUE
+	return
+
 RustboroCity_EventScript_RivalTrigger0::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
+	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playse SE_PIN
@@ -709,7 +715,8 @@ RustboroCity_EventScript_RivalTrigger0::
 
 RustboroCity_EventScript_RivalTrigger1::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
+	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playse SE_PIN
@@ -725,7 +732,8 @@ RustboroCity_EventScript_RivalTrigger1::
 
 RustboroCity_EventScript_RivalTrigger2::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
+	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playse SE_PIN
@@ -741,7 +749,8 @@ RustboroCity_EventScript_RivalTrigger2::
 
 RustboroCity_EventScript_RivalTrigger3::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
+	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playse SE_PIN
@@ -757,7 +766,8 @@ RustboroCity_EventScript_RivalTrigger3::
 
 RustboroCity_EventScript_RivalTrigger4::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
+	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playse SE_PIN
@@ -773,7 +783,8 @@ RustboroCity_EventScript_RivalTrigger4::
 
 RustboroCity_EventScript_RivalTrigger5::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
+	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playse SE_PIN
@@ -789,7 +800,8 @@ RustboroCity_EventScript_RivalTrigger5::
 
 RustboroCity_EventScript_RivalTrigger6::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
+	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playse SE_PIN
@@ -805,7 +817,8 @@ RustboroCity_EventScript_RivalTrigger6::
 
 RustboroCity_EventScript_RivalTrigger7::
 	lockall
-	call RustboroCity_EventScript_PlayRivalMusic
+	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playse SE_PIN
@@ -820,9 +833,52 @@ RustboroCity_EventScript_RivalTrigger7::
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalEncounter::
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, RustboroCity_EventScript_MayEncounter
-	goto_if_eq VAR_RESULT, FEMALE, RustboroCity_EventScript_BrendanEncounter
+	@ Green replaces the gendered rival encounter
+	goto_if_set FLAG_DEFEATED_RIVAL_RUSTBORO, RustboroCity_EventScript_GreenBrineyHint
+	goto_if_set FLAG_MET_RIVAL_RUSTBORO, RustboroCity_EventScript_GreenAskToBattle
+	setflag FLAG_MET_RIVAL_RUSTBORO
+	msgbox RustboroCity_Text_GreenFinallyHere, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_PlayerGreenWhatDoingHere, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_GreenNoSlackingGiveNumbers, MSGBOX_DEFAULT
+	closemessage
+	delay 30
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox RustboroCity_Text_RegisteredMayBrendan, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	delay 30
+	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
+	setvar VAR_RUSTBORO_CITY_STATE, 8
+	setvar VAR_ROUTE104_STATE, 2
+	msgbox RustboroCity_Text_GreenTestYourself, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RustboroCity_EventScript_BattleGreen
+	msgbox RustboroCity_Text_GreenComeBackStronger, MSGBOX_DEFAULT
+	call RustboroCity_EventScript_RestoreBgm
+	releaseall
+	end
+
+RustboroCity_EventScript_GreenAskToBattle::
+	msgbox RustboroCity_Text_GreenWantBattle, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RustboroCity_EventScript_BattleGreen
+	msgbox RustboroCity_Text_GreenComeBackStronger, MSGBOX_DEFAULT
+	releaseall
+	end
+
+RustboroCity_EventScript_BattleGreen::
+	msgbox RustboroCity_Text_GreenLetsSeeIt, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_LEAF, RustboroCity_Text_GreenDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_GreenBrineyHint
+	end
+
+RustboroCity_EventScript_GreenBrineyHint::
+	msgbox RustboroCity_Text_GreenAfterBattle1, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_GreenAfterBattle2, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_GreenAfterBattle3, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_GreenAfterBattle4, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_PlayerOldMemories, MSGBOX_DEFAULT
+	call RustboroCity_EventScript_RestoreBgm
+	releaseall
 	end
 
 RustboroCity_EventScript_MayEncounter::
@@ -1219,6 +1275,67 @@ RustboroCity_Text_BrendanMrBrineyHint:
 	.string "I bet you didn't know this, since you\n"
 	.string "just moved here, {PLAYER}, but\l"
 	.string "MR. BRINEY was once a great sailor.$"
+
+// Green replacement texts
+
+RustboroCity_Text_GreenFinallyHere:
+	.string "GREEN: Finally! I was starting to think\n"
+	.string "you'd never show up.$"
+
+RustboroCity_Text_PlayerGreenWhatDoingHere:
+	.string "{COLOR GREEN}{PLAYER}:{COLOR DARK_GRAY} Green? What are you doing here?$"
+
+RustboroCity_Text_GreenNoSlackingGiveNumbers:
+	.string "GREEN: Making sure you don't slack off, that's\n"
+	.string "what. BRENDAN and MAY passed word through OAK--\n"
+	.string "if I ran into you, I should give you their\n"
+	.string "numbers.\p"
+	.string "(She grabs your POKéNAV and taps quickly.)$"
+
+RustboroCity_Text_RegisteredMayBrendan:
+	.string "Brendan and May were registered\n"
+	.string "in the POKéNAV!$"
+
+RustboroCity_Text_GreenTestYourself:
+	.string "GREEN: They also said you've got potential.\p"
+	.string "But I don't take anyone's word for it--\n"
+	.string "I want to see for myself. Battle me?$"
+
+RustboroCity_Text_GreenComeBackStronger:
+	.string "GREEN: Hmph. Come back when you're ready to\n"
+	.string "push harder."$
+
+RustboroCity_Text_GreenWantBattle:
+	.string "GREEN: So? Ready to show me what you've got?"$
+
+RustboroCity_Text_GreenLetsSeeIt:
+	.string "GREEN: Good. Show me that potential."$
+
+RustboroCity_Text_GreenDefeat:
+	.string "GREEN: Not bad. No wonder they vouched for you."$
+
+RustboroCity_Text_GreenAfterBattle1:
+	.string "GREEN: Don't get comfortable--you'll need to push\n"
+	.string "even harder if you want to keep up with us."$
+
+RustboroCity_Text_GreenAfterBattle2:
+	.string "{COLOR GREEN}{PLAYER}:{COLOR DARK_GRAY} I'll get there. Just wait and see."$
+
+RustboroCity_Text_GreenAfterBattle3:
+	.string "GREEN: Good answer. I like a little fire in my\n"
+	.string "rivals."$
+
+RustboroCity_Text_GreenAfterBattle4:
+	.string "GREEN: Anyway, you've got business with MR. BRINEY,\n"
+	.string "right? Don't keep the Captain waiting. Hoenn's\n"
+	.string "waters are rough these days…\p"
+	.string "Oh, and if you see RED again… tell him GREEN's\n"
+	.string "looking. He'll understand."$
+
+RustboroCity_Text_PlayerOldMemories:
+	.string "{COLOR GREEN}{PLAYER}:{COLOR DARK_GRAY} (Brendan, May, Green… and Red.\n"
+	.string "Why do these names feel like old memories\n"
+	.string "I can't quite grasp?)"$
 
 RustboroCity_Text_TunnelNearingCompletion:
 	.string "“Timesaving tunnel nearing\n"

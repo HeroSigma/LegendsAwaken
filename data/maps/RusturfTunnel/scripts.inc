@@ -10,7 +10,7 @@ RusturfTunnel_OnFrame:
 
 RusturfTunnel_OnTransition:
     call_if_eq VAR_RUSTURF_TUNNEL_STATE, 2, RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos
-    removeobject LOCALID_RUSTURF_TUNNEL_TRIAD
+    setflag FLAG_HIDE_RUSTURF_TUNNEL_TRIAD
     end
 
 RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos::
@@ -302,7 +302,7 @@ RusturfTunnel_EventScript_Grunt::
     faceplayer
     playbgm MUS_ENCOUNTER_AQUA, FALSE
     @ Ensure the shadowy figure is present for the scene
-    addobject LOCALID_RUSTURF_TUNNEL_TRIAD
+    clearflag FLAG_HIDE_RUSTURF_TUNNEL_TRIAD
     @ Pre-battle scene: Aqua Grunt arguing with a shadowy figure
     msgbox RusturfTunnel_Text_AquaTriad_GruntPackage, MSGBOX_DEFAULT
 	msgbox RusturfTunnel_Text_AquaTriad_TriadOrders, MSGBOX_DEFAULT
@@ -314,7 +314,7 @@ RusturfTunnel_EventScript_Grunt::
     msgbox RusturfTunnel_Text_AquaTriad_TriadAfter, MSGBOX_DEFAULT
     @ Shadowy figure "vanishes" (described in text)
     msgbox RusturfTunnel_Text_AquaTriad_TriadVanish, MSGBOX_AUTOCLOSE
-    removeobject LOCALID_RUSTURF_TUNNEL_TRIAD
+    setflag FLAG_HIDE_RUSTURF_TUNNEL_TRIAD
     @ After battles
     msgbox RusturfTunnel_Text_AquaTriad_GruntAfter, MSGBOX_DEFAULT
 	@ Grunt flees; proceed with existing sequence (give goods and Mr. Briney + Peeko)
@@ -459,10 +459,11 @@ RusturfTunnel_Text_GruntDefeat:
 // New Aqua + Shadow Triad scene texts
 
 RusturfTunnel_Text_AquaTriad_GruntPackage:
-	.string "AQUA GRUNT: I-I got the package from\n"
-	.string "DEVON, just like you asked!\pBut why\n"
-	.string "are you even here in HOENN...? Boss\n"
-	.string "said nothing about outsiders!$"
+	.string "{COLOR RED}AQUA GRUNT:\n"
+	.string "I-I got the package from DEVON,\n"
+	.string "just like you asked!\pBut why are\n"
+	.string "you even here in HOENN...? Boss said\n"
+	.string "nothing about outsiders!$"
 
 RusturfTunnel_Text_AquaTriad_TriadOrders:
 	.string "SHADOW TRIAD: Orders flow from higher\n"
@@ -470,7 +471,8 @@ RusturfTunnel_Text_AquaTriad_TriadOrders:
 	.string "Deliver the goods, and vanish.$"
 
 RusturfTunnel_Text_AquaTriad_PlayerInterject:
-	.string "{PLAYER}: Hey! Hand those back--DEVON's\n"
+	.string "{COLOR GREEN}{PLAYER}:\n"
+	.string "Hey! Hand those back--DEVON's\n"
 	.string "property isn't yours to steal!$"
 
 RusturfTunnel_Text_AquaTriad_GruntChallenge:
@@ -525,8 +527,8 @@ RusturfTunnel_Text_GruntTakePackage:
 	.string "This is plain not right…\p"
 	.string "The BOSS told me this would be a\n"
 	.string "slick-and-easy job to pull.\p"
-	.string "All I had to do was steal some package\n"
-	.string "from DEVON.\p"
+	.string "All I had to do was steal some\n"
+	.string "package from DEVON.\p"
 	.string "Tch!\n"
 	.string "You want it back that badly, take it!$"
 

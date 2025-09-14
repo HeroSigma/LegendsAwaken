@@ -72,6 +72,987 @@ Comments can be added as C comment blocks
 
 /*Comments can also be on a single line*/
 
+=== TRAINER_GREEN_RUSTBORO ===
+Name: Green
+Class: Pokémon Trainer
+Pic: Green
+Gender: Female
+Music: Rival
+Items: Potion / Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Ivysaur (F) @ Miracle Seed
+Level: 16
+Ability: Overgrow
+Nature: Bold
+Tera Type: Grass
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 120 Def / 136 SpA
+- Razor Leaf
+- Leech Seed
+- Sleep Powder
+- Hidden Power
+
+
+=== TRAINER_GREEN_SLATEPORT ===
+Name: Green
+Class: Pokémon Trainer
+Pic: Green
+Gender: Female
+Music: Rival
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Ivysaur (F) @ Miracle Seed
+Level: 22
+Ability: Overgrow
+Nature: Modest
+Tera Type: Grass
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Giga Drain
+- Leech Seed
+- Hidden Power
+- Sleep Powder
+
+Pidgeotto (M) @ Sharp Beak
+Level: 21
+Ability: Keen Eye
+Nature: Jolly
+Tera Type: Flying
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Wing Attack
+- Quick Attack
+- Steel Wing
+- Roost
+
+Eevee (F) @ Silk Scarf
+Level: 20
+Ability: Adaptability
+Nature: Adamant
+Tera Type: Normal
+Ball: Luxury Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Return
+- Bite
+- Quick Attack
+- Protect
+
+
+=== TRAINER_GREEN_FORTREE ===
+Name: Green
+Class: Pokémon Trainer
+Pic: Green
+Gender: Female
+Music: Rival
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Venusaur (F) @ Black Sludge
+Level: 33
+Ability: Overgrow
+Nature: Modest
+Tera Type: Grass
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 120 Def / 136 SpA
+- Giga Drain
+- Sludge Bomb
+- Leech Seed
+- Hidden Power
+
+Pidgeot (M) @ Sharp Beak
+Level: 32
+Ability: Keen Eye
+Nature: Jolly
+Tera Type: Flying
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Aerial Ace
+- Quick Attack
+- Steel Wing
+- Roost
+
+Jolteon (M) @ Magnet
+Level: 32
+Ability: Volt Absorb
+Nature: Timid
+Tera Type: Electric
+Ball: Luxury Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Shadow Ball
+- Hidden Power
+- Substitute
+
+Nidorina (F) @ Eviolite
+Level: 31
+Ability: Poison Point
+Nature: Bold
+Tera Type: Poison
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+- Earth Power
+- Sludge Bomb
+- Toxic
+- Protect
+
+Kadabra (M) @ TwistedSpoon
+Level: 31
+Ability: Inner Focus
+Nature: Timid
+Tera Type: Psychic
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psychic
+- Hidden Power
+- Calm Mind
+- Recover
+
+
+=== TRAINER_GREEN_MOSSDEEP ===
+Name: Green
+Class: Pokémon Trainer
+Pic: Green
+Gender: Female
+Music: Rival
+Items: Hyper Potion / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Venusaur (F) @ Black Sludge
+Level: 45
+Ability: Overgrow
+Nature: Modest
+Tera Type: Grass
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Giga Drain
+- Sludge Bomb
+- Hidden Power
+- Synthesis
+
+Pidgeot (M) @ Leftovers
+Level: 44
+Ability: Keen Eye
+Nature: Jolly
+Tera Type: Flying
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Return
+- Aerial Ace
+- Steel Wing
+- Roost
+
+Jolteon (M) @ Magnet
+Level: 44
+Ability: Volt Absorb
+Nature: Timid
+Tera Type: Electric
+Ball: Luxury Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Shadow Ball
+- Hidden Power
+- Substitute
+
+Nidoqueen (F) @ Black Sludge
+Level: 43
+Ability: Poison Point
+Nature: Bold
+Tera Type: Poison
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+- Earth Power
+- Sludge Bomb
+- Ice Beam
+- Stealth Rock
+
+Alakazam (M) @ TwistedSpoon
+Level: 43
+Ability: Inner Focus
+Nature: Timid
+Tera Type: Psychic
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psychic
+- Calm Mind
+- Focus Blast
+- Recover
+
+Snorlax (M) @ Leftovers
+Level: 44
+Ability: Thick Fat
+Nature: Careful
+Tera Type: Normal
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
+- Body Slam
+- Earthquake
+- Rest
+- Sleep Talk
+
+
+=== TRAINER_GREEN_VICTORYROAD ===
+Name: Green
+Class: Pokémon Trainer
+Pic: Green
+Gender: Female
+Music: Rival
+Items: Full Restore / Full Restore / Max Potion / Max Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Venusaur (F) @ Black Sludge
+Level: 60
+Ability: Overgrow
+Nature: Modest
+Tera Type: Grass
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Giga Drain
+- Sludge Bomb
+- Leech Seed
+- Hidden Power
+
+Pidgeot (M) @ Life Orb
+Level: 59
+Ability: Keen Eye
+Nature: Jolly
+Tera Type: Flying
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Brave Bird
+- Return
+- Steel Wing
+- Roost
+
+Jolteon (M) @ Choice Specs
+Level: 59
+Ability: Volt Absorb
+Nature: Timid
+Tera Type: Electric
+Ball: Luxury Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Thunderbolt
+- Shadow Ball
+- Hidden Power
+- Volt Switch
+
+Nidoqueen (F) @ Black Sludge
+Level: 58
+Ability: Poison Point
+Nature: Bold
+Tera Type: Poison
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpD
+- Earth Power
+- Sludge Bomb
+- Ice Beam
+- Stealth Rock
+
+Alakazam (M) @ Focus Sash
+Level: 59
+Ability: Inner Focus
+Nature: Timid
+Tera Type: Psychic
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Calm Mind
+
+Snorlax (M) @ Leftovers
+Level: 60
+Ability: Thick Fat
+Nature: Careful
+Tera Type: Normal
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
+- Body Slam
+- Earthquake
+- Rest
+- Sleep Talk
+
+
+=== TRAINER_BLUE_DEWFORD ===
+Name: Blue
+Class: Pokémon Trainer
+Pic: Blue
+Gender: Male
+Music: Rival
+Items: Potion / Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Wartortle (M) @ Eviolite
+Level: 18
+Ability: Torrent
+Nature: Bold
+Tera Type: Water
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Rapid Spin
+- Ice Beam
+- Protect
+
+
+=== TRAINER_BLUE_VERDANTURF ===
+Name: Blue
+Class: Pokémon Trainer
+Pic: Blue
+Gender: Male
+Music: Rival
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Wartortle (M) @ Eviolite
+Level: 22
+Ability: Torrent
+Nature: Bold
+Tera Type: Water
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Ice Beam
+- Rapid Spin
+- Protect
+
+Kadabra (M) @ TwistedSpoon
+Level: 22
+Ability: Inner Focus
+Nature: Timid
+Tera Type: Psychic
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psybeam
+- Hidden Power
+- Calm Mind
+- Recover
+
+Rhyhorn (M) @ Hard Stone
+Level: 21
+Ability: Rock Head
+Nature: Impish
+Tera Type: Rock
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 Atk
+- Rock Blast
+- Bulldoze
+- Protect
+- Roar
+
+
+=== TRAINER_BLUE_LILYCOVE ===
+Name: Blue
+Class: Pokémon Trainer
+Pic: Blue
+Gender: Male
+Music: Rival
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Blastoise (M) @ Leftovers
+Level: 36
+Ability: Torrent
+Nature: Modest
+Tera Type: Water
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Surf
+- Ice Beam
+- Protect
+- Hidden Power
+
+Alakazam (M) @ TwistedSpoon
+Level: 35
+Ability: Inner Focus
+Nature: Timid
+Tera Type: Psychic
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psychic
+- Calm Mind
+- Focus Blast
+- Recover
+
+Rhydon (M) @ Eviolite
+Level: 34
+Ability: Rock Head
+Nature: Impish
+Tera Type: Ground
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 Atk
+- Earthquake
+- Rock Blast
+- Stealth Rock
+- Roar
+
+Gyarados (M) @ Mystic Water
+Level: 34
+Ability: Intimidate
+Nature: Jolly
+Tera Type: Water
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Waterfall
+- Ice Fang
+- Dragon Dance
+- Protect
+
+Exeggcute @ Eviolite
+Level: 33
+Ability: Harvest
+Nature: Calm
+Tera Type: Grass
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD / 4 Def
+- Leech Seed
+- Psychic
+- Sleep Powder
+- Hidden Power
+
+
+=== TRAINER_BLUE_SOOTOPOLIS ===
+Name: Blue
+Class: Pokémon Trainer
+Pic: Blue
+Gender: Male
+Music: Rival
+Items: Full Restore / Hyper Potion / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Blastoise (M) @ Leftovers
+Level: 48
+Ability: Torrent
+Nature: Modest
+Tera Type: Water
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Surf
+- Ice Beam
+- Rapid Spin
+- Hidden Power
+
+Alakazam (M) @ Life Orb
+Level: 47
+Ability: Inner Focus
+Nature: Timid
+Tera Type: Psychic
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Calm Mind
+
+Rhydon (M) @ Eviolite
+Level: 46
+Ability: Rock Head
+Nature: Impish
+Tera Type: Ground
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 Atk
+- Earthquake
+- Rock Blast
+- Stealth Rock
+- Roar
+
+Gyarados (M) @ Leftovers
+Level: 46
+Ability: Intimidate
+Nature: Jolly
+Tera Type: Water
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Waterfall
+- Ice Fang
+- Dragon Dance
+- Substitute
+
+Exeggutor (M) @ Sitrus Berry
+Level: 45
+Ability: Harvest
+Nature: Calm
+Tera Type: Grass
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD / 4 Def
+- Giga Drain
+- Psychic
+- Sleep Powder
+- Hidden Power
+
+Arcanine (M) @ Leftovers
+Level: 45
+Ability: Intimidate
+Nature: Adamant
+Tera Type: Fire
+Ball: Luxury Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Flare Blitz
+- Extreme Speed
+- Wild Charge
+- Protect
+
+
+=== TRAINER_BLUE_VICTORYROAD ===
+Name: Blue
+Class: Pokémon Trainer
+Pic: Blue
+Gender: Male
+Music: Rival
+Items: Full Restore / Full Restore / Max Potion / Max Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Blastoise (M) @ Leftovers
+Level: 60
+Ability: Torrent
+Nature: Modest
+Tera Type: Water
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Hydro Pump
+- Ice Beam
+- Rapid Spin
+- Hidden Power
+
+Alakazam (M) @ Focus Sash
+Level: 59
+Ability: Inner Focus
+Nature: Timid
+Tera Type: Psychic
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Calm Mind
+
+Rhydon (M) @ Leftovers
+Level: 58
+Ability: Rock Head
+Nature: Impish
+Tera Type: Ground
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 Atk
+- Earthquake
+- Rock Slide
+- Stealth Rock
+- Roar
+
+Gyarados (M) @ Leftovers
+Level: 59
+Ability: Intimidate
+Nature: Jolly
+Tera Type: Water
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Waterfall
+- Ice Fang
+- Dragon Dance
+- Substitute
+
+Exeggutor (M) @ Sitrus Berry
+Level: 58
+Ability: Harvest
+Nature: Calm
+Tera Type: Grass
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpD / 4 Def
+- Giga Drain
+- Psychic
+- Sleep Powder
+- Hidden Power
+
+Arcanine (M) @ Life Orb
+Level: 60
+Ability: Intimidate
+Nature: Adamant
+Tera Type: Fire
+Ball: Luxury Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Flare Blitz
+- Extreme Speed
+- Wild Charge
+- Crunch
+
+=== TRAINER_RED_MAUVILLE ===
+Name: Red
+Class: Pokémon Trainer
+Pic: Red
+Gender: Male
+Music: Champion
+Items: Super Potion / Super Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Charmeleon (M) @ Charcoal
+Level: 27
+Ability: Blaze
+Nature: Timid
+Tera Type: Fire
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Flamethrower
+- Dragon Rage
+- Hidden Power
+- Smokescreen
+
+Pikachu (M) @ Light Ball
+Level: 26
+Ability: Static
+Nature: Jolly
+Tera Type: Electric
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Volt Tackle
+- Quick Attack
+- Brick Break
+- Hidden Power
+
+
+=== TRAINER_RED_JAGGEDPASS ===
+Name: Red
+Class: Pokémon Trainer
+Pic: Red
+Gender: Male
+Music: Champion
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Charizard (M) @ Charcoal
+Level: 32
+Ability: Blaze
+Nature: Timid
+Tera Type: Fire
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Flamethrower
+- Air Slash
+- Hidden Power
+- Dragon Claw
+
+Pikachu (M) @ Light Ball
+Level: 31
+Ability: Static
+Nature: Jolly
+Tera Type: Electric
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Volt Tackle
+- Quick Attack
+- Brick Break
+- Hidden Power
+
+Wartortle (M) @ Eviolite
+Level: 30
+Ability: Torrent
+Nature: Bold
+Tera Type: Water
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Scald
+- Ice Beam
+- Rapid Spin
+- Protect
+
+
+=== TRAINER_RED_SAFARIZONE ===
+Name: Red
+Class: Pokémon Trainer
+Pic: Red
+Gender: Male
+Music: Champion
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Charizard (M) @ Leftovers
+Level: 42
+Ability: Blaze
+Nature: Timid
+Tera Type: Fire
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Flamethrower
+- Air Slash
+- Dragon Claw
+- Protect
+
+Pikachu (M) @ Light Ball
+Level: 42
+Ability: Static
+Nature: Jolly
+Tera Type: Electric
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Volt Tackle
+- Quick Attack
+- Brick Break
+- Hidden Power
+
+Venusaur (M) @ Black Sludge
+Level: 41
+Ability: Overgrow
+Nature: Modest
+Tera Type: Grass
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Giga Drain
+- Sludge Bomb
+- Leech Seed
+- Hidden Power
+
+Snorlax (M) @ Leftovers
+Level: 41
+Ability: Thick Fat
+Nature: Careful
+Tera Type: Normal
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
+- Body Slam
+- Earthquake
+- Rest
+- Sleep Talk
+
+
+=== TRAINER_RED_SKYPILLAR ===
+Name: Red
+Class: Pokémon Trainer
+Pic: Red
+Gender: Male
+Music: Champion
+Items: Full Restore / Hyper Potion / Full Restore
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Charizard (M) @ Life Orb
+Level: 55
+Ability: Blaze
+Nature: Timid
+Tera Type: Fire
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Flamethrower
+- Air Slash
+- Dragon Pulse
+- Focus Blast
+
+Pikachu (M) @ Light Ball
+Level: 54
+Ability: Static
+Nature: Jolly
+Tera Type: Electric
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Volt Tackle
+- Knock Off
+- Brick Break
+- Hidden Power
+
+Venusaur (M) @ Black Sludge
+Level: 54
+Ability: Overgrow
+Nature: Modest
+Tera Type: Grass
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Giga Drain
+- Sludge Bomb
+- Hidden Power
+- Synthesis
+
+Blastoise (M) @ Leftovers
+Level: 53
+Ability: Torrent
+Nature: Modest
+Tera Type: Water
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Surf
+- Ice Beam
+- Rapid Spin
+- Hidden Power
+
+Snorlax (M) @ Leftovers
+Level: 54
+Ability: Thick Fat
+Nature: Careful
+Tera Type: Normal
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
+- Body Slam
+- Earthquake
+- Rest
+- Sleep Talk
+
+Espeon (M) @ TwistedSpoon
+Level: 53
+Ability: Synchronize
+Nature: Timid
+Tera Type: Psychic
+Ball: Luxury Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psychic
+- Calm Mind
+- Shadow Ball
+- Morning Sun
+
+
+=== TRAINER_RED_VICTORYROAD ===
+Name: Red
+Class: Pokémon Trainer
+Pic: Red
+Gender: Male
+Music: Champion
+Items: Full Restore / Full Restore / Max Potion / Max Potion
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Risky / Smart Switching / Omniscient / Predict Switch / Smart Tera
+
+Charizard (M) @ Life Orb
+Level: 60
+Ability: Blaze
+Nature: Timid
+Tera Type: Fire
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Flamethrower
+- Air Slash
+- Dragon Pulse
+- Focus Blast
+
+Pikachu (M) @ Light Ball
+Level: 60
+Ability: Static
+Nature: Jolly
+Tera Type: Electric
+Ball: Poké Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe / 4 HP
+- Volt Tackle
+- Knock Off
+- Brick Break
+- Hidden Power
+
+Venusaur (M) @ Black Sludge
+Level: 59
+Ability: Overgrow
+Nature: Modest
+Tera Type: Grass
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Giga Drain
+- Sludge Bomb
+- Leech Seed
+- Synthesis
+
+Blastoise (M) @ Leftovers
+Level: 59
+Ability: Torrent
+Nature: Modest
+Tera Type: Water
+Ball: Great Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Hydro Pump
+- Ice Beam
+- Rapid Spin
+- Hidden Power
+
+Snorlax (M) @ Leftovers
+Level: 59
+Ability: Thick Fat
+Nature: Careful
+Tera Type: Normal
+Ball: Ultra Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 252 SpD
+- Body Slam
+- Earthquake
+- Rest
+- Sleep Talk
+
+Espeon (M) @ Life Orb
+Level: 59
+Ability: Synchronize
+Nature: Timid
+Tera Type: Psychic
+Ball: Luxury Ball
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Psychic
+- Calm Mind
+- Shadow Ball
+- Morning Sun
 
 === TRAINER_SHADOW_TRIAD_RUSTURF ===
 Name: ShadowTri

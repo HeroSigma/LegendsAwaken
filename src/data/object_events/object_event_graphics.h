@@ -514,6 +514,7 @@ const u32 gObjectEventPic_RedAlola[] = INCBIN_U32("graphics/object_events/pics/p
 // Palette for Alola Red derived directly from the PNG
 const u16 gObjectEventPal_RedAlola[] = INCBIN_U16("graphics/object_events/pics/people/red_alola.gbapal");
 const u32 gObjectEventPic_Leaf[] = INCBIN_U32("graphics/object_events/pics/people/leaf.4bpp");
+const u32 gObjectEventPic_Green[] = INCBIN_U32("graphics/object_events/pics/people/Green/walking.4bpp");
 const u16 gObjectEventPal_BirthIslandStone[] = INCBIN_U16("graphics/object_events/palettes/birth_island_stone.gbapal");
 const u32 gObjectEventPic_BirthIslandStone[] = INCBIN_U32("graphics/object_events/pics/misc/birth_island_stone.4bpp");
 const u16 gObjectEventPal_Deoxys[] = INCBIN_U16("graphics/object_events/palettes/deoxys.gbapal");

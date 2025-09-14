@@ -779,17 +779,16 @@ void HandleInputChooseMove(u32 battler)
             TryToHideMoveInfoWindow();
         }
     }
-    // While holding START, use DPAD to cycle between available gimmicks
-    else if ((JOY_HELD(START_BUTTON)) && (JOY_NEW(DPAD_LEFT) || JOY_NEW(DPAD_RIGHT) || JOY_NEW(DPAD_UP) || JOY_NEW(DPAD_DOWN)))
+    // Press SELECT to rotate available gimmicks in a fixed order
+    else if (JOY_NEW(SELECT_BUTTON) && !gBattleStruct->zmove.viewing && !gBattleStruct->descriptionSubmenu)
     {
-        s8 dir = (JOY_NEW(DPAD_LEFT) || JOY_NEW(DPAD_UP)) ? -1 : 1;
-        // Helper: try cycle to next/prev usable gimmick
-        // Candidates are cycled in a fixed order; we skip ones that cannot currently be activated.
         enum Gimmick order[] = { GIMMICK_MEGA, GIMMICK_Z_MOVE, GIMMICK_DYNAMAX, GIMMICK_TERA, GIMMICK_ULTRA_BURST };
         const u32 orderLen = ARRAY_COUNT(order);
         u32 i;
-        // Find current position in order; default to first if none
         u32 cur = 0;
+        u32 nextIdx;
+
+        // Find current position in order; default to 0 if not found
         for (i = 0; i < orderLen; i++)
         {
             if (order[i] == gBattleStruct->gimmick.usableGimmick[battler])
@@ -799,21 +798,17 @@ void HandleInputChooseMove(u32 battler)
             }
         }
 
-        // Walk through list to find next activatable gimmick
-        for (i = 0; i < orderLen; i++)
+        // Advance forward to the next usable gimmick
+        for (i = 1; i <= orderLen; i++)
         {
-            s32 next = (s32)cur + (dir > 0 ? (s32)(i + 1) : -((s32)(i + 1)));
-            while (next < 0)
-                next += orderLen;
-            next %= orderLen;
-            enum Gimmick cand = order[next];
+            nextIdx = (cur + i) % orderLen;
+            enum Gimmick cand = order[nextIdx];
 
             if (cand == GIMMICK_NONE)
                 continue;
             if (!CanActivateGimmick(battler, cand))
                 continue;
-
-            // If cycling to Z-Move, ensure current move can be Z-ed
+            // If cycling to Z-Move, ensure the current move can be Z-ed
             if (cand == GIMMICK_Z_MOVE)
             {
                 u16 move = moveInfo->moves[gMoveSelectionCursor[battler]];
@@ -821,13 +816,14 @@ void HandleInputChooseMove(u32 battler)
                     continue;
             }
 
-            // Found a valid candidate: apply it
+            // Apply selection but do not auto-toggle trigger
             gBattleStruct->gimmick.usableGimmick[battler] = cand;
-            gBattleStruct->gimmick.playerSelect = TRUE; // Select the gimmick while cycling
-            // Recreate trigger sprite to swap art for new gimmick
+
+            // Update trigger sprite to reflect the new gimmick and current on/off state
             DestroyGimmickTriggerSprite();
             CreateGimmickTriggerSprite(battler);
-            ChangeGimmickTriggerSprite(gBattleStruct->gimmick.triggerSpriteId, TRUE);
+            ChangeGimmickTriggerSprite(gBattleStruct->gimmick.triggerSpriteId, gBattleStruct->gimmick.playerSelect);
+
             // Update Z-UI if needed
             if (cand == GIMMICK_Z_MOVE)
                 TryChangeZTrigger(battler, gMoveSelectionCursor[battler]);

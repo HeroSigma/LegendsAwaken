@@ -484,7 +484,11 @@
 // Final total count
 #define OBJ_EVENT_GFX_RED_ALOLA                  433
 
-#define NUM_OBJ_EVENT_GFX                        435
+// Custom additions
+#define OBJ_EVENT_GFX_GREEN                      435
+
+// Final total count
+#define NUM_OBJ_EVENT_GFX                        436
 
 
 // These are dynamic object gfx ids.
