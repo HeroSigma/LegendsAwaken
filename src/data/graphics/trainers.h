@@ -273,14 +273,19 @@ const u16 gTrainerPalette_PikeQueenLucy[] = INCBIN_U16("graphics/trainers/front_
 const u32 gTrainerFrontPic_PyramidKingBrandon[] = INCBIN_U32("graphics/trainers/front_pics/pyramid_king_brandon.4bpp.smol");
 const u16 gTrainerPalette_PyramidKingBrandon[] = INCBIN_U16("graphics/trainers/front_pics/pyramid_king_brandon.gbapal");
 
-const u32 gTrainerFrontPic_Red[] = INCBIN_U32("graphics/trainers/front_pics/red.4bpp.smol");
-const u16 gTrainerPalette_Red[] = INCBIN_U16("graphics/trainers/front_pics/red.gbapal");
+// Use custom front pic for Red
+const u32 gTrainerFrontPic_Red[] = INCBIN_U32("graphics/trainers/front_pics/red_front_pic.4bpp.smol");
+const u16 gTrainerPalette_Red[] = INCBIN_U16("graphics/trainers/front_pics/red_front_pic.gbapal");
 
 const u32 gTrainerFrontPic_Leaf[] = INCBIN_U32("graphics/trainers/front_pics/leaf.4bpp.smol");
 const u16 gTrainerPalette_Leaf[] = INCBIN_U16("graphics/trainers/front_pics/leaf.gbapal");
 
 const u32 gTrainerFrontPic_RubySapphireBrendan[] = INCBIN_U32("graphics/trainers/front_pics/brendan_rs.4bpp.smol");
 const u16 gTrainerPalette_RubySapphireBrendan[] = INCBIN_U16("graphics/trainers/palettes/brendan_rs.gbapal");
+
+// Kanto Rival Blue (custom)
+const u32 gTrainerFrontPic_Blue[] = INCBIN_U32("graphics/trainers/front_pics/blue.4bpp.smol");
+const u16 gTrainerPalette_Blue[] = INCBIN_U16("graphics/trainers/front_pics/blue.gbapal");
 
 const u32 gTrainerFrontPic_RubySapphireMay[] = INCBIN_U32("graphics/trainers/front_pics/may_rs.4bpp.smol");
 const u16 gTrainerPalette_RubySapphireMay[] = INCBIN_U16("graphics/trainers/palettes/may_rs.gbapal");
@@ -406,6 +411,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_LEAF, gTrainerFrontPic_Leaf, gTrainerPalette_Leaf),
     TRAINER_SPRITE(TRAINER_PIC_RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, gTrainerPalette_RubySapphireBrendan),
     TRAINER_SPRITE(TRAINER_PIC_RS_MAY, gTrainerFrontPic_RubySapphireMay, gTrainerPalette_RubySapphireMay),
+    TRAINER_SPRITE(TRAINER_PIC_BLUE, gTrainerFrontPic_Blue, gTrainerPalette_Blue),
     // Custom
     TRAINER_SPRITE(TRAINER_PIC_SHADOW_TRIAD, gTrainerFrontPic_ShadowTriad, gTrainerPalette_ShadowTriad),
 };

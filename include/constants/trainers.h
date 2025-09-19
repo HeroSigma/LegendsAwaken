@@ -207,8 +207,10 @@
 
 // Custom: Shadow Triad front pic
 #define TRAINER_PIC_SHADOW_TRIAD          173
+// Custom: Kanto Rival Blue
+#define TRAINER_PIC_BLUE                  174
 
-#define TRAINER_PIC_COUNT                 174
+#define TRAINER_PIC_COUNT                 175
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

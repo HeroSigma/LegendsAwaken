@@ -1337,11 +1337,11 @@
 #define FLAG_UNUSED_0x4FF                                           0x4FF // Unused Flag
 
 // Trainer Flags
-// Trainer flags occupy 0x500 - 0x85F, the last 9 of which are unused
+// Trainer flags occupy 0x500 - 0x86F
 // See constants/opponents.h. The values there + FLAG_TRAINER_FLAG_START are the flag IDs
 
 #define TRAINER_FLAGS_START                                         0x500
-#define TRAINER_FLAGS_END                                           (TRAINER_FLAGS_START + MAX_TRAINERS_COUNT - 1) // 0x85F
+#define TRAINER_FLAGS_END                                           (TRAINER_FLAGS_START + MAX_TRAINERS_COUNT - 1) // 0x86F
 
 // System Flags
 
@@ -1741,6 +1741,11 @@
 #define FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_2F_ZRING_BALL   0x604F
 #define FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_ZRING_BALL  0x6050
 #define FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_ZRING_BALL      0x6051
+
+// Custom event flags
+#define FLAG_DEFEATED_BLUE_DEWFORD            0x6052
+// Hide flags for custom NPCs
+#define FLAG_HIDE_GRANITE_CAVE_BLUE           0x6053
 
 // Temp flag aliases
 #define FLAG_TEMP_SKIP_GABBY_INTERVIEW          FLAG_TEMP_1

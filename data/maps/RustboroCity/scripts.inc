@@ -671,8 +671,9 @@ RustboroCity_EventScript_EmployeeFacePlayerRight::
 	return
 
 RustboroCity_EventScript_Rival::
-	lockall
-	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+    lockall
+    @ Rival object uses OBJ_EVENT_GFX_VAR_0; set the var to Leaf
+    setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LEAF
 	call_if_unset FLAG_MET_RIVAL_RUSTBORO, RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_FacePlayer
 	waitmovement 0
@@ -697,8 +698,8 @@ RustboroCity_EventScript_PlayGreenMusic::
 	return
 
 RustboroCity_EventScript_RivalTrigger0::
-	lockall
-	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+    lockall
+    setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LEAF
 	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -714,8 +715,8 @@ RustboroCity_EventScript_RivalTrigger0::
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalTrigger1::
-	lockall
-	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+    lockall
+    setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LEAF
 	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -731,8 +732,8 @@ RustboroCity_EventScript_RivalTrigger1::
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalTrigger2::
-	lockall
-	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+    lockall
+    setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LEAF
 	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -748,8 +749,8 @@ RustboroCity_EventScript_RivalTrigger2::
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalTrigger3::
-	lockall
-	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+    lockall
+    setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LEAF
 	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -765,8 +766,8 @@ RustboroCity_EventScript_RivalTrigger3::
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalTrigger4::
-	lockall
-	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+    lockall
+    setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LEAF
 	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -782,8 +783,8 @@ RustboroCity_EventScript_RivalTrigger4::
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalTrigger5::
-	lockall
-	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+    lockall
+    setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LEAF
 	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -799,8 +800,8 @@ RustboroCity_EventScript_RivalTrigger5::
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalTrigger6::
-	lockall
-	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+    lockall
+    setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LEAF
 	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -816,8 +817,8 @@ RustboroCity_EventScript_RivalTrigger6::
 	goto RustboroCity_EventScript_RivalEncounter
 
 RustboroCity_EventScript_RivalTrigger7::
-	lockall
-	setobjectgraphicsid LOCALID_RUSTBORO_RIVAL, OBJ_EVENT_GFX_LEAF
+    lockall
+    setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LEAF
 	call RustboroCity_EventScript_PlayGreenMusic
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
@@ -873,8 +874,7 @@ RustboroCity_EventScript_BattleGreen::
 
 RustboroCity_EventScript_GreenBrineyHint::
 	msgbox RustboroCity_Text_GreenAfterBattle1, MSGBOX_DEFAULT
-	msgbox RustboroCity_Text_GreenAfterBattle2, MSGBOX_DEFAULT
-	msgbox RustboroCity_Text_GreenAfterBattle3, MSGBOX_DEFAULT
+    .string "GREEN: Good answer. I like a little fire in my rivals.$"
 	msgbox RustboroCity_Text_GreenAfterBattle4, MSGBOX_DEFAULT
 	msgbox RustboroCity_Text_PlayerOldMemories, MSGBOX_DEFAULT
 	call RustboroCity_EventScript_RestoreBgm
@@ -1159,7 +1159,7 @@ RustboroCity_Text_HelpMeIWasRobbed:
 	.string "helped me in PETALBURG WOODS!\p"
 	.string "Help me! I was robbed by TEAM AQUA!\n"
 	.string "I have to get the DEVON GOODS back!\p"
-	.string "If I don't…\n"
+	.string "If I don't...\n"
 	.string "I'm going to be in serious trouble.$"
 
 RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel:
@@ -1283,7 +1283,7 @@ RustboroCity_Text_GreenFinallyHere:
 	.string "you'd never show up.$"
 
 RustboroCity_Text_PlayerGreenWhatDoingHere:
-	.string "{COLOR GREEN}{PLAYER}:{COLOR DARK_GRAY} Green? What are you doing here?$"
+	.string "{PLAYER}: Green? What are you doing here?$"
 
 RustboroCity_Text_GreenNoSlackingGiveNumbers:
 	.string "GREEN: Making sure you don't slack off, that's\n"
@@ -1302,40 +1302,33 @@ RustboroCity_Text_GreenTestYourself:
 	.string "I want to see for myself. Battle me?$"
 
 RustboroCity_Text_GreenComeBackStronger:
-	.string "GREEN: Hmph. Come back when you're ready to\n"
-	.string "push harder."$
+    .string "GREEN: Hmph. Come back when you're ready to\n"
+    .string "push harder.$"
 
 RustboroCity_Text_GreenWantBattle:
-	.string "GREEN: So? Ready to show me what you've got?"$
+    .string "GREEN: So? Ready to show me what you've got?$"
 
 RustboroCity_Text_GreenLetsSeeIt:
-	.string "GREEN: Good. Show me that potential."$
+	.string "GREEN: Good. Show me that potential.$"
 
 RustboroCity_Text_GreenDefeat:
-	.string "GREEN: Not bad. No wonder they vouched for you."$
+	.string "GREEN: Not bad. No wonder they vouched for you.$"
 
 RustboroCity_Text_GreenAfterBattle1:
-	.string "GREEN: Don't get comfortable--you'll need to push\n"
-	.string "even harder if you want to keep up with us."$
+	.string "GREEN: Don't get comfortable-- you'll need to push even harder if you want to keep up with us.$"
 
 RustboroCity_Text_GreenAfterBattle2:
-	.string "{COLOR GREEN}{PLAYER}:{COLOR DARK_GRAY} I'll get there. Just wait and see."$
+	.string "{PLAYER}: I'll get there. Just wait and see.$"
 
 RustboroCity_Text_GreenAfterBattle3:
-	.string "GREEN: Good answer. I like a little fire in my\n"
-	.string "rivals."$
+	.string "GREEN: Good answer. I like a little fire in my rivals.$"
 
 RustboroCity_Text_GreenAfterBattle4:
-	.string "GREEN: Anyway, you've got business with MR. BRINEY,\n"
-	.string "right? Don't keep the Captain waiting. Hoenn's\n"
-	.string "waters are rough these days…\p"
-	.string "Oh, and if you see RED again… tell him GREEN's\n"
-	.string "looking. He'll understand."$
+	.string "GREEN: Anyway, you've got business with MR. BRINEY, right? Don't keep the Captain waiting. Hoenn's waters are rough these days...\p"
+	.string "Oh, and if you see RED again... tell him GREEN's looking. He'll understand.$"
 
 RustboroCity_Text_PlayerOldMemories:
-	.string "{COLOR GREEN}{PLAYER}:{COLOR DARK_GRAY} (Brendan, May, Green… and Red.\n"
-	.string "Why do these names feel like old memories\n"
-	.string "I can't quite grasp?)"$
+	.string "(Brendan, May, Green... and Red.)\nWhy do these names feel like old memories I can't quite grasp?)$"
 
 RustboroCity_Text_TunnelNearingCompletion:
 	.string "“Timesaving tunnel nearing\n"

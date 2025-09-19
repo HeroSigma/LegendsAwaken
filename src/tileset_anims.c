@@ -867,8 +867,8 @@ static void QueueAnimTiles_General_Water(u16 timer)
 
 static void QueueAnimTiles_General_SandWaterEdge(u16 timer)
 {
-    u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_SandWaterEdge);
     // Animation disabled for Sand/Water Edge
+    (void)timer;  // Mark parameter as intentionally unused
     return;
 }
 
@@ -1113,8 +1113,8 @@ static void TilesetAnim_BattleFrontierOutsideEast(u16 timer)
 
 static void QueueAnimTiles_General_LandWaterEdge(u16 timer)
 {
-    u16 i = timer % ARRAY_COUNT(gTilesetAnims_General_LandWaterEdge);
     // Animation disabled for Land/Water Edge
+    (void)timer;  // Mark parameter as intentionally unused
     return;
 }
 

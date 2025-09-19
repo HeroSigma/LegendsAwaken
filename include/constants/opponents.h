@@ -864,12 +864,30 @@
 #define TRAINER_SHADOW_TRIAD_RUSTURF         857
 #define TRAINER_GRUNT_AQUA_RUSTURF           858
 
+// Legends Awaken: Kanto Rivals
+#define TRAINER_GREEN_RUSTBORO               859
+#define TRAINER_GREEN_SLATEPORT              860
+#define TRAINER_GREEN_FORTREE                861
+#define TRAINER_GREEN_MOSSDEEP               862
+#define TRAINER_GREEN_VICTORYROAD            863
+#define TRAINER_BLUE_DEWFORD                 864
+#define TRAINER_BLUE_VERDANTURF              865
+#define TRAINER_BLUE_LILYCOVE                866
+#define TRAINER_BLUE_SOOTOPOLIS              867
+#define TRAINER_BLUE_VICTORYROAD             868
+#define TRAINER_RED_MAUVILLE                 869
+#define TRAINER_RED_JAGGEDPASS               870
+#define TRAINER_RED_SAFARIZONE               871
+#define TRAINER_RED_SKYPILLAR                872
+#define TRAINER_RED_VICTORYROAD              873
+
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      859
-#define MAX_TRAINERS_COUNT                  864
+#define TRAINERS_COUNT                      874
+// Increase max trainers to make room for Kanto rivals.
+#define MAX_TRAINERS_COUNT                  880
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

@@ -219,11 +219,6 @@ $(OBJEVENTGFXDIR)/people/fisherman.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/gentleman.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/sp_fisherman.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 4
-
-$(OBJEVENTGFXDIR)/people/sp_gentleman.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/girl_1.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
@@ -240,8 +235,6 @@ $(OBJEVENTGFXDIR)/people/hex_maniac.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/hiker.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/sp_hiker.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/hot_springs_old_woman.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
@@ -435,8 +428,7 @@ $(OBJEVENTGFXDIR)/people/woman_5.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/youngster.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/sp_youngster.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 4
+## sp_youngster handled by consolidated SP_* rules near end of file
 
 
 

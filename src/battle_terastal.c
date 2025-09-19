@@ -62,7 +62,6 @@ void ApplyBattlerVisualsForTeraAnim(u32 battler)
 // Returns whether a battler can Terastallize.
 bool32 CanTerastallize(u32 battler)
 {
-    enum ItemHoldEffect holdEffect = GetBattlerHoldEffect(battler, FALSE);
 
     if (gBattleMons[battler].volatiles.transformed && GET_BASE_SPECIES_ID(gBattleMons[battler].species) == SPECIES_TERAPAGOS)
         return FALSE;

@@ -343,10 +343,10 @@ const u8 gText_MatchCallPassionBurn_Flannery_Pokemon[] = _("Burn with passion!")
 const u8 gText_MatchCallPassionBurn_Flannery_Intro1[] = _("Completely wash away daily");
 const u8 gText_MatchCallPassionBurn_Flannery_Intro2[] = _("fatigue in hot springs!");
 
-const u8 gText_MatchCallReliableOne_Dad_Strategy[] = _("I flexibly adapt my style.");
-const u8 gText_MatchCallReliableOne_Dad_Pokemon[] = _("Grown in a balanced manner.");
-const u8 gText_MatchCallReliableOne_Dad_Intro1[] = _("I walk the 30 minutes from");
-const u8 gText_MatchCallReliableOne_Dad_Intro2[] = _("home to here every day.");
+const u8 gText_MatchCallReliableOne_Norman_Strategy[] = _("I flexibly adapt my style.");
+const u8 gText_MatchCallReliableOne_Norman_Pokemon[] = _("Grown in a balanced manner.");
+const u8 gText_MatchCallReliableOne_Norman_Intro1[] = _("I walk the 30 minutes from");
+const u8 gText_MatchCallReliableOne_Norman_Intro2[] = _("home to here every day.");
 
 const u8 gText_MatchCallSkyTamer_Winona_Strategy[] = _("I take advantage of speed.");
 const u8 gText_MatchCallSkyTamer_Winona_Pokemon[] = _("Graceful sky dancers.");
@@ -459,7 +459,7 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
     [REMATCH_BRAWLY] = MCFLAVOR(TheBigHit_Brawly),
     [REMATCH_WATTSON] = MCFLAVOR(SwellShock_Wattson),
     [REMATCH_FLANNERY] = MCFLAVOR(PassionBurn_Flannery),
-    [REMATCH_NORMAN] = MCFLAVOR(ReliableOne_Dad),
+    [REMATCH_NORMAN] = MCFLAVOR(ReliableOne_Norman),
     [REMATCH_WINONA] = MCFLAVOR(SkyTamer_Winona),
     [REMATCH_TATE_AND_LIZA] = MCFLAVOR(MysticDuo_TateAndLiza),
     [REMATCH_JUAN] = MCFLAVOR(DandyCharm_Juan),

@@ -12480,6 +12480,16 @@
       "secondary_tileset": "gTileset_world",
       "border_filepath": "data/layouts/SpearPillar1A/border.bin",
       "blockdata_filepath": "data/layouts/SpearPillar1A/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE106B",
+      "name": "Route106B_Layout",
+      "width": 60,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Route106B/border.bin",
+      "blockdata_filepath": "data/layouts/Route106B/map.bin"
     }
   ]
 }
