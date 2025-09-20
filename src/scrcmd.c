@@ -1686,9 +1686,7 @@ bool8 ScrCmd_message(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
-    // Apply speaker name if previously set via setspeaker
-    if (ctx->data[1] != 0)
-        SetSpeakerName((const u8 *)ctx->data[1]);
+    // Speaker name functionality removed
 
     if (msg == NULL)
         msg = (const u8 *)ctx->data[0];
@@ -1702,6 +1700,7 @@ bool8 ScrCmd_pokenavcall(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
+    // Apply speaker name if previously set via setspeaker
     if (ctx->data[1] != 0)
         SetSpeakerName((const u8 *)ctx->data[1]);
 

@@ -30,12 +30,11 @@
 
 #define B_EV_ITEMS_CAP                  FALSE // If set to true, EV-boosting items can't be used to go over the EV cap
 
-// Trainer Level Cap
-// If TRUE, trainer Pokémon below the current level cap (GetCurrentLevelCap)
-// are raised up to the cap. Pokémon already at/above the cap keep their level.
-// This affects regular (non-facility) trainer battles and ignores the level set
-// in `trainers.party` only when it is below the cap.
-#define B_TRAINER_LEVEL_OVERRIDE        TRUE
+// Badge-Based Evolution Enforcement
+// If TRUE, trainer Pokémon that have evolved beyond what the current level cap allows
+// will be automatically downgraded to their legal pre-evolution forms while preserving
+// all other data (level, moves, IVs, EVs, nature, ability, held item, etc.)
+#define B_TRAINER_EVOLUTION_ENFORCEMENT TRUE
 
 // Wild Level Cap
 // If TRUE, wild Pokémon levels from standard encounter tables (land/water/rock/fishing)
@@ -43,11 +42,11 @@
 // levels declared in `src/data/wild_encounters.json`.
 #define B_WILD_LEVEL_OVERRIDE           TRUE
 
-// Badge-Based Evolution Enforcement
-// If TRUE, trainer Pokémon that have evolved beyond what the current level cap allows
-// will be automatically downgraded to their legal pre-evolution forms while preserving
-// all other data (level, moves, IVs, EVs, nature, ability, held item, etc.)
-#define B_TRAINER_EVOLUTION_ENFORCEMENT TRUE
+// Trainer Level Reduction
+// If TRUE, trainer Pokémon with levels above the current level cap (GetCurrentLevelCap)
+// will have their levels reduced to the cap while preserving all other data
+// (moves, IVs, EVs, nature, ability, held item, shiny status, etc.)
+#define B_TRAINER_LEVEL_REDUCTION TRUE
 
 // Badge count required before non-level evolutions (trade, item, friendship, etc.) are allowed
 // Set to 0 to allow all non-level evolutions regardless of badge count

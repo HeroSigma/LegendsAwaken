@@ -337,7 +337,113 @@ void EnforceLevelCapOnTrainerParty(struct Pokemon *party, u32 partySize, u16 tra
             SetMonData(&party[i], MON_DATA_GIGANTAMAX_FACTOR, &gigantamaxFactor);
             SetMonData(&party[i], MON_DATA_TERA_TYPE, &teraType);
             
-            // Recalculate stats with new species
+void ReduceTrainerPartyLevelsToCap(struct Pokemon *party, u32 partySize, u16 trainerId)
+{
+    // Skip level reduction if disabled in config
+    if (!B_TRAINER_LEVEL_REDUCTION)
+        return;
+
+    // Skip level reduction if trainer is exempt
+    if (IsTrainerExemptFromLevelCap(trainerId))
+        return;
+
+    u32 levelCap = GetCurrentLevelCap();
+    u32 i;
+
+    for (i = 0; i < partySize; i++)
+    {
+        if (GetMonData(&party[i], MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            continue;
+
+        u32 currentLevel = GetMonData(&party[i], MON_DATA_LEVEL, NULL);
+
+        // If Pokémon level exceeds level cap, reduce it to the cap
+        if (currentLevel > levelCap)
+        {
+            // Store all the data we want to preserve
+            u32 exp = GetMonData(&party[i], MON_DATA_EXP, NULL);
+            u32 personality = GetMonData(&party[i], MON_DATA_PERSONALITY, NULL);
+            u32 otId = GetMonData(&party[i], MON_DATA_OT_ID, NULL);
+            u16 heldItem = GetMonData(&party[i], MON_DATA_HELD_ITEM, NULL);
+            u8 friendship = GetMonData(&party[i], MON_DATA_FRIENDSHIP, NULL);
+            u8 pokeball = GetMonData(&party[i], MON_DATA_POKEBALL, NULL);
+            bool32 isShiny = GetMonData(&party[i], MON_DATA_IS_SHINY, NULL);
+            u32 ivs = GetMonData(&party[i], MON_DATA_IVS, NULL);
+
+            // Get EVs
+            u8 evs[NUM_STATS];
+            evs[STAT_HP] = GetMonData(&party[i], MON_DATA_HP_EV, NULL);
+            evs[STAT_ATK] = GetMonData(&party[i], MON_DATA_ATK_EV, NULL);
+            evs[STAT_DEF] = GetMonData(&party[i], MON_DATA_DEF_EV, NULL);
+            evs[STAT_SPEED] = GetMonData(&party[i], MON_DATA_SPEED_EV, NULL);
+            evs[STAT_SPATK] = GetMonData(&party[i], MON_DATA_SPATK_EV, NULL);
+            evs[STAT_SPDEF] = GetMonData(&party[i], MON_DATA_SPDEF_EV, NULL);
+
+            // Get moves
+            u16 moves[MAX_MON_MOVES];
+            u8 pp[MAX_MON_MOVES];
+            u8 ppBonuses = GetMonData(&party[i], MON_DATA_PP_BONUSES, NULL);
+            u32 j;
+            for (j = 0; j < MAX_MON_MOVES; j++)
+            {
+                moves[j] = GetMonData(&party[i], MON_DATA_MOVE1 + j, NULL);
+                pp[j] = GetMonData(&party[i], MON_DATA_PP1 + j, NULL);
+            }
+
+            // Get nickname
+            u8 nickname[POKEMON_NAME_LENGTH + 1];
+            GetMonData(&party[i], MON_DATA_NICKNAME, nickname);
+
+            // Get OT name
+            u8 otName[PLAYER_NAME_LENGTH + 1];
+            GetMonData(&party[i], MON_DATA_OT_NAME, otName);
+
+            // Get additional data
+            u8 abilityNum = GetMonData(&party[i], MON_DATA_ABILITY_NUM, NULL);
+            u32 dynamaxLevel = GetMonData(&party[i], MON_DATA_DYNAMAX_LEVEL, NULL);
+            bool32 gigantamaxFactor = GetMonData(&party[i], MON_DATA_GIGANTAMAX_FACTOR, NULL);
+            u8 teraType = GetMonData(&party[i], MON_DATA_TERA_TYPE, NULL);
+
+            u16 species = GetMonData(&party[i], MON_DATA_SPECIES, NULL);
+
+            // Create new Pokemon with reduced level
+            CreateMon(&party[i], species, levelCap, 0, TRUE, personality, OT_ID_PRESET, otId);
+
+            // Restore all preserved data
+            SetMonData(&party[i], MON_DATA_EXP, &exp);
+            SetMonData(&party[i], MON_DATA_HELD_ITEM, &heldItem);
+            SetMonData(&party[i], MON_DATA_FRIENDSHIP, &friendship);
+            SetMonData(&party[i], MON_DATA_POKEBALL, &pokeball);
+            SetMonData(&party[i], MON_DATA_IS_SHINY, &isShiny);
+            SetMonData(&party[i], MON_DATA_IVS, &ivs);
+
+            // Restore EVs
+            SetMonData(&party[i], MON_DATA_HP_EV, &evs[STAT_HP]);
+            SetMonData(&party[i], MON_DATA_ATK_EV, &evs[STAT_ATK]);
+            SetMonData(&party[i], MON_DATA_DEF_EV, &evs[STAT_DEF]);
+            SetMonData(&party[i], MON_DATA_SPEED_EV, &evs[STAT_SPEED]);
+            SetMonData(&party[i], MON_DATA_SPATK_EV, &evs[STAT_SPATK]);
+            SetMonData(&party[i], MON_DATA_SPDEF_EV, &evs[STAT_SPDEF]);
+
+            // Restore moves and PP
+            for (j = 0; j < MAX_MON_MOVES; j++)
+            {
+                SetMonMoveSlot(&party[i], moves[j], j);
+                SetMonData(&party[i], MON_DATA_PP1 + j, &pp[j]);
+            }
+            SetMonData(&party[i], MON_DATA_PP_BONUSES, &ppBonuses);
+
+            // Restore names
+            SetMonData(&party[i], MON_DATA_NICKNAME, nickname);
+            SetMonData(&party[i], MON_DATA_OT_NAME, otName);
+
+            // Restore additional data
+            SetMonData(&party[i], MON_DATA_ABILITY_NUM, &abilityNum);
+            SetMonData(&party[i], MON_DATA_DYNAMAX_LEVEL, &dynamaxLevel);
+            SetMonData(&party[i], MON_DATA_GIGANTAMAX_FACTOR, &gigantamaxFactor);
+            SetMonData(&party[i], MON_DATA_TERA_TYPE, &teraType);
+
+            // Recalculate stats with new level
             CalculateMonStats(&party[i]);
         }
     }

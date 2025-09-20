@@ -567,6 +567,15 @@ static void CB2_InitBattleInternal(void)
                 CreateNPCTrainerParty(&gEnemyParty[PARTY_SIZE / 2], TRAINER_BATTLE_PARAM.opponentB, FALSE);
             SetWildMonHeldItem();
             CalculateEnemyPartyCount();
+
+            // Apply level cap enforcement to trainer parties
+            EnforceLevelCapOnTrainerParty(&gEnemyParty[0], PARTY_SIZE, TRAINER_BATTLE_PARAM.opponentA);
+            ReduceTrainerPartyLevelsToCap(&gEnemyParty[0], PARTY_SIZE, TRAINER_BATTLE_PARAM.opponentA);
+            if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS && !BATTLE_TWO_VS_ONE_OPPONENT)
+            {
+                EnforceLevelCapOnTrainerParty(&gEnemyParty[PARTY_SIZE / 2], PARTY_SIZE, TRAINER_BATTLE_PARAM.opponentB);
+                ReduceTrainerPartyLevelsToCap(&gEnemyParty[PARTY_SIZE / 2], PARTY_SIZE, TRAINER_BATTLE_PARAM.opponentB);
+            }
         }
     }
 

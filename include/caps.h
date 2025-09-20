@@ -25,5 +25,6 @@ u32 GetCurrentEVCap(void);
 // Badge-based level cap enforcement functions
 bool32 IsTrainerExemptFromLevelCap(u16 trainerId);
 void EnforceLevelCapOnTrainerParty(struct Pokemon *party, u32 partySize, u16 trainerId);
+void ReduceTrainerPartyLevelsToCap(struct Pokemon *party, u32 partySize, u16 trainerId);
 
 #endif /* GUARD_CAPS_H */

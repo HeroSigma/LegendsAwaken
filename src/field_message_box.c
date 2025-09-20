@@ -8,17 +8,16 @@
 #include "text_window.h"
 #include "script.h"
 #include "window.h"
+#include "palette.h"
 #include "event_data.h"
-
-// Optional speaker nameplate support
-const u8 *gSpeakerName = NULL;
-// EWRAM .sbss requires zero-initialization; set to WINDOW_NONE at init
-static EWRAM_DATA u8 sNamePlateWindowId = 0;
-static void TryShowNamePlate(void);
-static void DestroyNamePlate(void);
+#include "config/overworld.h"
 
 static EWRAM_DATA u8 sFieldMessageBoxMode = 0;
 EWRAM_DATA u8 gWalkAwayFromSignpostTimer = 0;
+
+// Speaker name system
+const u8 *gCurrentSpeakerName = NULL;
+static void DrawSpeakerNameInTextbox(void);
 
 static void ExpandStringAndStartDrawFieldMessage(const u8 *, bool32);
 static void StartDrawFieldMessage(void);
@@ -26,8 +25,6 @@ static void StartDrawFieldMessage(void);
 void InitFieldMessageBox(void)
 {
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
-    // Ensure nameplate window is marked as not present
-    sNamePlateWindowId = WINDOW_NONE;
     gTextFlags.canABSpeedUpPrint = FALSE;
     gTextFlags.useAlternateDownArrow = FALSE;
     gTextFlags.autoScroll = FALSE;
@@ -47,8 +44,6 @@ static void Task_DrawFieldMessage(u8 taskId)
                 LoadSignPostWindowFrameGfx();
             else
                 LoadMessageBoxAndBorderGfx();
-            // If a speaker name is set, prepare the name plate before the main message box
-            TryShowNamePlate();
             task->tState++;
             break;
         case 1:
@@ -137,14 +132,14 @@ bool8 ShowFieldMessageFromBuffer(void)
 static void ExpandStringAndStartDrawFieldMessage(const u8 *str, bool32 allowSkippingDelayWithButtonPress)
 {
     StringExpandPlaceholders(gStringVar4, str);
-    // If a speaker name is set, render the name plate window before starting the message
-    TryShowNamePlate();
+    DrawSpeakerNameInTextbox();
     AddTextPrinterForMessage(allowSkippingDelayWithButtonPress);
     CreateTask_DrawFieldMessage();
 }
 
 static void StartDrawFieldMessage(void)
 {
+    DrawSpeakerNameInTextbox();
     AddTextPrinterForMessage(TRUE);
     CreateTask_DrawFieldMessage();
 }
@@ -153,9 +148,7 @@ void HideFieldMessageBox(void)
 {
     DestroyTask_DrawFieldMessage();
     ClearDialogWindowAndFrame(0, TRUE);
-    // Clear any existing name plate and reset the speaker name
-    DestroyNamePlate();
-    gSpeakerName = NULL;
+    gCurrentSpeakerName = NULL; // Clear speaker name when hiding textbox
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
 }
 
@@ -181,62 +174,78 @@ static void UNUSED ReplaceFieldMessageWithFrame(void)
 void StopFieldMessage(void)
 {
     DestroyTask_DrawFieldMessage();
+    gCurrentSpeakerName = NULL; // Clear speaker name when stopping
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
 }
 
-// Public setter to specify a speaker name for the next field message
+// Speaker name management functions
 void SetSpeakerName(const u8 *name)
 {
-    gSpeakerName = name;
+    gCurrentSpeakerName = name;
 }
 
-// Helpers for name plate handling
-static void TryShowNamePlate(void)
+void ClearSpeakerName(void)
 {
-    // Skip drawing nameplate if suppressed via config or flag
-    if (OW_SUPPRESS_SPEAKER_NAME || FlagGet(OW_FLAG_SUPPRESS_SPEAKER_NAME))
+    gCurrentSpeakerName = NULL;
+}
+
+// Draw speaker name inside the textbox area
+static void DrawSpeakerNameInTextbox(void)
+{
+    if (gCurrentSpeakerName == NULL)
+        return;
+    
+    // Skip drawing speaker name if suppressed via config flag
+    if (OW_FLAG_SUPPRESS_SPEAKER_NAME && FlagGet(OW_FLAG_SUPPRESS_SPEAKER_NAME))
         return;
 
-    if (gSpeakerName == NULL)
-        return;
-
-    if (sNamePlateWindowId == WINDOW_NONE)
+    // Create a formatted string with speaker name and color codes
+    u8 speakerText[128];
+    
+    // Use color control codes to make speaker name stand out
+    // Format: [FC][01][03] = color light gray, then speaker name, then [FC][01][01] = back to white
+    speakerText[0] = EXT_CTRL_CODE_BEGIN;
+    speakerText[1] = EXT_CTRL_CODE_COLOR;
+    speakerText[2] = TEXT_COLOR_LIGHT_BLUE;
+    
+    u32 pos = 3;
+    StringCopy(&speakerText[pos], gCurrentSpeakerName);
+    pos += StringLength(gCurrentSpeakerName);
+    
+    // Add colon and space
+    speakerText[pos++] = CHAR_COLON;
+    speakerText[pos++] = CHAR_SPACE;
+    
+    // Reset to gray text color for dialogue
+    speakerText[pos++] = EXT_CTRL_CODE_BEGIN;
+    speakerText[pos++] = EXT_CTRL_CODE_COLOR;
+    speakerText[pos++] = TEXT_COLOR_DARK_GRAY;
+    speakerText[pos] = EOS;
+    
+    // Prepend speaker name to the current message
+    u8 tempBuffer[1024];
+    StringCopy(tempBuffer, speakerText);
+    StringAppend(tempBuffer, gStringVar4);
+    
+    // Ensure text fits within textbox by adding line breaks if needed
+    // Standard textbox is about 27 characters wide
+    u32 maxLineLength = 25; // Leave some margin
+    u32 speakerNameLength = StringLength(gCurrentSpeakerName) + 2; // +2 for ": "
+    
+    // Check if we need to add a line break after speaker name
+    if (speakerNameLength > maxLineLength - 5) // If speaker name is too long
     {
-        // Compute a reasonable width for the name plate based on string width (in pixels)
-        u16 widthPx = GetStringWidth(FONT_NORMAL, gSpeakerName, 0);
-        // Add padding and convert to tiles (8px). Clamp within message box width.
-        u8 widthTiles = (widthPx + 12 + 7) / 8; // ~1 tile padding
-        if (widthTiles < 6)
-            widthTiles = 6;
-        if (widthTiles > 23)
-            widthTiles = 23; // Leave margin inside 27-tile wide dialog
-
-        // Position just above the main dialogue frame so clearing the frame also clears the plate
-        struct WindowTemplate win = {
-            .bg = 0,
-            .tilemapLeft = 3,
-            .tilemapTop = 14,
-            .width = widthTiles,
-            .height = 2,
-            .paletteNum = STD_WINDOW_PALETTE_NUM,
-            .baseBlock = 0x120 // use a free-ish range separate from 0's default
-        };
-
-        sNamePlateWindowId = AddWindow(&win);
-        DrawStdWindowFrame(sNamePlateWindowId, TRUE);
-        // Print the name (no delay) with slight inset
-        AddTextPrinterParameterized(sNamePlateWindowId, FONT_NORMAL, gSpeakerName, 1, 1, TEXT_SKIP_DRAW, NULL);
-        PutWindowTilemap(sNamePlateWindowId);
-        CopyWindowToVram(sNamePlateWindowId, COPYWIN_FULL);
+        // Add newline after speaker name
+        u8 finalBuffer[1024];
+        StringCopy(finalBuffer, speakerText);
+        u32 len = StringLength(finalBuffer);
+        finalBuffer[len] = CHAR_NEWLINE;
+        finalBuffer[len + 1] = EOS;
+        StringAppend(finalBuffer, gStringVar4);
+        StringCopy(gStringVar4, finalBuffer);
     }
-}
-
-static void DestroyNamePlate(void)
-{
-    if (sNamePlateWindowId != WINDOW_NONE)
+    else
     {
-        ClearStdWindowAndFrame(sNamePlateWindowId, TRUE);
-        RemoveWindow(sNamePlateWindowId);
-        sNamePlateWindowId = WINDOW_NONE;
+        StringCopy(gStringVar4, tempBuffer);
     }
 }

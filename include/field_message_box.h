@@ -9,18 +9,19 @@ enum
     FIELD_MESSAGE_BOX_AUTO_SCROLL,
 };
 
-bool8 ShowFieldMessage(const u8 *str);
-bool8 ShowPokenavFieldMessage(const u8 *str);
+bool8 ShowFieldMessage(const u8 *message);
+bool8 ShowPokenavFieldMessage(const u8 *message);
 bool8 ShowFieldMessageFromBuffer(void);
-bool8 ShowFieldAutoScrollMessage(const u8 *str);
+bool8 ShowFieldAutoScrollMessage(const u8 *message);
 void HideFieldMessageBox(void);
 bool8 IsFieldMessageBoxHidden(void);
 u8 GetFieldMessageBoxMode(void);
 void StopFieldMessage(void);
 void InitFieldMessageBox(void);
 void SetSpeakerName(const u8 *name);
-extern const u8 *gSpeakerName;
+void ClearSpeakerName(void);
 
 extern u8 gWalkAwayFromSignpostTimer;
+extern const u8 *gCurrentSpeakerName;
 
 #endif // GUARD_FIELD_MESSAGE_BOX_H
