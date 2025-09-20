@@ -1026,6 +1026,7 @@ EVs: 252 HP / 252 SpD / 4 Atk
 - Sleep Talk
 - Hidden Power
 
+
 === TRAINER_RED_JAGGEDPASS ===
 Name: Red
 Class: Rival
@@ -1419,56 +1420,6 @@ EVs: 4 HP / 252 Atk / 252 Spe
 - U-turn
 - Taunt
 - Shadow Ball
-
-=== TRAINER_GRUNT_AQUA_RUSTURF ===
-Name: Grunt
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
-
-Carvanha (M) @ Mystic Water
-Level: 16
-Ability: Speed Boost
-Nature: Jolly
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 Atk / 252 Spe
-- Aqua Jet
-- Crunch
-- Ice Fang
-- Protect
-
-Wingull (M) @ Sharp Beak
-Level: 16
-Ability: Keen Eye
-Nature: Jolly
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 Atk / 252 Spe
-- Wing Attack
-- Water Pulse
-- Quick Attack
-- U-turn
-
-Grimer-Alola (M) @ Black Sludge
-Level: 17
-Ability: Poison Touch
-Nature: Adamant
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 252 Atk / 4 SpD
-- Poison Jab
-- Bite
-- Shadow Sneak
-- Fire Punch
-
-=== TRAINER_NONE ===
-Name:
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Double Battle: No
 
 === TRAINER_SAWYER_1 ===
 Name: Sawyer

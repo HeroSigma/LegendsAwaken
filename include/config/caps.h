@@ -43,4 +43,15 @@
 // levels declared in `src/data/wild_encounters.json`.
 #define B_WILD_LEVEL_OVERRIDE           TRUE
 
+// Badge-Based Evolution Enforcement
+// If TRUE, trainer Pokémon that have evolved beyond what the current level cap allows
+// will be automatically downgraded to their legal pre-evolution forms while preserving
+// all other data (level, moves, IVs, EVs, nature, ability, held item, etc.)
+#define B_TRAINER_EVOLUTION_ENFORCEMENT TRUE
+
+// Badge count required before non-level evolutions (trade, item, friendship, etc.) are allowed
+// Set to 0 to allow all non-level evolutions regardless of badge count
+// Set to 8 to require all badges before allowing non-level evolutions
+#define B_NON_LEVEL_EVO_BADGE_REQUIREMENT 5
+
 #endif /* GUARD_CONFIG_CAPS_H */

@@ -3,6 +3,7 @@
 #include "event_data.h"
 #include "caps.h"
 #include "pokemon.h"
+#include "config/caps.h"
 
 
 u32 GetCurrentLevelCap(void)
@@ -124,4 +125,220 @@ u32 GetCurrentEVCap(void)
     }
 
     return MAX_TOTAL_EVS;
+}
+
+// Badge-based level cap enforcement functions
+
+static u32 GetBadgeCount(void)
+{
+    u32 badgeCount = 0;
+    
+    if (FlagGet(FLAG_BADGE01_GET)) badgeCount++;
+    if (FlagGet(FLAG_BADGE02_GET)) badgeCount++;
+    if (FlagGet(FLAG_BADGE03_GET)) badgeCount++;
+    if (FlagGet(FLAG_BADGE04_GET)) badgeCount++;
+    if (FlagGet(FLAG_BADGE05_GET)) badgeCount++;
+    if (FlagGet(FLAG_BADGE06_GET)) badgeCount++;
+    if (FlagGet(FLAG_BADGE07_GET)) badgeCount++;
+    if (FlagGet(FLAG_BADGE08_GET)) badgeCount++;
+    
+    return badgeCount;
+}
+
+static u16 FindPreEvolution(u16 species)
+{
+    u32 i, j;
+    
+    // Search through all species to find one that evolves into the given species
+    for (i = 1; i < NUM_SPECIES; i++)
+    {
+        const struct Evolution *evolutions = GetSpeciesEvolutions(i);
+        if (evolutions == NULL)
+            continue;
+            
+        for (j = 0; evolutions[j].method != EVOLUTIONS_END; j++)
+        {
+            if (evolutions[j].targetSpecies == species)
+                return i; // Found pre-evolution
+        }
+    }
+    
+    return SPECIES_NONE; // No pre-evolution found
+}
+
+static bool32 IsEvolutionLegalUnderLevelCap(u16 species, u32 levelCap, u32 badgeCount)
+{
+    u16 preEvo = FindPreEvolution(species);
+    
+    // If no pre-evolution exists, the species is always legal
+    if (preEvo == SPECIES_NONE)
+        return TRUE;
+    
+    // Find the evolution method from pre-evolution to this species
+    const struct Evolution *evolutions = GetSpeciesEvolutions(preEvo);
+    if (evolutions == NULL)
+        return TRUE;
+    
+    u32 i;
+    for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
+    {
+        if (evolutions[i].targetSpecies == species)
+        {
+            switch (evolutions[i].method)
+            {
+                case EVO_LEVEL:
+                case EVO_LEVEL_BATTLE_ONLY:
+                    // Level-based evolution: check if required level is within cap
+                    return evolutions[i].param <= levelCap;
+                    
+                case EVO_TRADE:
+                case EVO_ITEM:
+                    // Non-level evolution: check badge-based policy
+                    return badgeCount >= B_NON_LEVEL_EVO_BADGE_REQUIREMENT;
+                    
+                default:
+                    // Other evolution methods: use same policy as trade/item
+                    return badgeCount >= B_NON_LEVEL_EVO_BADGE_REQUIREMENT;
+            }
+        }
+    }
+    
+    return TRUE; // Default to legal if evolution method not found
+}
+
+static u16 DowngradeToLegalSpecies(u16 species, u32 levelCap, u32 badgeCount)
+{
+    u16 currentSpecies = species;
+    
+    // Keep downgrading until we find a legal species or reach base form
+    while (!IsEvolutionLegalUnderLevelCap(currentSpecies, levelCap, badgeCount))
+    {
+        u16 preEvo = FindPreEvolution(currentSpecies);
+        if (preEvo == SPECIES_NONE)
+            break; // Reached base form or no pre-evolution found
+        currentSpecies = preEvo;
+    }
+    
+    return currentSpecies;
+}
+
+bool32 IsTrainerExemptFromLevelCap(u16 trainerId)
+{
+    // Add special trainer IDs that should be exempt from level cap enforcement
+    // This can be expanded to include gym leaders, elite four, champion, etc.
+    // For now, return FALSE to apply level cap to all trainers
+    return FALSE;
+}
+
+void EnforceLevelCapOnTrainerParty(struct Pokemon *party, u32 partySize, u16 trainerId)
+{
+    // Skip enforcement if disabled in config
+    if (!B_TRAINER_EVOLUTION_ENFORCEMENT)
+        return;
+        
+    // Skip enforcement if trainer is exempt
+    if (IsTrainerExemptFromLevelCap(trainerId))
+        return;
+    
+    u32 levelCap = GetCurrentLevelCap();
+    u32 badgeCount = GetBadgeCount();
+    u32 i;
+    
+    for (i = 0; i < partySize; i++)
+    {
+        if (GetMonData(&party[i], MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            continue;
+            
+        u16 currentSpecies = GetMonData(&party[i], MON_DATA_SPECIES, NULL);
+        u16 legalSpecies = DowngradeToLegalSpecies(currentSpecies, levelCap, badgeCount);
+        
+        // If species needs to be downgraded, change it while preserving everything else
+        if (legalSpecies != currentSpecies)
+        {
+            // Store all the data we want to preserve
+            u32 level = GetMonData(&party[i], MON_DATA_LEVEL, NULL);
+            u32 exp = GetMonData(&party[i], MON_DATA_EXP, NULL);
+            u32 personality = GetMonData(&party[i], MON_DATA_PERSONALITY, NULL);
+            u32 otId = GetMonData(&party[i], MON_DATA_OT_ID, NULL);
+            u16 heldItem = GetMonData(&party[i], MON_DATA_HELD_ITEM, NULL);
+            u8 friendship = GetMonData(&party[i], MON_DATA_FRIENDSHIP, NULL);
+            u8 pokeball = GetMonData(&party[i], MON_DATA_POKEBALL, NULL);
+            bool32 isShiny = GetMonData(&party[i], MON_DATA_IS_SHINY, NULL);
+            u32 ivs = GetMonData(&party[i], MON_DATA_IVS, NULL);
+            
+            // Get EVs
+            u8 evs[NUM_STATS];
+            evs[STAT_HP] = GetMonData(&party[i], MON_DATA_HP_EV, NULL);
+            evs[STAT_ATK] = GetMonData(&party[i], MON_DATA_ATK_EV, NULL);
+            evs[STAT_DEF] = GetMonData(&party[i], MON_DATA_DEF_EV, NULL);
+            evs[STAT_SPEED] = GetMonData(&party[i], MON_DATA_SPEED_EV, NULL);
+            evs[STAT_SPATK] = GetMonData(&party[i], MON_DATA_SPATK_EV, NULL);
+            evs[STAT_SPDEF] = GetMonData(&party[i], MON_DATA_SPDEF_EV, NULL);
+            
+            // Get moves
+            u16 moves[MAX_MON_MOVES];
+            u8 pp[MAX_MON_MOVES];
+            u8 ppBonuses = GetMonData(&party[i], MON_DATA_PP_BONUSES, NULL);
+            u32 j;
+            for (j = 0; j < MAX_MON_MOVES; j++)
+            {
+                moves[j] = GetMonData(&party[i], MON_DATA_MOVE1 + j, NULL);
+                pp[j] = GetMonData(&party[i], MON_DATA_PP1 + j, NULL);
+            }
+            
+            // Get nickname
+            u8 nickname[POKEMON_NAME_LENGTH + 1];
+            GetMonData(&party[i], MON_DATA_NICKNAME, nickname);
+            
+            // Get OT name
+            u8 otName[PLAYER_NAME_LENGTH + 1];
+            GetMonData(&party[i], MON_DATA_OT_NAME, otName);
+            
+            // Get additional data
+            u8 abilityNum = GetMonData(&party[i], MON_DATA_ABILITY_NUM, NULL);
+            u32 dynamaxLevel = GetMonData(&party[i], MON_DATA_DYNAMAX_LEVEL, NULL);
+            bool32 gigantamaxFactor = GetMonData(&party[i], MON_DATA_GIGANTAMAX_FACTOR, NULL);
+            u8 teraType = GetMonData(&party[i], MON_DATA_TERA_TYPE, NULL);
+            
+            // Create new Pokemon with legal species
+            CreateMon(&party[i], legalSpecies, level, 0, TRUE, personality, OT_ID_PRESET, otId);
+            
+            // Restore all preserved data
+            SetMonData(&party[i], MON_DATA_EXP, &exp);
+            SetMonData(&party[i], MON_DATA_HELD_ITEM, &heldItem);
+            SetMonData(&party[i], MON_DATA_FRIENDSHIP, &friendship);
+            SetMonData(&party[i], MON_DATA_POKEBALL, &pokeball);
+            SetMonData(&party[i], MON_DATA_IS_SHINY, &isShiny);
+            SetMonData(&party[i], MON_DATA_IVS, &ivs);
+            
+            // Restore EVs
+            SetMonData(&party[i], MON_DATA_HP_EV, &evs[STAT_HP]);
+            SetMonData(&party[i], MON_DATA_ATK_EV, &evs[STAT_ATK]);
+            SetMonData(&party[i], MON_DATA_DEF_EV, &evs[STAT_DEF]);
+            SetMonData(&party[i], MON_DATA_SPEED_EV, &evs[STAT_SPEED]);
+            SetMonData(&party[i], MON_DATA_SPATK_EV, &evs[STAT_SPATK]);
+            SetMonData(&party[i], MON_DATA_SPDEF_EV, &evs[STAT_SPDEF]);
+            
+            // Restore moves and PP
+            for (j = 0; j < MAX_MON_MOVES; j++)
+            {
+                SetMonMoveSlot(&party[i], moves[j], j);
+                SetMonData(&party[i], MON_DATA_PP1 + j, &pp[j]);
+            }
+            SetMonData(&party[i], MON_DATA_PP_BONUSES, &ppBonuses);
+            
+            // Restore names
+            SetMonData(&party[i], MON_DATA_NICKNAME, nickname);
+            SetMonData(&party[i], MON_DATA_OT_NAME, otName);
+            
+            // Restore additional data
+            SetMonData(&party[i], MON_DATA_ABILITY_NUM, &abilityNum);
+            SetMonData(&party[i], MON_DATA_DYNAMAX_LEVEL, &dynamaxLevel);
+            SetMonData(&party[i], MON_DATA_GIGANTAMAX_FACTOR, &gigantamaxFactor);
+            SetMonData(&party[i], MON_DATA_TERA_TYPE, &teraType);
+            
+            // Recalculate stats with new species
+            CalculateMonStats(&party[i]);
+        }
+    }
 }

@@ -50,6 +50,8 @@
 #define B_FLAG_SLEEP_CLAUSE  0x24 // Sleep Clause
 #define B_FLAG_NO_WHITEOUT   0x25 // No Whiteout
 #define FLAG_HIDE_RUSTBORO_CITY_DEVON_CORP_3F_GREEN    0x26 // Repurposed from unused flag
+// Repurpose an unused flag to hide Green in Slateport Museum 2F until the scene
+#define FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_GREEN 0x29A // Unused Flag repurposed
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define I_EXP_SHARE_FLAG     0x2A // EXP Share

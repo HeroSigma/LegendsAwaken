@@ -1955,3 +1955,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route213B/scripts.inc"
 
 	.include "data/maps/Springpath/scripts.inc"
+
+.include "data/maps/Route106B/scripts.inc"
