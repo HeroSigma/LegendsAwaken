@@ -50,7 +50,7 @@ static u32 GetGlyphWidth_ShortNarrower(u16, bool32);
 static EWRAM_DATA struct TextPrinter sTempTextPrinter = {0};
 static EWRAM_DATA struct TextPrinter sTextPrinters[WINDOWS_MAX] = {0};
 
-static u16 sFontHalfRowLookupTable[0x51];
+static u16 sFontHalfRowLookupTable[0x51]; // TODO: May need expansion for 5-bit colors
 static u16 sLastTextBgColor;
 static u16 sLastTextFgColor;
 static u16 sLastTextShadowColor;

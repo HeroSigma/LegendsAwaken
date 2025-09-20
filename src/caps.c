@@ -336,7 +336,10 @@ void EnforceLevelCapOnTrainerParty(struct Pokemon *party, u32 partySize, u16 tra
             SetMonData(&party[i], MON_DATA_DYNAMAX_LEVEL, &dynamaxLevel);
             SetMonData(&party[i], MON_DATA_GIGANTAMAX_FACTOR, &gigantamaxFactor);
             SetMonData(&party[i], MON_DATA_TERA_TYPE, &teraType);
-            
+        }
+    }
+}
+
 void ReduceTrainerPartyLevelsToCap(struct Pokemon *party, u32 partySize, u16 trainerId)
 {
     // Skip level reduction if disabled in config

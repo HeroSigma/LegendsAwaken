@@ -76,10 +76,10 @@ struct TextPrinterTemplate
     u8 currentY;
     u8 letterSpacing;
     u8 lineSpacing;
-    u8 unk:4;   // 0xC
-    u8 fgColor:4;
-    u8 bgColor:4;
-    u8 shadowColor:4;
+    u8 unk:2;   // 0xC - reduced to make room for expanded colors
+    u8 fgColor:5;   // expanded from 4 to 5 bits (32 colors)
+    u8 bgColor:5;   // expanded from 4 to 5 bits (32 colors)
+    u8 shadowColor:4;   // keeping at 4 bits for now
 };
 
 struct TextPrinter
@@ -105,10 +105,10 @@ struct FontInfo
     u8 maxLetterHeight;
     u8 letterSpacing;
     u8 lineSpacing;
-    u8 unk:4;
-    u8 fgColor:4;
-    u8 bgColor:4;
-    u8 shadowColor:4;
+    u8 unk:2;   // reduced to make room for expanded colors
+    u8 fgColor:5;   // expanded from 4 to 5 bits (32 colors)
+    u8 bgColor:5;   // expanded from 4 to 5 bits (32 colors)
+    u8 shadowColor:4;   // keeping at 4 bits for now
 };
 
 extern const struct FontInfo *gFonts;

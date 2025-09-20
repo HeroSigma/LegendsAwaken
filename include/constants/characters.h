@@ -250,6 +250,24 @@
 #define TEXT_DYNAMIC_COLOR_5    0xE // Usually blue-green
 #define TEXT_DYNAMIC_COLOR_6    0xF // Usually cerulean
 
+// Extended color palette (5-bit support - 32 colors total)
+#define TEXT_COLOR_YELLOW       0x10
+#define TEXT_COLOR_ORANGE       0x11
+#define TEXT_COLOR_PURPLE       0x12
+#define TEXT_COLOR_PINK         0x13
+#define TEXT_COLOR_BROWN        0x14
+#define TEXT_COLOR_LIME         0x15
+#define TEXT_COLOR_CYAN         0x16
+#define TEXT_COLOR_MAGENTA      0x17
+#define TEXT_COLOR_GOLD         0x18
+#define TEXT_COLOR_SILVER       0x19
+#define TEXT_COLOR_MAROON       0x1A
+#define TEXT_COLOR_NAVY         0x1B
+#define TEXT_COLOR_OLIVE        0x1C
+#define TEXT_COLOR_TEAL         0x1D
+#define TEXT_COLOR_INDIGO       0x1E
+#define TEXT_COLOR_VIOLET       0x1F
+
 #define PLACEHOLDER_ID_UNKNOWN       0x0
 #define PLACEHOLDER_ID_PLAYER        0x1
 #define PLACEHOLDER_ID_STRING_VAR_1  0x2
