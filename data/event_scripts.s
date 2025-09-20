@@ -742,6 +742,7 @@ gStdScripts_End::
     .include "data/maps/Route104_PrototypePrettyPetalFlowerShop/scripts.inc"
     .include "data/maps/Route105/scripts.inc"
     .include "data/maps/Route106/scripts.inc"
+    .include "data/maps/Route106B/scripts.inc"
     .include "data/maps/Route107/scripts.inc"
     .include "data/maps/Route108/scripts.inc"
     .include "data/maps/Route109/scripts.inc"

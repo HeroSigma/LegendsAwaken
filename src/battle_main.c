@@ -2053,6 +2053,11 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     {
         retVal = CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
     }
+    
+    // Enforce badge-based level cap on trainer party after creation
+    if (retVal > 0)
+        EnforceLevelCapOnTrainerParty(party, retVal, trainerNum);
+    
     return retVal;
 }
 

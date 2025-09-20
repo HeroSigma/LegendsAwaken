@@ -91,9 +91,13 @@ bool32 ShouldTrainerBattlerUseGimmick(u32 battler, enum Gimmick gimmick)
 // Returns whether a trainer has used a gimmick during a battle.
 bool32 HasTrainerUsedGimmick(u32 battler, enum Gimmick gimmick)
 {
+    // In double battles, Dynamax should be limited to one per side
+    // regardless of whether the partner is from the same trainer.
+    bool32 treatPartnerAsSameTrainer = IsDoubleBattle() && gimmick == GIMMICK_DYNAMAX;
+
     // Check whether partner battler has used gimmick or plans to during turn.
     if (IsDoubleBattle()
-        && IsPartnerMonFromSameTrainer(battler)
+        && (IsPartnerMonFromSameTrainer(battler) || treatPartnerAsSameTrainer)
         && (gBattleStruct->gimmick.activated[BATTLE_PARTNER(battler)][gimmick]
         || ((gBattleStruct->gimmick.toActivate & (1u << BATTLE_PARTNER(battler))
         && gBattleStruct->gimmick.usableGimmick[BATTLE_PARTNER(battler)] == gimmick))))
@@ -111,7 +115,10 @@ bool32 HasTrainerUsedGimmick(u32 battler, enum Gimmick gimmick)
 void SetGimmickAsActivated(u32 battler, enum Gimmick gimmick)
 {
     gBattleStruct->gimmick.activated[battler][gimmick] = TRUE;
-    if (IsDoubleBattle() && IsPartnerMonFromSameTrainer(battler))
+
+    // In double battles, Dynamax is one per side. Mirror activation to partner even
+    // if they are a different trainer (e.g., two-opponents or ingame-partner).
+    if (IsDoubleBattle() && (IsPartnerMonFromSameTrainer(battler) || gimmick == GIMMICK_DYNAMAX))
         gBattleStruct->gimmick.activated[BATTLE_PARTNER(battler)][gimmick] = TRUE;
 }
 
