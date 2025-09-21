@@ -252,11 +252,12 @@ void EnforceLevelCapOnTrainerParty(struct Pokemon *party, u32 partySize, u16 tra
         u16 currentSpecies = GetMonData(&party[i], MON_DATA_SPECIES, NULL);
         u16 legalSpecies = DowngradeToLegalSpecies(currentSpecies, levelCap, badgeCount);
         
-        // If species needs to be downgraded, change it while preserving everything else
-        if (legalSpecies != currentSpecies)
+        // If species needs to be downgraded or level is above cap, adjust it while preserving everything else
+        u32 level = GetMonData(&party[i], MON_DATA_LEVEL, NULL);
+        if (legalSpecies != currentSpecies || level > levelCap)
         {
             // Store all the data we want to preserve
-            u32 level = GetMonData(&party[i], MON_DATA_LEVEL, NULL);
+            level = (level > levelCap) ? levelCap : level; // Cap the level if needed
             u32 exp = GetMonData(&party[i], MON_DATA_EXP, NULL);
             u32 personality = GetMonData(&party[i], MON_DATA_PERSONALITY, NULL);
             u32 otId = GetMonData(&party[i], MON_DATA_OT_ID, NULL);
