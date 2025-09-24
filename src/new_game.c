@@ -125,10 +125,11 @@ void ClearAllContestWinnerPics(void)
 
 static void ClearFrontierRecord(void)
 {
+#if FREE_BATTLE_FRONTIER == FALSE
     CpuFill32(0, &gSaveBlock2Ptr->frontier, sizeof(gSaveBlock2Ptr->frontier));
-
     gSaveBlock2Ptr->frontier.opponentNames[0][0] = EOS;
     gSaveBlock2Ptr->frontier.opponentNames[1][0] = EOS;
+#endif
 }
 
 static void WarpToTruck(void)

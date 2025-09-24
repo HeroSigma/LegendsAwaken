@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "frontier_util.h"
 #include "event_data.h"
@@ -2649,3 +2652,5 @@ void ClearEnemyPartyAfterChallenge()
         ZeroEnemyPartyMons();
     }
 }
+
+#endif // FREE_BATTLE_FRONTIER

@@ -3,7 +3,7 @@
 
 // SaveBlock1 configs
 #define FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK1    FALSE   // Free up unused Pokédex seen flags (52 bytes).
-#define FREE_TRAINER_HILL                   FALSE   // Frees up Trainer Hill data (28 bytes).
+#define FREE_TRAINER_HILL                   TRUE    // Frees up Trainer Hill data (28 bytes).
 #define FREE_MYSTERY_EVENT_BUFFERS          TRUE   // Frees up ramScript (1104 bytes).
 #define FREE_MATCH_CALL                     FALSE   // Frees up match call and rematch / VS Seeker data. (104 bytes).
 #define FREE_UNION_ROOM_CHAT                TRUE   // Frees up union room chat (212 bytes).
@@ -16,6 +16,9 @@
 #define FREE_POKEMON_JUMP                   TRUE   // Frees up Pokémon Jump data (16 bytes).
 #define FREE_RECORD_MIXING_HALL_RECORDS     TRUE   // Frees up hall records for record mixing (1032 bytes).
 #define FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK2    FALSE   // Free up unused Pokédex seen flags (108 bytes).
+// Battle Frontier save data occupies a large portion of SaveBlock2.
+// Toggle to TRUE to free this data when Battle Frontier is not used.
+#define FREE_BATTLE_FRONTIER                TRUE   // Frees up Battle Frontier data (~2200+ bytes).
                                             // SaveBlock2 total: 1274 bytes
 
                                             // Grand Total: 3790

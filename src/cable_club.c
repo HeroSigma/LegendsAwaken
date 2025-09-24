@@ -590,11 +590,14 @@ void TryBattleLinkup(void)
         break;
     case USING_BATTLE_TOWER:
         minPlayers = 2;
+        #if FREE_BATTLE_FRONTIER == FALSE
         if (gSaveBlock2Ptr->frontier.lvlMode == FRONTIER_LVL_50)
             gLinkType = LINKTYPE_BATTLE_TOWER_50;
         else
             gLinkType = LINKTYPE_BATTLE_TOWER_OPEN;
-
+        #else
+            gLinkType = LINKTYPE_BATTLE_TOWER_OPEN;
+        #endif
         break;
     }
 
@@ -738,10 +741,14 @@ u8 CreateTask_ReestablishCableClubLink(void)
         gLinkType = LINKTYPE_MULTI_BATTLE;
         break;
     case USING_BATTLE_TOWER:
+        #if FREE_BATTLE_FRONTIER == FALSE
         if (gSaveBlock2Ptr->frontier.lvlMode == FRONTIER_LVL_50)
             gLinkType = LINKTYPE_BATTLE_TOWER_50;
         else
             gLinkType = LINKTYPE_BATTLE_TOWER_OPEN;
+        #else
+            gLinkType = LINKTYPE_BATTLE_TOWER_OPEN;
+        #endif
         break;
     case USING_TRADE_CENTER:
         gLinkType = LINKTYPE_TRADE;

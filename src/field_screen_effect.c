@@ -1065,7 +1065,11 @@ void WriteFlashScanlineEffectBuffer(u8 flashLevel)
 
 void WriteBattlePyramidViewScanlineEffectBuffer(void)
 {
+    #if FREE_BATTLE_FRONTIER == FALSE
     SetFlashScanlineEffectWindowBoundaries(&gScanlineEffectRegBuffers[0][0], DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, gSaveBlock2Ptr->frontier.pyramidLightRadius);
+    #else
+    SetFlashScanlineEffectWindowBoundaries(&gScanlineEffectRegBuffers[0][0], DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2, 0);
+    #endif
     CpuFastSet(&gScanlineEffectRegBuffers[0], &gScanlineEffectRegBuffers[1], 480);
 }
 

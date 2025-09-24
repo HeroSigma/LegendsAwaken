@@ -605,7 +605,9 @@ struct SaveBlock2
     /*0x57C*/ struct RankingHall2P hallRecords2P[FRONTIER_LVL_MODE_COUNT][HALL_RECORDS_COUNT]; // From record mixing.
 #endif //FREE_RECORD_MIXING_HALL_RECORDS
     /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
+#if FREE_BATTLE_FRONTIER == FALSE
     /*0x64C*/ struct BattleFrontier frontier;
+#endif // FREE_BATTLE_FRONTIER
 	// Quest progress tracking -- moved from SaveBlock1 to SaveBlock2
     // so that the larger arrays do not bloat SaveBlock1.
     u8 questData[(QUEST_COUNT * 5 + 7) / 8];

@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "battle.h"
 #include "battle_controllers.h"
@@ -1627,3 +1630,5 @@ static void UpdateSwapLinePos(u8 y)
 {
     UpdateSwapLineSpritesPos(&gPyramidBagMenu->spriteIds[PBAG_SPRITE_SWAP_LINE_START], NUM_SWAP_LINE_SPRITES | SWAP_LINE_HAS_MARGIN, 120, (y + 1) * 16);
 }
+
+#endif // FREE_BATTLE_FRONTIER

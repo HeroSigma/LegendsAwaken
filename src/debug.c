@@ -3005,7 +3005,9 @@ static void DebugAction_Give_MaxCoins(u8 taskId)
 
 static void DebugAction_Give_MaxBattlePoints(u8 taskId)
 {
+    #if FREE_BATTLE_FRONTIER == FALSE
     gSaveBlock2Ptr->frontier.battlePoints = MAX_BATTLE_FRONTIER_POINTS;
+    #endif
 }
 
 static void DebugAction_Give_DayCareEgg(u8 taskId)

@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "battle_pike.h"
 #include "event_data.h"
@@ -1648,3 +1651,5 @@ static u8 SpeciesToPikeMonId(u16 species)
 
     return ret;
 }
+
+#endif // FREE_BATTLE_FRONTIER

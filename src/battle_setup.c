@@ -862,8 +862,12 @@ u8 GetSpecialBattleTransition(s32 id)
             return RANDOM_TRANSITION(sBattleTransitionTable_BattleFrontier);
     }
 
+    #if FREE_BATTLE_FRONTIER == FALSE
     var = gSaveBlock2Ptr->frontier.trainerIds[gSaveBlock2Ptr->frontier.curChallengeBattleNum * 2 + 0]
         + gSaveBlock2Ptr->frontier.trainerIds[gSaveBlock2Ptr->frontier.curChallengeBattleNum * 2 + 1];
+    #else
+    var = 0;
+    #endif
 
     return sBattleTransitionTable_BattleFrontier[var % ARRAY_COUNT(sBattleTransitionTable_BattleFrontier)];
 }

@@ -1886,6 +1886,11 @@ static bool32 ShouldTrainerRequestBattle(int matchCallId)
 
 static u16 GetFrontierStreakInfo(u16 facilityId, u32 *topicTextId)
 {
+#if FREE_BATTLE_FRONTIER == TRUE
+    (void)facilityId;
+    if (topicTextId) *topicTextId = GEN_TOPIC_STREAK_RECORD - 1;
+    return 0;
+#else
     int i;
     int j;
     u16 streak = 0;
@@ -1963,6 +1968,7 @@ static u16 GetFrontierStreakInfo(u16 facilityId, u32 *topicTextId)
     }
 
     return streak;
+#endif
 }
 
 void BufferPokedexRatingForMatchCall(u8 *destStr)

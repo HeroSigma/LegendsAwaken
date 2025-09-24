@@ -499,15 +499,23 @@ static void ShowPyramidFloorWindow(void)
 {
     if (sBattlePyramidFloorWindowId == WINDOW_NONE)
     {
+        #if FREE_BATTLE_FRONTIER == FALSE
         if (gSaveBlock2Ptr->frontier.curChallengeBattleNum == FRONTIER_STAGES_PER_CHALLENGE)
             sBattlePyramidFloorWindowId = AddWindow(&sWindowTemplate_PyramidPeak);
         else
             sBattlePyramidFloorWindowId = AddWindow(&sWindowTemplate_PyramidFloor);
+        #else
+        sBattlePyramidFloorWindowId = AddWindow(&sWindowTemplate_PyramidFloor);
+        #endif
     }
 
     PutWindowTilemap(sBattlePyramidFloorWindowId);
     DrawStdWindowFrame(sBattlePyramidFloorWindowId, FALSE);
+    #if FREE_BATTLE_FRONTIER == FALSE
     StringCopy(gStringVar1, sPyramidFloorNames[gSaveBlock2Ptr->frontier.curChallengeBattleNum]);
+    #else
+    StringCopy(gStringVar1, sPyramidFloorNames[0]);
+    #endif
     StringExpandPlaceholders(gStringVar4, gText_BattlePyramidFloor);
     AddTextPrinterParameterized(sBattlePyramidFloorWindowId, FONT_NORMAL, gStringVar4, 0, 1, TEXT_SKIP_DRAW, NULL);
     CopyWindowToVram(sBattlePyramidFloorWindowId, COPYWIN_GFX);

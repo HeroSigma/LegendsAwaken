@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "gpu_regs.h"
 #include "main.h"
@@ -1770,3 +1773,5 @@ static void HandleFrontierMapCursorMove(u8 direction)
     CopyBgTilemapBufferToVram(0);
     PlaySE(SE_DEX_SCROLL);
 }
+
+#endif // FREE_BATTLE_FRONTIER

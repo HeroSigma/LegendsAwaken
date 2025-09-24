@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "battle_tower.h"
 #include "apprentice.h"
@@ -3572,3 +3575,5 @@ void TrySetLinkBattleTowerEnemyPartyLevel(void)
         }
     }
 }
+
+#endif // FREE_BATTLE_FRONTIER

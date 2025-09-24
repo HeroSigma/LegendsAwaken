@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "event_data.h"
 #include "battle_setup.h"
@@ -211,3 +214,5 @@ static void GivePalacePrize(void)
         gSpecialVar_Result = FALSE;
     }
 }
+
+#endif // FREE_BATTLE_FRONTIER

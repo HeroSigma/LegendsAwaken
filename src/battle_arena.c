@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "battle.h"
 #include "battle_arena.h"
@@ -614,3 +617,5 @@ void EraseArenaRefereeTextBox(void)
     FillBgTilemapBufferRect(0, 0x10, 28, 19, 1, 1, palNum);
     FillBgTilemapBufferRect(0, 0x11, 29, 19, 1, 1, palNum);
 }
+
+#endif // FREE_BATTLE_FRONTIER

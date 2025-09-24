@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "battle.h"
 #include "battle_factory_screen.h"
@@ -4290,3 +4293,5 @@ static void Swap_CreateMonSprite(void)
 
     sFactorySwapScreen->monPicAnimating = FALSE;
 }
+
+#endif // FREE_BATTLE_FRONTIER

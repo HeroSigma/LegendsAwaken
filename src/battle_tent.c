@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "battle_tent.h"
 #include "overworld.h"
@@ -427,3 +430,5 @@ static void GenerateOpponentMons(void)
         i++;
     }
 }
+
+#endif // FREE_BATTLE_FRONTIER

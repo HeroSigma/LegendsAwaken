@@ -147,8 +147,13 @@ __attribute__((section(".text.header_gf"))) USED static const struct GFRomHeader
     .trainerIdOffset = offsetof(struct SaveBlock2, playerTrainerId),
     .playerNameOffset = offsetof(struct SaveBlock2, playerName),
     .playerGenderOffset = offsetof(struct SaveBlock2, playerGender),
+    #if FREE_BATTLE_FRONTIER == FALSE
     .frontierStatusOffset = offsetof(struct SaveBlock2, frontier.challengeStatus),
     .frontierStatusOffset2 = offsetof(struct SaveBlock2, frontier.challengeStatus),
+    #else
+    .frontierStatusOffset = 0,
+    .frontierStatusOffset2 = 0,
+    #endif
     .externalEventFlagsOffset = offsetof(struct SaveBlock1, externalEventFlags),
     .externalEventDataOffset = offsetof(struct SaveBlock1, externalEventData),
     .unk18 = 0x00000000,

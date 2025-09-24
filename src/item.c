@@ -611,6 +611,8 @@ u16 CountTotalItemQuantityInBag(u16 itemId)
     return BagPocket_CountTotalItemQuantity(&gBagPockets[GetItemPocket(itemId)], itemId);
 }
 
+// Frontier Pyramid Bag helpers are unavailable when Frontier is disabled
+#if FREE_BATTLE_FRONTIER == FALSE
 static bool32 CheckPyramidBagHasItem(u16 itemId, u16 count)
 {
     u8 i;
@@ -636,7 +638,14 @@ static bool32 CheckPyramidBagHasItem(u16 itemId, u16 count)
 
     return FALSE;
 }
+#else
+static bool32 CheckPyramidBagHasItem(u16 itemId, u16 count)
+{
+    (void)itemId; (void)count; return FALSE;
+}
+#endif
 
+#if FREE_BATTLE_FRONTIER == FALSE
 static bool32 CheckPyramidBagHasSpace(u16 itemId, u16 count)
 {
     u8 i;
@@ -662,7 +671,14 @@ static bool32 CheckPyramidBagHasSpace(u16 itemId, u16 count)
 
     return FALSE;
 }
+#else
+static bool32 CheckPyramidBagHasSpace(u16 itemId, u16 count)
+{
+    (void)itemId; (void)count; return FALSE;
+}
+#endif
 
+#if FREE_BATTLE_FRONTIER == FALSE
 bool32 AddPyramidBagItem(u16 itemId, u16 count)
 {
     u16 i;
@@ -740,7 +756,14 @@ bool32 AddPyramidBagItem(u16 itemId, u16 count)
         return FALSE;
     }
 }
+#else
+bool32 AddPyramidBagItem(u16 itemId, u16 count)
+{
+    (void)itemId; (void)count; return FALSE;
+}
+#endif
 
+#if FREE_BATTLE_FRONTIER == FALSE
 bool32 RemovePyramidBagItem(u16 itemId, u16 count)
 {
     u16 i;
@@ -811,6 +834,12 @@ bool32 RemovePyramidBagItem(u16 itemId, u16 count)
         }
     }
 }
+#else
+bool32 RemovePyramidBagItem(u16 itemId, u16 count)
+{
+    (void)itemId; (void)count; return FALSE;
+}
+#endif
 
 static u16 SanitizeItemId(u16 itemId)
 {

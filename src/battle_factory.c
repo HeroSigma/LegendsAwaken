@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "battle.h"
 #include "battle_factory.h"
@@ -848,3 +851,5 @@ void SetMonMoveAvoidReturn(struct Pokemon *mon, u16 moveArg, u8 moveSlot)
         move = MOVE_FRUSTRATION;
     SetMonMoveSlot(mon, move, moveSlot);
 }
+
+#endif // FREE_BATTLE_FRONTIER

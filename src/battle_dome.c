@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "battle_dome.h"
 #include "battle.h"
@@ -6030,3 +6033,5 @@ static void CopyDomeTrainerName(u8 *str, u16 trainerId)
         str[i] = EOS;
     }
 }
+
+#endif // FREE_BATTLE_FRONTIER

@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "sprite.h"
 #include "decompress.h"
@@ -669,3 +672,5 @@ static bool8 CirclesSymmetricSpiralInSeq_End(struct Task *task)
 
     return FALSE;
 }
+
+#endif // FREE_BATTLE_FRONTIER

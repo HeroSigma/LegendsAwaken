@@ -179,10 +179,19 @@ static void SetSrcLookupPointers(void)
     sOldManSave = &gSaveBlock1Ptr->oldMan;
     sDewfordTrendsSave = gSaveBlock1Ptr->dewfordTrends;
     sRecordMixMailSave = &sRecordMixMail;
+    #if FREE_BATTLE_FRONTIER == FALSE
     sBattleTowerSave = &gSaveBlock2Ptr->frontier.towerPlayer;
+    #else
+    static struct EmeraldBattleTowerRecord sDummyBattleTowerRecord;
+    sBattleTowerSave = &sDummyBattleTowerRecord;
+    #endif
     sLilycoveLadySave = &gSaveBlock1Ptr->lilycoveLady;
     sApprenticesSave = gSaveBlock2Ptr->apprentices;
+    #if FREE_BATTLE_FRONTIER == FALSE
     sBattleTowerSave_Duplicate = &gSaveBlock2Ptr->frontier.towerPlayer;
+    #else
+    sBattleTowerSave_Duplicate = sBattleTowerSave;
+    #endif
 }
 
 static void PrepareUnknownExchangePacket(struct PlayerRecordRS *dest)
@@ -1124,24 +1133,72 @@ void GetPlayerHallRecords(struct PlayerHallRecords *dst)
     {
         dst->twoPlayers[j].language = GAME_LANGUAGE;
         CopyTrainerId(dst->twoPlayers[j].id1, gSaveBlock2Ptr->playerTrainerId);
+        #if FREE_BATTLE_FRONTIER == FALSE
         CopyTrainerId(dst->twoPlayers[j].id2, gSaveBlock2Ptr->frontier.opponentTrainerIds[j]);
+        #else
+        CopyTrainerId(dst->twoPlayers[j].id2, (u8[TRAINER_ID_LENGTH]){0});
+        #endif
         StringCopy(dst->twoPlayers[j].name1, gSaveBlock2Ptr->playerName);
+        #if FREE_BATTLE_FRONTIER == FALSE
         StringCopy(dst->twoPlayers[j].name2, gSaveBlock2Ptr->frontier.opponentNames[j]);
+        #else
+        dst->twoPlayers[j].name2[0] = EOS;
+        #endif
     }
 
     for (i = 0; i < FRONTIER_LVL_MODE_COUNT; i++)
     {
+        #if FREE_BATTLE_FRONTIER == FALSE
         dst->onePlayer[RANKING_HALL_TOWER_SINGLES][i].winStreak = gSaveBlock2Ptr->frontier.towerRecordWinStreaks[FRONTIER_MODE_SINGLES][i];
+        #else
+        dst->onePlayer[RANKING_HALL_TOWER_SINGLES][i].winStreak = 0;
+        #endif
+        #if FREE_BATTLE_FRONTIER == FALSE
         dst->onePlayer[RANKING_HALL_TOWER_DOUBLES][i].winStreak = gSaveBlock2Ptr->frontier.towerRecordWinStreaks[FRONTIER_MODE_DOUBLES][i];
+        #else
+        dst->onePlayer[RANKING_HALL_TOWER_DOUBLES][i].winStreak = 0;
+        #endif
+        #if FREE_BATTLE_FRONTIER == FALSE
         dst->onePlayer[RANKING_HALL_TOWER_MULTIS][i].winStreak = gSaveBlock2Ptr->frontier.towerRecordWinStreaks[FRONTIER_MODE_MULTIS][i];
+        #else
+        dst->onePlayer[RANKING_HALL_TOWER_MULTIS][i].winStreak = 0;
+        #endif
+        #if FREE_BATTLE_FRONTIER == FALSE
         dst->onePlayer[RANKING_HALL_DOME][i].winStreak = gSaveBlock2Ptr->frontier.domeRecordWinStreaks[FRONTIER_MODE_SINGLES][i];
+        #else
+        dst->onePlayer[RANKING_HALL_DOME][i].winStreak = 0;
+        #endif
+        #if FREE_BATTLE_FRONTIER == FALSE
         dst->onePlayer[RANKING_HALL_PALACE][i].winStreak = gSaveBlock2Ptr->frontier.palaceRecordWinStreaks[FRONTIER_MODE_SINGLES][i];
+        #else
+        dst->onePlayer[RANKING_HALL_PALACE][i].winStreak = 0;
+        #endif
+        #if FREE_BATTLE_FRONTIER == FALSE
         dst->onePlayer[RANKING_HALL_ARENA][i].winStreak = gSaveBlock2Ptr->frontier.arenaRecordStreaks[i];
+        #else
+        dst->onePlayer[RANKING_HALL_ARENA][i].winStreak = 0;
+        #endif
+        #if FREE_BATTLE_FRONTIER == FALSE
         dst->onePlayer[RANKING_HALL_FACTORY][i].winStreak = gSaveBlock2Ptr->frontier.factoryRecordWinStreaks[FRONTIER_MODE_SINGLES][i];
+        #else
+        dst->onePlayer[RANKING_HALL_FACTORY][i].winStreak = 0;
+        #endif
+        #if FREE_BATTLE_FRONTIER == FALSE
         dst->onePlayer[RANKING_HALL_PIKE][i].winStreak = gSaveBlock2Ptr->frontier.pikeRecordStreaks[i];
+        #else
+        dst->onePlayer[RANKING_HALL_PIKE][i].winStreak = 0;
+        #endif
+        #if FREE_BATTLE_FRONTIER == FALSE
         dst->onePlayer[RANKING_HALL_PYRAMID][i].winStreak = gSaveBlock2Ptr->frontier.pyramidRecordStreaks[i];
+        #else
+        dst->onePlayer[RANKING_HALL_PYRAMID][i].winStreak = 0;
+        #endif
 
+        #if FREE_BATTLE_FRONTIER == FALSE
         dst->twoPlayers[i].winStreak = gSaveBlock2Ptr->frontier.towerRecordWinStreaks[FRONTIER_MODE_LINK_MULTIS][i];
+        #else
+        dst->twoPlayers[i].winStreak = 0;
+        #endif
     }
 }
 

@@ -1,3 +1,6 @@
+#if FREE_BATTLE_FRONTIER == TRUE
+// Battle Frontier disabled
+#else
 #include "global.h"
 #include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
@@ -2206,3 +2209,5 @@ u16 GetBattlePyramidPickupItemId(void)
     else
         return sPickupItemsLvl50[round][i];
 }
+
+#endif // FREE_BATTLE_FRONTIER

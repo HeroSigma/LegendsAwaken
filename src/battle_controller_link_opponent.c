@@ -395,7 +395,9 @@ static void LinkOpponentHandleEndLinkBattle(u32 battler)
     else
         gBattleOutcome = gBattleResources->bufferA[battler][1] ^ B_OUTCOME_DREW;
 
+    #if FREE_BATTLE_FRONTIER == FALSE
     gSaveBlock2Ptr->frontier.disableRecordBattle = gBattleResources->bufferA[battler][2];
+    #endif
     FadeOutMapMusic(5);
     BeginFastPaletteFade(3);
     BtlController_Complete(battler);

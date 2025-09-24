@@ -580,7 +580,9 @@ static void CB2_InitBattleInternal(void)
     }
 
     gMain.inBattle = TRUE;
+    #if FREE_BATTLE_FRONTIER == FALSE
     gSaveBlock2Ptr->frontier.disableRecordBattle = FALSE;
+    #endif
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
@@ -2293,8 +2295,12 @@ static void EndLinkBattleInSteps(void)
 
             for (i = 0; i < battlerCount && (gLinkPlayers[i].version & 0xFF) == VERSION_EMERALD; i++);
 
+            #if FREE_BATTLE_FRONTIER == FALSE
             if (!gSaveBlock2Ptr->frontier.disableRecordBattle && i == battlerCount)
-            {
+            #else
+            if (i == battlerCount)
+            #endif
+                {
                 if (FlagGet(FLAG_SYS_FRONTIER_PASS))
                 {
                     // Ask player if they want to record the battle
@@ -5480,7 +5486,9 @@ static void HandleEndTurn_BattleLost(void)
             {
                 gBattlescriptCurrInstr = BattleScript_PrintPlayerForfeitedLinkBattle;
                 gBattleOutcome &= ~B_OUTCOME_LINK_BATTLE_RAN;
+                #if FREE_BATTLE_FRONTIER == FALSE
                 gSaveBlock2Ptr->frontier.disableRecordBattle = TRUE;
+                #endif
             }
             else
             {
@@ -5512,7 +5520,9 @@ static void HandleEndTurn_RanFromBattle(void)
     {
         gBattlescriptCurrInstr = BattleScript_PrintPlayerForfeited;
         gBattleOutcome = B_OUTCOME_FORFEITED;
+        #if FREE_BATTLE_FRONTIER == FALSE
         gSaveBlock2Ptr->frontier.disableRecordBattle = TRUE;
+        #endif
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER_HILL)
     {
