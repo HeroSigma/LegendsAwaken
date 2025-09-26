@@ -5,6 +5,7 @@
 #include "follower_npc.h"
 #include "item.h"
 #include "load_save.h"
+#include "fieldmap.h"
 #include "main.h"
 #include "overworld.h"
 #include "pokemon.h"
@@ -94,9 +95,9 @@ void MoveSaveBlocks_ResetHeap(void)
 {
     void *vblankCB, *hblankCB;
     u32 encryptionKey;
-    struct SaveBlock2 *saveBlock2Copy;
-    struct SaveBlock1 *saveBlock1Copy;
-    struct PokemonStorage *pokemonStorageCopy;
+    struct SaveBlock2 *oldSaveBlock2;
+    struct SaveBlock1 *oldSaveBlock1;
+    struct PokemonStorage *oldPokemonStorage;
 
     // save interrupt functions and turn them off
     vblankCB = gMain.vblankCallback;
@@ -105,30 +106,22 @@ void MoveSaveBlocks_ResetHeap(void)
     gMain.hblankCallback = NULL;
     gTrainerHillVBlankCounter = NULL;
 
-    saveBlock2Copy = (struct SaveBlock2 *)(gHeap);
-    saveBlock1Copy = (struct SaveBlock1 *)(gHeap + sizeof(struct SaveBlock2));
-    pokemonStorageCopy = (struct PokemonStorage *)(gHeap + sizeof(struct SaveBlock2) + sizeof(struct SaveBlock1));
-
-    // backup the saves.
-    *saveBlock2Copy = *gSaveBlock2Ptr;
-    *saveBlock1Copy = *gSaveBlock1Ptr;
-    *pokemonStorageCopy = *gPokemonStoragePtr;
+    oldSaveBlock2 = gSaveBlock2Ptr;
+    oldSaveBlock1 = gSaveBlock1Ptr;
+    oldPokemonStorage = gPokemonStoragePtr;
 
     // change saveblocks' pointers
     // argument is a sum of the individual trainerId bytes
     SetSaveBlocksPointers(
-      saveBlock2Copy->playerTrainerId[0] +
-      saveBlock2Copy->playerTrainerId[1] +
-      saveBlock2Copy->playerTrainerId[2] +
-      saveBlock2Copy->playerTrainerId[3]);
+      oldSaveBlock2->playerTrainerId[0] +
+      oldSaveBlock2->playerTrainerId[1] +
+      oldSaveBlock2->playerTrainerId[2] +
+      oldSaveBlock2->playerTrainerId[3]);
 
     // restore saveblock data since the pointers changed
-    *gSaveBlock2Ptr = *saveBlock2Copy;
-    *gSaveBlock1Ptr = *saveBlock1Copy;
-    *gPokemonStoragePtr = *pokemonStorageCopy;
-
-    // heap was destroyed in the copying process, so reset it
-    InitHeap(gHeap, HEAP_SIZE);
+    memmove(gSaveBlock2Ptr, oldSaveBlock2, sizeof(*gSaveBlock2Ptr));
+    memmove(gSaveBlock1Ptr, oldSaveBlock1, sizeof(*gSaveBlock1Ptr));
+    memmove(gPokemonStoragePtr, oldPokemonStorage, sizeof(*gPokemonStoragePtr));
 
     // restore interrupt functions
     gMain.hblankCallback = hblankCB;

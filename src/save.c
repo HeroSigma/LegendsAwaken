@@ -52,11 +52,13 @@ static void CopyFromSaveBlock3(u32, struct SaveSector *);
     min(sizeof(structure) - chunkNum * SECTOR_DATA_SIZE, SECTOR_DATA_SIZE) : 0 \
 }
 
-struct
+struct SaveSlotChunk
 {
-    u16 offset;
+    u32 offset;
     u16 size;
-} static const sSaveSlotLayout[NUM_SECTORS_PER_SLOT] =
+};
+
+static const struct SaveSlotChunk sSaveSlotLayout[NUM_SECTORS_PER_SLOT] =
 {
     SAVEBLOCK_CHUNK(struct SaveBlock2, 0), // SECTOR_ID_SAVEBLOCK2
 
@@ -73,8 +75,53 @@ struct
     SAVEBLOCK_CHUNK(struct PokemonStorage, 5),
     SAVEBLOCK_CHUNK(struct PokemonStorage, 6),
     SAVEBLOCK_CHUNK(struct PokemonStorage, 7),
-    SAVEBLOCK_CHUNK(struct PokemonStorage, 8), // SECTOR_ID_PKMN_STORAGE_END
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 8),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 9),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 10),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 11),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 12),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 13),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 14),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 15),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 16),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 17),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 18),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 19),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 20),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 21),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 22), // SECTOR_ID_PKMN_STORAGE_END
 };
+
+#define LEGACY_NUM_SAVE_SLOTS 2
+#define LEGACY_NUM_SECTORS_PER_SLOT 14
+#define LEGACY_SECTOR_ID_PKMN_STORAGE_END 13
+
+static const struct SaveSlotChunk sLegacySaveSlotLayout[LEGACY_NUM_SECTORS_PER_SLOT] =
+{
+    SAVEBLOCK_CHUNK(struct SaveBlock2, 0),
+
+    SAVEBLOCK_CHUNK(struct SaveBlock1, 0),
+    SAVEBLOCK_CHUNK(struct SaveBlock1, 1),
+    SAVEBLOCK_CHUNK(struct SaveBlock1, 2),
+    SAVEBLOCK_CHUNK(struct SaveBlock1, 3),
+
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 0),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 1),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 2),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 3),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 4),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 5),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 6),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 7),
+    SAVEBLOCK_CHUNK(struct PokemonStorage, 8),
+};
+
+static bool8 sLoadedLegacySaveLayout = FALSE;
+
+static void BuildLegacySaveSectorLocations(struct SaveSectorLocation *locations);
+static u8 TryLoadLegacySave(void);
+static u8 GetLegacySaveValidStatus(const struct SaveSectorLocation *locations);
+static u8 CopyLegacySaveSlotData(struct SaveSectorLocation *locations);
 
 // These will produce an error if a save struct is larger than the space
 // alloted for it in the flash.
@@ -171,6 +218,10 @@ static u8 WriteSaveSectorOrSlot(u16 sectorId, const struct SaveSectorLocation *l
             status = SAVE_STATUS_ERROR;
             gLastWrittenSector = gLastKnownGoodSector;
             gSaveCounter = gLastSaveCounter;
+        }
+        else
+        {
+            sLoadedLegacySaveLayout = FALSE;
         }
     }
 
@@ -483,7 +534,15 @@ static u8 TryLoadSaveSlot(u16 sectorId, struct SaveSectorLocation *locations)
     else
     {
         status = GetSaveValidStatus(locations);
-        CopySaveSlotData(FULL_SAVE_SLOT, locations);
+        if (status != SAVE_STATUS_EMPTY)
+            CopySaveSlotData(FULL_SAVE_SLOT, locations);
+
+        if (status != SAVE_STATUS_OK)
+        {
+            u8 legacyStatus = TryLoadLegacySave();
+            if (legacyStatus != SAVE_STATUS_EMPTY)
+                return legacyStatus;
+        }
     }
 
     return status;
@@ -502,6 +561,9 @@ static u8 CopySaveSlotData(u16 sectorId, struct SaveSectorLocation *locations)
         ReadFlashSector(i + slotOffset, gReadWriteSector);
 
         id = gReadWriteSector->id;
+        if (id >= NUM_SECTORS_PER_SLOT)
+            continue;
+
         if (id == 0)
             gLastWrittenSector = i;
 
@@ -520,7 +582,26 @@ static u8 CopySaveSlotData(u16 sectorId, struct SaveSectorLocation *locations)
     return SAVE_STATUS_OK;
 }
 
-static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
+static void BuildLegacySaveSectorLocations(struct SaveSectorLocation *locations)
+{
+    int i = SECTOR_ID_SAVEBLOCK2;
+    locations[i].data = (void *)(gSaveBlock2Ptr) + sLegacySaveSlotLayout[i].offset;
+    locations[i].size = sLegacySaveSlotLayout[i].size;
+
+    for (i = SECTOR_ID_SAVEBLOCK1_START; i <= SECTOR_ID_SAVEBLOCK1_END; i++)
+    {
+        locations[i].data = (void *)(gSaveBlock1Ptr) + sLegacySaveSlotLayout[i].offset;
+        locations[i].size = sLegacySaveSlotLayout[i].size;
+    }
+
+    for (; i <= LEGACY_SECTOR_ID_PKMN_STORAGE_END; i++)
+    {
+        locations[i].data = (void *)(gPokemonStoragePtr) + sLegacySaveSlotLayout[i].offset;
+        locations[i].size = sLegacySaveSlotLayout[i].size;
+    }
+}
+
+static u8 GetLegacySaveValidStatus(const struct SaveSectorLocation *locations)
 {
     u16 i;
     u16 checksum;
@@ -531,71 +612,73 @@ static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
     u8 saveSlot1Status;
     u8 saveSlot2Status;
 
-    // Check save slot 1
-    for (i = 0; i < NUM_SECTORS_PER_SLOT; i++)
+    for (i = 0; i < LEGACY_NUM_SECTORS_PER_SLOT; i++)
     {
         ReadFlashSector(i, gReadWriteSector);
         if (gReadWriteSector->signature == SECTOR_SIGNATURE)
         {
             signatureValid = TRUE;
+            if (gReadWriteSector->id >= LEGACY_NUM_SECTORS_PER_SLOT)
+                continue;
+
             checksum = CalculateChecksum(gReadWriteSector->data, locations[gReadWriteSector->id].size);
             if (gReadWriteSector->checksum == checksum)
             {
                 saveSlot1Counter = gReadWriteSector->counter;
-                validSectorFlags |= 1 << gReadWriteSector->id;
+                validSectorFlags |= (1u << gReadWriteSector->id);
             }
         }
     }
 
     if (signatureValid)
     {
-        if (validSectorFlags == (1 << NUM_SECTORS_PER_SLOT) - 1)
+        if (validSectorFlags == (1u << LEGACY_NUM_SECTORS_PER_SLOT) - 1)
             saveSlot1Status = SAVE_STATUS_OK;
         else
             saveSlot1Status = SAVE_STATUS_ERROR;
     }
     else
     {
-        // No sectors in slot 1 have the correct signature, treat it as empty
         saveSlot1Status = SAVE_STATUS_EMPTY;
     }
 
     validSectorFlags = 0;
     signatureValid = FALSE;
 
-    // Check save slot 2
-    for (i = 0; i < NUM_SECTORS_PER_SLOT; i++)
+    for (i = 0; i < LEGACY_NUM_SECTORS_PER_SLOT; i++)
     {
-        ReadFlashSector(i + NUM_SECTORS_PER_SLOT, gReadWriteSector);
+        ReadFlashSector(i + LEGACY_NUM_SECTORS_PER_SLOT, gReadWriteSector);
         if (gReadWriteSector->signature == SECTOR_SIGNATURE)
         {
             signatureValid = TRUE;
+            if (gReadWriteSector->id >= LEGACY_NUM_SECTORS_PER_SLOT)
+                continue;
+
             checksum = CalculateChecksum(gReadWriteSector->data, locations[gReadWriteSector->id].size);
             if (gReadWriteSector->checksum == checksum)
             {
                 saveSlot2Counter = gReadWriteSector->counter;
-                validSectorFlags |= 1 << gReadWriteSector->id;
+                validSectorFlags |= (1u << gReadWriteSector->id);
             }
         }
     }
 
     if (signatureValid)
     {
-        if (validSectorFlags == (1 << NUM_SECTORS_PER_SLOT) - 1)
+        if (validSectorFlags == (1u << LEGACY_NUM_SECTORS_PER_SLOT) - 1)
             saveSlot2Status = SAVE_STATUS_OK;
         else
             saveSlot2Status = SAVE_STATUS_ERROR;
     }
     else
     {
-        // No sectors in slot 2 have the correct signature, treat it as empty.
         saveSlot2Status = SAVE_STATUS_EMPTY;
     }
 
     if (saveSlot1Status == SAVE_STATUS_OK && saveSlot2Status == SAVE_STATUS_OK)
     {
-        if ((saveSlot1Counter == -1 && saveSlot2Counter ==  0)
-         || (saveSlot1Counter ==  0 && saveSlot2Counter == -1))
+        if ((saveSlot1Counter == (u32)-1 && saveSlot2Counter == 0)
+         || (saveSlot1Counter == 0 && saveSlot2Counter == (u32)-1))
         {
             if ((unsigned)(saveSlot1Counter + 1) < (unsigned)(saveSlot2Counter + 1))
                 gSaveCounter = saveSlot2Counter;
@@ -612,36 +695,134 @@ static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
         return SAVE_STATUS_OK;
     }
 
-    // One or both save slots are not OK
-
     if (saveSlot1Status == SAVE_STATUS_OK)
     {
         gSaveCounter = saveSlot1Counter;
         if (saveSlot2Status == SAVE_STATUS_ERROR)
-            return SAVE_STATUS_ERROR; // Slot 2 errored
-        return SAVE_STATUS_OK; // Slot 1 is OK, slot 2 is empty
+            return SAVE_STATUS_ERROR;
+        return SAVE_STATUS_OK;
     }
 
     if (saveSlot2Status == SAVE_STATUS_OK)
     {
         gSaveCounter = saveSlot2Counter;
         if (saveSlot1Status == SAVE_STATUS_ERROR)
-            return SAVE_STATUS_ERROR; // Slot 1 errored
-        return SAVE_STATUS_OK; // Slot 2 is OK, slot 1 is empty
+            return SAVE_STATUS_ERROR;
+        return SAVE_STATUS_OK;
     }
 
-    // Neither slot is OK, check if both are empty
-    if (saveSlot1Status == SAVE_STATUS_EMPTY
-     && saveSlot2Status == SAVE_STATUS_EMPTY)
+    if (saveSlot1Status == SAVE_STATUS_EMPTY && saveSlot2Status == SAVE_STATUS_EMPTY)
     {
         gSaveCounter = 0;
         gLastWrittenSector = 0;
         return SAVE_STATUS_EMPTY;
     }
 
-    // Both slots errored
     gSaveCounter = 0;
     gLastWrittenSector = 0;
+    return SAVE_STATUS_CORRUPT;
+}
+
+static u8 CopyLegacySaveSlotData(struct SaveSectorLocation *locations)
+{
+    u16 i;
+    u16 checksum;
+    u16 slotOffset = LEGACY_NUM_SECTORS_PER_SLOT * (gSaveCounter % LEGACY_NUM_SAVE_SLOTS);
+    u16 id;
+
+    for (i = 0; i < LEGACY_NUM_SECTORS_PER_SLOT; i++)
+    {
+        ReadFlashSector(i + slotOffset, gReadWriteSector);
+
+        id = gReadWriteSector->id;
+        if (id >= LEGACY_NUM_SECTORS_PER_SLOT)
+            continue;
+
+        if (id == 0)
+            gLastWrittenSector = i;
+
+        checksum = CalculateChecksum(gReadWriteSector->data, locations[id].size);
+
+        if (gReadWriteSector->signature == SECTOR_SIGNATURE && gReadWriteSector->checksum == checksum)
+        {
+            u16 j;
+            for (j = 0; j < locations[id].size; j++)
+                ((u8 *)locations[id].data)[j] = gReadWriteSector->data[j];
+            CopyToSaveBlock3(id, gReadWriteSector);
+        }
+    }
+
+    return SAVE_STATUS_OK;
+}
+
+static u8 TryLoadLegacySave(void)
+{
+    struct SaveSectorLocation legacyLocations[LEGACY_NUM_SECTORS_PER_SLOT];
+    u8 status;
+
+    BuildLegacySaveSectorLocations(legacyLocations);
+    status = GetLegacySaveValidStatus(legacyLocations);
+
+    if (status != SAVE_STATUS_EMPTY)
+    {
+        CopyLegacySaveSlotData(legacyLocations);
+        sLoadedLegacySaveLayout = TRUE;
+    }
+
+    return status;
+}
+
+bool8 SaveDidLoadLegacyLayout(void)
+{
+    return sLoadedLegacySaveLayout;
+}
+
+static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
+{
+    u16 i;
+    u16 checksum;
+    u32 validSectorFlags = 0;
+    bool8 signatureValid = FALSE;
+    bool8 counterInitialized = FALSE;
+    u32 latestCounter = 0;
+
+    for (i = 0; i < NUM_SECTORS_PER_SLOT; i++)
+    {
+        ReadFlashSector(i, gReadWriteSector);
+        if (gReadWriteSector->signature != SECTOR_SIGNATURE)
+            continue;
+
+        signatureValid = TRUE;
+
+        if (gReadWriteSector->id >= NUM_SECTORS_PER_SLOT)
+            continue;
+
+        checksum = CalculateChecksum(gReadWriteSector->data, locations[gReadWriteSector->id].size);
+        if (gReadWriteSector->checksum != checksum)
+            continue;
+
+        validSectorFlags |= (1u << gReadWriteSector->id);
+
+        if (!counterInitialized || gReadWriteSector->counter >= latestCounter)
+        {
+            latestCounter = gReadWriteSector->counter;
+            counterInitialized = TRUE;
+        }
+    }
+
+    if (!signatureValid)
+    {
+        gSaveCounter = 0;
+        gLastWrittenSector = 0;
+        return SAVE_STATUS_EMPTY;
+    }
+
+    if (counterInitialized)
+        gSaveCounter = latestCounter;
+
+    if (validSectorFlags == (1u << NUM_SECTORS_PER_SLOT) - 1)
+        return SAVE_STATUS_OK;
+
     return SAVE_STATUS_CORRUPT;
 }
 
@@ -898,6 +1079,7 @@ u8 LoadGameSave(u8 saveType)
         CopyPartyAndObjectsFromSave();
         gSaveFileStatus = status;
         gGameContinueCallback = 0;
+        EnsureExpandedPokemonStorageInitialized();
         break;
     case SAVE_HALL_OF_FAME:
         if (gHoFSaveBuffer != NULL)
@@ -919,7 +1101,7 @@ u8 LoadGameSave(u8 saveType)
 
 u16 GetSaveBlocksPointersBaseOffset(void)
 {
-    u16 i, slotOffset;
+    u16 i, slotOffset, sectorsPerSlot;
     struct SaveSector *sector;
 
     sector = gReadWriteSector = &gSaveDataBuffer;
@@ -927,8 +1109,18 @@ u16 GetSaveBlocksPointersBaseOffset(void)
         return 0;
     UpdateSaveAddresses();
     GetSaveValidStatus(gRamSaveSectorLocations);
-    slotOffset = NUM_SECTORS_PER_SLOT * (gSaveCounter % NUM_SAVE_SLOTS);
-    for (i = 0; i < NUM_SECTORS_PER_SLOT; i++)
+    if (sLoadedLegacySaveLayout)
+    {
+        slotOffset = LEGACY_NUM_SECTORS_PER_SLOT * (gSaveCounter % LEGACY_NUM_SAVE_SLOTS);
+        sectorsPerSlot = LEGACY_NUM_SECTORS_PER_SLOT;
+    }
+    else
+    {
+        slotOffset = NUM_SECTORS_PER_SLOT * (gSaveCounter % NUM_SAVE_SLOTS);
+        sectorsPerSlot = NUM_SECTORS_PER_SLOT;
+    }
+
+    for (i = 0; i < sectorsPerSlot; i++)
     {
         ReadFlashSector(i + slotOffset, gReadWriteSector);
 

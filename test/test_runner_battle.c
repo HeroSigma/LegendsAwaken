@@ -46,7 +46,7 @@ static inline bool32 RngSeedNotDefault(const rng_value_t *seed)
 
 // Alias sBackupMapData to avoid using heap.
 struct BattleTestRunnerState *const gBattleTestRunnerState = (void *)sBackupMapData;
-STATIC_ASSERT(sizeof(struct BattleTestRunnerState) <= sizeof(sBackupMapData), sBackupMapDataSpace);
+STATIC_ASSERT(sizeof(struct BattleTestRunnerState) <= BACKUP_MAP_DATA_SIZE_BYTES, sBackupMapDataSpace);
 
 static void CB2_BattleTest_NextParameter(void);
 static void CB2_BattleTest_NextTrial(void);
@@ -159,14 +159,18 @@ static u32 BattleTest_EstimateCost(void *data)
 static void BattleTest_SetUp(void *data)
 {
     const struct BattleTest *test = data;
+    EnsureBackupMapData();
+    if (sBackupMapData == NULL)
+        Test_ExitWithResult(TEST_RESULT_ERROR, SourceLine(0), ":LOOM: Failed to allocate battle test buffer");
+
     memset(STATE, 0, sizeof(*STATE));
     TestInitConfigData();
     InvokeTestFunction(test);
     STATE->parameters = STATE->parametersCount;
     if (STATE->parametersCount == 0 && test->resultsSize > 0)
         Test_ExitWithResult(TEST_RESULT_INVALID, SourceLine(0), ":Lresults without PARAMETRIZE");
-    if (sizeof(*STATE) + test->resultsSize * STATE->parameters > sizeof(sBackupMapData))
-        Test_ExitWithResult(TEST_RESULT_ERROR, SourceLine(0), ":LOOM: STATE (%d) + STATE->results (%d) too big for sBackupMapData (%d)", sizeof(*STATE), test->resultsSize * STATE->parameters, sizeof(sBackupMapData));
+    if (sizeof(*STATE) + test->resultsSize * STATE->parameters > BACKUP_MAP_DATA_SIZE_BYTES)
+        Test_ExitWithResult(TEST_RESULT_ERROR, SourceLine(0), ":LOOM: STATE (%d) + STATE->results (%d) too big for sBackupMapData (%d)", sizeof(*STATE), test->resultsSize * STATE->parameters, BACKUP_MAP_DATA_SIZE_BYTES);
     STATE->results = (void *)((char *)sBackupMapData + sizeof(struct BattleTestRunnerState));
     memset(STATE->results, 0, test->resultsSize * STATE->parameters);
     switch (test->type)

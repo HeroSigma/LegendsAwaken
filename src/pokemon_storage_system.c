@@ -19,6 +19,7 @@
 #include "mail.h"
 #include "main.h"
 #include "menu.h"
+#include "load_save.h"
 #include "mon_markings.h"
 #include "naming_screen.h"
 #include "overworld.h"
@@ -38,6 +39,8 @@
 #include "walda_phrase.h"
 #include "window.h"
 #include "constants/form_change_types.h"
+
+#define LEGACY_TOTAL_BOXES_COUNT 14
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/rgb.h"
@@ -1723,6 +1726,33 @@ void ResetPokemonStorageSystem(void)
         SetBoxWallpaper(boxId, boxId % (MAX_DEFAULT_WALLPAPER + 1));
 
     ResetWaldaWallpaper();
+}
+
+void EnsureExpandedPokemonStorageInitialized(void)
+{
+    u16 boxId, boxPosition;
+
+    if (!SaveDidLoadLegacyLayout())
+        return;
+
+    if (TOTAL_BOXES_COUNT <= LEGACY_TOTAL_BOXES_COUNT)
+        return;
+
+    for (boxId = LEGACY_TOTAL_BOXES_COUNT; boxId < TOTAL_BOXES_COUNT; boxId++)
+    {
+        for (boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++)
+            ZeroBoxMonAt(boxId, boxPosition);
+
+        {
+            u8 *dest = StringCopy(GetBoxNamePtr(boxId), gText_Box);
+            ConvertIntToDecimalStringN(dest, boxId + 1, STR_CONV_MODE_LEFT_ALIGN, 2);
+        }
+
+        SetBoxWallpaper(boxId, boxId % (MAX_DEFAULT_WALLPAPER + 1));
+    }
+
+    if (StorageGetCurrentBox() >= TOTAL_BOXES_COUNT)
+        SetCurrentBox(TOTAL_BOXES_COUNT - 1);
 }
 
 

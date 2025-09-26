@@ -2149,11 +2149,11 @@ static bool32 LoadMapInStepsLocal(u8 *state, bool32 a2)
     {
     case 0:
         FieldClearVBlankHBlankCallbacks();
+        ResetMirageTowerAndSaveBlockPtrs();
         LoadMapFromWarp(a2);
         (*state)++;
         break;
     case 1:
-        ResetMirageTowerAndSaveBlockPtrs();
         ResetScreenForMapLoad();
         (*state)++;
         break;

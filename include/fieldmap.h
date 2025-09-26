@@ -8,6 +8,7 @@
 #define NUM_PALS_IN_PRIMARY 6
 #define NUM_PALS_TOTAL 13
 #define MAX_MAP_DATA_SIZE 10240
+#define BACKUP_MAP_DATA_SIZE_BYTES (MAX_MAP_DATA_SIZE * sizeof(u16))
 
 #define NUM_TILES_PER_METATILE 8
 
@@ -22,7 +23,10 @@
 #include "main.h"
 
 extern struct BackupMapLayout gBackupMapLayout;
-extern u16 ALIGNED(4) sBackupMapData[MAX_MAP_DATA_SIZE];
+extern u16 *sBackupMapData;
+
+void EnsureBackupMapData(void);
+void FreeBackupMapData(void);
 
 u32 MapGridGetMetatileIdAt(int x, int y);
 u32 MapGridGetMetatileBehaviorAt(int x, int y);

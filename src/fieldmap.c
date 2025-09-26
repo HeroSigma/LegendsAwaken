@@ -1,5 +1,6 @@
 #include "global.h"
 #include "battle_pyramid.h"
+#include "malloc.h"
 #include "bg.h"
 #include "fieldmap.h"
 #include "fldeff.h"
@@ -26,7 +27,7 @@ struct ConnectionFlags
     u8 east:1;
 };
 
-EWRAM_DATA u16 ALIGNED(4) sBackupMapData[MAX_MAP_DATA_SIZE] = {0};
+EWRAM_DATA u16 *sBackupMapData = NULL;
 EWRAM_DATA struct MapHeader gMapHeader = {0};
 EWRAM_DATA struct Camera gCamera = {0};
 EWRAM_DATA static struct ConnectionFlags sMapConnectionFlags = {0};
@@ -34,6 +35,24 @@ EWRAM_DATA static struct ConnectionFlags sMapConnectionFlags = {0};
 COMMON_DATA struct BackupMapLayout gBackupMapLayout = {0};
 
 static const struct ConnectionFlags sDummyConnectionFlags = {0};
+
+void EnsureBackupMapData(void)
+{
+    if (sBackupMapData == NULL)
+    {
+        sBackupMapData = Alloc(BACKUP_MAP_DATA_SIZE_BYTES);
+        if (sBackupMapData != NULL)
+            CpuFastFill16(MAPGRID_UNDEFINED, sBackupMapData, BACKUP_MAP_DATA_SIZE_BYTES);
+    }
+}
+
+void FreeBackupMapData(void)
+{
+    TRY_FREE_AND_SET_NULL(sBackupMapData);
+    gBackupMapLayout.map = NULL;
+    gBackupMapLayout.width = 0;
+    gBackupMapLayout.height = 0;
+}
 
 static void InitMapLayoutData(struct MapHeader *mapHeader);
 static void InitBackupMapLayoutData(const u16 *map, u16 width, u16 height);
@@ -83,13 +102,21 @@ void InitMapFromSavedGame(void)
 
 void InitBattlePyramidMap(bool8 setPlayerPosition)
 {
-    CpuFastFill16(MAPGRID_UNDEFINED, sBackupMapData, sizeof(sBackupMapData));
+    EnsureBackupMapData();
+    if (sBackupMapData == NULL)
+        return;
+
+    CpuFastFill16(MAPGRID_UNDEFINED, sBackupMapData, BACKUP_MAP_DATA_SIZE_BYTES);
     GenerateBattlePyramidFloorLayout(sBackupMapData, setPlayerPosition);
 }
 
 void InitTrainerHillMap(void)
 {
-    CpuFastFill16(MAPGRID_UNDEFINED, sBackupMapData, sizeof(sBackupMapData));
+    EnsureBackupMapData();
+    if (sBackupMapData == NULL)
+        return;
+
+    CpuFastFill16(MAPGRID_UNDEFINED, sBackupMapData, BACKUP_MAP_DATA_SIZE_BYTES);
     GenerateTrainerHillFloorLayout(sBackupMapData);
 }
 
@@ -99,7 +126,11 @@ static void InitMapLayoutData(struct MapHeader *mapHeader)
     int width;
     int height;
     mapLayout = mapHeader->mapLayout;
-    CpuFastFill16(MAPGRID_UNDEFINED, sBackupMapData, sizeof(sBackupMapData));
+    EnsureBackupMapData();
+    if (sBackupMapData == NULL)
+        return;
+
+    CpuFastFill16(MAPGRID_UNDEFINED, sBackupMapData, BACKUP_MAP_DATA_SIZE_BYTES);
     gBackupMapLayout.map = sBackupMapData;
     width = mapLayout->width + MAP_OFFSET_W;
     gBackupMapLayout.width = width;
@@ -427,6 +458,9 @@ void SaveMapView(void)
     int x, y;
     u16 *mapView;
     int width;
+    if (sBackupMapData == NULL)
+        return;
+
     mapView = gSaveBlock1Ptr->mapView;
     width = gBackupMapLayout.width;
     x = gSaveBlock1Ptr->pos.x;
@@ -473,6 +507,13 @@ static void LoadSavedMapView(void)
     u16 *mapView;
     int width;
     mapView = gSaveBlock1Ptr->mapView;
+    EnsureBackupMapData();
+    if (sBackupMapData == NULL)
+    {
+        ClearSavedMapView();
+        return;
+    }
+
     if (!SavedMapViewIsEmpty())
     {
         width = gBackupMapLayout.width;
