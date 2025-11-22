@@ -2076,6 +2076,7 @@ static enum MoveCanceler CancelerAsleepOrFrozen(struct BattleContext *ctx)
                     gProtectStructs[ctx->battlerAtk].nonVolatileStatusImmobility = TRUE;
                     gBattlescriptCurrInstr = BattleScript_MoveUsedIsAsleep;
                     gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
+                    return MOVE_STEP_FAILURE;
                 }
             }
             else
