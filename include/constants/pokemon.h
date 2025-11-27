@@ -377,4 +377,6 @@ enum EvoSpinDirections {
 #define LEGENDARY_PERFECT_IV_COUNT 0
 #endif
 
+#define SHINY_PERFECT_IV_COUNT 3
+
 #endif // GUARD_CONSTANTS_POKEMON_H

@@ -1041,9 +1041,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     u32 personality = Random32();
     u32 value;
     u16 checksum;
-    u8 i;
-    u8 availableIVs[NUM_STATS];
-    u8 selectedIvs[NUM_STATS];
+    u8 perfectIvCount;
     bool32 isShiny;
 
     ZeroBoxMonData(boxMon);
@@ -1163,48 +1161,15 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         iv = (value & (MAX_IV_MASK << 10)) >> 10;
         SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv);
 
-        if (gSpeciesInfo[species].perfectIVCount != 0)
-        {
-            iv = MAX_PER_STAT_IVS;
-            // Initialize a list of IV indices.
-            for (i = 0; i < NUM_STATS; i++)
-            {
-                availableIVs[i] = i;
-            }
-
-            // Select the IVs that will be perfected.
-            for (i = 0; i < NUM_STATS && i < gSpeciesInfo[species].perfectIVCount; i++)
-            {
-                u8 index = Random() % (NUM_STATS - i);
-                selectedIvs[i] = availableIVs[index];
-                RemoveIVIndexFromList(availableIVs, index);
-            }
-            for (i = 0; i < NUM_STATS && i < gSpeciesInfo[species].perfectIVCount; i++)
-            {
-                switch (selectedIvs[i])
-                {
-                case STAT_HP:
-                    SetBoxMonData(boxMon, MON_DATA_HP_IV, &iv);
-                    break;
-                case STAT_ATK:
-                    SetBoxMonData(boxMon, MON_DATA_ATK_IV, &iv);
-                    break;
-                case STAT_DEF:
-                    SetBoxMonData(boxMon, MON_DATA_DEF_IV, &iv);
-                    break;
-                case STAT_SPEED:
-                    SetBoxMonData(boxMon, MON_DATA_SPEED_IV, &iv);
-                    break;
-                case STAT_SPATK:
-                    SetBoxMonData(boxMon, MON_DATA_SPATK_IV, &iv);
-                    break;
-                case STAT_SPDEF:
-                    SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv);
-                    break;
-                }
-            }
-        }
     }
+
+    perfectIvCount = fixedIV < USE_RANDOM_IVS ? 0 : gSpeciesInfo[species].perfectIVCount;
+
+    if (isShiny && perfectIvCount < SHINY_PERFECT_IV_COUNT)
+        perfectIvCount = SHINY_PERFECT_IV_COUNT;
+
+    if (perfectIvCount != 0)
+        TrySetBoxMonPerfectIvs(boxMon, perfectIvCount);
 
     if (GetSpeciesAbility(species, 1))
     {
@@ -6751,6 +6716,43 @@ u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
         sLearningMoveTableID++;
     }
     return 0;
+}
+
+void TrySetBoxMonPerfectIvs(struct BoxPokemon *boxMon, u8 perfectIvCount)
+{
+    u8 ivs[NUM_STATS];
+    u8 availableIVs[NUM_STATS];
+    u8 availableCount = 0;
+    u8 currentPerfectIvs = 0;
+    s32 i;
+
+    if (perfectIvCount == 0)
+        return;
+
+    for (i = 0; i < NUM_STATS; i++)
+    {
+        ivs[i] = GetBoxMonData(boxMon, MON_DATA_HP_IV + i, NULL);
+        if (ivs[i] == MAX_PER_STAT_IVS)
+            currentPerfectIvs++;
+        else
+            availableIVs[availableCount++] = i;
+    }
+
+    if (currentPerfectIvs >= perfectIvCount)
+        return;
+
+    perfectIvCount -= currentPerfectIvs;
+    for (i = 0; i < perfectIvCount && availableCount > 0; i++)
+    {
+        u8 index = Random() % availableCount;
+        u8 selectedStat = availableIVs[index];
+        ivs[selectedStat] = MAX_PER_STAT_IVS;
+        RemoveIVIndexFromList(availableIVs, index);
+        availableCount--;
+    }
+
+    for (i = 0; i < NUM_STATS; i++)
+        SetBoxMonData(boxMon, MON_DATA_HP_IV + i, &ivs[i]);
 }
 
 // Removes the selected index from the given IV list and shifts the remaining

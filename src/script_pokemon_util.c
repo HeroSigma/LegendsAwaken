@@ -338,6 +338,7 @@ static u32 ScriptGiveMonParameterized(u8 side, u8 slot, u16 species, u8 level, u
     int sentToPc;
     struct Pokemon mon;
     u32 i;
+    u8 perfectIvCount;
     u8 genderRatio = gSpeciesInfo[species].genderRatio;
     u16 targetSpecies;
 
@@ -388,6 +389,14 @@ static u32 ScriptGiveMonParameterized(u8 side, u8 slot, u16 species, u8 level, u
         if (ivs[i] <= MAX_PER_STAT_IVS)
             SetMonData(&mon, MON_DATA_HP_IV + i, &ivs[i]);
     }
+
+    perfectIvCount = gSpeciesInfo[species].perfectIVCount;
+    if (isShiny && perfectIvCount < SHINY_PERFECT_IV_COUNT)
+        perfectIvCount = SHINY_PERFECT_IV_COUNT;
+
+    if (perfectIvCount != 0)
+        TrySetBoxMonPerfectIvs(&mon.box, perfectIvCount);
+
     CalculateMonStats(&mon);
 
     // moves
