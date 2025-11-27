@@ -3,8 +3,8 @@
 
 ASSUMPTIONS
 {
-    ASSUME(gMovesInfo[MOVE_HEAL_BELL].effect == EFFECT_HEAL_BELL);
-    ASSUME(gMovesInfo[MOVE_AROMATHERAPY].effect == EFFECT_HEAL_BELL);
+    ASSUME(GetMoveEffect(MOVE_HEAL_BELL) == EFFECT_HEAL_BELL);
+    ASSUME(GetMoveEffect(MOVE_AROMATHERAPY) == EFFECT_HEAL_BELL);
     ASSUME(MoveHasAdditionalEffect(MOVE_SPARKLY_SWIRL, MOVE_EFFECT_AROMATHERAPY));
 }
 
@@ -86,7 +86,8 @@ DOUBLE_BATTLE_TEST("Heal Bell/Aromatherapy cures the entire party of the user fr
 
 DOUBLE_BATTLE_TEST("Heal Bell does not cure Soundproof partners (Gen 4, Gen 6+)")
 {
-    u32 ability, config;
+    enum Ability ability;
+    u32 config;
 
     PARAMETRIZE { ability = ABILITY_SCRAPPY;    config = GEN_4; }
     PARAMETRIZE { ability = ABILITY_SOUNDPROOF; config = GEN_4; }
@@ -114,7 +115,8 @@ DOUBLE_BATTLE_TEST("Heal Bell does not cure Soundproof partners (Gen 4, Gen 6+)"
 
 SINGLE_BATTLE_TEST("Heal Bell cures inactive Soundproof Pokemon (Gen5+)")
 {
-    u32 config, ability;
+    u32 config;
+    enum Ability ability;
 
     PARAMETRIZE { config = GEN_4, ability = ABILITY_SCRAPPY; }
     PARAMETRIZE { config = GEN_4, ability = ABILITY_SOUNDPROOF; }

@@ -34,6 +34,7 @@
 #include "menu.h"
 #include "money.h"
 #include "move.h"
+#include "move_relearner.h"
 #include "mystery_event_script.h"
 #include "palette.h"
 #include "party_menu.h"
@@ -3174,10 +3175,12 @@ bool8 Scrcmd_getobjectfacingdirection(struct ScriptContext *ctx)
     return FALSE;
 }
 
-bool8 ScrFunc_hidefollower(struct ScriptContext *ctx)
+bool8 ScrCmd_hidefollower(struct ScriptContext *ctx)
 {
     bool16 wait = VarGet(ScriptReadHalfword(ctx));
     struct ObjectEvent *obj;
+
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
 
     if ((obj = ScriptHideFollower()) != NULL && wait)
     {
@@ -3393,5 +3396,40 @@ bool8 ScrCmd_setspeaker(struct ScriptContext *ctx)
     Script_RequestEffects(SCREFF_V1);
 
     ctx->data[1] = (u32)speaker;
+    return FALSE;
+}
+
+bool8 ScrCmd_setmoverelearnerstate(struct ScriptContext *ctx)
+{
+    enum MoveRelearnerStates state = VarGet(ScriptReadHalfword(ctx));
+
+    Script_RequestEffects(SCREFF_V1);
+
+    gMoveRelearnerState = state;
+    return FALSE;
+}
+
+bool8 ScrCmd_getmoverelearnerstate(struct ScriptContext *ctx)
+{
+    u32 varId = ScriptReadHalfword(ctx);
+
+    Script_RequestEffects(SCREFF_V1);
+    Script_RequestWriteVar(varId);
+
+    u16 *varPointer = GetVarPointer(varId);
+    *varPointer = gMoveRelearnerState;
+    return FALSE;
+}
+
+bool8 ScrCmd_istmrelearneractive(struct ScriptContext *ctx)
+{
+    const u8 *ptr = (const u8 *)ScriptReadWord(ctx);
+
+    Script_RequestEffects(SCREFF_V1);
+
+    if ((P_TM_MOVES_RELEARNER || P_ENABLE_MOVE_RELEARNERS)
+     && (P_ENABLE_ALL_TM_MOVES || IsBagPocketNonEmpty(POCKET_TM_HM)))
+        ScriptCall(ctx, ptr);
+
     return FALSE;
 }

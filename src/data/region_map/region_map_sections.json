@@ -783,10 +783,7 @@
     },
     {
       "id": "MAPSEC_DYNAMIC",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
+      "name": ""
     },
     {
       "id": "MAPSEC_PALLET_TOWN",
@@ -879,18 +876,12 @@
     {
       "id": "MAPSEC_ROUTE_4_POKECENTER",
       "name": "ROUTE 4",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
+      "name_clone": true
     },
     {
       "id": "MAPSEC_ROUTE_10_POKECENTER",
       "name": "ROUTE 10",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
+      "name_clone": true
     },
     {
       "id": "MAPSEC_ROUTE_1",
@@ -1127,10 +1118,7 @@
     {
       "id": "MAPSEC_UNDERGROUND_PATH_2",
       "name": "UNDERGROUND PATH",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
+      "name_clone": true
     },
     {
       "id": "MAPSEC_DIGLETTS_CAVE",
@@ -1143,10 +1131,7 @@
     {
       "id": "MAPSEC_KANTO_VICTORY_ROAD",
       "name": "VICTORY ROAD",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
+      "name_clone": true
     },
     {
       "id": "MAPSEC_ROCKET_HIDEOUT",
@@ -1175,10 +1160,7 @@
     {
       "id": "MAPSEC_KANTO_SAFARI_ZONE",
       "name": "SAFARI ZONE",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
+      "name_clone": true
     },
     {
       "id": "MAPSEC_POKEMON_LEAGUE",
@@ -1519,10 +1501,7 @@
     {
       "id": "MAPSEC_TRAINER_TOWER_2",
       "name": "TRAINER TOWER",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
+      "name_clone": true
     },
     {
       "id": "MAPSEC_DOTTED_HOLE",

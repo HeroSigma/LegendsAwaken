@@ -246,6 +246,7 @@
 #define OBJ_EVENT_GFX_POKE_BALL                  239
 #define OBJ_EVENT_GFX_OW_MON                     240
 #define OBJ_EVENT_GFX_LIGHT_SPRITE               241
+#define OBJ_EVENT_GFX_APRICORN_TREE              242
 #define OBJ_EVENT_GFX_DELIA                      242
 #define OBJ_EVENT_GFX_GRACE                      243
 #define OBJ_EVENT_GFX_PROF_OAK                   244
