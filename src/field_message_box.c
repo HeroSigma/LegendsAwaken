@@ -3,6 +3,7 @@
 #include "string_util.h"
 #include "task.h"
 #include "text.h"
+#include "event_data.h"
 #include "match_call.h"
 #include "field_message_box.h"
 #include "text_window.h"

@@ -395,7 +395,6 @@ static const u16 sStoreItems_Berries[] =
     ITEM_GREPA_BERRY,
     ITEM_HABAN_BERRY,
     ITEM_HONDEW_BERRY,
-    ITEM_HOPO_BERRY,
     ITEM_IAPAPA_BERRY,
     ITEM_JABOCA_BERRY,
     ITEM_KASIB_BERRY,
@@ -599,4 +598,3 @@ static void Task_HandleStoreMenuSelection(u8 taskId)
     // So this can be empty or just play a sound effect
     PlaySE(SE_SELECT);
 }
-

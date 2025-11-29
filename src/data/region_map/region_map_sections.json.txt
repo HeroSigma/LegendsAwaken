@@ -37,7 +37,7 @@ const struct RegionMapLocation gRegionMapEntries[] = {
 const struct RegionMapLocation gRegionMapEntries_Johto[] = {
 ## for map_section in map_sections_johto
 {% if existsIn(map_section, "name") %}
-    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
+    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, COMPOUND_STRING("{% if existsIn(map_section, "name_clone") %}{{ map_section.name_clone }}{% else %}{{ map_section.name }}{% endif %}") },
 {% endif %}
 ## endfor
 };
@@ -45,7 +45,7 @@ const struct RegionMapLocation gRegionMapEntries_Johto[] = {
 const struct RegionMapLocation gRegionMapEntries_Kanto[] = {
 ## for map_section in map_sections_kanto
 {% if existsIn(map_section, "name") %}
-    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
+    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, COMPOUND_STRING("{% if existsIn(map_section, "name_clone") %}{{ map_section.name_clone }}{% else %}{{ map_section.name }}{% endif %}") },
 {% endif %}
 ## endfor
 };
@@ -53,7 +53,7 @@ const struct RegionMapLocation gRegionMapEntries_Kanto[] = {
 const struct RegionMapLocation gRegionMapEntries_Sevii[] = {
 ## for map_section in map_sections_sevii
 {% if existsIn(map_section, "name") %}
-    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
+    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, COMPOUND_STRING("{% if existsIn(map_section, "name_clone") %}{{ map_section.name_clone }}{% else %}{{ map_section.name }}{% endif %}") },
 {% endif %}
 ## endfor
 };
@@ -61,7 +61,7 @@ const struct RegionMapLocation gRegionMapEntries_Sevii[] = {
 const struct RegionMapLocation gRegionMapEntries_Sinnoh[] = {
 ## for map_section in map_sections_sinnoh
 {% if existsIn(map_section, "name") %}
-    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %} },
+    [{{ map_section.map_section }}] = { {{ map_section.x }}, {{ map_section.y }}, {{ map_section.width }}, {{ map_section.height }}, COMPOUND_STRING("{% if existsIn(map_section, "name_clone") %}{{ map_section.name_clone }}{% else %}{{ map_section.name }}{% endif %}") },
 {% endif %}
 ## endfor
 };
