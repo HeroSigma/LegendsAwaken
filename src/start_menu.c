@@ -54,6 +54,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "store.h"
+#include "seasons.h"
 
 // Menu actions
 enum
@@ -92,6 +93,7 @@ COMMON_DATA bool8 (*gMenuCallback)(void) = NULL;
 // EWRAM
 EWRAM_DATA static u8 sSafariBallsWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
+EWRAM_DATA static u8 sStartClockWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;          // total actions across all pages
 EWRAM_DATA static u8 sCurrentStartMenuActions[11] = {0};
@@ -133,6 +135,7 @@ static bool8 BattlePyramidRetireStartCallback(void);
 static bool8 BattlePyramidRetireReturnCallback(void);
 static bool8 BattlePyramidRetireCallback(void);
 static bool8 HandleStartMenuInput(void);
+static void ShowTimeWindow(void);
 
 // Save dialog callbacks
 static u8 SaveConfirmSaveCallback(void);
@@ -169,6 +172,16 @@ static const struct WindowTemplate sWindowTemplate_SafariBalls = {
     .baseBlock = 0x8
 };
 
+static const struct WindowTemplate sWindowTemplate_StartClock = {
+    .bg = 0,
+    .tilemapLeft = 12,
+    .tilemapTop = 1,
+    .width = 8,
+    .height = 4,
+    .paletteNum = 12,
+    .baseBlock = 0x30
+};
+
 static const u8 *const sPyramidFloorNames[FRONTIER_STAGES_PER_CHALLENGE + 1] =
 {
     gText_Floor1,
@@ -201,6 +214,20 @@ static const struct WindowTemplate sWindowTemplate_PyramidPeak = {
     .baseBlock = 0x8
 };
 
+#define CLOCK_WINDOW_WIDTH 64
+
+static const u8 gText_Spring[] = _("Spring,");
+static const u8 gText_Summer[] = _("Summer,");
+static const u8 gText_Autumn[] = _("Autumn,");
+static const u8 gText_Winter[] = _("Winter,");
+
+static const u8 *const gSeasonNameStringsTable[SEASONS_COUNT] = {
+    gText_Spring,
+    gText_Summer,
+    gText_Autumn,
+    gText_Winter
+};
+
 static const u8 sText_MenuDebug[] = _("DEBUG");
 
 static const u8 sText_QuestMenu[] = _("QUESTS");
@@ -225,6 +252,72 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_DEBUG]           = {sText_MenuDebug,   {.u8_void = StartMenuDebugCallback}},
     [MENU_ACTION_QUEST_MENU]        = {sText_QuestMenu, {.u8_void = QuestMenuCallback}},
 };
+
+static void DisplayTimeOfDayIcon(u8 timeOfDay)
+{
+    static const u8 sTimeOfDayIcons_Gfx[] = INCBIN_U8("graphics/interface/time_of_day_icons.4bpp");
+
+    BlitBitmapToWindow(sStartClockWindowId, sTimeOfDayIcons_Gfx + 0xC0 * timeOfDay, 0, 0, 24, 16);
+    PutWindowTilemap(sStartClockWindowId);
+    CopyWindowToVram(sStartClockWindowId, COPYWIN_FULL);
+}
+
+static void ShowTimeWindow(void)
+{
+    const u8 *suffix;
+    u8 *ptr;
+    u8 convertedHours;
+
+    RtcCalcLocalTime();
+
+    static const u16 sTimeOfDayIcons_Pal[] = INCBIN_U16("graphics/interface/start_menu_clock.gbapal");
+    LoadPalette(sTimeOfDayIcons_Pal, BG_PLTT_ID(12), PLTT_SIZE_4BPP);
+
+    if (sStartClockWindowId == WINDOW_NONE)
+        sStartClockWindowId = AddWindow(&sWindowTemplate_StartClock);
+
+    PutWindowTilemap(sStartClockWindowId);
+    DrawStdWindowFrame(sStartClockWindowId, FALSE);
+
+    if (gLocalTime.hours < 12)
+    {
+        convertedHours = gLocalTime.hours == 0 ? 12 : gLocalTime.hours;
+        suffix = gText_AM;
+    }
+    else if (gLocalTime.hours == 12)
+    {
+        convertedHours = 12;
+        suffix = gText_PM;
+    }
+    else
+    {
+        convertedHours = gLocalTime.hours - 12;
+        suffix = gText_PM;
+    }
+
+    ptr = ConvertIntToDecimalStringN(gStringVar4, convertedHours, STR_CONV_MODE_LEFT_ALIGN, 3);
+    *ptr = 0xF0;
+    ConvertIntToDecimalStringN(ptr + 1, gLocalTime.minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
+
+    AddTextPrinterParameterized(sStartClockWindowId, FONT_NORMAL, gStringVar4,
+                                GetStringRightAlignXOffset(FONT_NORMAL, suffix, CLOCK_WINDOW_WIDTH)
+                                    - (CLOCK_WINDOW_WIDTH - GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, CLOCK_WINDOW_WIDTH) + 3),
+                                1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(sStartClockWindowId, FONT_NORMAL, suffix,
+                                GetStringRightAlignXOffset(FONT_NORMAL, suffix, CLOCK_WINDOW_WIDTH),
+                                1, TEXT_SKIP_DRAW, NULL);
+
+    StringExpandPlaceholders(gStringVar4, gSeasonNameStringsTable[GetSeason()]);
+    AddTextPrinterParameterized(sStartClockWindowId, FONT_NORMAL, gStringVar4, 0, 16, TEXT_SKIP_DRAW, NULL);
+
+    ConvertIntToDecimalStringN(gStringVar4, GetDayInCurrentSeason(), STR_CONV_MODE_LEFT_ALIGN, 2);
+    AddTextPrinterParameterized(sStartClockWindowId, FONT_NORMAL, gStringVar4,
+                                GetStringRightAlignXOffset(FONT_NORMAL, suffix, CLOCK_WINDOW_WIDTH) - 12,
+                                16, TEXT_SKIP_DRAW, NULL);
+
+    DisplayTimeOfDayIcon(GetTimeOfDay());
+    CopyWindowToVram(sStartClockWindowId, COPYWIN_GFX);
+}
 
 static const struct BgTemplate sBgTemplates_LinkBattleSave[] =
 {
@@ -297,6 +390,7 @@ static void ShowSaveInfoWindow(void);
 static void RemoveSaveInfoWindow(void);
 static void HideStartMenuWindow(void);
 static void HideStartMenuDebug(void);
+static void ResetStartMenuWindowIds(void);
 
 void SetDexPokemonPokenavFlags(void) // unused
 {
@@ -528,6 +622,12 @@ static void RemoveExtraStartMenuWindows(void)
         RemoveWindow(sBattlePyramidFloorWindowId);
         sBattlePyramidFloorWindowId = WINDOW_NONE;
     }
+    if (sStartClockWindowId != WINDOW_NONE)
+    {
+        ClearStdWindowAndFrameToTransparent(sStartClockWindowId, FALSE);
+        RemoveWindow(sStartClockWindowId);
+        sStartClockWindowId = WINDOW_NONE;
+    }
 }
 
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
@@ -589,6 +689,7 @@ static bool32 InitStartMenuStep(void)
             ShowSafariBallsWindow();
         if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
             ShowPyramidFloorWindow();
+        ShowTimeWindow();
         sInitStartMenuData[0]++;
         break;
     case 4:
@@ -645,6 +746,7 @@ void ShowReturnToFieldStartMenu(void)
 {
     sInitStartMenuData[0] = 0;
     sInitStartMenuData[1] = 0;
+    ResetStartMenuWindowIds();
     gFieldCallback2 = FieldCB_ReturnToFieldStartMenu;
 }
 
@@ -680,8 +782,7 @@ void ShowStartMenu(void)
     }
     // Reset to first page and clear aux window ids each time the menu is opened
     sStartMenuPage = 0;
-    sSafariBallsWindowId = WINDOW_NONE;
-    sBattlePyramidFloorWindowId = WINDOW_NONE;
+    ResetStartMenuWindowIds();
     CreateStartMenuTask(Task_ShowStartMenu);
     LockPlayerFieldControls();
 }
@@ -949,6 +1050,7 @@ void ShowBattlePyramidStartMenu(void)
 {
     ClearDialogWindowAndFrameToTransparent(0, FALSE);
     ScriptUnfreezeObjectEvents();
+    ResetStartMenuWindowIds();
     CreateStartMenuTask(Task_ShowStartMenu);
     LockPlayerFieldControls();
 }
@@ -1598,6 +1700,13 @@ void AppendToList(u8 *list, u8 *pos, u8 newEntry)
 {
     list[*pos] = newEntry;
     (*pos)++;
+}
+
+static void ResetStartMenuWindowIds(void)
+{
+    sSafariBallsWindowId = WINDOW_NONE;
+    sBattlePyramidFloorWindowId = WINDOW_NONE;
+    sStartClockWindowId = WINDOW_NONE;
 }
 
 static bool8 StartMenuDexNavCallback(void)

@@ -78,6 +78,20 @@ bool32 CanDynamax(u32 battler)
     // Prevents Zigzagoon from dynamaxing in vanilla.
     if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE && !IsOnPlayerSide(battler))
         return FALSE;
+        
+    // Check if the Pokémon is holding an item that prevents Dynamaxing
+    if (holdEffect == HOLD_EFFECT_GRISEOUS_ORB ||  // Prevent Dynamaxing with Giratina's Orb
+        holdEffect == HOLD_EFFECT_MEGA_STONE)      // Prevent Dynamaxing with Mega Stones
+    {
+        return FALSE;
+    }
+    
+    // Check if battler is already using another gimmick (Mega Evolution, Terastallization, etc.)
+    enum Gimmick activeGimmick = GetActiveGimmick(battler);
+    if (activeGimmick != GIMMICK_NONE || IsBattlerMegaEvolved(battler))
+    {
+        return FALSE;
+    }
 
     // Check if Player has a Dynamax Band.
     if (!TESTING && (GetBattlerPosition(battler) == B_POSITION_PLAYER_LEFT

@@ -1654,6 +1654,66 @@ const u16 gTilesetPalettes_KantoGeneral[][16] =
 	INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/12.gbapal"),
 };
 
+const u16 gTilesetPalettes_KantoGeneral_Summer[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/summer/15.gbapal"),
+};
+
+const u16 gTilesetPalettes_KantoGeneral_Autumn[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/autumn/15.gbapal"),
+};
+
+const u16 gTilesetPalettes_KantoGeneral_Winter[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/kantogeneral/palettes/winter/15.gbapal"),
+};
+
 const u32 gTilesetTiles_JohtoGeneral[] = INCBIN_U32("data/tilesets/primary/johtogeneral/tiles.4bpp.lz");
 
 const u16 gTilesetPalettes_JohtoGeneral[][16] =
@@ -1671,6 +1731,66 @@ const u16 gTilesetPalettes_JohtoGeneral[][16] =
 	INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/10.gbapal"),
 	INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/11.gbapal"),
 	INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/12.gbapal"),
+};
+
+const u16 gTilesetPalettes_JohtoGeneral_Summer[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/summer/15.gbapal"),
+};
+
+const u16 gTilesetPalettes_JohtoGeneral_Autumn[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/autumn/15.gbapal"),
+};
+
+const u16 gTilesetPalettes_JohtoGeneral_Winter[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/winter/15.gbapal"),
 };
 
 const u32 gTilesetTiles_KantoBuilding[] = INCBIN_U32("data/tilesets/primary/kantobuilding/tiles.4bpp.lz");

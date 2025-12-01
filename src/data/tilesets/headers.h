@@ -12,6 +12,9 @@ const struct Tileset gTileset_General =
     .metatiles = gMetatiles_General,
     .metatileAttributes = gMetatileAttributes_General,
     .callback = InitTilesetAnim_General,
+    .palettes_summer = gTilesetPalettes_General_Summer,
+    .palettes_autumn = gTilesetPalettes_General_Autumn,
+    .palettes_winter = gTilesetPalettes_General_Winter,
 };
 
 const struct Tileset gTileset_Petalburg =
@@ -840,6 +843,9 @@ const struct Tileset gTileset_KantoGeneral =
     .metatiles = gMetatiles_KantoGeneral,
     .metatileAttributes = gMetatileAttributes_KantoGeneral,
     .callback = InitTilesetAnim_KantoGeneral,
+    .palettes_summer = gTilesetPalettes_KantoGeneral_Summer,
+    .palettes_autumn = gTilesetPalettes_KantoGeneral_Autumn,
+    .palettes_winter = gTilesetPalettes_KantoGeneral_Winter,
 };
 
 const struct Tileset gTileset_JohtoGeneral =
@@ -851,6 +857,9 @@ const struct Tileset gTileset_JohtoGeneral =
     .metatiles = gMetatiles_JohtoGeneral,
     .metatileAttributes = gMetatileAttributes_JohtoGeneral,
     .callback = InitTilesetAnim_JohtoGeneral,
+    .palettes_summer = gTilesetPalettes_JohtoGeneral_Summer,
+    .palettes_autumn = gTilesetPalettes_JohtoGeneral_Autumn,
+    .palettes_winter = gTilesetPalettes_JohtoGeneral_Winter,
 };
 
 const struct Tileset gTileset_SinnohGeneral =

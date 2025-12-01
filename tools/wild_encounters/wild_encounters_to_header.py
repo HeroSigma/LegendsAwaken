@@ -2,16 +2,24 @@ import json
 import re
 
 class Config:
-    def __init__(self, config_file_name, rtc_constants_file_name, encounters_json_data):
+    def __init__(self, config_file_name, rtc_constants_file_name, seasons_file_name, encounters_json_data):
         self.times_of_day = None
+        self.seasons = None
         self.mon_types = None
         self.time_encounters = None
         self.disable_time_fallback = None
         self.time_fallback = None
+        self.season_encounters = None
+        self.disable_season_fallback = None
+        self.season_fallback = None
 
         self.ParseTimeEnum(rtc_constants_file_name)
         if self.times_of_day == None:
             raise Exception(f"Failed to parse 'enum TimeOfDay' in '{rtc_constants_file_name}'")
+
+        self.ParseSeasonEnum(seasons_file_name)
+        if self.seasons == None:
+            raise Exception(f"Failed to parse seasons in '{seasons_file_name}'")
 
         self.ParseMonTypes(encounters_json_data)
         if self.mon_types == None:
@@ -21,6 +29,7 @@ class Config:
             lines = config_file.readlines()
             for line in lines:
                 self.ParseTimeConfig(line)
+                self.ParseSeasonConfig(line)
 
         if self.time_encounters == None:
             raise Exception("OW_TIME_OF_DAY_ENCOUNTERS not defined.")
@@ -28,6 +37,12 @@ class Config:
             raise Exception("OW_TIME_OF_DAY_DISABLE_FALLBACK not defined.")
         if self.time_fallback == None:
             raise Exception("OW_TIME_OF_DAY_FALLBACK not defined.")
+        if self.season_encounters == None:
+            raise Exception("OW_SEASON_ENCOUNTERS not defined.")
+        if self.disable_season_fallback == None:
+            raise Exception("OW_SEASON_DISABLE_FALLBACK not defined.")
+        if self.season_fallback == None:
+            raise Exception("OW_SEASON_FALLBACK not defined.")
 
     def ParseTimeEnum(self, rtc_constants_file_name):
         with open(rtc_constants_file_name, 'r') as rtc_constants_file:
@@ -41,6 +56,20 @@ class Config:
                 self.times_of_day = {}
                 for value in values:
                     self.times_of_day[value] = value.title().replace("Time_", "").replace("_", "")
+
+    def ParseSeasonEnum(self, seasons_file_name):
+        with open(seasons_file_name, 'r') as seasons_file:
+            lines = seasons_file.readlines()
+            self.seasons = {}
+            for line in lines:
+                m = re.match(r"#define\s+(SEASON_[A-Z_]+)\s+\d+", line)
+                if m:
+                    value = m.group(1)
+                    if "COUNT" in value or "LENGTH" in value:
+                        continue
+                    self.seasons[value] = value.title().replace("Season_", "").replace("_", "")
+            if len(self.seasons) == 0:
+                self.seasons = None
 
     def ParseMonTypes(self, encounters_json_data):
         for group in encounters_json_data["wild_encounter_groups"]:
@@ -63,6 +92,19 @@ class Config:
         m = re.search(r'#define OW_TIME_OF_DAY_FALLBACK\s+(\w+)', line)
         if m:
             self.time_fallback = m.group(1)
+
+    def ParseSeasonConfig(self, line):
+        m = re.search(r'#define OW_SEASON_ENCOUNTERS\s+(\w+)', line)
+        if m:
+            self.season_encounters = m.group(1) == "TRUE"
+
+        m = re.search(r'#define OW_SEASON_DISABLE_FALLBACK\s+(\w+)', line)
+        if m:
+            self.disable_season_fallback = m.group(1) == "TRUE"
+
+        m = re.search(r'#define OW_SEASON_FALLBACK\s+(\w+)', line)
+        if m:
+            self.season_fallback = m.group(1)
 
 
 class WildEncounterAssembler:
@@ -140,15 +182,21 @@ class WildEncounterAssembler:
         self.WriteLine(".mapNum = MAP_NUM(MAP_UNDEFINED),", 2)
         self.WriteLine(".encounterTypes =", 2)
         self.WriteLine("{", 2)
-        for time in self.config.times_of_day:
-            if not self.config.time_encounters and time != self.config.time_fallback:
+        for season in self.config.seasons:
+            if not self.config.season_encounters and season != self.config.season_fallback:
                 continue
-            self.WriteLine(f"[{time}] =", 3)
+            self.WriteLine(f"[{season}] =", 3)
             self.WriteLine("{", 3)
-            for mon_type in self.config.mon_types:
-                member_name = mon_type.title().replace("_", "")
-                member_name = member_name[0].lower() + member_name[1:] + "Info"
-                self.WriteLine(f".{member_name} = NULL,", 4)
+            for time in self.config.times_of_day:
+                if not self.config.time_encounters and time != self.config.time_fallback:
+                    continue
+                self.WriteLine(f"[{time}] =", 4)
+                self.WriteLine("{", 4)
+                for mon_type in self.config.mon_types:
+                    member_name = mon_type.title().replace("_", "")
+                    member_name = member_name[0].lower() + member_name[1:] + "Info"
+                    self.WriteLine(f".{member_name} = NULL,", 5)
+                self.WriteLine("},", 4)
             self.WriteLine("},", 3)
         self.WriteLine("},", 2)
         self.WriteLine("},", 1)
@@ -160,7 +208,7 @@ class WildEncounterAssembler:
         for shared_label in headers["data"]:
             self.WriteLine()
             map_data = headers["data"][shared_label]
-            encounter_data = map_data
+            encounter_data = map_data["seasons"]
             map_group = map_data["mapGroup"]
             map_num = map_data["mapNum"]
             version = "EMERALD"
@@ -176,21 +224,27 @@ class WildEncounterAssembler:
             self.WriteLine(f".mapNum = {map_num},", 2)
             self.WriteLine(".encounterTypes =", 2)
             self.WriteLine("{", 2)
-            for time in self.config.times_of_day:
-                if not self.config.time_encounters and time != self.config.time_fallback:
+            for season in self.config.seasons:
+                if not self.config.season_encounters and season != self.config.season_fallback:
                     continue
-                self.WriteLine(f"[{time}] =", 3)
+                self.WriteLine(f"[{season}] =", 3)
                 self.WriteLine("{", 3)
-                for mon_type in self.config.mon_types:
-                    member_name = mon_type.title().replace("_", "")
-                    member_name = member_name[0].lower() + member_name[1:] + "Info"
-                    value = "NULL"
-                    if time in encounter_data and mon_type in encounter_data[time]:
-                        value = encounter_data[time][mon_type]
-                    if value != "NULL":
-                        value = "&" + value
-                    self.WriteLine(f".{member_name} = {value},", 4)
+                for time in self.config.times_of_day:
+                    if not self.config.time_encounters and time != self.config.time_fallback:
+                        continue
+                    self.WriteLine(f"[{time}] =", 4)
+                    self.WriteLine("{", 4)
+                    for mon_type in self.config.mon_types:
+                        member_name = mon_type.title().replace("_", "")
+                        member_name = member_name[0].lower() + member_name[1:] + "Info"
+                        value = "NULL"
+                        if season in encounter_data and time in encounter_data[season] and mon_type in encounter_data[season][time]:
+                            value = encounter_data[season][time][mon_type]
+                        if value != "NULL":
+                            value = "&" + value
+                        self.WriteLine(f".{member_name} = {value},", 5)
 
+                    self.WriteLine("},", 4)
                 self.WriteLine("},", 3)
 
             self.WriteLine("},", 2)
@@ -223,16 +277,30 @@ class WildEncounterAssembler:
                 base_label = map_encounters["base_label"]
                 shared_label = base_label
                 time = self.config.time_fallback
+                season = self.config.season_fallback
 
-                for time_ident in self.config.times_of_day:
-                    if self.config.times_of_day[time_ident] in base_label:
-                        time = time_ident
-                        shared_label = shared_label.replace('_' + self.config.times_of_day[time_ident], '')
+                if not self.config.season_encounters:
+                    season = self.config.season_fallback
+                else:
+                    for season_ident in self.config.seasons:
+                        if self.config.seasons[season_ident] in base_label:
+                            season = season_ident
+                            shared_label = shared_label.replace('_' + self.config.seasons[season_ident], '')
+
+                if not self.config.time_encounters:
+                    time = self.config.time_fallback
+                else:
+                    for time_ident in self.config.times_of_day:
+                        if self.config.times_of_day[time_ident] in base_label:
+                            time = time_ident
+                            shared_label = shared_label.replace('_' + self.config.times_of_day[time_ident], '')
 
                 if shared_label not in headers["data"]:
-                    headers["data"][shared_label] = {}
-                if time not in headers["data"][shared_label]:
-                    headers["data"][shared_label][time] = {}
+                    headers["data"][shared_label] = {"seasons": {}}
+                if season not in headers["data"][shared_label]["seasons"]:
+                    headers["data"][shared_label]["seasons"][season] = {}
+                if time not in headers["data"][shared_label]["seasons"][season]:
+                    headers["data"][shared_label]["seasons"][season][time] = {}
                 headers["data"][shared_label]["mapGroup"] = map_group
                 headers["data"][shared_label]["mapNum"] = map_num
 
@@ -244,7 +312,7 @@ class WildEncounterAssembler:
                 self.WriteLine(f"#ifdef {version}")
                 for mon_type in self.config.mon_types:
                     if mon_type not in map_encounters:
-                        headers["data"][shared_label][mon_type] = "NULL"
+                        headers["data"][shared_label]["seasons"][season][time][mon_type] = "NULL"
                         continue
 
                     mons_entry = map_encounters[mon_type]
@@ -253,7 +321,7 @@ class WildEncounterAssembler:
 
                     mon_array_name = base_label + "_" + mon_type.title().replace("_", "")
                     self.WriteMonInfos(mon_array_name, mons, encounter_rate)
-                    headers["data"][shared_label][time][mon_type] = mon_array_name + "Info"
+                    headers["data"][shared_label]["seasons"][season][time][mon_type] = mon_array_name + "Info"
                 self.WriteLine(f"#endif")
 
             self.WritePokemonHeaders(headers)
@@ -261,7 +329,7 @@ class WildEncounterAssembler:
 
 def ConvertToHeaderFile(json_data):
     with open('src/data/wild_encounters.h', 'w') as output_file:
-        config = Config('include/config/overworld.h', 'include/constants/rtc.h', json_data)
+        config = Config('include/config/overworld.h', 'include/constants/rtc.h', 'include/seasons.h', json_data)
         assembler = WildEncounterAssembler(output_file, json_data, config)
         assembler.WriteHeader()
         assembler.WriteMacros()

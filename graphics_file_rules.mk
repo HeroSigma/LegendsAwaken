@@ -28,6 +28,12 @@ contest_types := cool beauty cute smart tough
 
 ### Tilesets ###
 
+$(TILESETGFXDIR)/%/palettes/%.gbapal: $(TILESETGFXDIR)/%/palettes/%.pal
+	$(GFX) $< $@
+
+$(TILESETGFXDIR)/%/palettes/%/%.gbapal: $(TILESETGFXDIR)/%/palettes/%/%.pal
+	$(GFX) $< $@
+
 $(TILESETGFXDIR)/secondary/petalburg/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 159 -Wnum_tiles
 

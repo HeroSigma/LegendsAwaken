@@ -1795,20 +1795,20 @@ static void PopulateSpeciesFromTrainerLocation(int matchCallId, u8 *destStr)
 
         if (gWildMonHeaders[i].mapGroup != MAP_GROUP(MAP_UNDEFINED))
         {
-            timeOfDay = GetTimeOfDayForEncounters(i, WILD_AREA_LAND);
             numSpecies = 0;
-            if (gWildMonHeaders[i].encounterTypes[timeOfDay].landMonsInfo)
+            const struct WildPokemonInfo *landMonsInfo = GetWildPokemonInfo(i, WILD_AREA_LAND, &timeOfDay, NULL);
+            if (landMonsInfo)
             {
                 slot = GetLandEncounterSlot();
-                species[numSpecies] = gWildMonHeaders[i].encounterTypes[timeOfDay].landMonsInfo->wildPokemon[slot].species;
+                species[numSpecies] = landMonsInfo->wildPokemon[slot].species;
                 numSpecies++;
             }
 
-            timeOfDay = GetTimeOfDayForEncounters(i, WILD_AREA_WATER);
-            if (gWildMonHeaders[i].encounterTypes[timeOfDay].waterMonsInfo)
+            const struct WildPokemonInfo *waterMonsInfo = GetWildPokemonInfo(i, WILD_AREA_WATER, &timeOfDay, NULL);
+            if (waterMonsInfo)
             {
                 slot = GetWaterEncounterSlot();
-                species[numSpecies] = gWildMonHeaders[i].encounterTypes[timeOfDay].waterMonsInfo->wildPokemon[slot].species;
+                species[numSpecies] = waterMonsInfo->wildPokemon[slot].species;
                 numSpecies++;
             }
 

@@ -439,6 +439,11 @@ enum Month GetMonth(void)
     return dateTime.month;
 }
 
+s32 GetDaysInMonth(enum Month targetMonth)
+{
+    return sNumDaysInMonths[targetMonth - 1];
+}
+
 u8 GetDay(void)
 {
     struct DateTime dateTime;

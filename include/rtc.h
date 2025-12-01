@@ -40,6 +40,7 @@ u32 RtcGetMinuteCount(void);
 u32 RtcGetLocalDayCount(void);
 void FormatDecimalTimeWithoutSeconds(u8 *dest, s8 hour, s8 minute, bool32 is24Hour);
 u16 GetFullYear(void);
+s32 GetDaysInMonth(enum Month targetMonth);
 enum Month GetMonth(void);
 u8 GetDay(void);
 enum Weekday GetDayOfWeek(void);
