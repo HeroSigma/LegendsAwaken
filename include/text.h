@@ -55,10 +55,20 @@ enum {
     FONTATTR_MAX_LETTER_HEIGHT,
     FONTATTR_LETTER_SPACING,
     FONTATTR_LINE_SPACING,
-    FONTATTR_UNKNOWN,   // dunno what this is yet
+    FONTATTR_COLOR_ACCENT,
     FONTATTR_COLOR_FOREGROUND,
     FONTATTR_COLOR_BACKGROUND,
-    FONTATTR_COLOR_SHADOW
+    FONTATTR_COLOR_SHADOW,
+};
+
+union TextColor {
+    struct {
+        u8 background;
+        u8 foreground;
+        u8 shadow;
+        u8 accent;
+    };
+    u32 asU32;
 };
 
 struct TextPrinterSubStruct
@@ -150,9 +160,9 @@ u16 AddTextPrinterParameterized(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 
 bool32 AddTextPrinter(struct TextPrinterTemplate *printerTemplate, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
 void RunTextPrinters(void);
 bool32 IsTextPrinterActive(u8 id);
-void GenerateFontHalfRowLookupTable(u8 fgColor, u8 bgColor, u8 shadowColor);
-void SaveTextColors(u8 *fgColor, u8 *bgColor, u8 *shadowColor);
-void RestoreTextColors(u8 *fgColor, u8 *bgColor, u8 *shadowColor);
+void GenerateFontHalfRowLookupTable(union TextColor color);
+union TextColor SaveTextColors(void);
+void RestoreTextColors(union TextColor color);
 void DecompressGlyphTile(const void *src_, void *dest_);
 void CopyGlyphToWindow(struct TextPrinter *textPrinter);
 void ClearTextSpan(struct TextPrinter *textPrinter, u32 width);

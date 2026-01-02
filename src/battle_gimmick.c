@@ -68,7 +68,7 @@ bool32 ShouldTrainerBattlerUseGimmick(u32 battler, enum Gimmick gimmick)
     // There are no trainer party settings in battles, but the AI needs to know which gimmick to use.
     if (TESTING)
     {
-        return gimmick == TestRunner_Battle_GetChosenGimmick(GetBattlerSide(battler), gBattlerPartyIndexes[battler]);
+        return gimmick == TestRunner_Battle_GetChosenGimmick(battler, gBattlerPartyIndexes[battler]);
     }
     // The player can bypass these checks because they can choose through the controller.
     else if (IsOnPlayerSide(battler)
@@ -104,11 +104,8 @@ bool32 HasTrainerUsedGimmick(u32 battler, enum Gimmick gimmick)
     {
         return TRUE;
     }
-    // Otherwise, return whether current battler has used gimmick.
-    else
-    {
-        return gBattleStruct->gimmick.activated[battler][gimmick];
-    }
+
+    return gBattleStruct->gimmick.activated[battler][gimmick];
 }
 
 // Sets a gimmick as used by a trainer with checks for Multi Battles.
@@ -159,7 +156,7 @@ void CreateGimmickTriggerSprite(u32 battler)
 
     if (gBattleStruct->gimmick.triggerSpriteId == 0xFF)
     {
-        if (IsDoubleBattle())
+        if (GetBattlerCoordsIndex(battler) == BATTLE_COORDS_DOUBLES)
             gBattleStruct->gimmick.triggerSpriteId = CreateSprite(gimmick->triggerTemplate,
                                                                   gSprites[gHealthboxSpriteIds[battler]].x - DOUBLES_GIMMICK_TRIGGER_POS_X_SLIDE,
                                                                   gSprites[gHealthboxSpriteIds[battler]].y - DOUBLES_GIMMICK_TRIGGER_POS_Y_DIFF, 0);
@@ -216,7 +213,7 @@ static void SpriteCb_GimmickTrigger(struct Sprite *sprite)
     s32 yDiff;
     s32 xHealthbox = gSprites[gHealthboxSpriteIds[sprite->tBattler]].x;
 
-    if (IsDoubleBattle())
+    if (GetBattlerCoordsIndex(sprite->tBattler) == BATTLE_COORDS_DOUBLES)
     {
         xSlide = DOUBLES_GIMMICK_TRIGGER_POS_X_SLIDE;
         xPriority = DOUBLES_GIMMICK_TRIGGER_POS_X_PRIORITY;
