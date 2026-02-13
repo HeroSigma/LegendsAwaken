@@ -18,6 +18,7 @@
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
 #include "field_weather.h"
+#include "fishing.h"
 #include "fldeff.h"
 #include "follower_npc.h"
 #include "item.h"
@@ -96,7 +97,7 @@ static const u8 sText_PlayedPokeFlute[] = _("Played the POKé FLUTE.");
 static const u8 sText_PokeFluteAwakenedMon[] = _("The POKé FLUTE awakened sleeping\nPOKéMON.{PAUSE_UNTIL_PRESS}");
 
 // EWRAM variables
-EWRAM_DATA static void(*sItemUseOnFieldCB)(u8 taskId) = NULL;
+EWRAM_DATA static TaskFunc sItemUseOnFieldCB = NULL;
 
 // Below is set TRUE by UseRegisteredKeyItemOnField
 #define tUsingRegisteredKeyItem  data[3]
@@ -127,7 +128,7 @@ static void SetUpItemUseCallback(u8 taskId)
         type = gTasks[taskId].tEnigmaBerryType - 1;
     else
         type = GetItemType(gSpecialVar_ItemId) - 1;
-    
+
     if (gTasks[taskId].tUsingRegisteredKeyItem && type == (ITEM_USE_PARTY_MENU - 1))
     {
         FadeScreen(FADE_TO_BLACK, 0);
@@ -221,11 +222,11 @@ static void Task_CloseCantUseKeyItemMessage(u8 taskId)
 u8 CheckIfItemIsTMHMOrEvolutionStone(u16 itemId)
 {
     if (GetItemFieldFunc(itemId) == ItemUseOutOfBattle_TMHM)
-        return 1;
+        return ITEM_IS_TM_HM;
     else if (GetItemFieldFunc(itemId) == ItemUseOutOfBattle_EvolutionStone)
-        return 2;
+        return ITEM_IS_EVOLUTION_STONE;
     else
-        return 0;
+        return ITEM_IS_OTHER;
 }
 
 // Mail in the bag menu can't have a message but it can be checked (view the mail background, no message)
@@ -1159,7 +1160,7 @@ static u32 GetBallThrowableState(void)
         return BALL_THROW_UNABLE_NO_ROOM;
     else if (B_SEMI_INVULNERABLE_CATCH >= GEN_4 &&  IsSemiInvulnerable(GetCatchingBattler(), CHECK_ALL))
         return BALL_THROW_UNABLE_SEMI_INVULNERABLE;
-    else if (FlagGet(B_FLAG_NO_CATCHING))
+    else if (FlagGet(B_FLAG_NO_CATCHING) || !IsAllowedToUseBag())
         return BALL_THROW_UNABLE_DISABLED_FLAG;
 
     return BALL_THROW_ABLE;
@@ -1280,7 +1281,7 @@ bool32 CannotUseItemsInBattle(u16 itemId, struct Pokemon *mon)
     switch (battleUsage)
     {
     case EFFECT_ITEM_INCREASE_STAT:
-        if (gBattleMons[gBattlerInMenuId].statStages[GetItemEffect(itemId)[1]] == MAX_STAT_STAGE)
+        if (CompareStat(gBattlerInMenuId, GetItemEffect(itemId)[1], MAX_STAT_STAGE, CMP_EQUAL, GetBattlerAbility(gBattlerInMenuId)))
             cannotUse = TRUE;
         break;
     case EFFECT_ITEM_SET_FOCUS_ENERGY:
@@ -1317,15 +1318,19 @@ bool32 CannotUseItemsInBattle(u16 itemId, struct Pokemon *mon)
         }
         break;
     case EFFECT_ITEM_INCREASE_ALL_STATS:
+    {
+        u32 ability = GetBattlerAbility(gBattlerInMenuId);
+        cannotUse = TRUE;
         for (i = STAT_ATK; i < NUM_STATS; i++)
         {
-            if (CompareStat(gBattlerInMenuId, i, MAX_STAT_STAGE, CMP_EQUAL))
+            if (!CompareStat(gBattlerInMenuId, i, MAX_STAT_STAGE, CMP_EQUAL, ability))
             {
-                cannotUse = TRUE;
+                cannotUse = FALSE;
                 break;
             }
         }
         break;
+    }
     case EFFECT_ITEM_RESTORE_HP:
         if (hp == 0 || hp == GetMonData(mon, MON_DATA_MAX_HP))
             cannotUse = TRUE;

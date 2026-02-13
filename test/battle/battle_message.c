@@ -14,7 +14,7 @@ SINGLE_BATTLE_TEST("Battle Message: Send-in message depends on foe HP")
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_WOBBUFFET) { HP(hp); MaxHP(100); }
     } WHEN {
-        TURN { SWITCH(player, 1);  }
+        TURN { SWITCH(player, 1); }
     } SCENE {
         if (hp > 69)
             MESSAGE("Go! Wynaut!");
@@ -41,22 +41,6 @@ SINGLE_BATTLE_TEST("Battle Message: Switch-out message changes based on conditio
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET) { HP(100); MaxHP(100); }
     } WHEN {
-        switch (hpScale)
-        {
-        case 0:
-            gBattleMons[B_POSITION_OPPONENT_LEFT].hp = 100;
-            break;
-        case 1:
-            gBattleMons[B_POSITION_OPPONENT_LEFT].hp = 80;
-            break;
-        case 2:
-            gBattleMons[B_POSITION_OPPONENT_LEFT].hp = 50;
-            break;
-        default:
-            gBattleMons[B_POSITION_OPPONENT_LEFT].hp = 20;
-            break;
-        }
-        gBattleStruct->hpOnSwitchout[B_SIDE_OPPONENT] = 100;
         TURN { SWITCH(player, 1); }
     } SCENE {
         if (hpScale == 0)

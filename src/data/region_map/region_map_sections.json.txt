@@ -43,7 +43,7 @@ const struct RegionMapLocation gRegionMapEntries[] = {
         .height = 1,
 {% endif %}
 {% if existsIn(map_section, "name") %}
-        .name = sMapName_{{ cleanString(map_section.name) }}{% if existsIn(map_section, "name_clone") %}_Clone{% endif %},
+        .name = COMPOUND_STRING("{{ map_section.name }}"),
 {% else %}
         .name = (const u8[])_(""),
 {% endif %}

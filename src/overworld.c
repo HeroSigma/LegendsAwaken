@@ -212,7 +212,7 @@ EWRAM_DATA struct WarpData gLastUsedWarp = {0};
 EWRAM_DATA static struct WarpData sWarpDestination = {0};  // new warp position
 EWRAM_DATA static struct WarpData sFixedDiveWarp = {0};
 EWRAM_DATA static struct WarpData sFixedHoleWarp = {0};
-EWRAM_DATA static u16 sLastMapSectionId = 0;
+EWRAM_DATA static mapsec_u16_t sLastMapSectionId = 0;
 EWRAM_DATA static struct InitialPlayerAvatarState sInitialPlayerAvatarState = {0};
 EWRAM_DATA static u16 sAmbientCrySpecies = 0;
 EWRAM_DATA static bool8 sIsAmbientCryWaterMon = FALSE;
@@ -430,10 +430,13 @@ void Overworld_ResetBattleFlagsAndVars(void)
         VarSet(B_VAR_WILD_AI_FLAGS,0);
     #endif
 
+    #if B_VAR_NO_BAG_USE != 0
+        VarSet(B_VAR_NO_BAG_USE, 0);
+    #endif
+
     FlagClear(B_FLAG_INVERSE_BATTLE);
     FlagClear(B_FLAG_FORCE_DOUBLE_WILD);
     FlagClear(B_SMART_WILD_AI_FLAG);
-    FlagClear(B_FLAG_NO_BAG_USE);
     FlagClear(B_FLAG_NO_CATCHING);
     FlagClear(B_FLAG_NO_RUNNING);
     FlagClear(B_FLAG_DYNAMAX_BATTLE);
@@ -712,7 +715,7 @@ static bool32 IsWhiteoutCutscene(void)
 {
     if (OW_WHITEOUT_CUTSCENE < GEN_4)
         return FALSE;
-    return GetHealNpcLocalId(GetHealLocationIndexByWarpData(&gSaveBlock1Ptr->lastHealLocation)) > 0;
+    return GetHealNpcLocalId(GetHealLocationIndexByWarpData(&gSaveBlock1Ptr->lastHealLocation)) != LOCALID_NONE;
 }
 
 void SetWarpDestinationToLastHealLocation(void)
@@ -721,6 +724,11 @@ void SetWarpDestinationToLastHealLocation(void)
         SetWhiteoutRespawnWarpAndHealerNPC(&sWarpDestination);
     else
         sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
+}
+
+void SetWarpDestinationForTeleport(void)
+{
+    sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
 }
 
 void SetLastHealLocationWarp(u8 healLocationId)
@@ -857,8 +865,8 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     TryUpdateRandomTrainerRematches(mapGroup, mapNum);
 #endif //FREE_MATCH_CALL
 
-if (I_VS_SEEKER_CHARGING != 0)
-    MapResetTrainerRematches(mapGroup, mapNum);
+    if (I_VS_SEEKER_CHARGING != 0)
+        MapResetTrainerRematches(mapGroup, mapNum);
 
     DoTimeBasedEvents();
     SetSavedWeatherFromCurrMapHeader();
@@ -923,8 +931,8 @@ static void LoadMapFromWarp(bool32 a1)
     TryUpdateRandomTrainerRematches(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
 #endif //FREE_MATCH_CALL
 
-if (I_VS_SEEKER_CHARGING != 0)
-     MapResetTrainerRematches(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
+    if (I_VS_SEEKER_CHARGING != 0)
+         MapResetTrainerRematches(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
 
     if (a1 != TRUE)
         DoTimeBasedEvents();
@@ -1122,7 +1130,7 @@ static bool16 ShouldLegendaryMusicPlayAtLocation(struct WarpData *warp)
     return FALSE;
 }
 
-static bool16 NoMusicInSotopolisWithLegendaries(struct WarpData *warp)
+static bool16 NoMusicInSootopolisWithLegendaries(struct WarpData *warp)
 {
     if (VarGet(VAR_SKY_PILLAR_STATE) != 1)
         return FALSE;
@@ -1147,7 +1155,7 @@ static bool16 IsInfiltratedWeatherInstitute(struct WarpData *warp)
         return FALSE;
 }
 
-static bool16 IsInflitratedSpaceCenter(struct WarpData *warp)
+static bool16 IsInfiltratedSpaceCenter(struct WarpData *warp)
 {
     if (VarGet(VAR_MOSSDEEP_CITY_STATE) == 0)
         return FALSE;
@@ -1163,11 +1171,11 @@ static bool16 IsInflitratedSpaceCenter(struct WarpData *warp)
 
 u16 GetLocationMusic(struct WarpData *warp)
 {
-    if (NoMusicInSotopolisWithLegendaries(warp) == TRUE)
+    if (NoMusicInSootopolisWithLegendaries(warp) == TRUE)
         return MUS_NONE;
     else if (ShouldLegendaryMusicPlayAtLocation(warp) == TRUE)
         return MUS_ABNORMAL_WEATHER;
-    else if (IsInflitratedSpaceCenter(warp) == TRUE)
+    else if (IsInfiltratedSpaceCenter(warp) == TRUE)
         return MUS_ENCOUNTER_MAGMA;
     else if (IsInfiltratedWeatherInstitute(warp) == TRUE)
         return MUS_MT_CHIMNEY;
@@ -1559,7 +1567,7 @@ const struct BlendSettings gTimeOfDayBlend[] =
 };
 
 #define DEFAULT_WEIGHT 256
-#define TIME_BLEND_WEIGHT(begin, end) (DEFAULT_WEIGHT - (DEFAULT_WEIGHT * SAFE_DIV(((hours - begin) * MINUTES_PER_HOUR + minutes), ((end - begin) * MINUTES_PER_HOUR))))
+#define TIME_BLEND_WEIGHT(begin, end) (DEFAULT_WEIGHT - SAFE_DIV((DEFAULT_WEIGHT * ((hours - begin) * MINUTES_PER_HOUR + minutes)), ((end - begin) * MINUTES_PER_HOUR)))
 
 #define MORNING_HOUR_MIDDLE (MORNING_HOUR_BEGIN + ((MORNING_HOUR_END - MORNING_HOUR_BEGIN) / 2))
 
@@ -1622,7 +1630,7 @@ void UpdateTimeOfDay(void)
 #undef DEFAULT_WEIGHT
 
 // Whether a map type is naturally lit/outside
-bool32 MapHasNaturalLight(u8 mapType)
+bool32 MapHasNaturalLight(enum MapType mapType)
 {
     return (OW_ENABLE_DNS
          && (mapType == MAP_TYPE_TOWN
@@ -1713,12 +1721,12 @@ static void OverworldBasic(void)
         gTimeUpdateCounter = (SECONDS_PER_MINUTE * 60 / FakeRtc_GetSecondsRatio());
         UpdateTimeOfDay();
         FormChangeTimeUpdate();
-        if (bld0[0] != bld1[0]
+        if (MapHasNaturalLight(gMapHeader.mapType) &&
+           (bld0[0] != bld1[0]
          || bld0[1] != bld1[1]
-         || bld0[2] != bld1[2])
+         || bld0[2] != bld1[2]))
         {
-           UpdateAltBgPalettes(PALETTES_BG);
-           UpdatePalettesWithTime(PALETTES_ALL);
+            ApplyWeatherColorMapIfIdle(gWeatherPtr->colorMapIndex);
         }
     }
 }
@@ -1796,6 +1804,10 @@ void CB2_NewGame(void)
     SetFieldVBlankCallback();
     SetMainCallback1(CB1_Overworld);
     SetMainCallback2(CB2_Overworld);
+#if OW_USE_FAKE_RTC
+    // Wall clock now track local time so we set it to 10AM to match initial wall clock time
+    RtcCalcLocalTimeOffset(0, 10, 0, 0);
+#endif
 }
 
 void CB2_WhiteOut(void)
