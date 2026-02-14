@@ -860,7 +860,7 @@ static void SetUpDexNavSearch(void)
 static void DexNavSearchBail(const u8 *script)
 {
     TRY_FREE_AND_SET_NULL(sDexNavSearchDataPtr);
-    FlagClear(DN_FLAG_SEARCHING);
+    FlagClear(FLAG_DEXNAV_SEARCHING);
     FreeMonIconPalettes();
     ScriptContext_SetupScript(script);
 }
@@ -873,7 +873,7 @@ static bool8 InitDexNavSearch(u32 species, u32 environment)
         DexNavSearchBail(EventScript_NotFoundNearby);
         return TRUE;
     }
-    FlagSet(DN_FLAG_SEARCHING);
+    FlagSet(FLAG_DEXNAV_SEARCHING);
 
     // assign non-objects to struct
     sDexNavSearchDataPtr->species = species;
@@ -977,9 +977,9 @@ static void RevealHiddenSearch(void)
 
 bool32 TryStartDexNavSearch(void)
 {
-    u16 val = VarGet(DN_VAR_SPECIES);
+    u16 val = VarGet(VAR_DEXNAV_SPECIES);
 
-    if (FlagGet(DN_FLAG_SEARCHING) && sDexNavSearchDataPtr->hiddenSearch)
+    if (FlagGet(FLAG_DEXNAV_SEARCHING) && sDexNavSearchDataPtr->hiddenSearch)
     {
         RevealHiddenSearch();
         return FALSE;
@@ -996,12 +996,12 @@ bool32 TryStartDexNavSearch(void)
 
 void EndDexNavSearch(void)
 {
-    if (!FlagGet(DN_FLAG_SEARCHING))
+    if (!FlagGet(FLAG_DEXNAV_SEARCHING))
         return;
     RemoveDexNavWindowAndGfx();
     FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
     FREE_AND_SET_NULL(sDexNavSearchDataPtr);
-    FlagClear(DN_FLAG_SEARCHING);
+    FlagClear(FLAG_DEXNAV_SEARCHING);
 }
 
 static void EndDexNavSearchSetupScript(const u8 *script)
@@ -1065,7 +1065,7 @@ static void RevealHiddenMon(void)
 
 bool32 OnStep_DexNavSearch(void)
 {
-    if (!FlagGet(DN_FLAG_SEARCHING))
+    if (!FlagGet(FLAG_DEXNAV_SEARCHING))
         return FALSE;
 
     u32 frameCount = gMain.vblankCounter1 - sDexNavSearchDataPtr->startingTime;
@@ -1131,7 +1131,7 @@ bool32 OnStep_DexNavSearch(void)
 
         ScriptContext_SetupScript(EventScript_StartDexNavBattle);
         FREE_AND_SET_NULL(sDexNavSearchDataPtr);
-        FlagClear(DN_FLAG_SEARCHING);
+        FlagClear(FLAG_DEXNAV_SEARCHING);
         return TRUE;
     }
 
@@ -2589,7 +2589,7 @@ bool32 TryFindHiddenPokemon(void)
             return FALSE;
 
         sDexNavSearchDataPtr = AllocZeroed(sizeof(struct DexNavSearch));
-        FlagSet(DN_FLAG_SEARCHING);
+        FlagSet(FLAG_DEXNAV_SEARCHING);
         // init search data
         sDexNavSearchDataPtr->isHiddenMon = isHiddenMon;
         sDexNavSearchDataPtr->species = species;
@@ -2599,7 +2599,7 @@ bool32 TryFindHiddenPokemon(void)
         if (sDexNavSearchDataPtr->monLevel == MON_LEVEL_NONEXISTENT)
         {
             FREE_AND_SET_NULL(sDexNavSearchDataPtr);
-            FlagClear(DN_FLAG_SEARCHING);
+            FlagClear(FLAG_DEXNAV_SEARCHING);
             return FALSE;
         }
 
@@ -2607,7 +2607,7 @@ bool32 TryFindHiddenPokemon(void)
         if (!TryStartHiddenMonFieldEffect(sDexNavSearchDataPtr->environment, 8, 8, TRUE))
         {
             FREE_AND_SET_NULL(sDexNavSearchDataPtr);
-            FlagClear(DN_FLAG_SEARCHING);
+            FlagClear(FLAG_DEXNAV_SEARCHING);
             return FALSE;
         }
 
@@ -2692,8 +2692,8 @@ void TryIncrementSpeciesSearchLevel()
 void ResetDexNavSearch(void)
 {
     gSaveBlock3Ptr->dexNavChain = 0;    //reset dex nav chaining on new map
-    VarSet(DN_VAR_STEP_COUNTER, 0); //reset hidden pokemon step counter
-    if (FlagGet(DN_FLAG_SEARCHING))
+    VarSet(VAR_DEXNAV_STEP_COUNTER, 0); //reset hidden pokemon step counter
+    if (FlagGet(FLAG_DEXNAV_SEARCHING))
         EndDexNavSearch();   //moving to new map ends dexnav search
 }
 

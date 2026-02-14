@@ -70,6 +70,7 @@ static bool32 IsOpposingSideEmpty(u32 battler);
 static void ResetParadoxWeatherStat(u32 battler);
 static void ResetParadoxTerrainStat(u32 battler);
 static bool32 CanBattlerFormChange(u32 battler, enum FormChanges method);
+static void TryLegendPlateJudgmentTypeChange(void);
 
 // Submoves
 static u32 GetMirrorMoveMove(void);
@@ -11381,3 +11382,9 @@ bool32 IsMimikyuDisguised(u32 battler)
     return gBattleMons[battler].species == SPECIES_MIMIKYU_DISGUISED
         || gBattleMons[battler].species == SPECIES_MIMIKYU_TOTEM_DISGUISED;
 }
+
+static void TryLegendPlateJudgmentTypeChange(void)
+{
+    // Placeholder implementation for Legend Plate Judgment type change
+}
+

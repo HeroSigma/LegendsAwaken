@@ -8,18 +8,21 @@
 #include "text_window.h"
 #include "script.h"
 #include "field_name_box.h"
+#include "event_data.h"
 
 static EWRAM_DATA u8 sFieldMessageBoxMode = 0;
+static EWRAM_DATA u8 sNamePlateWindowId = 0;
 EWRAM_DATA u8 gWalkAwayFromSignpostTimer = 0;
 
 static void ExpandStringAndStartDrawFieldMessage(const u8 *, bool32);
 static void StartDrawFieldMessage(void);
+static void TryShowNamePlate(void);
 
 void InitFieldMessageBox(void)
 {
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_HIDDEN;
     // Ensure nameplate window is marked as not present
-    sNamePlateWindowId = WINDOW_NONE;
+    sNamePlateWindowId = 0xFF;  // WINDOW_NONE
     gTextFlags.canABSpeedUpPrint = FALSE;
     gTextFlags.useAlternateDownArrow = FALSE;
     gTextFlags.autoScroll = FALSE;
