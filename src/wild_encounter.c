@@ -28,6 +28,8 @@
 #include "constants/items.h"
 #include "constants/layouts.h"
 #include "constants/weather.h"
+#include "constants/wild_pools_config.h"
+#include "constants/map_pools.h"
 
 extern const u8 EventScript_SprayWoreOff[];
 
@@ -57,6 +59,8 @@ static bool8 TryGetAbilityInfluencedWildMonIndex(const struct WildPokemon *wildM
 static bool8 TryGetAbilityInfluencedWildMonIndex(const struct WildPokemon *wildMon, enum Type type, enum Ability ability, u8 *monIndex);
 #endif
 static bool8 IsAbilityAllowingEncounter(u8 level);
+static u8 GetBadgeCount(void);
+static u16 TryGenerateWildMonFromPool(u8 encounterArea, u8 baseLevel, u8 flags);
 
 EWRAM_DATA static u8 sWildEncountersDisabled = 0;
 EWRAM_DATA static u32 sFeebasRngValue = 0;
@@ -522,7 +526,21 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, enum 
 {
     u8 wildMonIndex = 0;
     u8 level;
+    
+    // Get base level range from the first entry in the table (for level generation)
+    u8 baseLevel = wildMonInfo->wildPokemon[0].minLevel;
+    if (wildMonInfo->wildPokemon[0].maxLevel > baseLevel)
+        baseLevel += Random() % (wildMonInfo->wildPokemon[0].maxLevel - baseLevel + 1);
 
+#if USE_DYNAMIC_WILD_POOLS
+    // Try dynamic pool-based encounters first (for land and water areas)
+    if ((area == WILD_AREA_LAND || area == WILD_AREA_WATER) && TryGenerateWildMonFromPool(area, baseLevel, flags) != SPECIES_NONE)
+    {
+        return TRUE;
+    }
+#endif
+
+    // Fall back to the traditional JSON table-based system
     switch (area)
     {
     case WILD_AREA_LAND:
@@ -1250,6 +1268,140 @@ u32 ChooseHiddenMonIndex(void)
     #else
         return 0xFF;
     #endif
+}
+
+// Count the number of badges the player has collected
+static u8 GetBadgeCount(void)
+{
+    u8 count = 0;
+    u32 i;
+    
+    for (i = 0; i < NUM_BADGES; i++)
+    {
+        if (FlagGet(gBadgeFlags[i]))
+            count++;
+    }
+    
+    return count;
+}
+
+
+// Returns a species from the appropriate evolution line pool
+// respecting level and badge requirements
+u16 GetWildSpeciesFromPool(enum WildPoolType poolType, u8 level, u8 badgeCount)
+{
+    if (poolType >= NUM_WILD_POOLS)
+        return SPECIES_NONE;
+
+    const EvolutionLine *pool = gWildPools[poolType];
+    u32 poolCount = gWildPoolCounts[poolType];
+
+    if (poolCount == 0 || pool == NULL)
+        return SPECIES_NONE;
+
+    // Calculate total weight for weighted random selection
+    u32 totalWeight = 0;
+    u32 i;
+    for (i = 0; i < poolCount; i++)
+        totalWeight += pool[i].weight;
+
+    if (totalWeight == 0)
+        return SPECIES_NONE;
+
+    // Perform weighted random selection of an evolution line
+    u32 roll = Random() % totalWeight;
+    u32 cumulative = 0;
+    const EvolutionLine *chosenLine = NULL;
+
+    for (i = 0; i < poolCount; i++)
+    {
+        cumulative += pool[i].weight;
+        if (roll < cumulative)
+        {
+            chosenLine = &pool[i];
+            break;
+        }
+    }
+
+    if (chosenLine == NULL)
+        return SPECIES_NONE;
+
+    // Pick the highest allowed evolution stage based on level and badges
+    u8 stage = 0;
+    for (u8 s = 1; s < MAX_EVO_STAGES; s++)
+    {
+        if (chosenLine->species[s] == SPECIES_NONE)
+            break;
+
+        // Check if player meets both level and badge requirements for this stage
+        if (level >= chosenLine->min_level[s] && badgeCount >= chosenLine->min_badges[s])
+            stage = s;
+        else
+            break;  // Don't skip to later stages if this one isn't met
+    }
+
+    return chosenLine->species[stage];
+}
+
+// Get pool type for a specific map, falling back to area-based selection
+enum WildPoolType GetPoolTypeForMap(u16 mapId, enum WildPokemonArea area)
+{
+    // First check if this map has a specific pool override
+    for (u32 i = 0; i < ARRAY_COUNT(sMapPoolOverrides); i++)
+    {
+        if (sMapPoolOverrides[i].mapId == mapId)
+        {
+            return sMapPoolOverrides[i].poolType;
+        }
+    }
+    
+    // Fall back to area-based selection if no map-specific override exists
+    switch (area)
+    {
+    case WILD_AREA_LAND:
+        return POOL_GRASS;
+    case WILD_AREA_WATER:
+        return POOL_WATER;
+    case WILD_AREA_ROCKS:
+        return POOL_CAVE;
+    case WILD_AREA_FISHING:
+        return POOL_OLD_ROD;
+    default:
+        return POOL_GRASS;
+    }
+}
+
+// Determine which pool type to use based on map and encounter area
+static enum WildPoolType GetPoolTypeForEncounter(enum WildPokemonArea area)
+{
+    u16 currentMapId = gSaveBlock1Ptr->location.mapNum | (gSaveBlock1Ptr->location.mapGroup << 8);
+    return GetPoolTypeForMap(currentMapId, area);
+}
+
+// Try to generate a wild encounter using the dynamic pool system
+// Returns the species if successful, SPECIES_NONE if pools should fall through to JSON
+static u16 TryGenerateWildMonFromPool(u8 encounterArea, u8 baseLevel, u8 flags)
+{
+    u8 badgeCount = GetBadgeCount();
+    enum WildPoolType poolType = GetPoolTypeForEncounter((enum WildPokemonArea)encounterArea);
+    u16 species = GetWildSpeciesFromPool(poolType, baseLevel, badgeCount);
+    
+    if (species != SPECIES_NONE)
+    {
+        // Check repel and abilities before confirming
+        u8 level = baseLevel + (Random() % 5);  // Vary level by ±0-4 for some randomness
+        
+        if (flags & WILD_CHECK_REPEL && !IsWildLevelAllowedByRepel(level))
+            return SPECIES_NONE;
+        if (gMapHeader.mapLayoutId != LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS && 
+            flags & WILD_CHECK_KEEN_EYE && !IsAbilityAllowingEncounter(level))
+            return SPECIES_NONE;
+        
+        CreateWildMon(species, level);
+        return species;
+    }
+    
+    return SPECIES_NONE;
 }
 
 bool32 MapHasNoEncounterData(void)

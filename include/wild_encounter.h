@@ -3,6 +3,7 @@
 
 #include "rtc.h"
 #include "constants/wild_encounter.h"
+#include "constants/wild_pools.h"
 
 #define HEADER_NONE 0xFFFF
 
@@ -48,6 +49,9 @@ extern const struct WildPokemonHeader gWildMonHeaders[];
 extern bool8 gIsFishingEncounter;
 extern bool8 gIsSurfingEncounter;
 extern u8 gChainFishingDexNavStreak;
+
+// Pool-based encounter function
+u16 GetWildSpeciesFromPool(enum WildPoolType poolType, u8 level, u8 badgeCount);
 
 void DisableWildEncounters(bool8 disabled);
 u8 PickWildMonNature(void);
