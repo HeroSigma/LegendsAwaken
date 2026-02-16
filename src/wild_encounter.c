@@ -1274,17 +1274,69 @@ u32 ChooseHiddenMonIndex(void)
 static u8 GetBadgeCount(void)
 {
     u8 count = 0;
-    u32 i;
     
-    for (i = 0; i < NUM_BADGES; i++)
-    {
-        if (FlagGet(gBadgeFlags[i]))
-            count++;
-    }
+    // Check Hoenn badges
+    if (FlagGet(FLAG_BADGE01_GET)) count++;
+    if (FlagGet(FLAG_BADGE02_GET)) count++;
+    if (FlagGet(FLAG_BADGE03_GET)) count++;
+    if (FlagGet(FLAG_BADGE04_GET)) count++;
+    if (FlagGet(FLAG_BADGE05_GET)) count++;
+    if (FlagGet(FLAG_BADGE06_GET)) count++;
+    if (FlagGet(FLAG_BADGE07_GET)) count++;
+    if (FlagGet(FLAG_BADGE08_GET)) count++;
+    
+    // Check Johto badges
+    if (FlagGet(FLAG_JOHTO_BADGE01_GET)) count++;
+    if (FlagGet(FLAG_JOHTO_BADGE02_GET)) count++;
+    if (FlagGet(FLAG_JOHTO_BADGE03_GET)) count++;
+    if (FlagGet(FLAG_JOHTO_BADGE04_GET)) count++;
+    if (FlagGet(FLAG_JOHTO_BADGE05_GET)) count++;
+    if (FlagGet(FLAG_JOHTO_BADGE06_GET)) count++;
+    if (FlagGet(FLAG_JOHTO_BADGE07_GET)) count++;
+    if (FlagGet(FLAG_JOHTO_BADGE08_GET)) count++;
+    
+    // Check Kanto badges
+    if (FlagGet(FLAG_KANTO_BADGE01_GET)) count++;
+    if (FlagGet(FLAG_KANTO_BADGE02_GET)) count++;
+    if (FlagGet(FLAG_KANTO_BADGE03_GET)) count++;
+    if (FlagGet(FLAG_KANTO_BADGE04_GET)) count++;
+    if (FlagGet(FLAG_KANTO_BADGE05_GET)) count++;
+    if (FlagGet(FLAG_KANTO_BADGE06_GET)) count++;
+    if (FlagGet(FLAG_KANTO_BADGE07_GET)) count++;
+    if (FlagGet(FLAG_KANTO_BADGE08_GET)) count++;
     
     return count;
 }
 
+// Scale level based on badge count for proper progression
+static u8 GetScaledLevel(u8 baseLevel, u8 badgeCount)
+{
+    if (badgeCount == 0)
+        return baseLevel;  // No badges, use original level
+    
+    // Scale level based on badge count
+    // Each badge adds approximately 3-5 levels to ensure progression
+    u8 levelIncrease = badgeCount * 3;  // Base increase: +3 levels per badge
+    
+    // Add bonus levels for later badges to maintain challenge
+    if (badgeCount >= 4)
+        levelIncrease += badgeCount * 1;  // +1 extra level per badge after 4th
+    if (badgeCount >= 6)
+        levelIncrease += badgeCount * 1;  // +1 extra level per badge after 6th
+    
+    u8 scaledLevel = baseLevel + levelIncrease;
+    
+    // Cap at reasonable maximum level (50 for wild encounters)
+    if (scaledLevel > 50)
+        scaledLevel = 50;
+    
+    // Ensure minimum level is at least badgeCount * 2 + 5
+    u8 minLevel = (badgeCount * 2) + 5;
+    if (scaledLevel < minLevel)
+        scaledLevel = minLevel;
+    
+    return scaledLevel;
+}
 
 // Returns a species from the appropriate evolution line pool
 // respecting level and badge requirements
@@ -1384,12 +1436,15 @@ static u16 TryGenerateWildMonFromPool(u8 encounterArea, u8 baseLevel, u8 flags)
 {
     u8 badgeCount = GetBadgeCount();
     enum WildPoolType poolType = GetPoolTypeForEncounter((enum WildPokemonArea)encounterArea);
-    u16 species = GetWildSpeciesFromPool(poolType, baseLevel, badgeCount);
+    
+    // Scale level based on badge count for proper progression
+    u8 scaledLevel = GetScaledLevel(baseLevel, badgeCount);
+    u16 species = GetWildSpeciesFromPool(poolType, scaledLevel, badgeCount);
     
     if (species != SPECIES_NONE)
     {
         // Check repel and abilities before confirming
-        u8 level = baseLevel + (Random() % 5);  // Vary level by ±0-4 for some randomness
+        u8 level = scaledLevel + (Random() % 5);  // Vary level by ±0-4 for some randomness
         
         if (flags & WILD_CHECK_REPEL && !IsWildLevelAllowedByRepel(level))
             return SPECIES_NONE;

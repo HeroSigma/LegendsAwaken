@@ -334,7 +334,7 @@ static const struct MapPoolConfig sMapPoolOverrides[] = {
     {MAP_GOLDENROD_CITY_MAGNET_TRAIN_STATION, POOL_POWERPLANT}, // Electric/Steel spawns
     
     // Hoenn industrial areas
-    {MAP_MAUVILLE_CITY, POOL_POWERPLANT},        // Power Plant, industrial zones
+    {MAP_NEW_MAUVILLE_INSIDE, POOL_POWERPLANT},        // Power Plant, industrial zones
     {MAP_ROUTE110, POOL_POWERPLANT},            // Electrical pylons and high-tech installations
     {MAP_ROUTE111, POOL_POWERPLANT},            // Electrical pylons and high-tech installations
     
