@@ -2104,6 +2104,10 @@ if (USE_DYNAMIC_TRAINER_POOLS)
         {
             DebugPrintf("Calling GenerateSpecialTrainerParty\n");
             GenerateSpecialTrainerParty((struct Trainer *)trainer, pool, GetAceSpeciesForTrainer(trainer->trainerClass));
+            // Apply dynamic AI based on generated team
+            extern void ApplyDynamicAIToTrainer(struct Trainer *trainer, struct Pokemon *generatedParty, u8 partySize);
+            extern struct Pokemon gEnemyParty[PARTY_SIZE];
+            ApplyDynamicAIToTrainer((struct Trainer *)trainer, gEnemyParty, 6);
             // AssignAdvancedTrainerMechanics(trainer); // Commented out for now
             DebugPrintf("Pool generation completed, returning success\n");
             return 1; // Success

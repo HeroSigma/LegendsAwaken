@@ -2,12 +2,15 @@
 #include "constants/species.h"
 #include "constants/pokemon.h"
 #include "constants/trainer_pools.h"
+#include "constants/battle_ai.h"
 #include "data.h"
 #include "random.h"
 #include "util.h"
 #include "malloc.h"
 #include "event_data.h"
 #include "pokemon.h"  // for struct Pokemon and battle functions
+#include "battle.h"   // for AI flags
+#include "caps.h"    // for GetCurrentLevelCap function
 
 // ===============================================
 // VILLAIN TEAM POOLS – static / thematic
@@ -2535,7 +2538,7 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
         memset(&mutableParty[i], 0, sizeof(struct TrainerMon));
     }
 
-    u8 cap = 50;  // TODO: Use GetCurrentLevelCap()
+    u8 cap = GetCurrentLevelCap();  // Hoenn-based level cap scaling
     // u8 badges = 8; // TODO: Use GetBadgeCount()
 
     u8 slot = 0;
@@ -2552,13 +2555,13 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
         if (level < 5) level = 5;
 
         mutableParty[slot].species = species;
-        mutableParty[slot].lvl = level;
-        mutableParty[slot].iv = 31;  // Perfect IVs for special trainers
+        mutableParty[slot].lvl = cap;  // BRUTAL MODE: Max level for all Pokemon
+        mutableParty[slot].iv = 31;  // Perfect IVs for brutal difficulty
         mutableParty[slot].nature = line->preferred_nature;
-        mutableParty[slot].heldItem = ITEM_NONE;
+        mutableParty[slot].heldItem = ITEM_SITRUS_BERRY;  // BRUTAL MODE: All Pokemon have healing items
         mutableParty[slot].isShiny = FALSE;
         
-        // Simple EV spread
+        // BRUTAL MODE: Competitive EV spreads
         mutableParty[slot].ev = (u8[]){252, 252, 0, 0, 0, 4};
         
         // Initialize moves to empty
@@ -2580,13 +2583,13 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
     {
         u8 aceSlot = partySize - 1;
         mutableParty[aceSlot].species = aceSpecies;
-        mutableParty[aceSlot].lvl = cap;  // Max level
+        mutableParty[aceSlot].lvl = cap;  // BRUTAL MODE: Max level ace
         mutableParty[aceSlot].iv = 31;     // Perfect IVs
-        mutableParty[aceSlot].nature = NATURE_ADAMANT;
-        mutableParty[aceSlot].heldItem = ITEM_SITRUS_BERRY;  // Signature item
-        mutableParty[aceSlot].isShiny = TRUE;
+        mutableParty[aceSlot].nature = NATURE_ADAMANT;  // BRUTAL MODE: Aggressive nature
+        mutableParty[aceSlot].heldItem = ITEM_LEFTOVERS;  // BRUTAL MODE: Best healing item
+        mutableParty[aceSlot].isShiny = TRUE;  // Always shiny for intimidation
         
-        // Default competitive spread for Ace
+        // BRUTAL MODE: Maximized competitive spread for ace
         mutableParty[aceSlot].ev = (u8[]){252, 252, 0, 0, 0, 4};
         
         // Initialize moves to empty
@@ -2675,4 +2678,35 @@ const TrainerMonLine *GetSpecialPoolForTrainer(u16 trainerId)
             DebugPrintf("No special pool for ID %d\n", trainerId);
             return NULL;
     }
+}
+
+// ─────────────────────────────────────────────────────────────
+// DYNAMIC AI SYSTEM - Type-aware and difficulty scaling
+// ─────────────────────────────────────────────────────────────
+
+// Apply dynamic AI to trainer
+void ApplyDynamicAIToTrainer(struct Trainer *trainer, struct Pokemon *generatedParty, u8 partySize)
+{
+    if (!trainer || !generatedParty || partySize == 0)
+        return;
+    
+    // BRUTAL MODE: Every trainer gets maximum AI intelligence
+    u64 brutalAIFlags = AI_FLAG_SMART_TRAINER | AI_FLAG_PREDICTION | AI_FLAG_OMNISCIENT;
+    brutalAIFlags |= AI_FLAG_SMART_SWITCHING | AI_FLAG_SMART_MON_CHOICES | AI_FLAG_SMART_TERA;
+    brutalAIFlags |= AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY;
+    brutalAIFlags |= AI_FLAG_PP_STALL_PREVENTION;
+    
+    // Add prediction capabilities for maximum challenge
+    brutalAIFlags |= AI_FLAG_PREDICT_SWITCH | AI_FLAG_PREDICT_INCOMING_MON | AI_FLAG_PREDICT_MOVE;
+    
+    // Add strategic assumptions
+    brutalAIFlags |= AI_FLAG_ASSUME_STAB | AI_FLAG_ASSUME_STATUS_MOVES | AI_FLAG_WEIGH_ABILITY_PREDICTION;
+    
+    // Update trainer's AI flags to maximum brutality
+    struct Trainer *mutableTrainer = (struct Trainer *)trainer;
+    mutableTrainer->aiFlags = brutalAIFlags;
+    
+    DebugPrintf("Applied BRUTAL AI flags: %08X%08X for trainer class %d\n", 
+               (u32)(brutalAIFlags >> 32), (u32)(brutalAIFlags), trainer->trainerClass);
+    DebugPrintf("This trainer will now fight with ELITE intelligence!\n");
 }
