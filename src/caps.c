@@ -9,15 +9,54 @@ u32 GetCurrentLevelCap(void)
 {
     static const u32 sLevelCapFlagMap[][2] =
     {
-        {FLAG_BADGE01_GET, 20},
-        {FLAG_BADGE02_GET, 30},
-        {FLAG_BADGE03_GET, 34},
-        {FLAG_BADGE04_GET, 39},
-        {FLAG_BADGE05_GET, 54},
-        {FLAG_BADGE06_GET, 60},
-        {FLAG_BADGE07_GET, 76},
-        {FLAG_BADGE08_GET, 80},
-        {FLAG_IS_CHAMPION, 100},
+        // Hoenn Region - Badge-based level caps
+        {FLAG_BADGE01_GET, 20},    // Before 1st Gym - Rustboro
+        {FLAG_BADGE02_GET, 30},    // Before 2nd Gym - Dewford  
+        {FLAG_BADGE03_GET, 40},    // Before 3rd Gym - Mauville
+        {FLAG_BADGE04_GET, 50},    // Before 5th Gym - Lavaridge (skip 4th)
+        {FLAG_BADGE05_GET, 70},    // Before 6th Gym - Petalburg
+        {FLAG_BADGE06_GET, 80},    // Before 7th Gym - Fortree
+        {FLAG_BADGE07_GET, 90},    // Before 8th Gym - Mossdeep
+        {FLAG_BADGE08_GET, 100},   // After 8th Gym - Sootopolis
+        {FLAG_IS_CHAMPION, 100},    // Elite Four/Champion - Max level
+        
+        // Johto Region - Cap 110 by E4 (commented out for now)
+        // {FLAG_JOHTO_BADGE01_GET, 75},   // Violet - Falkner
+        // {FLAG_JOHTO_BADGE02_GET, 80},   // Azalea - Bugsy
+        // {FLAG_JOHTO_BADGE03_GET, 85},   // Goldenrod - Whitney
+        // {FLAG_JOHTO_BADGE04_GET, 90},   // Ecruteak - Morty
+        // {FLAG_JOHTO_BADGE05_GET, 95},   // Cianwood - Chuck
+        // {FLAG_JOHTO_BADGE06_GET, 100},  // Olivine - Jasmine
+        // {FLAG_JOHTO_BADGE07_GET, 105},  // Mahogany - Pryce
+        // {FLAG_JOHTO_BADGE08_GET, 108},  // Blackthorn - Clair
+        // {FLAG_JOHTO_CHAMPION, 110},     // Johto E4/Lance
+        
+        // Kanto Region - Cap 150 by E4 (commented out for now)
+        // {FLAG_KANTO_BADGE01_GET, 115},  // Pewter - Brock
+        // {FLAG_KANTO_BADGE02_GET, 120},  // Cerulean - Misty
+        // {FLAG_KANTO_BADGE03_GET, 125},  // Vermilion - Lt. Surge
+        // {FLAG_KANTO_BADGE04_GET, 130},  // Celadon - Erika
+        // {FLAG_KANTO_BADGE05_GET, 135},  // Fuchsia - Koga
+        // {FLAG_KANTO_BADGE06_GET, 140},  // Saffron - Sabrina
+        // {FLAG_KANTO_BADGE07_GET, 145},  // Cinnabar - Blaine
+        // {FLAG_KANTO_BADGE08_GET, 148},  // Viridian - Blue/Giovanni
+        // {FLAG_KANTO_CHAMPION, 150},     // Kanto E4
+        
+        // Sinnoh Region - Cap 200 by E4 (commented out for now)
+        // {FLAG_SINNOH_BADGE01_GET, 155}, // Oreburgh - Roark
+        // {FLAG_SINNOH_BADGE02_GET, 160}, // Eterna - Gardenia
+        // {FLAG_SINNOH_BADGE03_GET, 165}, // Veilstone/Hearthome - Maylene/Fantina
+        // {FLAG_SINNOH_BADGE04_GET, 170}, // Pastoria - Crasher Wake
+        // {FLAG_SINNOH_BADGE05_GET, 175}, // Hearthome/Veilstone - Fantina/Maylene
+        // {FLAG_SINNOH_BADGE06_GET, 180}, // Canalave - Byron
+        // {FLAG_SINNOH_BADGE07_GET, 185}, // Snowpoint - Candice
+        // {FLAG_SINNOH_BADGE08_GET, 190}, // Sunyshore - Volkner
+        // {FLAG_SINNOH_CHAMPION, 200},    // Sinnoh E4/Cynthia
+        
+        // Sevii Islands - Cap 255 by final fight
+        {FLAG_SEVII_MIDPOINT, 220},     // Mid Sevii progress
+        {FLAG_SEVII_LATE, 240},         // Late Sevii progress  
+        {FLAG_SEVII_FINAL, 255},        // Final Sevii boss
     };
 
     u32 i;

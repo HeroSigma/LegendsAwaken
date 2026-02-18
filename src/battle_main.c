@@ -1907,8 +1907,197 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             monsCount = trainer->partySize;
         }
 
-        u32 monIndices[monsCount];
-        DoTrainerPartyPool(trainer, monIndices, monsCount, battleTypeFlags);
+// Apply advanced trainer mechanics (Mega, Z-Moves, Tera, Dynamax)
+if (USE_DYNAMIC_TRAINER_POOLS)
+{
+    DebugPrintf("USE_DYNAMIC_TRAINER_POOLS is enabled\n");
+    DebugPrintf("Trainer class: %d\n", trainer->trainerClass);
+    
+    // Use pool-based trainer generation for specific classes
+    if (TrainerClassUsesPool(trainer->trainerClass, NULL))
+    {
+        DebugPrintf("Trainer class %d uses pool\n", trainer->trainerClass);
+        const TrainerMonLine *pool = GetPoolForTrainerClass(trainer->trainerClass);
+        if (pool)
+        {
+            DebugPrintf("Calling GenerateSpecialTrainerParty\n");
+            GenerateSpecialTrainerParty((struct Trainer *)trainer, pool, GetAceSpeciesForTrainer(trainer->trainerClass));
+            // Apply dynamic AI based on generated team
+            extern void ApplyDynamicAIToTrainer(struct Trainer *trainer, struct Pokemon *generatedParty, u8 partySize);
+            extern struct Pokemon gEnemyParty[PARTY_SIZE];
+            ApplyDynamicAIToTrainer((struct Trainer *)trainer, gEnemyParty, 6);
+            // AssignAdvancedTrainerMechanics(trainer); // Commented out for now
+            DebugPrintf("Pool generation completed, returning success\n");
+            return 1; // Success
+        }
+        else
+        {
+            DebugPrintf("GetPoolForTrainerClass returned NULL\n");
+        }
+    }
+    else
+    {
+        DebugPrintf("Trainer class %d does not use pool\n", trainer->trainerClass);
+    }
+    // Fall back to old mechanics if pool not found
+}
+
+        // Initialize monIndices array (handle empty party case)
+        u32 monIndices[monsCount ? monsCount : 1];
+        if (trainer->partySize > 0)
+        {
+            DoTrainerPartyPool(trainer, monIndices, monsCount, battleTypeFlags);
+        }
+        else
+        {
+            // For empty parties, set up sequential indices
+            for (u8 i = 0; i < (monsCount ? monsCount : 1); i++)
+                monIndices[i] = i;
+        }
+
+        if (!USE_DYNAMIC_TRAINER_POOLS)
+        {
+            // Check if this is a static trainer (Rival, Leaders, E4, Champion, etc.)
+            if (IsStaticTrainerClass(trainer->trainerClass))
+            {
+                // Load static data for important trainers
+                // This would use existing static trainer data
+                // For now, fall through to dynamic generation
+            }
+            else
+            {
+                // Create a mutable copy of the party data
+                struct TrainerMon *mutableParty = Alloc(sizeof(struct TrainerMon) * trainer->partySize);
+                for (u8 i = 0; i < trainer->partySize; i++)
+                {
+                    mutableParty[i] = trainer->party[i];
+                }
+
+                // 1. Mega Stone (1 per trainer)
+                u8 megaIndex = Random() % trainer->partySize;
+                u16 megaStone = GetRandomMegaStone(trainer->trainerClass);
+                if (megaStone != ITEM_NONE)
+                    mutableParty[megaIndex].heldItem = megaStone;
+
+                // 2. Z-Crystal (1 per trainer, different mon)
+                u8 zIndex = (megaIndex + 1) % trainer->partySize;
+                u16 zCrystal = GetRandomZCrystal(trainer->trainerClass);
+                if (zCrystal != ITEM_NONE)
+                    mutableParty[zIndex].heldItem = zCrystal;
+
+                // 3. Tera Type (1 per trainer)
+                u8 teraIndex = (megaIndex + 2) % trainer->partySize;
+                u8 teraType = GetRandomTeraType(trainer->trainerClass);
+                if (teraType != TYPE_NONE)
+                    mutableParty[teraIndex].teraType = teraType;
+
+                // 4. Dynamax eligibility (1 per trainer)
+                u8 dmaxIndex = (megaIndex + 3) % trainer->partySize;
+                if (CanDynamaxThisTrainer(trainer->trainerClass))
+                {
+                    mutableParty[dmaxIndex].shouldUseDynamax = TRUE;
+                    mutableParty[dmaxIndex].dynamaxLevel = 10; // Max level
+                }
+
+                // 5. Beneficial items on the rest
+                static const u16 beneficialItems[] = {
+                    ITEM_LEFTOVERS, ITEM_LIFE_ORB, ITEM_CHOICE_SCARF, ITEM_CHOICE_BAND,
+                    ITEM_CHOICE_SPECS, ITEM_FOCUS_SASH, ITEM_SITRUS_BERRY, ITEM_LUM_BERRY,
+                    ITEM_ASSAULT_VEST, ITEM_WEAKNESS_POLICY, ITEM_EXPERT_BELT, ITEM_WISE_GLASSES
+                };
+
+                for (u8 i = 0; i < trainer->partySize; i++)
+                {
+                    if (mutableParty[i].heldItem != ITEM_NONE)
+                        continue;   // already has special item
+
+                    mutableParty[i].heldItem = beneficialItems[Random() % ARRAY_COUNT(beneficialItems)];
+                }
+
+                // Update the trainer's party pointer to point to our modified data
+                ((struct Trainer *)trainer)->party = mutableParty;
+            }
+        }
+        else if (!USE_DYNAMIC_TRAINER_POOLS)
+        {
+            // Fallback to old static method (original implementation)
+            // Create a mutable copy of the party data
+            struct TrainerMon *mutableParty = Alloc(sizeof(struct TrainerMon) * trainer->partySize);
+            for (u8 i = 0; i < trainer->partySize; i++)
+            {
+                mutableParty[i] = trainer->party[i];
+            }
+
+            u8 megaIndex = 0xFF;
+            u8 zIndex = 0xFF;
+            u8 teraIndex = 0xFF;
+
+            // 1. Mega Evolution (one per trainer)
+            for (u8 i = 0; i < trainer->partySize; i++)
+            {
+                u16 species = mutableParty[i].species;
+                u16 megaItem = GetMegaStoneForSpecies(species);
+                if (megaItem != ITEM_NONE)
+                {
+                    megaIndex = i;
+                    mutableParty[i].heldItem = megaItem;
+                    break;  // only one Mega
+                }
+            }
+
+            // 2. Z-Move (one per trainer, different mon from Mega)
+            for (u8 i = 0; i < trainer->partySize; i++)
+            {
+                if (i == megaIndex) continue;  // don't overwrite Mega holder
+
+                u16 species = mutableParty[i].species;
+                u16 zCrystal = GetZCrystalForSpecies(species);
+                if (zCrystal != ITEM_NONE)
+                {
+                    zIndex = i;
+                    mutableParty[i].heldItem = zCrystal;
+                    break;  // only one Z-Move
+                }
+            }
+
+            // 3. Terastalize (one per trainer, different from Mega/Z)
+            for (u8 i = 0; i < trainer->partySize; i++)
+            {
+                if (i == megaIndex || i == zIndex) continue;
+
+                mutableParty[i].teraType = GetBestTeraType(mutableParty[i].species);
+                teraIndex = i;
+                break;
+            }
+
+            // 4. Dynamax (one per trainer, different from others)
+            for (u8 i = 0; i < trainer->partySize; i++)
+            {
+                if (i == megaIndex || i == zIndex || i == teraIndex) continue;
+
+                mutableParty[i].shouldUseDynamax = TRUE;
+                mutableParty[i].dynamaxLevel = 10; // Max level
+                break;
+            }
+
+            // 5. Fill remaining held items with beneficial ones
+            static const u16 beneficialItems[] = {
+                ITEM_LEFTOVERS, ITEM_LIFE_ORB, ITEM_CHOICE_SCARF, ITEM_CHOICE_BAND,
+                ITEM_CHOICE_SPECS, ITEM_FOCUS_SASH, ITEM_SITRUS_BERRY, ITEM_LUM_BERRY,
+                ITEM_ASSAULT_VEST, ITEM_WEAKNESS_POLICY, ITEM_EXPERT_BELT, ITEM_WISE_GLASSES
+            };
+
+            for (u8 i = 0; i < trainer->partySize; i++)
+            {
+                if (mutableParty[i].heldItem != ITEM_NONE)
+                    continue;   // already has special item
+
+                mutableParty[i].heldItem = beneficialItems[Random() % ARRAY_COUNT(beneficialItems)];
+            }
+
+            // Update the trainer's party pointer to point to our modified data
+            ((struct Trainer *)trainer)->party = mutableParty;
+        }
 
         for (i = 0; i < monsCount; i++)
         {
