@@ -65,6 +65,9 @@ Route103_EventScript_PostSecondBattle_Male::
     msgbox Route103_Text_SE_SomeThingsNeverChange_BRENDAN, MSGBOX_DEFAULT
     msgbox Route103_Text_NE_ReportBackLab_MAY, MSGBOX_DEFAULT
 	msgbox Route103_Text_PlayerSeeYouThere, MSGBOX_DEFAULT
+	applymovement LOCALID_ROUTE103_RIVAL_BRENDAN, Route103_Movement_RivalExit1
+	applymovement LOCALID_ROUTE103_RIVAL_MAY, Route103_Movement_RivalExit2
+	waitmovement 0
 	removeobject LOCALID_ROUTE103_RIVAL_BRENDAN
 	removeobject LOCALID_ROUTE103_RIVAL_MAY
 	goto Route103_EventScript_RivalEnd
@@ -111,6 +114,9 @@ Route103_EventScript_PostSecondBattle_Female::
     msgbox Route103_Text_SE_SomeThingsNeverChange_BRENDAN, MSGBOX_DEFAULT
     msgbox Route103_Text_NE_ReportBackLab_MAY, MSGBOX_DEFAULT
 	msgbox Route103_Text_PlayerSeeYouThere, MSGBOX_DEFAULT
+	applymovement LOCALID_ROUTE103_RIVAL_MAY, Route103_Movement_RivalExit1
+	applymovement LOCALID_ROUTE103_RIVAL_BRENDAN, Route103_Movement_RivalExit2
+	waitmovement 0
 	removeobject LOCALID_ROUTE103_RIVAL_MAY
 	removeobject LOCALID_ROUTE103_RIVAL_BRENDAN
 	goto Route103_EventScript_RivalEnd

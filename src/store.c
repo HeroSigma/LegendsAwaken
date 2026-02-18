@@ -501,11 +501,10 @@ void CB2_OpenStoreFromStartMenu(void)
 {
     // Populate menu texts from the pocket name table
     sStoreMenuActions[0].text = gPocketNamesStringsTable[POCKET_ITEMS];
-    sStoreMenuActions[1].text = gPocketNamesStringsTable[POCKET_MEDICINE];
-    sStoreMenuActions[2].text = gPocketNamesStringsTable[POCKET_BATTLE_ITEMS];
-    sStoreMenuActions[3].text = gPocketNamesStringsTable[POCKET_POKE_BALLS];
-    sStoreMenuActions[4].text = gPocketNamesStringsTable[POCKET_TM_HM];
-    sStoreMenuActions[5].text = gPocketNamesStringsTable[POCKET_BERRIES];
+    sStoreMenuActions[1].text = gPocketNamesStringsTable[POCKET_POKE_BALLS];
+    sStoreMenuActions[2].text = gPocketNamesStringsTable[POCKET_TM_HM];
+    sStoreMenuActions[3].text = gPocketNamesStringsTable[POCKET_BERRIES];
+    sStoreMenuActions[4].text = gPocketNamesStringsTable[POCKET_KEY_ITEMS];
 
     // Set function pointers (using a dummy function to avoid NULL pointers)
     sStoreMenuActions[0].func.void_u8 = Task_HandleStoreMenuSelection;

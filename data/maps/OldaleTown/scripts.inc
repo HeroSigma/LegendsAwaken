@@ -7,6 +7,7 @@ OldaleTown_OnTransition:
 	setflag FLAG_VISITED_OLDALE_TOWN
 	@ Cameo scene: after Route 103 battle, show once on first return
 	call_if_eq VAR_BIRCH_LAB_STATE, 4, OldaleTown_EventScript_TryCameoScene
+	goto_if_unset FLAG_DEFEATED_RIVAL_ROUTE103, OldaleTown_EventScript_TryCameoScene_Ret
 	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
 	call_if_unset FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_MoveMartEmployee
 	call_if_set FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_SetOldaleState
@@ -21,8 +22,6 @@ OldaleTown_EventScript_TryCameoScene_Ret:
 
 OldaleTown_EventScript_CameoScene::
 	lockall
-	clearflag FLAG_TEMP_8
-	clearflag FLAG_TEMP_9
 	addobject LOCALID_OLDALE_CAMEO_CYRUS
 	addobject LOCALID_OLDALE_CAMEO_GIOVANNI
 	setobjectxy LOCALID_OLDALE_CAMEO_CYRUS, 10, 12

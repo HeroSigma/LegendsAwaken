@@ -769,16 +769,17 @@ void InitTilesetAnim_Building(void)
 
 static void TilesetAnim_General(u16 timer)
 {
-    if (timer % 16 == 0)
-        QueueAnimTiles_General_Flower(timer / 16);
-    if (timer % 16 == 1)
-        QueueAnimTiles_General_Water(timer / 16);
-    if (timer % 16 == 2)
-        QueueAnimTiles_General_SandWaterEdge(timer / 16);
-    if (timer % 16 == 3)
-        QueueAnimTiles_General_Waterfall(timer / 16);
-    if (timer % 16 == 4)
-        QueueAnimTiles_General_LandWaterEdge(timer / 16);
+    // Disabled animations for Hoenn
+    // if (timer % 16 == 0)
+    //     QueueAnimTiles_General_Flower(timer / 16);
+    // if (timer % 16 == 1)
+    //     QueueAnimTiles_General_Water(timer / 16);
+    // if (timer % 16 == 2)
+    //     QueueAnimTiles_General_SandWaterEdge(timer / 16);
+    // if (timer % 16 == 3)
+    //     QueueAnimTiles_General_Waterfall(timer / 16);
+    // if (timer % 16 == 4)
+    //     QueueAnimTiles_General_LandWaterEdge(timer / 16);
 }
 
 static void TilesetAnim_KantoGeneral(u16 timer)

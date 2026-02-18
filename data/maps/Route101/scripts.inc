@@ -494,122 +494,120 @@ Route101_Movement_ZoroarkSpin:
     step_end
 
 Route101_Text_HelpMe:
-    .string "BIRCH: H-Help!\n"
-    .string "Somebody- please!\p"
-    .string "$"
+	.string "BIRCH: H-Help! Somebody- please!\n"
+	.string "$"
 
 Route101_Text_BirchUseOneQuick:
-    .string "BIRCH: {PLAYER}! Quick-\n"
-    .string "there’s no time!\p"
-    .string "Use one of my\n"
-    .string "POKéMON!$"
+	.string "BIRCH: YOU!! Quick- there's no time!\n"
+	.string "Use one of my POKéMON!\n"
+	.string "$"
 
 Route101_Text_PlayerOverwhelmed:
-    .string "{COLOR GREEN}{PLAYER}: (This power… I can’t stop it…!){COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: This power… I can't stop it…!\n"
+	.string "{COLOR DARK_GRAY}$"
 
 Route101_Text_VoiceNotYet:
-    .string "{COLOR LIGHT_RED}??? : …Not yet. Your path is not ready.{COLOR DARK_GRAY}$"
+	.string "{COLOR LIGHT_RED}??? : …Not yet. Your path is not ready.\n"
+	.string "{COLOR DARK_GRAY}$"
 
 Route101_Text_PlayerVoiceProtecting:
-    .string "{COLOR GREEN}{PLAYER}: That voice… it was protecting me?{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: That voice… it was protecting me?\n"
+	.string "{COLOR DARK_GRAY}$"
 
 Route101_Text_PlayerUneasyFeeling:
-    .string "{COLOR GREEN}{PLAYER}: (Is this the uneasy feeling I’ve had…\n"
-    .string "or something else entirely?){COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Is this the uneasy feeling I've had…\n"
+	.string "or something else entirely?\n"
+	.string "{COLOR DARK_GRAY}$"
 
 Route101_Text_BirchWhatWasThat:
-    .string "BIRCH: What was that\n"
-    .string "just now? That\n"
-    .string "creature-\p"
-    .string "I've never seen\n"
-    .string "anything like it in\n"
-    .string "HOENN.\p"
-    .string "BIRCH: And that\n"
-    .string "voice… Who was it\n"
-    .string "speaking to?\n"
-    .string "Who… are you,\n"
-    .string "{PLAYER}?$"
+	.string "BIRCH: What was that just now? That Pokemon-\n"
+	.string "I've never seen anything like it in HOENN.\n"
+	.string "BIRCH: And that voice… Who was it speaking to?\n"
+	.string "Who… are you, {PLAYER}?\n"
+	.string "$"
 
 Route101_Text_BirchNoMatterToLab:
-    .string "BIRCH: No matter.\n"
-    .string "Quick- let’s get\n"
-    .string "to my lab before\n"
-    .string "anything else\n"
-    .string "happens!$"
+	.string "BIRCH: No matter. Quick- let's get to my lab\n"
+	.string "before anything else happens!\n"
+	.string "$"
 
 Route101_Text_BirchStarterHint:
-    .string "BIRCH: Steady now. Keep your partner close.$"
+	.string "BIRCH: Steady now. Keep your partner close.\n"
+	.string "$"
 
 Route101_Text_ChooseTreecko:
-    .string "BIRCH: TREECKO will\n"
-    .string "stand with you.\n"
-    .string "Will you take\n"
-    .string "TREECKO?$"
+	.string "BIRCH: TREECKO will stand with you. Will you\n"
+	.string "take TREECKO?\n"
+	.string "$"
 
 Route101_Text_ChooseTorchic:
-    .string "BIRCH: TORCHIC burns\n"
-    .string "bright with courage.\n"
-    .string "Will you take\n"
-    .string "TORCHIC?$"
+	.string "BIRCH: TORCHIC burns bright with courage. Will\n"
+	.string "you take TORCHIC?\n"
+	.string "$"
 
 Route101_Text_ChooseMudkip:
-    .string "BIRCH: MUDKIP is\n"
-    .string "steady and strong.\n"
-    .string "Will you take\n"
-    .string "MUDKIP?$"
+	.string "BIRCH: MUDKIP is steady and strong. Will you\n"
+	.string "take MUDKIP?\n"
+	.string "$"
 
 Route101_Text_PlayerReceivedStarter:
-    .string "{PLAYER} received {STR_VAR_1}!$"
+	.string "{PLAYER} received {STR_VAR_1}!\n"
+	.string "$"
 
 Route101_Text_DontLeaveMe:
-	.string "Wh-Where are you going?!\n"
-	.string "Don't leave me like this!$"
+	.string "Wh-Where are you going?! Don't leave me\n"
+	.string "like this!\n"
+	.string "$"
 
 // Post-Zoroark gift scene
 Route101_Text_BirchChoseMon:
-    .string "BIRCH: {PLAYER}! You chose {STR_VAR_1}, didn’t you?$"
+	.string "BIRCH: {PLAYER}! You chose {STR_VAR_1},\n"
+	.string "didn't you?\n"
+	.string "$"
 
 Route101_Text_BirchNotEnough:
-    .string "BIRCH: But after what we just saw… I don’t\n"
-    .string "think {STR_VAR_1} alone will be enough.$"
+	.string "BIRCH: But after what we just saw… I\n"
+	.string "don't think {STR_VAR_1} alone will be\n"
+	.string "enough.\n"
+	.string "$"
 
 Route101_Text_BirchTakeRemaining:
-    .string "BIRCH: Take the remaining two as well. If this\n"
-    .string "happens again, you’ll need every safeguard possible.$"
+	.string "BIRCH: Take the remaining two as well.\n"
+	.string "If this happens again, you'll need\n"
+	.string "every safeguard.\n"
+	.string "$"
 
 Route101_Text_PlayerAllThreeInner:
-    .string "{COLOR GREEN}{PLAYER}: (All three…? Birch must be truly shaken.\n"
-    .string "This isn’t how it’s supposed to begin.){COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: All three…? Birch must be truly\n"
+	.string "shaken. This isn't how it's supposed to begin.\n"
+	.string "{COLOR DARK_GRAY}$"
 
 Route101_Text_YouSavedMe:
-    .string "PROF. BIRCH: Whew! Nice work!\p"
-    .string "PROF. BIRCH: {PLAYER}? From LITTLEROOT...\p"
-    .string "is that you?\p"
-    .string "PLAYER: It's me, Professor.\p"
-    .string "PROF. BIRCH: After eight years...\p"
-    .string "welcome back.\p"
-    .string "PROF. BIRCH: This isn't safe. The wild\p"
-    .string "POKéMON are on edge.\p"
-    .string "PROF. BIRCH: Let's head to the\p"
-    .string "POKéMON LAB and talk there.\p"
-    .string "PLAYER: Okay.\p"
-    .string "PROF. BIRCH: Right. This way.$"
+	.string "PROF. BIRCH: Whew! Nice work! {PLAYER}? From\n"
+	.string "LITTLEROOT... is that you?\n"
+	.string "{PLAYER}: It's me, Professor. After eight years...\n"
+	.string "welcome back. This isn't safe. The wild POKéMON\n"
+	.string "are on edge. Let's head to the POKéMON LAB and\n"
+	.string "talk there. {PLAYER}: Okay. PROF. BIRCH: Right.\n"
+	.string "This way.\n"
+	.string "$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If POKéMON get tired, take them to\n"
-	.string "a POKéMON CENTER.\p"
-	.string "There's a POKéMON CENTER in OLDALE\n"
-	.string "TOWN right close by.$"
+	.string "If POKéMON get tired, take them to a POKéMON\n"
+	.string "CENTER. There's a POKéMON CENTER in OLDALE\n"
+	.string "TOWN right close by.\n"
+	.string "$"
 
 Route101_Text_WildPokemonInTallGrass:
-	.string "Wild POKéMON will jump out at you in\n"
-	.string "tall grass.\p"
-	.string "If you want to catch POKéMON, you have\n"
-	.string "to go into the tall grass and search.$"
+	.string "Wild POKéMON will jump out at you in tall\n"
+	.string "grass. If you want to catch POKéMON, you have to\n"
+	.string "go into the tall grass and search.\n"
+	.string "$"
 
 Route101_Text_RouteSign:
-    .string "ROUTE 101\n"
-    .string "{UP_ARROW} OLDALE TOWN$"
+	.string "ROUTE 101 {UP_ARROW} OLDALE TOWN\n"
+	.string "$"
 
 Route101_Text_BirchsBagEmpty:
-    .string "The bag is empty.$"
+	.string "The bag is empty.\n"
+	.string "$"
