@@ -1,0 +1,381 @@
+#include "global.h"
+#include "constants/items.h"
+#include "constants/pokemon.h"
+#include "constants/trainer_mechanic_pools.h"
+#include "constants/trainers.h"
+#include "random.h"
+
+// ─────────────────────────────────────────────────────────────
+// MEGA STONE POOLS
+// Each trainer class gets weighted Mega Stone preferences
+// ─────────────────────────────────────────────────────────────
+const MechanicItemLine gMegaStonePools[TRAINER_CLASS_COUNT][8] = {
+    // Hiker - rock/ground/steel Megas
+    [TRAINER_CLASS_HIKER] = {
+        {ITEM_AGGRONITE, 200},
+        {ITEM_STEELIXITE, 180},
+        {ITEM_GYARADOSITE, 160},
+        {ITEM_TYRANITARITE, 140},
+        {ITEM_NONE, 0}
+    },
+    
+    // Cooltrainer - competitive, strong Megas
+    [TRAINER_CLASS_COOLTRAINER] = {
+        {ITEM_METAGROSSITE, 160},
+        {ITEM_SALAMENCITE, 140},
+        {ITEM_GARCHOMPITE, 140},
+        {ITEM_LATIOSITE, 120},
+        {ITEM_LATIASITE, 120},
+        {ITEM_TYRANITARITE, 120},
+        {ITEM_NONE, 0}
+    },
+    
+    // Black Belt - fighting Megas
+    [TRAINER_CLASS_BLACK_BELT] = {
+        {ITEM_HERACRONITE, 200},
+        {ITEM_MEDICHAMITE, 180},
+        {ITEM_PINSIRITE, 160},
+        {ITEM_LUCARIONITE, 140},
+        {ITEM_GALLADITE, 120},
+        {ITEM_NONE, 0}
+    },
+    
+    // Team Aqua - water Megas
+    [TRAINER_CLASS_TEAM_AQUA] = {
+        {ITEM_GYARADOSITE, 200},
+        {ITEM_SHARPEDONITE, 180},
+        {ITEM_BLASTOISINITE, 160},
+        {ITEM_SWAMPERTITE, 140},
+        {ITEM_NONE, 0}
+    },
+    
+    // Team Magma - ground/fire Megas
+    [TRAINER_CLASS_TEAM_MAGMA] = {
+        {ITEM_CAMERUPTITE, 200},
+        {ITEM_TYRANITARITE, 180},
+        {ITEM_GYARADOSITE, 160},
+        {ITEM_AGGRONITE, 140},
+        {ITEM_NONE, 0}
+    },
+    
+    // Beauty - elegant Megas
+    [TRAINER_CLASS_BEAUTY] = {
+        {ITEM_GARDEVOIRITE, 180},
+        {ITEM_ALTARIANITE, 160},
+        {ITEM_DIANCITE, 140},
+        {ITEM_NONE, 0}
+    },
+    
+    // Lady - rich trainers get rare Megas
+    [TRAINER_CLASS_LADY] = {
+        {ITEM_DIANCITE, 200},
+        {ITEM_MEWTWONITE_X, 160},
+        {ITEM_CHARIZARDITE_Y, 140},
+        {ITEM_LATIASITE, 120},
+        {ITEM_NONE, 0}
+    },
+    
+    // Collector - diverse collection
+    [TRAINER_CLASS_COLLECTOR] = {
+        {ITEM_VENUSAURITE, 100},
+        {ITEM_CHARIZARDITE_X, 100},
+        {ITEM_BLASTOISINITE, 100},
+        {ITEM_BEEDRILLITE, 100},
+        {ITEM_PIDGEOTITE, 100},
+        {ITEM_ALAKAZITE, 100},
+        {ITEM_GENGARITE, 100},
+        {ITEM_KANGASKHANITE, 100}
+    },
+    
+    // Aroma Lady - grass/fairy Megas
+    [TRAINER_CLASS_AROMA_LADY] = {
+        {ITEM_VENUSAURITE, 160},
+        {ITEM_ALTARIANITE, 140},
+        {ITEM_GARDEVOIRITE, 120},
+        {ITEM_DIANCITE, 100},
+        {ITEM_NONE, 0}
+    },
+    
+    // Default for all other classes
+    [0] = {{ITEM_NONE, 0}}
+};
+
+// ─────────────────────────────────────────────────────────────
+// Z-CRYSTAL POOLS
+// Type-based preferences per trainer class
+// ─────────────────────────────────────────────────────────────
+const MechanicItemLine gZCrystalPools[TRAINER_CLASS_COUNT][8] = {
+    // Hiker - Rock/Ground
+    [TRAINER_CLASS_HIKER] = {
+        {ITEM_ROCKIUM_Z, 180},
+        {ITEM_GROUNDIUM_Z, 160},
+        {ITEM_STEELIUM_Z, 140},
+        {ITEM_FIGHTINIUM_Z, 120},
+        {ITEM_NONE, 0}
+    },
+    
+    // Cooltrainer - balanced
+    [TRAINER_CLASS_COOLTRAINER] = {
+        {ITEM_DRAGONIUM_Z, 140},
+        {ITEM_PSYCHIUM_Z, 120},
+        {ITEM_DARKINIUM_Z, 120},
+        {ITEM_FAIRIUM_Z, 100},
+        {ITEM_NORMALIUM_Z, 100},
+        {ITEM_NONE, 0}
+    },
+    
+    // Black Belt - Fighting
+    [TRAINER_CLASS_BLACK_BELT] = {
+        {ITEM_FIGHTINIUM_Z, 200},
+        {ITEM_STEELIUM_Z, 120},
+        {ITEM_ROCKIUM_Z, 100},
+        {ITEM_NONE, 0}
+    },
+    
+    // Team Aqua - Water
+    [TRAINER_CLASS_TEAM_AQUA] = {
+        {ITEM_WATERIUM_Z, 200},
+        {ITEM_ICIUM_Z, 120},
+        {ITEM_NONE, 0}
+    },
+    
+    // Team Magma - Fire/Ground
+    [TRAINER_CLASS_TEAM_MAGMA] = {
+        {ITEM_FIRIUM_Z, 180},
+        {ITEM_GROUNDIUM_Z, 140},
+        {ITEM_ROCKIUM_Z, 120},
+        {ITEM_NONE, 0}
+    },
+    
+    // Beauty - Fairy/Psychic
+    [TRAINER_CLASS_BEAUTY] = {
+        {ITEM_FAIRIUM_Z, 180},
+        {ITEM_PSYCHIUM_Z, 120},
+        {ITEM_NONE, 0}
+    },
+    
+    // Lady - rare Z-Crystals
+    [TRAINER_CLASS_LADY] = {
+        {ITEM_MEWNIUM_Z, 160},
+        {ITEM_PIKANIUM_Z, 140},
+        {ITEM_EEVIUM_Z, 120},
+        {ITEM_NONE, 0}
+    },
+    
+    // Collector - diverse
+    [TRAINER_CLASS_COLLECTOR] = {
+        {ITEM_NORMALIUM_Z, 100},
+        {ITEM_FIRIUM_Z, 100},
+        {ITEM_WATERIUM_Z, 100},
+        {ITEM_GRASSIUM_Z, 100},
+        {ITEM_ELECTRIUM_Z, 100},
+        {ITEM_PSYCHIUM_Z, 100},
+        {ITEM_ICIUM_Z, 100},
+        {ITEM_DRAGONIUM_Z, 100}
+    },
+    
+    // Aroma Lady - Grass
+    [TRAINER_CLASS_AROMA_LADY] = {
+        {ITEM_GRASSIUM_Z, 160},
+        {ITEM_FAIRIUM_Z, 140},
+        {ITEM_PSYCHIUM_Z, 120},
+        {ITEM_NONE, 0}
+    },
+    
+    // Default
+    [0] = {{ITEM_NONE, 0}}
+};
+
+// ─────────────────────────────────────────────────────────────
+// TERA TYPE POOLS
+// Type preferences per trainer class
+// ─────────────────────────────────────────────────────────────
+const TeraTypeLine gTeraTypePools[TRAINER_CLASS_COUNT][8] = {
+    // Hiker - Rock/Ground
+    [TRAINER_CLASS_HIKER] = {
+        {TYPE_ROCK, 160},
+        {TYPE_GROUND, 140},
+        {TYPE_STEEL, 120},
+        {TYPE_FIGHTING, 100},
+        {TYPE_NONE, 0}
+    },
+    
+    // Cooltrainer - balanced
+    [TRAINER_CLASS_COOLTRAINER] = {
+        {TYPE_DRAGON, 120},
+        {TYPE_PSYCHIC, 120},
+        {TYPE_DARK, 120},
+        {TYPE_FAIRY, 120},
+        {TYPE_STEEL, 80},
+        {TYPE_FIGHTING, 80},
+        {TYPE_NORMAL, 80},
+        {TYPE_NONE, 0}
+    },
+    
+    // Black Belt - Fighting
+    [TRAINER_CLASS_BLACK_BELT] = {
+        {TYPE_FIGHTING, 200},
+        {TYPE_STEEL, 120},
+        {TYPE_ROCK, 100},
+        {TYPE_NONE, 0}
+    },
+    
+    // Team Aqua - Water
+    [TRAINER_CLASS_TEAM_AQUA] = {
+        {TYPE_WATER, 200},
+        {TYPE_ICE, 120},
+        {TYPE_DARK, 100},
+        {TYPE_NONE, 0}
+    },
+    
+    // Team Magma - Fire/Ground
+    [TRAINER_CLASS_TEAM_MAGMA] = {
+        {TYPE_FIRE, 200},
+        {TYPE_GROUND, 140},
+        {TYPE_ROCK, 120},
+        {TYPE_STEEL, 100},
+        {TYPE_NONE, 0}
+    },
+    
+    // Beauty - Fairy/Psychic
+    [TRAINER_CLASS_BEAUTY] = {
+        {TYPE_FAIRY, 200},
+        {TYPE_PSYCHIC, 120},
+        {TYPE_NONE, 0}
+    },
+    
+    // Lady - rare types
+    [TRAINER_CLASS_LADY] = {
+        {TYPE_DRAGON, 160},
+        {TYPE_PSYCHIC, 120},
+        {TYPE_FAIRY, 120},
+        {TYPE_NONE, 0}
+    },
+    
+    // Collector - diverse
+    [TRAINER_CLASS_COLLECTOR] = {
+        {TYPE_NORMAL, 100},
+        {TYPE_FIRE, 100},
+        {TYPE_WATER, 100},
+        {TYPE_GRASS, 100},
+        {TYPE_ELECTRIC, 100},
+        {TYPE_PSYCHIC, 100},
+        {TYPE_ICE, 100},
+        {TYPE_DRAGON, 100}
+    },
+    
+    // Aroma Lady - Grass
+    [TRAINER_CLASS_AROMA_LADY] = {
+        {TYPE_GRASS, 200},
+        {TYPE_FAIRY, 120},
+        {TYPE_PSYCHIC, 100},
+        {TYPE_NONE, 0}
+    },
+    
+    // Default - balanced (use index 0 as default)
+    [0] = {{TYPE_NONE, 0}}
+};
+
+// ─────────────────────────────────────────────────────────────
+// HELPER FUNCTIONS
+// ─────────────────────────────────────────────────────────────
+u16 GetRandomMegaStone(u8 trainerClass)
+{
+    if (trainerClass >= TRAINER_CLASS_COUNT)
+        return ITEM_NONE;
+    
+    const MechanicItemLine *pool = gMegaStonePools[trainerClass];
+    u32 totalWeight = 0;
+    
+    // Calculate total weight
+    for (int i = 0; i < 8 && pool[i].item != ITEM_NONE; i++)
+        totalWeight += pool[i].weight;
+    
+    if (totalWeight == 0)
+        return ITEM_NONE;
+    
+    // Random selection
+    u32 rand = Random() % totalWeight;
+    u32 currentWeight = 0;
+    
+    for (int i = 0; i < 8 && pool[i].item != ITEM_NONE; i++) {
+        currentWeight += pool[i].weight;
+        if (rand < currentWeight)
+            return pool[i].item;
+    }
+    
+    return ITEM_NONE;
+}
+
+u16 GetRandomZCrystal(u8 trainerClass)
+{
+    if (trainerClass >= TRAINER_CLASS_COUNT)
+        return ITEM_NONE;
+    
+    const MechanicItemLine *pool = gZCrystalPools[trainerClass];
+    u32 totalWeight = 0;
+    
+    for (int i = 0; i < 8 && pool[i].item != ITEM_NONE; i++)
+        totalWeight += pool[i].weight;
+    
+    if (totalWeight == 0)
+        return ITEM_NONE;
+    
+    u32 rand = Random() % totalWeight;
+    u32 currentWeight = 0;
+    
+    for (int i = 0; i < 8 && pool[i].item != ITEM_NONE; i++) {
+        currentWeight += pool[i].weight;
+        if (rand < currentWeight)
+            return pool[i].item;
+    }
+    
+    return ITEM_NONE;
+}
+
+u8 GetRandomTeraType(u8 trainerClass)
+{
+    if (trainerClass >= TRAINER_CLASS_COUNT)
+        return TYPE_NONE;
+    
+    const TeraTypeLine *pool = gTeraTypePools[trainerClass];
+    u32 totalWeight = 0;
+    
+    for (int i = 0; i < 8 && pool[i].teraType != TYPE_NONE; i++)
+        totalWeight += pool[i].weight;
+    
+    if (totalWeight == 0)
+        return TYPE_NONE;
+    
+    u32 rand = Random() % totalWeight;
+    u32 currentWeight = 0;
+    
+    for (int i = 0; i < 8 && pool[i].teraType != TYPE_NONE; i++) {
+        currentWeight += pool[i].weight;
+        if (rand < currentWeight)
+            return pool[i].teraType;
+    }
+    
+    return TYPE_NONE;
+}
+
+bool8 CanDynamaxThisTrainer(u8 trainerClass)
+{
+    // Most trainers can Dynamax, but some are excluded
+    switch (trainerClass) {
+        case TRAINER_CLASS_HIKER:
+        case TRAINER_CLASS_COOLTRAINER:
+        case TRAINER_CLASS_BLACK_BELT:
+        case TRAINER_CLASS_PSYCHIC:
+        case TRAINER_CLASS_BEAUTY:
+        case TRAINER_CLASS_LADY:
+        case TRAINER_CLASS_COLLECTOR:
+        case TRAINER_CLASS_AROMA_LADY:
+            return TRUE;
+        case TRAINER_CLASS_TEAM_AQUA:
+        case TRAINER_CLASS_TEAM_MAGMA:
+            return TRUE;
+        default:
+            return TRUE; // Default to allowing Dynamax
+    }
+}

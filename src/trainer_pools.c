@@ -368,8 +368,14 @@ static void PrunePool(const struct Trainer *trainer, u8 *poolIndexArray, const s
 
 void DoTrainerPartyPool(const struct Trainer *trainer, u32 *monIndices, u8 monsCount, u32 battleTypeFlags)
 {
+    DebugPrintf("=== DoTrainerPartyPool called ===\n");
+    DebugPrintf("Trainer class: %d\n", trainer->trainerClass);
+    DebugPrintf("Mons count: %d Battle flags: %08x\n", monsCount, battleTypeFlags);
+
         bool32 usingPool = FALSE;
         struct PoolRules rules = defaultPoolRules;
+        DebugPrintf("Pool size: %d\n", trainer->poolSize);
+        
         if (trainer->poolSize != 0)
         {
             usingPool = TRUE;
@@ -387,12 +393,15 @@ void DoTrainerPartyPool(const struct Trainer *trainer, u32 *monIndices, u8 monsC
                 //  If the slot doesn't have a proper value, the pool creation failed, fall back to normal mon pick process
                 if (monIndices[i] == POOL_SLOT_DISABLED)
                 {
+                    DebugPrintf("Pool slot disabled - falling back\n");
                     usingPool = FALSE;
                     break;
                 }
             }
             Free(poolIndexArray);
         }
+
+        DebugPrintf("Using pool: %s\n", usingPool ? "YES" : "NO");
 
         if (!usingPool)
             for (u32 i = 0; i < monsCount; i++)

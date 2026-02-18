@@ -7,7 +7,6 @@
 #include "util.h"
 #include "malloc.h"
 #include "event_data.h"
-#include "pokemon.h"  // for struct Pokemon and battle functions
 
 // ===============================================
 // VILLAIN TEAM POOLS – static / thematic
@@ -254,7 +253,7 @@ const TrainerMonLine gYoungsterPool[] __attribute__((section(".rodata"))) = {
 };
 
 // 2. LASS - Cute / Fairy / Grass / Normal - mixed special/physical
-const TrainerMonLine gLassPool[] = {
+const TrainerMonLine gLassPool[] __attribute__((section(".rodata"))) = {
     {{SPECIES_CLEFFA, SPECIES_CLEFAIRY, SPECIES_CLEFABLE, SPECIES_NONE}, {6,15,36,0}, {0,1,6,0}, 250, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_IGGLYBUFF, SPECIES_JIGGLYPUFF, SPECIES_WIGGLYTUFF, SPECIES_NONE}, {5,14,34,0}, {0,1,6,0}, 240, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_TOGEPI, SPECIES_TOGETIC, SPECIES_TOGEKISS, SPECIES_NONE}, {7,18,36,0}, {0,2,6,0}, 230, NATURE_TIMID, {4,0,0,252,0,252}},
@@ -307,15 +306,15 @@ const TrainerMonLine gBugCatcherPool[] = {
 
 // 4. HIKER - Rock / Ground / Steel tanks & physical attackers
 const TrainerMonLine gHikerPool[] = {
-    {{SPECIES_GEODUDE, SPECIES_GRAVELER, SPECIES_GOLEM, SPECIES_NONE}, {5,15,25,0}, {0,0,0,0}, 250, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_ONIX, SPECIES_STEELIX, SPECIES_NONE, SPECIES_NONE}, {5,15,0,0}, {0,0,0,0}, 240, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_RHYHORN, SPECIES_RHYDON, SPECIES_RHYPERIOR, SPECIES_NONE}, {5,15,25,0}, {0,0,0,0}, 230, NATURE_ADAMANT, {252,252,0,0,0,4}},
-    {{SPECIES_ROGGENROLA, SPECIES_BOLDORE, SPECIES_GIGALITH, SPECIES_NONE}, {5,15,25,0}, {0,0,0,0}, 220, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_DWEBBLE, SPECIES_CRUSTLE, SPECIES_NONE, SPECIES_NONE}, {5,15,0,0}, {0,0,0,0}, 210, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_ROLYCOLY, SPECIES_CARKOL, SPECIES_COALOSSAL, SPECIES_NONE}, {5,15,25,0}, {0,0,0,0}, 200, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_NACLI, SPECIES_NACLSTACK, SPECIES_GARGANACL, SPECIES_NONE}, {5,15,25,0}, {0,0,0,0}, 190, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_ROCKRUFF, SPECIES_LYCANROC, SPECIES_NONE, SPECIES_NONE}, {5,15,0,0}, {0,0,0,0}, 180, NATURE_JOLLY, {4,252,0,0,0,252}},
-    {{SPECIES_BINACLE, SPECIES_BARBARACLE, SPECIES_NONE, SPECIES_NONE}, {5,15,0,0}, {0,0,0,0}, 170, NATURE_ADAMANT, {252,252,0,0,0,4}},
+    {{SPECIES_GEODUDE, SPECIES_GRAVELER, SPECIES_GOLEM, SPECIES_NONE}, {8,25,40,0}, {0,4,8,0}, 250, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_ONIX, SPECIES_STEELIX, SPECIES_NONE, SPECIES_NONE}, {10,30,0,0}, {0,5,0,0}, 240, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_RHYHORN, SPECIES_RHYDON, SPECIES_RHYPERIOR, SPECIES_NONE}, {10,30,40,0}, {0,5,8,0}, 230, NATURE_ADAMANT, {252,252,0,0,0,4}},
+    {{SPECIES_ROGGENROLA, SPECIES_BOLDORE, SPECIES_GIGALITH, SPECIES_NONE}, {10,25,40,0}, {0,4,8,0}, 220, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_DWEBBLE, SPECIES_CRUSTLE, SPECIES_NONE, SPECIES_NONE}, {10,34,0,0}, {0,6,0,0}, 210, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_ROLYCOLY, SPECIES_CARKOL, SPECIES_COALOSSAL, SPECIES_NONE}, {10,18,40,0}, {0,4,10,0}, 200, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_NACLI, SPECIES_NACLSTACK, SPECIES_GARGANACL, SPECIES_NONE}, {12,24,38,0}, {0,5,8,0}, 190, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_ROCKRUFF, SPECIES_LYCANROC, SPECIES_NONE, SPECIES_NONE}, {12,25,0,0}, {0,5,0,0}, 180, NATURE_JOLLY, {4,252,0,0,0,252}},
+    {{SPECIES_BINACLE, SPECIES_BARBARACLE, SPECIES_NONE, SPECIES_NONE}, {12,39,0,0}, {0,7,0,0}, 170, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_STONJOURNER, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 160, NATURE_IMPISH, {252,0,252,0,4,0}},
     {{SPECIES_KLAWF, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 150, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_GLIMMET, SPECIES_GLIMMORA, SPECIES_NONE, SPECIES_NONE}, {20,35,0,0}, {0,8,0,0}, 140, NATURE_MODEST, {252,0,0,252,4,0}},
@@ -2088,7 +2087,7 @@ bool8 TrainerClassUsesPool(u8 trainerClass, enum TrainerPoolCategory *outCategor
             return TRUE;
 
         default:
-            return TRUE;  // Enable pools for ALL classes by default
+            return FALSE;  // static fallback
     }
 }
 
@@ -2384,7 +2383,7 @@ u16 GetAceSpeciesForTrainer(u16 trainerId)
     switch (GetTrainerClassFromId(trainerId))
     {
         case TRAINER_CLASS_HIKER:
-            return SPECIES_GOLEM; // Rock/Ground type
+            return SPECIES_MACHAMP; // Fighting type
         case TRAINER_CLASS_TEAM_AQUA:
         case TRAINER_CLASS_AQUA_ADMIN:
         case TRAINER_CLASS_AQUA_LEADER:
@@ -2506,73 +2505,81 @@ u16 GetAceSpeciesForTrainer(u16 trainerId)
 // ─────────────────────────────────────────────────────────────
 void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *pool, u16 aceSpecies)
 {
-    if (!trainer)
+    if (!trainer || !pool || trainer->partySize == 0)
         return;
-        
-    if (!pool)
-    {
-        DebugPrintf("No pool - fallback to static\n");
-        // Fallback to static party loading
-        return;
-    }
 
-    // Always generate a full party (6 mons) when using pools
-    u8 partySize = 6;
-    
-    DebugPrintf("Generating party of size %d (forced full for pools)\n", partySize);
+    u8 cap = 50;  // TODO: Use GetCurrentLevelCap()
+    u8 badges = 8; // TODO: Use GetBadgeCount()
+    u8 partySize = trainer->partySize;
     
     // Create a mutable copy of the party data
     struct TrainerMon *mutableParty = Alloc(sizeof(struct TrainerMon) * partySize);
-    if (!mutableParty)
-    {
-        DebugPrintf("Failed to allocate mutable party\n");
-        return;
-    }
-    
-    // Initialize all slots to empty first
     for (u8 i = 0; i < partySize; i++)
     {
-        memset(&mutableParty[i], 0, sizeof(struct TrainerMon));
+        mutableParty[i] = trainer->party[i];
     }
 
-    u8 cap = 50;  // TODO: Use GetCurrentLevelCap()
-    // u8 badges = 8; // TODO: Use GetBadgeCount()
-
+    u16 usedSpecies[6] = {0};
     u8 slot = 0;
+
+    // Fill first 5 slots from pool (or all but last if party is smaller)
+    u8 fillSlots = (partySize > 1) ? partySize - 1 : 1;
     
-    // Simple EV spread
-    // static const u8 simpleEVs[] = {252, 252, 0, 0, 0, 4};
-
-    // Simplified pool generation - just pick first few entries for now
-    const TrainerMonLine *line = pool;
-    while (slot < partySize - 1 && line->weight > 0 && line->species[0] != SPECIES_NONE)
+    while (slot < fillSlots)
     {
-        u16 species = line->species[0];
-        u8 level = cap - (Random() % 9);
-        if (level < 5) level = 5;
-
-        mutableParty[slot].species = species;
-        mutableParty[slot].lvl = level;
-        mutableParty[slot].iv = 31;  // Perfect IVs for special trainers
-        mutableParty[slot].nature = line->preferred_nature;
-        mutableParty[slot].heldItem = ITEM_NONE;
-        mutableParty[slot].isShiny = FALSE;
-        
-        // Simple EV spread
-        mutableParty[slot].ev = (u8[]){252, 252, 0, 0, 0, 4};
-        
-        // Initialize moves to empty
-        for (u8 m = 0; m < MAX_MON_MOVES; m++)
+        // Find a valid pool entry
+        const TrainerMonLine *line = pool;
+        while (line->weight > 0 && line->species[0] != SPECIES_NONE)
         {
-            mutableParty[slot].moves[m] = MOVE_NONE;
-        }
+            // Check if species is already used
+            bool8 alreadyUsed = FALSE;
+            for (u8 i = 0; i < slot; i++)
+            {
+                if (usedSpecies[i] == line->species[0])
+                {
+                    alreadyUsed = TRUE;
+                    break;
+                }
+            }
+            
+            if (!alreadyUsed)
+            {
+                // Check badge requirements
+                u8 stage = 0;
+                for (u8 s = 0; s < MAX_EVO_STAGES && line->species[s] != SPECIES_NONE; s++)
+                {
+                    if (line->min_badges[s] <= badges)
+                        stage = s;
+                }
+                
+                if (line->min_badges[stage] <= badges)
+                {
+                    u16 species = line->species[stage];
+                    u8 level = cap - (Random() % 9);
+                    if (level < line->min_level[stage])
+                        level = line->min_level[stage];
 
-        slot++;
-        line++;
+                    mutableParty[slot].species = species;
+                    mutableParty[slot].lvl = level;
+                    mutableParty[slot].iv = 31;  // Perfect IVs for special trainers
+                    mutableParty[slot].nature = line->preferred_nature;
+                    
+                    // Copy EV spread as a static array
+                    static u8 evBuffer[6];
+                    for (u8 i = 0; i < 6; i++)
+                        evBuffer[i] = line->ev_spread[i];
+                    mutableParty[slot].ev = evBuffer;
+
+                    usedSpecies[slot] = species;
+                    slot++;
+                    break;
+                }
+            }
+            line++;
+        }
         
-        DebugPrintf("Added species %d level %d\n", species, level);
-        
-        if (slot >= partySize - 1) break;
+        if (slot >= fillSlots)
+            break;
     }
 
     // Last slot = Shiny Ace (if we have an ace species)
@@ -2582,75 +2589,17 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
         mutableParty[aceSlot].species = aceSpecies;
         mutableParty[aceSlot].lvl = cap;  // Max level
         mutableParty[aceSlot].iv = 31;     // Perfect IVs
-        mutableParty[aceSlot].nature = NATURE_ADAMANT;
-        mutableParty[aceSlot].heldItem = ITEM_SITRUS_BERRY;  // Signature item
         mutableParty[aceSlot].isShiny = TRUE;
+        mutableParty[aceSlot].isShinyAce = TRUE;
+        mutableParty[aceSlot].heldItem = ITEM_SITRUS_BERRY;  // Signature item
         
         // Default competitive spread for Ace
-        mutableParty[aceSlot].ev = (u8[]){252, 252, 0, 0, 0, 4};
-        
-        // Initialize moves to empty
-        for (u8 m = 0; m < MAX_MON_MOVES; m++)
-        {
-            mutableParty[aceSlot].moves[m] = MOVE_NONE;
-        }
-        
-        DebugPrintf("Added ace species %d level %d (shiny)\n", aceSpecies, cap);
+        static u8 aceEVs[6] = {252, 252, 0, 0, 0, 0}; // HP/Atk
+        mutableParty[aceSlot].ev = aceEVs;
     }
 
-    // Copy back to trainer's actual party (commented out - trainer->party is read-only)
-    // for (u8 i = 0; i < partySize; i++)
-    // {
-    //     trainer->party[i] = mutableParty[i];
-    // }
-
-    trainer->partySize = partySize;  // or trainer->partyCount if your struct uses that
-    
-    DebugPrintf("Copied %d mons to trainer->party\n", partySize);
-    DebugPrintf("trainer->party[0].species after copy: %d\n", trainer->party[0].species);
-    DebugPrintf("After generation:\n");
-    DebugPrintf("trainer->party pointer: %p\n", trainer->party);
-    DebugPrintf("trainer->party[0].species: %d\n", trainer->party[0].species);
-    DebugPrintf("trainer->party[5].species (Ace): %d\n", trainer->party[5].species);
-    DebugPrintf("Returning from GenerateSpecialTrainerParty\n");
-    
-    // Convert TrainerMon → Pokemon and copy to gEnemyParty (battle system uses this)
-    extern struct Pokemon gEnemyParty[PARTY_SIZE];
-    
-    for (u8 i = 0; i < partySize; i++)
-    {
-        struct Pokemon *dest = &gEnemyParty[i];
-        struct TrainerMon *src = &mutableParty[i];
-
-        // Basic mon creation
-        CreateMon(dest, src->species, src->lvl, src->iv, 0, 0, OT_ID_RANDOM_NO_SHINY, 0);
-
-        // Set nature, EVs, moves, item, shiny
-        u8 tempNature = src->nature;
-        SetMonData(dest, MON_DATA_HIDDEN_NATURE, &tempNature);
-        SetMonData(dest, MON_DATA_IVS, src->ev);
-        SetMonData(dest, MON_DATA_HELD_ITEM, &src->heldItem);
-
-        // Shiny Ace
-        if (src->isShiny)
-        {
-            u32 personality = GetMonData(dest, MON_DATA_PERSONALITY);
-                personality |= (1 << 31);  // force shiny bit (adjust if your shiny system is different)
-                SetMonData(dest, MON_DATA_PERSONALITY, &personality);
-        }
-
-        // Moves (you probably already have this helper)
-        for (u8 m = 0; m < MAX_MON_MOVES; m++)
-        {
-            if (src->moves[m] != MOVE_NONE)
-            {
-                SetMonMoveSlot(dest, src->moves[m], m);
-            }
-        }
-    }
-
-    DebugPrintf("Copied %d mons to gEnemyParty\n", partySize);
-    DebugPrintf("gEnemyParty[0].species after copy: %d\n", GetMonData(&gEnemyParty[0], MON_DATA_SPECIES));
+    // Update the trainer's party pointer to point to our modified data
+    ((struct Trainer *)trainer)->party = mutableParty;
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -2658,21 +2607,7 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
 // ─────────────────────────────────────────────────────────────
 const TrainerMonLine *GetSpecialPoolForTrainer(u16 trainerId)
 {
-    switch (trainerId)
-    {
-        case TRAINER_ROXANNE_1: return gRoxannePool;
-        case TRAINER_BRAWLY_1: return gBrawlyPool;
-        case TRAINER_WATTSON_1: return gWatsonPool;
-        case TRAINER_FLANNERY_1: return gFlanneryPool;
-        case TRAINER_NORMAN_1: return gNormanPool;
-        case TRAINER_WINONA_1: return gWinonaPool;
-        case TRAINER_TATE_AND_LIZA_1: return gTateLizaPool;
-        case TRAINER_JUAN_1: return gJuanPool;
-        case TRAINER_WALLACE: return gWallacePool;
-        case TRAINER_STEVEN: return gStevenPool;
-        // Add more for rematches (_2, _3, etc.) or other trainers
-        default:
-            DebugPrintf("No special pool for ID %d\n", trainerId);
-            return NULL;
-    }
+    // For now, return based on trainer class as fallback
+    // This would need actual trainer ID to class mapping
+    return NULL; // Return NULL for now until proper ID mapping is added
 }

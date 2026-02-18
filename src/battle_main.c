@@ -57,9 +57,191 @@
 #include "test_runner.h"
 #include "text.h"
 #include "trainer_pools.h"
+#include "constants/config.h"
+#include "constants/trainer_mechanic_pools.h"
+#include "constants/trainer_pools.h"
 #include "trig.h"
+
+// Forward declarations for pool functions
+typedef struct TrainerMonLine TrainerMonLine;
+typedef enum TrainerPoolCategory TrainerPoolCategory;
+extern const TrainerMonLine *GetPoolForTrainerClass(u8 trainerClass);
+extern bool8 TrainerClassUsesPool(u8 trainerClass, enum TrainerPoolCategory *outCategory);
+extern void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *pool, u16 aceSpecies);
+extern u16 GetAceSpeciesForTrainer(u16 trainerId);
+extern bool8 IsStaticTrainerClass(u8 trainerClass);
 #include "tv.h"
 #include "util.h"
+
+// Forward declaration for static trainer check
+bool8 IsStaticTrainerClass(u8 trainerClass);
+
+// Helper functions for advanced trainer mechanics
+static u16 GetMegaStoneForSpecies(u16 species)
+{
+    switch (species)
+    {
+        // Kanto Starters & Evolutions
+        case SPECIES_VENUSAUR:          return ITEM_VENUSAURITE;
+        case SPECIES_CHARIZARD:         return ITEM_CHARIZARDITE_X;   // or _Y
+        case SPECIES_BLASTOISE:         return ITEM_BLASTOISINITE;
+        case SPECIES_BEEDRILL:          return ITEM_BEEDRILLITE;
+        case SPECIES_PIDGEOT:           return ITEM_PIDGEOTITE;
+        case SPECIES_ALAKAZAM:          return ITEM_ALAKAZITE;
+        case SPECIES_SLOWBRO:           return ITEM_SLOWBRONITE;
+        case SPECIES_GENGAR:            return ITEM_GENGARITE;
+        case SPECIES_KANGASKHAN:        return ITEM_KANGASKHANITE;
+        case SPECIES_PINSIR:            return ITEM_PINSIRITE;
+        case SPECIES_GYARADOS:          return ITEM_GYARADOSITE;
+        case SPECIES_AERODACTYL:        return ITEM_AERODACTYLITE;
+        
+        // Kanto Legendaries
+        case SPECIES_MEWTWO:            return ITEM_MEWTWONITE_X;     // or _Y
+        
+        // Johto Evolutions
+        case SPECIES_AMPHAROS:          return ITEM_AMPHAROSITE;
+        case SPECIES_STEELIX:           return ITEM_STEELIXITE;
+        case SPECIES_SCIZOR:            return ITEM_SCIZORITE;
+        case SPECIES_HERACROSS:         return ITEM_HERACRONITE;
+        case SPECIES_HOUNDOOM:          return ITEM_HOUNDOOMINITE;
+        case SPECIES_TYRANITAR:         return ITEM_TYRANITARITE;
+        
+        // Hoenn Starters & Evolutions
+        case SPECIES_SCEPTILE:          return ITEM_SCEPTILITE;
+        case SPECIES_BLAZIKEN:          return ITEM_BLAZIKENITE;
+        case SPECIES_SWAMPERT:          return ITEM_SWAMPERTITE;
+        case SPECIES_GARDEVOIR:         return ITEM_GARDEVOIRITE;
+        case SPECIES_SABLEYE:           return ITEM_SABLENITE;
+        case SPECIES_MAWILE:            return ITEM_MAWILITE;
+        case SPECIES_AGGRON:            return ITEM_AGGRONITE;
+        case SPECIES_MEDICHAM:          return ITEM_MEDICHAMITE;
+        case SPECIES_MANECTRIC:         return ITEM_MANECTITE;
+        case SPECIES_SHARPEDO:          return ITEM_SHARPEDONITE;
+        case SPECIES_CAMERUPT:          return ITEM_CAMERUPTITE;
+        case SPECIES_ALTARIA:           return ITEM_ALTARIANITE;
+        case SPECIES_BANETTE:           return ITEM_BANETTITE;
+        case SPECIES_ABSOL:             return ITEM_ABSOLITE;
+        case SPECIES_GLALIE:            return ITEM_GLALITITE;
+        case SPECIES_SALAMENCE:         return ITEM_SALAMENCITE;
+        case SPECIES_METAGROSS:         return ITEM_METAGROSSITE;
+        case SPECIES_LATIAS:            return ITEM_LATIASITE;
+        case SPECIES_LATIOS:            return ITEM_LATIOSITE;
+        
+        // Sinnoh Evolutions
+        case SPECIES_LOPUNNY:           return ITEM_LOPUNNITE;
+        case SPECIES_LUCARIO:           return ITEM_LUCARIONITE;
+        case SPECIES_ABOMASNOW:         return ITEM_ABOMASITE;
+        case SPECIES_GALLADE:           return ITEM_GALLADITE;
+        case SPECIES_AUDINO:            return ITEM_AUDINITE;
+        case SPECIES_DIANCIE:           return ITEM_DIANCITE;
+        
+        // Additional Mega Stones from extended list
+        case SPECIES_CLEFABLE:          return ITEM_CLEFABLITE;
+        case SPECIES_VICTREEBEL:        return ITEM_VICTREEBELITE;
+        case SPECIES_STARAPTOR:         return ITEM_STARMINITE;
+        case SPECIES_DRAGONITE:         return ITEM_DRAGONINITE;
+        case SPECIES_MEGANIUM:          return ITEM_MEGANIUMITE;
+        case SPECIES_FERALIGATR:        return ITEM_FERALIGITE;
+        case SPECIES_SKARMORY:          return ITEM_SKARMORITE;
+        case SPECIES_FROSLASS:          return ITEM_FROSLASSITE;
+        case SPECIES_EMBOAR:            return ITEM_EMBOARITE;
+        case SPECIES_EXCADRILL:         return ITEM_EXCADRITE;
+        case SPECIES_SCOLIPEDE:         return ITEM_SCOLIPITE;
+        case SPECIES_SCRAFTY:           return ITEM_SCRAFTINITE;
+        case SPECIES_EELEKTROSS:        return ITEM_EELEKTROSSITE;
+        case SPECIES_CHANDELURE:        return ITEM_CHANDELURITE;
+        case SPECIES_CHESNAUGHT:        return ITEM_CHESNAUGHTITE;
+        case SPECIES_DELPHOX:           return ITEM_DELPHOXITE;
+        case SPECIES_GRENINJA:          return ITEM_GRENINJITE;
+        case SPECIES_PYROAR:            return ITEM_PYROARITE;
+        case SPECIES_FLOETTE:           return ITEM_FLOETTITE;
+        case SPECIES_MALAMAR:           return ITEM_MALAMARITE;
+        case SPECIES_BARBARACLE:        return ITEM_BARBARACITE;
+        case SPECIES_DRAGAPULT:         return ITEM_DRAGALGITE;
+        case SPECIES_HAWLUCHA:          return ITEM_HAWLUCHANITE;
+        case SPECIES_ZYGARDE:           return ITEM_ZYGARDITE;
+        case SPECIES_DRAMPA:            return ITEM_DRAMPANITE;
+        case SPECIES_FALINKS:           return ITEM_FALINKSITE;
+        
+        default:                        return ITEM_NONE;
+    }
+}
+
+static u16 GetZCrystalForSpecies(u16 species)
+{
+    // Special species-specific Z-Crystals
+    switch (species)
+    {
+        case SPECIES_PIKACHU:          return ITEM_PIKANIUM_Z;
+        case SPECIES_EEVEE:            return ITEM_EEVIUM_Z;
+        case SPECIES_SNORLAX:          return ITEM_SNORLIUM_Z;
+        case SPECIES_MEW:              return ITEM_MEWNIUM_Z;
+        
+        // Alolan forms
+        case SPECIES_RAICHU_ALOLA:     return ITEM_ALORAICHIUM_Z;
+        
+        // Starter Z-Crystals
+        case SPECIES_ROWLET:
+        case SPECIES_DECIDUEYE:        return ITEM_DECIDIUM_Z;
+        case SPECIES_LITTEN:
+        case SPECIES_INCINEROAR:       return ITEM_INCINIUM_Z;
+        case SPECIES_POPPLIO:
+        case SPECIES_PRIMARINA:        return ITEM_PRIMARIUM_Z;
+        
+        // Island Guardians
+        case SPECIES_TAPU_KOKO:        return ITEM_TAPUNIUM_Z;
+        case SPECIES_TAPU_LELE:        return ITEM_TAPUNIUM_Z;
+        case SPECIES_TAPU_BULU:        return ITEM_TAPUNIUM_Z;
+        case SPECIES_TAPU_FINI:        return ITEM_TAPUNIUM_Z;
+        case SPECIES_KOMMO_O:          return ITEM_KOMMONIUM_Z;
+        
+        // Legendaries
+        case SPECIES_SOLGALEO:         return ITEM_SOLGANIUM_Z;
+        case SPECIES_LUNALA:           return ITEM_LUNALIUM_Z;
+        case SPECIES_NECROZMA:         return ITEM_ULTRANECROZIUM_Z;
+        
+        // Mythical
+        case SPECIES_MIMIKYU:          return ITEM_MIMIKIUM_Z;
+        case SPECIES_MARSHADOW:        return ITEM_MARSHADIUM_Z;
+        
+        // Lycanroc forms
+        case SPECIES_LYCANROC_MIDDAY:
+        case SPECIES_LYCANROC_MIDNIGHT:
+        case SPECIES_LYCANROC_DUSK:  return ITEM_LYCANIUM_Z;
+        
+        default:
+            // Type-based Z-Crystals for all other species
+            u8 type1 = gSpeciesInfo[species].types[0];
+            switch (type1)
+            {
+                case TYPE_NORMAL:   return ITEM_NORMALIUM_Z;
+                case TYPE_FIRE:     return ITEM_FIRIUM_Z;
+                case TYPE_WATER:    return ITEM_WATERIUM_Z;
+                case TYPE_GRASS:    return ITEM_GRASSIUM_Z;
+                case TYPE_ELECTRIC: return ITEM_ELECTRIUM_Z;
+                case TYPE_ICE:      return ITEM_ICIUM_Z;
+                case TYPE_FIGHTING: return ITEM_FIGHTINIUM_Z;
+                case TYPE_POISON:   return ITEM_POISONIUM_Z;
+                case TYPE_GROUND:   return ITEM_GROUNDIUM_Z;
+                case TYPE_FLYING:   return ITEM_FLYINIUM_Z;
+                case TYPE_PSYCHIC:  return ITEM_PSYCHIUM_Z;
+                case TYPE_BUG:      return ITEM_BUGINIUM_Z;
+                case TYPE_ROCK:     return ITEM_ROCKIUM_Z;
+                case TYPE_GHOST:    return ITEM_GHOSTIUM_Z;
+                case TYPE_DRAGON:   return ITEM_DRAGONIUM_Z;
+                case TYPE_DARK:     return ITEM_DARKINIUM_Z;
+                case TYPE_STEEL:    return ITEM_STEELIUM_Z;
+                case TYPE_FAIRY:    return ITEM_FAIRIUM_Z;
+                default:            return ITEM_NONE;
+            }
+    }
+}
+
+static u8 GetBestTeraType(u16 species)
+{
+    // Simple: return primary type
+    return gSpeciesInfo[species].types[0];
+}
 #include "wild_encounter.h"
 #include "window.h"
 #include "constants/abilities.h"
@@ -1922,10 +2104,6 @@ if (USE_DYNAMIC_TRAINER_POOLS)
         {
             DebugPrintf("Calling GenerateSpecialTrainerParty\n");
             GenerateSpecialTrainerParty((struct Trainer *)trainer, pool, GetAceSpeciesForTrainer(trainer->trainerClass));
-            // Apply dynamic AI based on generated team
-            extern void ApplyDynamicAIToTrainer(struct Trainer *trainer, struct Pokemon *generatedParty, u8 partySize);
-            extern struct Pokemon gEnemyParty[PARTY_SIZE];
-            ApplyDynamicAIToTrainer((struct Trainer *)trainer, gEnemyParty, 6);
             // AssignAdvancedTrainerMechanics(trainer); // Commented out for now
             DebugPrintf("Pool generation completed, returning success\n");
             return 1; // Success
@@ -2104,7 +2282,7 @@ if (USE_DYNAMIC_TRAINER_POOLS)
             u32 monIndex = monIndices[i];
             s32 ball = -1;
             u32 personalityHash = GeneratePartyHash(trainer, i);
-            const struct TrainerMon *partyData = trainer->party;
+            const struct TrainerMon *partyData = ((struct Trainer *)trainer)->party;
             u32 otIdType = OT_ID_RANDOM_NO_SHINY;
             u32 fixedOtId = 0;
             u32 abilityNum = 0;

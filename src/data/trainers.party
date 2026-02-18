@@ -86,99 +86,13 @@ Name: Sawyer
 Class: Hiker
 Pic: Hiker
 Gender: Male
-Music: Hiker
-Double Battle: Yes
-AI: Check Bad Move / Check Viability / Try To Faint / Risky / Smart Switching / Omniscient / Prefer Highest Damage Move / Predict Switch / Smart Tera
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try to Faint / Check Viability / Smart Switching / Smart Mon Choices / Omniscient
 
-Golem @ Sitrus Berry
-Level: 32
-Ability: Sturdy
-Nature: Adamant
-Tera Type: Ground
-Dynamax Level: 10
-Ball: Ultra Ball
-Shiny: No
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 120 Atk / 136 Def
-- Rock Slide
-- Earthquake
-- Iron Head
-- Protect
-
-Claydol @ Leftovers
-Level: 32
-Ability: Levitate
-Nature: Bold
-Tera Type: Psychic
-Dynamax Level: 10
-Ball: Dusk Ball
-Shiny: No
-IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 128 Def / 128 SpA
-- Earth Power
-- Psychic
-- Light Screen
-- Protect
-
-Steelix @ Rocky Helmet
-Level: 31
-Ability: Sturdy
-Nature: Impish
-Tera Type: Steel
-Dynamax Level: 10
-Ball: Timer Ball
-Shiny: No
-IVs: 31 HP / 31 Atk / 31 Def / 20 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 120 Def / 136 Atk
-- Iron Head
-- Earthquake
-- Body Press
-- Stealth Rock
-
-Gabite @ Eviolite
-Level: 31
-Ability: Rough Skin
-Nature: Jolly
-Tera Type: Dragon
-Dynamax Level: 10
-Ball: Quick Ball
-Shiny: No
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 Atk / 252 Spe
-- Dragon Claw
-- Earthquake
-- Rock Slide
-- Swords Dance
-
-Lairon @ Leftovers
-Level: 31
-Ability: Sturdy
-Nature: Careful
-Tera Type: Steel
-Dynamax Level: 10
-Ball: Great Ball
-Shiny: No
-IVs: 31 HP / 31 Atk / 31 Def / 20 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 120 Atk / 136 SpD
-- Iron Head
-- Rock Slide
-- Protect
-- Body Press
-
-Roggenrola @ Eviolite
-Level: 31
-Ability: Sturdy
-Nature: Brave
-Tera Type: Rock
-Dynamax Level: 10
-Ball: Premier Ball
-Shiny: No
-IVs: 31 HP / 31 Atk / 31 Def / 10 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 252 Atk / 4 Def
-- Rock Slide
-- Earthquake
-- Explosion
-- Stealth Rock
+Rattata @ None
+Level: 1
+- Tackle
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
 Name: Grunt

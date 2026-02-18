@@ -860,12 +860,17 @@
 #define TRAINER_MAY_PLACEHOLDER             854
 #define TRAINER_LYRA_ROUTE_29               855
 #define TRAINER_GOLD_ROUTE_29               856
+// Littleroot Town temporary trainers - using existing trainer IDs
+#define TRAINER_LITTLEROOT_HIKER            1    // TRAINER_SAWYER_1
+#define TRAINER_LITTLEROOT_YOUNGSTER        318  // TRAINER_CALVIN_1
+#define TRAINER_LITTLEROOT_FISHERMAN        336  // TRAINER_ANDREW
+#define TRAINER_LITTLEROOT_PSYCHIC          232  // TRAINER_EDWARD
 
-// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
+// NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 4 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      857
+#define TRAINERS_COUNT                      861
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
