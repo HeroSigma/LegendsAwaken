@@ -5967,7 +5967,7 @@
       "width": 24,
       "height": 20,
       "primary_tileset": "gTileset_KantoGeneral",
-      "secondary_tileset": "gTileset_CeladonCity",
+      "secondary_tileset": "gTileset_SaffronCity",
       "border_filepath": "data/layouts/Route7/border.bin",
       "blockdata_filepath": "data/layouts/Route7/map.bin"
     },
@@ -10914,10 +10914,10 @@
     {
       "id": "LAYOUT_ROUTE211_WEST",
       "name": "Route211_West_Layout",
-      "width": 36,
-      "height": 28,
+      "width": 69,
+      "height": 32,
       "primary_tileset": "gTileset_SinnohGeneral",
-      "secondary_tileset": "gTileset_JubilifeCitySecondary",
+      "secondary_tileset": "gTileset_Celesti",
       "border_filepath": "data/layouts/Route211_West/border.bin",
       "blockdata_filepath": "data/layouts/Route211_West/map.bin"
     },
@@ -11056,8 +11056,8 @@
       "name": "Route224_Layout",
       "width": 64,
       "height": 94,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_EverGrande",
+      "primary_tileset": "gTileset_SinnohGeneral",
+      "secondary_tileset": "gTileset_SinnohSecon",
       "border_filepath": "data/layouts/Route224/border.bin",
       "blockdata_filepath": "data/layouts/Route224/map.bin"
     },

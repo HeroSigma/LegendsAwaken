@@ -344,59 +344,59 @@ RivalsHouse_1F_Text_OhYoureTheNewNeighbor:
 	.string "Oh, you're {PLAYER}{KUN}, our new next-door\n"
 	.string "neighbor! Hi!\p"
 	.string "We have a {STR_VAR_1} about the same\n"
-	.string "age as you.\p"
+	.string "age as you.\n"
 	.string "Our {STR_VAR_1} was excited about making\n"
 	.string "a new friend.\p"
 	.string "Our {STR_VAR_1} is upstairs, I think.$"
 
 RivalsHouse_1F_Text_LikeChildLikeFather:
-	.string "Like child, like father.\p"
+	.string "Like child, like father.\n"
 	.string "My husband is as wild about POKéMON\n"
-	.string "as our child.\p"
+	.string "as our child.\n"
 	.string "If he's not at his LAB, he's likely\n"
-	.string "scrabbling about in grassy places.$"
+	.string "scrabbling about in grassy places.\p"
 
 RivalsHouse_1F_Text_TooBusyToNoticeVisit:
-	.string "That {RIVAL}!\p"
+	.string "That {RIVAL}!\n"
 	.string "I guess our child is too busy with\n"
-	.string "POKéMON to notice that you came\l"
-	.string "to visit, {PLAYER}{KUN}.$"
+	.string "POKéMON to notice that you came\n"
+	.string "to visit, {PLAYER}{KUN}.\p"
 
 RivalsHouse_1F_Text_WentOutToRoute103:
 	.string "Oh, {RIVAL} went out to ROUTE 103\n"
-	.string "just a little while ago.\p"
+	.string "just a little while ago.\n"
 	.string "Like father, like child.\n"
-	.string "{RIVAL} can't stay quietly at home.$"
+	.string "{RIVAL} can't stay quietly at home.\p"
 
 RivalsHouse_1F_Text_ShouldGoHomeEverySoOften:
 	.string "I think it's wonderful for people to\n"
-	.string "travel with POKéMON.\p"
+	.string "travel with POKéMON.\n"
 	.string "But you should go home every so often\n"
 	.string "to let your mother know you're okay.\p"
 	.string "She might not say it, but I'm sure she\n"
-	.string "worries about you, {PLAYER}{KUN}.$"
+	.string "worries about you, {PLAYER}{KUN}.\p"
 
 RivalsHouse_1F_Text_MayWhoAreYou:
 	.string "MAY: {PLAYER}! There you are.\p"
-	.string "PLAYER: Hey. Long time.\p"
+	.string "{PLAYER}: Hey. Long time.\p"
 	.string "MAY: Eight years since LITTLEROOT.\p"
-	.string "PLAYER: Feels like yesterday.\p"
+	.string "{PLAYER}: Feels like yesterday.\p"
 	.string "MAY: BRENDAN headed out already.\p"
-	.string "PLAYER: We'll meet them soon.\p"
+	.string "{PLAYER}: We'll meet them soon.\p"
 	.string "MAY: They'll flip when they see you.\p"
-	.string "PLAYER: Can't wait.\p"
+	.string "{PLAYER}: Can't wait.\p"
 	.string "MAY: Let's catch up outside later.\p"
-	.string "PLAYER: See you outside.$"
+	.string "{PLAYER}: See you outside.$"
 
 RivalsHouse_1F_Text_BrendanWhoAreYou:
 	.string "BRENDAN: {PLAYER}! There you are.\p"
-	.string "PLAYER: Hey. Long time.\p"
+	.string "{PLAYER}: Hey. Long time.\p"
 	.string "BRENDAN: Eight years since LITTLEROOT.\p"
-	.string "PLAYER: Feels like yesterday.\p"
+	.string "{PLAYER}: Feels like yesterday.\p"
 	.string "BRENDAN: MAY headed out already.\p"
-	.string "PLAYER: We'll meet them soon.\p"
+	.string "{PLAYER}: We'll meet them soon.\p"
 	.string "BRENDAN: They'll flip when they see you.\p"
-	.string "PLAYER: Can't wait.\p"
+	.string "{PLAYER}: Can't wait.\p"
 	.string "BRENDAN: Let's catch up outside later.\p"
 	.string "PLAYER: See you outside.$"
 
@@ -406,35 +406,43 @@ RivalsHouse_1F_Text_DoYouHavePokemon:
 	.string "own POKéMON?$"
 
 RivalsHouse_1F_Text_MrsBirchEightYears:
-	.string "MRS. BIRCH: {PLAYER}! Goodness, it’s been eight years\n"
-	.string "since I last saw you.$"
+	.string "MRS. BIRCH: {PLAYER}! Goodness, it's been\n"
+	.string "eight years since I last saw you.\p"
+	.string "$"
 
 RivalsHouse_1F_Text_MrsBirchHowHaveYouBeen:
-	.string "MRS. BIRCH: How have you been? And how is your\n"
-	.string "father?$"
+	.string "MRS. BIRCH: How have you been? And how is\n"
+	.string "your father?\p"
+	.string "$"
 
 RivalsHouse_1F_Text_PlayerArchipelagoIncident:
-	.string "{COLOR GREEN}{PLAYER}: …Father’s research kept us away on the\n"
-	.string "Archipelago.\p"
-	.string "Things… changed after the incident, but we\n"
-	.string "managed.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: …Father's research kept us away\n"
+	.string "on the Archipelago.\p"
+	.string "Things… changed after the incident,\n"
+	.string "but we managed.{COLOR DARK_GRAY}\p"
+	.string "$"
 
 RivalsHouse_1F_Text_MrsBirchAskSelene:
 	.string "MRS. BIRCH: I see… and what about SELENE?\n"
-	.string "Is your mother well?$"
+	.string "Is your mother well?\p"
+	.string "$"
 
 RivalsHouse_1F_Text_PlayerSeleneDoingHerBest:
-	.string "{COLOR GREEN}{PLAYER}: She’s doing her best. Always looking out\n"
-	.string "for me, no matter what.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: She's doing her best. Always\n"
+	.string "looking out for me, no matter what.\p"
+	.string "{COLOR DARK_GRAY}$"
 
 RivalsHouse_1F_Text_MrsBirchYouveGrown:
-	.string "MRS. BIRCH: That sounds like her. You’ve grown\n"
-	.string "so much.$"
+	.string "MRS. BIRCH: That sounds like her. You've\n"
+	.string "grown so much.\p"
+	.string "$"
 
 RivalsHouse_1F_Text_MrsBirchMayUpstairs:
-	.string "MRS. BIRCH: MAY should be upstairs. Go on and\n"
-	.string "say hello.$"
+	.string "MRS. BIRCH: MAY should be upstairs. Go on\n"
+	.string "and say hello.\p"
+	.string "$"
 
 RivalsHouse_1F_Text_MrsBirchBrendanUpstairs:
-	.string "MRS. BIRCH: BRENDAN should be upstairs. Go on and\n"
-	.string "say hello.$"
+	.string "MRS. BIRCH: BRENDAN should be upstairs. Go\n"
+	.string "on and say hello.\p"
+	.string "$"

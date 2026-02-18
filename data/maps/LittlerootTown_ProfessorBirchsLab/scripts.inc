@@ -901,8 +901,11 @@ LittlerootTown_ProfessorBirchsLab_Text_Post103Intro:
 LittlerootTown_ProfessorBirchsLab_Text_ZoroarkUnseen:
 	.string "BIRCH: That POKéMON we saw… it looked like a\n"
 	.string "ZOROARK, but at the same time, it didn’t.\p"
-	.string "BIRCH: ZOROARK isn’t even found in HOENN, and\n"
-	.string "I’ve never seen a form like that in any record.$"
+	.string "BIRCH: ZOROARK isn’t even found in HOENN,\n"
+	.string "and I’ve never seen a form like that in any\n"
+	.string "record. It’s strange and I’m not sure\n"
+	.string "what to make of it. I’ll have to look\n"
+	.string "into it further.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_SeleneIntervene:
 	.string "SELENE: Whatever it was, it nearly overwhelmed\n"

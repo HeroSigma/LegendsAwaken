@@ -228,9 +228,7 @@ Route101_EventScript_BirchsBag::
     call Route101_EventScript_SelectStarter
     // Hide the bag; let the player confront the hostile Pokémon
     setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
-    // Allow movement toward the hostile Pokémon by disabling the intro fences
-    // (prevents Birch from stopping you with "Don't leave me like this!")
-    setvar VAR_ROUTE101_STATE, 3
+    // Keep VAR_ROUTE101_STATE at 2 to prevent leaving until Birch is actually saved
     releaseall
     end
 
@@ -354,6 +352,9 @@ Route101_EventScript_UnwinnableEncounter::
     playse SE_WARP_OUT
     removeobject LOCALID_ROUTE101_ZIGZAGOON
     delay 20
+    // Player actually saves Birch now - display the rescue dialogue
+    msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
+    closemessage
     // Aftermath dialogue
     msgbox Route101_Text_PlayerVoiceProtecting, MSGBOX_DEFAULT
     msgbox Route101_Text_PlayerUneasyFeeling, MSGBOX_DEFAULT
@@ -361,6 +362,8 @@ Route101_EventScript_UnwinnableEncounter::
     msgbox Route101_Text_BirchNoMatterToLab, MSGBOX_DEFAULT
     // Birch rushes to the player and insists you take the remaining starters
     call Route101_EventScript_BirchGivesRemainingStarters
+    // Now set VAR_ROUTE101_STATE to 3 to allow movement after Birch is saved
+    setvar VAR_ROUTE101_STATE, 3
     // Ensure no message box is active before transitioning
     closemessage
     // Prepare lab state similar to saved flow

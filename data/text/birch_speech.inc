@@ -16,6 +16,10 @@ gText_Creator_Welcome::
 
 gText_Birch_Welcome::
 	.string "{COLOR GREEN}Hi there! Welcome to the world\n"
+	.string "of POKéMON. I'm Professor BIRCH-\n"
+	.string "field research, boots on the ground.\p"
+	.string "I've been studying the local POKéMON\n"
+	.string "and I'm happy to meet you.{COLOR WHITE}\p"
 	.string "of POKéMON.\p"
 	.string "I'm Professor BIRCH-field research,\n"
 	.string "boots on the ground.{COLOR WHITE}\p"

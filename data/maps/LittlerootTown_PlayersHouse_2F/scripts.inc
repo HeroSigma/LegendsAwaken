@@ -144,7 +144,7 @@ PlayersHouse_2F_Text_PlayerCallMom:
 	.string "in my room?{COLOR DARK_GRAY}$"
 
 PlayersHouse_2F_Text_MomReply:
-	.string "MOM: No, dear! Maybe the movers left it?\p"
+	.string "MOM: No, dear! Maybe the movers left it?\n"
 	.string "Or maybe it's a welcome gift!$"
 
 PlayersHouse_2F_Text_DistantVoice:
@@ -154,52 +154,57 @@ PlayersHouse_2F_Text_EmptyBall:
 	.string "The Poké Ball is empty.$"
 
 LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
-	.string "MOM: All set? The room looks nice.\p"
-	.string "Good. Caelum will be glad you're safe.\p"
-	.string "He said to take it easy for now.\p"
-	.string "When things calm down, he'll catch up.\p"
-	.string "Come downstairs when you're ready.\p"
+	.string "MOM: All set? The room looks nice.\n"
+	.string "Good. Caelum will be glad you're safe.\n"
+	.string "He said to take it easy for now.\n"
+	.string "When things calm down, he'll catch up.\n"
+	.string "Come downstairs when you're ready.\n"
 	.string "$"
         .equ PlayersHouse_2F_Text_HowDoYouLikeYourRoom, LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom
 // Upstairs intro monologue (gender-specific)
 PlayersHouse_2F_Text_UpstairsIntro_Male_1:
-	.string "{COLOR GREEN}{PLAYER}: So this is my room again…\p"
-	.string "feels smaller than the one back home.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: So this is my room again…\n"
+	.string "feels smaller than one back home.{COLOR DARK_GRAY}$"
 
 PlayersHouse_2F_Text_UpstairsIntro_Male_2:
-	.string "{COLOR GREEN}{PLAYER}: Still, it’s mine.\p"
+	.string "{COLOR GREEN}{PLAYER}: Still, it's mine.\n"
 	.string "A fresh start in HOENN.{COLOR DARK_GRAY}$"
 
 PlayersHouse_2F_Text_UpstairsIntro_Male_3:
-	.string "{COLOR GREEN}{PLAYER}: …Back at the Archipelago, Father’s\p"
-	.string "study was always full of notes and machines.\p"
-	.string "This room feels… quiet in comparison.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: …Back at the Archipelago,\n"
+	.string "Father's study was always full of notes\n"
+	.string "and machines. This room feels… quiet.\n"
+	.string "in comparison.{COLOR DARK_GRAY}$"
 
 PlayersHouse_2F_Text_UpstairsIntro_Female_1:
-	.string "{COLOR GREEN}{PLAYER}: So this is my room again…\p"
-	.string "it’s cozier than what I remember.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: So this is my room again…\n"
+	.string "it's cozier than what I remember.{COLOR DARK_GRAY}$"
 
 PlayersHouse_2F_Text_UpstairsIntro_Female_2:
-	.string "{COLOR GREEN}{PLAYER}: Guess I’ll have to make it mine\p"
-	.string "all over again.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Guess I'll have to make it\n"
+	.string "mine all over again.{COLOR DARK_GRAY}$"
 
 PlayersHouse_2F_Text_UpstairsIntro_Female_3:
-	.string "{COLOR GREEN}{PLAYER}: …At the Archipelago, Father’s study\p"
-	.string "always echoed with machines and scribbled notes.\p"
-	.string "This room feels… still.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: …At the Archipelago, Father's\n"
+	.string "study always echoed with machines\n"
+	.string "and scribbled notes. This room feels…\n"
+	.string "still.{COLOR DARK_GRAY}$"
 
 // Mom enters after setting the clock
 PlayersHouse_2F_Text_MomDidYouSetClock:
-	.string "MOM: {PLAYER}! Did you set the clock yet?$"
+	.string "MOM: {PLAYER}! Did you set the clock\n"
+	.string "yet?$"
 
 PlayersHouse_2F_Text_MomMakeSureSchedule:
-	.string "MOM: Make sure it’s right- we’ll need to\n"
-	.string " keep a proper schedule here in LITTLEROOT.$"
+	.string "MOM: Make sure it's right- we'll need to\n"
+	.string "keep a proper schedule here in LITTLEROOT.$"
 
 PlayersHouse_2F_Text_PlayerClockLine_Male:
-	.string "{COLOR GREEN}{PLAYER}: Yeah, I’ll set it. Something about\n"
-	.string "seeing the hands move… feels grounding.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Yeah, I'll set it. Something\n"
+	.string "about seeing the hands move… feels grounding.\n"
+	.string "{COLOR DARK_GRAY}$"
 
 PlayersHouse_2F_Text_PlayerClockLine_Female:
-	.string "{COLOR GREEN}{PLAYER}: Mm. I’ll set it. Something about the\n"
-	.string "ticking… feels steady.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Mm. I'll set it. Something\n"
+	.string "about ticking… feels steady.\n"
+	.string "{COLOR DARK_GRAY}$"
