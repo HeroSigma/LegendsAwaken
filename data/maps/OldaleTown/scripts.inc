@@ -5,8 +5,14 @@ OldaleTown_MapScripts::
 OldaleTown_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	setflag FLAG_VISITED_OLDALE_TOWN
-	@ Cameo scene: after Route 103 battle, show once on first return
-	call_if_eq VAR_BIRCH_LAB_STATE, 4, OldaleTown_EventScript_TryCameoScene
+	@ Ensure cameo characters are initially hidden
+	setflag FLAG_TEMP_8
+	setflag FLAG_TEMP_9
+	@ Set VAR_BIRCH_LAB_STATE to 4 when arriving after Route103 battle
+	goto_if_unset FLAG_DEFEATED_RIVAL_ROUTE103, OldaleTown_OnTransition_AfterCameoCheck
+	setvar VAR_BIRCH_LAB_STATE, 4
+OldaleTown_OnTransition_AfterCameoCheck:
+	@ Cameo scene only triggered by coordinate events, not automatically
 	goto_if_unset FLAG_DEFEATED_RIVAL_ROUTE103, OldaleTown_EventScript_TryCameoScene_Ret
 	call_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_BlockWestEntrance
 	call_if_unset FLAG_RECEIVED_POTION_OLDALE, OldaleTown_EventScript_MoveMartEmployee
@@ -36,6 +42,9 @@ OldaleTown_EventScript_CameoScene::
 	waitmovement 0
 	removeobject LOCALID_OLDALE_CAMEO_CYRUS
 	removeobject LOCALID_OLDALE_CAMEO_GIOVANNI
+	@ Set flags to hide cameo characters after scene
+	setflag FLAG_TEMP_8
+	setflag FLAG_TEMP_9
 	msgbox OldaleTown_Text_PlayerLingeringThought, MSGBOX_DEFAULT
 	releaseall
 	return
@@ -67,8 +76,12 @@ OldaleTown_Text_PlayerLingeringThought:
 
 @ This script seems pointless because nothing uses VAR_OLDALE_TOWN_STATE
 OldaleTown_EventScript_SetOldaleState::
-	setvar VAR_OLDALE_TOWN_STATE, 1
-	return
+	setvar VAR_BIRCH_LAB_STATE, 4
+	releaseall
+	end
+
+OldaleTown_EventScript_CameoCharacter::
+	end
 
 OldaleTown_EventScript_BlockWestEntrance::
 	setobjectxyperm LOCALID_FOOTPRINTS_MAN, 1, 11

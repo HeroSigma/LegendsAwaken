@@ -265,6 +265,11 @@ LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeFemale::
 	setobjectxy LOCALID_LITTLEROOT_BIRCH, 14, 10
 	end
 
+LittlerootTown_Text_CanUsePCToStoreItems:
+	.string "You can use my PC here to\n"
+	.string "store and retrieve items.\p"
+	.string "$"
+
 LittlerootTown_EventScript_FatMan::
 	msgbox LittlerootTown_Text_CanUsePCToStoreItems, MSGBOX_NPC
 	end
@@ -962,93 +967,106 @@ LittlerootTown_Text_PlayerWonderHow:
 	.string "{COLOR GREEN}(Something\n"
 	.string "tells me this time\n"
 	.string "is different…)\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 LittlerootTown_Text_MomWereFinallyHere_Male:
-    .string "MOM: We’re finally here, {PLAYER}!$"
+	.string "MOM: We're finally here, {PLAYER}!\n"
+	.string "$"
 
 LittlerootTown_Text_MomSmallerThanBefore_Male:
-	.string "MOM: Littleroot Town…\n"
-	.string "smaller than what\n"
-	.string "you remember,\n"
-	.string "right?$"
+	.string "MOM: Littleroot Town… smaller\n"
+	.string "than what you remember,\n"
+	.string "right?\n"
+	.string "$"
 
 LittlerootTown_Text_PlayerFeelsDifferent_Male:
-	.string "{COLOR GREEN}{PLAYER}: …It\n"
-	.string "feels different.\n"
-	.string "Quieter than the\n"
+	.string "{COLOR GREEN}{PLAYER}: …It feels\n"
+	.string "different. Quieter than\n"
 	.string "Archipelago.\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 LittlerootTown_Text_PlayerHardToBelieve_Male:
-	.string "{COLOR GREEN}{PLAYER}: Hard\n"
-	.string "to believe eight\n"
-	.string "years have passed.\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Hard to\n"
+	.string "believe eight years have\n"
+	.string "passed.\n"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
+
+LittlerootTown_Text_MomFreshStart_Female:
+	.string "MOM: Eight years away, and\n"
+	.string "now a fresh start. That's\n"
+	.string "what we need.\n"
+	.string "$"
 
 LittlerootTown_Text_MomFreshStart_Male:
-	.string "MOM: Eight years away,\n"
-	.string "and now a fresh\n"
-	.string "start. That’s what\n"
-	.string "we need.$"
+	.string "MOM: Eight years away, and\n"
+	.string "now a fresh start. That's\n"
+	.string "what we need.\n"
+	.string "$"
 
 LittlerootTown_Text_MomComeInsideVigoroth_Male:
-	.string "MOM: Come inside-\n"
-	.string "Vigoroth have\n"
-	.string "already finished\n"
-	.string "the heavy lifting.$"
+	.string "MOM: Come inside- Vigoroth\n"
+	.string "have already finished\n"
+	.string "the heavy lifting.\n"
+	.string "$"
 
 LittlerootTown_Text_MomWereFinallyHere_Female:
-    .string "MOM: We’re finally here, {PLAYER}!$"
+	.string "MOM: We're finally here, {PLAYER}!\n"
+	.string "$"
 
 LittlerootTown_Text_MomSmallerThanBefore_Female:
-	.string "MOM: Littleroot Town…\n"
-	.string "smaller than what\n"
-	.string "you remember,\n"
-	.string "right?$"
+	.string "MOM: Littleroot Town… smaller\n"
+	.string "than what you remember,\n"
+	.string "right?\n"
+	.string "$"
 
 LittlerootTown_Text_PlayerFeelsDifferent_Female:
-	.string "{COLOR GREEN}{PLAYER}: …It\n"
-	.string "feels different.\n"
-	.string "Quieter than the\n"
-	.string "Archipelago.\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: …It feels\n"
+	.string "different. Quieter than\n"
+	.string "the Archipelago.\n"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 LittlerootTown_Text_PlayerHardToBelieve_Female:
 	.string "{COLOR GREEN}{PLAYER}: Hard\n"
 	.string "to believe eight\n"
 	.string "years have passed.\n"
-	.string "{COLOR DARK_GRAY}$"
-
-LittlerootTown_Text_MomFreshStart_Female:
-	.string "MOM: Eight years away,\n"
-	.string "and now a fresh\n"
-	.string "start. That’s what\n"
-	.string "we need.$"
+	.string "{COLOR DARK_GRAY}\n"
 
 LittlerootTown_Text_MomComeInsideVigoroth_Female:
-	.string "MOM: Come inside-\n"
-	.string "Vigoroth have\n"
-	.string "already finished\n"
-	.string "the heavy lifting.$"
+	.string "MOM: Come inside- Vigoroth have\n"
+	.string "already finished the heavy\n"
+	.string "lifting. Let's get settled\n"
+	.string "in, shall we?\n"
+	.string "$"
 
 LittlerootTown_Text_WaitPlayer:
-	.string "MOM: Wait, {PLAYER}!$"
+	.string "MOM: Wait, {PLAYER}!\n"
+	.string "$"
 
 LittlerootTown_Text_WearTheseRunningShoes:
 	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
-	.string "introduce yourself to PROF. BIRCH?\p"
+	.string "introduce yourself to PROF. BIRCH?\n"
 	.string "Oh! What an adorable POKéMON!\n"
-	.string "You got it from PROF. BIRCH. How nice!\p"
+	.string "You got it from PROF. BIRCH. How nice!\n"
 	.string "You're your father's child, all right.\n"
-	.string "You look good together with POKéMON!\p"
-	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these RUNNING SHOES.\p"
-	.string "They'll put a zip in your step!$"
+	.string "You look good together with POKéMON!\n"
+	.string "Here, honey! If you're going out on\n"
+	.string "an adventure, wear these RUNNING SHOES.\n"
+	.string "They'll put a zip in your step!\n"
+	.string "$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
 	.string "{PLAYER} switched shoes with the\n"
-	.string "RUNNING SHOES.$"
+	.string "RUNNING SHOES.\n"
+	.string "$"
+
+LittlerootTown_Text_ComeHomeIfAnythingHappens:
+	.string "Come home if anything\n"
+	.string "happens.\p"
+	.string "$"
 
 LittlerootTown_Text_ExplainRunningShoes:
 	.string "MOM: {PLAYER}, those shoes came with\n"
@@ -1056,55 +1074,56 @@ LittlerootTown_Text_ExplainRunningShoes:
 	.string "“Press the B Button while wearing these\n"
 	.string "RUNNING SHOES to run extra-fast!\p"
 	.string "“Slip on these RUNNING SHOES and race\n"
-	.string "in the great outdoors!”$"
+	.string "in the great outdoors! It's really fun!\n"
+	.string "$"
 
-LittlerootTown_Text_ComeHomeIfAnythingHappens:
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
+	.string "… … … … … … …\n"
 	.string "To think that you have your very own\n"
-	.string "POKéMON now…\l"
-	.string "Your father will be overjoyed.\p"
-	.string "…But please be careful.\n"
-	.string "If anything happens, you can come home.\p"
-	.string "Go on, go get them, honey!$"
-
-LittlerootTown_Text_CanUsePCToStoreItems:
-	.string "If you use a PC, you can store items\n"
-	.string "and POKéMON.\p"
-	.string "The power of science is staggering!$"
+	.string "POKéMON now…\n"
+	.string "Your father will be overjoyed.\n"
+	.string "But please be careful, always.\n"
+	.string "If anything happens, come home to me.\n"
+	.string "Go on, go get them, my dear honey.$"
+	.string "and POKéMON. It's really useful!\n"
+	.string "The power of science is staggering!\n"
+	.string "$"
 
 LittlerootTown_Text_BirchSpendsDaysInLab:
 	.string "PROF. BIRCH spends days in his LAB\n"
-	.string "studying, then he'll suddenly go out in\l"
-	.string "the wild to do more research…\p"
-	.string "When does PROF. BIRCH spend time\n"
-	.string "at home?$"
+	.string "studying, then he'll suddenly go out\n"
+	.string "in the wild to do more research…\n"
+	.string "When does PROF. BIRCH spend time at\n"
+	.string "home?$"
 
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
-	.string "Um, um, um!\p"
+	.string "Um, um, um!\n"
 	.string "If you go outside and go in the grass,\n"
-	.string "wild POKéMON will jump out!$"
+	.string "wild POKéMON will jump out!\n"
+	.string "$"
 
 LittlerootTown_Text_DangerousIfYouDontHavePokemon:
 	.string "It's dangerous if you don't have\n"
-	.string "your own POKéMON.$"
+	.string "your own POKéMON. Be careful!\n"
+	.string "$"
 
 LittlerootTown_Text_CanYouGoSeeWhatsHappening:
-	.string "Um, hi!\p"
+	.string "Um, hi!\n"
 	.string "There are scary POKéMON outside!\n"
-	.string "I can hear their cries!\p"
+	.string "I can hear their cries!\n"
 	.string "I want to go see what's going on,\n"
-	.string "but I don't have any POKéMON…\p"
-	.string "Can you go see what's happening\n"
-	.string "for me?$"
+	.string "but I don't have any POKéMON…\n"
+	.string "Can you go see what's happening for\n"
+	.string "me?$"
 
 LittlerootTown_Text_YouSavedBirch:
 	.string "You saved PROF. BIRCH!\n"
-	.string "I'm so glad!$"
+	.string "I'm so glad!\n"
+	.string "$"
 
 LittlerootTown_Text_GoodLuckCatchingPokemon:
 	.string "Are you going to catch POKéMON?\n"
-	.string "Good luck!$"
+	.string "Good luck!\n"
+	.string "$"
 
 LittlerootTown_Text_TownSign:
         .string "LITTLEROOT TOWN\n"

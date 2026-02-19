@@ -1,7 +1,15 @@
 #ifndef GUARD_TRAINER_POOLS_H
 #define GUARD_TRAINER_POOLS_H
 
-#include "pokemon.h"
+#include "constants/pokemon.h"
+
+// Forward declarations
+struct Trainer;
+struct TrainerMon;
+struct Pokemon;
+
+// Pool structure for trainer parties
+typedef struct TrainerMonLine TrainerMonLine;
 #include "data.h"
 #include "global.h"
 
@@ -74,5 +82,7 @@ struct PickFunctions
 };
 
 void DoTrainerPartyPool(const struct Trainer *trainer, u32 *monIndices, u8 monsCount, u32 battleTypeFlags);
+void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *pool, u16 aceSpecies);
+void ApplyDynamicAIToTrainer(struct Trainer *trainer, struct Pokemon *generatedParty, u8 partySize);
 
 #endif

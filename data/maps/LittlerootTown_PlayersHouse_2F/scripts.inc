@@ -104,12 +104,13 @@ PlayersHouse_2F_Text_PlayerSafeEnough:
 	.string "I guess this is safe enough.$"
 
 PlayersHouse_2F_Text_Notebook:
-	.string "{PLAYER} flipped open the notebook.\p"
+	.string "{PLAYER} flipped open notebook.\n"
 	.string "ADVENTURE RULE NO. 1\n"
-	.string "Open the MENU with START.\p"
+	.string "Open MENU with START.\n"
 	.string "ADVENTURE RULE NO. 2\n"
-	.string "Record your progress with SAVE.\p"
-	.string "The remaining pages are blank…$"
+	.string "Record your progress with SAVE.\n"
+	.string "The remaining pages are blank…\n"
+	.string "$"
 
 Common_Text_LookCloserAtMap:
 	.string "{PLAYER} took a closer look at the\n"
@@ -128,30 +129,37 @@ Common_Text_LookCloserAtMapSevii:
 	.string "SEVII ISLES map.$"
 
 PlayersHouse_2F_Text_ItsAGameCube:
-        .string "It's a Nintendo GameCube.\p"
-        .string "A Game Boy Advance is connected to\n"
-        .string "serve as the Controller.$"
+	.string "It's a Nintendo GameCube.\n"
+	.string "A Game Boy Advance is connected to\n"
+	.string "serve as Controller.\n"
+	.string "$"
 
 PlayersHouse_2F_Text_FlickerThought:
-	.string "{COLOR GREEN}(Did the light just flicker?\n"
-	.string "Weird…){COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}(Did light just flicker?\n"
+	.string "Weird…){COLOR DARK_GRAY}\n"
+	.string "$"
 
 PlayersHouse_2F_Text_PlayerBallSpot:
-	.string "{COLOR GREEN}{PLAYER}: Huh? There's a Poké Ball here…{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Huh? There's a Poké Ball here…\n"
+	.string "{COLOR DARK_GRAY}$"
 
 PlayersHouse_2F_Text_PlayerCallMom:
 	.string "{COLOR GREEN}{PLAYER}: Mom, did you put a Poké Ball\n"
-	.string "in my room?{COLOR DARK_GRAY}$"
+	.string "in my room?{COLOR DARK_GRAY}\n"
+	.string "$"
 
 PlayersHouse_2F_Text_MomReply:
-	.string "MOM: No, dear! Maybe the movers left it?\n"
-	.string "Or maybe it's a welcome gift!$"
+	.string "MOM: No, dear! Maybe movers left it?\n"
+	.string "Or maybe it's a welcome gift!\n"
+	.string "$"
 
 PlayersHouse_2F_Text_DistantVoice:
-    	.string "A distant voice: Your destiny awaits…$"
+	.string "A distant voice: Your destiny awaits…\n"
+	.string "$"
 
 PlayersHouse_2F_Text_EmptyBall:
-	.string "The Poké Ball is empty.$"
+	.string "The Poké Ball is empty.\n"
+	.string "$"
 
 LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
 	.string "MOM: All set? The room looks nice.\n"
@@ -164,47 +172,65 @@ LittlerootTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
 // Upstairs intro monologue (gender-specific)
 PlayersHouse_2F_Text_UpstairsIntro_Male_1:
 	.string "{COLOR GREEN}{PLAYER}: So this is my room again…\n"
-	.string "feels smaller than one back home.{COLOR DARK_GRAY}$"
+	.string "feels smaller than one back home.\n"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 PlayersHouse_2F_Text_UpstairsIntro_Male_2:
 	.string "{COLOR GREEN}{PLAYER}: Still, it's mine.\n"
-	.string "A fresh start in HOENN.{COLOR DARK_GRAY}$"
+	.string "A fresh start in HOENN.\n"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 PlayersHouse_2F_Text_UpstairsIntro_Male_3:
 	.string "{COLOR GREEN}{PLAYER}: …Back at the Archipelago,\n"
 	.string "Father's study was always full of notes\n"
 	.string "and machines. This room feels… quiet.\n"
-	.string "in comparison.{COLOR DARK_GRAY}$"
+	.string "in comparison.\n"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 PlayersHouse_2F_Text_UpstairsIntro_Female_1:
 	.string "{COLOR GREEN}{PLAYER}: So this is my room again…\n"
-	.string "it's cozier than what I remember.{COLOR DARK_GRAY}$"
+	.string "it's cozier than what I remember.\n"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 PlayersHouse_2F_Text_UpstairsIntro_Female_2:
-	.string "{COLOR GREEN}{PLAYER}: Guess I'll have to make it\n"
-	.string "mine all over again.{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{PLAYER}: Guess I'll have to\n"
+	.string "make it mine all over again.\n"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 PlayersHouse_2F_Text_UpstairsIntro_Female_3:
 	.string "{COLOR GREEN}{PLAYER}: …At the Archipelago, Father's\n"
 	.string "study always echoed with machines\n"
 	.string "and scribbled notes. This room feels…\n"
-	.string "still.{COLOR DARK_GRAY}$"
+	.string "still.\n"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 // Mom enters after setting the clock
 PlayersHouse_2F_Text_MomDidYouSetClock:
-	.string "MOM: {PLAYER}! Did you set the clock\n"
-	.string "yet?$"
+	.string "MOM: {PLAYER}! Did you set clock\n"
+	.string "yet?\n"
+	.string "$"
 
 PlayersHouse_2F_Text_MomMakeSureSchedule:
-	.string "MOM: Make sure it's right- we'll need to\n"
-	.string "keep a proper schedule here in LITTLEROOT.$"
+	.string "MOM: Make sure it's right- we'll need\n"
+	.string "to keep a proper schedule here in\n"
+	.string "LITTLEROOT.\n"
+	.string "$"
 
 PlayersHouse_2F_Text_PlayerClockLine_Male:
 	.string "{COLOR GREEN}{PLAYER}: Yeah, I'll set it. Something\n"
-	.string "about seeing the hands move… feels grounding.\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "about seeing the hands move… feels\n"
+	.string "grounding.\n"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 PlayersHouse_2F_Text_PlayerClockLine_Female:
 	.string "{COLOR GREEN}{PLAYER}: Mm. I'll set it. Something\n"
 	.string "about ticking… feels steady.\n"
-	.string "{COLOR DARK_GRAY}$"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"

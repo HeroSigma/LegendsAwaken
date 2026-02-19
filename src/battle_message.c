@@ -3528,6 +3528,32 @@ void BattlePutTextOnWindow(const u8 *text, u8 windowId)
         gTextFlags.canABSpeedUpPrint = 0;
     }
 
+    // Apply color coding for effectiveness messages
+    if (windowId == B_WIN_MSG)
+    {
+        if (StringCompare(text, gBattleStringsTable[STRINGID_SUPEREFFECTIVE]) == 0 ||
+            StringCompare(text, gBattleStringsTable[STRINGID_SUPEREFFECTIVETWOFOES]) == 0)
+        {
+            // Super effective - green text
+            printerTemplate.fgColor = TEXT_COLOR_GREEN;
+            printerTemplate.shadowColor = TEXT_COLOR_DARK_GRAY;
+        }
+        else if (StringCompare(text, gBattleStringsTable[STRINGID_NOTVERYEFFECTIVE]) == 0 ||
+                 StringCompare(text, gBattleStringsTable[STRINGID_NOTVERYEFFECTIVETWOFOES]) == 0)
+        {
+            // Not very effective - red text
+            printerTemplate.fgColor = TEXT_COLOR_RED;
+            printerTemplate.shadowColor = TEXT_COLOR_DARK_GRAY;
+        }
+        else if (StringCompare(text, gBattleStringsTable[STRINGID_ITDOESNTAFFECT]) == 0 ||
+                 StringCompare(text, gBattleStringsTable[STRINGID_ITDOESNTAFFECTTWOFOES]) == 0)
+        {
+            // Doesn't affect - gray text
+            printerTemplate.fgColor = TEXT_COLOR_LIGHT_GRAY;
+            printerTemplate.shadowColor = TEXT_COLOR_DARK_GRAY;
+        }
+    }
+
     AddTextPrinter(&printerTemplate, speed, NULL);
 
     if (copyToVram)

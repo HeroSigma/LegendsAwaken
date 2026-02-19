@@ -193,7 +193,6 @@ Route103_EventScript_RivalExit::
 @ Route103_EventScript_RivalExitFacingNorth removed
 
 Route103_EventScript_RivalEnd::
-	setvar VAR_BIRCH_LAB_STATE, 4
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
 	setflag FLAG_DEFEATED_RIVAL_ROUTE103
 	setvar VAR_OLDALE_RIVAL_STATE, 1
