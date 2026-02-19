@@ -1286,24 +1286,24 @@ static u8 GetBadgeCount(void)
     if (FlagGet(FLAG_BADGE08_GET)) count++;
     
     // Check Johto badges
-    if (FlagGet(FLAG_JOHTO_BADGE01_GET)) count++;
-    if (FlagGet(FLAG_JOHTO_BADGE02_GET)) count++;
-    if (FlagGet(FLAG_JOHTO_BADGE03_GET)) count++;
-    if (FlagGet(FLAG_JOHTO_BADGE04_GET)) count++;
-    if (FlagGet(FLAG_JOHTO_BADGE05_GET)) count++;
-    if (FlagGet(FLAG_JOHTO_BADGE06_GET)) count++;
-    if (FlagGet(FLAG_JOHTO_BADGE07_GET)) count++;
-    if (FlagGet(FLAG_JOHTO_BADGE08_GET)) count++;
+    // if (FlagGet(FLAG_JOHTO_BADGE01_GET)) count++;
+    // if (FlagGet(FLAG_JOHTO_BADGE02_GET)) count++;
+    // if (FlagGet(FLAG_JOHTO_BADGE03_GET)) count++;
+    // if (FlagGet(FLAG_JOHTO_BADGE04_GET)) count++;
+    // if (FlagGet(FLAG_JOHTO_BADGE05_GET)) count++;
+    // if (FlagGet(FLAG_JOHTO_BADGE06_GET)) count++;
+    // if (FlagGet(FLAG_JOHTO_BADGE07_GET)) count++;
+    // if (FlagGet(FLAG_JOHTO_BADGE08_GET)) count++;
     
     // Check Kanto badges
-    if (FlagGet(FLAG_KANTO_BADGE01_GET)) count++;
-    if (FlagGet(FLAG_KANTO_BADGE02_GET)) count++;
-    if (FlagGet(FLAG_KANTO_BADGE03_GET)) count++;
-    if (FlagGet(FLAG_KANTO_BADGE04_GET)) count++;
-    if (FlagGet(FLAG_KANTO_BADGE05_GET)) count++;
-    if (FlagGet(FLAG_KANTO_BADGE06_GET)) count++;
-    if (FlagGet(FLAG_KANTO_BADGE07_GET)) count++;
-    if (FlagGet(FLAG_KANTO_BADGE08_GET)) count++;
+    // if (FlagGet(FLAG_KANTO_BADGE01_GET)) count++;
+    // if (FlagGet(FLAG_KANTO_BADGE02_GET)) count++;
+    // if (FlagGet(FLAG_KANTO_BADGE03_GET)) count++;
+    // if (FlagGet(FLAG_KANTO_BADGE04_GET)) count++;
+    // if (FlagGet(FLAG_KANTO_BADGE05_GET)) count++;
+    // if (FlagGet(FLAG_KANTO_BADGE06_GET)) count++;
+    // if (FlagGet(FLAG_KANTO_BADGE07_GET)) count++;
+    // if (FlagGet(FLAG_KANTO_BADGE08_GET)) count++;
     
     return count;
 }

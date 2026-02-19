@@ -54,9 +54,9 @@ u32 GetCurrentLevelCap(void)
         // {FLAG_SINNOH_CHAMPION, 200},    // Sinnoh E4/Cynthia
         
         // Sevii Islands - Cap 255 by final fight
-        {FLAG_SEVII_MIDPOINT, 220},     // Mid Sevii progress
-        {FLAG_SEVII_LATE, 240},         // Late Sevii progress  
-        {FLAG_SEVII_FINAL, 255},        // Final Sevii boss
+       // {FLAG_SEVII_MIDPOINT, 220},     // Mid Sevii progress
+       // {FLAG_SEVII_LATE, 240},         // Late Sevii progress  
+       // {FLAG_SEVII_FINAL, 255},        // Final Sevii boss
     };
 
     u32 i;
