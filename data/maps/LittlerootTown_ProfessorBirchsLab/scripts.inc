@@ -661,6 +661,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_RivalGiveBalls, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_BALL, 5
 	giveitem ITEM_POKEMON_BOX_LINK, 1
+	giveitem ITEM_TERA_ORB, 1
+	giveitem ITEM_EXP_SHARE, 1
+	giveitem ITEM_DYNAMAX_BAND, 1
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_MayNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_PlayerThanksForBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 0
@@ -669,12 +672,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls::
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_RivalGiveBalls, MSGBOX_DEFAULT
 	giveitem ITEM_POKE_BALL, 5
-	giveitem ITEM_EXP_SHARE, 1
-	giveitem ITEM_TERA_ORB, 1
-	giveitem ITEM_MEGA_RING, 1
-	giveitem ITEM_Z_POWER_RING, 1
-	giveitem ITEM_DYNAMAX_BAND, 1
 	giveitem ITEM_POKEMON_BOX_LINK, 1
+	giveitem ITEM_TERA_ORB, 1
+	giveitem ITEM_EXP_SHARE, 1
+	giveitem ITEM_DYNAMAX_BAND, 1
 	call_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_PlayerThanksForBalls, MSGBOX_DEFAULT
 	setvar VAR_RESULT, 1

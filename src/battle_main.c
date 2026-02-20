@@ -70,6 +70,11 @@ extern bool8 TrainerClassUsesPool(u8 trainerClass, enum TrainerPoolCategory *out
 extern void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *pool, u16 aceSpecies);
 extern u16 GetAceSpeciesForTrainer(u16 trainerId);
 extern bool8 IsStaticTrainerClass(u8 trainerClass);
+
+// Rival pool functions
+extern const TrainerMonLine *GetBrendanPool(void);
+extern const TrainerMonLine *GetMayPool(void);
+extern const TrainerMonLine *GetWallyPool(void);
 #include "tv.h"
 #include "util.h"
 
@@ -2099,11 +2104,54 @@ if (USE_DYNAMIC_TRAINER_POOLS)
     if (TrainerClassUsesPool(trainer->trainerClass, NULL))
     {
         DebugPrintf("Trainer class %d uses pool\n", trainer->trainerClass);
-        const TrainerMonLine *pool = GetPoolForTrainerClass(trainer->trainerClass);
+        
+        // Special handling for rivals - use dedicated pools based on trainer ID
+        const TrainerMonLine *pool = NULL;
+        if (trainer->trainerClass == TRAINER_CLASS_RIVAL)
+        {
+            // Get trainer ID from battle parameters
+            u16 trainerId = TRAINER_BATTLE_PARAM.opponentA;
+            
+            // Check specific rival trainer ID to determine which pool to use
+            if ((trainerId >= TRAINER_BRENDAN_ROUTE_103_MUDKIP && trainerId <= TRAINER_BRENDAN_ROUTE_119_TORCHIC) ||
+                (trainerId >= TRAINER_BRENDAN_RUSTBORO_TREECKO && trainerId <= TRAINER_BRENDAN_RUSTBORO_TORCHIC) ||
+                (trainerId >= TRAINER_BRENDAN_LILYCOVE_MUDKIP && trainerId <= TRAINER_BRENDAN_LILYCOVE_TORCHIC) ||
+                trainerId == TRAINER_BRENDAN_PLACEHOLDER)
+            {
+                pool = GetBrendanPool();
+                DebugPrintf("Using Brendan's dedicated pool (trainerId: %d)\n", trainerId);
+            }
+            else if ((trainerId >= TRAINER_MAY_ROUTE_103_MUDKIP && trainerId <= TRAINER_MAY_ROUTE_119_TORCHIC) ||
+                     (trainerId >= TRAINER_MAY_RUSTBORO_TREECKO && trainerId <= TRAINER_MAY_RUSTBORO_TORCHIC) ||
+                     (trainerId >= TRAINER_MAY_LILYCOVE_MUDKIP && trainerId <= TRAINER_MAY_LILYCOVE_TORCHIC) ||
+                     trainerId == TRAINER_MAY_PLACEHOLDER)
+            {
+                pool = GetMayPool();
+                DebugPrintf("Using May's dedicated pool (trainerId: %d)\n", trainerId);
+            }
+            else if (trainerId >= TRAINER_WALLY_VR_1 && trainerId <= TRAINER_WALLY_VR_5)
+            {
+                pool = GetWallyPool();
+                DebugPrintf("Using Wally's dedicated pool (trainerId: %d)\n", trainerId);
+            }
+            else
+            {
+                // Fallback to generic rival pool
+                pool = GetPoolForTrainerClass(trainer->trainerClass);
+                DebugPrintf("Using generic rival pool (trainerId: %d)\n", trainerId);
+            }
+        }
+        else
+        {
+            // Non-rival classes use standard pool selection
+            pool = GetPoolForTrainerClass(trainer->trainerClass);
+        }
+        
         if (pool)
         {
             DebugPrintf("Calling GenerateSpecialTrainerParty\n");
-            GenerateSpecialTrainerParty((struct Trainer *)trainer, pool, GetAceSpeciesForTrainer(trainer->trainerClass));
+            u16 trainerId = TRAINER_BATTLE_PARAM.opponentA;
+            GenerateSpecialTrainerParty((struct Trainer *)trainer, pool, GetAceSpeciesForTrainer(trainerId));
             // Apply dynamic AI based on generated team
             extern void ApplyDynamicAIToTrainer(struct Trainer *trainer, struct Pokemon *generatedParty, u8 partySize);
             extern struct Pokemon gEnemyParty[PARTY_SIZE];

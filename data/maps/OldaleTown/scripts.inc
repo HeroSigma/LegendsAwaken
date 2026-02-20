@@ -20,9 +20,9 @@ OldaleTown_OnTransition_AfterCameoCheck:
 	end
 
 OldaleTown_EventScript_TryCameoScene::
-	goto_if_set FLAG_TEMP_A, OldaleTown_EventScript_TryCameoScene_Ret
+	goto_if_set FLAG_OLDALE_CAMEO_COMPLETED, OldaleTown_EventScript_TryCameoScene_Ret
 	call OldaleTown_EventScript_CameoScene
-	setflag FLAG_TEMP_A
+	setflag FLAG_OLDALE_CAMEO_COMPLETED
 OldaleTown_EventScript_TryCameoScene_Ret:
 	return
 
@@ -59,20 +59,30 @@ OldaleTown_Movement_Cameo_WalkNorthWest:
 	step_end
 
 OldaleTown_Text_Cameo_BlackCrimson:
-	.string "???: This place… HOENN feels unsettled.\p"
-	.string "Almost as though something is leaking through.$"
+	.string "???: This place… HOENN feels unsettled.\n"
+	.string "Almost as though something is leaking\n"
+	.string "through.\n"
+	.string "$"
 
 OldaleTown_Text_Cameo_SilverBlue:
-	.string "???: Indeed. The patterns are off, the air is wrong.\p"
-	.string "This region hides a fracture we must study.$"
+	.string "???: Indeed. The patterns are off, the\n"
+	.string "air is wrong.\n"
+	.string "This region hides a fracture we must\n"
+	.string "study.\n"
+	.string "$"
 
 OldaleTown_Text_Cameo_BlackCrimson_Move:
-	.string "???: Keep walking. No need to draw eyes here.$"
+	.string "???: Keep walking. No need to draw\n"
+	.string "eyes here.\n"
+	.string "$"
 
 OldaleTown_Text_PlayerLingeringThought:
-	.string "{COLOR GREEN}{PLAYER}: (Those men… I've seen their faces before.\p"
+	.string "{COLOR GREEN}{PLAYER}: (Those men… I've seen their faces\n"
+	.string "before.\n"
 	.string "But from where…? The thought lingers, but…\n"
-	.string "I can't place it yet.){COLOR DARK_GRAY}$"
+	.string "I can't place it yet.)\n"
+	.string "{COLOR DARK_GRAY}\n"
+	.string "$"
 
 @ This script seems pointless because nothing uses VAR_OLDALE_TOWN_STATE
 OldaleTown_EventScript_SetOldaleState::
@@ -409,60 +419,70 @@ OldaleTown_Movement_ReturnToOriginalPosition:
 
 OldaleTown_Text_SavingMyProgress:
 	.string "I want to take a rest, so I'm saving my\n"
-	.string "progress.$"
+	.string "progress.\n"
+	.string "$"
 
 OldaleTown_Text_IWorkAtPokemonMart:
 	.string "Hi!\n"
-	.string "I work at a POKéMON MART.\p"
-	.string "Can I get you to come with me?$"
+	.string "I work at a POKéMON MART.\n"
+	.string "Can I get you to come with me?\n"
+	.string "$"
 
 OldaleTown_Text_ThisIsAPokemonMart:
 	.string "This is a POKéMON MART.\n"
-	.string "Just look for our blue roof.\p"
+	.string "Just look for our blue roof.\n"
 	.string "We sell a variety of goods including\n"
-	.string "POKé BALLS for catching POKéMON.\p"
+	.string "POKé BALLS for catching POKéMON.\n"
 	.string "Here, I'd like you to have this as\n"
-	.string "a promotional item.$"
+	.string "a promotional item.\n"
+	.string "$"
 
 OldaleTown_Text_PotionExplanation:
 	.string "A POTION can be used anytime, so it's\n"
-	.string "even more useful than a POKéMON CENTER\l"
-	.string "in certain situations.$"
+	.string "even more useful than a POKéMON\n"
+	.string "CENTER in certain situations.\n"
+	.string "$"
 
 OldaleTown_Text_WaitDontComeInHere:
 	.string "Aaaaah! Wait!\n"
-	.string "Please don't come in here.\p"
+	.string "Please don't come in here.\n"
 	.string "I just discovered the footprints of\n"
-	.string "a rare POKéMON!\p"
+	.string "a rare POKéMON!\n"
 	.string "Wait until I finish sketching\n"
-	.string "them, okay?$"
+	.string "them, okay?\n"
+	.string "$"
 
 OldaleTown_Text_DiscoveredFootprints:
 	.string "I just discovered the footprints of\n"
-	.string "a rare POKéMON!\p"
+	.string "a rare POKéMON!\n"
 	.string "Wait until I finish sketching\n"
-	.string "them, okay?$"
+	.string "them, okay?\n"
+	.string "$"
 
 OldaleTown_Text_FinishedSketchingFootprints:
 	.string "I finished sketching the footprints of\n"
-	.string "a rare POKéMON.\p"
+	.string "a rare POKéMON.\n"
 	.string "But it turns out they were only my\n"
-	.string "own footprints…$"
+	.string "own footprints…\n"
+	.string "$"
 
 OldaleTown_Text_MayLetsGoBack:
 	.string "MAY: {PLAYER}{KUN}!\n"
-	.string "Over here!\l"
-	.string "Let's hurry home!$"
+	.string "Over here!\n"
+	.string "Let's hurry home!\n"
+	.string "$"
 
 OldaleTown_Text_BrendanLetsGoBack:
 	.string "BRENDAN: I'm heading back to my dad's\n"
-	.string "LAB now.\l"
-	.string "{PLAYER}, you should hustle back, too.$"
+	.string "LAB now.\n"
+	.string "{PLAYER}, you should hustle back, too.\n"
+	.string "$"
 
 OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
 	.string "Where things start\n"
-	.string "off scarce.$"
+	.string "off scarce.\n"
+	.string "$"
 
 OldaleTown_EventScript_TeraChanger::
         lock
@@ -636,17 +656,22 @@ OldaleTown_EventScript_TeraCancel::
         end
 
 OldaleTown_Text_TeraIntro:
-        .string "I can change a POKéMON's Tera Type for\n"
-        .string "¥1000. Stellar Type costs ¥5000.$"
+	.string "I can change a POKéMON's Tera Type for\n"
+	.string "¥1000. Stellar Type costs ¥5000.\n"
+	.string "$"
 
 OldaleTown_Text_TeraWhichMon:
-        .string "Which POKéMON should I work on?$"
+	.string "Which POKéMON should I work on?\n"
+	.string "$"
 
 OldaleTown_Text_TeraDone:
-        .string "All done! Take good care of it.$"
+	.string "All done! Take good care of it.\n"
+	.string "$"
 
 OldaleTown_Text_TeraNoMoney:
-        .string "You don't have enough money.$"
+	.string "You don't have enough money.\n"
+	.string "$"
 
 OldaleTown_Text_TeraComeAgain:
-        .string "Come again if you change your mind.$"
+	.string "Come again if you change your mind.\n"
+	.string "$"

@@ -85,4 +85,9 @@ void DoTrainerPartyPool(const struct Trainer *trainer, u32 *monIndices, u8 monsC
 void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *pool, u16 aceSpecies);
 void ApplyDynamicAIToTrainer(struct Trainer *trainer, struct Pokemon *generatedParty, u8 partySize);
 
+// Rival pool functions
+const TrainerMonLine *GetBrendanPool(void);
+const TrainerMonLine *GetMayPool(void);
+const TrainerMonLine *GetWallyPool(void);
+
 #endif

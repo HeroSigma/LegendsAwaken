@@ -60,38 +60,46 @@ TimelessWood_Movement_CameraPanToRed:
 TimelessWood_Movement_CameraPanToPlayer:
     walk_left
     walk_left
-    walk_left
     step_end
 
 TimelessWood_Text_RedLine1:
-    .string "RED: Where am I...?$"
+	.string "RED: Where am I...?\n"
+	.string "$"
 
 TimelessWood_Text_RedLine2:
-    .string "RED: I need to leave. Now.$"
+	.string "RED: I need to leave. Now.\n"
+	.string "$"
 
 TimelessWood_Text_PlayerWhoWasThat:
-    .string "{PLAYER}: Who was that?$"
+	.string "{PLAYER}: Who was that?\n"
+	.string "$"
 
 TimelessWood_Text_PlayerLine1:
-	.string "{PLAYER}: Timeless Woods...$"
+	.string "{PLAYER}: Timeless Woods...\n"
+	.string "$"
 
 TimelessWood_Text_PlayerLine2:
 	.string "{PLAYER}: Is this what Professor\n"
-	.string "Birch meant?$"
+	.string "Birch meant? I wonder.\n"
+	.string "$"
 
 TimelessWood_Text_PlayerLine3:
-	.string "{PLAYER}: The air feels… still.$"
+	.string "{PLAYER}: The air feels… still.\n"
+	.string "$"
 
 TimelessWood_Text_PlayerLine4:
 	.string "{PLAYER}: Weird… this place feels\n"
-	.string "familiar somehow.$"
+	.string "familiar somehow.\n"
+	.string "$"
 
 TimelessWood_Text_PlayerLine5:
 	.string "{PLAYER}: I'll keep the DEXNAV on\n"
-	.string "and watch the statics.$"
+	.string "and watch for statics.\n"
+	.string "$"
 
 TimelessWood_Text_PlayerLine6:
-	.string "{PLAYER}: Move carefully.$"
+	.string "{PLAYER}: Move carefully.\n"
+	.string "$"
 
 TimelessWood_EventScript_End::
 	end
