@@ -75,6 +75,13 @@ extern bool8 IsStaticTrainerClass(u8 trainerClass);
 extern const TrainerMonLine *GetBrendanPool(void);
 extern const TrainerMonLine *GetMayPool(void);
 extern const TrainerMonLine *GetWallyPool(void);
+// Gym / E4 / Champion pool and ace (trainer-ID based)
+extern const TrainerMonLine *GetGymLeaderPool(u16 trainerId);
+extern u16 GetGymLeaderAce(u16 trainerId);
+extern const TrainerMonLine *GetE4Pool(u16 trainerId);
+extern u16 GetE4Ace(u16 trainerId);
+extern const TrainerMonLine *GetChampionPool(u16 trainerId);
+extern u16 GetChampionAce(u16 trainerId);
 #include "tv.h"
 #include "util.h"
 
@@ -2105,14 +2112,35 @@ if (USE_DYNAMIC_TRAINER_POOLS)
     {
         DebugPrintf("Trainer class %d uses pool\n", trainer->trainerClass);
         
-        // Special handling for rivals - use dedicated pools based on trainer ID
+        // Get trainer ID once for pool/ace selection
+        u16 trainerId = TRAINER_BATTLE_PARAM.opponentA;
         const TrainerMonLine *pool = NULL;
-        if (trainer->trainerClass == TRAINER_CLASS_RIVAL)
+        u16 aceSpecies = SPECIES_NONE;
+
+        // Gym Leaders: use trainer-ID-specific pool and ace (fixes wrong ace e.g. Simisage/Probopass)
+        if (trainer->trainerClass == TRAINER_CLASS_LEADER)
         {
-            // Get trainer ID from battle parameters
-            u16 trainerId = TRAINER_BATTLE_PARAM.opponentA;
-            
-            // Check specific rival trainer ID to determine which pool to use
+            pool = GetGymLeaderPool(trainerId);
+            aceSpecies = GetGymLeaderAce(trainerId);
+            DebugPrintf("Gym Leader pool/ace (trainerId: %d)\n", trainerId);
+        }
+        // Elite Four: trainer-ID-specific pool and ace
+        else if (trainer->trainerClass == TRAINER_CLASS_ELITE_FOUR)
+        {
+            pool = GetE4Pool(trainerId);
+            aceSpecies = GetE4Ace(trainerId);
+            DebugPrintf("E4 pool/ace (trainerId: %d)\n", trainerId);
+        }
+        // Champions: trainer-ID-specific pool and ace
+        else if (trainer->trainerClass == TRAINER_CLASS_CHAMPION)
+        {
+            pool = GetChampionPool(trainerId);
+            aceSpecies = GetChampionAce(trainerId);
+            DebugPrintf("Champion pool/ace (trainerId: %d)\n", trainerId);
+        }
+        // Rivals: dedicated pools by trainer ID
+        else if (trainer->trainerClass == TRAINER_CLASS_RIVAL)
+        {
             if ((trainerId >= TRAINER_BRENDAN_ROUTE_103_MUDKIP && trainerId <= TRAINER_BRENDAN_ROUTE_119_TORCHIC) ||
                 (trainerId >= TRAINER_BRENDAN_RUSTBORO_TREECKO && trainerId <= TRAINER_BRENDAN_RUSTBORO_TORCHIC) ||
                 (trainerId >= TRAINER_BRENDAN_LILYCOVE_MUDKIP && trainerId <= TRAINER_BRENDAN_LILYCOVE_TORCHIC) ||
@@ -2135,23 +2163,21 @@ if (USE_DYNAMIC_TRAINER_POOLS)
                 DebugPrintf("Using Wally's dedicated pool (trainerId: %d)\n", trainerId);
             }
             else
-            {
-                // Fallback to generic rival pool
                 pool = GetPoolForTrainerClass(trainer->trainerClass);
-                DebugPrintf("Using generic rival pool (trainerId: %d)\n", trainerId);
-            }
+            aceSpecies = GetAceSpeciesForTrainer(trainerId);
         }
         else
         {
-            // Non-rival classes use standard pool selection
+            // Generic classes: class-based pool, but no designated ace.
+            // Only key story trainers (Leaders/E4/Champions/Rivals/etc.) should get special aces.
             pool = GetPoolForTrainerClass(trainer->trainerClass);
+            // leave aceSpecies as SPECIES_NONE so the last slot is filled from the pool, not a forced ace
         }
-        
+
         if (pool)
         {
-            DebugPrintf("Calling GenerateSpecialTrainerParty\n");
-            u16 trainerId = TRAINER_BATTLE_PARAM.opponentA;
-            GenerateSpecialTrainerParty((struct Trainer *)trainer, pool, GetAceSpeciesForTrainer(trainerId));
+            DebugPrintf("Calling GenerateSpecialTrainerParty (trainerId %d, aceSpecies %d)\n", trainerId, aceSpecies);
+            GenerateSpecialTrainerParty((struct Trainer *)trainer, pool, aceSpecies);
             // Apply dynamic AI based on generated team
             extern void ApplyDynamicAIToTrainer(struct Trainer *trainer, struct Pokemon *generatedParty, u8 partySize);
             extern struct Pokemon gEnemyParty[PARTY_SIZE];

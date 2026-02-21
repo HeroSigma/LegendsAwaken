@@ -5,6 +5,12 @@
 #include "main.h"
 #include "pokemon_storage_system.h"
 
+struct PokenavResources;
+
+// Forward declaration for accessing exitingToStore flag
+bool32 IsExitingToStore(void);
+void SetExitingToStore(bool32 exiting);
+
 typedef u32 (*LoopedTask)(s32 state);
 
 struct PokenavMonListItem
@@ -138,6 +144,9 @@ enum
     POKENAV_MENU_TYPE_DEFAULT,
     POKENAV_MENU_TYPE_UNLOCK_MC,
     POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS,
+    POKENAV_MENU_TYPE_UNLOCK_STORE,
+    POKENAV_MENU_TYPE_UNLOCK_MC_STORE,
+    POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_STORE,
     POKENAV_MENU_TYPE_CONDITION,
     POKENAV_MENU_TYPE_CONDITION_SEARCH,
     POKENAV_MENU_TYPE_COUNT
@@ -151,6 +160,7 @@ enum
     POKENAV_MENUITEM_CONDITION,
     POKENAV_MENUITEM_MATCH_CALL,
     POKENAV_MENUITEM_RIBBONS,
+    POKENAV_MENUITEM_STORE,
     POKENAV_MENUITEM_SWITCH_OFF,
     POKENAV_MENUITEM_CONDITION_PARTY,
     POKENAV_MENUITEM_CONDITION_SEARCH,

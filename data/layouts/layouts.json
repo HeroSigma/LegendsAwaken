@@ -12480,6 +12480,26 @@
       "secondary_tileset": "gTileset_world",
       "border_filepath": "data/layouts/SpearPillar1A/border.bin",
       "blockdata_filepath": "data/layouts/SpearPillar1A/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUSTBORO_BASEMENT",
+      "name": "RustboroBasement",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/RustboroBasement/border.bin",
+      "blockdata_filepath": "data/layouts/RustboroBasement/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUSTBORO_BASEMENT2F",
+      "name": "RustboroBasement2F",
+      "width": 11,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/RustboroBasement2F/border.bin",
+      "blockdata_filepath": "data/layouts/RustboroBasement2F/map.bin"
     }
   ]
 }

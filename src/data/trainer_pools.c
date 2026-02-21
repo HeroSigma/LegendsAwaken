@@ -108,7 +108,7 @@ const TrainerMonLine gTeamGalacticPool[] = {
     {{SPECIES_SKARMORY, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 130, NATURE_IMPISH, {252,0,252,0,4,0}},
     {{SPECIES_KLINK, SPECIES_KLANG, SPECIES_KLINKLANG, SPECIES_NONE}, {15,30,40,0}, {0,6,8,0}, 120, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_MAWILE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 110, NATURE_ADAMANT, {252,252,0,0,0,4}},
-    {{SPECIES_PROBOPASS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 100, NATURE_RELAXED, {252,0,252,0,4,0}},
+    {{SPECIES_DRAPION, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 100, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_MAGNEZONE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {30,0,0,0}, {0,12,0,0}, 90, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_NONE,0,0,0},{0,0,0,0},{0,0,0,0},0,0,{0,0,0,0,0,0}}
 };
@@ -145,7 +145,7 @@ const TrainerMonLine gTeamFlarePool[] = {
     {{SPECIES_CLEFAIRY, SPECIES_CLEFABLE, SPECIES_NONE, SPECIES_NONE}, {15,40,0,0}, {0,6,0,0}, 190, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_JIGGLYPUFF, SPECIES_WIGGLYTUFF, SPECIES_NONE, SPECIES_NONE}, {15,40,0,0}, {0,6,0,0}, 180, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_GARDEVOIR, SPECIES_GALLADE, SPECIES_NONE, SPECIES_NONE}, {15,40,0,0}, {0,6,0,0}, 170, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_SYLVEON, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 160, NATURE_MODEST, {252,0,0,252,4,0}},
+    {{SPECIES_SYLVEON, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {25,0,0,0}, {0,8,0,0}, 160, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_LURANTIS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 150, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_TSAREENA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 140, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_COMFEY, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 130, NATURE_MODEST, {252,0,0,252,4,0}},
@@ -185,7 +185,7 @@ const TrainerMonLine gAetherPool[] = {
     {{SPECIES_PYUKUMUKU, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 180, NATURE_BOLD, {252,0,252,0,4,0}},
     {{SPECIES_VULPIX_ALOLA, SPECIES_NINETALES_ALOLA, SPECIES_NONE, SPECIES_NONE}, {15,40,0,0}, {0,6,0,0}, 170, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_GARDEVOIR, SPECIES_GALLADE, SPECIES_NONE, SPECIES_NONE}, {15,40,0,0}, {0,6,0,0}, 160, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_SYLVEON, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 150, NATURE_MODEST, {252,0,0,252,4,0}},
+    {{SPECIES_SYLVEON, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {25,0,0,0}, {0,8,0,0}, 150, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_HATTERENE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 140, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_INDEEDEE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 130, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_NONE,0,0,0},{0,0,0,0},{0,0,0,0},0,0,{0,0,0,0,0,0}}
@@ -258,7 +258,7 @@ const TrainerMonLine gYoungsterPool[] __attribute__((section(".rodata"))) = {
     {{SPECIES_SEEDOT, SPECIES_NUZLEAF, SPECIES_SHIFTRY, SPECIES_NONE}, {6,18,32,0}, {0,2,6,0}, 220, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_LOTAD, SPECIES_LOMBRE, SPECIES_LUDICOLO, SPECIES_NONE}, {5,16,28,0}, {0,2,5,0}, 210, NATURE_RELAXED, {252,0,252,0,4,0}},
     {{SPECIES_RALTS, SPECIES_KIRLIA, SPECIES_NONE, SPECIES_NONE}, {7,20,0,0}, {0,3,0,0}, 200, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_ABRA, SPECIES_KADABRA, SPECIES_ALAKAZAM, SPECIES_NONE}, {8,20,40,0}, {0,3,8,0}, 190, NATURE_TIMID, {4,0,0,252,252,0}},
+    {{SPECIES_ABRA, SPECIES_KADABRA, SPECIES_ALAKAZAM, SPECIES_NONE}, {8,20,45,0}, {0,3,8,0}, 190, NATURE_TIMID, {4,0,0,252,252,0}},
     {{SPECIES_MAGIKARP, SPECIES_GYARADOS, SPECIES_NONE, SPECIES_NONE}, {10,30,0,0}, {0,4,0,0}, 180, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_MAGIKARP, SPECIES_CARVANHA, SPECIES_SHARPEDO, SPECIES_NONE}, {8,20,32,0}, {0,3,6,0}, 170, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_CORPHISH, SPECIES_CRAWDAUNT, SPECIES_NONE, SPECIES_NONE}, {9,25,0,0}, {0,4,0,0}, 160, NATURE_ADAMANT, {252,252,0,0,0,4}},
@@ -323,9 +323,9 @@ const TrainerMonLine gLassPool[] = {
     {{SPECIES_ORICORIO, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {15,0,0,0}, {0,5,0,0}, 10, NATURE_TIMID, {4,0,0,252,0,252}},
     {{SPECIES_LILLIPUP, SPECIES_HERDIER, SPECIES_STOUTLAND, SPECIES_NONE}, {8,20,32,0}, {0,3,6,0}, 8, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_CLEFAIRY, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {18,0,0,0}, {0,6,0,0}, 6, NATURE_BOLD, {252,0,252,0,4,0}},
-    {{SPECIES_SYLVEON, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,6,0,0}, 4, NATURE_MODEST, {252,0,0,252,4,0}},
+    {{SPECIES_SYLVEON, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {25,0,0,0}, {0,6,0,0}, 4, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_FLORGES, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {22,0,0,0}, {0,7,0,0}, 2, NATURE_TIMID, {4,0,0,252,0,252}},
-    {{SPECIES_GARDEVOIR, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {25,0,0,0}, {0,8,0,0}, 1, NATURE_MODEST, {252,0,0,252,4,0}} // Shiny Ace
+    {{SPECIES_GARDEVOIR, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {30,0,0,0}, {0,8,0,0}, 1, NATURE_MODEST, {252,0,0,252,4,0}} // Shiny Ace
 };
 
 // 3. BUG CATCHER - Bugs only (strong early, scales to pseudo-legend bugs)
@@ -396,7 +396,7 @@ const TrainerMonLine gHikerPool[] = {
     {{SPECIES_STONJOURNER, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 160, NATURE_IMPISH, {252,0,252,0,4,0}},
     {{SPECIES_KLAWF, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 150, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_GLIMMET, SPECIES_GLIMMORA, SPECIES_NONE, SPECIES_NONE}, {20,35,0,0}, {0,8,0,0}, 140, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_NOSEPASS, SPECIES_PROBOPASS, SPECIES_NONE, SPECIES_NONE}, {15,40,0,0}, {0,6,0,0}, 130, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_ONIX, SPECIES_STEELIX, SPECIES_NONE, SPECIES_NONE}, {15,40,0,0}, {0,6,0,0}, 130, NATURE_IMPISH, {252,0,252,0,4,0}},
     {{SPECIES_SKARMORY, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 120, NATURE_IMPISH, {252,0,252,0,4,0}},
     {{SPECIES_BELDUM, SPECIES_METANG, SPECIES_METAGROSS, SPECIES_NONE}, {20,38,45,0}, {0,8,10,0}, 110, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_BRONZOR, SPECIES_BRONZONG, SPECIES_NONE, SPECIES_NONE}, {15,32,0,0}, {0,6,0,0}, 100, NATURE_RELAXED, {252,0,252,0,4,0}},
@@ -662,8 +662,8 @@ const TrainerMonLine gPsychicPool[] = {
     {{SPECIES_ABRA, SPECIES_KADABRA, SPECIES_ALAKAZAM, SPECIES_NONE}, {10,16,36,0}, {0,2,6,0}, 250, NATURE_TIMID, {4,0,0,252,0,252}},
     {{SPECIES_DROWZEE, SPECIES_HYPNO, SPECIES_NONE, SPECIES_NONE}, {12,26,0,0}, {0,4,0,0}, 240, NATURE_CALM, {252,0,252,0,4,0}},
     {{SPECIES_MR_MIME, SPECIES_MR_RIME, SPECIES_NONE, SPECIES_NONE}, {15,30,0,0}, {0,5,0,0}, 230, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_RALTS, SPECIES_KIRLIA, SPECIES_GARDEVOIR, SPECIES_NONE}, {10,20,30,0}, {0,3,6,0}, 220, NATURE_TIMID, {4,0,0,252,0,252}},
-    {{SPECIES_RALTS, SPECIES_KIRLIA, SPECIES_GALLADE, SPECIES_NONE}, {10,20,30,0}, {0,3,6,0}, 220, NATURE_ADAMANT, {252,252,0,0,0,4}},
+    {{SPECIES_RALTS, SPECIES_KIRLIA, SPECIES_GARDEVOIR, SPECIES_NONE}, {10,30,40,0}, {0,3,8,0}, 220, NATURE_TIMID, {4,0,0,252,0,252}},
+    {{SPECIES_RALTS, SPECIES_KIRLIA, SPECIES_GALLADE, SPECIES_NONE}, {10,30,40,0}, {0,3,8,0}, 220, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_SPOINK, SPECIES_GRUMPIG, SPECIES_NONE, SPECIES_NONE}, {12,32,0,0}, {0,5,0,0}, 210, NATURE_CALM, {252,0,252,0,4,0}},
     {{SPECIES_CHINGLING, SPECIES_CHIMECHO, SPECIES_NONE, SPECIES_NONE}, {12,30,0,0}, {0,5,0,0}, 200, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_BALTOY, SPECIES_CLAYDOL, SPECIES_NONE, SPECIES_NONE}, {12,36,0,0}, {0,5,0,0}, 190, NATURE_RELAXED, {252,0,252,0,4,0}},
@@ -1121,11 +1121,11 @@ const TrainerMonLine gRoxannePool[] = {
     {{SPECIES_KLAWF, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,12,0,0}, 160, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_GLIMMET, SPECIES_GLIMMORA, SPECIES_NONE, SPECIES_NONE}, {38,50,0,0}, {0,12,0,0}, 150, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_CARBINK, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,12,0,0}, 140, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_NOSEPASS, SPECIES_PROBOPASS, SPECIES_NONE, SPECIES_NONE}, {35,45,0,0}, {0,10,0,0}, 130, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_ROGGENROLA, SPECIES_BOLDORE, SPECIES_GIGALITH, SPECIES_NONE}, {35,40,50,0}, {0,10,0,0}, 130, NATURE_IMPISH, {252,0,252,0,4,0}},
     {{SPECIES_CRADILY, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,12,0,0}, 110, NATURE_BOLD, {252,0,252,0,4,0}},
     {{SPECIES_ARMALDO, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,12,0,0}, 110, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_RAMPARDOS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,12,0,0}, 90, NATURE_ADAMANT, {252,252,0,0,0,4}},
-    {{SPECIES_PROBOPASS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,14,0,0}, 80, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_GIGALITH, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,14,0,0}, 80, NATURE_IMPISH, {252,0,252,0,4,0}},
     {{SPECIES_LYCANROC, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,14,0,0}, 70, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_GIGALITH, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,14,0,0}, 60, NATURE_IMPISH, {252,0,252,0,4,0}}
 };
@@ -1536,10 +1536,10 @@ const TrainerMonLine gBrockPool[] = {
     {{SPECIES_KLAWF, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,10,0,0}, 160, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_GLIMMET, SPECIES_GLIMMORA, SPECIES_NONE, SPECIES_NONE}, {38,50,0,0}, {0,8,0,0}, 150, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_CARBINK, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,10,0,0}, 140, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_NOSEPASS, SPECIES_PROBOPASS, SPECIES_NONE, SPECIES_NONE}, {35,45,0,0}, {0,8,0,0}, 130, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_ONIX, SPECIES_LAIRON, SPECIES_AGGRON, SPECIES_NONE}, {35,45,55,0}, {0,8,0,0}, 130, NATURE_IMPISH, {252,0,252,0,4,0}},
     {{SPECIES_ARMALDO, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,10,0,0}, 110, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_RAMPARDOS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,10,0,0}, 90, NATURE_ADAMANT, {252,252,0,0,0,4}},
-    {{SPECIES_PROBOPASS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,12,0,0}, 80, NATURE_IMPISH, {252,0,252,0,4,0}},
+    {{SPECIES_TYRANITAR, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,12,0,0}, 80, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_LYCANROC, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,12,0,0}, 70, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_TYRANITAR, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,14,0,0}, 60, NATURE_ADAMANT, {252,252,0,0,0,4}} // Shiny Ace
 };
@@ -1907,11 +1907,11 @@ const TrainerMonLine gMayPool[] = {
 // Wally (Rival) - Ace: Gardevoir (Ralts line)
 const TrainerMonLine gWallyPool[] = {
     // Ralts evolution line (Wally's signature)
-    {{SPECIES_RALTS, SPECIES_KIRLIA, SPECIES_GARDEVOIR, SPECIES_NONE}, {5,16,32,0}, {0,0,8,0}, 250, NATURE_MODEST, {252,0,0,252,4,0}},
+    {{SPECIES_RALTS, SPECIES_KIRLIA, SPECIES_GARDEVOIR, SPECIES_NONE}, {5,30,40,0}, {0,0,8,0}, 250, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_RALTS, SPECIES_KIRLIA, SPECIES_GALLADE, SPECIES_NONE}, {5,16,32,0}, {0,0,8,0}, 240, NATURE_ADAMANT, {252,252,0,0,0,4}},
     // Additional fitting Pokémon for Wally
-    {{SPECIES_ABRA, SPECIES_KADABRA, SPECIES_ALAKAZAM, SPECIES_NONE}, {10,20,30,0}, {0,3,6,0}, 230, NATURE_TIMID, {4,0,0,252,0,252}},
-    {{SPECIES_MAGIKARP, SPECIES_GYARADOS, SPECIES_NONE, SPECIES_NONE}, {10,25,0,0}, {0,5,0,0}, 220, NATURE_ADAMANT, {252,252,0,0,0,4}},
+    {{SPECIES_ABRA, SPECIES_KADABRA, SPECIES_ALAKAZAM, SPECIES_NONE}, {10,20,40,0}, {0,3,6,0}, 230, NATURE_TIMID, {4,0,0,252,0,252}},
+    {{SPECIES_MAGIKARP, SPECIES_GYARADOS, SPECIES_NONE, SPECIES_NONE}, {10,20,0,0}, {0,5,0,0}, 220, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_ZIGZAGOON, SPECIES_LINOONE, SPECIES_NONE, SPECIES_NONE}, {12,24,0,0}, {0,5,0,0}, 210, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_TAILLOW, SPECIES_SWELLOW, SPECIES_NONE, SPECIES_NONE}, {15,28,0,0}, {0,6,0,0}, 200, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_VIGOROTH, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 190, NATURE_JOLLY, {4,252,0,0,0,252}},
@@ -2611,7 +2611,7 @@ u16 GetGymLeaderAce(u16 trainerId)
     switch (trainerId)
     {
         case TRAINER_ROXANNE_1: case TRAINER_ROXANNE_2: case TRAINER_ROXANNE_3: case TRAINER_ROXANNE_4: case TRAINER_ROXANNE_5:
-            return SPECIES_PROBOPASS;
+            return SPECIES_GIGALITH;
         case TRAINER_BRAWLY_1: case TRAINER_BRAWLY_2: case TRAINER_BRAWLY_3: case TRAINER_BRAWLY_4: case TRAINER_BRAWLY_5:
             return SPECIES_HAWLUCHA;
         case TRAINER_WATTSON_1: case TRAINER_WATTSON_2: case TRAINER_WATTSON_3: case TRAINER_WATTSON_4: case TRAINER_WATTSON_5:
@@ -2627,7 +2627,7 @@ u16 GetGymLeaderAce(u16 trainerId)
         case TRAINER_JUAN_1: case TRAINER_JUAN_2: case TRAINER_JUAN_3: case TRAINER_JUAN_4: case TRAINER_JUAN_5:
             return SPECIES_KINGDRA;
         default:
-            return SPECIES_PROBOPASS;
+            return SPECIES_GIGALITH;
     }
 }
 
@@ -2745,7 +2745,7 @@ u16 GetAceSpeciesForTrainer(u16 trainerId)
     
     // Special trainers with ID-based mapping (Gym Leaders, E4, Champions, Rivals)
     if (trainerId >= TRAINER_ROXANNE_1 && trainerId <= TRAINER_ROXANNE_5)
-        return SPECIES_PROBOPASS; // Roxanne's Ace
+        return SPECIES_GIGALITH; // Roxanne's Ace
     if (trainerId >= TRAINER_BRAWLY_1 && trainerId <= TRAINER_BRAWLY_5)
         return SPECIES_HAWLUCHA; // Brawly's Ace
     if (trainerId >= TRAINER_WATTSON_1 && trainerId <= TRAINER_WATTSON_5)
@@ -2811,6 +2811,12 @@ u16 GetAceSpeciesForTrainer(u16 trainerId)
     // Type-based Ace species for different trainer classes
     switch (GetTrainerClassFromId(trainerId))
     {
+        case TRAINER_CLASS_LEADER:
+            return GetGymLeaderAce(trainerId);
+        case TRAINER_CLASS_ELITE_FOUR:
+            return GetE4Ace(trainerId);
+        case TRAINER_CLASS_CHAMPION:
+            return GetChampionAce(trainerId);
         case TRAINER_CLASS_HIKER:
             return SPECIES_GOLEM; // Rock/Ground type
         case TRAINER_CLASS_TEAM_AQUA:
@@ -3003,27 +3009,36 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
         if (slot >= partySize - 1) break;
     }
 
-    // Last slot = Shiny Ace (if we have an ace species)
-    if (aceSpecies != SPECIES_NONE && partySize > 1)
+    // Last slot = Shiny Ace (if we have an ace species), or 6th from pool to avoid species 0
     {
         u8 aceSlot = partySize - 1;
-        mutableParty[aceSlot].species = aceSpecies;
-        mutableParty[aceSlot].lvl = cap;  // BRUTAL MODE: Max level ace
-        mutableParty[aceSlot].iv = 31;     // Perfect IVs
-        mutableParty[aceSlot].nature = NATURE_ADAMANT;  // BRUTAL MODE: Aggressive nature
-        mutableParty[aceSlot].heldItem = ITEM_LEFTOVERS;  // BRUTAL MODE: Best healing item
-        mutableParty[aceSlot].isShiny = TRUE;  // Always shiny for intimidation
-        
-        // BRUTAL MODE: Maximized competitive spread for ace
-        mutableParty[aceSlot].ev = (u8[]){252, 252, 0, 0, 0, 4};
-        
-        // Initialize moves to empty
-        for (u8 m = 0; m < MAX_MON_MOVES; m++)
+        if (aceSpecies != SPECIES_NONE && partySize > 1)
         {
-            mutableParty[aceSlot].moves[m] = MOVE_NONE;
+            mutableParty[aceSlot].species = aceSpecies;
+            mutableParty[aceSlot].lvl = cap;  // BRUTAL MODE: Max level ace
+            mutableParty[aceSlot].iv = 31;     // Perfect IVs
+            mutableParty[aceSlot].nature = NATURE_ADAMANT;  // BRUTAL MODE: Aggressive nature
+            mutableParty[aceSlot].heldItem = ITEM_LEFTOVERS;  // BRUTAL MODE: Best healing item
+            mutableParty[aceSlot].isShiny = TRUE;  // Always shiny for intimidation
+            mutableParty[aceSlot].ev = (u8[]){252, 252, 0, 0, 0, 4};
+            for (u8 m = 0; m < MAX_MON_MOVES; m++)
+                mutableParty[aceSlot].moves[m] = MOVE_NONE;
+            DebugPrintf("Added ace species %d level %d (shiny)\n", aceSpecies, cap);
         }
-        
-        DebugPrintf("Added ace species %d level %d (shiny)\n", aceSpecies, cap);
+        else if (line->weight > 0 && line->species[0] != SPECIES_NONE)
+        {
+            // No ace specified: fill last slot from pool so we never leave slot 5 as species 0
+            mutableParty[aceSlot].species = line->species[0];
+            mutableParty[aceSlot].lvl = cap;
+            mutableParty[aceSlot].iv = 31;
+            mutableParty[aceSlot].nature = line->preferred_nature;
+            mutableParty[aceSlot].heldItem = ITEM_SITRUS_BERRY;
+            mutableParty[aceSlot].isShiny = FALSE;
+            mutableParty[aceSlot].ev = (u8[]){252, 252, 0, 0, 0, 4};
+            for (u8 m = 0; m < MAX_MON_MOVES; m++)
+                mutableParty[aceSlot].moves[m] = MOVE_NONE;
+            DebugPrintf("Added 6th from pool species %d (no ace)\n", line->species[0]);
+        }
     }
 
     // Copy back to trainer's actual party (commented out - trainer->party is read-only)
