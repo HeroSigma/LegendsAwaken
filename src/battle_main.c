@@ -75,6 +75,8 @@ extern bool8 IsStaticTrainerClass(u8 trainerClass);
 extern const TrainerMonLine *GetBrendanPool(void);
 extern const TrainerMonLine *GetMayPool(void);
 extern const TrainerMonLine *GetWallyPool(void);
+// Gym map → pool (for non-leader trainers in a gym)
+extern const TrainerMonLine *GetPoolForGymMap(u8 mapGroup, u8 mapNum);
 // Gym / E4 / Champion pool and ace (trainer-ID based)
 extern const TrainerMonLine *GetGymLeaderPool(u16 trainerId);
 extern u16 GetGymLeaderAce(u16 trainerId);
@@ -2117,29 +2119,41 @@ if (USE_DYNAMIC_TRAINER_POOLS)
         const TrainerMonLine *pool = NULL;
         u16 aceSpecies = SPECIES_NONE;
 
-        // Gym Leaders: use trainer-ID-specific pool and ace (fixes wrong ace e.g. Simisage/Probopass)
-        if (trainer->trainerClass == TRAINER_CLASS_LEADER)
+        // Non-leader trainers battled inside a gym: use that gym's type pool (gym leaders unaffected)
+        {
+            u8 mapGroup = gSaveBlock1Ptr->location.mapGroup;
+            u8 mapNum = gSaveBlock1Ptr->location.mapNum;
+            const TrainerMonLine *gymPool = GetPoolForGymMap(mapGroup, mapNum);
+            if (gymPool != NULL && trainer->trainerClass != TRAINER_CLASS_LEADER)
+            {
+                pool = gymPool;
+                DebugPrintf("Gym map override: using gym pool (mapGroup %d mapNum %d)\n", mapGroup, mapNum);
+            }
+        }
+
+        // Gym Leaders: use trainer-ID-specific pool and ace (unaffected by gym map)
+        if (pool == NULL && trainer->trainerClass == TRAINER_CLASS_LEADER)
         {
             pool = GetGymLeaderPool(trainerId);
             aceSpecies = GetGymLeaderAce(trainerId);
             DebugPrintf("Gym Leader pool/ace (trainerId: %d)\n", trainerId);
         }
         // Elite Four: trainer-ID-specific pool and ace
-        else if (trainer->trainerClass == TRAINER_CLASS_ELITE_FOUR)
+        else if (pool == NULL && trainer->trainerClass == TRAINER_CLASS_ELITE_FOUR)
         {
             pool = GetE4Pool(trainerId);
             aceSpecies = GetE4Ace(trainerId);
             DebugPrintf("E4 pool/ace (trainerId: %d)\n", trainerId);
         }
         // Champions: trainer-ID-specific pool and ace
-        else if (trainer->trainerClass == TRAINER_CLASS_CHAMPION)
+        else if (pool == NULL && trainer->trainerClass == TRAINER_CLASS_CHAMPION)
         {
             pool = GetChampionPool(trainerId);
             aceSpecies = GetChampionAce(trainerId);
             DebugPrintf("Champion pool/ace (trainerId: %d)\n", trainerId);
         }
         // Rivals: dedicated pools by trainer ID
-        else if (trainer->trainerClass == TRAINER_CLASS_RIVAL)
+        else if (pool == NULL && trainer->trainerClass == TRAINER_CLASS_RIVAL)
         {
             if ((trainerId >= TRAINER_BRENDAN_ROUTE_103_MUDKIP && trainerId <= TRAINER_BRENDAN_ROUTE_119_TORCHIC) ||
                 (trainerId >= TRAINER_BRENDAN_RUSTBORO_TREECKO && trainerId <= TRAINER_BRENDAN_RUSTBORO_TORCHIC) ||
@@ -2166,10 +2180,9 @@ if (USE_DYNAMIC_TRAINER_POOLS)
                 pool = GetPoolForTrainerClass(trainer->trainerClass);
             aceSpecies = GetAceSpeciesForTrainer(trainerId);
         }
-        else
+        else if (pool == NULL)
         {
             // Generic classes: class-based pool, but no designated ace.
-            // Only key story trainers (Leaders/E4/Champions/Rivals/etc.) should get special aces.
             pool = GetPoolForTrainerClass(trainer->trainerClass);
             // leave aceSpecies as SPECIES_NONE so the last slot is filled from the pool, not a forced ace
         }

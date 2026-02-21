@@ -170,6 +170,9 @@ bool8 IsStaticTrainerClass(u8 trainerClass);
 const TrainerMonLine *GetSpecialPoolForTrainer(u16 trainerId);
 u16 GetAceSpeciesForTrainer(u16 trainerId);
 
+// Gym map → pool (for non-leader trainers battled inside a gym)
+const TrainerMonLine *GetPoolForGymMap(u8 mapGroup, u8 mapNum);
+
 // Special pool selector functions
 const TrainerMonLine *GetGymLeaderPool(u16 trainerId);
 u16 GetGymLeaderAce(u16 trainerId);

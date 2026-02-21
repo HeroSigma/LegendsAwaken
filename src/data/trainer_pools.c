@@ -3,6 +3,8 @@
 #include "constants/pokemon.h"
 #include "constants/trainer_pools.h"
 #include "constants/battle_ai.h"
+#include "constants/map_groups.h"
+#include "constants/maps.h"
 #include "data.h"
 #include "random.h"
 #include "util.h"
@@ -2526,6 +2528,50 @@ bool8 IsStaticTrainerClass(u8 trainerClass)
         default:
             return FALSE;
     }
+}
+
+// ─────────────────────────────────────────────────────────────
+// GYM MAP → POOL (for non-leader trainers battled inside a gym)
+// ─────────────────────────────────────────────────────────────
+const TrainerMonLine *GetPoolForGymMap(u8 mapGroup, u8 mapNum)
+{
+    // Hoenn (8)
+    if (mapGroup == MAP_GROUP(MAP_RUSTBORO_CITY_GYM)    && mapNum == MAP_NUM(MAP_RUSTBORO_CITY_GYM))    return gRoxannePool;  // Rock
+    if (mapGroup == MAP_GROUP(MAP_DEWFORD_TOWN_GYM)     && mapNum == MAP_NUM(MAP_DEWFORD_TOWN_GYM))     return gBrawlyPool;   // Fighting
+    if (mapGroup == MAP_GROUP(MAP_MAUVILLE_CITY_GYM)    && mapNum == MAP_NUM(MAP_MAUVILLE_CITY_GYM))    return gWatsonPool;   // Electric
+    if (mapGroup == MAP_GROUP(MAP_LAVARIDGE_TOWN_GYM_1F) && mapNum == MAP_NUM(MAP_LAVARIDGE_TOWN_GYM_1F)) return gFlanneryPool; // Fire
+    if (mapGroup == MAP_GROUP(MAP_LAVARIDGE_TOWN_GYM_B1F) && mapNum == MAP_NUM(MAP_LAVARIDGE_TOWN_GYM_B1F)) return gFlanneryPool;
+    if (mapGroup == MAP_GROUP(MAP_PETALBURG_CITY_GYM)   && mapNum == MAP_NUM(MAP_PETALBURG_CITY_GYM))   return gNormanPool;   // Normal
+    if (mapGroup == MAP_GROUP(MAP_FORTREE_CITY_GYM)     && mapNum == MAP_NUM(MAP_FORTREE_CITY_GYM))     return gWinonaPool;   // Flying
+    if (mapGroup == MAP_GROUP(MAP_MOSSDEEP_CITY_GYM)    && mapNum == MAP_NUM(MAP_MOSSDEEP_CITY_GYM))    return gTateLizaPool; // Psychic
+    if (mapGroup == MAP_GROUP(MAP_SOOTOPOLIS_CITY_GYM_1F) && mapNum == MAP_NUM(MAP_SOOTOPOLIS_CITY_GYM_1F)) return gJuanPool;   // Water
+    if (mapGroup == MAP_GROUP(MAP_SOOTOPOLIS_CITY_GYM_B1F) && mapNum == MAP_NUM(MAP_SOOTOPOLIS_CITY_GYM_B1F)) return gJuanPool;
+
+    // Kanto (8)
+    if (mapGroup == MAP_GROUP(MAP_PEWTER_CITY_GYM)      && mapNum == MAP_NUM(MAP_PEWTER_CITY_GYM))      return gBrockPool;    // Rock
+    if (mapGroup == MAP_GROUP(MAP_CERULEAN_CITY_GYM)    && mapNum == MAP_NUM(MAP_CERULEAN_CITY_GYM))    return gMistyPool;    // Water
+    if (mapGroup == MAP_GROUP(MAP_VERMILION_CITY_GYM)   && mapNum == MAP_NUM(MAP_VERMILION_CITY_GYM))   return gLtSurgePool;  // Electric
+    if (mapGroup == MAP_GROUP(MAP_CELADON_CITY_GYM)     && mapNum == MAP_NUM(MAP_CELADON_CITY_GYM))     return gErikaPool;    // Grass
+    if (mapGroup == MAP_GROUP(MAP_FUCHSIA_CITY_GYM)     && mapNum == MAP_NUM(MAP_FUCHSIA_CITY_GYM))     return gJanineKogaPool; // Poison
+    if (mapGroup == MAP_GROUP(MAP_SAFFRON_CITY_GYM)     && mapNum == MAP_NUM(MAP_SAFFRON_CITY_GYM))     return gSabrinaPool;  // Psychic
+    if (mapGroup == MAP_GROUP(MAP_CINNABAR_ISLAND_GYM)  && mapNum == MAP_NUM(MAP_CINNABAR_ISLAND_GYM))  return gBlainePool;   // Fire
+    if (mapGroup == MAP_GROUP(MAP_VIRIDIAN_CITY_GYM)     && mapNum == MAP_NUM(MAP_VIRIDIAN_CITY_GYM))     return gBlueGymLeaderPool; // Ground/Normal
+
+    // Johto (8)
+    if (mapGroup == MAP_GROUP(MAP_VIOLET_CITY_GYM)      && mapNum == MAP_NUM(MAP_VIOLET_CITY_GYM))      return gFalknerPool;  // Flying
+    if (mapGroup == MAP_GROUP(MAP_AZALEA_TOWN_GYM)      && mapNum == MAP_NUM(MAP_AZALEA_TOWN_GYM))      return gBugsyPool;    // Bug
+    if (mapGroup == MAP_GROUP(MAP_GOLDENROD_CITY_GYM)   && mapNum == MAP_NUM(MAP_GOLDENROD_CITY_GYM))   return gWhitneyPool;  // Normal
+    if (mapGroup == MAP_GROUP(MAP_ECRUTEAK_CITY_GYM)    && mapNum == MAP_NUM(MAP_ECRUTEAK_CITY_GYM))    return gMortyPool;    // Ghost
+    if (mapGroup == MAP_GROUP(MAP_CIANWOOD_CITY_GYM)    && mapNum == MAP_NUM(MAP_CIANWOOD_CITY_GYM))    return gChuckPool;    // Fighting
+    if (mapGroup == MAP_GROUP(MAP_OLIVINE_CITY_GYM)     && mapNum == MAP_NUM(MAP_OLIVINE_CITY_GYM))     return gJasminePool;  // Steel
+    if (mapGroup == MAP_GROUP(MAP_MAHOGANY_TOWN_GYM)    && mapNum == MAP_NUM(MAP_MAHOGANY_TOWN_GYM))    return gPrycePool;    // Ice
+    if (mapGroup == MAP_GROUP(MAP_BLACKTHORN_CITY_GYM)  && mapNum == MAP_NUM(MAP_BLACKTHORN_CITY_GYM))  return gClairPool;    // Dragon
+    if (mapGroup == MAP_GROUP(MAP_BLACKTHORN_CITY_GYM_2F) && mapNum == MAP_NUM(MAP_BLACKTHORN_CITY_GYM_2F)) return gClairPool;
+
+    // Sinnoh (Oreburgh present; others add when maps exist)
+    if (mapGroup == MAP_GROUP(MAP_OREBURGH_CITY_GYM)    && mapNum == MAP_NUM(MAP_OREBURGH_CITY_GYM))    return gRoxannePool;  // Rock (alias)
+
+    return NULL;
 }
 
 // ─────────────────────────────────────────────────────────────
