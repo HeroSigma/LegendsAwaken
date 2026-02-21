@@ -357,32 +357,19 @@ const TrainerMonLine gBugCatcherPool[] = {
     {{SPECIES_JANGMO_O, SPECIES_HAKAMO_O, SPECIES_KOMMO_O, SPECIES_NONE}, {12,25,40,0}, {0,4,6,0}, 240, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_FOMANTIS, SPECIES_LURANTIS, SPECIES_NONE, SPECIES_NONE}, {14,28,0,0}, {0,4,0,0}, 230, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_ORBEETLE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {18,0,0,0}, {0,5,0,0}, 220, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_SANDY_SHOCKS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,6,0,0}, 210, NATURE_MODEST, {252,0,252,0,4,0}},
-    {{SPECIES_IRON_MOTH, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {22,0,0,0}, {0,6,0,0}, 200, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_SLITHER_WING, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {25,0,0,0}, {0,7,0,0}, 190, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_SIZZLIPEDE, SPECIES_CENTISKORCH, SPECIES_NONE, SPECIES_NONE}, {16,32,0,0}, {0,5,0,0}, 180, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_SNOM, SPECIES_FROSMOTH, SPECIES_NONE, SPECIES_NONE}, {12,28,0,0}, {0,4,0,0}, 170, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_BUZZWOLE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,6,0,0}, 160, NATURE_JOLLY, {4,252,0,0,0,252}},
-    {{SPECIES_PHEROMOSA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {25,0,0,0}, {0,7,0,0}, 150, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_ARIADOS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {18,0,0,0}, {0,5,0,0}, 140, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_GALVANTULA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {22,0,0,0}, {0,6,0,0}, 130, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_DURANT, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,6,0,0}, 120, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_ACCELGOR, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,6,0,0}, 110, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_ESCAVALIER, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,6,0,0}, 100, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_VOLCARONA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {30,0,0,0}, {0,8,0,0}, 90, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_GENESECT, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {35,0,0,0}, {0,8,0,0}, 80, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_ARMAROUGE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {28,0,0,0}, {0,7,0,0}, 70, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_CERULEDGE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {28,0,0,0}, {0,7,0,0}, 60, NATURE_JOLLY, {4,252,0,0,0,252}},
-    {{SPECIES_WO_CHIEN, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {32,0,0,0}, {0,8,0,0}, 50, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_CHIEN_PAO, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {32,0,0,0}, {0,8,0,0}, 40, NATURE_JOLLY, {4,252,0,0,0,252}},
-    {{SPECIES_TING_LU, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {32,0,0,0}, {0,8,0,0}, 30, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_CHI_YU, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {32,0,0,0}, {0,8,0,0}, 20, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_ROARING_MOON, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {35,0,0,0}, {0,8,0,0}, 10, NATURE_JOLLY, {4,252,0,0,0,252}},
-    {{SPECIES_IRON_VALIANT, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {35,0,0,0}, {0,8,0,0}, 8, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_KOMMO_O, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,8,0,0}, 6, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_VOLCARONA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,8,0,0}, 4, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_GENESECT, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,8,0,0}, 2, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_PHEROMOSA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {55,0,0,0}, {0,8,0,0}, 1, NATURE_JOLLY, {4,252,0,0,0,252}} // Shiny Ace
+    {{SPECIES_VOLCARONA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {55,0,0,0}, {0,8,0,0}, 1, NATURE_MODEST, {252,0,0,252,4,0}} // Shiny Ace
 };
 
 // 4. HIKER - Rock / Ground / Steel tanks & physical attackers
@@ -430,13 +417,7 @@ const TrainerMonLine gHikerPool[] = {
     {{SPECIES_MAREANIE, SPECIES_TOXAPEX, SPECIES_NONE, SPECIES_NONE}, {25,38,0,0}, {0,6,0,0}, 50, NATURE_BOLD, {252,0,252,0,4,0}},
     {{SPECIES_MUDSDALE, SPECIES_DUGTRIO_ALOLA, SPECIES_NONE, SPECIES_NONE}, {22,35,0,0}, {0,6,0,0}, 40, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_SALAZZLE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {32,0,0,0}, {0,8,0,0}, 30, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_NAGANADEL, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {35,0,0,0}, {0,8,0,0}, 20, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_STAKATAKA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {35,0,0,0}, {0,8,0,0}, 10, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_BLACEPHALON, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {35,0,0,0}, {0,8,0,0}, 8, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_CELESTEELA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,8,0,0}, 6, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_KARTANA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,8,0,0}, 4, NATURE_JOLLY, {4,252,0,0,0,252}},
-    {{SPECIES_GUZZLORD, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,8,0,0}, 2, NATURE_IMPISH, {252,0,252,0,4,0}},
-    {{SPECIES_DIALGA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,8,0,0}, 1, NATURE_MODEST, {252,0,0,252,4,0}} // Shiny Ace
+    {{SPECIES_TYRANITAR, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,8,0,0}, 1, NATURE_JOLLY, {4,252,0,0,0,252}} // Shiny Ace
 };
 
 // 5. FISHERMAN - Water fish specialists (physical + special mix)
@@ -525,11 +506,6 @@ const TrainerMonLine gSwimmerFPool[] = {
     {{SPECIES_ARAQUANID, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,16,0,0}, 40, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_DRAGAPULT, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,18,0,0}, 30, NATURE_TIMID, {4,0,0,252,0,252}},
     {{SPECIES_EELEKTROSS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 20, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_KELDEO, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 10, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_PALKIA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 8, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_KYOGRE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 6, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_MANAPHY, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 4, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_SUICUNE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 2, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_GYARADOS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {55,0,0,0}, {0,22,0,0}, 1, NATURE_ADAMANT, {252,252,0,0,0,4}} // Shiny Ace
 };
 
@@ -608,8 +584,7 @@ const TrainerMonLine gBlackBeltPool[] = {
     {{SPECIES_CRABRAWLER, SPECIES_CRABOMINABLE, SPECIES_NONE, SPECIES_NONE}, {15,40,0,0}, {0,6,0,0}, 120, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_CLOBBOPUS, SPECIES_GRAPPLOCT, SPECIES_NONE, SPECIES_NONE}, {15,40,0,0}, {0,6,0,0}, 110, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_FALINKS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 100, NATURE_ADAMANT, {252,252,0,0,0,4}},
-    {{SPECIES_KUBFU, SPECIES_URSHIFU, SPECIES_NONE, SPECIES_NONE}, {25,0,0,0}, {0,10,0,0}, 90, NATURE_ADAMANT, {252,252,0,0,0,4}},
-    {{SPECIES_SNEASLER, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {25,0,0,0}, {0,10,0,0}, 80, NATURE_JOLLY, {4,252,0,0,0,252}},
+        {{SPECIES_SNEASLER, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {25,0,0,0}, {0,10,0,0}, 80, NATURE_JOLLY, {4,252,0,0,0,252}},
     {{SPECIES_PANGORO, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 70, NATURE_ADAMANT, {252,252,0,0,0,4}},
     {{SPECIES_HAWLUCHA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {20,0,0,0}, {0,8,0,0}, 60, NATURE_ADAMANT, {252,252,0,0,0,4}},
     // ... (add remaining if needed)
@@ -683,8 +658,7 @@ const TrainerMonLine gPsychicPool[] = {
     {{SPECIES_REUNICLUS, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {35,0,0,0}, {0,14,0,0}, 80, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_GOTHITELLE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {35,0,0,0}, {0,14,0,0}, 70, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_CHANDELURE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,16,0,0}, 60, NATURE_TIMID, {4,0,0,252,0,252}},
-    {{SPECIES_HOOPA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,16,0,0}, 50, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_ORBEETLE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,16,0,0}, 40, NATURE_MODEST, {252,0,0,252,4,0}},
+        {{SPECIES_ORBEETLE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,16,0,0}, 40, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_BRONZONG, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {40,0,0,0}, {0,16,0,0}, 30, NATURE_RELAXED, {252,0,252,0,4,0}},
     {{SPECIES_SIGILYPH, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,18,0,0}, 20, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_GARDEVOIR, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {45,0,0,0}, {0,18,0,0}, 15, NATURE_MODEST, {252,0,0,252,4,0}},
@@ -694,9 +668,7 @@ const TrainerMonLine gPsychicPool[] = {
     {{SPECIES_DELPHOX, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 6, NATURE_TIMID, {4,0,0,252,0,252}},
     {{SPECIES_HATTERENE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 5, NATURE_MODEST, {252,0,0,252,4,0}},
     {{SPECIES_INDEEDEE, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 4, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_LUNALA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 3, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_CRESSELIA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 2, NATURE_MODEST, {252,0,0,252,4,0}},
-    {{SPECIES_NECROZMA, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 1, NATURE_MODEST, {252,0,0,252,4,0}} // Shiny Ace
+    {{SPECIES_GARDEVOIR, SPECIES_NONE, SPECIES_NONE, SPECIES_NONE}, {50,0,0,0}, {0,20,0,0}, 1, NATURE_MODEST, {252,0,0,252,4,0}} // Shiny Ace
 };
 
 // 15. LADY - Fairy / Cute / Psychic / high-class special attackers
@@ -2451,6 +2423,9 @@ bool8 TrainerClassUsesPool(u8 trainerClass, enum TrainerPoolCategory *outCategor
     switch (trainerClass)
     {
         // Generic classes → use their named pool
+        case TRAINER_CLASS_YOUNGSTER:
+        case TRAINER_CLASS_LASS:
+        case TRAINER_CLASS_BUG_CATCHER:
         case TRAINER_CLASS_HIKER:
         case TRAINER_CLASS_COOLTRAINER:
         case TRAINER_CLASS_BLACK_BELT:
@@ -2459,6 +2434,7 @@ bool8 TrainerClassUsesPool(u8 trainerClass, enum TrainerPoolCategory *outCategor
         case TRAINER_CLASS_COLLECTOR:
         case TRAINER_CLASS_AROMA_LADY:
         case TRAINER_CLASS_SWIMMER_M:
+        case TRAINER_CLASS_SWIMMER_F:
         case TRAINER_CLASS_BIRD_KEEPER:
         case TRAINER_CLASS_POKEMANIAC:
         case TRAINER_CLASS_GUITARIST:
@@ -2469,6 +2445,20 @@ bool8 TrainerClassUsesPool(u8 trainerClass, enum TrainerPoolCategory *outCategor
         case TRAINER_CLASS_TUBER_M:
         case TRAINER_CLASS_RICH_BOY:
         case TRAINER_CLASS_PKMN_BREEDER:
+        case TRAINER_CLASS_FISHERMAN:
+        case TRAINER_CLASS_CAMPER:
+        case TRAINER_CLASS_PSYCHIC:
+        case TRAINER_CLASS_KINDLER:
+        case TRAINER_CLASS_DRAGON_TAMER:
+        case TRAINER_CLASS_RUIN_MANIAC:
+        case TRAINER_CLASS_OLD_COUPLE:
+        case TRAINER_CLASS_SIS_AND_BRO:
+        case TRAINER_CLASS_SR_AND_JR:
+        case TRAINER_CLASS_PKMN_RANGER:
+        case TRAINER_CLASS_SCHOOL_KID:
+        case TRAINER_CLASS_WINSTRATE:
+        case TRAINER_CLASS_POKEFAN:
+        case TRAINER_CLASS_YOUNG_COUPLE:
             *outCategory = POOL_CATEGORY_GENERIC;
             return TRUE;
 
@@ -3038,13 +3028,17 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
 
     if (poolEntries == 0 || totalWeight == 0)
     {
-        DebugPrintf("Pool empty or has no weight: returning\n");
+        DebugPrintf("Pool empty or has no weight: entries=%d, weight=%d - returning\n", poolEntries, totalWeight);
         return;
     }
+    
+    DebugPrintf("Pool generation starting: entries=%d, totalWeight=%d, levelCap=%d\n", poolEntries, totalWeight, cap);
 
     // Determine trainer's pool category so we can enforce restrictions
     enum TrainerPoolCategory poolCategory = POOL_CATEGORY_GENERIC;
     TrainerClassUsesPool(trainer->trainerClass, &poolCategory);
+    
+    DebugPrintf("Pool category: %d (GENERIC=%d)\n", poolCategory, POOL_CATEGORY_GENERIC);
 
     // Track used species to prevent duplicates
     u16 usedSpecies[partySize];
@@ -3069,6 +3063,7 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
         // attempt to re-roll up to `poolEntries` times before accepting.
         if (poolCategory == POOL_CATEGORY_GENERIC)
         {
+            DebugPrintf("Generic trainer detected - applying duplicate/restricted checks\n");
             for (u32 attempt = 0; attempt < poolEntries; attempt++)
             {
                 // Determine tentative stage for this chosen line
@@ -3091,14 +3086,17 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
                     if (usedSpecies[j] == testSpecies)
                         duplicate = TRUE;
 
-                if (testSpecies == SPECIES_NONE)
-                {
-                    if (!duplicate)
-                        break;
-                }
+                DebugPrintf("Slot %d attempt %d: Testing species %d (duplicate=%d, legendary=%d, mythical=%d, UB=%d, paradox=%d)\n", 
+                    slot, attempt, testSpecies, duplicate, 
+                    gSpeciesInfo[testSpecies].isLegendary, gSpeciesInfo[testSpecies].isMythical,
+                    gSpeciesInfo[testSpecies].isUltraBeast, gSpeciesInfo[testSpecies].isParadox);
+                
+                DebugPrintf("Used species so far: [0]=%d, [1]=%d, [2]=%d, [3]=%d, [4]=%d\n", 
+                    usedSpecies[0], usedSpecies[1], usedSpecies[2], usedSpecies[3], usedSpecies[4]);
 
-                if (!gSpeciesInfo[testSpecies].isLegendary && !gSpeciesInfo[testSpecies].isMythical && !gSpeciesInfo[testSpecies].isUltraBeast && !gSpeciesInfo[testSpecies].isParadox && !duplicate)
+                if (testSpecies == SPECIES_NONE || (!gSpeciesInfo[testSpecies].isLegendary && !gSpeciesInfo[testSpecies].isMythical && !gSpeciesInfo[testSpecies].isUltraBeast && !gSpeciesInfo[testSpecies].isParadox && !duplicate))
                 {
+                    DebugPrintf("Slot %d: Accepted species %d\n", slot, testSpecies);
                     break;
                 }
 
@@ -3135,10 +3133,13 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
         }
 
         u16 species = chosen->species[stage];
-        u8 level = cap - (Random() % 9);
+        u8 level = cap - (Random() % 5);  // Smaller variance to avoid level 0
         if (level < 5) level = 5;
+        if (level > cap) level = cap;
         // Mark as used
         usedSpecies[slot] = species;
+
+        DebugPrintf("Slot %d: Selected species %d (stage %d) at level %d\n", slot, species, stage, level);
 
         mutableParty[slot].species = species;
         mutableParty[slot].lvl = level;  // use per-slot level (not always cap)
@@ -3209,14 +3210,14 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
                     }
 
                     u16 testSpecies = chosen->species[testStage];
-                    if (testSpecies == SPECIES_NONE || (!gSpeciesInfo[testSpecies].isLegendary && !gSpeciesInfo[testSpecies].isMythical && !gSpeciesInfo[testSpecies].isUltraBeast && !gSpeciesInfo[testSpecies].isParadox))
-                        break;
-                    // Check for duplicate
                     bool duplicate = FALSE;
+                    // Check against all previously filled slots (0 through aceSlot-1)
                     for (u8 j = 0; j < aceSlot; j++)
                         if (usedSpecies[j] == testSpecies)
                             duplicate = TRUE;
-                    // Only use duplicate if needed for break logic
+                    
+                    if (testSpecies == SPECIES_NONE || (!gSpeciesInfo[testSpecies].isLegendary && !gSpeciesInfo[testSpecies].isMythical && !gSpeciesInfo[testSpecies].isUltraBeast && !gSpeciesInfo[testSpecies].isParadox && !duplicate))
+                        break;
 
                     // re-roll
                     roll = Random() % totalWeight;
@@ -3245,9 +3246,11 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
                     break;
             }
 
-            u8 aceLevel = cap - (Random() % 9);
+            u8 aceLevel = cap - (Random() % 5);  // Smaller variance to avoid level 0
             if (aceLevel < 5)
                 aceLevel = 5;
+            if (aceLevel > cap)
+                aceLevel = cap;
             mutableParty[aceSlot].species = chosen->species[stage];
             mutableParty[aceSlot].lvl = aceLevel;
             mutableParty[aceSlot].iv = 31;
@@ -3262,11 +3265,8 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
         }
     }
 
-    // Copy back to trainer's actual party (commented out - trainer->party is read-only)
-    // for (u8 i = 0; i < partySize; i++)
-    // {
-    //     trainer->party[i] = mutableParty[i];
-    // }
+    // Update trainer's party pointer to point to our generated data
+    ((struct Trainer *)trainer)->party = mutableParty;
 
     trainer->partySize = partySize;  // or trainer->partyCount if your struct uses that
     
