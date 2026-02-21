@@ -33,6 +33,7 @@
 #include "constants/metatile_behaviors.h"
 #include "constants/moves.h"
 #include "constants/songs.h"
+#include "item.h"
 #include "constants/trainer_types.h"
 
 #define NUM_FORCED_MOVEMENTS 18
@@ -1531,6 +1532,10 @@ bool8 PartyHasMonWithSurf(void)
 
     if (!TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
     {
+        // Check if player has HM03 in bag first
+        if (CheckBagHasItem(ITEM_HM03, 1))
+            return TRUE;
+            
         for (i = 0; i < PARTY_SIZE; i++)
         {
             if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)

@@ -7,10 +7,6 @@
 #include "palette.h"
 #include "pokemon_storage_system.h"
 #include "pokenav.h"
-#include "shop.h"
-
-// Forward declaration for store function
-void CB2_OpenStoreFromStartMenu(void);
 
 #define LOOPED_TASK_DECODE_STATE(action) (action - 5)
 
@@ -25,7 +21,6 @@ struct PokenavResources
     u16 mode;
     u16 conditionSearchId;
     bool32 hasAnyRibbons;
-    bool32 exitingToStore;
     void *substructPtrs[POKENAV_SUBSTRUCT_COUNT];
 };
 
@@ -388,7 +383,6 @@ static void InitPokenavResources(struct PokenavResources *resources)
     resources->currentMenuIndex = 0;
     resources->hasAnyRibbons = AnyMonHasRibbon();
     resources->currentMenuCb1 = NULL;
-    resources->exitingToStore = FALSE;
 }
 
 static bool32 AnyMonHasRibbon(void)
@@ -495,17 +489,10 @@ static void Task_Pokenav(u8 taskId)
         if (!WaitForPokenavShutdownFade())
         {
             bool32 calledFromScript = (gPokenavResources->mode != POKENAV_MODE_NORMAL);
-            bool32 exitingToStore = IsExitingToStore();
 
             FreeMenuHandlerSubstruct1();
             FreePokenavResources();
-            
-            if (exitingToStore)
-            {
-                // Open store menu after exiting Pokenav
-                SetMainCallback2(CB2_OpenStoreFromStartMenu);
-            }
-            else if (calledFromScript)
+            if (calledFromScript)
                 SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
             else
                 SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);
@@ -600,14 +587,4 @@ u32 GetSelectedConditionSearch(void)
 bool32 CanViewRibbonsMenu(void)
 {
     return gPokenavResources->hasAnyRibbons;
-}
-
-bool32 IsExitingToStore(void)
-{
-    return gPokenavResources->exitingToStore;
-}
-
-void SetExitingToStore(bool32 exiting)
-{
-    gPokenavResources->exitingToStore = exiting;
 }

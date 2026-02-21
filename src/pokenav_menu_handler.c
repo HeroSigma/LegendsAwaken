@@ -4,13 +4,6 @@
 #include "main.h"
 #include "sound.h"
 #include "constants/songs.h"
-#include "shop.h"
-
-// Forward declaration for global variable
-extern struct PokenavResources *gPokenavResources;
-
-// Forward declaration for store function
-void CB2_OpenStoreFromStartMenu(void);
 
 struct Pokenav_Menu
 {
@@ -35,20 +28,16 @@ static u32 HandleCantOpenRibbonsInput(struct Pokenav_Menu *);
 static u32 HandleMainMenuInputEndTutorial(struct Pokenav_Menu *);
 static u32 HandleMainMenuInputTutorial(struct Pokenav_Menu *);
 static u32 HandleMainMenuInput(struct Pokenav_Menu *);
-static u32 HandleStoreMenuInput(struct Pokenav_Menu *);
 static u32 (*GetMainMenuInputHandler(void))(struct Pokenav_Menu *);
 static void SetMenuInputHandler(struct Pokenav_Menu *);
 
 // Number of entries - 1 for that menu type
 static const u8 sLastCursorPositions[] =
 {
-    [POKENAV_MENU_TYPE_DEFAULT] = 2,
-    [POKENAV_MENU_TYPE_UNLOCK_MC] = 3,
+    [POKENAV_MENU_TYPE_DEFAULT]           = 2,
+    [POKENAV_MENU_TYPE_UNLOCK_MC]         = 3,
     [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS] = 4,
-    [POKENAV_MENU_TYPE_UNLOCK_STORE] = 2,
-    [POKENAV_MENU_TYPE_UNLOCK_MC_STORE] = 3,
-    [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_STORE] = 4,
-    [POKENAV_MENU_TYPE_CONDITION] = 2,
+    [POKENAV_MENU_TYPE_CONDITION]         = 2,
     [POKENAV_MENU_TYPE_CONDITION_SEARCH]  = 5
 };
 
@@ -75,30 +64,6 @@ static const u8 sMenuItems[][MAX_POKENAV_MENUITEMS] =
         POKENAV_MENUITEM_RIBBONS,
         [4 ... MAX_POKENAV_MENUITEMS - 1] = POKENAV_MENUITEM_SWITCH_OFF
     },
-    [POKENAV_MENU_TYPE_UNLOCK_STORE] =
-    {
-        POKENAV_MENUITEM_MAP,
-        POKENAV_MENUITEM_CONDITION,
-        POKENAV_MENUITEM_STORE,
-        [3 ... MAX_POKENAV_MENUITEMS - 1] = POKENAV_MENUITEM_SWITCH_OFF
-    },
-    [POKENAV_MENU_TYPE_UNLOCK_MC_STORE] =
-    {
-        POKENAV_MENUITEM_MAP,
-        POKENAV_MENUITEM_CONDITION,
-        POKENAV_MENUITEM_MATCH_CALL,
-        POKENAV_MENUITEM_STORE,
-        [4 ... MAX_POKENAV_MENUITEMS - 1] = POKENAV_MENUITEM_SWITCH_OFF
-    },
-    [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_STORE] =
-    {
-        POKENAV_MENUITEM_MAP,
-        POKENAV_MENUITEM_CONDITION,
-        POKENAV_MENUITEM_MATCH_CALL,
-        POKENAV_MENUITEM_RIBBONS,
-        POKENAV_MENUITEM_STORE,
-        [5 ... MAX_POKENAV_MENUITEMS - 1] = POKENAV_MENUITEM_SWITCH_OFF
-    },
     [POKENAV_MENU_TYPE_CONDITION] =
     {
         POKENAV_MENUITEM_CONDITION_PARTY,
@@ -120,21 +85,8 @@ static const u8 sMenuItems[][MAX_POKENAV_MENUITEMS] =
 static u8 GetPokenavMainMenuType(void)
 {
     u8 menuType = POKENAV_MENU_TYPE_DEFAULT;
-    bool32 hasPokenav = FlagGet(FLAG_RECEIVED_POKENAV) || FlagGet(FLAG_SYS_POKENAV_GET);
 
-    if (hasPokenav)
-    {
-        menuType = POKENAV_MENU_TYPE_UNLOCK_STORE;
-
-        if (FlagGet(FLAG_ADDED_MATCH_CALL_TO_POKENAV))
-        {
-            menuType = POKENAV_MENU_TYPE_UNLOCK_MC_STORE;
-
-            if (FlagGet(FLAG_SYS_RIBBON_GET))
-                menuType = POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_STORE;
-        }
-    }
-    else if (FlagGet(FLAG_ADDED_MATCH_CALL_TO_POKENAV))
+    if (FlagGet(FLAG_ADDED_MATCH_CALL_TO_POKENAV))
     {
         menuType = POKENAV_MENU_TYPE_UNLOCK_MC;
 
@@ -223,9 +175,6 @@ static void SetMenuInputHandler(struct Pokenav_Menu *menu)
         // fallthrough
     case POKENAV_MENU_TYPE_UNLOCK_MC:
     case POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS:
-    case POKENAV_MENU_TYPE_UNLOCK_STORE:
-    case POKENAV_MENU_TYPE_UNLOCK_MC_STORE:
-    case POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_STORE:
         menu->callback = GetMainMenuInputHandler();
         break;
     case POKENAV_MENU_TYPE_CONDITION:
@@ -297,13 +246,6 @@ static u32 HandleMainMenuInput(struct Pokenav_Menu *menu)
                 menu->callback = HandleCantOpenRibbonsInput;
                 return POKENAV_MENU_FUNC_NO_RIBBON_WINNERS;
             }
-        case POKENAV_MENUITEM_STORE:
-            menu->helpBarIndex = HELPBAR_NONE;
-            SetMenuIdAndCB(menu, POKENAV_MENU_FUNC_EXIT);
-            menu->callback = HandleStoreMenuInput;
-            // Set flag to indicate we're exiting to store
-            SetExitingToStore(TRUE);
-            return POKENAV_MENU_FUNC_OPEN_FEATURE;
         case POKENAV_MENUITEM_SWITCH_OFF:
             return POKENAV_MENU_FUNC_EXIT;
         }
@@ -562,17 +504,6 @@ int GetCurrentMenuItemId(void)
 {
     struct Pokenav_Menu *menu = GetSubstructPtr(POKENAV_SUBSTRUCT_MAIN_MENU_HANDLER);
     return menu->currMenuItem;
-}
-
-static u32 HandleStoreMenuInput(struct Pokenav_Menu *menu)
-{
-    // Handle store menu input - for now, just exit to store
-    if (JOY_NEW(A_BUTTON) || JOY_NEW(B_BUTTON))
-    {
-        // Exit Pokenav and open store
-        return POKENAV_MENU_FUNC_EXIT;
-    }
-    return POKENAV_MENU_FUNC_NONE;
 }
 
 u16 GetHelpBarTextId(void)

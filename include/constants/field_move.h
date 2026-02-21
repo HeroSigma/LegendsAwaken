@@ -27,5 +27,6 @@ enum FieldMove
     FIELD_MOVES_COUNT
 };
 
+#define FIELD_MOVE_FROM_BAG 0xFF
 
 #endif //GUARD_CONSTANTS_FIELD_MOVE_H

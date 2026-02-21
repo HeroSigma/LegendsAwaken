@@ -7,6 +7,45 @@
 #include "constants/field_move.h"
 #include "constants/moves.h"
 #include "constants/party_menu.h"
+#include "constants/items.h"
+#include "item.h"
+
+bool32 HasHMInBag(enum FieldMove fieldMove)
+{
+    u16 hmItem;
+    
+    switch (fieldMove)
+    {
+    case FIELD_MOVE_CUT:
+        hmItem = ITEM_HM01;
+        break;
+    case FIELD_MOVE_FLY:
+        hmItem = ITEM_HM02;
+        break;
+    case FIELD_MOVE_SURF:
+        hmItem = ITEM_HM03;
+        break;
+    case FIELD_MOVE_STRENGTH:
+        hmItem = ITEM_HM04;
+        break;
+    case FIELD_MOVE_FLASH:
+        hmItem = ITEM_HM05;
+        break;
+    case FIELD_MOVE_ROCK_SMASH:
+        hmItem = ITEM_HM06;
+        break;
+    case FIELD_MOVE_WATERFALL:
+        hmItem = ITEM_HM07;
+        break;
+    case FIELD_MOVE_DIVE:
+        hmItem = ITEM_HM08;
+        break;
+    default:
+        return FALSE; // Not an HM move
+    }
+    
+    return CheckBagHasItem(hmItem, 1);
+}
 
 static bool32 IsFieldMoveUnlocked_Cut(void)
 {

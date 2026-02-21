@@ -2320,6 +2320,14 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
     if (doUnlockedCheck && !IsFieldMoveUnlocked(fieldMove))
         return FALSE;
 
+    // Check if player has the HM in their bag first
+    if (HasHMInBag(fieldMove))
+    {
+        gSpecialVar_Result = FIELD_MOVE_FROM_BAG;
+        gSpecialVar_0x8004 = SPECIES_NONE; // No specific species needed
+        return FALSE;
+    }
+
     move = FieldMove_GetMoveId(fieldMove);
     for (u32 i = 0; i < PARTY_SIZE; i++)
     {
