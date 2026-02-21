@@ -13,6 +13,7 @@
 #include "pokemon.h"  // for struct Pokemon and battle functions
 #include "battle.h"   // for AI flags
 #include "caps.h"    // for GetCurrentLevelCap function
+#include <stdbool.h>
 
 // ===============================================
 // VILLAIN TEAM POOLS – static / thematic
@@ -3045,6 +3046,10 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
     enum TrainerPoolCategory poolCategory = POOL_CATEGORY_GENERIC;
     TrainerClassUsesPool(trainer->trainerClass, &poolCategory);
 
+    // Track used species to prevent duplicates
+    u16 usedSpecies[partySize];
+    for (u8 i = 0; i < partySize; i++) usedSpecies[i] = SPECIES_NONE;
+
     for (; slot < partySize - 1; slot++)
     {
         // Choose a random line from the pool using weights
@@ -3081,12 +3086,18 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
                 }
 
                 u16 testSpecies = chosen->species[testStage];
+                bool duplicate = FALSE;
+                for (u8 j = 0; j < slot; j++)
+                    if (usedSpecies[j] == testSpecies)
+                        duplicate = TRUE;
+
                 if (testSpecies == SPECIES_NONE)
                 {
-                    break;
+                    if (!duplicate)
+                        break;
                 }
 
-                if (!gSpeciesInfo[testSpecies].isLegendary && !gSpeciesInfo[testSpecies].isMythical && !gSpeciesInfo[testSpecies].isUltraBeast && !gSpeciesInfo[testSpecies].isParadox)
+                if (!gSpeciesInfo[testSpecies].isLegendary && !gSpeciesInfo[testSpecies].isMythical && !gSpeciesInfo[testSpecies].isUltraBeast && !gSpeciesInfo[testSpecies].isParadox && !duplicate)
                 {
                     break;
                 }
@@ -3126,6 +3137,8 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
         u16 species = chosen->species[stage];
         u8 level = cap - (Random() % 9);
         if (level < 5) level = 5;
+        // Mark as used
+        usedSpecies[slot] = species;
 
         mutableParty[slot].species = species;
         mutableParty[slot].lvl = level;  // use per-slot level (not always cap)
@@ -3154,6 +3167,7 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
             mutableParty[aceSlot].species = aceSpecies;
             mutableParty[aceSlot].lvl = cap;  // BRUTAL MODE: Max level ace
             mutableParty[aceSlot].iv = 31;     // Perfect IVs
+            usedSpecies[aceSlot] = aceSpecies;
             mutableParty[aceSlot].nature = NATURE_ADAMANT;  // BRUTAL MODE: Aggressive nature
             mutableParty[aceSlot].heldItem = ITEM_LEFTOVERS;  // BRUTAL MODE: Best healing item
             mutableParty[aceSlot].isShiny = TRUE;  // Always shiny for intimidation
@@ -3197,6 +3211,12 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
                     u16 testSpecies = chosen->species[testStage];
                     if (testSpecies == SPECIES_NONE || (!gSpeciesInfo[testSpecies].isLegendary && !gSpeciesInfo[testSpecies].isMythical && !gSpeciesInfo[testSpecies].isUltraBeast && !gSpeciesInfo[testSpecies].isParadox))
                         break;
+                    // Check for duplicate
+                    bool duplicate = FALSE;
+                    for (u8 j = 0; j < aceSlot; j++)
+                        if (usedSpecies[j] == testSpecies)
+                            duplicate = TRUE;
+                    // Only use duplicate if needed for break logic
 
                     // re-roll
                     roll = Random() % totalWeight;
@@ -3232,6 +3252,7 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
             mutableParty[aceSlot].lvl = aceLevel;
             mutableParty[aceSlot].iv = 31;
             mutableParty[aceSlot].nature = chosen->preferred_nature;
+            usedSpecies[aceSlot] = mutableParty[aceSlot].species;
             mutableParty[aceSlot].heldItem = ITEM_SITRUS_BERRY;
             mutableParty[aceSlot].isShiny = FALSE;
             mutableParty[aceSlot].ev = (u8[]){252, 252, 0, 0, 0, 4};
