@@ -30,6 +30,7 @@
 #include "constants/weather.h"
 #include "constants/wild_pools_config.h"
 #include "constants/map_pools.h"
+#include "caps.h"
 
 extern const u8 EventScript_SprayWoreOff[];
 
@@ -59,7 +60,6 @@ static bool8 TryGetAbilityInfluencedWildMonIndex(const struct WildPokemon *wildM
 static bool8 TryGetAbilityInfluencedWildMonIndex(const struct WildPokemon *wildMon, enum Type type, enum Ability ability, u8 *monIndex);
 #endif
 static bool8 IsAbilityAllowingEncounter(u8 level);
-static u8 GetBadgeCount(void);
 static u16 TryGenerateWildMonFromPool(u8 encounterArea, u8 baseLevel, u8 flags);
 
 EWRAM_DATA static u8 sWildEncountersDisabled = 0;
@@ -1270,43 +1270,7 @@ u32 ChooseHiddenMonIndex(void)
     #endif
 }
 
-// Count the number of badges the player has collected
-static u8 GetBadgeCount(void)
-{
-    u8 count = 0;
-    
-    // Check Hoenn badges
-    if (FlagGet(FLAG_BADGE01_GET)) count++;
-    if (FlagGet(FLAG_BADGE02_GET)) count++;
-    if (FlagGet(FLAG_BADGE03_GET)) count++;
-    if (FlagGet(FLAG_BADGE04_GET)) count++;
-    if (FlagGet(FLAG_BADGE05_GET)) count++;
-    if (FlagGet(FLAG_BADGE06_GET)) count++;
-    if (FlagGet(FLAG_BADGE07_GET)) count++;
-    if (FlagGet(FLAG_BADGE08_GET)) count++;
-    
-    // Check Johto badges
-    // if (FlagGet(FLAG_JOHTO_BADGE01_GET)) count++;
-    // if (FlagGet(FLAG_JOHTO_BADGE02_GET)) count++;
-    // if (FlagGet(FLAG_JOHTO_BADGE03_GET)) count++;
-    // if (FlagGet(FLAG_JOHTO_BADGE04_GET)) count++;
-    // if (FlagGet(FLAG_JOHTO_BADGE05_GET)) count++;
-    // if (FlagGet(FLAG_JOHTO_BADGE06_GET)) count++;
-    // if (FlagGet(FLAG_JOHTO_BADGE07_GET)) count++;
-    // if (FlagGet(FLAG_JOHTO_BADGE08_GET)) count++;
-    
-    // Check Kanto badges
-    // if (FlagGet(FLAG_KANTO_BADGE01_GET)) count++;
-    // if (FlagGet(FLAG_KANTO_BADGE02_GET)) count++;
-    // if (FlagGet(FLAG_KANTO_BADGE03_GET)) count++;
-    // if (FlagGet(FLAG_KANTO_BADGE04_GET)) count++;
-    // if (FlagGet(FLAG_KANTO_BADGE05_GET)) count++;
-    // if (FlagGet(FLAG_KANTO_BADGE06_GET)) count++;
-    // if (FlagGet(FLAG_KANTO_BADGE07_GET)) count++;
-    // if (FlagGet(FLAG_KANTO_BADGE08_GET)) count++;
-    
-    return count;
-}
+ 
 
 // Scale level based on badge count for proper progression
 static u8 GetScaledLevel(u8 baseLevel, u8 badgeCount)
@@ -1326,9 +1290,10 @@ static u8 GetScaledLevel(u8 baseLevel, u8 badgeCount)
     
     u8 scaledLevel = baseLevel + levelIncrease;
     
-    // Cap at reasonable maximum level (50 for wild encounters)
-    if (scaledLevel > 50)
-        scaledLevel = 50;
+    // Cap at current level cap from the game's level cap system
+    u32 currentLevelCap = GetCurrentLevelCap();
+    if (scaledLevel > currentLevelCap)
+        scaledLevel = currentLevelCap;
     
     // Ensure minimum level is at least badgeCount * 2 + 5
     u8 minLevel = (badgeCount * 2) + 5;

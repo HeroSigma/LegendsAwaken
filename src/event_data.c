@@ -48,6 +48,17 @@ const u16 gBadgeFlags[NUM_BADGES] =
     FLAG_BADGE08_GET,
 };
 
+u8 GetBadgeCount(void)
+{
+    u8 count = 0;
+    for (u32 i = 0; i < ARRAY_COUNT(gBadgeFlags); i++)
+    {
+        if (FlagGet(gBadgeFlags[i]))
+            count++;
+    }
+    return count;
+}
+
 void InitEventData(void)
 {
     memset(gSaveBlock1Ptr->flags, 0, sizeof(gSaveBlock1Ptr->flags));

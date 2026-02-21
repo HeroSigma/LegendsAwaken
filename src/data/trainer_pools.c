@@ -3027,7 +3027,17 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
     const TrainerMonLine *line = pool;
     while (slot < partySize - 1 && line->weight > 0 && line->species[0] != SPECIES_NONE)
     {
-        u16 species = line->species[0];
+        u8 stage = 0;
+        for (u8 s = 1; s < MAX_EVO_STAGES; s++)
+    {
+        if (line->species[s] == SPECIES_NONE)
+            break;
+        if (cap >= line->min_level[s] && GetBadgeCount() >= line->min_badges[s])
+            stage = s;
+        else
+            break;
+    }
+        u16 species = line->species[stage];
         u8 level = cap - (Random() % 9);
         if (level < 5) level = 5;
 
@@ -3074,7 +3084,17 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
         else if (line->weight > 0 && line->species[0] != SPECIES_NONE)
         {
             // No ace specified: fill last slot from pool so we never leave slot 5 as species 0
-            mutableParty[aceSlot].species = line->species[0];
+            u8 stage = 0;
+        for (u8 s = 1; s < MAX_EVO_STAGES; s++)
+        {
+            if (line->species[s] == SPECIES_NONE)
+                break;
+            if (cap >= line->min_level[s] && GetBadgeCount() >= line->min_badges[s])
+                stage = s;
+            else
+                break;
+        }
+            mutableParty[aceSlot].species = line->species[stage];
             mutableParty[aceSlot].lvl = cap;
             mutableParty[aceSlot].iv = 31;
             mutableParty[aceSlot].nature = line->preferred_nature;

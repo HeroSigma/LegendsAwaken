@@ -50,4 +50,6 @@ extern u16 gSpecialVar_Unused_0x8014;
 
 extern const u16 gBadgeFlags[NUM_BADGES];
 
+u8 GetBadgeCount(void);
+
 #endif // GUARD_EVENT_DATA_H
