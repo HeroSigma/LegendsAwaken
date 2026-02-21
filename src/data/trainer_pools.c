@@ -3023,28 +3023,114 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
     // Simple EV spread
     // static const u8 simpleEVs[] = {252, 252, 0, 0, 0, 4};
 
-    // Simplified pool generation - just pick first few entries for now
-    const TrainerMonLine *line = pool;
-    while (slot < partySize - 1 && line->weight > 0 && line->species[0] != SPECIES_NONE)
+    // Randomized pool generation - pick weighted random entries per slot
+    // First compute total weight and ensure pool contains entries
+    u32 totalWeight = 0;
+    const TrainerMonLine *walker = pool;
+    u32 poolEntries = 0;
+    while (walker && walker->weight > 0 && walker->species[0] != SPECIES_NONE && poolEntries < MAX_TRAINER_MON_LINES)
     {
-        u8 stage = 0;
-        for (u8 s = 1; s < MAX_EVO_STAGES; s++)
-    {
-        if (line->species[s] == SPECIES_NONE)
-            break;
-        if (cap >= line->min_level[s] && GetBadgeCount() >= line->min_badges[s])
-            stage = s;
-        else
-            break;
+        totalWeight += walker->weight;
+        poolEntries++;
+        walker++;
     }
-        u16 species = line->species[stage];
+
+    if (poolEntries == 0 || totalWeight == 0)
+    {
+        DebugPrintf("Pool empty or has no weight: returning\n");
+        return;
+    }
+
+    // Determine trainer's pool category so we can enforce restrictions
+    enum TrainerPoolCategory poolCategory = POOL_CATEGORY_GENERIC;
+    TrainerClassUsesPool(trainer->trainerClass, &poolCategory);
+
+    for (; slot < partySize - 1; slot++)
+    {
+        // Choose a random line from the pool using weights
+        u32 roll = Random() % totalWeight;
+        const TrainerMonLine *chosen = pool;
+        u32 cum = 0;
+        for (u32 i = 0; i < poolEntries; i++)
+        {
+            cum += chosen->weight;
+            if (roll < cum)
+                break;
+            chosen++;
+        }
+
+        // If this is a generic trainer category, avoid selecting banned species
+        // (legendary, mythical, ultra beast, paradox) where possible. We will
+        // attempt to re-roll up to `poolEntries` times before accepting.
+        if (poolCategory == POOL_CATEGORY_GENERIC)
+        {
+            for (u32 attempt = 0; attempt < poolEntries; attempt++)
+            {
+                // Determine tentative stage for this chosen line
+                u8 testStage = 0;
+                u32 currentLevelCap = GetCurrentLevelCap();
+                for (u8 s = 1; s < MAX_EVO_STAGES; s++)
+                {
+                    if (chosen->species[s] == SPECIES_NONE)
+                        break;
+                    if (cap >= chosen->min_level[s] &&
+                        (GetBadgeCount() >= chosen->min_badges[s] || cap >= currentLevelCap))
+                        testStage = s;
+                    else
+                        break;
+                }
+
+                u16 testSpecies = chosen->species[testStage];
+                if (testSpecies == SPECIES_NONE)
+                {
+                    break;
+                }
+
+                if (!gSpeciesInfo[testSpecies].isLegendary && !gSpeciesInfo[testSpecies].isMythical && !gSpeciesInfo[testSpecies].isUltraBeast && !gSpeciesInfo[testSpecies].isParadox)
+                {
+                    break;
+                }
+
+                // re-roll: pick another entry from the pool
+                roll = Random() % totalWeight;
+                chosen = pool;
+                cum = 0;
+                for (u32 j = 0; j < poolEntries; j++)
+                {
+                    cum += chosen->weight;
+                    if (roll < cum)
+                        break;
+                    chosen++;
+                }
+            }
+            // If none accepted after attempts, fall back to the last chosen (acceptable or not)
+        }
+
+        // Determine highest allowed evolution stage for this chosen line.
+        // Trainers at the level cap should be allowed to use evolved stages
+        // if their level cap meets the min_level requirement, even if badge
+        // requirements haven't been met yet.
+        u8 stage = 0;
+        u32 currentLevelCap = GetCurrentLevelCap();
+        for (u8 s = 1; s < MAX_EVO_STAGES; s++)
+        {
+            if (chosen->species[s] == SPECIES_NONE)
+                break;
+            if (cap >= chosen->min_level[s] &&
+                (GetBadgeCount() >= chosen->min_badges[s] || cap >= currentLevelCap))
+                stage = s;
+            else
+                break;
+        }
+
+        u16 species = chosen->species[stage];
         u8 level = cap - (Random() % 9);
         if (level < 5) level = 5;
 
         mutableParty[slot].species = species;
-        mutableParty[slot].lvl = cap;  // BRUTAL MODE: Max level for all Pokemon
+        mutableParty[slot].lvl = level;  // use per-slot level (not always cap)
         mutableParty[slot].iv = 31;  // Perfect IVs for brutal difficulty
-        mutableParty[slot].nature = line->preferred_nature;
+        mutableParty[slot].nature = chosen->preferred_nature;
         mutableParty[slot].heldItem = ITEM_SITRUS_BERRY;  // BRUTAL MODE: All Pokemon have healing items
         mutableParty[slot].isShiny = FALSE;
         
@@ -3057,12 +3143,7 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
             mutableParty[slot].moves[m] = MOVE_NONE;
         }
 
-        slot++;
-        line++;
-        
-        DebugPrintf("Added species %d level %d\n", species, level);
-        
-        if (slot >= partySize - 1) break;
+        DebugPrintf("Added species %d level %d (from pool roll %d)\n", species, level, roll);
     }
 
     // Last slot = Shiny Ace (if we have an ace species), or 6th from pool to avoid species 0
@@ -3081,29 +3162,82 @@ void GenerateSpecialTrainerParty(struct Trainer *trainer, const TrainerMonLine *
                 mutableParty[aceSlot].moves[m] = MOVE_NONE;
             DebugPrintf("Added ace species %d level %d (shiny)\n", aceSpecies, cap);
         }
-        else if (line->weight > 0 && line->species[0] != SPECIES_NONE)
+        else if (totalWeight > 0 && poolEntries > 0)
         {
-            // No ace specified: fill last slot from pool so we never leave slot 5 as species 0
+            // No ace specified: pick one final entry from the pool randomly
+            u32 roll = Random() % totalWeight;
+            const TrainerMonLine *chosen = pool;
+            u32 cum = 0;
+            for (u32 i = 0; i < poolEntries; i++)
+            {
+                cum += chosen->weight;
+                if (roll < cum)
+                    break;
+                chosen++;
+            }
+
+            // If generic category, attempt to avoid banned species for the ace as well
+            if (poolCategory == POOL_CATEGORY_GENERIC)
+            {
+                for (u32 attempt = 0; attempt < poolEntries; attempt++)
+                {
+                    u8 testStage = 0;
+                    u32 currentLevelCap = GetCurrentLevelCap();
+                    for (u8 s = 1; s < MAX_EVO_STAGES; s++)
+                    {
+                        if (chosen->species[s] == SPECIES_NONE)
+                            break;
+                        if (cap >= chosen->min_level[s] &&
+                            (GetBadgeCount() >= chosen->min_badges[s] || cap >= currentLevelCap))
+                            testStage = s;
+                        else
+                            break;
+                    }
+
+                    u16 testSpecies = chosen->species[testStage];
+                    if (testSpecies == SPECIES_NONE || (!gSpeciesInfo[testSpecies].isLegendary && !gSpeciesInfo[testSpecies].isMythical && !gSpeciesInfo[testSpecies].isUltraBeast && !gSpeciesInfo[testSpecies].isParadox))
+                        break;
+
+                    // re-roll
+                    roll = Random() % totalWeight;
+                    chosen = pool;
+                    cum = 0;
+                    for (u32 j = 0; j < poolEntries; j++)
+                    {
+                        cum += chosen->weight;
+                        if (roll < cum)
+                            break;
+                        chosen++;
+                    }
+                }
+            }
+
             u8 stage = 0;
-        for (u8 s = 1; s < MAX_EVO_STAGES; s++)
-        {
-            if (line->species[s] == SPECIES_NONE)
-                break;
-            if (cap >= line->min_level[s] && GetBadgeCount() >= line->min_badges[s])
-                stage = s;
-            else
-                break;
-        }
-            mutableParty[aceSlot].species = line->species[stage];
-            mutableParty[aceSlot].lvl = cap;
+            u32 currentLevelCap = GetCurrentLevelCap();
+            for (u8 s = 1; s < MAX_EVO_STAGES; s++)
+            {
+                if (chosen->species[s] == SPECIES_NONE)
+                    break;
+                if (cap >= chosen->min_level[s] &&
+                    (GetBadgeCount() >= chosen->min_badges[s] || cap >= currentLevelCap))
+                    stage = s;
+                else
+                    break;
+            }
+
+            u8 aceLevel = cap - (Random() % 9);
+            if (aceLevel < 5)
+                aceLevel = 5;
+            mutableParty[aceSlot].species = chosen->species[stage];
+            mutableParty[aceSlot].lvl = aceLevel;
             mutableParty[aceSlot].iv = 31;
-            mutableParty[aceSlot].nature = line->preferred_nature;
+            mutableParty[aceSlot].nature = chosen->preferred_nature;
             mutableParty[aceSlot].heldItem = ITEM_SITRUS_BERRY;
             mutableParty[aceSlot].isShiny = FALSE;
             mutableParty[aceSlot].ev = (u8[]){252, 252, 0, 0, 0, 4};
             for (u8 m = 0; m < MAX_MON_MOVES; m++)
                 mutableParty[aceSlot].moves[m] = MOVE_NONE;
-            DebugPrintf("Added 6th from pool species %d (no ace)\n", line->species[0]);
+            DebugPrintf("Added 6th from pool species %d (no ace, roll %d)\n", chosen->species[0], roll);
         }
     }
 

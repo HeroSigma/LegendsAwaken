@@ -24,7 +24,7 @@ static const struct MapPoolConfig sMapPoolOverrides[] = {
     
     // Forest areas
     {MAP_PETALBURG_WOODS, POOL_FOREST},
-    {MAP_RUSTURF_TUNNEL, POOL_FOREST},     // Forested areas near Rusturf
+    {MAP_RUSTURF_TUNNEL, POOL_CAVE},     // Rusturf Tunnel is a cave
     
     // Note: Eterna Forest moved to POOL_GRAVEYARD for ghost-specific encounters
     // Note: Abandoned Ship moved to POOL_GRAVEYARD for ghost-specific encounters

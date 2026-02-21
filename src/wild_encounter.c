@@ -1343,18 +1343,26 @@ u16 GetWildSpeciesFromPool(enum WildPoolType poolType, u8 level, u8 badgeCount)
     if (chosenLine == NULL)
         return SPECIES_NONE;
 
-    // Pick the highest allowed evolution stage based on level and badges
+    // Pick the highest allowed evolution stage based on level and badges.
+    // Allow evolutions at the current level cap even if badge requirements
+    // haven't been met yet so players at the cap can encounter final forms.
     u8 stage = 0;
+    u32 currentLevelCap = GetCurrentLevelCap();
     for (u8 s = 1; s < MAX_EVO_STAGES; s++)
     {
         if (chosenLine->species[s] == SPECIES_NONE)
             break;
 
-        // Check if player meets both level and badge requirements for this stage
-        if (level >= chosenLine->min_level[s] && badgeCount >= chosenLine->min_badges[s])
+        // Allow if level meets min_level AND (badge requirement met OR we're at/above level cap)
+        if (level >= chosenLine->min_level[s] &&
+            (badgeCount >= chosenLine->min_badges[s] || level >= currentLevelCap))
+        {
             stage = s;
+        }
         else
-            break;  // Don't skip to later stages if this one isn't met
+        {
+            break; // Stop at first unmet stage
+        }
     }
 
     return chosenLine->species[stage];
@@ -1404,19 +1412,28 @@ static u16 TryGenerateWildMonFromPool(u8 encounterArea, u8 baseLevel, u8 flags)
     
     // Scale level based on badge count for proper progression
     u8 scaledLevel = GetScaledLevel(baseLevel, badgeCount);
-    u16 species = GetWildSpeciesFromPool(poolType, scaledLevel, badgeCount);
-    
+
+    // Determine final encounter level (add a small random variation) and cap to current level cap
+    u8 level = scaledLevel + (Random() % 5);
+    u32 currentLevelCap = GetCurrentLevelCap();
+    if (level > currentLevelCap)
+        level = currentLevelCap;
+    if (level < 1)
+        level = 1;
+
+    // Pick species based on the final level so evolutions that occur at the randomized
+    // encounter level are eligible (fixes missing evolutions at level cap)
+    u16 species = GetWildSpeciesFromPool(poolType, level, badgeCount);
+
     if (species != SPECIES_NONE)
     {
         // Check repel and abilities before confirming
-        u8 level = scaledLevel + (Random() % 5);  // Vary level by ±0-4 for some randomness
-        
         if (flags & WILD_CHECK_REPEL && !IsWildLevelAllowedByRepel(level))
             return SPECIES_NONE;
         if (gMapHeader.mapLayoutId != LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS && 
             flags & WILD_CHECK_KEEN_EYE && !IsAbilityAllowingEncounter(level))
             return SPECIES_NONE;
-        
+
         CreateWildMon(species, level);
         return species;
     }
