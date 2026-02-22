@@ -35,6 +35,7 @@
 #include "constants/event_objects.h"
 #include "constants/event_object_movement.h"
 #include "constants/field_effects.h"
+#include "constants/field_move.h"
 #include "constants/flags.h"
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
@@ -2829,7 +2830,13 @@ bool8 FldEff_FieldMoveShowMonInit(void)
 {
     struct Pokemon *pokemon;
     bool32 noDucking = gFieldEffectArguments[0] & SHOW_MON_CRY_NO_DUCKING;
-    pokemon = &gPlayerParty[(u8)gFieldEffectArguments[0]];
+    
+    // If field effect argument is FIELD_MOVE_FROM_BAG, use party slot 1 (first Pokémon)
+    if ((gFieldEffectArguments[0] & 0xFF) == FIELD_MOVE_FROM_BAG)
+        pokemon = &gPlayerParty[0]; // Use first Pokémon (slot 1)
+    else
+        pokemon = &gPlayerParty[(u8)(gFieldEffectArguments[0] & 0xFF)]; // Use specified party slot
+    
     gFieldEffectArguments[0] = GetMonData(pokemon, MON_DATA_SPECIES);
     gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_IS_SHINY);
     gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);

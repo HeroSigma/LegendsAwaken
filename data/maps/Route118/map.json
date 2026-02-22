@@ -382,7 +382,7 @@
     },
     {
       "type": "secret_base",
-      "x": 67,
+      "x": 68,
       "y": 6,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_RED_CAVE2_1"

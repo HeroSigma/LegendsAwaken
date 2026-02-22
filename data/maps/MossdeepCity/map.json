@@ -123,8 +123,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 56,
-      "y": 21,
+      "x": 55,
+      "y": 11,
       "elevation": 7,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
@@ -260,8 +260,8 @@
     {
       "local_id": "LOCALID_MOSSDEEP_JIRACHI",
       "graphics_id": "OBJ_EVENT_GFX_JIRACHI",
-      "x": 69,
-      "y": 13,
+      "x": 74,
+      "y": 8,
       "elevation": 7,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -447,7 +447,7 @@
     {
       "type": "sign",
       "x": 46,
-      "y": 17,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MossdeepCity_EventScript_CitySign"
@@ -478,8 +478,8 @@
     },
     {
       "type": "sign",
-      "x": 66,
-      "y": 16,
+      "x": 69,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MossdeepCity_EventScript_SpaceCenterSign"
@@ -502,8 +502,8 @@
     },
     {
       "type": "sign",
-      "x": 57,
-      "y": 21,
+      "x": 56,
+      "y": 11,
       "elevation": 7,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MossdeepCity_EventScript_WhiteRock"

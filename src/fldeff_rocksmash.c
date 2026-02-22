@@ -60,9 +60,11 @@ static void Task_DoFieldMove_Init(u8 taskId)
     if (!ObjectEventIsMovementOverridden(&gObjectEvents[objEventId])
      || ObjectEventClearHeldMovementIfFinished(&gObjectEvents[objEventId]))
     {
-        if (gMapHeader.mapType == MAP_TYPE_UNDERWATER || gFieldEffectArguments[3])
+        if (gMapHeader.mapType == MAP_TYPE_UNDERWATER || gFieldEffectArguments[3] 
+            || FieldEffectActiveListContains(FLDEFF_USE_CUT_ON_TREE) 
+            || FieldEffectActiveListContains(FLDEFF_USE_CUT_ON_GRASS))
         {
-            // Skip field move pose underwater, or if arg3 is nonzero
+            // Skip field move pose underwater, if arg3 is nonzero, or always for Cut moves
             if (gFieldEffectArguments[3])
                 gFieldEffectArguments[3] = 0;
             FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);

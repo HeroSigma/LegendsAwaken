@@ -216,8 +216,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 37,
-      "y": 7,
+      "x": 35,
+      "y": 4,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_RARE_CANDY"
