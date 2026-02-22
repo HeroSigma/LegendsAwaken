@@ -72,7 +72,13 @@ EventScript_RockSmash::
 	checkfieldmove FIELD_MOVE_ROCK_SMASH, TRUE
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
 	setfieldeffectargument 0, VAR_RESULT
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	@ Handle Pokémon name buffering - use first Pokémon if HM is from bag
+	goto_if_ne VAR_RESULT, FIELD_MOVE_FROM_BAG, EventScript_BufferRockSmashMonNick
+	bufferpartymonnick STR_VAR_1, 0 @ Use first Pokémon (slot 1) when HM is from bag
+	goto EventScript_AfterRockSmashBufferMonNick
+EventScript_BufferRockSmashMonNick:
+	bufferpartymonnick STR_VAR_1, VAR_RESULT @ Use specified Pokémon slot
+EventScript_AfterRockSmashBufferMonNick:
 	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
 	msgbox Text_WantToSmash, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
@@ -291,7 +297,13 @@ EventScript_UseWaterfall::
 	lockall
 	checkfieldmove FIELD_MOVE_WATERFALL
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantWaterfall
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	@ Handle Pokémon name buffering - use first Pokémon if HM is from bag
+	goto_if_ne VAR_RESULT, FIELD_MOVE_FROM_BAG, EventScript_BufferWaterfallMonNick
+	bufferpartymonnick STR_VAR_1, 0 @ Use first Pokémon (slot 1) when HM is from bag
+	goto EventScript_AfterWaterfallBufferMonNick
+EventScript_BufferWaterfallMonNick:
+	bufferpartymonnick STR_VAR_1, VAR_RESULT @ Use specified Pokémon slot
+EventScript_AfterWaterfallBufferMonNick:
 	setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToWaterfall, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
@@ -327,7 +339,13 @@ EventScript_UseDive::
 	checkfieldmove FIELD_MOVE_DIVE
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantDive
 	copyvar 0x8004 VAR_RESULT
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	@ Handle Pokémon name buffering - use first Pokémon if HM is from bag
+	goto_if_ne VAR_RESULT, FIELD_MOVE_FROM_BAG, EventScript_BufferDiveMonNick
+	bufferpartymonnick STR_VAR_1, 0 @ Use first Pokémon (slot 1) when HM is from bag
+	goto EventScript_AfterDiveBufferMonNick
+EventScript_BufferDiveMonNick:
+	bufferpartymonnick STR_VAR_1, VAR_RESULT @ Use specified Pokémon slot
+EventScript_AfterDiveBufferMonNick:
 	setfieldeffectargument 0, VAR_RESULT
 	setfieldeffectargument 1, 1
 	msgbox Text_WantToDive, MSGBOX_YESNO
@@ -353,7 +371,13 @@ EventScript_UseDiveUnderwater::
 	lockall
 	checkfieldmove FIELD_MOVE_DIVE
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSurface
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	@ Handle Pokémon name buffering - use first Pokémon if HM is from bag
+	goto_if_ne VAR_RESULT, FIELD_MOVE_FROM_BAG, EventScript_BufferSurfaceMonNick
+	bufferpartymonnick STR_VAR_1, 0 @ Use first Pokémon (slot 1) when HM is from bag
+	goto EventScript_AfterSurfaceBufferMonNick
+EventScript_BufferSurfaceMonNick:
+	bufferpartymonnick STR_VAR_1, VAR_RESULT @ Use specified Pokémon slot
+EventScript_AfterSurfaceBufferMonNick:
 	setfieldeffectargument 0, VAR_RESULT
 	setfieldeffectargument 1, 1
 	msgbox Text_WantToSurface, MSGBOX_YESNO
@@ -433,7 +457,13 @@ Text_FailSweetScent:
 
 EventScript_UseDefog::
 	lockall
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	@ Handle Pokémon name buffering - use first Pokémon if HM is from bag
+	goto_if_ne VAR_RESULT, FIELD_MOVE_FROM_BAG, EventScript_BufferDefogMonNick
+	bufferpartymonnick STR_VAR_1, 0 @ Use first Pokémon (slot 1) when HM is from bag
+	goto EventScript_AfterDefogBufferMonNick
+EventScript_BufferDefogMonNick:
+	bufferpartymonnick STR_VAR_1, VAR_RESULT @ Use specified Pokémon slot
+EventScript_AfterDefogBufferMonNick:
 	buffermovename STR_VAR_2, MOVE_DEFOG
 	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
@@ -452,7 +482,13 @@ EventScript_UseRockClimb::
 	lockall
 	checkfieldmove FIELD_MOVE_ROCK_CLIMB
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantRockClimb
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	@ Handle Pokémon name buffering - use first Pokémon if HM is from bag
+	goto_if_ne VAR_RESULT, FIELD_MOVE_FROM_BAG, EventScript_BufferRockClimbMonNick
+	bufferpartymonnick STR_VAR_1, 0 @ Use first Pokémon (slot 1) when HM is from bag
+	goto EventScript_AfterRockClimbBufferMonNick
+EventScript_BufferRockClimbMonNick:
+	bufferpartymonnick STR_VAR_1, VAR_RESULT @ Use specified Pokémon slot
+EventScript_AfterRockClimbBufferMonNick:
 	setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToRockClimb, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndRockClimb
