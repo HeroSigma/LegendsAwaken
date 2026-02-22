@@ -4,7 +4,13 @@ EventScript_CutTree::
 	checkfieldmove FIELD_MOVE_CUT, TRUE
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
 	setfieldeffectargument 0, VAR_RESULT
-	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	@ Handle Pokémon name buffering - use first Pokémon if HM is from bag
+	goto_if_ne VAR_RESULT, FIELD_MOVE_FROM_BAG, EventScript_BufferMonNick
+	bufferpartymonnick STR_VAR_1, 0 @ Use first Pokémon (slot 1) when HM is from bag
+	goto EventScript_AfterBufferMonNick
+EventScript_BufferMonNick:
+	bufferpartymonnick STR_VAR_1, VAR_RESULT @ Use specified Pokémon slot
+EventScript_AfterBufferMonNick:
 	buffermovename STR_VAR_2, MOVE_CUT
 	msgbox Text_WantToCut, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
