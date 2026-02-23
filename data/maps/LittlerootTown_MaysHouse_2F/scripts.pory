@@ -1,0 +1,69 @@
+mapscripts LittlerootTown_MaysHouse_2F_MapScripts {
+}
+
+// Rival script (May's version)
+script MaysHouse_2F_EventScript_Rival {
+    lockall
+    msgbox(MaysHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+// Rival's Poké Ball script
+script LittlerootTown_MaysHouse_2F_EventScript_RivalsPokeBall {
+    lockall
+    msgbox(MaysHouse_2F_Text_ItsMaysPokeBall, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+// Z-Ring Ball script
+script LittlerootTown_MaysHouse_2F_EventScript_ZRingBall {
+    lockall
+    msgbox(MaysHouse_2F_Text_ZRingBall, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+// PC script
+script LittlerootTown_MaysHouse_2F_EventScript_PC {
+    lockall
+    msgbox(gText_PokemonTrainerSchoolEmail, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+// Turn off PC script
+script LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC {
+    lockall
+    setvar(VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE)
+    playse(SE_PC_OFF)
+    special(DoPCTurnOffEffect)
+    releaseall
+    return
+}
+
+// Return script
+script LittlerootTown_MaysHouse_2F_EventScript_Ret {
+    return
+}
+
+// Text blocks
+text MaysHouse_2F_Text_MayWhoAreYou {
+    "MAY: Who are you?\p"
+    "Oh, it's you, {PLAYER}!\p"
+    "What brings you here?\p"
+    "$"
+}
+
+text MaysHouse_2F_Text_ItsMaysPokeBall {
+    "This is MAY's POKé BALL.\p"
+    "Better not touch it!\p"
+    "$"
+}
+
+text MaysHouse_2F_Text_ZRingBall {
+    "There's something sparkly here!\p"
+    "It's a Z-RING!\p"
+    "$"
+}

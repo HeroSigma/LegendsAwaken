@@ -1,0 +1,337 @@
+mapscripts LittlerootTown_PlayersHouse_2F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_PlayersHouse_2F_OnTransition
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE: LittlerootTown_PlayersHouse_2F_OnWarp
+}
+
+script LittlerootTown_PlayersHouse_2F_OnTransition {
+    call(SecretBase_EventScript_SetDecorationFlags)
+    setvar(VAR_SECRET_BASE_INITIALIZED, 0)
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_OnWarp {
+    if (var(VAR_SECRET_BASE_INITIALIZED) == 0) {
+        goto(LittlerootTown_PlayersHouse_2F_EventScript_CheckInitDecor)
+    }
+    if (var(VAR_LITTLEROOT_INTRO_STATE) == 4) {
+        goto(LittlerootTown_PlayersHouse_2F_EventScript_ShowTruckArrival)
+    }
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_CheckInitDecor {
+    checkplayergender
+    if (var(VAR_RESULT) == MALE) {
+        goto(SecretBase_EventScript_InitDecorations)
+    }
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_ShowTruckArrival {
+    lockall
+    msgbox(gText_Truck_Intro, MSGBOX_DEFAULT)
+    msgbox(gText_Truck_PlayerReflection, MSGBOX_DEFAULT)
+    msgbox(gText_Truck_ReadyToExit, MSGBOX_DEFAULT)
+    setvar(VAR_LITTLEROOT_INTRO_STATE, 5)
+    releaseall
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_PC {
+    lockall
+    checkplayergender
+    if (var(VAR_RESULT) == MALE) {
+        goto(LittlerootTown_PlayersHouse_2F_EventScript_CheckPlayersPC)
+    }
+    goto(LittlerootTown_PlayersHouse_2F_EventScript_CheckRivalsPC)
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_CheckPlayersPC {
+    setvar(VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE)
+    special(DoPCTurnOnEffect)
+    playse(SE_PC_ON)
+    msgbox(gText_PlayerHouseBootPC, MSGBOX_DEFAULT)
+    special(BedroomPC)
+    waitstate
+    releaseall
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_CheckRivalsPC {
+    msgbox(gText_PokemonTrainerSchoolEmail, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_TurnOffPlayerPC {
+    setvar(VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE)
+    playse(SE_PC_OFF)
+    special(DoPCTurnOffEffect)
+    releaseall
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_Notebook {
+    msgbox(PlayersHouse_2F_Text_Notebook, MSGBOX_SIGN)
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_GameCube {
+    msgbox(PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN)
+    return
+}
+
+// Alias scripts for compatibility with event references
+script PlayersHouse_2F_EventScript_Notebook {
+    msgbox(PlayersHouse_2F_Text_Notebook, MSGBOX_SIGN)
+    return
+}
+
+script PlayersHouse_2F_EventScript_GameCube {
+    msgbox(PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN)
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_IntroFlicker {
+    lockall
+    msgbox(PlayersHouse_2F_Text_FlickerThought, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_ZRingBall {
+    lockall
+    checkitem(ITEM_Z_POWER_RING, 1)
+    if (var(VAR_RESULT) == TRUE) {
+        goto(LittlerootTown_PlayersHouse_2F_EventScript_ZRingBall_Empty)
+    }
+    msgbox(PlayersHouse_2F_Text_PlayerBallSpot, MSGBOX_DEFAULT)
+    msgbox(PlayersHouse_2F_Text_PlayerCallMom, MSGBOX_DEFAULT)
+    msgbox(PlayersHouse_2F_Text_MomReply, MSGBOX_DEFAULT)
+    setvar(VAR_0x8000, ITEM_Z_POWER_RING)
+    setvar(VAR_0x8001, 1)
+    callstd(STD_OBTAIN_ITEM)
+    setflag(FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_2F_ZRING_BALL)
+    removeobject(VAR_LAST_TALKED)
+    msgbox(PlayersHouse_2F_Text_DistantVoice, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+script LittlerootTown_PlayersHouse_2F_EventScript_ZRingBall_Empty {
+    msgbox(PlayersHouse_2F_Text_EmptyBall, MSGBOX_SIGN)
+    releaseall
+    return
+}
+
+// Text blocks
+text PlayersHouse_2F_Text_ClockIsStopped {
+    "The clock is stopped…\p"
+    "Better set it and start it!\p"
+    "$"
+}
+
+text PlayersHouse_2F_Text_PlayerSafeEnough {
+    "I guess this is safe enough.\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_Notebook {
+    "{PLAYER} flipped open notebook.\n"
+    "ADVENTURE RULE NO. 1\n"
+    "Open MENU with START.\n"
+    "ADVENTURE RULE NO. 2\n"
+    "Record your progress with SAVE.\n"
+    "The remaining pages are blank…\p"
+    "$"
+}
+
+text PlayersHouse_2F_Text_ItsAGameCube {
+    "It's a Nintendo GameCube.\n"
+    "A Game Boy Advance is connected to\n"
+    "serve as Controller.\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_FlickerThought {
+    "{COLOR GREEN}(Did light just flicker?\n"
+    "Weird…){COLOR DARK_GRAY}\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_PlayerBallSpot {
+    "{COLOR GREEN}{PLAYER}: Huh? There's a Poké Ball here…\n"
+    "{COLOR DARK_GRAY}$"
+}
+
+text PlayersHouse_2F_Text_PlayerCallMom {
+    "{COLOR GREEN}{PLAYER}: Mom, did you put a Poké Ball\n"
+    "in my room?{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_MomReply {
+    "MOM: No, dear! Maybe movers left it?\n"
+    "Or maybe it's a welcome gift!\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_DistantVoice {
+    "A distant voice: Your destiny awaits…\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_EmptyBall {
+    "The Poké Ball is empty.\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_HowDoYouLikeYourRoom {
+    "MOM: All set? The room looks nice.\n"
+    "Good. Caelum will be glad you're safe.\n"
+    "He said to take it easy for now.\n"
+    "When things calm down, he'll catch up.\n"
+    "Come downstairs when you're ready.\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_UpstairsIntro_Male_1 {
+    "{COLOR GREEN}{PLAYER}: So this is my room again…\n"
+    "feels smaller than one back home.\n"
+    "{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_UpstairsIntro_Male_2 {
+    "{COLOR GREEN}{PLAYER}: Still, it's mine.\n"
+    "A fresh start in HOENN.\n"
+    "{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_UpstairsIntro_Male_3 {
+    "{COLOR GREEN}{PLAYER}: …Back at the Archipelago,\n"
+    "Father's study was always full of notes\n"
+    "and machines. This room feels… quiet.\n"
+    "in comparison.\n"
+    "{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_UpstairsIntro_Female_1 {
+    "{COLOR GREEN}{PLAYER}: So this is my room again…\n"
+    "it's cozier than what I remember.\n"
+    "{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_UpstairsIntro_Female_2 {
+    "{COLOR GREEN}{PLAYER}: Guess I'll have to\n"
+    "make it mine all over again.\n"
+    "{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_UpstairsIntro_Female_3 {
+    "{COLOR GREEN}{PLAYER}: …At the Archipelago, Father's\n"
+    "study always echoed with machines\n"
+    "and scribbled notes. This room feels…\n"
+    "still.\n"
+    "{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_MomDidYouSetClock {
+    "MOM: {PLAYER}! Did you set clock\n"
+    "yet?\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_MomMakeSureSchedule {
+    "MOM: Make sure it's right- we'll need\n"
+    "to keep a proper schedule here in\n"
+    "LITTLEROOT.\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_PlayerClockLine_Male {
+    "{COLOR GREEN}{PLAYER}: Yeah, I'll set it. Something\n"
+    "about seeing the hands move… feels\n"
+    "grounding.\n"
+    "{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_PlayerClockLine_Female {
+    "{COLOR GREEN}{PLAYER}: Mm. I'll set it. Something\n"
+    "about ticking… feels steady.\n"
+    "{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+// Missing text blocks referenced elsewhere
+text PlayersHouse_2F_Text_WakeUp_ClockDialogue {
+    "{COLOR GREEN}{PLAYER}: The clock… it's stopped.\n"
+    "How long have I been asleep?\n"
+    "{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+text PlayersHouse_2F_Text_WakeUp_AfterClock {
+    "{COLOR GREEN}{PLAYER}: There. Clock's set.\n"
+    "Time to figure out what's going on.\n"
+    "{COLOR DARK_GRAY}\n"
+    "$"
+}
+
+// Common map text blocks
+text Common_Text_LookCloserAtMap {
+    "{PLAYER} took a closer look at the\n"
+    "HOENN region map.\n"
+    "$"
+}
+
+text Common_Text_LookCloserAtMapKanto {
+    "{PLAYER} took a closer look at the\n"
+    "KANTO region map.\n"
+    "$"
+}
+
+text Common_Text_LookCloserAtMapJohto {
+    "{PLAYER} took a closer look at the\n"
+    "JOHTO region map.\n"
+    "$"
+}
+
+text Common_Text_LookCloserAtMapSevii {
+    "{PLAYER} took a closer look at the\n"
+    "SEVII ISLES map.\n"
+    "$"
+}
+
+// Truck scene text blocks
+text gText_Truck_Intro {
+    "{COLOR GREEN}(Where… where am I?\n"
+    "My head hurts…)\n"
+    "{COLOR DARK_GRAY}\n"
+    "I'm in a moving truck…\p"
+    "It's dark and cramped in here.\p"
+    "$"
+}
+
+text gText_Truck_PlayerReflection {
+    "{COLOR GREEN}(How did I get here?\n"
+    "I don't remember…)\n"
+    "{COLOR DARK_GRAY}\n"
+    "The last thing I remember…\p"
+    "was… what was it?\p"
+    "$"
+}
+
+text gText_Truck_ReadyToExit {
+    "{COLOR GREEN}(The truck stopped.\n"
+    "I should get out.)\n"
+    "{COLOR DARK_GRAY}\n"
+    "Time to see what's outside.\p"
+    "$"
+}

@@ -1,0 +1,485 @@
+mapscripts Route101_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: Route101_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [ VAR_ROUTE101_STATE, 0: Route101_EventScript_HideMapNamePopup ]
+}
+
+script Route101_OnTransition {
+    call(ProfBirch_EventScript_UpdateLocation)
+    return
+}
+
+script Route101_EventScript_HideMapNamePopup {
+    setflag(FLAG_HIDE_MAP_NAME_POPUP)
+    setvar(VAR_ROUTE101_STATE, 1)
+    return
+}
+
+script Route101_EventScript_StartBirchRescue {
+    lockall
+    playbgm(MUS_HELP, TRUE)
+    setflag(FLAG_TEMP_5)
+    msgbox(Route101_Text_HelpMe, MSGBOX_DEFAULT)
+    closemessage
+    setobjectxy(LOCALID_ROUTE101_BIRCH, 0, 15)
+    setobjectxy(LOCALID_ROUTE101_ZIGZAGOON, 0, 16)
+    applymovement(LOCALID_PLAYER, Route101_Movement_EnterScene)
+    applymovement(LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchRunAway1)
+    applymovement(LOCALID_ROUTE101_ZIGZAGOON, Route101_Movement_ZigzagoonChase1)
+    waitmovement(0)
+    applymovement(LOCALID_ROUTE101_ZIGZAGOON, Route101_Movement_ZigzagoonChaseInCircles)
+    applymovement(LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchRunInCircles)
+    waitmovement(0)
+    applymovement(LOCALID_ROUTE101_BIRCH, Common_Movement_WalkInPlaceFasterRight)
+    waitmovement(0)
+    applymovement(LOCALID_ROUTE101_ZIGZAGOON, Route101_Movement_ZigzagoonFaceBirch)
+    applymovement(LOCALID_ROUTE101_BIRCH, Route101_Movement_BirchFaceZigzagoon)
+    waitmovement(0)
+    msgbox(Route101_Text_BirchUseOneQuick, MSGBOX_DEFAULT)
+    closemessage
+    setvar(VAR_ROUTE101_STATE, 2)
+    releaseall
+    return
+}
+
+script Route101_EventScript_PreventExit {
+    lockall
+    msgbox(Route101_Text_DontLeaveMe, MSGBOX_DEFAULT)
+    closemessage
+    // Apply different movement based on player position
+    switch (var(VAR_0x8008)) {
+        case 0: applymovement(LOCALID_PLAYER, Route101_Movement_PreventExitSouth)
+        case 1: applymovement(LOCALID_PLAYER, Route101_Movement_PreventExitWest)
+        case 2: applymovement(LOCALID_PLAYER, Route101_Movement_PreventExitNorth)
+    }
+    waitmovement(0)
+    releaseall
+    return
+}
+
+movement Route101_Movement_PreventExitSouth {
+    walk_up
+    step_end
+}
+
+movement Route101_Movement_PreventExitWest {
+    walk_right
+    step_end
+}
+
+movement Route101_Movement_PreventExitNorth {
+    walk_down
+    step_end
+}
+
+script Route101_EventScript_Youngster {
+    msgbox(Route101_Text_TakeTiredPokemonToPokeCenter, MSGBOX_NPC)
+    return
+}
+
+script Route101_EventScript_Boy {
+    msgbox(Route101_Text_WildPokemonInTallGrass, MSGBOX_NPC)
+    return
+}
+
+script Route101_EventScript_RouteSign {
+    msgbox(Route101_Text_RouteSign, MSGBOX_SIGN)
+    return
+}
+
+script Route101_EventScript_BirchsBag {
+    lock
+    faceplayer
+    if (flag(FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG)) {
+        goto(Route101_EventScript_BirchsBag_Empty)
+    }
+    setflag(FLAG_SYS_POKEMON_GET)
+    call(Route101_EventScript_SelectStarter)
+    setflag(FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG)
+    releaseall
+    return
+}
+
+script Route101_EventScript_BirchsBag_Empty {
+    msgbox(Route101_Text_BirchsBagEmpty, MSGBOX_SIGN)
+    releaseall
+    return
+}
+
+script Route101_EventScript_SelectStarter {
+    msgbox(Route101_Text_ChooseTreecko, MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        goto(Route101_EventScript_GiveTreecko)
+    }
+    msgbox(Route101_Text_ChooseTorchic, MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        goto(Route101_EventScript_GiveTorchic)
+    }
+    msgbox(Route101_Text_ChooseMudkip, MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        goto(Route101_EventScript_GiveMudkip)
+    }
+    goto(Route101_EventScript_SelectStarter)
+}
+
+script Route101_EventScript_GiveTreecko {
+    givemon(SPECIES_TREECKO, 5)
+    setvar(VAR_STARTER_MON, 0)
+    bufferleadmonspeciesname(STR_VAR_1)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(Route101_Text_PlayerReceivedStarter)
+    waitmessage
+    waitfanfare
+    closemessage
+    return
+}
+
+script Route101_EventScript_GiveTorchic {
+    givemon(SPECIES_TORCHIC, 5)
+    setvar(VAR_STARTER_MON, 1)
+    bufferleadmonspeciesname(STR_VAR_1)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(Route101_Text_PlayerReceivedStarter)
+    waitmessage
+    waitfanfare
+    closemessage
+    return
+}
+
+script Route101_EventScript_GiveMudkip {
+    givemon(SPECIES_MUDKIP, 5)
+    setvar(VAR_STARTER_MON, 2)
+    bufferleadmonspeciesname(STR_VAR_1)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(Route101_Text_PlayerReceivedStarter)
+    waitmessage
+    waitfanfare
+    closemessage
+    return
+}
+
+script Route101_EventScript_ZoroarkTrigger {
+    lockall
+    msgbox(Route101_Text_BirchStarterHint, MSGBOX_DEFAULT)
+    closemessage
+    waitse
+    playmoncry(SPECIES_ZOROARK_HISUI, CRY_MODE_ENCOUNTER)
+    setvar(VAR_0x8004, 1)
+    setvar(VAR_0x8005, 1)
+    setvar(VAR_0x8006, 4)
+    setvar(VAR_0x8007, 2)
+    special(ShakeCamera)
+    waitstate
+    waitmoncry
+    call(Route101_EventScript_UnwinnableEncounter)
+    releaseall
+    return
+}
+
+script Route101_EventScript_UnwinnableEncounter {
+    fadescreen(FADE_TO_BLACK)
+    delay(20)
+    playse(SE_MUGSHOT)
+    delay(30)
+    fadescreen(FADE_FROM_BLACK)
+    setvar(VAR_0x8004, 1)
+    setvar(VAR_0x8005, 1)
+    setvar(VAR_0x8006, 5)
+    setvar(VAR_0x8007, 3)
+    special(ShakeCamera)
+    waitstate
+    msgbox(Route101_Text_PlayerOverwhelmed, MSGBOX_DEFAULT)
+    closemessage
+    fadescreen(FADE_TO_BLACK)
+    delay(16)
+    fadescreen(FADE_FROM_BLACK)
+    delay(16)
+    fadescreen(FADE_FROM_BLACK)
+    setvar(VAR_0x8004, 1)
+    setvar(VAR_0x8005, 1)
+    setvar(VAR_0x8006, 3)
+    setvar(VAR_0x8007, 2)
+    special(ShakeCamera)
+    waitstate
+    msgbox(Route101_Text_VoiceNotYet, MSGBOX_DEFAULT)
+    closemessage
+    removeobject(LOCALID_ROUTE101_ZIGZAGOON)
+    delay(20)
+    msgbox(Route101_Text_YouSavedMe, MSGBOX_DEFAULT)
+    closemessage
+    msgbox(Route101_Text_PlayerVoiceProtecting, MSGBOX_DEFAULT)
+    msgbox(Route101_Text_PlayerUneasyFeeling, MSGBOX_DEFAULT)
+    msgbox(Route101_Text_BirchWhatWasThat, MSGBOX_DEFAULT)
+    msgbox(Route101_Text_BirchNoMatterToLab, MSGBOX_DEFAULT)
+    call(Route101_EventScript_BirchGivesRemainingStarters)
+    setvar(VAR_ROUTE101_STATE, 3)
+    releaseall
+    return
+}
+
+script Route101_EventScript_BirchGivesRemainingStarters {
+    lock
+    faceplayer
+    bufferleadmonspeciesname(STR_VAR_1)
+    msgbox(Route101_Text_BirchChoseMon, MSGBOX_DEFAULT)
+    msgbox(Route101_Text_BirchNotEnough, MSGBOX_DEFAULT)
+    msgbox(Route101_Text_BirchTakeRemaining, MSGBOX_DEFAULT)
+    switch (var(VAR_STARTER_MON)) {
+        case 0: goto(Route101_EventScript_GiveTorchicAndMudkip)
+        case 1: goto(Route101_EventScript_GiveTreeckoAndMudkip)
+        case 2: goto(Route101_EventScript_GiveTreeckoAndTorchic)
+    }
+    release
+    return
+}
+
+script Route101_EventScript_GiveTorchicAndMudkip {
+    givemon(SPECIES_TORCHIC, 5)
+    bufferspeciesname(STR_VAR_1, SPECIES_TORCHIC)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(Route101_Text_PlayerReceivedStarter)
+    waitmessage
+    waitfanfare
+    givemon(SPECIES_MUDKIP, 5)
+    bufferspeciesname(STR_VAR_1, SPECIES_MUDKIP)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(Route101_Text_PlayerReceivedStarter)
+    waitmessage
+    waitfanfare
+    goto(Route101_EventScript_GiveRemainingStarters_End)
+}
+
+script Route101_EventScript_GiveTreeckoAndMudkip {
+    givemon(SPECIES_TREECKO, 5)
+    bufferspeciesname(STR_VAR_1, SPECIES_TREECKO)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(Route101_Text_PlayerReceivedStarter)
+    waitmessage
+    waitfanfare
+    givemon(SPECIES_MUDKIP, 5)
+    bufferspeciesname(STR_VAR_1, SPECIES_MUDKIP)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(Route101_Text_PlayerReceivedStarter)
+    waitmessage
+    waitfanfare
+    goto(Route101_EventScript_GiveRemainingStarters_End)
+}
+
+script Route101_EventScript_GiveTreeckoAndTorchic {
+    givemon(SPECIES_TREECKO, 5)
+    bufferspeciesname(STR_VAR_1, SPECIES_TREECKO)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(Route101_Text_PlayerReceivedStarter)
+    waitmessage
+    waitfanfare
+    givemon(SPECIES_TORCHIC, 5)
+    bufferspeciesname(STR_VAR_1, SPECIES_TORCHIC)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(Route101_Text_PlayerReceivedStarter)
+    waitmessage
+    waitfanfare
+    goto(Route101_EventScript_GiveRemainingStarters_End)
+}
+
+script Route101_EventScript_GiveRemainingStarters_End {
+    msgbox(Route101_Text_PlayerAllThreeInner, MSGBOX_DEFAULT)
+    release
+    return
+}
+
+movement Route101_Movement_EnterScene {
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_fast_up
+    walk_in_place_faster_left
+    step_end
+}
+
+movement Route101_Movement_ZigzagoonChaseInCircles {
+    walk_fast_up * 3
+    walk_fast_right * 3
+    walk_fast_down * 3
+    walk_fast_left * 3
+    walk_fast_up * 3
+    walk_fast_right * 3
+    walk_fast_down * 3
+    walk_fast_left * 3
+    step_end
+}
+
+movement Route101_Movement_ZigzagoonChase1 {
+    walk_fast_up * 4
+    walk_fast_right * 3
+    step_end
+}
+
+movement Route101_Movement_ZigzagoonFaceBirch {
+    walk_in_place_fast_left * 4
+    step_end
+}
+
+movement Route101_Movement_BirchRunInCircles {
+    walk_fast_up * 3
+    walk_fast_right * 3
+    walk_fast_down * 3
+    walk_fast_left * 3
+    walk_fast_up * 3
+    walk_fast_right * 3
+    walk_fast_down * 3
+    walk_fast_left * 3
+    step_end
+}
+
+movement Route101_Movement_BirchRunAway1 {
+    walk_fast_right * 4
+    walk_fast_up * 2
+    step_end
+}
+
+movement Route101_Movement_BirchFaceZigzagoon {
+    walk_in_place_fast_right * 4
+    step_end
+}
+
+text Route101_Text_HelpMe {
+    "BIRCH: H-Help! Somebody- please!\n$"
+}
+
+text Route101_Text_BirchUseOneQuick {
+    "BIRCH: YOU!! Quick- there's no time!\n"
+    "Use one of my POKéMON!\n$"
+}
+
+text Route101_Text_DontLeaveMe {
+    "BIRCH: Don't leave me here!\n$"
+}
+
+text Route101_Text_TakeTiredPokemonToPokeCenter {
+    "If POKéMON get tired, take them to a\n"
+    "POKéMON CENTER. There's one in OLDALE\n"
+    "TOWN right close by. They'll heal your\n"
+    "POKéMON for free.\n$"
+}
+
+text Route101_Text_WildPokemonInTallGrass {
+    "Wild POKéMON will jump out at you in tall\n"
+    "grass. If you want to catch POKéMON, you\n"
+    "have to go into the tall grass and search.\n"
+    "Be careful, though. Wild POKéMON can be\n"
+    "strong.\n$"
+}
+
+text Route101_Text_RouteSign {
+    "ROUTE 101\n"
+    "{UP_ARROW} OLDALE TOWN\n$"
+}
+
+text Route101_Text_BirchsBagEmpty {
+    "The bag is empty.\n$"
+}
+
+text Route101_Text_ChooseTreecko {
+    "Do you want TREECKO, the Grass Pokémon?\n$"
+}
+
+text Route101_Text_ChooseTorchic {
+    "Do you want TORCHIC, the Fire Pokémon?\n$"
+}
+
+text Route101_Text_ChooseMudkip {
+    "Do you want MUDKIP, the Water Pokémon?\n$"
+}
+
+text Route101_Text_PlayerReceivedStarter {
+    "{PLAYER} received {STR_VAR_1}!\n$"
+}
+
+text Route101_Text_BirchStarterHint {
+    "BIRCH: Quick- use one of those POKéMON!\n$"
+}
+
+text Route101_Text_PlayerOverwhelmed {
+    "{COLOR GREEN}{PLAYER}: This power… I can't stop it…!\n"
+    "{COLOR DARK_GRAY}$"
+}
+
+text Route101_Text_VoiceNotYet {
+    "{COLOR LIGHT_RED}??? : …Not yet. Your path is not ready.\n"
+    "{COLOR DARK_GRAY}$"
+}
+
+text Route101_Text_YouSavedMe {
+    "BIRCH: You saved me! Thank you!\n$"
+}
+
+text Route101_Text_PlayerVoiceProtecting {
+    "{COLOR GREEN}{PLAYER}: That voice… it was protecting me?\n"
+    "{COLOR DARK_GRAY}$"
+}
+
+text Route101_Text_PlayerUneasyFeeling {
+    "{COLOR GREEN}{PLAYER}: Is this uneasy feeling I've had…\n"
+    "or something else entirely?\n"
+    "{COLOR DARK_GRAY}$"
+}
+
+text Route101_Text_BirchWhatWasThat {
+    "BIRCH: What was that just now? That Pokémon-\n"
+    "I've never seen anything like it in HOENN.\n"
+    "BIRCH: And that voice… Who was it speaking to?\n"
+    "Who… are You, {PLAYER}?\n$"
+}
+
+text Route101_Text_BirchNoMatterToLab {
+    "BIRCH: No matter. Quick- let's get to my lab\n"
+    "before anything else happens!\n$"
+}
+
+text Route101_Text_BirchChoseMon {
+    "BIRCH: So you chose {STR_VAR_1}!\n$"
+}
+
+text Route101_Text_BirchNotEnough {
+    "BIRCH: That's not enough! The wild POKéMON-\n"
+    "they're too strong!\n$"
+}
+
+text Route101_Text_BirchTakeRemaining {
+    "BIRCH: Take the remaining two!\n$"
+}
+
+text Route101_Text_PlayerAllThreeInner {
+    "BIRCH: Now you have all three!\n"
+    "Be careful out there!\n$"
+}
+
+// Alias scripts for compatibility with event references
+script Route101_EventScript_PreventExitSouth {
+    lockall
+    msgbox(Route101_Text_DontLeaveMe, MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PLAYER, Route101_Movement_PreventExitSouth)
+    waitmovement(0)
+    releaseall
+    return
+}
+
+script Route101_EventScript_PreventExitWest {
+    lockall
+    msgbox(Route101_Text_DontLeaveMe, MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PLAYER, Route101_Movement_PreventExitWest)
+    waitmovement(0)
+    releaseall
+    return
+}
+
+script Route101_EventScript_PreventExitNorth {
+    lockall
+    msgbox(Route101_Text_DontLeaveMe, MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PLAYER, Route101_Movement_PreventExitNorth)
+    waitmovement(0)
+    releaseall
+    return
+}

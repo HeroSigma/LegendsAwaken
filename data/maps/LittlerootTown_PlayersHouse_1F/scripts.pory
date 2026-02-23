@@ -1,0 +1,452 @@
+mapscripts LittlerootTown_PlayersHouse_1F_MapScripts {
+    MAP_SCRIPT_ON_LOAD: LittlerootTown_PlayersHouse_1F_OnLoad
+    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_PlayersHouse_1F_OnTransition
+}
+
+script LittlerootTown_PlayersHouse_1F_OnLoad {
+    if (var(VAR_INTRO_STATE) < 6) {
+        goto(LittlerootTown_PlayersHouse_1F_EventScript_SetMovingBoxes)
+    }
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_OnTransition {
+    if (var(VAR_INTRO_STATE) == 3) {
+        goto(LittlerootTown_PlayersHouse_1F_EventScript_MoveMomToDoor)
+    }
+    if (var(VAR_INTRO_STATE) == 5) {
+        goto(LittlerootTown_PlayersHouse_1F_EventScript_MoveMomToStairs)
+    }
+    if (var(VAR_INTRO_STATE) == 6) {
+        goto(LittlerootTown_PlayersHouse_1F_EventScript_MoveMomToTV)
+        // After TV intro, set state to 7 to trigger rival meeting
+        setvar(VAR_INTRO_STATE, 7)
+    }
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_SetMovingBoxes {
+    setmetatile(5, 4, METATILE_BrendansMaysHouse_MovingBox_Open, TRUE)
+    setmetatile(5, 2, METATILE_BrendansMaysHouse_MovingBox_Closed, TRUE)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_MoveMomToDoor {
+    setobjectxyperm(1, 8, 4)
+    setobjectmovementtype(1, MOVEMENT_TYPE_FACE_UP)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_MoveMomToStairs {
+    setobjectxyperm(1, 4, 5)
+    setobjectmovementtype(1, MOVEMENT_TYPE_FACE_UP)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_MoveMomToTV {
+    setobjectxyperm(1, 4, 5)
+    setobjectmovementtype(1, MOVEMENT_TYPE_FACE_UP)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_GoSeeRoom {
+    lockall
+    setvar(VAR_0x8004, 1)
+    setvar(VAR_0x8005, MALE)
+    applymovement(VAR_0x8004, Common_Movement_FacePlayer)
+    waitmovement(0)
+    goto(LittlerootTown_PlayersHouse_1F_EventScript_MomGoSeeRoom)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_MomGoSeeRoom {
+    msgbox(LittlerootTown_PlayersHouse_1F_Text_MomSeeRoom, MSGBOX_DEFAULT)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_PetalburgGymReport {
+    setvar(VAR_INTRO_STATE, 7)
+    applymovement(VAR_0x8005, Common_Movement_WalkInPlaceFasterRight)
+    waitmovement(0)
+    call(LittlerootTown_PlayersHouse_1F_EventScript_MomNoticeGymBroadcast)
+    applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_PlayersHouse_1F_Movement_PlayerApproachTVForGym)
+    waitmovement(0)
+    playbgm(MUS_ENCOUNTER_INTERVIEWER, FALSE)
+    msgbox(PlayersHouse_1F_Text_MaybeDadWillBeOn, MSGBOX_DEFAULT)
+    closemessage
+    applymovement(VAR_0x8005, LittlerootTown_PlayersHouse_1F_Movement_MomMakeRoomToSeeTV)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_PlayersHouse_1F_Movement_PlayerMoveToTV)
+    waitmovement(0)
+    call(LittlerootTown_PlayersHouse_1F_EventScript_WatchBroadcastWithFlicker)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
+    waitmovement(0)
+    msgbox(PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT)
+    msgbox(PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT)
+    msgbox(LittlerootTown_PlayersHouse_1F_Text_ThingsMovedOut, MSGBOX_DEFAULT)
+    msgbox(LittlerootTown_PlayersHouse_1F_Text_StartYourAdventure, MSGBOX_DEFAULT)
+    givemon(SPECIES_PICHU, 3)
+    setflag(FLAG_SYS_POKEMON_GET)
+    bufferleadmonspeciesname(STR_VAR_1)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(LittlerootTown_PlayersHouse_1F_Text_PlayerReceivedPichu)
+    waitmessage
+    waitfanfare
+    msgbox(gText_NicknameThisPokemon, MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        goto(LittlerootTown_PlayersHouse_1F_EventScript_NicknameMon)
+    }
+    call(LittlerootTown_PlayersHouse_1F_EventScript_MomLeaving)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_NicknameMon {
+    setvar(VAR_0x8004, 0)
+    call(Common_EventScript_NameReceivedPartyMon)
+    call(LittlerootTown_PlayersHouse_1F_EventScript_MomLeaving)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_MomLeaving {
+    msgbox(LittlerootTown_PlayersHouse_1F_Text_TakeCareOfHouse, MSGBOX_DEFAULT)
+    applymovement(OBJ_EVENT_ID_PLAYER, LittlerootTown_PlayersHouse_1F_Movement_WalkRight)
+    applymovement(VAR_0x8005, LittlerootTown_PlayersHouse_1F_Movement_MomLeaveAndReturn)
+    waitmovement(0)
+    msgbox(LittlerootTown_PlayersHouse_1F_Text_AlmostForgot, MSGBOX_DEFAULT)
+    givemon(SPECIES_RAYQUAZA, 100)
+    givemon(SPECIES_SWAMPERT, 100)
+    givemon(SPECIES_TROPIUS, 100)
+    giveitem(ITEM_HM_SURF)
+    giveitem(ITEM_HM_FLY)
+    giveitem(ITEM_HM_DIVE)
+    giveitem(ITEM_HM_WATERFALL)
+    giveitem(ITEM_HM_CUT)
+    giveitem(ITEM_HM_ROCK_SMASH)
+    giveitem(ITEM_HM_FLASH)
+    giveitem(ITEM_MACH_BIKE)
+    giveitem(ITEM_ACRO_BIKE)
+    applymovement(VAR_0x8005, LittlerootTown_PlayersHouse_1F_Movement_MomLeave)
+    waitmovement(0)
+    removeobject(1)
+    playse(SE_EXIT)
+    setflag(FLAG_HIDE_PLAYERS_HOUSE_MOM)
+    setvar(VAR_TEMP_1, 1)
+    setflag(FLAG_SYS_B_DASH)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_MomNoticeGymBroadcast {
+    msgbox(LittlerootTown_PlayersHouse_1F_Text_MomNoticeGymBroadcast, MSGBOX_DEFAULT)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_EventScript_WatchBroadcastWithFlicker {
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp)
+    waitmovement(0)
+    msgbox(PlayersHouse_1F_Text_TVHoennCollab_Intro, MSGBOX_DEFAULT)
+    special(TurnOffTVScreen)
+    playse(SE_THUNDER)
+    setvar(VAR_0x8004, 1)
+    setvar(VAR_0x8005, 1)
+    setvar(VAR_0x8006, 6)
+    setvar(VAR_0x8007, 3)
+    special(ShakeCamera)
+    waitstate
+    delay(20)
+    special(TurnOnTVScreen)
+    msgbox(PlayersHouse_1F_Text_TVHoennCollab_Distortion, MSGBOX_DEFAULT)
+    fadedefaultbgm
+    special(TurnOffTVScreen)
+    setflag(FLAG_SYS_TV_HOME)
+    delay(35)
+    return
+}
+
+// Movement scripts
+movement LittlerootTown_PlayersHouse_1F_Movement_PlayerApproachTVForGym {
+    walk_down * 2
+    walk_left * 3
+    step_end
+}
+
+movement LittlerootTown_PlayersHouse_1F_Movement_WalkRight {
+    walk_right * 3
+    step_end
+}
+
+movement LittlerootTown_PlayersHouse_1F_Movement_MomMakeRoomToSeeTV {
+    walk_in_place_faster_down
+    step_end
+}
+
+movement LittlerootTown_PlayersHouse_1F_Movement_PlayerMoveToTV {
+    walk_left * 2
+    step_end
+}
+
+movement LittlerootTown_PlayersHouse_1F_Movement_MomLeaveAndReturn {
+    walk_right * 3
+    walk_down * 2
+    walk_right * 2
+    walk_down * 2
+    walk_up * 2
+    delay_16 * 2
+    walk_up
+    step_end
+}
+
+movement LittlerootTown_PlayersHouse_1F_Movement_MomLeave {
+    walk_right * 3
+    walk_down * 2
+    walk_right * 2
+    step_end
+}
+
+// Text blocks
+text PlayersHouse_1F_Text_GoSetTheClock {
+    "MOM: {PLAYER}, could you set the\n"
+    "clock for me?\p"
+    "It's upstairs in your room.\n$"
+}
+
+text LittlerootTown_PlayersHouse_1F_Text_MomSeeRoom {
+    "MOM: How do you like your room?\p"
+    "It's smaller than our old one,\n"
+    "but it's cozy, right?\n$"
+}
+
+text LittlerootTown_PlayersHouse_1F_Text_MomNoticeGymBroadcast {
+    "MOM: Oh! They're making an\n"
+    "announcement on TV!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_MaybeDadWillBeOn {
+    "MOM: Maybe your father will be on!\n"
+    "He sometimes appears on TV when\n"
+    "there are big discoveries.\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_TVHoennCollab_Intro {
+    "ANNOUNCER: We interrupt this program\n"
+    "with breaking news from the HOENN\n"
+    "region!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_TVHoennCollab_Distortion {
+    "ANNOUNCER: Strange energy readings\n"
+    "detected across the region. Scientists\n"
+    "are calling it 'distortion events'.\p"
+    "Citizens are advised to stay alert\n"
+    "and report unusual activity.\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_ItsOverWeMissedHim {
+    "MOM: Oh, it's over!\n"
+    "We missed him!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor {
+    "MOM: Go introduce yourself to the\n"
+    "neighbor next door!\p"
+    "$"
+}
+
+text LittlerootTown_PlayersHouse_1F_Text_ThingsMovedOut {
+    "MOM: All of our things are finally\n"
+    "moved in.\p"
+    "It feels like everything is ready\n"
+    "for you to begin your journey.\p"
+    "$"
+}
+
+text LittlerootTown_PlayersHouse_1F_Text_StartYourAdventure {
+    "MOM: It's time to start your very own\n"
+    "adventure, {PLAYER}!\p"
+    "Go make friends and discover new\n"
+    "POKEMON!\p"
+    "$"
+}
+
+text LittlerootTown_PlayersHouse_1F_Text_PlayerReceivedPichu {
+    "{PLAYER} received PICHU!\p"
+    "$"
+}
+
+text LittlerootTown_PlayersHouse_1F_Text_TakeCareOfHouse {
+    "MOM: Take care of the house while\n"
+    "I'm away, okay?\p"
+    "I'll be thinking of you!\p"
+    "$"
+}
+
+text LittlerootTown_PlayersHouse_1F_Text_AlmostForgot {
+    "MOM: I almost forgot!\p"
+    "I spoke to a man named Professor Birch\n"
+    "here in Littleroot earlier today.\p"
+    "He wants you to visit him in his lab,\p"
+    "please go and see him!\p"
+    "Bye {PLAYER}!\p"
+    "$"
+}
+
+// Additional missing text blocks referenced elsewhere
+text PlayersHouse_1F_Text_SeeYouHoney {
+    "MOM: See you later, honey!\p"
+    "Take care!\n$"
+}
+
+text PlayersHouse_1F_Text_TakeCareHoney {
+    "MOM: Take care of the house while\n"
+    "I'm away, honey!\p"
+    "I'll be thinking of you!\n$"
+}
+
+text PlayersHouse_1F_Text_DidYouMeetProfBirch {
+    "MOM: Did you meet Professor Birch?\p"
+    "He wanted to see you, right?\n$"
+}
+
+text PlayersHouse_1F_Text_Vigoroth1 {
+    "VIGOROTH: Vigoroth!\n$"
+}
+
+text PlayersHouse_1F_Text_Vigoroth2 {
+    "VIGOROTH: Vigoroth vigoroth!\n$"
+}
+
+text PlayersHouse_1F_Text_TicketFromBrineyCameForYou {
+    "MOM: A ticket from Briney came for you!\p"
+    "It's a S.S. TICKET!\p"
+    "You can take the ferry to SLATEPORT\n"
+    "or LILYCOVE now!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_PortsInSlateportLilycove {
+    "MOM: The ferry can take you to\n"
+    "SLATEPORT or LILYCOVE.\p"
+    "Be sure to visit the markets there!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_BetterGetBackToGym {
+    "MOM: Your father should get back\n"
+    "to his GYM soon.\p"
+    "He's been away too long!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_DadShouldStayLonger {
+    "MOM: Your father should stay\n"
+    "longer with us.\p"
+    "But he has his duties...\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_IsThatABreakingStory {
+    "MOM: Is that a breaking story?\p"
+    "Let's watch!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_LatiEmergencyNewsFlash {
+    "ANNOUNCER: Emergency news flash!\p"
+    "Legendary LATIOS/LATIAS spotted!\p"
+    "Citizens advised to stay alert!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_WhatColorDidTheySay {
+    "MOM: What color did they say?\p"
+    "I missed it!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_StillUnknownPokemon {
+    "MOM: Still so many unknown\n"
+    "POKEMON in the world...\p"
+    "Amazing!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_RunningShoesManual {
+    "MOM: Here are some RUNNING SHOES!\p"
+    "You can run by holding the B button!\p"
+    "Try it out!\p"
+    "$"
+}
+
+// Additional missing text blocks
+text PlayersHouse_1F_Text_OhComeQuickly {
+    "MOM: Oh, come quickly!\p"
+    "They're making an announcement on TV!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_ReportFromPetalburgGym {
+    "ANNOUNCER: We have a report from\n"
+    "the PETALBURG GYM!\p"
+    "Norman's research is making headlines!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_IsntItNiceInHere {
+    "MOM: Isn't it nice in here?\p"
+    "All settled in finally.\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_DontPushYourselfTooHard {
+    "MOM: Don't push yourself too hard!\p"
+    "Take breaks when you need them.\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_IsThatAPokenav {
+    "MOM: Is that a POKÉNAV?\p"
+    "Let me register my number!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_RegisteredMom {
+    "MOM: I've registered my number!\p"
+    "Call me anytime!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom {
+    "MOM: You got Dad's badge?\p"
+    "Here's something from me!\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_YouShouldRestABit {
+    "MOM: You should rest a bit.\p"
+    "Your POKEMON look tired.\p"
+    "$"
+}
+
+// Additional missing text blocks
+text PlayersHouse_1F_Text_TheresAMovieOnTV {
+    "MOM: There's a movie on TV!\p"
+    "Want to watch it together?\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_MoversPokemonGoSetClock {
+    "MOM: The movers brought our things!\p"
+    "Your POKEMON are all settled in.\p"
+    "Could you set the clock upstairs?\p"
+    "$"
+}
+
+text PlayersHouse_1F_Text_ArentYouInterestedInRoom {
+    "MOM: Aren't you interested in your room?\p"
+    "Go take a look upstairs!\p"
+    "$"
+}

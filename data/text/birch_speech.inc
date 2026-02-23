@@ -1,4 +1,5 @@
 gText_Creator_Welcome::
+# 1 "data/text/birch_speech.pory"
 	.string "{COLOR LIGHT_RED}Greetings, traveler. I am HERO SIGMA-\n"
 	.string "the one who shaped this world.\p"
 	.string "This is no ordinary journey.\n"
@@ -11,60 +12,57 @@ gText_Creator_Welcome::
 	.string "But remember… your choices will echo\n"
 	.string "across regions. Your bonds with\l"
 	.string "POKéMON will shape the fate of all\l"
-	.string "creation.{COLOR WHITE}\p"
-	.string "$"
+	.string "creation.{COLOR WHITE}\p$"
 
 gText_Birch_Welcome::
-	.string "{COLOR GREEN}Hi there! Welcome to the world\n"
-	.string "of POKéMON. I'm Professor BIRCH-\n"
-	.string "field research, boots on the ground.\p"
-	.string "I've been studying the local POKéMON\n"
-	.string "and I'm happy to meet you.{COLOR WHITE}\p"
-	.string "of POKéMON.\p"
-	.string "I'm Professor BIRCH-field research,\n"
-	.string "boots on the ground.{COLOR WHITE}\p"
-	.string "$"
+# 17 "data/text/birch_speech.pory"
+	.string "{COLOR GREEN}Welcome to the world of POKéMON!\n"
+	.string "I'm Professor BIRCH-field researcher.\p"
+	.string "I study local POKéMON and I'm glad\n"
+	.string "to finally meet you.{COLOR WHITE}\p$"
 
 gText_Birch_Pokemon::
+# 24 "data/text/birch_speech.pory"
 	.string "{COLOR GREEN}This little one is a POKéMON-\n"
-	.string "partner, helper, friend.{COLOR WHITE}\p"
-	.string "$"
+	.string "your partner and friend.{COLOR WHITE}\p$"
 
 gText_Birch_MainSpeech::
-	.string "{COLOR GREEN}HOENN's been acting strange lately.\p"
+# 29 "data/text/birch_speech.pory"
+	.string "{COLOR GREEN}HOENN's been strange lately.\p"
 	.string "Currents shift, skies shimmer…\n"
 	.string "people whisper about 'rifts'.\p"
 	.string "We observe, we protect, and when\n"
-	.string "we must, we battle-together.\p"
-	.string "But before we get ahead of\n"
-	.string "ourselves…{COLOR WHITE}\p"
-	.string "$"
+	.string "we must, we battle together.\p"
+	.string "But first…{COLOR WHITE}\p$"
 
 gText_Birch_AndYouAre::
+# 38 "data/text/birch_speech.pory"
 	.string "{COLOR GREEN}And you are?{COLOR WHITE}$"
 
 gText_Birch_BoyOrGirl::
+# 42 "data/text/birch_speech.pory"
 	.string "{COLOR GREEN}Are you a boy, or a girl?{COLOR WHITE}$"
 
 gText_Birch_WhatsYourName::
+# 46 "data/text/birch_speech.pory"
 	.string "{COLOR GREEN}All right-what's your name?{COLOR WHITE}$"
 
 gText_Birch_SoItsPlayer::
+# 50 "data/text/birch_speech.pory"
 	.string "{COLOR GREEN}So it's {PLAYER}{KUN}?{COLOR WHITE}$"
 
 gText_Birch_YourePlayer::
-	.string "{COLOR GREEN}All set… hold on.\p"
+# 54 "data/text/birch_speech.pory"
+	.string "{COLOR GREEN}All set… wait.\p"
 	.string "It really is you, isn't it?\p"
-	.string "Been about eight years since\n"
-	.string "LITTLEROOT.\p"
-	.string "HOENN's unusual right now.\n"
+	.string "Eight years since LITTLEROOT…\p"
+	.string "HOENN's not normal right now.\n"
 	.string "We'll talk when you arrive.\p"
-	.string "Your mom said you just reached town.\p"
-	.string "Come by the lab, {PLAYER}.\n"
-	.string "I'll be waiting.{COLOR WHITE}\p"
-	.string "$"
+	.string "Your mom said you're in town.\p"
+	.string "Come to the lab, {PLAYER}.\n"
+	.string "I'll be waiting.{COLOR WHITE}\p$"
 
 gText_Birch_AreYouReady::
-	.string "{COLOR GREEN}All right! Your journey starts now,\n"
-	.string "{PLAYER}{KUN}!{COLOR WHITE}\p"
-	.string "$"
+# 65 "data/text/birch_speech.pory"
+	.string "{COLOR GREEN}Ready! Your journey begins now,\n"
+	.string "{PLAYER}{KUN}!{COLOR WHITE}\p$"

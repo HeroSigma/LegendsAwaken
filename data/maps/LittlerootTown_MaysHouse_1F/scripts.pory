@@ -1,0 +1,81 @@
+mapscripts LittlerootTown_MaysHouse_1F_MapScripts {
+}
+
+// Rival's Mom scripts (May's version)
+script MaysHouse_1F_EventScript_RivalMom {
+    msgbox(MaysHouse_1F_Text_RivalMom, MSGBOX_DEFAULT)
+    return
+}
+
+script MaysHouse_1F_EventScript_RivalSibling {
+    msgbox(MaysHouse_1F_Text_RivalSibling, MSGBOX_DEFAULT)
+    return
+}
+
+// Meet rival scripts
+script LittlerootTown_MaysHouse_1F_EventScript_GoSeeRoom {
+    lockall
+    msgbox(LittlerootTown_MaysHouse_1F_Text_GoSeeRoom, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+script LittlerootTown_MaysHouse_1F_EventScript_MeetRival0 {
+    lockall
+    msgbox(LittlerootTown_MaysHouse_1F_Text_MeetRival0, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+script LittlerootTown_MaysHouse_1F_EventScript_MeetRival1 {
+    lockall
+    msgbox(LittlerootTown_MaysHouse_1F_Text_MeetRival1, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+script LittlerootTown_MaysHouse_1F_EventScript_MeetRival2 {
+    lockall
+    msgbox(LittlerootTown_MaysHouse_1F_Text_MeetRival2, MSGBOX_DEFAULT)
+    releaseall
+    return
+}
+
+// Text blocks
+text MaysHouse_1F_Text_RivalMom {
+    "MOM: Oh, you must be {PLAYER}!\p"
+    "MAY has been waiting for you!\p"
+    "She's upstairs in her room.\p"
+    "$"
+}
+
+text MaysHouse_1F_Text_RivalSibling {
+    "SIBLING: Hi, {PLAYER}!\p"
+    "MAY's been looking for you.\p"
+    "She's upstairs.\p"
+    "$"
+}
+
+text LittlerootTown_MaysHouse_1F_Text_GoSeeRoom {
+    "MOM: Why don't you go see\n"
+    "MAY's room?\p"
+    "$"
+}
+
+text LittlerootTown_MaysHouse_1F_Text_MeetRival0 {
+    "MAY: {PLAYER}! You're here!\p"
+    "I was just about to go look for you.\p"
+    "$"
+}
+
+text LittlerootTown_MaysHouse_1F_Text_MeetRival1 {
+    "MAY: Hey, {PLAYER}!\p"
+    "Ready to start our adventure?\p"
+    "$"
+}
+
+text LittlerootTown_MaysHouse_1F_Text_MeetRival2 {
+    "MAY: There you are, {PLAYER}!\p"
+    "I've been waiting.\p"
+    "$"
+}
