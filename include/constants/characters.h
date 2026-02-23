@@ -251,6 +251,40 @@
 #define TEXT_DYNAMIC_COLOR_5    0xE // Usually blue-green
 #define TEXT_DYNAMIC_COLOR_6    0xF // Usually cerulean
 
+// Extended Character Colors for Legends Awaken
+#define TEXT_COLOR_PURPLE        0x10
+#define TEXT_COLOR_BROWN         0x11
+#define TEXT_COLOR_GOLD          0x12
+#define TEXT_COLOR_PINK          0x13
+#define TEXT_COLOR_EMERALD       0x14
+#define TEXT_COLOR_ROYAL_BLUE    0x15
+#define TEXT_COLOR_GREY          0x16
+#define TEXT_COLOR_TEAL          0x17
+#define TEXT_COLOR_CRIMSON       0x18
+#define TEXT_COLOR_ORANGE        0x19
+#define TEXT_COLOR_LAVENDER      0x1A
+#define TEXT_COLOR_INDIGO        0x1B
+#define TEXT_COLOR_VIOLET        0x1C
+#define TEXT_COLOR_NAVY          0x1D
+#define TEXT_COLOR_SILVER        0x1E
+#define TEXT_COLOR_SCARLET       0x1F
+#define TEXT_COLOR_AQUA          0x20
+#define TEXT_COLOR_FOREST        0x21
+#define TEXT_COLOR_STEEL         0x22
+#define TEXT_COLOR_GHOST         0x23
+#define TEXT_COLOR_DRAGON        0x24
+#define TEXT_COLOR_PSYCHIC       0x25
+#define TEXT_COLOR_POISON        0x26
+#define TEXT_COLOR_FIGHTING      0x27
+#define TEXT_COLOR_ICE           0x28
+#define TEXT_COLOR_GROUND        0x29
+#define TEXT_COLOR_FLYING        0x2A
+#define TEXT_COLOR_BUG           0x2B
+#define TEXT_COLOR_ROCK          0x2C
+#define TEXT_COLOR_DARK          0x2D
+#define TEXT_COLOR_FAIRY         0x2E
+#define TEXT_COLOR_ELECTRIC      0x2F
+
 #define PLACEHOLDER_ID_UNKNOWN       0x0
 #define PLACEHOLDER_ID_PLAYER        0x1
 #define PLACEHOLDER_ID_STRING_VAR_1  0x2

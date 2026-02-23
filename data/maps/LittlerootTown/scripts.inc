@@ -426,9 +426,7 @@ LittlerootTown_EventScript_BirchsLabSign::
 
 LittlerootTown_EventScript_BrendansHouseSign::
 	lockall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_PlayersHouseSignMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_BirchsHouseSignFemale
+	msgbox LittlerootTown_Text_BrendansHouse, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -442,11 +440,15 @@ LittlerootTown_EventScript_BirchsHouseSignFemale::
 
 LittlerootTown_EventScript_MaysHouseSign::
         lockall
-        checkplayergender
-        call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_BirchsHouseSignMale
-        call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_PlayersHouseSignFemale
+        msgbox LittlerootTown_Text_MaysHouse, MSGBOX_DEFAULT
         releaseall
         end
+
+LittlerootTown_EventScript_PlayersHouseSign::
+	lockall
+	msgbox LittlerootTown_Text_PlayersHouse, MSGBOX_DEFAULT
+	releaseall
+	end
 
 LittlerootTown_EventScript_TeleportPallet::
         lockall
@@ -534,13 +536,13 @@ LittlerootTown_EventScript_GiveRunningShoesTrigger::
 	end
 
 LittlerootTown_EventScript_SetHomeDoorCoordsMale::
-	setvar VAR_0x8009, 5
-	setvar VAR_0x800A, 8
+	setvar VAR_0x8009, 15
+	setvar VAR_0x800A, 16
 	return
 
 LittlerootTown_EventScript_SetHomeDoorCoordsFemale::
-	setvar VAR_0x8009, 14
-	setvar VAR_0x800A, 8
+	setvar VAR_0x8009, 15
+	setvar VAR_0x800A, 16
 	return
 
 LittlerootTown_EventScript_MomNoticePlayerMale::
@@ -586,28 +588,28 @@ LittlerootTown_EventScript_MomApproachPlayer1::
 	return
 
 LittlerootTown_EventScript_MomApproachPlayerMale2::
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayerMale2
 	waitmovement 0
 	return
 
 LittlerootTown_EventScript_MomApproachPlayerMale3::
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayerMale3
 	waitmovement 0
 	return
 
 LittlerootTown_EventScript_MomApproachPlayerMale4::
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayerMale4
 	waitmovement 0
 	return
 
 LittlerootTown_EventScript_MomApproachPlayerMale5::
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayerMale5
 	waitmovement 0
@@ -852,32 +854,32 @@ LittlerootTown_Movement_MomReturnHome1:
 	step_end
 
 LittlerootTown_Movement_MomReturnHomeMale2:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	walk_in_place_faster_up
 	step_end
 
 LittlerootTown_Movement_MomReturnHomeMale3:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	walk_in_place_faster_up
 	step_end
 
 LittlerootTown_Movement_MomReturnHomeMale4:
-	walk_left
-	walk_left
+	walk_right
+	walk_right
 	walk_in_place_faster_up
 	step_end
 
 LittlerootTown_Movement_MomReturnHomeMale5:
-	walk_left
-	walk_left
-	walk_left
+	walk_right
+	walk_right
+	walk_right
 	walk_in_place_faster_up
 	step_end
 
@@ -1140,6 +1142,12 @@ LittlerootTown_Text_ProfBirchsLab:
 
 LittlerootTown_Text_PlayersHouse:
 	.string "{PLAYER}'s HOUSE$"
+
+LittlerootTown_Text_BrendansHouse:
+	.string "BRENDAN's HOUSE$"
+
+LittlerootTown_Text_MaysHouse:
+	.string "MAY's HOUSE$"
 
 LittlerootTown_Text_ProfBirchsHouse:
 	.string "PROF. BIRCH'S HOUSE$"

@@ -264,13 +264,13 @@ extern const u8 gText_Birch_WhatsYourName[];
 extern const u8 gText_Birch_SoItsPlayer[];
 extern const u8 gText_Birch_YourePlayer[];
 
-// truck scene text
-extern const u8 gText_Truck_Intro[];
-extern const u8 gText_Truck_MysteriousBox[];
-extern const u8 gText_Truck_DevenCorpBox[];
-extern const u8 gText_Truck_MemoryBox[];
-extern const u8 gText_Truck_PlayerReflection[];
-extern const u8 gText_Truck_ReadyToExit[];
+// truck scene text - REMOVED
+// extern const u8 gText_Truck_Intro[];
+// extern const u8 gText_Truck_MysteriousBox[];
+// extern const u8 gText_Truck_DevenCorpBox[];
+// extern const u8 gText_Truck_MemoryBox[];
+// extern const u8 gText_Truck_PlayerReflection[];
+// extern const u8 gText_Truck_ReadyToExit[];
 extern const u8 gText_Birch_AreYouReady[];
 
 extern const u8 gText_BirchInTrouble[];

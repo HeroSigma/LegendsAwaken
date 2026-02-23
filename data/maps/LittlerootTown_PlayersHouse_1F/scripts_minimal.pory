@@ -1,0 +1,16 @@
+mapscripts LittlerootTown_PlayersHouse_1F_MapScripts {
+    MAP_SCRIPT_ON_LOAD: LittlerootTown_PlayersHouse_1F_OnLoad
+    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_PlayersHouse_1F_OnTransition
+}
+
+script LittlerootTown_PlayersHouse_1F_OnLoad {
+    callif_lt(VAR_INTRO_STATE, 6, LittlerootTown_PlayersHouse_1F_EventScript_SetMovingBoxes)
+    return
+}
+
+script LittlerootTown_PlayersHouse_1F_OnTransition {
+    callif_eq(VAR_INTRO_STATE, 3, LittlerootTown_PlayersHouse_1F_EventScript_MoveMomToDoor)
+    callif_eq(VAR_INTRO_STATE, 5, LittlerootTown_PlayersHouse_1F_EventScript_MoveMomToStairs)
+    callif_eq(VAR_INTRO_STATE, 6, LittlerootTown_PlayersHouse_1F_EventScript_MoveMomToTV)
+    return
+}

@@ -1,0 +1,5 @@
+mapscripts LittlerootTown_PlayersHouse_1F_MapScripts {
+    MAP_SCRIPT_ON_LOAD: LittlerootTown_PlayersHouse_1F_OnLoad
+    MAP_SCRIPT_ON_TRANSITION: LittlerootTown_PlayersHouse_1F_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [ VAR_ROUTE101_STATE, 0: Route101_EventScript_HideMapNamePopup ]
+}

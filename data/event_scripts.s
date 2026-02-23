@@ -452,7 +452,7 @@ gStdScripts_End::
     .include "data/maps/IndigoPlateau_Exterior/scripts.inc"
     .include "data/maps/IndigoPlateau_PokemonCenter_1F/scripts.inc"
     .include "data/maps/IndigoPlateau_PokemonCenter_2F/scripts.inc"
-    .include "data/maps/InsideOfTruck/scripts.inc"
+    // .include "data/maps/InsideOfTruck/scripts.inc"  // REMOVED: Truck scene disabled
     .include "data/maps/IslandCave/scripts.inc"
     .include "data/maps/JaggedPass/scripts.inc"
     .include "data/maps/KantoPokemonLeague_BrunosRoom/scripts.inc"

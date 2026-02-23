@@ -3,7 +3,7 @@ PalletTown_PlayersHouse_2F_MapScripts::
 	.byte 0
 
 PalletTown_PlayersHouse_2F_OnTransition:
-        call_if_eq VAR_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
+        // call_if_eq VAR_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet  // REMOVED: New game script
         end
 
 PalletTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
