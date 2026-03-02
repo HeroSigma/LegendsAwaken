@@ -16,7 +16,11 @@ const u8 gMonIcon_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mark/ico
     const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mark/footprint_gba.1bpp");
 #endif //P_GBA_STYLE_SPECIES_FOOTPRINTS
 #endif //P_FOOTPRINTS
+#if defined(POKEMON_HEADER_DECLARE_SUBSTITUTE_ONLY)
+extern const u32 gObjectEventPic_Substitute[];
+#else
 const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_mark/overworld.4bpp");
+#endif
 
 #if P_FAMILY_BULBASAUR
 #if !P_GBA_STYLE_SPECIES_GFX

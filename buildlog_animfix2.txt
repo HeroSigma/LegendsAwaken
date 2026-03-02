@@ -1,0 +1,12 @@
+make[1]: 'poryscript' is up to date.
+tools/scaninc/scaninc -M build/emerald/src/tilesets.d -I include -I tools/agbcc/include src/tilesets.c
+make[1]: 'poryscript' is up to date.
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/tilesets.o src/tilesets.c
+Memory region         Used Size  Region Size  %age Used
+           EWRAM:      229852 B       256 KB     87.68%
+           IWRAM:       28892 B        32 KB     88.17%
+             ROM:    30195820 B        32 MB     89.99%
+cd build/emerald && arm-none-eabi-ld -Map ../../LegendsAwakening.map --print-memory-usage --gc-sections -T ../../ld_script_modern.ld -o ../../LegendsAwakening.elf <objs> <libs> | cat
+tools/gbafix/gbafix LegendsAwakening.elf -t"POKEMON EMER" -cBPEE -m01 -r0 --silent
+arm-none-eabi-objcopy -O binary LegendsAwakening.elf LegendsAwakening.gba
+tools/gbafix/gbafix LegendsAwakening.gba -p --silent

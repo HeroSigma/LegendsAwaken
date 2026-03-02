@@ -1,21 +1,63 @@
+@ === CeladonCity_DepartmentStore_1F scripts (temporarily disabled) ===
+@ === To re-enable: remove this file and restore from git ===
+@
+@ --- Original content (commented) ---
+@ CeladonCity_DepartmentStore_1F_MapScripts::
+@ 	map_script MAP_SCRIPT_ON_FRAME_TABLE, CeladonDeptElevator_OnFrame
+@ 	.byte 0
+@
+@ CeladonDept1_EventScript_Receptionsit::
+@     msgbox CeladonDeptStore_Text_1FReceptionist, MSGBOX_NPC
+@     end
+@
+@ CeladonDept1_EventScript_Gent::
+@     msgbox CeladonDeptStore_Text_1FGentleman, MSGBOX_NPC
+@     end
+@
+@ CeladonDept1_EventScript_Teacher::
+@     msgbox CeladonDeptStore_Text_1FTeacher, MSGBOX_NPC
+@     end
+@
+@ CeladonDept1_EventScript_Directory::
+@     msgbox CeladonDeptStore_Text_1FDirectory, MSGBOX_SIGN
+@     end
+@
+@ CeladonDeptStore_Text_1FReceptionist:
+@     .string "Hello! Welcome to CELADON DEPT.\n"
+@     .string "STORE!\p"
+@     .string "The directory is on the wall.$"
+@
+@ CeladonDeptStore_Text_1FGentleman:
+@     .string "This DEPT.STORE is part of the same\n"
+@     .string "chain as the one in GOLDENROD CITY.\p"
+@     .string "They were both renovated at the same\n"
+@     .string "time.$"
+@
+@ CeladonDeptStore_Text_1FTeacher:
+@     .string "This is my first time here.\p"
+@     .string "It's so big…\p"
+@     .string "I'm afraid I'll get lost.$"
+@
+@ CeladonDeptStore_Text_1FDirectory:
+@     .string "1F: SERVICE COUNTER\p"
+@     .string "2F: TRAINER'S MARKET\p"
+@     .string "3F: TM SHOP\p"
+@     .string "4F: WISEMAN GIFTS\p"
+@     .string "5F: DRUG STORE\p"
+@     .string "6F: ROOFTOP SQUARE$"
+@ --- End original content ---
+
 CeladonCity_DepartmentStore_1F_MapScripts::
 	.byte 0
 
-CeladonCity_DepartmentStore_1F_EventScript_LayoutSign::
-	msgbox CeladonCity_DepartmentStore_1F_Text_FloorDescriptions, MSGBOX_SIGN
+CeladonDept1_EventScript_Receptionsit::
 	end
 
-CeladonCity_DepartmentStore_1F_EventScript_FloorSign::
-	msgbox CeladonCity_DepartmentStore_1F_Text_ServiceCounter, MSGBOX_SIGN
+CeladonDept1_EventScript_Gent::
 	end
 
-CeladonCity_DepartmentStore_1F_Text_FloorDescriptions::
-    .string "1F: SERVICE COUNTER\p"
-    .string "2F: TRAINER'S MARKET\p"
-    .string "3F: TV GAME SHOP\p"
-    .string "4F: WISE MAN GIFTS\p"
-    .string "5F: DRUGSTORE\p"
-    .string "ROOFTOP SQUARE: VENDING MACHINES$"
+CeladonDept1_EventScript_Teacher::
+	end
 
-CeladonCity_DepartmentStore_1F_Text_ServiceCounter::
-    .string "1F: SERVICE COUNTER$"
+CeladonDept1_EventScript_Directory::
+	end

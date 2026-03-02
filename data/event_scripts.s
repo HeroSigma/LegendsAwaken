@@ -1964,3 +1964,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/RustboroCityDevonBasement/scripts.inc"
 
 	.include "data/maps/RustboroBasement2/scripts.inc"
+
+    .include "data/maps/imported_stub_mapscripts.inc"
+
+	.include "data/maps/Route21/scripts.inc"

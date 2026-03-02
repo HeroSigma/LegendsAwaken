@@ -1,0 +1,36 @@
+make[1]: 'poryscript' is up to date.
+tools/mapjson/mapjson layouts emerald data/layouts/layouts.json data/layouts include/constants
+tools/scaninc/scaninc -M build/emerald/data/event_scripts.d -I include -I "" data/event_scripts.s
+tools/scaninc/scaninc -M build/emerald/src/wild_encounter.d -I include -I tools/agbcc/include src/wild_encounter.c
+tools/scaninc/scaninc -M build/emerald/src/tv.d -I include -I tools/agbcc/include src/tv.c
+tools/scaninc/scaninc -M build/emerald/src/trainer_hill.d -I include -I tools/agbcc/include src/trainer_hill.c
+python3 tools/learnset_helpers/make_teachables.py tools/learnset_helpers/build/all_learnables.json
+tools/scaninc/scaninc -M build/emerald/src/pokemon.d -I include -I tools/agbcc/include src/pokemon.c
+tools/scaninc/scaninc -M build/emerald/src/overworld.d -I include -I tools/agbcc/include src/overworld.c
+tools/scaninc/scaninc -M build/emerald/src/map_name_popup.d -I include -I tools/agbcc/include src/map_name_popup.c
+tools/scaninc/scaninc -M build/emerald/src/battle_tent.d -I include -I tools/agbcc/include src/battle_tent.c
+tools/scaninc/scaninc -M build/emerald/src/battle_pyramid.d -I include -I tools/agbcc/include src/battle_pyramid.c
+tools/scaninc/scaninc -M build/emerald/src/battle_pike.d -I include -I tools/agbcc/include src/battle_pike.c
+tools/scaninc/scaninc -M build/emerald/src/battle_factory.d -I include -I tools/agbcc/include src/battle_factory.c
+make[1]: 'poryscript' is up to date.
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/battle_factory.o src/battle_factory.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/battle_pike.o src/battle_pike.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/battle_pyramid.o src/battle_pyramid.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/battle_tent.o src/battle_tent.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/map_name_popup.o src/map_name_popup.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/overworld.o src/overworld.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/pokemon.o src/pokemon.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/trainer_hill.o src/trainer_hill.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/tv.o src/tv.c
+/usr/lib/gcc/arm-none-eabi/13.2.1/cc1 -quiet <flags> -o build/emerald/src/wild_encounter.o src/wild_encounter.c
+tools/preproc/preproc data/event_scripts.s charmap.txt | arm-none-eabi-cpp -iquote include -Wno-trigraphs -DMODERN=1 -DTESTING=0 -DEMERALD -std=gnu17 -I include - | tools/preproc/preproc -ie data/event_scripts.s charmap.txt | arm-none-eabi-as -mcpu=arm7tdmi -march=armv4t -meabi=5 --defsym MODERN=1 --defsym EMERALD=1 -o build/emerald/data/event_scripts.o
+tools/preproc/preproc data/map_events.s charmap.txt | arm-none-eabi-cpp -I include - | tools/preproc/preproc -ie data/map_events.s charmap.txt | arm-none-eabi-as -mcpu=arm7tdmi -march=armv4t -meabi=5 --defsym MODERN=1 --defsym EMERALD=1 -o build/emerald/data/map_events.o
+tools/preproc/preproc data/maps.s charmap.txt | arm-none-eabi-cpp -I include - | tools/preproc/preproc -ie data/maps.s charmap.txt | arm-none-eabi-as -mcpu=arm7tdmi -march=armv4t -meabi=5 --defsym MODERN=1 --defsym EMERALD=1 -o build/emerald/data/maps.o
+Memory region         Used Size  Region Size  %age Used
+           EWRAM:      229852 B       256 KB     87.68%
+           IWRAM:       28892 B        32 KB     88.17%
+             ROM:    30195820 B        32 MB     89.99%
+cd build/emerald && arm-none-eabi-ld -Map ../../LegendsAwakening.map --print-memory-usage --gc-sections -T ../../ld_script_modern.ld -o ../../LegendsAwakening.elf <objs> <libs> | cat
+tools/gbafix/gbafix LegendsAwakening.elf -t"POKEMON EMER" -cBPEE -m01 -r0 --silent
+arm-none-eabi-objcopy -O binary LegendsAwakening.elf LegendsAwakening.gba
+tools/gbafix/gbafix LegendsAwakening.gba -p --silent

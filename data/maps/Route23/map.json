@@ -2,24 +2,19 @@
   "id": "MAP_ROUTE23",
   "name": "Route23",
   "layout": "LAYOUT_ROUTE23",
-  "music": "MUS_RG_VICTORY_ROAD",
-  "region_map_section": "MAPSEC_ROUTE_23",
+  "music": "MUS_HG_POKEMON_LEAGUE",
+  "region_map_section": "MAPSEC_INDIGO_PLATEAU",
   "requires_flash": false,
-  "weather": "WEATHER_SUNNY",
+  "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
-  "allow_running": true,
+  "allow_running": false,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE22",
-      "offset": 0,
-      "direction": "down"
-    },
-    {
-      "map": "MAP_INDIGO_PLATEAU_EXTERIOR",
+      "map": "MAP_INDIGO_PLATEAU",
       "offset": 0,
       "direction": "up"
     }
@@ -29,25 +24,11 @@
   ],
   "warp_events": [
     {
-      "x": 8,
-      "y": 153,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE26_GATEHOUSE",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 5,
-      "y": 28,
-      "elevation": 0,
-      "dest_map": "MAP_KANTO_VICTORY_ROAD_1F",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 18,
-      "y": 28,
+      "y": 20,
       "elevation": 0,
-      "dest_map": "MAP_KANTO_VICTORY_ROAD_2F",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_VICTORY_ROAD_KANTO_1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -56,11 +37,35 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 3,
-      "y": 31,
+      "x": 5,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route23_EventScript_VictoryRoadGateSign"
+      "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
     }
   ]
 }

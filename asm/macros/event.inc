@@ -145,9 +145,11 @@
 	.endm
 
 	@ Changes the value of destination to value.
-	.macro setvar destination:req, value:req, warn=TRUE
-	.if \warn && ((\value >= VARS_START && \value <= VARS_END) || (\value >= SPECIAL_VARS_START && \value <= SPECIAL_VARS_END))
+	.macro setvar destination:req, value:req, warn=0
+	.if \warn
+	.if ((\value >= VARS_START && \value <= VARS_END) || (\value >= SPECIAL_VARS_START && \value <= SPECIAL_VARS_END))
 	.warning "setvar with a value that might be a VAR_ constant; did you mean copyvar instead?"
+	.endif
 	.endif
 	.byte SCR_OP_SETVAR
 	.2byte \destination
@@ -170,8 +172,10 @@
 
 	@ Copies the value of source into destination.
 	.macro copyvar destination:req, source:req, warn=TRUE
-	.if \warn && !((\source >= VARS_START && \source <= VARS_END) || (\source >= SPECIAL_VARS_START && \source <= SPECIAL_VARS_END))
+	.if \warn
+	.if !((\source >= VARS_START && \source <= VARS_END) || (\source >= SPECIAL_VARS_START && \source <= SPECIAL_VARS_END))
 	.warning "copyvar with a value that is not a VAR_ constant; did you mean setvar instead?"
+	.endif
 	.endif
 	.byte SCR_OP_COPYVAR
 	.2byte \destination

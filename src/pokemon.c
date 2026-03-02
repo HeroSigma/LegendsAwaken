@@ -684,7 +684,15 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
 };
 
+#define OW_POKEMON_OBJECT_EVENTS_POKEMON_C OW_POKEMON_OBJECT_EVENTS
+#undef OW_POKEMON_OBJECT_EVENTS
+#define OW_POKEMON_OBJECT_EVENTS 0
+#define POKEMON_HEADER_DECLARE_SUBSTITUTE_ONLY
 #include "data/graphics/pokemon.h"
+#undef POKEMON_HEADER_DECLARE_SUBSTITUTE_ONLY
+#undef OW_POKEMON_OBJECT_EVENTS
+#define OW_POKEMON_OBJECT_EVENTS OW_POKEMON_OBJECT_EVENTS_POKEMON_C
+#undef OW_POKEMON_OBJECT_EVENTS_POKEMON_C
 
 #include "data/pokemon/trainer_class_lookups.h"
 #include "data/pokemon/experience_tables.h"

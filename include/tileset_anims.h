@@ -34,5 +34,10 @@ void InitTilesetAnim_BattlePyramid(void);
 void InitTilesetAnim_KantoGeneral(void);
 void InitTilesetAnim_JohtoGeneral(void);
 void InitTilesetAnim_SinnohGeneral(void);
+void InitTilesetAnim_NationalPark(void);
+void InitTilesetAnim_CeladonCity(void);
+void InitTilesetAnim_SilphCo(void);
+void InitTilesetAnim_ecruteak_theater(void);
+void InitTilesetAnim_AzaleaTown_Gym(void);
 
 #endif // GUARD_TILESET_ANIMS_H

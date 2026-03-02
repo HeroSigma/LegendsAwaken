@@ -1,26 +1,94 @@
+@ === NewBarkTown_PlayersHouse_2F scripts (temporarily disabled) ===
+@ === To re-enable: remove this file and restore from git ===
+@
+@ --- Original content (commented) ---
+@ NewBarkTown_PlayersHouse_2F_MapScripts::
+@ 	map_script MAP_SCRIPT_ON_TRANSITION, NewBarkTown_PlayersHouse_2F_OnTransition
+@ 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, NewBarkTown_PlayersHouse_2F_OnWarp
+@ 	.byte 0
+@
+@ NewBarkTown_PlayersHouse_2F_OnTransition::
+@ 	call SecretBase_EventScript_SetDecorationFlags
+@ 	setvar VAR_SECRET_BASE_INITIALIZED, 0
+@ 	end
+@
+@ NewBarkTown_PlayersHouse_2F_OnWarp::
+@ 	map_script_2 VAR_SECRET_BASE_INITIALIZED, 0, NewBarkTown_PlayersHouse_2F_OnWarp_SetDecoration
+@ 	.2byte 0
+@
+@ NewBarkTown_PlayersHouse_2F_OnWarp_SetDecoration::
+@ 	call SecretBase_EventScript_InitDecorations
+@ 	end
+@
+@ NewBarkTown_PlayersHouse_2F_Script_ClockSetupTrigger1::
+@     lock
+@ 	playse SE_PIN
+@ 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+@ 	waitmovement 0
+@ 	delay 60
+@     applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_2F_Movement_PlayerWalkToClock1
+@ 	waitmovement 0
+@     msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
+@ 	call PlayersHouse_2F_EventScript_SetWallClock
+@ 	delay 30
+@ 	setvar VAR_NEWBARK_TOWN_STATE, 1
+@ 	setflag FLAG_SET_WALL_CLOCK
+@ 	releaseall
+@ 	end
+@
+@ NewBarkTown_PlayersHouse_2F_Script_ClockSetupTrigger2::
+@     lock
+@ 	playse SE_PIN
+@ 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+@ 	waitmovement 0
+@ 	delay 60
+@     applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_2F_Movement_PlayerWalkToClock2
+@     msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
+@ 	call PlayersHouse_2F_EventScript_SetWallClock
+@ 	delay 30
+@ 	setvar VAR_NEWBARK_TOWN_STATE, 1
+@ 	setflag FLAG_SET_WALL_CLOCK
+@ 	releaseall
+@ 	end
+@
+@ NewBarkTown_PlayersHouse_2F_Movement_PlayerWalkToClock1:
+@ 	walk_right
+@ 	walk_up
+@ 	delay_8
+@ 	step_end
+@
+@ NewBarkTown_PlayersHouse_2F_Movement_PlayerWalkToClock2:	
+@ 	walk_up
+@ 	delay_8
+@ 	step_end
+@
+@ NewBarkTown_PlayersHouse_2F_EventScript_NES::
+@ 	msgbox NewBarkTown_PlayersHouse_2F_Text_NES, MSGBOX_SIGN
+@ 	end
+@
+@ NewBarkTown_PlayersHouse_2F_Text_NES:
+@     .string "{PLAYER} played with the NES.\p"
+@     .string "…Okay!\n"
+@     .string "It's time to go!$"
+@ --- End original content ---
+
 NewBarkTown_PlayersHouse_2F_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, NewBarkTown_PlayersHouse_2F_OnTransition
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, NewBarkTown_PlayersHouse_2F_OnWarp
 	.byte 0
 
-NewBarkTown_PlayersHouse_2F_OnTransition:
-	// call_if_eq VAR_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet  // REMOVED: New game script
-	call SecretBase_EventScript_SetDecorationFlags
-	setvar VAR_SECRET_BASE_INITIALIZED, 0
+NewBarkTown_PlayersHouse_2F_OnTransition::
 	end
 
-NewBarkTown_PlayersHouse_2F_OnWarp:
-	map_script_2 VAR_SECRET_BASE_INITIALIZED, 0, NewBarkTown_PlayersHouse_2F_EventScript_CheckInitDecor
-	.2byte 0
+NewBarkTown_PlayersHouse_2F_OnWarp::
+	end
 
-NewBarkTown_PlayersHouse_2F_EventScript_CheckInitDecor::
-        checkplayergender
-        goto_if_eq VAR_RESULT, MALE, SecretBase_EventScript_InitDecorations
-        end
+NewBarkTown_PlayersHouse_2F_OnWarp_SetDecoration::
+	end
 
-NewBarkTown_PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
-        .string "MOM: How do you like your room?\p"
-        .string "Everything's put away neatly.\n"
-        .string "They finished moving everything\n"
-        .string "in downstairs, too!\p"
-        .string "POKEMON movers are so convenient!$"
+NewBarkTown_PlayersHouse_2F_Script_ClockSetupTrigger1::
+	end
+
+NewBarkTown_PlayersHouse_2F_Script_ClockSetupTrigger2::
+	end
+
+NewBarkTown_PlayersHouse_2F_EventScript_NES::
+	end

@@ -633,6 +633,13 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteLight2,             OBJ_EVENT_PAL_TAG_LIGHT_2},
     {gObjectEventPaletteEmotes,             OBJ_EVENT_PAL_TAG_EMOTES},
     {gObjectEventPaletteNeonLight,          OBJ_EVENT_PAL_TAG_NEON_LIGHT},
+    // Kanto/Johto/HnS character palettes
+    {gObjectEventPal_NpcWhite,              OBJ_EVENT_PAL_TAG_NPC_WHITE},
+    {gObjectEventPal_KantoPlayer,           OBJ_EVENT_PAL_TAG_KANTO_PLAYER},
+    {gObjectEventPal_Celebi,                OBJ_EVENT_PAL_TAG_CELEBI},
+    {gObjectEventPal_Mewtwo,                OBJ_EVENT_PAL_TAG_MEWTWO},
+    {gObjectEventPal_Jirachi,               OBJ_EVENT_PAL_TAG_JIRACHI},
+    {gObjectEventPal_NpcGreen,              OBJ_EVENT_PAL_TAG_NPC_GREEN},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

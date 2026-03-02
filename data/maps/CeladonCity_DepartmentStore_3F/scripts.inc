@@ -1,56 +1,66 @@
+@ === CeladonCity_DepartmentStore_3F scripts (temporarily disabled) ===
+@ === To re-enable: remove this file and restore from git ===
+@
+@ --- Original content (commented) ---
+@ CeladonCity_DepartmentStore_3F_MapScripts::
+@ 	map_script MAP_SCRIPT_ON_FRAME_TABLE, CeladonDeptElevator_OnFrame
+@ 	.byte 0
+@
+@ CeladonDept3_EventScript_Youngster::
+@ 	msgbox CeladonDeptStore3F_Text_Youngster, MSGBOX_NPC
+@ 	end
+@ CeladonDept3_EventScript_Gbakid1::
+@ 	msgbox CeladonDeptStore3F_Text_GameboyKid1, MSGBOX_NPC
+@ 	end
+@ CeladonDept3_EventScript_Gbakid2::
+@ 	msgbox CeladonDeptStore3F_Text_GameboyKid2, MSGBOX_NPC
+@ 	end
+@ CeladonDept3_EventScript_SuperNerd::
+@ 	msgbox CeladonDeptStore3F_Text_SuperNerd, MSGBOX_NPC
+@ 	end
+@ CeladonDept3_EventScript_Directory::
+@ 	msgbox CeladonDeptStore3F_Text_Directory, MSGBOX_SIGN
+@ 	end
+@
+@ CeladonDeptStore3F_Text_Youngster:
+@ 	.string "I can't decide which POKéMON I\n"
+@ 	.string "should use this TM on…$"
+@
+@ CeladonDeptStore3F_Text_GameboyKid1:
+@ 	.string "Uh-oh! I traded my POKéMON without\n"
+@ 	.string "removing the UPGRADE from it.$"
+@
+@ CeladonDeptStore3F_Text_GameboyKid2:
+@ 	.string "Yeah! I'm finally getting a\n"
+@ 	.string "PORYGON!\p"
+@ 	.string "I'm no good at the slots, so I\n"
+@ 	.string "could never get enough coins…\p"
+@ 	.string "…Huh?\p"
+@ 	.string "The traded PORYGON turned into a\n"
+@ 	.string "different POKéMON!$"
+@
+@ CeladonDeptStore3F_Text_SuperNerd:
+@ 	.string "The TM SHOP sells some rare moves.$"
+@
+@ CeladonDeptStore3F_Text_Directory:
+@ 	.string "3F: TM SHOP\p"
+@ 	.string "Make Your POKéMON Stronger!$"
+@ --- End original content ---
+
 CeladonCity_DepartmentStore_3F_MapScripts::
 	.byte 0
 
-CeladonCity_DepartmentStore_3F_EventScript_SuperNES::
-	msgbox CeladonCity_DepartmentStore_3F_Text_ItsSuperNES, MSGBOX_SIGN
+CeladonDept3_EventScript_Youngster::
 	end
 
-CeladonCity_DepartmentStore_3F_EventScript_TV1::
-	msgbox CeladonCity_DepartmentStore_3F_Text_AnRPG, MSGBOX_SIGN
+CeladonDept3_EventScript_Gbakid1::
 	end
 
-CeladonCity_DepartmentStore_3F_EventScript_TV2::
-	msgbox CeladonCity_DepartmentStore_3F_Text_SportsGame, MSGBOX_SIGN
+CeladonDept3_EventScript_Gbakid2::
 	end
 
-CeladonCity_DepartmentStore_3F_EventScript_TV3::
-	msgbox CeladonCity_DepartmentStore_3F_Text_PuzzleGame, MSGBOX_SIGN
+CeladonDept3_EventScript_SuperNerd::
 	end
 
-CeladonCity_DepartmentStore_3F_EventScript_TV4::
-	msgbox CeladonCity_DepartmentStore_3F_Text_FightingGame, MSGBOX_SIGN
+CeladonDept3_EventScript_Directory::
 	end
-
-CeladonCity_DepartmentStore_3F_EventScript_FloorSign::
-	msgbox CeladonCity_DepartmentStore_3F_Text_TVGameShop, MSGBOX_SIGN
-	end
-
-CeladonCity_DepartmentStore_3F_EventScript_Poster::
-	msgbox CeladonCity_DepartmentStore_3F_Text_RedGreenBothArePokemon, MSGBOX_SIGN
-	end
-
-CeladonCity_DepartmentStore_3F_Text_ItsSuperNES::
-    .string "It's a Super NES.$"
-
-CeladonCity_DepartmentStore_3F_Text_AnRPG::
-    .string "An RPG!\n"
-    .string "There's no time for that!$"
-
-CeladonCity_DepartmentStore_3F_Text_SportsGame::
-    .string "A sports game!\n"
-    .string "Dad'll like that!$"
-
-CeladonCity_DepartmentStore_3F_Text_PuzzleGame::
-    .string "A puzzle game!\n"
-    .string "Looks addictive!$"
-
-CeladonCity_DepartmentStore_3F_Text_FightingGame::
-    .string "A fighting game!\n"
-    .string "Looks tough!$"
-
-CeladonCity_DepartmentStore_3F_Text_TVGameShop::
-    .string "3F: TV GAME SHOP$"
-
-CeladonCity_DepartmentStore_3F_Text_RedGreenBothArePokemon::
-    .string "Red and Green!\n"
-    .string "Both are POKéMON!$"

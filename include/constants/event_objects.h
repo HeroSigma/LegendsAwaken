@@ -3,6 +3,7 @@
 
 #include "constants/global.h"
 #include "constants/map_event_ids.h"
+#include "constants/localid_compat.h"
 
 #define OBJ_EVENT_GFX_BRENDAN_NORMAL               0
 #define OBJ_EVENT_GFX_BRENDAN_MACH_BIKE            1
@@ -795,6 +796,13 @@
 #define OBJ_EVENT_PAL_TAG_BALL_BEAST              0x1169
 // Gen VIII
 #define OBJ_EVENT_PAL_TAG_BALL_STRANGE            0x116A
+// === Kanto/Johto/HnS character palettes ===
+#define OBJ_EVENT_PAL_TAG_NPC_WHITE               0x116B
+#define OBJ_EVENT_PAL_TAG_KANTO_PLAYER            0x116C
+#define OBJ_EVENT_PAL_TAG_CELEBI                  0x116D
+#define OBJ_EVENT_PAL_TAG_MEWTWO                  0x116E
+#define OBJ_EVENT_PAL_TAG_JIRACHI                 0x116F
+#define OBJ_EVENT_PAL_TAG_NPC_GREEN               0x1170
 #endif //OW_FOLLOWERS_POKEBALLS
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
@@ -810,5 +818,82 @@
 // for compressed graphicsInfos
 // '(C)ompressed (E)vent'
 #define COMP_OW_TILE_TAG_BASE 0xCE00
+
+
+// === K/J LOCALID constants ===
+#define LOCALID_BATTLE_FRONTIER_MART_CLERK                 1
+#define LOCALID_BATTLE_TOWER_LOBBY_REPORTER                5
+#define LOCALID_BIRTH_ISLAND_EXTERIOR_ROCK                 1
+#define LOCALID_FALLARBOR_MART_CLERK                       1
+#define LOCALID_FARAWAY_ISLAND_MEW                         1
+#define LOCALID_FORTREE_MART_CLERK                         1
+#define LOCALID_LAVARIDGE_MART_CLERK                       1
+#define LOCALID_MAUVILLE_MART_CLERK                        1
+#define LOCALID_MOSSDEEP_MART_CLERK                        1
+#define LOCALID_OLDALE_MART_CLERK                          1
+#define LOCALID_PETALBURG_MART_CLERK                       1
+#define LOCALID_ROUTE111_PLAYER_FALLING                    45
+#define LOCALID_RUSTBORO_MART_CLERK                        1
+#define LOCALID_SLATEPORT_ENERGY_GURU                      25
+#define LOCALID_SLATEPORT_MART_CLERK                       1
+#define LOCALID_SOOTOPOLIS_MART_CLERK                      1
+#define LOCALID_TRUCK_BOX_BOTTOM_L                         2
+#define LOCALID_TRUCK_BOX_BOTTOM_R                         3
+#define LOCALID_TRUCK_BOX_TOP                              1
+#define LOCALID_UNION_ROOM_PLAYER_1                        9
+#define LOCALID_UNION_ROOM_PLAYER_2                        8
+#define LOCALID_UNION_ROOM_PLAYER_3                        7
+#define LOCALID_UNION_ROOM_PLAYER_4                        2
+#define LOCALID_UNION_ROOM_PLAYER_5                        6
+#define LOCALID_UNION_ROOM_PLAYER_6                        5
+#define LOCALID_UNION_ROOM_PLAYER_7                        4
+#define LOCALID_UNION_ROOM_PLAYER_8                        3
+#define LOCALID_VERDANTURF_MART_CLERK                      1
+
+// === Pokemon Center Nurse / Key NPC LOCALIDs (removed from pokeemerald-develop, restored for LA) ===
+#define LOCALID_DEWFORD_NURSE                              1
+#define LOCALID_EVER_GRANDE_NURSE                          1
+#define LOCALID_FALLARBOR_NURSE                            1
+#define LOCALID_FORTREE_NURSE                              1
+#define LOCALID_FRONTIER_MART_CLERK                        1
+#define LOCALID_FRONTIER_NURSE                             1
+#define LOCALID_LAVARIDGE_NURSE                            1
+#define LOCALID_LEAGUE_NURSE                               1
+#define LOCALID_LILYCOVE_NURSE                             1
+#define LOCALID_MAUVILLE_NURSE                             1
+#define LOCALID_MOSSDEEP_NURSE                             1
+#define LOCALID_OLDALE_NURSE                               1
+#define LOCALID_PACIFIDLOG_NURSE                           1
+#define LOCALID_PETALBURG_NURSE                            1
+#define LOCALID_PLAYERS_HOUSE_1F_MOM                       1
+#define LOCALID_RUSTBORO_NURSE                             1
+#define LOCALID_SLATEPORT_NURSE                            1
+#define LOCALID_SOOTOPOLIS_NURSE                           1
+#define LOCALID_TOWER_LOBBY_REPORTER                       5
+#define LOCALID_VERDANTURF_NURSE                           1
+
+// === Gabby & Ty reporter duo LOCALIDs (by route encounter) ===
+#define LOCALID_ROUTE111_GABBY_1                           14
+#define LOCALID_ROUTE111_TY_1                              13
+#define LOCALID_ROUTE111_GABBY_2                           21
+#define LOCALID_ROUTE111_TY_2                              22
+#define LOCALID_ROUTE111_GABBY_3                           23
+#define LOCALID_ROUTE111_TY_3                              24
+#define LOCALID_ROUTE118_GABBY_1                           5
+#define LOCALID_ROUTE118_TY_1                              6
+#define LOCALID_ROUTE118_GABBY_2                           8
+#define LOCALID_ROUTE118_TY_2                              9
+#define LOCALID_ROUTE118_GABBY_3                           10
+#define LOCALID_ROUTE118_TY_3                              11
+#define LOCALID_ROUTE120_GABBY_1                           18
+#define LOCALID_ROUTE120_TY_1                              17
+#define LOCALID_ROUTE120_GABBY_2                           19
+#define LOCALID_ROUTE120_TY_2                              20
+
+// === Contest contestant LOCALIDs (ContestHall VAR_0..VAR_2,VAR_4) ===
+#define LOCALID_CONTESTANT_1                               3
+#define LOCALID_CONTESTANT_2                               4
+#define LOCALID_CONTESTANT_3                               5
+#define LOCALID_CONTESTANT_4                               6
 
 #endif  // GUARD_CONSTANTS_EVENT_OBJECTS_H
