@@ -53,9 +53,6 @@ static void InitializeSwitchinCandidate(enum BattlerId switchinBattler, struct P
     // Setup switchin battler data
     gAiThinkingStruct->saved[switchinBattler].saved = TRUE;
     SetBattlerAiData(switchinBattler, gAiLogicData);
-<<<<<<< HEAD
-    SetBattlerFieldStatusForSwitchin(switchinBattler);
-=======
     u32 switchinWeather = AI_GetSwitchinWeather(switchinBattler);
     u32 switchinFieldStatus = AI_GetSwitchinFieldStatus(switchinBattler);
     SetBattlerVolatilesForSwitchin(switchinBattler, switchinWeather, switchinFieldStatus);
@@ -72,6 +69,7 @@ static void InitializeSwitchinCandidate(enum BattlerId switchinBattler, struct P
         CalcBattlerAiMovesData(gAiLogicData, battlerIndex, switchinBattler, switchinWeather, switchinFieldStatus);
     }
 
+    gBattlerPartyIndexes[switchinBattler] = storeCurrBattlerPartyIndex;
     gAiThinkingStruct->saved[switchinBattler].saved = FALSE;
 }
 

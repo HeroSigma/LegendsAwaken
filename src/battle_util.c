@@ -12099,9 +12099,3 @@ enum Stat GetDownloadStat(enum BattlerId battler)
     else
         return STAT_SPATK;
 }
-
-static void TryLegendPlateJudgmentTypeChange(void)
-{
-    // Placeholder implementation for Legend Plate Judgment type change
-}
-
