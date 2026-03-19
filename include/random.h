@@ -245,6 +245,7 @@ enum RandomTag
     RNG_WILD_MON_TARGET,
     RNG_TAUNT,
     RNG_AI_FAKE_OUT_SAVE_ALLY,
+    RNG_AI_DMG_ROLL_RANDOM,
 };
 
 #define RandomWeighted(tag, ...) \
