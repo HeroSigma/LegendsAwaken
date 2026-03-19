@@ -572,7 +572,8 @@ SINGLE_BATTLE_TEST("Sleep Clause: Sleep clause is deactivated when a sleeping mo
 
 DOUBLE_BATTLE_TEST("Sleep Clause: Sleep clause is deactivated when a sleeping mon is woken up with Aromatherapy / Heal Bell / Sparkly Swirl")
 {
-    u32 move = MOVE_NONE, switchIndex = 0;
+    enum Move move = MOVE_NONE;
+    u32 switchIndex = 0;
     struct BattlePokemon *healingSlot = opponentRight;
     struct BattlePokemon *sporedSlot = opponentLeft;
     PARAMETRIZE { move = MOVE_AROMATHERAPY;     healingSlot = opponentRight;    sporedSlot = opponentLeft;      switchIndex = 0; }
@@ -719,7 +720,7 @@ DOUBLE_BATTLE_TEST("Sleep Clause: Sleep clause is deactivated when a sleeping mo
 
 SINGLE_BATTLE_TEST("Sleep Clause: Sleep clause is deactivated when a sleeping mon is woken up by using Sleep Talk into a status curing move")
 {
-    u32 move;
+    enum Move move;
     PARAMETRIZE { move = MOVE_PSYCHO_SHIFT; }
     PARAMETRIZE { move = MOVE_JUNGLE_HEALING; }
     PARAMETRIZE { move = MOVE_LUNAR_BLESSING; }
@@ -892,7 +893,7 @@ DOUBLE_BATTLE_TEST("Sleep Clause: Sleep clause is deactivated when a sleeping mo
 
 SINGLE_BATTLE_TEST("Sleep Clause: Sleep clause is deactivated when a sleeping mon is woken up by using a held item")
 {
-    u32 heldItem = ITEM_NONE;
+    enum Item heldItem = ITEM_NONE;
     PARAMETRIZE { heldItem = ITEM_CHESTO_BERRY; }
     PARAMETRIZE { heldItem = ITEM_LUM_BERRY; }
     GIVEN {
@@ -924,7 +925,7 @@ SINGLE_BATTLE_TEST("Sleep Clause: Sleep clause is deactivated when a sleeping mo
 
 DOUBLE_BATTLE_TEST("Sleep Clause: Sleep clause is deactivated when a sleeping mon is woken up by Flinging a held item")
 {
-    u32 heldItem = ITEM_NONE;
+    enum Item heldItem = ITEM_NONE;
     PARAMETRIZE { heldItem = ITEM_CHESTO_BERRY; }
     PARAMETRIZE { heldItem = ITEM_LUM_BERRY; }
     GIVEN {

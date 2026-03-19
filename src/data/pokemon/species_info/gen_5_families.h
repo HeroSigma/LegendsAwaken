@@ -1986,7 +1986,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Pidove,
             gShinyOverworldPalette_Pidove
         )
-
+        .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sPidoveLevelUpLearnset,
         .teachableLearnset = sPidoveTeachableLearnset,
         .eggMoveLearnset = sPidoveEggMoveLearnset,
@@ -4103,7 +4103,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPic = gMonFrontPic_ScolipedeMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_ScolipedeMega,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -6427,7 +6427,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Archen,
             gShinyOverworldPalette_Archen
         )
-
+        .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sArchenLevelUpLearnset,
         .teachableLearnset = sArchenTeachableLearnset,
         .eggMoveLearnset = sArchenEggMoveLearnset,
@@ -6920,6 +6920,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sZoruaHisuiLevelUpLearnset,
         .teachableLearnset = sZoruaHisuiTeachableLearnset,
+        .eggMoveLearnset = sZoruaHisuiEggMoveLearnset,
         .formSpeciesIdTable = sZoruaFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_ZOROARK_HISUI}),
     },
@@ -7636,7 +7637,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Ducklett,
             gShinyOverworldPalette_Ducklett
         )
-
+        .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sDucklettLevelUpLearnset,
         .teachableLearnset = sDucklettTeachableLearnset,
         .eggMoveLearnset = sDucklettEggMoveLearnset,
@@ -9649,6 +9650,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Tynamo,
             gShinyOverworldPalette_Tynamo
         )
+        .teachingType = TM_ILLITERATE,
         .levelUpLearnset = sTynamoLevelUpLearnset,
         .teachableLearnset = sTynamoTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 39, SPECIES_EELEKTRIK}),
@@ -10263,7 +10265,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontPic = gMonFrontPic_ChandelureMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
-        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .enemyMonElevation = 6,
         .backPic = gMonBackPic_ChandelureMega,
@@ -11755,7 +11757,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Rufflet,
             gShinyOverworldPalette_Rufflet
         )
-
+        .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sRuffletLevelUpLearnset,
         .teachableLearnset = sRuffletTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 54, SPECIES_BRAVIARY, CONDITIONS({IF_NOT_REGION, REGION_HISUI})},
@@ -11963,7 +11965,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Vullaby,
             gShinyOverworldPalette_Vullaby
         )
-
+        .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sVullabyLevelUpLearnset,
         .teachableLearnset = sVullabyTeachableLearnset,
         .eggMoveLearnset = sVullabyEggMoveLearnset,
@@ -12616,7 +12618,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Cobalion,
             gShinyOverworldPalette_Cobalion
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sCobalionLevelUpLearnset,
         .teachableLearnset = sCobalionTeachableLearnset,
@@ -12691,7 +12693,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Terrakion,
             gShinyOverworldPalette_Terrakion
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sTerrakionLevelUpLearnset,
         .teachableLearnset = sTerrakionTeachableLearnset,
@@ -12761,7 +12763,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Virizion,
             gShinyOverworldPalette_Virizion
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sVirizionLevelUpLearnset,
         .teachableLearnset = sVirizionTeachableLearnset,
@@ -12852,7 +12854,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_TornadusIncarnate,
             gShinyOverworldPalette_TornadusIncarnate
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sTornadusLevelUpLearnset,
         .teachableLearnset = sTornadusTeachableLearnset,
@@ -12925,7 +12927,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_TornadusTherian,
             gShinyOverworldPalette_TornadusTherian
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sTornadusLevelUpLearnset,
         .teachableLearnset = sTornadusTeachableLearnset,
@@ -13018,7 +13020,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_ThundurusIncarnate,
             gShinyOverworldPalette_ThundurusIncarnate
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sThundurusLevelUpLearnset,
         .teachableLearnset = sThundurusTeachableLearnset,
@@ -13103,7 +13105,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_ThundurusTherian,
             gShinyOverworldPalette_ThundurusTherian
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sThundurusLevelUpLearnset,
         .teachableLearnset = sThundurusTeachableLearnset,
@@ -13175,6 +13177,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Reshiram,
             gShinyOverworldPalette_Reshiram
         )
+        .isRestrictedLegendary = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sReshiramLevelUpLearnset,
@@ -13245,6 +13248,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Zekrom,
             gShinyOverworldPalette_Zekrom
         )
+        .isRestrictedLegendary = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sZekromLevelUpLearnset,
@@ -13336,7 +13340,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_LandorusIncarnate,
             gShinyOverworldPalette_LandorusIncarnate
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sLandorusLevelUpLearnset,
         .teachableLearnset = sLandorusTeachableLearnset,
@@ -13409,7 +13413,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_LandorusTherian,
             gShinyOverworldPalette_LandorusTherian
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sLandorusLevelUpLearnset,
         .teachableLearnset = sLandorusTeachableLearnset,
@@ -13486,6 +13490,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Kyurem,
             gShinyOverworldPalette_Kyurem
         )
+        .isRestrictedLegendary = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sKyuremLevelUpLearnset,
@@ -13557,6 +13562,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_KyuremWhite,
             gShinyOverworldPalette_KyuremWhite
         )
+        .isRestrictedLegendary = TRUE,
         .cannotBeTraded = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
@@ -13628,6 +13634,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_KyuremBlack,
             gShinyOverworldPalette_KyuremBlack
         )
+        .isRestrictedLegendary = TRUE,
         .cannotBeTraded = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,

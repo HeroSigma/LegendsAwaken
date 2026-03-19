@@ -1216,6 +1216,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Caterpie,
             gShinyOverworldPalette_Caterpie
         )
+        .teachingType = TM_ILLITERATE,
         .levelUpLearnset = sCaterpieLevelUpLearnset,
         .teachableLearnset = sCaterpieTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 7, SPECIES_METAPOD}),
@@ -1283,6 +1284,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Metapod,
             gShinyOverworldPalette_Metapod
         )
+        .teachingType = TM_ILLITERATE,
         .levelUpLearnset = sMetapodLevelUpLearnset,
         .teachableLearnset = sMetapodTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_BUTTERFREE}),
@@ -1525,6 +1527,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Weedle,
             gShinyOverworldPalette_Weedle
         )
+        .teachingType = TM_ILLITERATE,
         .levelUpLearnset = sWeedleLevelUpLearnset,
         .teachableLearnset = sWeedleTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 7, SPECIES_KAKUNA}),
@@ -1602,6 +1605,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Kakuna,
             gShinyOverworldPalette_Kakuna
         )
+        .teachingType = TM_ILLITERATE,
         .levelUpLearnset = sKakunaLevelUpLearnset,
         .teachableLearnset = sKakunaTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_BEEDRILL}),
@@ -2514,7 +2518,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Spearow,
             gShinyOverworldPalette_Spearow
         )
-
+        .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sSpearowLevelUpLearnset,
         .teachableLearnset = sSpearowTeachableLearnset,
         .eggMoveLearnset = sSpearowEggMoveLearnset,
@@ -4091,7 +4095,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .frontPic = gMonFrontPic_RaichuMegaX,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
-        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimFrames = sAnims_TwoFramePlaceHolder,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         .backPic = gMonBackPic_RaichuMegaX,
         .backPicSize = MON_COORDS_SIZE(64, 64),
@@ -5198,8 +5202,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 10,
         //.backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_ClefableMega,
-        .shinyPalette = gMonShinyPalette_ClefableMega,
+        //.palette = gMonPalette_CircledQuestionMark,
+        //.shinyPalette = gMonShinyPalette_CircledQuestionMark,
         .iconSprite = gMonIcon_ClefableMega,
         .iconPalIndex = 0,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
@@ -6785,6 +6789,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Diglett,
             gShinyOverworldPalette_Diglett
         )
+        .isTelekinesisBanned = TRUE,
         .levelUpLearnset = sDiglettLevelUpLearnset,
         .teachableLearnset = sDiglettTeachableLearnset,
         .eggMoveLearnset = sDiglettEggMoveLearnset,
@@ -6870,6 +6875,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Dugtrio,
             gShinyOverworldPalette_Dugtrio
         )
+        .isTelekinesisBanned = TRUE,
         .levelUpLearnset = sDugtrioLevelUpLearnset,
         .teachableLearnset = sDugtrioTeachableLearnset,
         .formSpeciesIdTable = sDugtrioFormSpeciesIdTable,
@@ -6937,6 +6943,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_DiglettAlola
         )
         .isAlolanForm = TRUE,
+        .isTelekinesisBanned = TRUE,
         .levelUpLearnset = sDiglettAlolaLevelUpLearnset,
         .teachableLearnset = sDiglettAlolaTeachableLearnset,
         .eggMoveLearnset = sDiglettAlolaEggMoveLearnset,
@@ -7006,6 +7013,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_DugtrioAlola
         )
         .isAlolanForm = TRUE,
+        .isTelekinesisBanned = TRUE,
         .levelUpLearnset = sDugtrioAlolaLevelUpLearnset,
         .teachableLearnset = sDugtrioAlolaTeachableLearnset,
         .formSpeciesIdTable = sDugtrioFormSpeciesIdTable,
@@ -8070,6 +8078,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isHisuianForm = TRUE,
         .levelUpLearnset = sGrowlitheHisuiLevelUpLearnset,
         .teachableLearnset = sGrowlitheHisuiTeachableLearnset,
+        .eggMoveLearnset = sGrowlitheHisuiEggMoveLearnset,
         .formSpeciesIdTable = sGrowlitheFormSpeciesIdTable,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_FIRE_STONE, SPECIES_ARCANINE_HISUI}),
     },
@@ -11062,7 +11071,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Farfetchd,
             gShinyOverworldPalette_Farfetchd
         )
-
+        .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sFarfetchdLevelUpLearnset,
         .teachableLearnset = sFarfetchdTeachableLearnset,
         .eggMoveLearnset = sFarfetchdEggMoveLearnset,
@@ -11285,7 +11294,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following
         )
-
+        .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sDoduoLevelUpLearnset,
         .teachableLearnset = sDoduoTeachableLearnset,
         .eggMoveLearnset = sDoduoEggMoveLearnset,
@@ -11379,7 +11388,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_FOOT,
             sAnimTable_Following
         )
-
+        .isSkyBattleBanned = B_SKY_BATTLE_STRICT_ELIGIBILITY,
         .levelUpLearnset = sDodrioLevelUpLearnset,
         .teachableLearnset = sDodrioTeachableLearnset,
     },
@@ -12271,6 +12280,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
     #endif //OW_BATTLE_ONLY_FORMS
         .isMegaEvolution = TRUE,
+        .isTelekinesisBanned = TRUE,
         .levelUpLearnset = sGengarLevelUpLearnset,
         .teachableLearnset = sGengarTeachableLearnset,
         .formSpeciesIdTable = sGengarFormSpeciesIdTable,
@@ -15812,8 +15822,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 4,
         //.backAnimId = BACK_ANIM_NONE,
-        .palette = gMonPalette_StarmieMega,
-        .shinyPalette = gMonShinyPalette_StarmieMega,
+        //.palette = gMonPalette_CircledQuestionMark,
+        //.shinyPalette = gMonShinyPalette_CircledQuestionMark,
         .iconSprite = gMonIcon_StarmieMega,
         .iconPalIndex = 2,
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
@@ -17553,6 +17563,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             TRACKS_SPOT,
             sAnimTable_Following
         )
+        .teachingType = TM_ILLITERATE,
         .levelUpLearnset = sMagikarpLevelUpLearnset,
         .teachableLearnset = sMagikarpTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_GYARADOS}),
@@ -17918,6 +17929,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Ditto,
             gShinyOverworldPalette_Ditto
         )
+        .teachingType = TM_ILLITERATE,
         .levelUpLearnset = sDittoLevelUpLearnset,
         .teachableLearnset = sDittoTeachableLearnset,
     },
@@ -19665,7 +19677,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Articuno,
             gShinyOverworldPalette_Articuno
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sArticunoLevelUpLearnset,
         .teachableLearnset = sArticunoTeachableLearnset,
@@ -19733,7 +19745,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_ArticunoGalar,
             gShinyOverworldPalette_ArticunoGalar
         )
-
+        .isSubLegendary = TRUE,
         .isGalarianForm = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sArticunoGalarLevelUpLearnset,
@@ -19819,7 +19831,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Zapdos,
             gShinyOverworldPalette_Zapdos
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sZapdosLevelUpLearnset,
         .teachableLearnset = sZapdosTeachableLearnset,
@@ -19886,7 +19898,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_ZapdosGalar,
             gShinyOverworldPalette_ZapdosGalar
         )
-
+        .isSubLegendary = TRUE,
         .isGalarianForm = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sZapdosGalarLevelUpLearnset,
@@ -19996,7 +20008,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Moltres,
             gShinyOverworldPalette_Moltres
         )
-
+        .isSubLegendary = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sMoltresLevelUpLearnset,
         .teachableLearnset = sMoltresTeachableLearnset,
@@ -20063,7 +20075,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_MoltresGalar,
             gShinyOverworldPalette_MoltresGalar
         )
-
+        .isSubLegendary = TRUE,
         .isGalarianForm = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sMoltresGalarLevelUpLearnset,
@@ -20421,6 +20433,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Mewtwo,
             gShinyOverworldPalette_Mewtwo
         )
+        .isRestrictedLegendary = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sMewtwoLevelUpLearnset,
@@ -20495,6 +20508,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_MewtwoMegaX
         )
     #endif //OW_BATTLE_ONLY_FORMS
+        .isRestrictedLegendary = TRUE,
         .isMegaEvolution = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
@@ -20570,6 +20584,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gShinyOverworldPalette_MewtwoMegaY
         )
     #endif //OW_BATTLE_ONLY_FORMS
+        .isRestrictedLegendary = TRUE,
         .isMegaEvolution = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
@@ -20655,6 +20670,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isMythical = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
+        .teachingType = ALL_TEACHABLES,
         .levelUpLearnset = sMewLevelUpLearnset,
         .teachableLearnset = sMewTeachableLearnset,
     },
