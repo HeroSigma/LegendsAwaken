@@ -49,7 +49,7 @@ static void Task_HandleConfirmStarterInput(u8 taskId);
 static void Task_MoveStarterChooseCursor(u8 taskId);
 static void Task_CreateStarterLabel(u8 taskId);
 static void CreateStarterPokemonLabel(u8 selection);
-static u8 CreatePokemonFrontSprite(u16 species, u8 x, u8 y);
+static u8 CreatePokemonFrontSprite(enum Species species, u8 x, u8 y);
 static void SpriteCB_SelectionHand(struct Sprite *sprite);
 static void SpriteCB_Pokeball(struct Sprite *sprite);
 static void SpriteCB_StarterPokemon(struct Sprite *sprite);
@@ -128,11 +128,27 @@ static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
     {2, 12}, {10, 12}, {18, 12}, {26, 12}, {34, 12}, {42, 12},
 };
 
+#define GRASS_STARTER (IS_FRLG ? SPECIES_BULBASAUR  : SPECIES_TREECKO)
+#define FIRE_STARTER  (IS_FRLG ? SPECIES_CHARMANDER : SPECIES_TORCHIC)
+#define WATER_STARTER (IS_FRLG ? SPECIES_SQUIRTLE   : SPECIES_MUDKIP )
+
 static const u16 sStarterMon[STARTER_MON_COUNT] =
 {
-    SPECIES_TREECKO,
-    SPECIES_TORCHIC,
-    SPECIES_MUDKIP,
+    GRASS_STARTER,
+    FIRE_STARTER,
+    WATER_STARTER,
+};
+
+static const u16 sAllStarters[TOTAL_STARTERS] =
+{
+    // First row (6 starters)
+    SPECIES_EEVEE, SPECIES_CHARMANDER, SPECIES_FROAKIE, SPECIES_SPRIGATITO, SPECIES_PAWMI, SPECIES_VULPIX_ALOLA,
+    
+    // Second row (6 starters)
+    SPECIES_TIMBURR, SPECIES_GRIMER_ALOLA, SPECIES_SANDILE, SPECIES_ROOKIDEE, SPECIES_RALTS, SPECIES_NYMBLE,
+    
+    // Third row (6 starters)
+    SPECIES_NACLI, SPECIES_GREAVARD, SPECIES_DRATINI, SPECIES_POOCHYENA, SPECIES_ARON, SPECIES_TINKATINK,
 };
 
 static const u16 sAllStarters[TOTAL_STARTERS] =
@@ -353,8 +369,6 @@ static const struct SpriteTemplate sSpriteTemplate_Hand =
     .paletteTag = TAG_POKEBALL_SELECT,
     .oam = &sOam_Hand,
     .anims = sAnims_Hand,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_SelectionHand
 };
 
@@ -364,8 +378,6 @@ static const struct SpriteTemplate sSpriteTemplate_Pokeball =
     .paletteTag = TAG_POKEBALL_SELECT,
     .oam = &sOam_Pokeball,
     .anims = sAnims_Pokeball,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_Pokeball
 };
 
@@ -375,7 +387,6 @@ static const struct SpriteTemplate sSpriteTemplate_StarterCircle =
     .paletteTag = TAG_STARTER_CIRCLE,
     .oam = &sOam_StarterCircle,
     .anims = sAnims_StarterCircle,
-    .images = NULL,
     .affineAnims = sAffineAnims_StarterCircle,
     .callback = SpriteCB_StarterPokemon
 };
@@ -711,10 +722,8 @@ static void CreateStarterPokemonLabel(u8 selection)
     const u8 *speciesName;
     s32 width;
     u8 labelLeft, labelRight, labelTop, labelBottom;
-    u16 species;
-    
-    // Always show actual starter names now
-    species = GetStarterPokemon(selection);
+
+    enum Species species = GetStarterPokemon(selection);
     CopyMonCategoryText(species, categoryText);
     speciesName = GetSpeciesName(species);
 
@@ -769,7 +778,7 @@ static void Task_CreateStarterLabel(u8 taskId)
     gTasks[taskId].func = Task_HandleStarterChooseInput;
 }
 
-static u8 CreatePokemonFrontSprite(u16 species, u8 x, u8 y)
+static u8 CreatePokemonFrontSprite(enum Species species, u8 x, u8 y)
 {
     u8 spriteId;
 

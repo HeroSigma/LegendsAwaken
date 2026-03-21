@@ -1527,6 +1527,7 @@ extern const u16 gItemIconPalette_GhostTMHM[];
 extern const u16 gItemIconPalette_DragonTMHM[];
 extern const u16 gItemIconPalette_DarkTMHM[];
 extern const u16 gItemIconPalette_SteelTMHM[];
+extern const u16 gItemIconPalette_MysteryTMHM[];
 extern const u16 gItemIconPalette_FairyTMHM[];
 // Charms
 extern const u32 gItemIcon_OvalCharm[];
@@ -3449,5 +3450,8 @@ extern const u32 gBattleIcons_Gfx1[];
 extern const u32 gBattleIcons_Gfx2[];
 extern const u16 gBattleIcons_Pal1[];
 extern const u16 gBattleIcons_Pal2[];
+
+extern const u32 gGhostFrontPic[];
+extern const u16 gGhostPalette[];
 
 #endif //GUARD_GRAPHICS_H

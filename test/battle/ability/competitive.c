@@ -3,7 +3,7 @@
 
 DOUBLE_BATTLE_TEST("Competitive sharply raises player's Sp. Atk after Intimidate")
 {
-    u32 abilityLeft, abilityRight;
+    enum Ability abilityLeft, abilityRight;
 
     PARAMETRIZE { abilityLeft = ABILITY_FRIEND_GUARD; abilityRight = ABILITY_FRIEND_GUARD; }
     PARAMETRIZE { abilityLeft = ABILITY_FRIEND_GUARD; abilityRight = ABILITY_COMPETITIVE; }
@@ -60,7 +60,7 @@ DOUBLE_BATTLE_TEST("Competitive sharply raises player's Sp. Atk after Intimidate
 // Same as above, but for opponent.
 DOUBLE_BATTLE_TEST("Competitive sharply raises opponent's Sp. Atk after Intimidate")
 {
-    u32 abilityLeft, abilityRight;
+    enum Ability abilityLeft, abilityRight;
 
     PARAMETRIZE { abilityLeft = ABILITY_FRIEND_GUARD; abilityRight = ABILITY_FRIEND_GUARD; }
     PARAMETRIZE { abilityLeft = ABILITY_FRIEND_GUARD; abilityRight = ABILITY_COMPETITIVE; }
@@ -237,7 +237,7 @@ DOUBLE_BATTLE_TEST("Competitive is activated by Cotton Down for non-ally pokemon
 
 SINGLE_BATTLE_TEST("Competitive activates before White Herb")
 {
-    u32 move;
+    enum Move move;
 
     PARAMETRIZE { move = MOVE_LEER; }
     PARAMETRIZE { move = MOVE_CONFIDE; }
@@ -303,7 +303,7 @@ SINGLE_BATTLE_TEST("Competitive activates for each stat that is lowered")
 
 SINGLE_BATTLE_TEST("Competitive doesn't activate if the pokemon lowers it's own stats")
 {
-    u32 move;
+    enum Move move;
 
     PARAMETRIZE { move = MOVE_SUPERPOWER; }
     PARAMETRIZE { move = MOVE_CLOSE_COMBAT; }

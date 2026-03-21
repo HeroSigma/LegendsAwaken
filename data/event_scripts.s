@@ -13,6 +13,7 @@
 #include "constants/battle_pike.h"
 #include "constants/battle_pyramid.h"
 #include "constants/battle_setup.h"
+#include "constants/battle_special.h"
 #include "constants/battle_tent.h"
 #include "constants/battle_tower.h"
 #include "constants/berry.h"
@@ -25,6 +26,7 @@
 #include "constants/easy_chat.h"
 #include "constants/event_objects.h"
 #include "constants/event_object_movement.h"
+#include "constants/fame_checker.h"
 #include "constants/field_effects.h"
 #include "constants/field_move.h"
 #include "constants/field_poison.h"
@@ -46,12 +48,15 @@
 #include "constants/metatile_labels.h"
 #include "constants/move_relearner.h"
 #include "constants/moves.h"
+#include "constants/mystery_gift.h"
 #include "constants/party_menu.h"
+#include "constants/pokeball.h"
 #include "constants/pokedex.h"
 #include "constants/pokemon.h"
 #include "constants/rtc.h"
 #include "constants/roulette.h"
 #include "constants/script_menu.h"
+#include "constants/seagallop.h"
 #include "constants/secret_bases.h"
 #include "constants/siirtc.h"
 #include "constants/songs.h"
@@ -59,7 +64,9 @@
 #include "constants/species.h"
 #include "constants/trade.h"
 #include "constants/trainer_hill.h"
+#include "constants/trainer_tower.h"
 #include "constants/trainers.h"
+#include "constants/trainer_card.h"
 #include "constants/tv.h"
 #include "constants/union_room.h"
 #include "constants/vars.h"
@@ -115,7 +122,10 @@ gStdScripts::
 	.4byte Std_RegisteredInMatchCall   @ STD_REGISTER_MATCH_CALL
 	.4byte Std_MsgboxGetPoints         @ MSGBOX_GETPOINTS
 	.4byte Std_MsgboxPokenav           @ MSGBOX_POKENAV
+	.4byte Std_PutItemAway             @ STD_PUT_ITEM_AWAY
+	.4byte Std_ReceivedItem            @ STD_RECEIVED_ITEM
 gStdScripts_End::
+
 
 	.include "data/maps/AbandonedShip_CaptainsOffice/scripts.inc"
     .include "data/maps/AbandonedShip_Corridors_1F/scripts.inc"
@@ -1341,6 +1351,7 @@ gStdScripts_End::
 	.include "data/scripts/trainer_battle.inc"
 	.include "data/scripts/new_game.inc"
 	.include "data/scripts/hall_of_fame.inc"
+	.include "data/scripts/hall_of_fame_frlg.inc"
 
 	.include "data/scripts/config.inc"
 	.include "data/scripts/debug.inc"
@@ -1355,7 +1366,7 @@ EventScript_AfterWhiteOutHeal::
 	lockall
 	msgbox gText_FirstShouldRestoreMonsHealth
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
-	call_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsgPreRoxanne
+	call_if_unset FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsgPreFirstBoss
 	call_if_set FLAG_DEFEATED_RUSTBORO_GYM, EventScript_AfterWhiteOutHealMsg
 	applymovement VAR_LAST_TALKED, Movement_PkmnCenterNurse_Bow
 	waitmovement 0
@@ -1363,7 +1374,7 @@ EventScript_AfterWhiteOutHeal::
 	releaseall
 	end
 
-EventScript_AfterWhiteOutHealMsgPreRoxanne::
+EventScript_AfterWhiteOutHealMsgPreFirstBoss::
 	msgbox gText_MonsHealedShouldBuyPotions
 	return
 
@@ -1373,6 +1384,7 @@ EventScript_AfterWhiteOutHealMsg::
 
 EventScript_AfterWhiteOutMomHeal::
 	lockall
+	textcolor NPC_TEXT_COLOR_FEMALE
 	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox gText_HadQuiteAnExperienceTakeRest
@@ -1503,6 +1515,12 @@ Common_EventScript_ShowBagIsFull::
 Common_EventScript_BagIsFull::
 	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
 	return
+
+EventScript_BagIsFull::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox gText_TooBadBagIsFull
+	release
+	end
 
 Common_EventScript_ShowNoRoomForDecor::
 	msgbox gText_NoRoomLeftForAnother, MSGBOX_DEFAULT
@@ -1748,7 +1766,7 @@ gText_HadQuiteAnExperienceTakeRest::
 gText_MomExplainHPGetPotions::
 	.string "MOM: Oh, good! You and your\n"
 	.string "POKéMON are looking great.\p"
-	.string "I just heard from PROF. BIRCH.\p"
+	.string "I just heard from {STR_VAR_1}.\p"
 	.string "He said that POKéMON's energy is\n"
 	.string "measured in HP.\p"
 	.string "If your POKéMON lose their HP,\n"
@@ -1835,9 +1853,36 @@ gText_Sudowoodo_Attacked::
 gText_LegendaryFlewAway::
 	.string "The {STR_VAR_1} flew away!$"
 
+gText_WantWhichFloor::
+	.string "Which floor do you want?$"
+
 	.include "data/text/pc_transfer.inc"
 	.include "data/text/questionnaire.inc"
 	.include "data/text/abnormal_weather.inc"
+
+EventScript_GetInGameTradeSpeciesInfo::
+	copyvar VAR_0x8005, VAR_0x8008
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	return
+
+EventScript_ChooseMonForInGameTrade::
+	special ChoosePartyMon
+	waitstate
+	lock
+	faceplayer
+	return
+
+EventScript_GetInGameTradeSpecies::
+	specialvar VAR_RESULT, GetTradeSpecies
+	return
+
+EventScript_DoInGameTrade::
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	lock
+	faceplayer
+	return
 
 EventScript_SelectWithoutRegisteredItem::
 	msgbox gText_SelectWithoutRegisteredItem, MSGBOX_SIGN
@@ -1846,6 +1891,18 @@ EventScript_SelectWithoutRegisteredItem::
 	.include "data/scripts/field_poison.inc"
 
 Common_EventScript_NopReturn::
+	return
+
+EventScript_SetResultTrue::
+	setvar VAR_RESULT, TRUE
+	return
+
+EventScript_SetResultFalse::
+	setvar VAR_RESULT, FALSE
+	return
+
+EventScript_GetElevatorFloor::
+	special GetElevatorFloor
 	return
 
 @ Unused
@@ -1858,15 +1915,27 @@ EventScript_CableClub_SetVarResult0::
 	return
 
 Common_EventScript_UnionRoomAttendant::
+#if IS_FRLG
+	call CableClub_EventScript_UnionRoomAttendant_Frlg
+#else
 	call CableClub_EventScript_UnionRoomAttendant
+#endif
 	end
 
 Common_EventScript_WirelessClubAttendant::
+#if IS_FRLG
+	call CableClub_EventScript_WirelessClubAttendant_Frlg
+#else
 	call CableClub_EventScript_WirelessClubAttendant
+#endif
 	end
 
 Common_EventScript_DirectCornerAttendant::
+#if IS_FRLG
+	call CableClub_EventScript_DirectCornerAttendant_Frlg
+#else
 	call CableClub_EventScript_DirectCornerAttendant
+#endif
 	end
 
 Common_EventScript_RemoveStaticPokemon::
@@ -1891,6 +1960,62 @@ EventScript_VsSeekerChargingDone::
 	special VsSeekerResetObjectMovementAfterChargeComplete
 	releaseall
 	end
+
+@ FRLG scripts
+
+EventScript_SetExitingCyclingRoad::
+	lockall
+	clearflag FLAG_SYS_ON_CYCLING_ROAD
+	setvar VAR_MAP_SCENE_ROUTE16, 0
+	releaseall
+	end
+
+EventScript_SetEnteringCyclingRoad::
+	lockall
+	setvar VAR_MAP_SCENE_ROUTE16, 1
+	releaseall
+	end
+
+EventScript_TryDarkenRuins::
+	goto_if_set FLAG_SYS_UNLOCKED_TANOBY_RUINS, Common_EventScript_NopReturn
+	setweather WEATHER_SHADE
+	doweather
+	return
+
+Text_MonFlewAway::
+	.string "The {STR_VAR_1} flew away!$"
+
+@ Call for legendary bird trio
+Text_Gyaoo::
+	.string "Gyaoo!$"
+
+EventScript_BrailleCursorWaitButton::
+	special BrailleCursorToggle
+	waitbuttonpress
+	closebraillemessage
+	playse SE_SELECT
+	setvar VAR_0x8006, 1
+	special BrailleCursorToggle
+	return
+
+EventScript_PalletTown_PlayersHouse_2F_ShutDownPC::
+	setvar VAR_0x8004, PC_LOCATION_PLAYER_HOUSE_FRLG
+	playse SE_PC_OFF
+	special DoPCTurnOffEffect
+	releaseall
+	end
+
+EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
+	lockall
+	setvar VAR_0x8004, PC_LOCATION_PLAYER_HOUSE_FRLG
+	special DoPCTurnOnEffect
+	playse SE_PC_ON
+	msgbox gText_PlayerHouseBootPC
+	special BedroomPC
+	waitstate
+	releaseall
+	end
+
 
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"
@@ -1920,6 +2045,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/repel.inc"
 	.include "data/scripts/safari_zone.inc"
 	.include "data/scripts/roulette.inc"
+	.include "data/scripts/pokedex_rating.inc"
 	.include "data/text/pokedex_rating.inc"
 	.include "data/text/lottery_corner.inc"
 	.include "data/text/event_ticket_1.inc"
@@ -1932,7 +2058,6 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/match_call.inc"
 	.include "data/scripts/apprentice.inc"
 	.include "data/text/apprentice.inc"
-	.include "data/text/battle_dome.inc"
 	.include "data/scripts/battle_pike.inc"
 	.include "data/text/blend_master.inc"
 	.include "data/text/battle_tent.inc"
